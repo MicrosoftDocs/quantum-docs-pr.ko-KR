@@ -11,7 +11,7 @@ ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/29/2019
-ms.locfileid: "72999092"
+ms.locfileid: "73056957"
 ---
 # <a name="q-standard-libraries"></a><span data-ttu-id="fc76d-103">Q# 표준 라이브러리</span><span class="sxs-lookup"><span data-stu-id="fc76d-103">Q# standard libraries</span></span> #
 
