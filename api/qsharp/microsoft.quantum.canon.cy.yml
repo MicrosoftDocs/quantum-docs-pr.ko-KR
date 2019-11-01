@@ -1,0 +1,45 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.cy
+name: CY
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  제어 된-Y (CY) 게이트를 한 쌍의 비트에 적용 합니다.
+
+
+  $ $ \begin{align} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 &-i \\\\ 0 & 0 & i & 0 \end{align} , $ $는 퀀텀 개념 가이드에서 행 및 열이로 구성 됩니다.
+remarks: >-
+  다음에 해당 합니다.
+
+
+  ```qsharp
+
+  Controlled Y([control], target);
+
+  ```
+syntax: 'operation CY (control : Qubit, target : Qubit) : Unit'
+input:
+  content: '(control : Qubit, target : Qubit)'
+  types:
+  - name: control
+    summary: CY 게이트의 비트를 제어 합니다.
+    isPrimitive: true
+    uid: Qubit
+  - name: target
+    summary: CY 게이트의 대상입니다.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: d5ea0bcf4697024eeb19b12300a442fffe3d5f56
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73227341"

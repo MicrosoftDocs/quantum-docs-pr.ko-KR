@@ -1,0 +1,21 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerclusteroperatorevolutionset
+name: JordanWignerClusterOperatorEvolutionSet
+type: function
+namespace: Microsoft.Quantum.Chemistry.JordanWigner
+summary: 동적 생성기를 simulatable 게이트 집합으로, JordanWigner 기준으로 확장을 나타냅니다.
+syntax: 'function JordanWignerClusterOperatorEvolutionSet () : Microsoft.Quantum.Simulation.EvolutionSet'
+input:
+  content: ()
+  types: []
+output:
+  content: Microsoft.Quantum.Simulation.EvolutionSet
+  types:
+  - summary: JordanWigner 기준에 대 한 `GeneratorIndex`를 ' EvolutionUnitary로 매핑하는 `EvolutionSet`입니다.
+    uid: microsoft.quantum.simulation.evolutionset
+ms.openlocfilehash: be163f4232684b6d0c93aef7fb2d6fed71c5d98c
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73228786"

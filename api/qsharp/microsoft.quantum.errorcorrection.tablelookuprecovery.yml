@@ -1,0 +1,28 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.errorcorrection.tablelookuprecovery
+name: TableLookupRecovery
+type: function
+namespace: Microsoft.Quantum.ErrorCorrection
+summary: 지정 된 양의 비트 레지스터에서 지정 된 Pauli 작업 테이블의 경우이 함수는 지정 된 Pauli 작업 배열과 관련 하 여 테이블 조회 디코딩을 수행 하는 데 필요한 모든 정보를 포함 하는 `RecoveryFn` 형식의 개체를 반환 합니다.
+syntax: 'function TableLookupRecovery (table : Pauli[][]) : Microsoft.Quantum.ErrorCorrection.RecoveryFn'
+input:
+  content: '(table : Pauli[][])'
+  types:
+  - name: table
+    summary: 지정 된 고 비트 레지스터에서 작동 하는 Pauli 작업 표
+    isArray: true
+    types:
+    - isArray: true
+      isPrimitive: true
+      uid: Pauli
+output:
+  content: Microsoft.Quantum.ErrorCorrection.RecoveryFn
+  types:
+  - summary: '`RecoveryFn`형식의 개체, 즉 지정 된 증후군 배열에 해당 하는 Pauli 수정 작업을 연결 하는 맵 `Syndrome -> Pauli[]`입니다.'
+    uid: microsoft.quantum.errorcorrection.recoveryfn
+ms.openlocfilehash: cd84c24f5a50574a9bc2ab189832ada6516f12a8
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73232220"

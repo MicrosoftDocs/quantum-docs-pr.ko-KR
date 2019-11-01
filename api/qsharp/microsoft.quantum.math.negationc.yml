@@ -1,0 +1,24 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.negationc
+name: NegationC
+type: function
+namespace: Microsoft.Quantum.Math
+summary: 입력의 단항 부정을 반환 합니다.
+syntax: 'function NegationC (input : Microsoft.Quantum.Math.Complex) : Microsoft.Quantum.Math.Complex'
+input:
+  content: '(input : Microsoft.Quantum.Math.Complex)'
+  types:
+  - name: input
+    summary: 부정을 반환 될 값입니다.
+    uid: microsoft.quantum.math.complex
+output:
+  content: Microsoft.Quantum.Math.Complex
+  types:
+  - summary: '`input`의 단항 부정입니다.'
+    uid: microsoft.quantum.math.complex
+ms.openlocfilehash: 29907f747d5973ca191cb4aa55458e5d15d5de61
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73232441"
