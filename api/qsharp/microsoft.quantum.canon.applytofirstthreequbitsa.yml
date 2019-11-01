@@ -1,0 +1,59 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applytofirstthreequbitsa
+name: ApplyToFirstThreeQubitsA
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  레지스터의 처음 3 개 비트에 작업을 적용 합니다.
+
+  한정자 `A` 작업이 adjointable 나타냅니다.
+remarks: >-
+  이는 다음과 같습니다.
+
+
+  ```qsharp
+
+  op(register[0], register[1], register[2]);
+
+  ```
+syntax: 'operation ApplyToFirstThreeQubitsA (op : ((Qubit, Qubit, Qubit) => Unit is Adj), register : Qubit[]) : Unit'
+input:
+  content: '(op : ((Qubit, Qubit, Qubit) => Unit is Adj), register : Qubit[])'
+  types:
+  - name: op
+    summary: 처음 세 개의에 적용 되는 작업입니다.
+    isOperation: true
+    input:
+      types:
+      - isPrimitive: true
+        uid: Qubit
+      - isPrimitive: true
+        uid: Qubit
+      - isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+  - name: register
+    summary: 연산이 적용 되는 처음 세 개의 비트에 대 한 기본 비트 배열입니다.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+seeAlso:
+- microsoft.quantum.canon.applytofirstthreequbits
+ms.openlocfilehash: 1915d304889509d90d8522a4aa92b70e757c3f27
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73213401"

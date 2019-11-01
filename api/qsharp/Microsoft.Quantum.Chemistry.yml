@@ -1,0 +1,24 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.chemistry
+name: Microsoft.Quantum.Chemistry
+functions:
+- uid: microsoft.quantum.chemistry.htermstogenidx
+  summary: 인덱스를 `HTerm[]` 데이터 형식의 Hamiltonian term을 GeneratorIndex로 변환 합니다.
+- uid: microsoft.quantum.chemistry.htermstogensys
+  summary: Hamiltonian의 `HTerm[]` 데이터 형식을 GeneratorSystem로 변환 합니다.
+- uid: microsoft.quantum.chemistry.htermtogenidx
+  summary: '`HTerm` 데이터 형식의 Hamiltonian 항을 GeneratorIndex로 변환 합니다.'
+- uid: microsoft.quantum.chemistry.isnotzero
+  summary: '`Double` 숫자가 약 0이 아닌지 여부를 확인 합니다.'
+newtypes:
+- uid: microsoft.quantum.chemistry.hterm
+  summary: >-
+    에서 C# Q #으로 전달 되는 데이터의 형식으로, Hamiltonian의 용어를 나타냅니다.
+
+    표시 되는 데이터의 의미는 해당 데이터를 수신 하는 알고리즘에 의해 결정 됩니다.
+ms.openlocfilehash: 78d6e9f54c25f9d1a6af32c157d23069b8a4872b
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73210919"

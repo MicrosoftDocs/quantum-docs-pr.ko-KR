@@ -1,0 +1,61 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.extensions.convert
+name: Microsoft. 확장명. Convert
+summary: " # <a name=\"summary\"></a>요약\n 이러한 함수 중 일부는 Q # 형식 시스템 내에서 관련 된 .NET CLR의 Convert 네임 스페이스의 함수 중 일부입니다.\n\n # <a name=\"remarks\"></a>설명\n Bool, Int 및 Double 형식에 대 한 함수의 버전이 여러 개 있는 경우 해당 함수에는 접미사 B, I 및 D가 있습니다."
+functions:
+- uid: microsoft.quantum.extensions.convert.biginttobools
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"microsoft.quantum.convert.bigintasboolarray"를 사용 하세요.
+- uid: microsoft.quantum.extensions.convert.boolstobigint
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"microsoft.quantum.convert.boolarrayasbigint"를 사용 하세요.
+- uid: microsoft.quantum.extensions.convert.pauliarraytoint
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"microsoft.quantum.convert.pauliarrayasint"를 사용 하세요.
+- uid: microsoft.quantum.extensions.convert.tobigint
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"microsoft.quantum.convert.intasbigint"를 사용 하세요.
+- uid: microsoft.quantum.extensions.convert.todouble
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"microsoft.quantum.convert.intasdouble"를 사용 하세요.
+- uid: microsoft.quantum.extensions.convert.tostringb
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"microsoft.quantum.convert.boolasstring"를 사용 하세요.
+- uid: microsoft.quantum.extensions.convert.tostringd
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"microsoft.quantum.convert.doubleasstring"를 사용 하세요.
+- uid: microsoft.quantum.extensions.convert.tostringdformat
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"microsoft.quantum.convert.doubleasstringwithformat"를 사용 하세요.
+- uid: microsoft.quantum.extensions.convert.tostringi
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"microsoft.quantum.convert.intasstring"를 사용 하세요.
+- uid: microsoft.quantum.extensions.convert.tostringiformat
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"microsoft.quantum.convert.intasstringwithformat"를 사용 하세요.
+ms.openlocfilehash: 57f341ec6e8f82cfa9fc4bb958a580743a350218
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73056477"

@@ -1,0 +1,26 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.oracles.stateoracle
+name: StateOracle
+type: newtype
+namespace: Microsoft.Quantum.Oracles
+summary: >-
+  상태 준비를 위한 oracle을 나타냅니다.
+
+
+  Oracle $O $에 대 한 입력은 다음과 같습니다.
+
+
+  - 플래그 $f $를 인덱싱하는 정수입니다.
+
+  - 필요한 퀀텀 상태 $ \ket{\psi}\_s $를 저장할 시스템 등록 $s $입니다.
+remarks: >-
+  이 oracle은 $ $ O\ket{0}\_{f} \ket{0}\_s = \lambda\ket{1}\_f\ket {\ psi}\_s + \sqrt{1-| \lambda | ^ 2} \ket{0}\_f\cdots로 정의 됩니다. $ $는 계산 기준 상태 $ \ket{0}\_{f} \ket{0}\_s $를 사용 하 여 $ \ket\_{1}f $로 플래그가 지정 된 기준으로 $ \ket{\psi} \_s $를 사용 하 여 대상 상태 $ s $을 만듭니다.
+
+  첫 번째 매개 변수는 $ \ket{0}\_f $의 고 비트 레지스터에 대 한 인덱스입니다. 두 번째 매개 변수는 두 레지스터를 모두 갖습니다.
+syntax: newtype StateOracle = ((Int, Qubit[]) => Unit is Adj + Ctl);
+ms.openlocfilehash: 1faa47c21e43355ed036498adf4e823ff3f8a0e4
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73067223"

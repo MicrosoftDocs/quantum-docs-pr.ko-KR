@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.amplitudeamplification.ampamprusbyoracle
+name: AmpAmpRUSByOracle
+type: operation
+namespace: Microsoft.Quantum.AmplitudeAmplification
+summary: 고정 소수점 진폭 증폭 알고리즘
+remarks: StartQubits는 $ \ket{0 \cdots 0} $ 상태 여야 합니다. 이 작업은 최대 쿼리 수에 도달 하거나 대상 상태가 발견 될 때까지 $2 $의 거듭제곱으로 많은 쿼리를 반복 합니다.
+syntax: 'operation AmpAmpRUSByOracle (statePrepOracle : Microsoft.Quantum.Oracles.StateOracle, startQubits : Qubit[]) : Unit'
+input:
+  content: '(statePrepOracle : Microsoft.Quantum.Oracles.StateOracle, startQubits : Qubit[])'
+  types:
+  - name: statePrepOracle
+    summary: 시작 상태를 준비 하는 단일 oracle.
+    uid: microsoft.quantum.oracles.stateoracle
+  - name: startQubits
+    summary: 비트율 비트 레지스터
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+ms.openlocfilehash: a652d0fc94986552946a438a21bf9bfcba193eea
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73215577"

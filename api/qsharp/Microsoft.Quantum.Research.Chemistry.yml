@@ -1,0 +1,23 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.research.chemistry
+name: Microsoft.Quantum.Research.Chemistry
+functions:
+- uid: microsoft.quantum.research.chemistry.jordanwigneroptimizedfermionevolutionset
+  summary: 동적 생성기를 simulatable 게이트 집합으로 나타내고 Pauli로 확장 합니다.
+- uid: microsoft.quantum.research.chemistry.jwoptimizedfermionevolutionfunction
+  summary: 동적 생성기를 simulatable 게이트 집합으로 나타내고 JWOptimized 된 단위로 확장 합니다.
+- uid: microsoft.quantum.research.chemistry.jwoptimizedgeneratorsystem
+  summary: '`JWOptimizedHTerms`에 설명 된 Hamiltonian를이 파일에 정의 된 `GeneratorIndex` 규칙을 기준으로 표현 되는 `GeneratorSystem` 변환 합니다.'
+- uid: microsoft.quantum.research.chemistry.optimizedtrottersteporacle
+  summary: 최적화 된 Trotter step 작업 및이 작업을 실행 하는 데 필요한 매개 변수를 반환 합니다.
+operations:
+- uid: microsoft.quantum.research.chemistry.applydeltaparity
+  summary: 이전 PQRS 간 패리티 차이를 계산 합니다. 용어 및 다음 PQRS 부채. 이 차이는 보조 비트에서 계산 됩니다.
+- uid: microsoft.quantum.research.chemistry.jwoptimizedstatepreparation
+  summary: Spin orbitals를 실행 하 여 시험 상태의 단순 상태 준비
+ms.openlocfilehash: 8737229d1362a444f54d1a8d0791da9312923224
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73215951"

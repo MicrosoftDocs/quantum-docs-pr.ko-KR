@@ -1,0 +1,36 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.primitive.rx
+name: X
+type: operation
+namespace: Microsoft.Quantum.Primitive
+summary: >-
+  > [!WARNING]
+
+  > 사용되지 않음
+
+
+  @"microsoft.quantum.intrinsic.rx"를 사용 하세요.
+syntax: 'operation Rx (theta : Double, qubit : Qubit) : Unit'
+input:
+  content: '(테타: Double, 비트: 고 비트)'
+  types:
+  - name: 테타
+    isPrimitive: true
+    uid: Double
+  - name: 고 비트
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: 단위
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 45e8506eaee901409fdc8c5858e474e7482e8165
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73066373"

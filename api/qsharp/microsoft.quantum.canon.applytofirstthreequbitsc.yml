@@ -1,0 +1,59 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applytofirstthreequbitsc
+name: ApplyToFirstThreeQubitsC
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  레지스터의 처음 3 개 비트에 작업을 적용 합니다.
+
+  한정자 `C`는 작업을 제어할 수 있음을 나타냅니다.
+remarks: >-
+  이는 다음과 같습니다.
+
+
+  ```qsharp
+
+  op(register[0], register[1], register[2]);
+
+  ```
+syntax: 'operation ApplyToFirstThreeQubitsC (op : ((Qubit, Qubit, Qubit) => Unit is Ctl), register : Qubit[]) : Unit'
+input:
+  content: '(op : ((Qubit, Qubit, Qubit) => Unit is Ctl), register : Qubit[])'
+  types:
+  - name: op
+    summary: 처음 세 개의에 적용 되는 작업입니다.
+    isOperation: true
+    input:
+      types:
+      - isPrimitive: true
+        uid: Qubit
+      - isPrimitive: true
+        uid: Qubit
+      - isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Controlled
+  - name: register
+    summary: 연산이 적용 되는 처음 세 개의 비트에 대 한 기본 비트 배열입니다.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Controlled
+seeAlso:
+- microsoft.quantum.canon.applytofirstthreequbits
+ms.openlocfilehash: f71af17fefb874c14b4ae7a068c0bea5a9e49e60
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73213350"

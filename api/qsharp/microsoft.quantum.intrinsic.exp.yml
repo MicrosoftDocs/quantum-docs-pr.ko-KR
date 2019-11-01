@@ -1,0 +1,42 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.intrinsic.exp
+name: .Exp
+type: operation
+namespace: Microsoft.Quantum.Intrinsic
+summary: >-
+  다중값 비트 Pauli 연산자의 지 수를 적용 합니다.
+
+
+  \begin{align} e ^ {i \theta [P_0 \otimes P_1 \coP_ {N-1}]}, \end{align} 여기서 $P _i $은 `paulis`의 $i $ th 요소 이며 where $N = $`Length(paulis)`입니다.
+syntax: 'operation Exp (paulis : Pauli[], theta : Double, qubits : Qubit[]) : Unit'
+input:
+  content: '(paulis: Paulis [], 테타: Double, 원하는 비트:)'
+  types:
+  - name: paulis
+    summary: 각 텐서에 대 한 제품 요소를 나타내는 단일 값의 배열입니다.
+    isArray: true
+    isPrimitive: true
+    uid: Pauli
+  - name: 테타
+    summary: 대상 레지스터를 회전 하는 데 사용한 지정 된 다중 기능 비트 Pauli 연산자의 각도입니다.
+    isPrimitive: true
+    uid: Double
+  - name: 이상 비트
+    summary: 지정 된 회전을에 적용 하려면 등록 합니다.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: 단위
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: d301f6281d5c8a07479417fab1e25c66e2251a25
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73067325"

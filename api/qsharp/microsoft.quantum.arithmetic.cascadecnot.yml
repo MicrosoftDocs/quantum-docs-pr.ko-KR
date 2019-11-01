@@ -1,0 +1,29 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.cascadecnot
+name: CascadeCNOT
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: 지정 된의 위치 1에서를 대상으로 하는 제어로 서 위치 1의 이상 위치에서 해당 하는 위치 1의이를 대상으로 하는 제어로 서 위치 1에 있는 이상으로 이동 하는 CNOT 게이트의 캐스케이딩을 구현 합니다. , 등은 대상으로 `Length(register)-1`의 고 비트입니다.
+syntax: 'operation CascadeCNOT (register : Qubit[]) : Unit'
+input:
+  content: '(register : Qubit[])'
+  types:
+  - name: register
+    summary: 비트율 비트 레지스터입니다.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 9089948665a9ad8d4884196c4a84ed715104048a
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73221306"

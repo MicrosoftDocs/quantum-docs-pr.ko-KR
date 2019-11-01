@@ -1,0 +1,28 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.convert.doubleasstringwithformat
+name: DoubleAsStringWithFormat
+type: function
+namespace: Microsoft.Quantum.Convert
+summary: 지정 된 형식을 사용 하 여 지정 된 배정밀도 부동 소수점 숫자를 해당 하는 문자열 표현으로 변환 합니다.
+remarks: 자세한 내용은 [ C# 이중 ToString](https://docs.microsoft.com/dotnet/api/system.double.tostring?view=netframework-4.7.1#System_Double_ToString_System_String_) 을 참조 하세요.
+syntax: 'function DoubleAsStringWithFormat (a : Double, fmt : String) : String'
+input:
+  content: '(a : Double, fmt : String)'
+  types:
+  - name: a
+    isPrimitive: true
+    uid: Double
+  - name: fmt
+    isPrimitive: true
+    uid: String
+output:
+  content: String
+  types:
+  - isPrimitive: true
+    uid: String
+ms.openlocfilehash: 77ee195da86e00c017c7eca184a00d7fdf31f592
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73233682"

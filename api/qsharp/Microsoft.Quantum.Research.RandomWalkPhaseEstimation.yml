@@ -1,0 +1,16 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.research.randomwalkphaseestimation
+name: Microsoft.Quantum.Research.RandomWalkPhaseEstimation
+operations:
+- uid: microsoft.quantum.research.randomwalkphaseestimation.exporacle
+  summary: ''
+- uid: microsoft.quantum.research.randomwalkphaseestimation.phaseestimationsample
+  summary: ''
+- uid: microsoft.quantum.research.randomwalkphaseestimation.randomwalkphaseestimation
+  summary: 임의 워크를 사용 하 여 반복 단계 예측을 수행 하 여 지정 된 oracle 및 eigenstate에서 얻은 기존 측정 결과에 대 한 Bayesian 유추를 대략적으로 수행 합니다.
+ms.openlocfilehash: 3512f53bc5f29a634ea61e3a2d0c8a9f3fcc01f5
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73215917"

@@ -1,0 +1,33 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.primitive.z
+name: Z
+type: operation
+namespace: Microsoft.Quantum.Primitive
+summary: >-
+  > [!WARNING]
+
+  > 사용되지 않음
+
+
+  @"microsoft.quantum.intrinsic.z"를 사용 하세요.
+syntax: 'operation Z (qubit : Qubit) : Unit'
+input:
+  content: '(비트율 비트: 고 비트)'
+  types:
+  - name: 고 비트
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: 단위
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: fd4415d07339b75befad4b5acf1779a174c2ff01
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73066237"

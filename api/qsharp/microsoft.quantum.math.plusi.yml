@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.plusi
+name: PlusI
+type: function
+namespace: Microsoft.Quantum.Math
+summary: 두 입력의 합을 반환 합니다.
+syntax: 'function PlusI (a : Int, b : Int) : Int'
+input:
+  content: '(a : Int, b : Int)'
+  types:
+  - name: a
+    summary: 합계를 구할 첫 번째 입력 $a $입니다.
+    isPrimitive: true
+    uid: Int
+  - name: b
+    summary: 합계를 구할 두 번째 입력 $b $입니다.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Int
+  types:
+  - summary: Sum $a + b $입니다.
+    isPrimitive: true
+    uid: Int
+ms.openlocfilehash: 18bcd4a8ba2b7e5dca2cb72997a842d76c0e52b7
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73211327"

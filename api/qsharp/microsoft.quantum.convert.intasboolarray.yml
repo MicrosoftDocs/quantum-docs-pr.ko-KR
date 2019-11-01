@@ -1,0 +1,32 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.convert.intasboolarray
+name: IntAsBoolArray
+type: function
+namespace: Microsoft.Quantum.Convert
+summary: 반환 된 배열에 대 한 작은 endian 표현을 사용 하 여 양의 정수의 이진 표현을 생성 합니다.
+remarks: 입력 `number`은 최대 $2 ^ {\texttt{bits}}-$1 이어야 합니다.
+syntax: 'function IntAsBoolArray (number : Int, bits : Int) : Bool[]'
+input:
+  content: '(number : Int, bits : Int)'
+  types:
+  - name: number
+    summary: 부울 값의 배열로 변환할 양의 정수입니다.
+    isPrimitive: true
+    uid: Int
+  - name: bits
+    summary: '`number`이진 표현의 비트 수입니다.'
+    isPrimitive: true
+    uid: Int
+output:
+  content: Bool[]
+  types:
+  - summary: '`number`를 나타내는 부울 값의 배열입니다.'
+    isArray: true
+    isPrimitive: true
+    uid: Bool
+ms.openlocfilehash: 5f9dcb138c24390f5abfec3e0b9b12263b6119d6
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73220371"

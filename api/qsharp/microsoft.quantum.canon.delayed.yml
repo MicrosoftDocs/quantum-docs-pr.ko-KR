@@ -1,0 +1,54 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.delayed
+name: Delayed
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: 지정 된 인수를 사용 하 여 지정 된 작업을 적용 하는 작업을 반환 합니다.
+syntax: "function Delayed (op : ('T => 'U), arg : 'T) : (Unit => 'U)"
+input:
+  content: "(op : ('T => 'U), arg : 'T)"
+  types:
+  - name: op
+    summary: 적용 될 작업입니다.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - uid: "'U"
+        isLocal: true
+  - name: arg
+    summary: 작업이 적용 되는 입력입니다.
+    uid: "'T"
+    isLocal: true
+output:
+  content: (Unit => 'U)
+  types:
+  - summary: 입력 `arg` `op` 적용 되는 새 작업
+    isOperation: true
+    input:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    output:
+      types:
+      - uid: "'U"
+        isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: 연기할 작업의 입력 형식입니다.
+- uid: "'U"
+  summary: 연기할 작업의 반환 형식입니다.
+seeAlso:
+- microsoft.quantum.canon.delayedc
+- microsoft.quantum.canon.delayeda
+- microsoft.quantum.canon.delayedca
+- microsoft.quantum.canon.delay
+ms.openlocfilehash: 33a8e225d8478c36a83bc2240c6f622a5c1d0155
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73219640"

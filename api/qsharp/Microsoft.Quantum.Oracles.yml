@@ -1,0 +1,80 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.oracles
+name: Microsoft.Quantum.Oracles
+summary: " # <a name=\"summary\"></a>요약\n 이 네임 스페이스는 단계 예측 및 진폭 증폭과 같은 퀀텀 알고리즘에서 사용 하는 다양 한 종류의 oracles을 데코레이팅하는 사용자 정의 형식을 제공 합니다."
+functions:
+- uid: microsoft.quantum.oracles.deterministicstateoraclefromstateoracle
+  summary: '`StateOracle` 형식의 oracle을 `DeterministicStateOracle`로 변환 합니다.'
+- uid: microsoft.quantum.oracles.obliviousoraclefromdeterministicstateoracle
+  summary: Oracles `DeterministicStateOracle`와 `ObliviousOracle`를 결합 합니다.
+- uid: microsoft.quantum.oracles.oracletodiscrete
+  summary: "\"블랙 박스\" oracle을 나타내는 작업을 수행 하는 경우 \"블랙 박스\" oracle을 여러 번 반복 하는 불연속 시간 oracle이 반환 됩니다."
+- uid: microsoft.quantum.oracles.reflectionoraclefromdeterministicstateoracle
+  summary: >-
+    Oracle에서 지정 된 상태에 대 한 리플렉션을 생성 합니다.
+
+
+    <xref:microsoft.quantum.oracles.deterministicstateoracle>형식의 oracle $O $가 지정 된 경우이 함수의 결과는 $ \ket{\psi} $ where $O \ket{0} = \ket{\psi} $ 상태를 중심으로 반영 됩니다.
+- uid: microsoft.quantum.oracles.stateoraclefromdeterministicstateoracle
+  summary: '`DeterministicStateOracle` 형식의 oracle을 `StateOracle`로 변환 합니다.'
+newtypes:
+- uid: microsoft.quantum.oracles.continuousoracle
+  summary: >-
+    연속 시간 oracle을 나타냅니다.
+
+
+    이는 $U (\delta t)를 구현 하는 oracle입니다. 모든 시간에 대 한 \ket{\psi (t)} \maps\ket{\psi (t + \delta t)} $ $t $, 여기서 $U $은 고정 연산이 며 $ \delta t $는 음수가 아닌 실수입니다.
+- uid: microsoft.quantum.oracles.deterministicstateoracle
+  summary: >-
+    결정적 상태 준비를 위한 oracle을 나타냅니다.
+
+
+    Oracle $O $에 대 한 입력은 다음과 같습니다.
+
+
+    - 원하는 퀀텀 상태 $ \ket{\psi}\_s $를 저장할 레지스터입니다.
+- uid: microsoft.quantum.oracles.discreteoracle
+  summary: >-
+    불연속 시간 oracle을 나타냅니다.
+
+
+    이는 고정 된 작업 $U $ 및 음수가 아닌 정수 $m $에 대해 ^ m $ $U를 구현 하는 oracle입니다.
+- uid: microsoft.quantum.oracles.obliviousoracle
+  summary: >-
+    명확한 진폭 증폭의 oracle을 나타냅니다.
+
+
+    Oracle $O $에 대 한 입력은 다음과 같습니다.
+
+
+    - $O $가 작동 하는 ancilla 레지스터 $a $입니다.
+
+    - 원하는 단일 $U $가 적용 되는 시스템 등록 $s $는 상태 $ \ket{t}\_a $로 설정 된 레지스터 $a $에서 게시 합니다.
+- uid: microsoft.quantum.oracles.reflectionoracle
+  summary: >-
+    리플렉션 oracle을 나타냅니다.
+
+
+    리플렉션 oracle $O $에는 입력이 있습니다.
+
+
+    - 반사 된 하위 공간을 회전 하는 $ \\? $ 단계입니다.
+
+    - 지정 된 리플렉션을 수행할 대상 레지스터입니다.
+- uid: microsoft.quantum.oracles.stateoracle
+  summary: >-
+    상태 준비를 위한 oracle을 나타냅니다.
+
+
+    Oracle $O $에 대 한 입력은 다음과 같습니다.
+
+
+    - 플래그 $f $를 인덱싱하는 정수입니다.
+
+    - 필요한 퀀텀 상태 $ \ket{\psi}\_s $를 저장할 시스템 등록 $s $입니다.
+ms.openlocfilehash: 10eb2c7acebf805b955816abe2bf1cabb95ce059
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73216104"

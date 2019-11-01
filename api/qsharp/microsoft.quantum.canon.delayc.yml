@@ -1,0 +1,58 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.delayc
+name: DelayC
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  지정 된 작업을 지연 시간에 적용 합니다.
+
+
+  작업 및 해당 작업에 대 한 입력이 주어진 경우 추가 입력이 제공 되 면에서 작업을 적용 합니다.
+
+  특히 `Delay(op, arg, _)` 식은 호출 될 때 `arg`에 `op` 적용 되는 연산입니다.
+
+  식 `Delay(op,arg,_)`를 사용 하 여 `op`의 응용 프로그램을 연기할 수 있습니다.
+syntax: "operation DelayC (op : ('T => Unit is Ctl), arg : 'T, aux : Unit) : Unit"
+input:
+  content: "(op : ('T => Unit is Ctl), arg : 'T, aux : Unit)"
+  types:
+  - name: op
+    summary: 적용 될 작업입니다.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Controlled
+  - name: arg
+    summary: 작업이 적용 되는 입력입니다.
+    uid: "'T"
+    isLocal: true
+  - name: aux
+    summary: 부분 응용 프로그램을 사용 하 여 작업의 응용 프로그램을 지연 하는 데 사용 되는 인수입니다.
+    isPrimitive: true
+    uid: Unit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: 연기할 작업의 입력 형식입니다.
+functors:
+- Controlled
+seeAlso:
+- microsoft.quantum.canon.delay
+- microsoft.quantum.canon.delayed
+ms.openlocfilehash: bbba9e29e35702d21f4c34a869b4cc1f0046b6ad
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73219674"

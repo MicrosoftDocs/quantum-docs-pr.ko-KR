@@ -1,0 +1,58 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.intrinsic.r1frac
+name: R1Frac
+type: operation
+namespace: Microsoft.Quantum.Intrinsic
+summary: >-
+  Dyadic 분수로 지정 된 각도 만큼 $ \ket{1}$ 상태에 대 한 회전을 적용 합니다.
+
+
+  \begin{align} R_1 (n, k) \mathrel{: =} \operatorname{diag} (1, e ^ {i \pi k/2 ^ n}).
+
+  \end{align}
+
+
+  > [!WARNING]
+
+  > 이 작업은 @"microsoft.quantum.intrinsic.r"의 **반대** 부호 규칙을 사용 하 고 @"microsoft.quantum.intrinsic.r1"에 포함 된 $1/2 $의 요소를 포함 하지 않습니다.
+remarks: >-
+  다음에 해당 합니다.
+
+
+  ```qsharp
+
+  RFrac(PauliZ, -numerator, denominator + 1, qubit);
+
+  RFrac(PauliI, numerator, denominator + 1, qubit);
+
+  ```
+syntax: 'operation R1Frac (numerator : Int, power : Int, qubit : Qubit) : Unit'
+input:
+  content: '(numerator : Int, power : Int, qubit : Qubit)'
+  types:
+  - name: numerator
+    summary: Dyadic 분수를 회전 하는 각도를 나타내는 분자입니다.
+    isPrimitive: true
+    uid: Int
+  - name: power
+    summary: 제곱 비트를 회전할 각도의 분모를 지정 하는 2의 거듭제곱입니다.
+    isPrimitive: true
+    uid: Int
+  - name: qubit
+    summary: 게이트가 적용 되어야 하는의 비트입니다.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: c91aa9424abd038fa3a5a22fd23ac92cce171414
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73233988"

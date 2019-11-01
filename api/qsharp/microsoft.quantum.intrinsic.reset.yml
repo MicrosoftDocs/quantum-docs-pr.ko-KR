@@ -1,0 +1,24 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.intrinsic.reset
+name: Reset
+type: operation
+namespace: Microsoft.Quantum.Intrinsic
+summary: 단일의 비트를 고려 하 여이를 측정 하 고 안전 하 게 해제할 수 있도록 | 0 ⟩ 상태를 확인 합니다.
+syntax: 'operation Reset (target : Qubit) : Unit'
+input:
+  content: '(target : Qubit)'
+  types:
+  - name: target
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+ms.openlocfilehash: 9c46f5d3162c8f124418b61dae7449f05f86072d
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73216614"

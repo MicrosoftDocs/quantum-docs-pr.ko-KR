@@ -1,0 +1,28 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.measureinteger
+name: MeasureInteger
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: '퀀텀 레지스터의 콘텐츠를 측정 하 고 정수로 변환 합니다. 측정은 표준 계산 단위 (예: `PauliZ`의 eigenbasis와 관련 하 여 수행 됩니다.'
+remarks: 이 작업을 수행 하면 해당 입력 레지스터가 $ \ket{00\cdots 0} $ 상태로 다시 설정 되며 대상 컴퓨터에 다시 배포 하는 데 적합 합니다.
+syntax: 'operation MeasureInteger (target : Microsoft.Quantum.Arithmetic.LittleEndian) : Int'
+input:
+  content: '(target : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  types:
+  - name: target
+    summary: 작은 endian 인코딩의 퀀텀 레지스터입니다.
+    uid: microsoft.quantum.arithmetic.littleendian
+output:
+  content: Int
+  types:
+  - summary: 측정 된 `target`값을 포함 하는 부호 없는 정수입니다.
+    isPrimitive: true
+    uid: Int
+seeAlso:
+- microsoft.quantum.canon.measureintegerbe
+ms.openlocfilehash: 989302867cbfb6b429bf8e8d4b8a76a0c1c4e61d
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73214880"

@@ -1,0 +1,47 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.reversedopbea
+name: ReversedOpBEA
+type: function
+namespace: Microsoft.Quantum.Arithmetic
+summary: 빅 endian 입력을 사용 하는 작업의 경우는 작은 endian 입력을 사용 하는 새 작업을 반환 합니다.
+syntax: 'function ReversedOpBEA (op : (Microsoft.Quantum.Arithmetic.BigEndian => Unit is Adj)) : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit is Adj)'
+input:
+  content: '(op : (Microsoft.Quantum.Arithmetic.BigEndian => Unit is Adj))'
+  types:
+  - name: op
+    summary: 입력이 반전 될 작업입니다.
+    isOperation: true
+    input:
+      types:
+      - uid: microsoft.quantum.arithmetic.bigendian
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+output:
+  content: (Microsoft.Quantum.Arithmetic.LittleEndian => Unit is Adj)
+  types:
+  - summary: 입력을 작은 endian 레지스터로 허용 하는 새 작업입니다.
+    isOperation: true
+    input:
+      types:
+      - uid: microsoft.quantum.arithmetic.littleendian
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+seeAlso:
+- applyreversedopbea
+- reversedopbe
+- reversedopbec
+- reversedopbeca
+ms.openlocfilehash: 52c9a2199a3298caa468708ef9225651b9a82017
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73214744"

@@ -1,0 +1,17 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.evolutionset
+name: EvolutionSet
+type: newtype
+namespace: Microsoft.Quantum.Simulation
+summary: >-
+  시뮬레이션 알고리즘을 구현 하는 데 쉽게 구현 하 고 사용할 수 있는 게이트 집합을 나타냅니다.
+
+
+  집합의 요소는 <xref:microsoft.quantum.simulation.generatorindex>에서 인덱싱됩니다. 각 집합은 시간을 나타내는 실수에 의해 매개 변수화 된 작업 인 <xref:microsoft.quantum.simulation.evolutionunitary>`GeneratorIndex`의 함수로 설명 됩니다.
+syntax: newtype EvolutionSet = (Microsoft.Quantum.Simulation.GeneratorIndex -> Microsoft.Quantum.Simulation.EvolutionUnitary);
+ms.openlocfilehash: 2e3e717ca219f5e575f750a32f640215142b170c
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73211089"

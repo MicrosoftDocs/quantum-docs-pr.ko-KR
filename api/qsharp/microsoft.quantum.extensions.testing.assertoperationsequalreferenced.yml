@@ -1,0 +1,56 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.extensions.testing.assertoperationsequalreferenced
+name: AssertOperationsEqualReferenced
+type: operation
+namespace: Microsoft.Quantum.Extensions.Testing
+summary: >-
+  > [!WARNING]
+
+  > 사용되지 않음
+
+
+  @"microsoft.quantum.diagnostics.assertoperationsequalreferenced"를 사용 하세요.
+
+  이 작업에 대 한 인수의 순서가 변경 된 것을 확인 합니다.
+syntax: 'operation AssertOperationsEqualReferenced (actual : (Qubit[] => Unit), expected : (Qubit[] => Unit is Adj), nQubits : Int) : Unit'
+input:
+  content: '(actual : (Qubit[] => Unit), expected : (Qubit[] => Unit is Adj), nQubits : Int)'
+  types:
+  - name: actual
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+  - name: expected
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+  - name: nQubits
+    isPrimitive: true
+    uid: Int
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+ms.openlocfilehash: b0e1d4e09eea10e9ed246f7f4194d2c745be47da
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73235688"

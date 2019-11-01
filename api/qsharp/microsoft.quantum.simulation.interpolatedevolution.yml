@@ -1,0 +1,45 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.interpolatedevolution
+name: InterpolatedEvolution
+type: function
+namespace: Microsoft.Quantum.Simulation
+summary: 균일 한 일정을 사용 하 여 두 생성기 간을 보간합니다. 결과 시간 종속 생성기에서 시뮬레이션 된 진화를 원하는 비트 레지스터에 적용 하는 작업을 반환 합니다.
+remarks: 보간 시간이 adiabatic 조건을 충족 하도록 선택 된 경우이 함수는 최종 동적 생성기에 대해 adiabatic 상태 준비를 수행 하는 작업을 반환 합니다.
+syntax: 'function InterpolatedEvolution (inerpolationTime : Double, evolutionGeneratorStart : Microsoft.Quantum.Simulation.EvolutionGenerator, evolutionGeneratorEnd : Microsoft.Quantum.Simulation.EvolutionGenerator, timeDependentSimulationAlgorithm : Microsoft.Quantum.Simulation.TimeDependentSimulationAlgorithm) : (Qubit[] => Unit is Adj + Ctl)'
+input:
+  content: '(inerpolationTime : Double, evolutionGeneratorStart : Microsoft.Quantum.Simulation.EvolutionGenerator, evolutionGeneratorEnd : Microsoft.Quantum.Simulation.EvolutionGenerator, timeDependentSimulationAlgorithm : Microsoft.Quantum.Simulation.TimeDependentSimulationAlgorithm)'
+  types:
+  - name: inerpolationTime
+    isPrimitive: true
+    uid: Double
+  - name: evolutionGeneratorStart
+    summary: 진화를 시뮬레이션 하는 초기 생성기입니다.
+    uid: microsoft.quantum.simulation.evolutiongenerator
+  - name: evolutionGeneratorEnd
+    summary: 에서 발전을 시뮬레이트하는 최종 생성기입니다.
+    uid: microsoft.quantum.simulation.evolutiongenerator
+  - name: timeDependentSimulationAlgorithm
+    summary: 균일 한 보간 일정 중에 진화를 시뮬레이션 하는 데 사용 되는 시간 종속 시뮬레이션 알고리즘입니다.
+    uid: microsoft.quantum.simulation.timedependentsimulationalgorithm
+output:
+  content: (Qubit[] => Unit is Adj + Ctl)
+  types:
+  - isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+ms.openlocfilehash: c457417e28d9de392af5efdee101fc107f37a913
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73211055"

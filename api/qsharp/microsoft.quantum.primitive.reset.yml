@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.primitive.reset
+name: 다시 설정
+type: operation
+namespace: Microsoft.Quantum.Primitive
+summary: >-
+  > [!WARNING]
+
+  > 사용되지 않음
+
+
+  @"microsoft.quantum.intrinsic.reset"를 사용 하세요.
+syntax: 'operation Reset (target : Qubit) : Unit'
+input:
+  content: (대상:의 비트)
+  types:
+  - name: 대상
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: 단위
+  types:
+  - isPrimitive: true
+    uid: Unit
+ms.openlocfilehash: 7a68113316bce6183340c96500005b4bc3c5bd27
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73066662"

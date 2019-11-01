@@ -1,0 +1,41 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.indexrange
+name: IndexRange
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: 배열이 지정 된 경우 for 루프에서 사용 하기에 적합 한 해당 배열의 인덱스에 대해 범위를 반환 합니다.
+examples: >-
+  다음 `for` 루프는 동일 합니다.
+
+
+  ```Q#
+
+  for (idx in IndexRange(array)) { ... }
+
+  for (idx in IndexRange(array)) { ... }
+
+  ```
+syntax: "function IndexRange (array : 'TElement[]) : Range"
+input:
+  content: "(array : 'TElement[])"
+  types:
+  - name: array
+    summary: 인덱스 범위가 반환 되어야 하는 배열입니다.
+    isArray: true
+    uid: "'TElement"
+    isLocal: true
+output:
+  content: Range
+  types:
+  - summary: 배열의 모든 인덱스에 대 한 범위입니다.
+    isPrimitive: true
+    uid: Range
+typeParameters:
+- uid: "'TElement"
+  summary: 배열의 요소 형식입니다.
+ms.openlocfilehash: a70935980fc49a3f8c155fe1901b13da923caaee
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73218161"

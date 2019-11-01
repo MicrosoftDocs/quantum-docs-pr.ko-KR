@@ -1,0 +1,40 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.greaterthan
+name: GreaterThan
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: $ 및 $y $ $x 두 정수의 비교를 엄격 하 게 비교 합니다. Y $를 > $x 경우에는 결과의 상태가 전환 됩니다. 그렇지 않으면 해당 상태를 유지 합니다.
+remarks: 는 $x-y = (x ' + y) ' $를 사용 합니다. 여기서은 1의 보수를 나타냅니다.
+syntax: 'operation GreaterThan (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, result : Qubit) : Unit'
+references: >-
+  - Thomas G. Draper, Samuel A. Kutin, David Petrie Moulton: "A new 퀀텀 ripple and A new, 2004.
+    https://arxiv.org/abs/quant-ph/0410184v1
+
+  - Thomas Haener, Martin Roetteler, Krysta M. Svore: "2n를 사용 하는 Toffoli + 2 based 모듈형 곱셈", 2016 https://arxiv.org/abs/1611.07995
+input:
+  content: '(xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, result : Qubit)'
+  types:
+  - name: xs
+    summary: LittleEndian vebit는 첫 번째 정수 $x $로 인코딩합니다.
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: ys
+    summary: LittleEndian cobit $y $의 두 번째 정수를 등록 합니다.
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: result
+    summary: $X > y $ 인 경우 대칭 이동 될 단일 비트입니다.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 6961a6a4f22d2290a264298a3be3b15f7bdb0ac7
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73214948"

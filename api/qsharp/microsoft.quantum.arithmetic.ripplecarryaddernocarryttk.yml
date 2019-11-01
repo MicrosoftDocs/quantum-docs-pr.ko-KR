@@ -1,0 +1,34 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.ripplecarryaddernocarryttk
+name: RippleCarryAdderNoCarryTTK
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: 해독 가능, 내부 ripple-수행 하지 않고 두 개의 정수를 추가 합니다. LittleEndian에서 인코딩된 $n $ bit 정수 두 개 (`xs` 및 `ys`)가 지정 되 면 연산은 두 정수 모듈로 $2 ^ n $의 합계를 계산 합니다. 여기서 $n $은 입력 `xs` 및 `ys`의 비트 크기입니다. 이는 운반 비트를 계산 하지 않습니다.
+remarks: 이 작업은 RippleCarryAdderTTK와 동일한 기능을 수행 하지만 운반 비트를 반환 하지 않습니다.
+syntax: 'operation RippleCarryAdderNoCarryTTK (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+references: >-
+  - Yasuhiro Takahashi, Seiichiro Tani, Noboru Kunihiro: "퀀텀 추가 회로 및 무제한 팬 아웃", 퀀텀 정보 및 계산, Vol. 10, 2010.
+    https://arxiv.org/abs/0910.2530
+input:
+  content: '(xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  types:
+  - name: xs
+    summary: LittleEndian cobit는 첫 번째 정수 summand을 등록 합니다.
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: ys
+    summary: LittleEndian의 두 번째 정수 summand는 sum의 $n $ 최하위 비트를 포함 하도록 수정 되었습니다.
+    uid: microsoft.quantum.arithmetic.littleendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 9aa955764b16806df1ea6205b92483f4747463f5
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73214523"

@@ -1,0 +1,28 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.intstopaulis
+name: IntsToPaulis
+type: function
+namespace: Microsoft.Quantum.Simulation
+summary: 정수 배열을 단일가 나 비트 Pauli 연산자의 배열로 변환 합니다.
+syntax: 'function IntsToPaulis (ints : Int[]) : Pauli[]'
+input:
+  content: '(정수: Int [])'
+  types:
+  - name: 홀수
+    summary: Pauli 연산자로 변환할 `0..3` 범위의 정수 배열입니다.
+    isArray: true
+    isPrimitive: true
+    uid: Int
+output:
+  content: Pauli []
+  types:
+  - summary: '`[PauliI, PauliX, PauliY, PauliZ]`에 지정 된 `ints[idxPauli]`의 요소와 같은 `paulis[idxPauli]`를 `ints`와 동일한 길이를 `Pauli[]` Pauli 연산자의 `paulis` 배열입니다.'
+    isArray: true
+    isPrimitive: true
+    uid: Pauli
+ms.openlocfilehash: 407ad1481c220f390fffb5f1b59f0968d6d6570c
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73066985"

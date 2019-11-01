@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.oracles.reflectionoraclefromdeterministicstateoracle
+name: ReflectionOracleFromDeterministicStateOracle
+type: function
+namespace: Microsoft.Quantum.Oracles
+summary: >-
+  Oracle에서 지정 된 상태에 대 한 리플렉션을 생성 합니다.
+
+
+  <xref:microsoft.quantum.oracles.deterministicstateoracle>형식의 oracle $O $가 지정 된 경우이 함수의 결과는 $ \ket{\psi} $ where $O \ket{0} = \ket{\psi} $ 상태를 중심으로 반영 됩니다.
+syntax: 'function ReflectionOracleFromDeterministicStateOracle (oracle : Microsoft.Quantum.Oracles.DeterministicStateOracle) : Microsoft.Quantum.Oracles.ReflectionOracle'
+input:
+  content: '(oracle: Oracles. DeterministicStateOracle)'
+  types:
+  - name: Oracle
+    summary: "\"DeterministicStateOracle\" 유형의 Oracle"
+    uid: microsoft.quantum.oracles.deterministicstateoracle
+output:
+  content: Oracles. ReflectionOracle
+  types:
+  - summary: $ \Ket{\psi} $ 상태에 대 한 정보를 반영 하는 `ReflectionOracle`입니다.
+    uid: microsoft.quantum.oracles.reflectionoracle
+seeAlso:
+- deterministicstateoracle
+- reflectionoracle
+ms.openlocfilehash: c48c9259b4b3c122a8d7551db6d326ea523dd2a0
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73050329"

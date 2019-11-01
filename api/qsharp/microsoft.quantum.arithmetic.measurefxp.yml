@@ -1,0 +1,24 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.measurefxp
+name: MeasureFxP
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: 고정 소수점 숫자를 측정 하 고, 값을 Double로 반환 하 고, 모든 레지스터를 0으로 다시 설정 합니다.
+syntax: 'operation MeasureFxP (fp : Microsoft.Quantum.Arithmetic.FixedPoint) : Double'
+input:
+  content: '(fp : Microsoft.Quantum.Arithmetic.FixedPoint)'
+  types:
+  - name: fp
+    summary: 측정할 고정 소수점 숫자입니다.
+    uid: microsoft.quantum.arithmetic.fixedpoint
+output:
+  content: Double
+  types:
+  - isPrimitive: true
+    uid: Double
+ms.openlocfilehash: bcf73d2cac3f672096c93824899837fbb348d229
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73214914"
