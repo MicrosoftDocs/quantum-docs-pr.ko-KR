@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.errorcorrection.syndromemeasop
+name: SyndromeMeasOp
+type: newtype
+namespace: Microsoft.Quantum.ErrorCorrection
+summary: 오류 수정 코드 블록의 증후군을 측정 하는 데 사용 되는 작업을 나타냅니다.
+remarks: >-
+  시그니처 `(LogicalRegister => Syndrome)`은 `LogicalRegister`의 이상 값에 대해 공동으로 작동 하는 작업을 나타내며, 일부 보조 비트의 경우 보조 비트를 측정 하 여 이러한 측정의 `Result[]`을 나타내는 `Syndrome` 값을 추출 합니다.
+
+
+  ### <a name="examples"></a>예시
+
+  Syndromes = \langle ZZI, IZZ \rangle $를 사용 하 여을 측정 $S 합니다.
+
+
+  ```qsharp
+      let syndMeasOp = SyndromeMeasOp(MeasureStabilizerGenerators([
+              [PauliZ, PauliZ, PauliI],
+              [PauliI, PauliZ, PauliZ]
+          ], _, MeasureWithScratch));
+  ```
+syntax: newtype SyndromeMeasOp = (Microsoft.Quantum.ErrorCorrection.LogicalRegister => Microsoft.Quantum.ErrorCorrection.Syndrome);
+seeAlso:
+- logicalregister
+- syndrome
+ms.openlocfilehash: 75f0fee569475e887b97d9969c9e92285809f1cb
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73232237"

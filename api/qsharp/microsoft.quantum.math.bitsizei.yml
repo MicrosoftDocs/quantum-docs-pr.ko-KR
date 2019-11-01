@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.bitsizei
+name: BitSizeI
+type: function
+namespace: Microsoft.Quantum.Math
+summary: >-
+  음수가 아닌 정수 `a`의 경우 `a`을 나타내는 데 필요한 비트 수를 반환 합니다.
+
+
+  즉, $a < 2 ^ n $와 같은 가장 작은 $n $를 반환 합니다.
+syntax: 'function BitSizeI (a : Int) : Int'
+input:
+  content: '(a : Int)'
+  types:
+  - name: a
+    summary: 비트 크기를 계산할 정수입니다.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Int
+  types:
+  - summary: '`a`의 비트 크기입니다.'
+    isPrimitive: true
+    uid: Int
+ms.openlocfilehash: 5faf7961011c666b333cc9befc3da9af4872330d
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73230180"

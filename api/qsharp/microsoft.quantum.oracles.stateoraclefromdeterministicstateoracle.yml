@@ -1,0 +1,27 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.oracles.stateoraclefromdeterministicstateoracle
+name: StateOracleFromDeterministicStateOracle
+type: function
+namespace: Microsoft.Quantum.Oracles
+summary: '`DeterministicStateOracle` 형식의 oracle을 `StateOracle`로 변환 합니다.'
+syntax: 'function StateOracleFromDeterministicStateOracle (deterministicStateOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle) : Microsoft.Quantum.Oracles.StateOracle'
+input:
+  content: '(deterministicStateOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle)'
+  types:
+  - name: deterministicStateOracle
+    summary: '`DeterministicStateOracle`형식의 상태 준비 oracle $A입니다.'
+    uid: microsoft.quantum.oracles.deterministicstateoracle
+output:
+  content: Microsoft.Quantum.Oracles.StateOracle
+  types:
+  - summary: Oracle $A $와 같은 상태를 준비 하지만 이제는 `StateOracle`형식입니다. 이 `StateOracle`의 플래그 인덱스는 더미 변수 이며 아무런 영향을 주지 않습니다.
+    uid: microsoft.quantum.oracles.stateoracle
+seeAlso:
+- microsoft.quantum.canon.deterministicstateoracle
+- microsoft.quantum.canon.stateoracle
+ms.openlocfilehash: 681d5a8a132819fa1b0c1af049418123d21ecec4
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73228208"

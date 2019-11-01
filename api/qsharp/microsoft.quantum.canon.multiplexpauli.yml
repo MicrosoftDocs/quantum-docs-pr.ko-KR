@@ -1,0 +1,48 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.multiplexpauli
+name: MultiplexPauli
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  원하는 비트 배열에 Pauli 회전 조건 화 된을 적용 합니다.
+
+
+  이렇게 하면 $ \ket{j} $ $n에서 제어 하는 경우 $ \theta_j $에 대 한 각도 $ \theta_j $ 정보 1 $P $를 기준으로 회전을 수행 하는 곱하기 제어 된 단일 $U 작업을 적용 합니다.
+
+
+  $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes e ^ {i P \theta_j} $.
+remarks: $2 ^ n $ 보다 작은 값을 지정 하면 `coefficients`은 $ \theta_j = $0.0 요소로 채워집니다.
+syntax: 'operation MultiplexPauli (coefficients : Double[], pauli : Pauli, control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit) : Unit'
+input:
+  content: '(coefficients : Double[], pauli : Pauli, control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit)'
+  types:
+  - name: coefficients
+    summary: 최대 $2 ^ n $ 계수의 $ \theta_j $의 배열입니다. $J $ th 계수는 작은 endian 형식으로 인코딩된 number state $ \ket{j} $를 인덱싱합니다.
+    isArray: true
+    isPrimitive: true
+    uid: Double
+  - name: pauli
+    summary: Pauli 연산자는 회전 축을 결정 하는 $ $P 합니다.
+    isPrimitive: true
+    uid: Pauli
+  - name: control
+    summary: 숫자 상태 $ \ket{j} $를 거의 endian 형식으로 인코딩하는 $-# 컨트롤 레지스터를 $n 합니다.
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: target
+    summary: $E ^ {i P \theta_j} $로 회전 한 단일 비트 레지스터입니다.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: efc5e1cef8574528eeb124100c4d5f875fc2e0e3
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73227749"

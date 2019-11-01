@@ -1,0 +1,26 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.lg
+name: Lg
+type: function
+namespace: Microsoft.Quantum.Math
+summary: 숫자의 밑이 2 인 로그를 계산 합니다.
+syntax: 'function Lg (input : Double) : Double'
+input:
+  content: '(input : Double)'
+  types:
+  - name: input
+    summary: 실수 $x $입니다.
+    isPrimitive: true
+    uid: Double
+output:
+  content: Double
+  types:
+  - summary: 밑이 2 인 $y = \log_2 (x) $는 $x = 2 ^ y $입니다.
+    isPrimitive: true
+    uid: Double
+ms.openlocfilehash: b96476effbf0e854a79f3f0e61ca96fcd33db0fc
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73232679"
