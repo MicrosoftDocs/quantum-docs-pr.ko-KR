@@ -1,0 +1,56 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.extensions.testing
+name: Microsoft.Quantum.Extensions.Testing
+operations:
+- uid: microsoft.quantum.extensions.testing.assertallzero
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"microsoft.quantum.diagnostics.assertallzero"를 사용 하세요.
+- uid: microsoft.quantum.extensions.testing.assertallzerotol
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"microsoft.quantum.diagnostics.assertallzerowithintolerance"를 사용 하세요.
+- uid: microsoft.quantum.extensions.testing.assertoperationsequalinplace
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"microsoft.quantum.diagnostics.assertoperationsequalinplace"를 사용 하세요.
+
+    이 작업에 대 한 인수의 순서가 변경 된 것을 확인 합니다.
+- uid: microsoft.quantum.extensions.testing.assertoperationsequalinplacecompbasis
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"microsoft.quantum.diagnostics.assertoperationsequalinplaceCompBasis"를 사용 하세요.
+
+    이 작업에 대 한 인수의 순서가 변경 된 것을 확인 합니다.
+- uid: microsoft.quantum.extensions.testing.assertoperationsequalreferenced
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"microsoft.quantum.diagnostics.assertoperationsequalreferenced"를 사용 하세요.
+
+    이 작업에 대 한 인수의 순서가 변경 된 것을 확인 합니다.
+- uid: microsoft.quantum.extensions.testing.assertqubit
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"microsoft.quantum.diagnostics.assertqubit"를 사용 하세요.
+- uid: microsoft.quantum.extensions.testing.assertqubitstate
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance"를 사용 하세요.
+- uid: microsoft.quantum.extensions.testing.assertqubittol
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"microsoft.quantum.diagnostics.assertqubitwithintolerance"를 사용 하세요.
+ms.openlocfilehash: 031bbd476ac37f113f9fb692ccd6fca916612ac3
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73210364"

@@ -1,0 +1,37 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.logical.not
+name: Not
+type: function
+namespace: Microsoft.Quantum.Logical
+summary: 값의 부울 부정을 반환 합니다.
+remarks: >-
+  다음은 동일 합니다.
+
+
+  ```Q#
+
+  let x = not value;
+
+  let x = Not(value);
+
+  ```
+syntax: 'function Not (value : Bool) : Bool'
+input:
+  content: '(value : Bool)'
+  types:
+  - name: value
+    summary: 부정할 값입니다.
+    isPrimitive: true
+    uid: Bool
+output:
+  content: Bool
+  types:
+  - summary: '`value` `false`경우에만 `true` 합니다.'
+    isPrimitive: true
+    uid: Bool
+ms.openlocfilehash: 85df2e3787e96ab18c351dc5a210e5b8a2803b09
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73235416"

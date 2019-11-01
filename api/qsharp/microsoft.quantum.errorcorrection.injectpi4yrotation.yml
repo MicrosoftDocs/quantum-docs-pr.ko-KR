@@ -1,0 +1,63 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.errorcorrection.injectpi4yrotation
+name: InjectPi4YRotation
+type: operation
+namespace: Microsoft.Quantum.ErrorCorrection
+summary: >-
+  `Y`에 대해 π/4 회전을 수행 합니다.
+
+
+  회전은 매직 상태를 사용 하 여 수행 됩니다. 즉, $ $ \begin{align} \cos\frac{\pi}{8} \ket{0} + \sin \frac{\pi}{8} \ket{1}의 복사본입니다.
+
+  \end{align} $ $
+remarks: >-
+  다음은 동일 합니다.
+
+
+  ```qsharp
+
+  Ry(PI() / 4.0, data);
+
+  ```
+
+
+  및
+
+
+  ```qsharp
+
+  using (magic = Qubit()) {
+      Ry(PI() / 4.0, magic);
+      InjectPi4YRotation(data, magic);
+      Reset(magic);
+  }
+
+  ```
+
+
+  이 작업은 `Adjoint` 기능을 지원 합니다 .이 경우 동일한 매직 상태를 사용 하지만 데이터의 효과는 $-\ pi/4 $ $Y $-회전입니다.
+syntax: 'operation InjectPi4YRotation (data : Qubit, magic : Qubit) : Unit'
+input:
+  content: '(data : Qubit, magic : Qubit)'
+  types:
+  - name: data
+    summary: $ \Pi/$4에 대 한 $Y $에 대해 회전 하는 데 사용할 비트입니다.
+    isPrimitive: true
+    uid: Qubit
+  - name: magic
+    summary: 초기 상태의 초기 상태에 있는 놀라운 비트입니다. 이 작업의 다음 응용 프로그램은 `magic` $ \ket{0}$ 상태로 반환 됩니다.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+ms.openlocfilehash: fa0b69740e94247aa9f31d03715464be1b29a0a6
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73211429"

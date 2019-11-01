@@ -1,0 +1,26 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.intrinsic.message
+name: Message
+type: function
+namespace: Microsoft.Quantum.Intrinsic
+summary: 메시지를 기록 합니다.
+remarks: 이 함수의 특정 동작은 시뮬레이터에 종속 되지만 대부분의 경우 지정 된 메시지가 콘솔에 기록 됩니다.
+syntax: 'function Message (msg : String) : Unit'
+input:
+  content: '(msg : String)'
+  types:
+  - name: msg
+    summary: 보고할 메시지입니다.
+    isPrimitive: true
+    uid: String
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+ms.openlocfilehash: 90ca6c1a059a327da86e81de70f1f6bfc34f8785
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73234056"

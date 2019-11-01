@@ -1,0 +1,35 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.addfxp
+name: AddFxP
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: >-
+  퀀텀 레지스터에 저장 된 두 개의 고정 소수점 숫자를 추가 합니다.
+
+
+  $ \Ket{f_1} $ 및 $ \ket{f_2} $ 상태에서 각각 두 개의 고정 소수점 레지스터가 지정 된 경우 $ \ket{f_1} \ket{f_2} \mapsto \ket{f_1 f_2 +} $ 작업을 수행 합니다.
+remarks: 현재 구현에서는 두 개의 고정 소수점 숫자가 최하위 비트에서 동일한 점 위치를 계산 해야 합니다. 즉, $n _i $ 및 $p _i $는 동일 해야 합니다.
+syntax: 'operation AddFxP (fp1 : Microsoft.Quantum.Arithmetic.FixedPoint, fp2 : Microsoft.Quantum.Arithmetic.FixedPoint) : Unit'
+input:
+  content: '(fp1 : Microsoft.Quantum.Arithmetic.FixedPoint, fp2 : Microsoft.Quantum.Arithmetic.FixedPoint)'
+  types:
+  - name: fp1
+    summary: 첫 번째 고정 소수점 숫자
+    uid: microsoft.quantum.arithmetic.fixedpoint
+  - name: fp2
+    summary: 두 번째 고정 소수점 숫자는 두 입력의 합계를 포함 하도록 업데이트 됩니다.
+    uid: microsoft.quantum.arithmetic.fixedpoint
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 142c7927519e59fb3df1661b3beadd32cda0d2c8
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73215424"

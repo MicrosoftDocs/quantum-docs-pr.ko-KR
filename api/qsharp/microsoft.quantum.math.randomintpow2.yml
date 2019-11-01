@@ -1,0 +1,27 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.randomintpow2
+name: RandomIntPow2
+type: operation
+namespace: Microsoft.Quantum.Math
+summary: 지정 된 비트 수로 나타낼 수 있는 모든 정수에서 균일 하 게 샘플링 된 임의의 정수를 생성 합니다.
+remarks: 이 함수는 <xref:microsoft.quantum.intrinsic.random>를 호출 하므로 해당 임의성은 `Random`의 구현에 따라 달라 집니다.
+syntax: 'operation RandomIntPow2 (maxBits : Int) : Int'
+input:
+  content: '(maxBits : Int)'
+  types:
+  - name: maxBits
+    summary: 이 작업에서 반환할 수 있는 가장 큰 정수를 나타내는 데 필요한 고전 비트 수입니다.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Int
+  types:
+  - summary: $ [0, 2 ^ {\texttt{maxBits}}-1] $;의 정수를 임의로 정수 $x. 즉, $ \Pr (x) = \frac{1}{2 ^ {\texttt{maxBits}}} $를 사용 합니다.
+    isPrimitive: true
+    uid: Int
+ms.openlocfilehash: e690509a7dcd2b1ec51bdde85da6439a688e75e7
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73219980"

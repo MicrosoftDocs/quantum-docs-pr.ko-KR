@@ -1,0 +1,22 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.timedependentblockencoding
+name: TimeDependentBlockEncoding
+type: newtype
+namespace: Microsoft.Quantum.Simulation
+summary: >-
+  클록 레지스터에 의해 제어 되는 `BlockEncoding`를 나타냅니다.
+
+
+  즉, `TimeDependentBlockEncoding`는 클록 `d` 레지스터의 state $ \ket{k}_d $에 의해 제어 되는 단일 $U $입니다 .이는 시스템 레지스터에 대해 작동 하는 임의 연산자 $H _k $이 고 보조 상태 $ \ket에 해당 하는 왼쪽 위 블록에 인코딩되어 있습니다 `s` __t_3_ _a $. 말하자면
+
+
+  $ $ \begin{align} (\bra{0}\_a\otimes I_ {ds}) U (\ket{0}\_a\otimes I_ {ds}) = \sum_{k}\ket{k}\bra{k}\_d\otimes H_k.
+
+  \end{align} $ $.
+syntax: newtype TimeDependentBlockEncoding = ((Qubit[], Qubit[], Qubit[]) => Unit is Adj + Ctl);
+ms.openlocfilehash: 1f41d7592e7f031085430a42edaa341874724851
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73211021"

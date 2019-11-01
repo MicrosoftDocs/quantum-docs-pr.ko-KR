@@ -1,0 +1,41 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.logical.lessthanorequall
+name: LessThanOrEqualL
+type: function
+namespace: Microsoft.Quantum.Logical
+summary: 숫자가 다른 숫자 보다 작거나 같은 경우에만 true를 반환 합니다.
+remarks: >-
+  다음은 동일 합니다.
+
+
+  ```Q#
+
+  let cond = a <= b;
+
+  let cond = LessThanOrEqualL(a, b);
+
+  ```
+syntax: 'function LessThanOrEqualL (a : BigInt, b : BigInt) : Bool'
+input:
+  content: '(a : BigInt, b : BigInt)'
+  types:
+  - name: a
+    summary: 비교할 첫 번째 값입니다.
+    isPrimitive: true
+    uid: BigInt
+  - name: b
+    summary: 비교할 두 번째 값입니다.
+    isPrimitive: true
+    uid: BigInt
+output:
+  content: Bool
+  types:
+  - summary: '`a`이 `b`보다 작거나 같은 경우에만 `true` 합니다.'
+    isPrimitive: true
+    uid: Bool
+ms.openlocfilehash: 3f6ae9d9c97f9a6c24f6b4a76d0f46914bf94f9a
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73235484"

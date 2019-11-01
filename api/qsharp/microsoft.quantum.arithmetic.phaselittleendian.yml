@@ -1,0 +1,21 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.phaselittleendian
+name: PhaseLittleEndian
+type: newtype
+namespace: Microsoft.Quantum.Arithmetic
+summary: >-
+  QFT 기반의 작은 endian 부호 없는 정수입니다.
+
+
+  예를 들어 $ \ket{x} $가 계산을 기준으로 하는 정수 $x $의 작은 endian 인코딩이 면 $ \operatorname{QFTLE} \ket{x} $는 QFT의 $x $의 인코딩입니다.
+remarks: '`PhaseLittleEndian`는 설명서에서 `PhaseLE`으로 축약 됩니다.'
+syntax: newtype PhaseLittleEndian = Qubit[];
+seeAlso:
+- qft
+- qftle
+ms.openlocfilehash: 8efb8b58ff7ee5c0530abfb81792366f6990997e
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73218722"

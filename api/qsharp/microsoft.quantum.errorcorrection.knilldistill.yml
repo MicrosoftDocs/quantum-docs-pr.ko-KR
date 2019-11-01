@@ -1,0 +1,38 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.errorcorrection.knilldistill
+name: KnillDistill
+type: operation
+namespace: Microsoft.Quantum.ErrorCorrection
+summary: >-
+  Knill magic state 추출을 알고리즘을 구현 합니다.
+
+
+  매직 상태 $ $ \begin{align} \cos\frac{\pi}{8} \ket{0} + \sin \frac{\pi}{8} \ket{1} \end{align}의 15 개의 대략적인 복사본을 제공 합니다. $ $는 고품질의 복사본 하나를 생성 합니다.
+remarks: >-
+  Knill 알고리즘을 따릅니다.
+
+  그러나 현재 구현은 너무 많은 비트를 사용 하기 때문에 최적 상태가 아닙니다.
+
+  매직 상태는이 루틴에 삽입 되며,이 경우 더 나은 프로토콜이 있습니다.
+syntax: 'operation KnillDistill (roughMagic : Qubit[]) : Bool'
+references: '- [Knill](https://arxiv.org/abs/quant-ph/0402171)'
+input:
+  content: '(roughMagic : Qubit[])'
+  types:
+  - name: roughMagic
+    summary: 매직 상태의 대략적인 복사본을 포함 하는 15 개의 비트 레지스터입니다. 이 추출을 절차를 적용 한 후에는 `roughMagic[0]`에 고품질 복사본이 하나 포함 되 고 나머지 레지스터는 $ \ket{00\cdots 0} $ 상태로 다시 설정 됩니다.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Bool
+  types:
+  - summary: '`true`경우에는 프로시저 성공 및 고품질 복사를 수락 해야 합니다. `false`경우 프로시저가 실패 하 고 레지스터의 상태가 undefined로 간주 되어야 합니다.'
+    isPrimitive: true
+    uid: Bool
+ms.openlocfilehash: 81d87b3dcd6f669a63847e331865b1f2c389f3ce
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73226729"

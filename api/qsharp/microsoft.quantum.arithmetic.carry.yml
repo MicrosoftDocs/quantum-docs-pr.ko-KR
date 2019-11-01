@@ -1,0 +1,40 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.carry
+name: Carry
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: 해독 가능한 전달 게이트를 구현 합니다. `carryIn`에서 인코딩된 전달 비트와 `summand1` 및 `summand2`에서 인코딩된 두 개의 summand 비트가 지정 된 경우는 `summand1`에서 `carryIn`, `summand2` 및 `summand2`의 비트 xor을 계산 하 고, 운반은 xored `carryOut`합니다.
+syntax: 'operation Carry (carryIn : Qubit, summand1 : Qubit, summand2 : Qubit, carryOut : Qubit) : Unit'
+input:
+  content: '(carryIn : Qubit, summand1 : Qubit, summand2 : Qubit, carryOut : Qubit)'
+  types:
+  - name: carryIn
+    summary: 운반 비트입니다.
+    isPrimitive: true
+    uid: Qubit
+  - name: summand1
+    summary: 첫 번째 summand입니다.
+    isPrimitive: true
+    uid: Qubit
+  - name: summand2
+    summary: 두 번째 summand는 `summand1` 및 `summand2`합계의 하위 비트로 대체 됩니다.
+    isPrimitive: true
+    uid: Qubit
+  - name: carryOut
+    summary: 수행 하는 것은 합계의 상위 비트를 사용 하 여 xored 됩니다.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 6736bc62db7d8ac1952bf74617bd8764702bd8b3
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73221340"

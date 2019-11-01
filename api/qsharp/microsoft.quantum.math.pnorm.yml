@@ -1,0 +1,34 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.pnorm
+name: PNorm
+type: function
+namespace: Microsoft.Quantum.Math
+summary: >-
+  `Double`의 벡터에 `L(p)` 표준을 반환 합니다.
+
+
+  즉, `Double[]`형식의 $x $로 지정 하면 $-일반 $\|x\|\_p = (\sum_{j} | x_j | ^ {p}) ^ {1/p} $ $p 반환 됩니다.
+syntax: 'function PNorm (p : Double, array : Double[]) : Double'
+input:
+  content: '(p : Double, array : Double[])'
+  types:
+  - name: p
+    summary: $P $-일반의 지 수 $p입니다.
+    isPrimitive: true
+    uid: Double
+  - name: array
+    isArray: true
+    isPrimitive: true
+    uid: Double
+output:
+  content: Double
+  types:
+  - summary: $P $-일반 $\|x\|_p $입니다.
+    isPrimitive: true
+    uid: Double
+ms.openlocfilehash: 16350e3df18d7e98d6c5706c85a931b1d37915d2
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73211123"

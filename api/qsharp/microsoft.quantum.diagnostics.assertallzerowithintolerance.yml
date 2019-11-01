@@ -1,0 +1,35 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.diagnostics.assertallzerowithintolerance
+name: AssertAllZeroWithinTolerance
+type: operation
+namespace: Microsoft.Quantum.Diagnostics
+summary: 지정 된 \ket는 지정 된 허용 오차까지 모두 ${0}$ 상태에 있습니다.
+syntax: 'operation AssertAllZeroWithinTolerance (qubits : Qubit[], tolerance : Double) : Unit'
+input:
+  content: '(작업 비트 [], 허용 오차: Double)'
+  types:
+  - name: 이상 비트
+    summary: $ \Ket{0}$ state에 있도록 어설션된 비트입니다.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+  - name: 허용
+    summary: 상태가 $ \ket{0}$ 상태 여야 하는 정확도
+    isPrimitive: true
+    uid: Double
+output:
+  content: 단위
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- assertqubitwithintolerance
+ms.openlocfilehash: 0e3b560d08077bb353147d98a921a2c2ca3ae202
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73066543"

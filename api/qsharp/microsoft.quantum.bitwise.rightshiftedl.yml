@@ -1,0 +1,41 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.bitwise.rightshiftedl
+name: RightShiftedL
+type: function
+namespace: Microsoft.Quantum.Bitwise
+summary: 숫자의 비트 표현을 지정 된 비트 수 만큼 오른쪽으로 이동 합니다.
+remarks: >-
+  다음은 동일 합니다.
+
+
+  ```Q#
+
+  let c = a >>> b;
+
+  let c = RightShiftedL(a, b);
+
+  ```
+syntax: 'function RightShiftedL (value : BigInt, amount : Int) : BigInt'
+input:
+  content: '(value : BigInt, amount : Int)'
+  types:
+  - name: value
+    summary: 비트 표현이 오른쪽으로 이동 하는 숫자 (낮음)입니다.
+    isPrimitive: true
+    uid: BigInt
+  - name: amount
+    summary: '`value`를 오른쪽으로 이동할 비트 수입니다.'
+    isPrimitive: true
+    uid: Int
+output:
+  content: BigInt
+  types:
+  - summary: '`amount` 비트로 오른쪽으로 이동한 `value`값입니다.'
+    isPrimitive: true
+    uid: BigInt
+ms.openlocfilehash: 4c370d859eefdcff5fc844cf55e17adad7b5df86
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73213860"

@@ -1,0 +1,40 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applydiagonalunitary
+name: ApplyDiagonalUnitary
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  일련의 복잡 한 단계 배열을 다양 한 양의 레지스터의 숫자 기반 상태에 적용 합니다.
+
+
+  즉,이는 $n $ \ket{j} $에서 복잡 한 단계 $e ^ {i \theta_j} $에 적용 하는 대각선 단일 $U 작업 인 $을 구현 합니다.
+
+
+  $U = \sum ^ {2 ^ n-1} _ {j = 0} e ^ {i\theta_j} \ k {j} \ bra {j} $입니다.
+remarks: $2 ^ n $ 보다 작은 값을 지정 하면 `coefficients`은 $ \theta_j = $0.0 요소로 채워집니다.
+syntax: 'operation ApplyDiagonalUnitary (coefficients : Double[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+references: '- 퀀텀 논리 회로 Vivek Shende, Stephen S., Markov https://arxiv.org/abs/quant-ph/0406176'
+input:
+  content: '(coefficients : Double[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  types:
+  - name: coefficients
+    summary: 최대 $2 ^ n $ 계수의 $ \theta_j $의 배열입니다. $J $ th 계수는 작은 endian 형식으로 인코딩된 number state $ \ket{j} $를 인덱싱합니다.
+    isArray: true
+    isPrimitive: true
+    uid: Double
+  - name: qubits
+    uid: microsoft.quantum.arithmetic.littleendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 80247438297c9d3a4f7d582f659a50f5d48c1335
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73217685"

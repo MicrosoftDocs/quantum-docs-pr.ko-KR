@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.squarei
+name: SquareI
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: '`result`로 `xs` 정수의 제곱을 계산 합니다 .이는 처음에 0 이어야 합니다.'
+remarks: 표준 시프트 및 추가 방법을 사용 하 여 사각형을 계산 합니다. 일반 승수를 적용 하기 전에 먼저 xs를 복사 하 고 복사 작업을 실행 취소 하는 단순 전방 솔루션과 비교 하 여 $n-$1의 비트를 저장 합니다.
+syntax: 'operation SquareI (xs : Microsoft.Quantum.Arithmetic.LittleEndian, result : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+input:
+  content: '(xs : Microsoft.Quantum.Arithmetic.LittleEndian, result : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  types:
+  - name: xs
+    summary: $n $ bit number to square (LittleEndian)
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: result
+    summary: $2n $-bit result (LittleEndian)는 처음에 $ \ket{0}$ 상태 여야 합니다.
+    uid: microsoft.quantum.arithmetic.littleendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: ae55cd24a5dad065c010006f01484f7e903e76f6
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73218433"

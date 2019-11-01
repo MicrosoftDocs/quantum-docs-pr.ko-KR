@@ -1,0 +1,10 @@
+- name: 버그 보고
+  href: reporting-bugs.md
+- name: 설명서에 기여
+  href: docs.md
+- name: 끌어오기 요청 열기
+  href: pull-requests.md
+- name: 코드 기여
+  href: code.md
+- name: 스타일 가이드
+  href: style-guide.md

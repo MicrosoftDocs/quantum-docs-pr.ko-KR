@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.constantarray
+name: ConstantArray
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: 모든 요소가 지정 된 값과 같은 지정 된 길이의 배열을 만듭니다.
+syntax: "function ConstantArray (length : Int, value : 'T) : 'T[]"
+input:
+  content: "(length : Int, value : 'T)"
+  types:
+  - name: length
+    summary: 새 배열의 길이입니다.
+    isPrimitive: true
+    uid: Int
+  - name: value
+    summary: 새 배열의 각 인덱스에 포함 될 값입니다.
+    uid: "'T"
+    isLocal: true
+output:
+  content: "'T[]"
+  types:
+  - summary: 모든 요소가 `value`되는 `length`길이의 새 배열입니다.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+ms.openlocfilehash: 7b641f4e037b760ac036abfc23ac197d7008bc0e
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73214438"

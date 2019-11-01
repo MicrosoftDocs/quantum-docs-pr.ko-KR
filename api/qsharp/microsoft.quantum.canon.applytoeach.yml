@@ -1,0 +1,55 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applytoeach
+name: ApplyToEach
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: 레지스터의 각 요소에 단일 수준 비트 작업을 적용 합니다.
+examples: >-
+  3-이상 비트 $ \ket{+} $ 상태 준비:
+
+
+  ```qsharp
+
+  using (register = Qubit[3]) {
+      ApplyToEach(H, register);
+  }
+
+  ```
+syntax: "operation ApplyToEach (singleElementOperation : ('T => Unit), register : 'T[]) : Unit"
+input:
+  content: "(singleElementOperation : ('T => Unit), register : 'T[])"
+  types:
+  - name: singleElementOperation
+    summary: 각 고 비트에 적용할 연산입니다.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+  - name: register
+    summary: 지정 된 작업을 적용할 대상 비트의 배열입니다.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: 작업이 수행 되는 대상입니다.
+seeAlso:
+- microsoft.quantum.canon.applytoeachc
+- microsoft.quantum.canon.applytoeacha
+- microsoft.quantum.canon.applytoeachca
+ms.openlocfilehash: a8f58bc8f3bf1d460a5b1f4ffbeba95185d09a1a
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73210551"

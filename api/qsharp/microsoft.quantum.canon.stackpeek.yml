@@ -1,0 +1,25 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.stackpeek
+name: StackPeek
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: <xref:microsoft.quantum.canon.resultstack>의 맨 위 요소를 검색 합니다.
+syntax: 'function StackPeek (stack : Microsoft.Quantum.Canon.ResultStack) : Result'
+input:
+  content: '(stack: Microsoft 양자. ResultStack)'
+  types:
+  - name: 겹치기
+    summary: 검사할 스택입니다.
+    uid: microsoft.quantum.canon.resultstack
+output:
+  content: 결과
+  types:
+  - summary: '`stack`의 맨 위에 저장 된 값입니다.'
+    isPrimitive: true
+    uid: Result
+ms.openlocfilehash: 36015934319824840a19f1ddbf014d98298a6404
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73067733"

@@ -1,0 +1,944 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.canon
+name: Microsoft 양자
+functions:
+- uid: microsoft.quantum.canon.asqubitarray
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않습니다 .이 함수는 제거 되었습니다.
+- uid: microsoft.quantum.canon.assertalmostequal
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않습니다. 대신 @"Microsoft.Quantum.Diagnostics.NearEqualityFactD"를 사용 하세요.
+- uid: microsoft.quantum.canon.assertalmostequaltol
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않습니다. 대신 @"Microsoft.Quantum.Diagnostics.EqualityWithinToleranceFact"를 사용 하세요.
+- uid: microsoft.quantum.canon.assertboolarrayequal
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않습니다. 대신 @"Microsoft.Quantum.Diagnostics.AllEqualityFactB"를 사용 하세요.
+- uid: microsoft.quantum.canon.assertboolequal
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않습니다. 대신 @"Microsoft.Quantum.Diagnostics.EqualityFactB"를 사용 하세요.
+- uid: microsoft.quantum.canon.assertintequal
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않습니다. 대신 @"Microsoft.Quantum.Diagnostics.EqualityFactI"를 사용 하세요.
+- uid: microsoft.quantum.canon.assertresultequal
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않습니다. 대신 @"Microsoft.Quantum.Diagnostics.EqualityFactR"를 사용 하세요.
+- uid: microsoft.quantum.canon.bigendiantolittleendian
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"Microsoft.Quantum.Arithmetic.BigEndianAsLittleEndian"를 사용 하세요.
+- uid: microsoft.quantum.canon.bind
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"microsoft.quantum.canon.bound"를 사용 하세요.
+- uid: microsoft.quantum.canon.binda
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"microsoft.quantum.canon.bounda"를 사용 하세요.
+- uid: microsoft.quantum.canon.bindc
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"microsoft.quantum.canon.boundc"를 사용 하세요.
+- uid: microsoft.quantum.canon.bindca
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"microsoft.quantum.canon.boundca"를 사용 하세요.
+- uid: microsoft.quantum.canon.bitsize
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"microsoft.quantum.math.bitsizei"를 사용 하세요.
+- uid: microsoft.quantum.canon.boolarrfrompositiveint
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"microsoft.quantum.convert.intasboolarray"를 사용 하세요.
+- uid: microsoft.quantum.canon.boolarrfromresultarr
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"microsoft.quantum.convert.resultarrayasboolarray"를 사용 하세요.
+- uid: microsoft.quantum.canon.boolfromresult
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"microsoft.quantum.convert.resultasbool"를 사용 하세요.
+- uid: microsoft.quantum.canon.bound
+  summary: 단일 입력에 대해 작동 하는 작업 배열이 지정 된 경우 지정 된 각 작업을 순서 대로 수행 하는 새 작업을 생성 합니다.
+- uid: microsoft.quantum.canon.bounda
+  summary: >-
+    단일 입력에 대해 작동 하는 작업 배열이 지정 된 경우 지정 된 각 작업을 순서 대로 수행 하는 새 작업을 생성 합니다.
+
+    한정자 `A`는 배열의 모든 작업이 adjointable 나타냅니다.
+- uid: microsoft.quantum.canon.boundc
+  summary: >-
+    단일 입력에 대해 작동 하는 작업 배열이 지정 된 경우 지정 된 각 작업을 순서 대로 수행 하는 새 작업을 생성 합니다.
+
+    한정자 `C`는 배열의 모든 작업이 제어 가능 함을 나타냅니다.
+- uid: microsoft.quantum.canon.boundca
+  summary: >-
+    단일 입력에 대해 작동 하는 작업 배열이 지정 된 경우 지정 된 각 작업을 순서 대로 수행 하는 새 작업을 생성 합니다.
+
+    한정자 `CA`는 배열의 모든 작업이 adjointable 및 제어 가능 함을 나타냅니다.
+- uid: microsoft.quantum.canon.ccontrolled
+  summary: 작업 op가 지정 된 경우 기존 컨트롤 비트가 true 이면 op를 적용 하는 새 작업을 반환 합니다. `false`경우 아무 일도 발생 하지 않습니다.
+- uid: microsoft.quantum.canon.ccontrolleda
+  summary: >-
+    작업 op가 지정 된 경우 기존 컨트롤 비트가 true 이면 op를 적용 하는 새 작업을 반환 합니다. `false`경우 아무 일도 발생 하지 않습니다.
+
+    한정자 `A` 작업이 adjointable 나타냅니다.
+- uid: microsoft.quantum.canon.ccontrolledc
+  summary: >-
+    작업 op가 지정 된 경우 기존 컨트롤 비트가 true 이면 op를 적용 하는 새 작업을 반환 합니다. `false`경우 아무 일도 발생 하지 않습니다.
+
+    한정자 `C`는 작업을 제어할 수 있음을 나타냅니다.
+- uid: microsoft.quantum.canon.ccontrolledca
+  summary: >-
+    작업 op가 지정 된 경우 기존 컨트롤 비트가 true 이면 op를 적용 하는 새 작업을 반환 합니다. `false`경우 아무 일도 발생 하지 않습니다.
+
+    한정자 `CA` 작업을 제어 하 고 adjointable 나타냅니다.
+- uid: microsoft.quantum.canon.compose
+  summary: >-
+    두 함수의 컴퍼지션을 생성 합니다.
+
+
+    즉, $ 및 $g $ $f 두 개의 함수가 지정 된 경우 $f \circ g $를 나타내는 새 함수를 반환 합니다.
+- uid: microsoft.quantum.canon.conjugatedby
+  summary: 외부 및 내부 연산을 지정 하면는 외부 작업에 의해 내부 작업을 변화 시키고 하는 새 작업을 반환 합니다.
+- uid: microsoft.quantum.canon.conjugatedbya
+  summary: 외부 및 내부 연산을 지정 하면는 외부 작업에 의해 내부 작업을 변화 시키고 하는 새 작업을 반환 합니다.
+- uid: microsoft.quantum.canon.conjugatedbyc
+  summary: 외부 및 내부 연산을 지정 하면는 외부 작업에 의해 내부 작업을 변화 시키고 하는 새 작업을 반환 합니다.
+- uid: microsoft.quantum.canon.conjugatedbyca
+  summary: 외부 및 내부 연산을 지정 하면는 외부 작업에 의해 내부 작업을 변화 시키고 하는 새 작업을 반환 합니다.
+- uid: microsoft.quantum.canon.continuedfractionconvergent
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"microsoft.quantum.math.continuedfractionconvergenti"를 사용 하세요.
+- uid: microsoft.quantum.canon.controlledonbitstring
+  summary: 컨트롤 레지스터 상태가 지정 된 비트 마스크에 해당 하는 경우 대상 레지스터에 oracle을 적용 하는 단일 연산자를 반환 합니다.
+- uid: microsoft.quantum.canon.controlledonint
+  summary: 컨트롤 레지스터 상태가 지정 된 양의 정수에 해당 하는 경우 대상 레지스터에 oracle을 적용 하는 단일 연산자를 반환 합니다.
+- uid: microsoft.quantum.canon.curriedop
+  summary: >-
+    두 입력에 대해 변환 된 작업 버전을 반환 합니다.
+
+
+    즉, 두 개의 입력으로 작업을 제공 하는 경우이 함수는 isomorphism $f (x, y) \equiv f (x) (y) $를 적용 하 여 한 입력의 작업을 반환 하는 하나의 입력 작업을 반환 합니다.
+- uid: microsoft.quantum.canon.curryop
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"microsoft.quantum.canon.curriedop"를 사용 하세요.
+- uid: microsoft.quantum.canon.decomposeintotimestepsca
+  summary: 지정 된 작업에 대해 Trotter – Suzuki 인티그레이터를 구현 하는 작업을 반환 합니다.
+- uid: microsoft.quantum.canon.delayed
+  summary: 지정 된 인수를 사용 하 여 지정 된 작업을 적용 하는 작업을 반환 합니다.
+- uid: microsoft.quantum.canon.delayeda
+  summary: 지정 된 인수를 사용 하 여 지정 된 작업을 적용 하는 작업을 반환 합니다.
+- uid: microsoft.quantum.canon.delayedc
+  summary: 지정 된 인수를 사용 하 여 지정 된 작업을 적용 하는 작업을 반환 합니다.
+- uid: microsoft.quantum.canon.delayedca
+  summary: 지정 된 인수를 사용 하 여 지정 된 작업을 적용 하는 작업을 반환 합니다.
+- uid: microsoft.quantum.canon.embedpauli
+  summary: 단일 기능 비트를 지정 하는 경우 해당 인덱스에서 지정 된 단일 값 비트 연산자를 사용 하 여 다른 모든 인덱스에서 `PauliI` 하는 다중 값 비트 Pauli 연산자를 반환 합니다.
+- uid: microsoft.quantum.canon.expmod
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"microsoft.quantum.math.expmodi"를 사용 하세요.
+- uid: microsoft.quantum.canon.extendedgcd
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"microsoft.quantum.math.extendedgreatestcommondivisori"를 사용 하세요.
+- uid: microsoft.quantum.canon.filter
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않습니다. 대신 @"Microsoft.Quantum.Arrays.Filtered"를 사용 하세요.
+- uid: microsoft.quantum.canon.forall
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않습니다. 대신 @"Microsoft.Quantum.Arrays.All"를 사용 하세요.
+- uid: microsoft.quantum.canon.forany
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않습니다. 대신 @"Microsoft.Quantum.Arrays.Any"를 사용 하세요.
+- uid: microsoft.quantum.canon.fst
+  summary: 쌍이 지정 된 경우 첫 번째 요소를 반환 합니다.
+- uid: microsoft.quantum.canon.gcd
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"microsoft.quantum.math.greatestcommondivisori"를 사용 하세요.
+- uid: microsoft.quantum.canon.ignore
+  summary: 작업 또는 함수의 출력을 무시 합니다.
+- uid: microsoft.quantum.canon.intabs
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않습니다 .이 함수는 제거 되었습니다.
+- uid: microsoft.quantum.canon.intarrayfromrange
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"microsoft.quantum.convert.rangeasintarray"를 사용 하세요.
+- uid: microsoft.quantum.canon.intmax
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않습니다 .이 함수는 제거 되었습니다.
+- uid: microsoft.quantum.canon.inversemod
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"microsoft.quantum.math.inversemodi"를 사용 하세요.
+- uid: microsoft.quantum.canon.iscoprime
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"microsoft.quantum.math.greatestcommondivisori"를 사용 하세요.
+- uid: microsoft.quantum.canon.isresultone
+  summary: 지정 된 결과 값이 `One`같은지 테스트 합니다.
+- uid: microsoft.quantum.canon.isresultzero
+  summary: 지정 된 결과 값이 `Zero`같은지 테스트 합니다.
+- uid: microsoft.quantum.canon.littleendiantobigendian
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian"를 사용 하세요.
+- uid: microsoft.quantum.canon.map
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않습니다. 대신 @"Microsoft.Quantum.Arrays.Mapped"를 사용 하세요.
+- uid: microsoft.quantum.canon.mapindex
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않습니다. 대신 @"Microsoft.Quantum.Arrays.MappedByIndex"를 사용 하세요.
+- uid: microsoft.quantum.canon.modulus
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"microsoft.quantum.math.modulusi"를 사용 하세요.
+- uid: microsoft.quantum.canon.multiplexerbruteforcefromgenerator
+  summary: >-
+    N-stbit number state $ \ket{j} $로 제어 될 때 단일 $V _j $를 적용 하는 곱하기 제어 된 단일 $U 작업을 반환 합니다.
+
+
+    $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $.
+- uid: microsoft.quantum.canon.multiplexerfromgenerator
+  summary: >-
+    N-stbit number state $ \ket{j} $로 제어 될 때 단일 $V _j $를 적용 하는 곱하기 제어 된 단일 $U 작업을 반환 합니다.
+
+
+    $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $.
+- uid: microsoft.quantum.canon.nearequalityfact
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않습니다. 대신 @"Microsoft.Quantum.Diagnostics.NearEqualityFactD"를 사용 하세요.
+- uid: microsoft.quantum.canon.operationpow
+  summary: >-
+    전원에 대 한 작업을 발생 시킵니다.
+
+
+    즉, $ $U $를 나타내는 작업이 지정 된 경우 power $m $에 대해 ^ m $ $U 새 작업을 반환 합니다.
+- uid: microsoft.quantum.canon.operationpowa
+  summary: >-
+    전원에 대 한 작업을 발생 시킵니다.
+
+    한정자 `A` 작업이 adjointable 나타냅니다.
+
+
+    즉, $ $U $를 나타내는 작업이 지정 된 경우 power $m $에 대해 ^ m $ $U 새 작업을 반환 합니다.
+- uid: microsoft.quantum.canon.operationpowc
+  summary: >-
+    전원에 대 한 작업을 발생 시킵니다.
+
+    한정자 `C`는 작업을 제어할 수 있음을 나타냅니다.
+
+
+    즉, $ $U $를 나타내는 작업이 지정 된 경우 power $m $에 대해 ^ m $ $U 새 작업을 반환 합니다.
+- uid: microsoft.quantum.canon.operationpowca
+  summary: >-
+    전원에 대 한 작업을 발생 시킵니다.
+
+    한정자 `A` 작업을 제어 하 고 adjointable 나타냅니다.
+
+
+    즉, $ $U $를 나타내는 작업이 지정 된 경우 power $m $에 대해 ^ m $ $U 새 작업을 반환 합니다.
+- uid: microsoft.quantum.canon.pad
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않습니다. 대신 @"Microsoft.Quantum.Arrays.Padded"를 사용 하세요.
+- uid: microsoft.quantum.canon.paulifrombitstring
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"microsoft.quantum.convert.boolarrayaspauli"를 사용 하세요.
+- uid: microsoft.quantum.canon.pnormalize
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"microsoft.quantum.math.pnormalized"를 사용 하세요.
+- uid: microsoft.quantum.canon.positiveintfromboolarr
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"microsoft.quantum.convert.boolarrayasint"를 사용 하세요.
+- uid: microsoft.quantum.canon.positiveintfromresultarr
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"microsoft.quantum.canon.resultarrayasint"를 사용 하세요.
+- uid: microsoft.quantum.canon.restrictedtosubregister
+  summary: 작업을 레지스터의 인덱스 배열, 즉 subregister로 제한 합니다.
+- uid: microsoft.quantum.canon.restrictedtosubregistera
+  summary: >-
+    작업을 레지스터의 인덱스 배열, 즉 subregister로 제한 합니다.
+
+    한정자 `A` 작업이 adjointable 나타냅니다.
+- uid: microsoft.quantum.canon.restrictedtosubregisterc
+  summary: >-
+    작업을 레지스터의 인덱스 배열, 즉 subregister로 제한 합니다.
+
+    한정자 `C`는 작업을 제어할 수 있음을 나타냅니다.
+- uid: microsoft.quantum.canon.restrictedtosubregisterca
+  summary: >-
+    작업을 레지스터의 인덱스 배열, 즉 subregister로 제한 합니다.
+
+    한정자 `CA` 작업을 제어 하 고 adjointable 나타냅니다.
+- uid: microsoft.quantum.canon.restricttosubregister
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"microsoft.quantum.canon.restrictedtosubregister"를 사용 하세요.
+- uid: microsoft.quantum.canon.restricttosubregistera
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"microsoft.quantum.canon.restrictedtosubregistera"를 사용 하세요.
+- uid: microsoft.quantum.canon.restricttosubregisterc
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"microsoft.quantum.canon.restrictedtosubregisterc"를 사용 하세요.
+- uid: microsoft.quantum.canon.restricttosubregisterca
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"microsoft.quantum.canon.restrictedtosubregisterca"를 사용 하세요.
+- uid: microsoft.quantum.canon.resultarrfromboolarr
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"microsoft.quantum.convert.resultarrayasboolarray"를 사용 하세요.
+- uid: microsoft.quantum.canon.resultasint
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"microsoft.quantum.convert.resultarrayasint"를 사용 하세요.
+- uid: microsoft.quantum.canon.resultfrombool
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"microsoft.quantum.convert.boolasresult"를 사용 하세요.
+- uid: microsoft.quantum.canon.reverse
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않습니다. 대신 @"Microsoft.Quantum.Arrays.Reversed"를 사용 하세요.
+- uid: microsoft.quantum.canon.snd
+  summary: 쌍이 지정 된 경우 두 번째 요소를 반환 합니다.
+- uid: microsoft.quantum.canon.splitarray
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않습니다. 대신 @"Microsoft.Quantum.Arrays.Partitioned"를 사용 하세요.
+- uid: microsoft.quantum.canon.stackcapacity
+  summary: <xref:microsoft.quantum.canon.resultstack>의 용량을 검색 합니다.
+- uid: microsoft.quantum.canon.stacklength
+  summary: <xref:microsoft.quantum.canon.resultstack>에 저장 된 요소의 수를 검색 합니다.
+- uid: microsoft.quantum.canon.stacknew
+  summary: 지정 된 용량을 사용 하 여 비어 있는 새 <xref:microsoft.quantum.canon.resultstack>를 만듭니다.
+- uid: microsoft.quantum.canon.stackpeek
+  summary: <xref:microsoft.quantum.canon.resultstack>의 맨 위 요소를 검색 합니다.
+- uid: microsoft.quantum.canon.stackpop
+  summary: <xref:microsoft.quantum.canon.resultstack>에서 맨 위에 있는 요소를 제거 합니다.
+- uid: microsoft.quantum.canon.stackpush
+  summary: <xref:microsoft.quantum.canon.resultstack>에 새 요소를 푸시합니다.
+- uid: microsoft.quantum.canon.tooperation
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"microsoft.quantum.convert.functionasoperation"를 사용 하세요.
+- uid: microsoft.quantum.canon.transformedoperation
+  summary: 함수 및 작업이 지정 된 경우 지정 된 함수가 입력을 변환 하는 새 작업을 반환 합니다.
+- uid: microsoft.quantum.canon.transformedoperationa
+  summary: 함수 및 작업이 지정 된 경우 지정 된 함수가 입력을 변환 하는 새 작업을 반환 합니다.
+- uid: microsoft.quantum.canon.transformedoperationc
+  summary: 함수 및 작업이 지정 된 경우 지정 된 함수가 입력을 변환 하는 새 작업을 반환 합니다.
+- uid: microsoft.quantum.canon.transformedoperationca
+  summary: 함수 및 작업이 지정 된 경우 지정 된 함수가 입력을 변환 하는 새 작업을 반환 합니다.
+- uid: microsoft.quantum.canon.uncurriedop
+  summary: 작업을 반환 하는 함수가 지정 된 경우 두 입력을 튜플로 받는 새 작업을 반환 합니다.
+- uid: microsoft.quantum.canon.uncurriedopa
+  summary: >-
+    작업을 반환 하는 함수가 지정 된 경우 두 입력을 튜플로 받는 새 작업을 반환 합니다.
+
+    한정자 `A` 작업이 adjointable 나타냅니다.
+- uid: microsoft.quantum.canon.uncurriedopc
+  summary: >-
+    작업을 반환 하는 함수가 지정 된 경우 두 입력을 튜플로 받는 새 작업을 반환 합니다.
+
+    한정자 `C`는 작업을 제어할 수 있음을 나타냅니다.
+- uid: microsoft.quantum.canon.uncurriedopca
+  summary: >-
+    작업을 반환 하는 함수가 지정 된 경우 두 입력을 튜플로 받는 새 작업을 반환 합니다.
+
+    한정자 `CA`는 작업을 제어 하 고 adjointable 나타냅니다.
+- uid: microsoft.quantum.canon.uncurryop
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"microsoft.quantum.canon.uncurriedop"를 사용 하세요.
+- uid: microsoft.quantum.canon.uncurryopa
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"microsoft.quantum.canon.uncurriedopa"를 사용 하세요.
+- uid: microsoft.quantum.canon.uncurryopc
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"microsoft.quantum.canon.uncurriedopc"를 사용 하세요.
+- uid: microsoft.quantum.canon.uncurryopca
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"microsoft.quantum.canon.uncurriedopca"를 사용 하세요.
+- uid: microsoft.quantum.canon.weightonepaulis
+  summary: 지정 된 수의 값에 대 한 모든 무게 1 Pauli 연산자의 배열을 반환 합니다.
+- uid: microsoft.quantum.canon.xor
+  summary: 이는 두 비트의 배타적 OR를 계산 합니다.
+operations:
+- uid: microsoft.quantum.canon.adiabaticstateenergyunitary
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"microsoft.quantum.simuilation.pnormalized"를 사용 하세요.
+- uid: microsoft.quantum.canon.andladder
+  summary: >-
+    대상 성능에서 제어 되는 ' 및 사다리 '를 수행 합니다.
+
+
+    이는 계산 기준 벡터에 지정 된 단일를 적용 합니다. $ $ \begin{align} \ket{x\_1, \stix\_n} \ket{y\_1, \dots, y\_{n-1}} \maps\ket{x\_1 , \dots, x\_n} \ket{y\_1 \oplus (x\_1 \stx\_2), \stiiarx\_{n-1} \oplus (x\_1 \stx\_, \end{align} $ $ where $ \ket{x\_1, \dots, x\_n} $는 `controls`의 계산 기준 상태를 나타내며, 여기서 $ \ket{y\_1, \stay\_{n-1}} $는 `targets`의 계산 기준 상태를 나타냅니다.
+- uid: microsoft.quantum.canon.applydiagonalunitary
+  summary: >-
+    일련의 복잡 한 단계 배열을 다양 한 양의 레지스터의 숫자 기반 상태에 적용 합니다.
+
+
+    즉,이는 $n $ \ket{j} $에서 복잡 한 단계 $e ^ {i \theta_j} $에 적용 하는 대각선 단일 $U 작업 인 $을 구현 합니다.
+
+
+    $U = \sum ^ {2 ^ n-1} _ {j = 0} e ^ {i\theta_j} \ k {j} \ bra {j} $입니다.
+- uid: microsoft.quantum.canon.applyfermionicswap
+  summary: Fermionic SWAP을 적용 합니다.
+- uid: microsoft.quantum.canon.applyif
+  summary: 클래식 비트에 조건 화 된 작업을 적용 합니다.
+- uid: microsoft.quantum.canon.applyifa
+  summary: 클래식 비트에 adjointable 작업 조건 화 된을 적용 합니다.
+- uid: microsoft.quantum.canon.applyifc
+  summary: 클래식 비트에 제어 가능한 작업 조건 화 된 적용 합니다.
+- uid: microsoft.quantum.canon.applyifca
+  summary: 단일 작업 조건 화 된를 기존 비트에 적용 합니다.
+- uid: microsoft.quantum.canon.applyifelseb
+  summary: 는 클래식 비트의 값에 따라 두 작업 중 하나를 적용 합니다.
+- uid: microsoft.quantum.canon.applyifelseba
+  summary: 클래식 비트의 값에 따라 두 adjointable 작업 중 하나를 적용 합니다.
+- uid: microsoft.quantum.canon.applyifelsebc
+  summary: 클래식 비트의 값에 따라 제어 가능한 두 작업 중 하나를 적용 합니다.
+- uid: microsoft.quantum.canon.applyifelsebca
+  summary: 는 클래식 비트의 값에 따라 두 개의 단일 작업 중 하나를 적용 합니다.
+- uid: microsoft.quantum.canon.applyifelser
+  summary: 클래식 결과의 값에 따라 두 작업 중 하나를 적용 합니다.
+- uid: microsoft.quantum.canon.applyifelsera
+  summary: 클래식 결과의 값에 따라 두 adjointable 작업 중 하나를 적용 합니다.
+- uid: microsoft.quantum.canon.applyifelserc
+  summary: 클래식 결과의 값에 따라 제어 가능한 두 작업 중 하나를 적용 합니다.
+- uid: microsoft.quantum.canon.applyifelserca
+  summary: 기존 결과의 값에 따라 두 개의 단일 작업 중 하나를 적용 합니다.
+- uid: microsoft.quantum.canon.applyifone
+  summary: 기존 결과 값에 조건 화 된 작업을 적용 합니다.
+- uid: microsoft.quantum.canon.applyifonea
+  summary: 기존 결과 값이 1 인 조건 화 된 adjointable 작업을 적용 합니다.
+- uid: microsoft.quantum.canon.applyifonec
+  summary: 기존 결과 값에 조건 화 된 제어 가능한 작업을 적용 합니다.
+- uid: microsoft.quantum.canon.applyifoneca
+  summary: 기존 결과 값에 조건 화 된 단일 작업을 적용 합니다.
+- uid: microsoft.quantum.canon.applyifzero
+  summary: 클래식 결과 값에 0이 조건 화 된 작업을 적용 합니다.
+- uid: microsoft.quantum.canon.applyifzeroa
+  summary: 클래식 결과 값에 0이 adjointable 작업 조건 화 된을 적용 합니다.
+- uid: microsoft.quantum.canon.applyifzeroc
+  summary: 클래식 결과 값이 0이 조건 화 된 제어 가능한 작업을 적용 합니다.
+- uid: microsoft.quantum.canon.applyifzeroca
+  summary: 기존 결과 값에 0이 조건 화 된 단일 작업을 적용 합니다.
+- uid: microsoft.quantum.canon.applymulticontrolledc
+  summary: >-
+    단일 제어 작업의 곱셈 제어 버전을 적용 합니다.
+
+    한정자 `C`는 단일 비트 작업을 제어할 수 있음을 나타냅니다.
+- uid: microsoft.quantum.canon.applymulticontrolledca
+  summary: >-
+    단일 제어 작업의 곱셈 제어 버전을 적용 합니다.
+
+    한정자 `CA` 단일 비트 작업을 제어 하 고 adjointable 나타냅니다.
+- uid: microsoft.quantum.canon.applypauli
+  summary: 여러 기능을 제공 하는 경우 해당 작업을 레지스터에 적용 합니다.
+- uid: microsoft.quantum.canon.applypaulifrombitstring
+  summary: 부울 배열의 해당 비트가 지정 된 입력과 일치 하는 경우 배열의 각 비트에 Pauli 연산자를 적용 합니다.
+- uid: microsoft.quantum.canon.applyquantumfouriertransform
+  summary: 작은 endian 표현의 정수를 포함 하는 퀀텀 레지스터에서 퀀텀 푸리에 변환을 수행 합니다.
+- uid: microsoft.quantum.canon.applyquantumfouriertransformbe
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않습니다 .이 작업은 제거 되었습니다.
+- uid: microsoft.quantum.canon.applyquantumfouriertransformle
+  summary: ''
+- uid: microsoft.quantum.canon.applyreversedopbigendian
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"Microsoft.Quantum.Arithmetic.ApplyReversedOpBE"를 사용 하세요.
+- uid: microsoft.quantum.canon.applyreversedopbigendiana
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEA"를 사용 하세요.
+- uid: microsoft.quantum.canon.applyreversedopbigendianc
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEC"를 사용 하세요.
+- uid: microsoft.quantum.canon.applyreversedopbigendianca
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEC"를 사용 하세요.
+- uid: microsoft.quantum.canon.applyreversedoplittleendian
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"Microsoft.Quantum.Arithmetic.ApplyReversedOpLE"를 사용 하세요.
+- uid: microsoft.quantum.canon.applyreversedoplittleendiana
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEA"를 사용 하세요.
+- uid: microsoft.quantum.canon.applyreversedoplittleendianc
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEC"를 사용 하세요.
+- uid: microsoft.quantum.canon.applyreversedoplittleendianca
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEC"를 사용 하세요.
+- uid: microsoft.quantum.canon.applyripplecarrycomparatorbe
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않습니다 .이 작업은 제거 되었습니다.
+- uid: microsoft.quantum.canon.applyripplecarrycomparatorle
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"Microsoft.Quantum.Arithmetic.CompareUsingRippleCarry"를 사용 하세요.
+- uid: microsoft.quantum.canon.applytoeach
+  summary: 레지스터의 각 요소에 단일 수준 비트 작업을 적용 합니다.
+- uid: microsoft.quantum.canon.applytoeacha
+  summary: >-
+    레지스터의 각 요소에 단일 수준 비트 작업을 적용 합니다.
+
+    한정자 `A` 단일의 비트 연산이 adjointable 나타냅니다.
+- uid: microsoft.quantum.canon.applytoeachc
+  summary: >-
+    레지스터의 각 요소에 단일 수준 비트 작업을 적용 합니다.
+
+    한정자 `C`는 단일 비트 작업을 제어할 수 있음을 나타냅니다.
+- uid: microsoft.quantum.canon.applytoeachca
+  summary: >-
+    레지스터의 각 요소에 단일 수준 비트 작업을 적용 합니다.
+
+    한정자 `CA` 단일 비트 작업을 제어 하 고 adjointable 나타냅니다.
+- uid: microsoft.quantum.canon.applytoeachindex
+  summary: 레지스터의 인덱싱된 각 요소에 단일 수준 비트 작업을 적용 합니다.
+- uid: microsoft.quantum.canon.applytoeachindexa
+  summary: >-
+    레지스터의 인덱싱된 각 요소에 단일 수준 비트 작업을 적용 합니다.
+
+    한정자 `A` 단일의 비트 연산이 adjointable 나타냅니다.
+- uid: microsoft.quantum.canon.applytoeachindexc
+  summary: >-
+    레지스터의 인덱싱된 각 요소에 단일 수준 비트 작업을 적용 합니다.
+
+    한정자 `C`는 단일 비트 작업을 제어할 수 있음을 나타냅니다.
+- uid: microsoft.quantum.canon.applytoeachindexca
+  summary: >-
+    레지스터의 인덱싱된 각 요소에 단일 수준 비트 작업을 적용 합니다.
+
+    한정자 `CA`는 단일의 비트 연산이 adjointable 및 제어 가능 함을 나타냅니다.
+- uid: microsoft.quantum.canon.applytofirstqubit
+  summary: 레지스터의 첫 번째 비트에 작업을 적용 합니다.
+- uid: microsoft.quantum.canon.applytofirstqubita
+  summary: >-
+    레지스터의 첫 번째 비트에 작업을 적용 합니다.
+
+    한정자 `A` 작업이 adjointable 나타냅니다.
+- uid: microsoft.quantum.canon.applytofirstqubitc
+  summary: >-
+    레지스터의 첫 번째 비트에 작업 op를 적용 합니다.
+
+    한정자 `C`는 작업을 제어할 수 있음을 나타냅니다.
+- uid: microsoft.quantum.canon.applytofirstqubitca
+  summary: >-
+    레지스터의 첫 번째 비트에 작업 op를 적용 합니다.
+
+    한정자 `CA` 작업을 제어 하 고 adjointable 나타냅니다.
+- uid: microsoft.quantum.canon.applytofirstthreequbits
+  summary: 레지스터의 처음 3 개 비트에 작업을 적용 합니다.
+- uid: microsoft.quantum.canon.applytofirstthreequbitsa
+  summary: >-
+    레지스터의 처음 3 개 비트에 작업을 적용 합니다.
+
+    한정자 `A` 작업이 adjointable 나타냅니다.
+- uid: microsoft.quantum.canon.applytofirstthreequbitsc
+  summary: >-
+    레지스터의 처음 3 개 비트에 작업을 적용 합니다.
+
+    한정자 `C`는 작업을 제어할 수 있음을 나타냅니다.
+- uid: microsoft.quantum.canon.applytofirstthreequbitsca
+  summary: >-
+    레지스터의 처음 3 개 비트에 작업을 적용 합니다.
+
+    한정자 `CA` 작업을 제어 하 고 adjointable 나타냅니다.
+- uid: microsoft.quantum.canon.applytofirsttwoqubits
+  summary: 레지스터의 처음 두 비트에 작업을 적용 합니다.
+- uid: microsoft.quantum.canon.applytofirsttwoqubitsa
+  summary: >-
+    레지스터의 처음 두 비트에 작업을 적용 합니다.
+
+    한정자 `A` 작업이 adjointable 나타냅니다.
+- uid: microsoft.quantum.canon.applytofirsttwoqubitsc
+  summary: >-
+    레지스터의 처음 두 비트에 작업을 적용 합니다.
+
+    한정자 `C`는 작업을 제어할 수 있음을 나타냅니다.
+- uid: microsoft.quantum.canon.applytofirsttwoqubitsca
+  summary: >-
+    레지스터의 처음 두 비트에 작업을 적용 합니다.
+
+    한정자 `CA` 작업을 제어 하 고 adjointable 나타냅니다.
+- uid: microsoft.quantum.canon.applytopartition
+  summary: 지정 된 레지스터 파티션에 작업 쌍을 두 부분으로 적용 합니다.
+- uid: microsoft.quantum.canon.applytopartitiona
+  summary: >-
+    지정 된 레지스터 파티션에 작업 쌍을 두 부분으로 적용 합니다.
+
+    한정자 `A` 작업이 adjointable 나타냅니다.
+- uid: microsoft.quantum.canon.applytopartitionc
+  summary: >-
+    지정 된 레지스터 파티션에 작업 쌍을 두 부분으로 적용 합니다.
+
+    한정자 `C`는 작업을 제어할 수 있음을 나타냅니다.
+- uid: microsoft.quantum.canon.applytopartitionca
+  summary: >-
+    지정 된 레지스터 파티션에 작업 쌍을 두 부분으로 적용 합니다.
+
+    한정자 `CA` 작업을 제어 하 고 adjointable 나타냅니다.
+- uid: microsoft.quantum.canon.applytosubregister
+  summary: 인스턴스의 하위 레지스터에 작업을 적용 합니다. 여기서는 해당 인덱스의 배열에 지정 된 것과 같은 작업을 수행 합니다.
+- uid: microsoft.quantum.canon.applytosubregistera
+  summary: >-
+    인스턴스의 하위 레지스터에 작업을 적용 합니다. 여기서는 해당 인덱스의 배열에 지정 된 것과 같은 작업을 수행 합니다.
+
+    한정자 `A` 작업이 adjointable 나타냅니다.
+- uid: microsoft.quantum.canon.applytosubregisterc
+  summary: >-
+    인스턴스의 하위 레지스터에 작업을 적용 합니다. 여기서는 해당 인덱스의 배열에 지정 된 것과 같은 작업을 수행 합니다.
+
+    한정자 `C`는 작업을 제어할 수 있음을 나타냅니다.
+- uid: microsoft.quantum.canon.applytosubregisterca
+  summary: >-
+    인스턴스의 하위 레지스터에 작업을 적용 합니다. 여기서는 해당 인덱스의 배열에 지정 된 것과 같은 작업을 수행 합니다.
+
+    한정자 `CA` 작업을 제어 하 고 adjointable 나타냅니다.
+- uid: microsoft.quantum.canon.applywith
+  summary: 두 작업을 수행 하는 경우 conjugated로 다른 작업을 적용 합니다.
+- uid: microsoft.quantum.canon.applywitha
+  summary: 두 작업을 수행 하는 경우 conjugated로 다른 작업을 적용 합니다.
+- uid: microsoft.quantum.canon.applywithc
+  summary: ''
+- uid: microsoft.quantum.canon.applywithca
+  summary: 두 작업을 수행 하는 경우 conjugated로 다른 작업을 적용 합니다.
+- uid: microsoft.quantum.canon.applywithinputtransformation
+  summary: 일부 입력을 허용 하는 작업, 해당 작업과 호환 되는 출력을 반환 하는 함수 및이 함수에 대 한 입력을 제공 하는 경우 함수를 사용 하 여 작업에 필요한 형식으로 입력을 변환 하는 작업을 적용 합니다.
+- uid: microsoft.quantum.canon.applywithinputtransformationa
+  summary: 일부 입력을 허용 하는 작업, 해당 작업과 호환 되는 출력을 반환 하는 함수 및이 함수에 대 한 입력을 제공 하는 경우 함수를 사용 하 여 작업에 필요한 형식으로 입력을 변환 하는 작업을 적용 합니다.
+- uid: microsoft.quantum.canon.applywithinputtransformationc
+  summary: 일부 입력을 허용 하는 작업, 해당 작업과 호환 되는 출력을 반환 하는 함수 및이 함수에 대 한 입력을 제공 하는 경우 함수를 사용 하 여 작업에 필요한 형식으로 입력을 변환 하는 작업을 적용 합니다.
+- uid: microsoft.quantum.canon.applywithinputtransformationca
+  summary: 일부 입력을 허용 하는 작업, 해당 작업과 호환 되는 출력을 반환 하는 함수 및이 함수에 대 한 입력을 제공 하는 경우 함수를 사용 하 여 작업에 필요한 형식으로 입력을 변환 하는 작업을 적용 합니다.
+- uid: microsoft.quantum.canon.approximateqft
+  summary: 퀀텀 레지스터에 AQFT (대략적인 퀀텀 푸리에 변환)을 적용 합니다.
+- uid: microsoft.quantum.canon.asserthighestbit
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"Microsoft.Quantum.Arithmetic.AssertMostSignificantBit"를 사용 하세요.
+- uid: microsoft.quantum.canon.assertlessthanphasele
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"Microsoft.Quantum.Arithmetic.AssertPhaseLessThan"를 사용 하세요.
+- uid: microsoft.quantum.canon.assertphase
+  summary: >-
+    Equal superposition 상태의 단계가 예상 값을 포함 한다는 것을 어설션 합니다.
+
+
+    구체적으로 말해서, 일부 임의 실수 t에 대해 $ \frac{e ^ {i t}} {\phi{2}} (e ^ {i\phi k} \ k{1}) $로 표현 될 수 있는 퀀텀 상태의 $ \eml$ 단계는 예상 값을 갖습니다.
+- uid: microsoft.quantum.canon.assertprobintbe
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않습니다 .이 작업은 제거 되었습니다.
+- uid: microsoft.quantum.canon.cnotchain
+  summary: >-
+    현재 위치의 배열에 대 한 패리티를 계산 합니다.
+
+
+    이 클래스는 $ \ket{q_0} \ket{q_0 \oplus q_1} \ket{q_0 \oplus q_1 \oplus q_2} \co$ 패턴을 따릅니다.
+- uid: microsoft.quantum.canon.cnotchaintarget
+  summary: >-
+    대상 비트의 배열에 대 한 패리티를 계산 합니다.
+
+
+    배열이 처음에 $ \ket{q_0} \ket{q_1} \cdots $ 상태에 있는 경우, 최종 상태는 $ \ket{q_0} \ket{q_1 \cdots q_0} \cst\ket{q_{n-1} \cdots \co\co\oq_0 \cdots q_ {\text{target}}} $로 지정 됩니다.
+- uid: microsoft.quantum.canon.copymostsignificantbitle
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"Microsoft.Quantum.Arithmetic.CopyMostSignificantBit"를 사용 하세요.
+- uid: microsoft.quantum.canon.cx
+  summary: >-
+    제어 된 X (CX) 게이트를 한 쌍의 비트에 적용 합니다.
+
+
+    $ $ \begin{align} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \\\\ 0 & 0 & 1 & 0 \end{align} , $ $는 퀀텀 개념 가이드에서 행 및 열이로 구성 됩니다.
+- uid: microsoft.quantum.canon.cy
+  summary: >-
+    제어 된-Y (CY) 게이트를 한 쌍의 비트에 적용 합니다.
+
+
+    $ $ \begin{align} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 &-i \\\\ 0 & 0 & i & 0 \end{align} , $ $는 퀀텀 개념 가이드에서 행 및 열이로 구성 됩니다.
+- uid: microsoft.quantum.canon.cz
+  summary: >-
+    CZ (제어-Z) 게이트를 다양 한 쌍에 적용 합니다.
+
+
+    $ $ \begin{align} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 0 & 0 &-1 \end{align} , $ $는 퀀텀 개념 가이드에서 행 및 열이로 구성 됩니다.
+- uid: microsoft.quantum.canon.delay
+  summary: 지정 된 작업을 지연 시간에 적용 합니다.
+- uid: microsoft.quantum.canon.delaya
+  summary: 지정 된 작업을 지연 시간에 적용 합니다.
+- uid: microsoft.quantum.canon.delayc
+  summary: 지정 된 작업을 지연 시간에 적용 합니다.
+- uid: microsoft.quantum.canon.delayca
+  summary: 지정 된 작업을 지연 시간에 적용 합니다.
+- uid: microsoft.quantum.canon.hy
+  summary: >-
+    Z와 Y 축을 교환 하는 Hadamard 변환에 Y 기반 아날로그를 적용 합니다.
+
+
+    단일 비트의 Y Hadamard 변환 $H _Y = S H $는 다음과 같습니다.
+
+
+    \begin{align} H_Y \mathrel{: =} \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\\\ &-i \end{bmatrix}.
+
+    \end{align}
+- uid: microsoft.quantum.canon.inplacexorbe
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않습니다 .이 작업은 제거 되었습니다.
+- uid: microsoft.quantum.canon.inplacexorle
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"Microsoft.Quantum.Measurement.ApplyXorInPlace"를 사용 하세요.
+- uid: microsoft.quantum.canon.integerincrementle
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"Microsoft.Quantum.Arithmetic.IncrementByInteger"를 사용 하세요.
+- uid: microsoft.quantum.canon.integerincrementphasele
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"Microsoft.Quantum.Arithmetic.IncrementPhaseByInteger"를 사용 하세요.
+- uid: microsoft.quantum.canon.iteratethroughcartesianpower
+  summary: Arr product [0, bound-1] × [0, bound-1] × [0, bound-1]을 통해 arr 이라는 변수를 반복 하 고 데카르트 product의 모든 요소에 대해 op (arr)를 호출 합니다.
+- uid: microsoft.quantum.canon.iteratethroughcartesianproduct
+  summary: 데카르트 곱을 [0, 경계 [0]-1] × [0, 경계 [1]-1] × [0, 경계 [Length (경계)-1]-1]을 (를) 나타내며 데카르트 product의 모든 요소에 대해 op (arr)를 호출 하는 `arr`를 말합니다.
+- uid: microsoft.quantum.canon.measureintegerbe
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않습니다 .이 작업은 제거 되었습니다.
+- uid: microsoft.quantum.canon.modularaddproductle
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"Microsoft.Quantum.Arithmetic.MultiplyAndAddByModularInteger"를 사용 하세요.
+- uid: microsoft.quantum.canon.modularaddproductphasele
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"Microsoft.Quantum.Arithmetic.MultiplyAndAddPhaseByModularInteger"를 사용 하세요.
+- uid: microsoft.quantum.canon.modularincrementle
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"Microsoft.Quantum.Arithmetic.ModularIncrementByInteger"를 사용 하세요.
+- uid: microsoft.quantum.canon.modularincrementphasele
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"Microsoft.Quantum.Arithmetic.IncrementPhaseByModularInteger"를 사용 하세요.
+- uid: microsoft.quantum.canon.modularmultiplybyconstantle
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"Microsoft.Quantum.Arithmetic.MultiplyByModularInteger"를 사용 하세요.
+- uid: microsoft.quantum.canon.multiplexoperations
+  summary: >-
+    숫자 상태의 배열에 의해 제어 되는 작업 배열을 적용 합니다.
+
+
+    즉, $n $ \ket{j} $로 제어 될 때 단일 $V _j $를 적용 하는 곱하기 제어 된 단일 $U 작업을 적용 합니다.
+
+
+    $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $.
+- uid: microsoft.quantum.canon.multiplexoperationsbruteforcefromgenerator
+  summary: >-
+    N-stbit number state $ \ket{j} $로 제어 될 때 단일 $V _j $를 적용 하는 곱하기 제어 된 단일 $U 작업을 적용 합니다.
+
+
+    $U = \sum ^ {N-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $.
+- uid: microsoft.quantum.canon.multiplexoperationsfromgenerator
+  summary: >-
+    N-stbit number state $ \ket{j} $로 제어 될 때 단일 $V _j $를 적용 하는 곱하기 제어 된 단일 $U 작업을 적용 합니다.
+
+
+    $U = \sum ^ {N-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $.
+- uid: microsoft.quantum.canon.multiplexpauli
+  summary: >-
+    원하는 비트 배열에 Pauli 회전 조건 화 된을 적용 합니다.
+
+
+    이렇게 하면 $ \ket{j} $ $n에서 제어 하는 경우 $ \theta_j $에 대 한 각도 $ \theta_j $ 정보 1 $P $를 기준으로 회전을 수행 하는 곱하기 제어 된 단일 $U 작업을 적용 합니다.
+
+
+    $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes e ^ {i P \theta_j} $.
+- uid: microsoft.quantum.canon.multiplexz
+  summary: >-
+    조건 화 된 배열에 Pauli Z 회전을 적용 합니다.
+
+
+    이렇게 하면 $ \ket{j} $ $n에서 제어 하는 경우 $ \theta_j $에 대 한 각도 $ \theta_j $ 정보 1 $Z $를 기준으로 회전을 수행 하는 곱하기 제어 된 단일 $U 작업을 적용 합니다.
+
+
+    $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes e ^ {i Z \theta_j} $.
+- uid: microsoft.quantum.canon.noop
+  summary: 인수에 대해 id 연산 (no op)을 수행 합니다.
+- uid: microsoft.quantum.canon.qft
+  summary: 빅 endian 표현의 정수를 포함 하는 퀀텀 레지스터에서 퀀텀 푸리에 변환을 수행 합니다.
+- uid: microsoft.quantum.canon.qftle
+  summary: 작은 endian 표현의 정수를 포함 하는 퀀텀 레지스터에서 퀀텀 푸리에 변환을 수행 합니다.
+- uid: microsoft.quantum.canon.rall0
+  summary: >-
+    단계 이동 작업을 수행 합니다.
+
+
+    $R = \boldone-(1-e ^ {i \phi}) \ket{0\cdots 0} \bra{0\cdots 0} $.
+- uid: microsoft.quantum.canon.rall1
+  summary: >-
+    단계 이동 작업을 수행 합니다.
+
+
+    $R = \boldone-(1-e ^ {i \phi}) \ket{1\cdots 1} \bra{1\cdots 1} $.
+- uid: microsoft.quantum.canon.swapreverseregister
+  summary: 에서는 교환 게이트를 사용 하 여 레지스터에서의 비트 순서를 반대로 바꿉니다.
+- uid: microsoft.quantum.canon.with
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"Microsoft.Quantum.Canon.ApplyWith"를 사용 하세요.
+- uid: microsoft.quantum.canon.witha
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"Microsoft.Quantum.Canon.ApplyWithA"를 사용 하세요.
+- uid: microsoft.quantum.canon.withc
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"Microsoft.Quantum.Canon.ApplyWithC"를 사용 하세요.
+- uid: microsoft.quantum.canon.withca
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"Microsoft.Quantum.Canon.ApplyWithCA"를 사용 하세요.
+newtypes:
+- uid: microsoft.quantum.canon.ccnotop
+  summary: CCNOT gate의 서명 유형입니다.
+- uid: microsoft.quantum.canon.resultstack
+  summary: >-
+    `Result` 변수의 마지막으로 시작 된 스택입니다.
+
+    스택은 정수 용량, 스택 포인터 및 `Result` 배열로 구성 됩니다.
+ms.openlocfilehash: 8767d438adcecd7ccbd539d7c123ac42cfb8c295
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73065166"

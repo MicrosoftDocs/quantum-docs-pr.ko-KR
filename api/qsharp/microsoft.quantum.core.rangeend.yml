@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.core.rangeend
+name: RangeEnd
+type: function
+namespace: Microsoft.Quantum.Core
+summary: 시퀀스의 마지막 요소가 아닐 수 있는 지정 된 범위의 정의 된 끝 값을 반환 합니다.
+remarks: >-
+  범위 식의 첫 번째 요소는 `start`이 고, 두 번째 요소는 `start+step`, 세 번째 요소는 `end` 될 때까지 `start+step+step`됩니다.
+
+
+  범위의 정의 된 끝 값은 범위에 지정 된 시퀀스의 마지막 요소와 다를 수 있습니다. 예를 들어, 범위는 0 .입니다. 2.. 5 마지막 요소는 4 이지만 끝 값은 5입니다.
+syntax: 'function RangeEnd (range : Range) : Int'
+input:
+  content: '(범위: 범위)'
+  types:
+  - name: range
+    isPrimitive: true
+    uid: Range
+output:
+  content: Int
+  types:
+  - summary: 지정 된 범위의 정의 된 끝 값입니다.
+    isPrimitive: true
+    uid: Int
+ms.openlocfilehash: c7436046b6be7d4d0801471ecc6c78e36421e54a
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73066645"

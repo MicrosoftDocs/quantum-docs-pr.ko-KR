@@ -1,0 +1,29 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.amplitudeamplification.ampamprotationtoreflectionphases
+name: AmpAmpRotationToReflectionPhases
+type: function
+namespace: Microsoft.Quantum.AmplitudeAmplification
+summary: 단일 비트 회전으로 지정 된 단계를 부분 반사로 지정 된 단계로 변환 합니다.
+syntax: 'function AmpAmpRotationToReflectionPhases (rotPhases : Microsoft.Quantum.AmplitudeAmplification.RotationPhases) : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases'
+references: >-
+  에서 규칙을 사용 합니다.
+
+
+  - [ *G.H. Low, Chuang, a. L. L. L.* ](https://arxiv.org/abs/1707.05391)
+input:
+  content: '(rotPhases : Microsoft.Quantum.AmplitudeAmplification.RotationPhases)'
+  types:
+  - name: rotPhases
+    summary: 부분 반사로 변환할 단일 비트 회전의 배열입니다.
+    uid: microsoft.quantum.amplitudeamplification.rotationphases
+output:
+  content: Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases
+  types:
+  - summary: 부분 반사로 지정 된 단계를 구현 하는 작업입니다.
+    uid: microsoft.quantum.amplitudeamplification.reflectionphases
+ms.openlocfilehash: 2e4e447fd7ceef02249aa6577ff0274db046b9f2
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73215611"

@@ -1,0 +1,37 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.pnormalized
+name: PNormalized
+type: function
+namespace: Microsoft.Quantum.Math
+summary: >-
+  `L(p)`에서 `Double`의 벡터를 표준화 합니다.
+
+
+  즉, `Double[]`형식의 $x 배열을 지정 하면 모든 요소가 $-일반 $\|x\|_p $ $p으로 나뉘는 배열을 반환 합니다.
+syntax: 'function PNormalized (p : Double, array : Double[]) : Double[]'
+input:
+  content: '(p: Double, array: Double [])'
+  types:
+  - name: p
+    summary: $P $-일반의 지 수 $p입니다.
+    isPrimitive: true
+    uid: Double
+  - name: array
+    isArray: true
+    isPrimitive: true
+    uid: Double
+output:
+  content: Double []
+  types:
+  - summary: $P $-일반 $\|x\|_p $로 정규화 된 $ $x 배열입니다.
+    isArray: true
+    isPrimitive: true
+    uid: Double
+seeAlso:
+- pnorm
+ms.openlocfilehash: 5fd219b866b14d3d6faf58cdf4f1ce2b9fbadf9d
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73067291"

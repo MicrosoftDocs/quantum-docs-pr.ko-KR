@@ -1,0 +1,26 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.inttopauli
+name: IntToPauli
+type: function
+namespace: Microsoft.Quantum.Simulation
+summary: 정수를 단일 값 비트 Pauli 연산자로 변환 합니다.
+syntax: 'function IntToPauli (idx : Int) : Pauli'
+input:
+  content: '(idx: Int)'
+  types:
+  - name: idx
+    summary: Pauli 연산자로 변환할 `0..3` 범위의 정수입니다.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Pauli
+  types:
+  - summary: '`[PauliI, PauliX, PauliY, PauliZ][idx]`에서 제공 하는 `Pauli` 연산자입니다.'
+    isPrimitive: true
+    uid: Pauli
+ms.openlocfilehash: ca2ed56364d9fee748ac53b3f7f0aa40a96475b9
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73065489"

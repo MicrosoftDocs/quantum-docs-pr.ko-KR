@@ -1,0 +1,23 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.amplitudeamplification.reflectionstart
+name: ReflectionStart
+type: function
+namespace: Microsoft.Quantum.AmplitudeAmplification
+summary: 모든-0 문자열 | 0 ... 0 〉에 대 한 리플렉션을 생성 합니다 .이는 진폭 증폭에 대 한 일반적인 입력 상태입니다.
+syntax: 'function ReflectionStart () : Microsoft.Quantum.Oracles.ReflectionOracle'
+input:
+  content: ()
+  types: []
+output:
+  content: Microsoft.Quantum.Oracles.ReflectionOracle
+  types:
+  - summary: $ \Ket{0\cdots 0} $ 상태에 대 한 정보를 반영 하는 `ReflectionOracle`입니다.
+    uid: microsoft.quantum.oracles.reflectionoracle
+seeAlso:
+- microsoft.quantum.canon.reflectionoracle
+ms.openlocfilehash: 6598a01c19f25ee444f785a6688738f382fc94e6
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73215492"

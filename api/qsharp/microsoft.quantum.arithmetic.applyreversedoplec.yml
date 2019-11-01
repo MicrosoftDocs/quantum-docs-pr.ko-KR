@@ -1,0 +1,42 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.applyreversedoplec
+name: ApplyReversedOpLEC
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: 빅 endian 형식을 사용 하 여 부호 없는 정수를 레지스터 인코딩에 사용 하는 작업을 적용 합니다.
+syntax: 'operation ApplyReversedOpLEC (op : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit is Ctl), register : Microsoft.Quantum.Arithmetic.BigEndian) : Unit'
+input:
+  content: '(op: (LittleEndian = > Unit이 Ctl 인 경우), register:)'
+  types:
+  - name: op
+    summary: 작은 endian 레지스터에 대해 작동 하는 작업입니다.
+    isOperation: true
+    input:
+      types:
+      - uid: microsoft.quantum.arithmetic.littleendian
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Controlled
+  - name: register
+    summary: 변형할 빅 endian 레지스터입니다.
+    uid: microsoft.quantum.arithmetic.bigendian
+output:
+  content: 단위
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Controlled
+seeAlso:
+- applyreversedople
+- applyreversedoplea
+- applyreversedopleca
+ms.openlocfilehash: 0e517509a79a6740f1369b8c477bc94ae3b617c7
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73057140"

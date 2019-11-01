@@ -1,0 +1,9 @@
+- name: 표준 라이브러리
+  topicHref: standard/index.md
+  href: standard/toc.yml
+- name: 양자 화학 라이브러리
+  topicHref: chemistry/index.md
+  href: chemistry/toc.yml
+- name: 양자 숫자 라이브러리
+  topicHref: numerics/index.md
+  href: numerics/toc.yml

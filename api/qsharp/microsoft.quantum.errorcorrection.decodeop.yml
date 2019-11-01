@@ -1,0 +1,17 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.errorcorrection.decodeop
+name: DecodeOp
+type: newtype
+namespace: Microsoft.Quantum.ErrorCorrection
+summary: >-
+  인코딩된 레지스터를 실제 레지스터로 디코딩하는 작업과 증후군을 기록 하는 데 사용 되는 스크래치 인스턴스를 나타냅니다.
+
+
+  DecodeOp에 대 한 인수는 EncodeOp에서 반환 하는 것과 동일 하며 그 반대의 경우도 마찬가지입니다.
+syntax: newtype DecodeOp = (Microsoft.Quantum.ErrorCorrection.LogicalRegister => (Qubit[], Qubit[]));
+ms.openlocfilehash: ef9ad274336b019961256a63e7e48a8c011779bf
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73234617"

@@ -1,0 +1,34 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.snd
+name: Snd
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: 쌍이 지정 된 경우 두 번째 요소를 반환 합니다.
+syntax: "function Snd (pair : ('T, 'U)) : 'U"
+input:
+  content: "(pair : ('T, 'U))"
+  types:
+  - name: pair
+    summary: 두 개의 요소가 포함 된 튜플입니다.
+    types:
+    - uid: "'T"
+      isLocal: true
+    - uid: "'U"
+      isLocal: true
+output:
+  content: "'U"
+  types:
+  - summary: '`pair`의 두 번째 요소입니다.'
+    uid: "'U"
+    isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: 쌍의 첫 번째 멤버의 형식입니다.
+- uid: "'U"
+  summary: 쌍의 두 번째 멤버의 형식입니다.
+ms.openlocfilehash: c9a7d38a389411b374fbe2b154ce22a6bed5943e
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73222309"

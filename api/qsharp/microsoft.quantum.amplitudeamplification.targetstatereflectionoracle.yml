@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.amplitudeamplification.targetstatereflectionoracle
+name: TargetStateReflectionOracle
+type: function
+namespace: Microsoft.Quantum.AmplitudeAmplification
+summary: >-
+  플래그는 기본적으로 표시 된 대상 상태에 대 한 `ReflectionOracle`를 생성 합니다.
+
+
+  대상 상태에는 1로 설정 된 단일 비트와 다른 모든 0: $ \ket{1}_f $가 있습니다.
+syntax: 'function TargetStateReflectionOracle (idxFlagQubit : Int) : Microsoft.Quantum.Oracles.ReflectionOracle'
+input:
+  content: '(idxFlagQubit : Int)'
+  types:
+  - name: idxFlagQubit
+    summary: Oracle의 플래그를 지정 하는 $f의 인덱스입니다.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Microsoft.Quantum.Oracles.ReflectionOracle
+  types:
+  - summary: $ \Ket{1}_f $로 표시 된 상태에 대해 반영 하는 `ReflectionOracle`입니다.
+    uid: microsoft.quantum.oracles.reflectionoracle
+seeAlso:
+- microsoft.quantum.canon.reflectionoracle
+ms.openlocfilehash: c86011664da3f59bc978641b0aefcca5a50d3b1a
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73215441"

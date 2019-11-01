@@ -1,0 +1,29 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.addgeneratorsystems
+name: AddGeneratorSystems
+type: function
+namespace: Microsoft.Quantum.Simulation
+summary: 새 `GeneratorSystem`을 만드는 두 개의 `GeneratorSystem`를 추가 합니다.
+syntax: 'function AddGeneratorSystems (generatorSystemA : Microsoft.Quantum.Simulation.GeneratorSystem, generatorSystemB : Microsoft.Quantum.Simulation.GeneratorSystem) : Microsoft.Quantum.Simulation.GeneratorSystem'
+input:
+  content: '(generatorSystemA: GeneratorSystem, generatorSystemB: GeneratorSystem) (영문)'
+  types:
+  - name: generatorSystemA
+    summary: 첫 번째 `GeneratorSystem`입니다.
+    uid: microsoft.quantum.simulation.generatorsystem
+  - name: generatorSystemB
+    summary: 두 번째 `GeneratorSystem`입니다.
+    uid: microsoft.quantum.simulation.generatorsystem
+output:
+  content: GeneratorSystem.
+  types:
+  - summary: 입력 생성기 시스템의 합계인 시스템을 나타내는 `GeneratorSystem`입니다.
+    uid: microsoft.quantum.simulation.generatorsystem
+seeAlso:
+- microsoft.quantum.canon.generatorsystem
+ms.openlocfilehash: 33155c0af61281bc34b7af5ecb6afe404d3e427d
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73066067"

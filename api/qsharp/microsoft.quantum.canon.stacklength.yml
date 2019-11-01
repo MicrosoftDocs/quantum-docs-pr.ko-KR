@@ -1,0 +1,25 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.stacklength
+name: StackLength
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: <xref:microsoft.quantum.canon.resultstack>에 저장 된 요소의 수를 검색 합니다.
+syntax: 'function StackLength (stack : Microsoft.Quantum.Canon.ResultStack) : Int'
+input:
+  content: '(stack : Microsoft.Quantum.Canon.ResultStack)'
+  types:
+  - name: stack
+    summary: 길이를 확인할 스택입니다.
+    uid: microsoft.quantum.canon.resultstack
+output:
+  content: Int
+  types:
+  - summary: 스택의 요소 수입니다.
+    isPrimitive: true
+    uid: Int
+ms.openlocfilehash: e8f1dbaed90c3c5bfed9d915c7a6433aa4c6f023
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73222258"

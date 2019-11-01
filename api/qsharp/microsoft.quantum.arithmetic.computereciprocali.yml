@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.computereciprocali
+name: ComputeReciprocalI
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: 정수 나누기를 사용 하 여 부호 없는 정수 x에 대해 역 1/x를 계산 합니다. 정수로 해석 된 결과는 `floor(2^(2*n-1) / x)`됩니다.
+remarks: 입력 x = 0에 대 한 출력은 모두-1입니다.
+syntax: 'operation ComputeReciprocalI (xs : Microsoft.Quantum.Arithmetic.LittleEndian, result : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+input:
+  content: '(xs : Microsoft.Quantum.Arithmetic.LittleEndian, result : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  types:
+  - name: xs
+    summary: n 비트 부호 없는 정수
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: result
+    summary: 2n-처음에는 $ \ket{0}$에 있어야 합니다.
+    uid: microsoft.quantum.arithmetic.littleendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 91999bd0be10e1e77fb5d1daa88e34373eb83b9f
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73221051"

@@ -1,0 +1,45 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.extensions.bitwise
+name: Microsoft 양자. 확장명
+functions:
+- uid: microsoft.quantum.extensions.bitwise.and
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"microsoft.quantum.bitwise.and"를 사용 하세요.
+- uid: microsoft.quantum.extensions.bitwise.not
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"microsoft.quantum.bitwise.not"를 사용 하세요.
+- uid: microsoft.quantum.extensions.bitwise.or
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"microsoft.quantum.bitwise.or"를 사용 하세요.
+- uid: microsoft.quantum.extensions.bitwise.parity
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"microsoft.quantum.bitwise.parity"를 사용 하세요.
+- uid: microsoft.quantum.extensions.bitwise.xbits
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"microsoft.quantum.bitwise.xbits"를 사용 하세요.
+- uid: microsoft.quantum.extensions.bitwise.xor
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"microsoft.quantum.bitwise.xor"를 사용 하세요.
+- uid: microsoft.quantum.extensions.bitwise.zbits
+  summary: >-
+    > [!WARNING]
+
+    > 사용 되지 않음 @"microsoft.quantum.bitwise.zbits"를 사용 하세요.
+ms.openlocfilehash: ac63e91ec3fefe0002f14b1542eaa97456bd33aa
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73056752"
