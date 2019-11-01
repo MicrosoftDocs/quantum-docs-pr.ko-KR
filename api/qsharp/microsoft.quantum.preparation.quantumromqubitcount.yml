@@ -1,0 +1,40 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.preparation.quantumromqubitcount
+name: QuantumROMQubitCount
+type: function
+namespace: Microsoft.Quantum.Preparation
+summary: '`QuantumROM`에서 반환 하는 작업에 할당 해야 하는 총 수를 반환 합니다.'
+syntax: 'function QuantumROMQubitCount (targetError : Double, nCoeffs : Int) : (Int, (Int, Int))'
+input:
+  content: '(targetError : Double, nCoeffs : Int)'
+  types:
+  - name: targetError
+    summary: $ \Epsilon $ 대상 오류입니다.
+    isPrimitive: true
+    uid: Double
+  - name: nCoeffs
+    summary: '`QuantumROM`에 지정 된 계수 수입니다.'
+    isPrimitive: true
+    uid: Int
+output:
+  content: (Int, (Int, Int))
+  types:
+  - summary: >-
+      ## <a name="first-parameter"></a>첫 번째 매개 변수
+
+
+      튜플을 `(x,(y,z))`. 여기서 `x = y + z`는 할당 된 총 수를, `LittleEndian` 레지스터의 경우는 `y` 이며, `z`은 가비지를 위한 수입니다.
+    types:
+    - isPrimitive: true
+      uid: Int
+    - types:
+      - isPrimitive: true
+        uid: Int
+      - isPrimitive: true
+        uid: Int
+ms.openlocfilehash: fdc1d18f088cd5d07558a6fac28b92af6c9884d3
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73226389"

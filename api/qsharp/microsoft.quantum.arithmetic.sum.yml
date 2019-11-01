@@ -1,0 +1,37 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.sum
+name: Sum
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: 해독 가능한 sum gate를 구현 합니다. `carryIn`에서 인코딩된 전달 비트와 `summand1` 및 `summand2`에서 인코딩된 두 개의 summand 비트가 지정 된 경우, `summand1`에서 `carryIn`, `summand2` 및 `summand2`의 비트 xor을 계산 합니다.
+remarks: '`Carry` 작업과 달리이 작업은 실행 비트를 계산 하지 않습니다.'
+syntax: 'operation Sum (carryIn : Qubit, summand1 : Qubit, summand2 : Qubit) : Unit'
+input:
+  content: '(carryIn : Qubit, summand1 : Qubit, summand2 : Qubit)'
+  types:
+  - name: carryIn
+    summary: 운반 비트입니다.
+    isPrimitive: true
+    uid: Qubit
+  - name: summand1
+    summary: 첫 번째 summand입니다.
+    isPrimitive: true
+    uid: Qubit
+  - name: summand2
+    summary: 두 번째 summand는 `summand1` 및 `summand2`합계의 하위 비트로 대체 됩니다.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 125ee44b5debf5d8c83d7fb5176c4298bd702563
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73218399"

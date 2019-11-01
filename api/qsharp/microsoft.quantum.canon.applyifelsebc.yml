@@ -1,0 +1,75 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applyifelsebc
+name: ApplyIfElseBC
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  클래식 비트의 값에 따라 제어 가능한 두 작업 중 하나를 적용 합니다.
+
+
+  비트 `bit`지정 된 경우 `bit` `true`될 때 `trueInput` `trueOp` 작업을 입력으로 적용 하 고 `falseOp(falseInput)`가 `bit` 될 때 `false`를 적용 합니다.
+syntax: "operation ApplyIfElseBC (bit : Bool, (trueOp : ('T => Unit is Ctl), trueInput : 'T), (falseOp : ('U => Unit is Ctl), falseInput : 'U)) : Unit"
+input:
+  content: "(bit : Bool, (trueOp : ('T => Unit is Ctl), trueInput : 'T), (falseOp : ('U => Unit is Ctl), falseInput : 'U))"
+  types:
+  - name: bit
+    isPrimitive: true
+    uid: Bool
+  - name: trueOp
+    summary: '`bit` `true`될 때 적용 되는 제어 가능한 작업입니다.'
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Controlled
+  - name: trueInput
+    summary: '`bit` `true`때 `trueOp`에 제공 되는 입력입니다.'
+    uid: "'T"
+    isLocal: true
+  - name: falseOp
+    summary: '`bit` `false`될 때 적용 되는 제어 가능한 작업입니다.'
+    isOperation: true
+    input:
+      types:
+      - uid: "'U"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Controlled
+  - name: falseInput
+    summary: '`bit` `false`때 `falseOp`에 제공 되는 입력입니다.'
+    uid: "'U"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: 조건부로 적용 `trueOp` 작업의 입력 형식입니다.
+- uid: "'U"
+  summary: 조건부로 적용 `falseOp` 작업의 입력 형식입니다.
+functors:
+- Controlled
+seeAlso:
+- microsoft.quantum.canon.applyifzero
+- microsoft.quantum.canon.applyifone
+- microsoft.quantum.canon.applyifelserc
+- microsoft.quantum.canon.applyifelsera
+- microsoft.quantum.canon.applyifelserca
+ms.openlocfilehash: 9e703292e4b09f5f8b66ba6efbd0ada054757367
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73217447"

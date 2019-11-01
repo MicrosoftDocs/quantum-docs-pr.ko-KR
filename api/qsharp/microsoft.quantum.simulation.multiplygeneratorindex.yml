@@ -1,0 +1,40 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.multiplygeneratorindex
+name: MultiplyGeneratorIndex
+type: function
+namespace: Microsoft.Quantum.Simulation
+summary: '`GeneratorIndex`계수를 곱합니다.'
+examples: >-
+  ```qsharp
+
+  let gen = GeneratorIndex(([1,2,3],[coeff]),[1,2,3]);
+
+  let ((idxPaulis, idxDoubles), idxQubits) = MultiplyGeneratorIndex(multiplier, gen);
+
+  // idxDoubles[0] == multiplier * coeff;
+
+  ```
+syntax: 'function MultiplyGeneratorIndex (multiplier : Double, generatorIndex : Microsoft.Quantum.Simulation.GeneratorIndex) : Microsoft.Quantum.Simulation.GeneratorIndex'
+input:
+  content: '(multiplier : Double, generatorIndex : Microsoft.Quantum.Simulation.GeneratorIndex)'
+  types:
+  - name: multiplier
+    summary: 계수의 승수입니다.
+    isPrimitive: true
+    uid: Double
+  - name: generatorIndex
+    summary: 곱할 `GeneratorIndex`입니다.
+    uid: microsoft.quantum.simulation.generatorindex
+output:
+  content: Microsoft.Quantum.Simulation.GeneratorIndex
+  types:
+  - summary: 계수가 계수 `multiplier` 큰 항을 나타내는 `GeneratorIndex`입니다.
+    uid: microsoft.quantum.simulation.generatorindex
+seeAlso:
+- microsoft.quantum.canon.generatorindex
+ms.openlocfilehash: a417f41110f95a82e76038680ba76502aae84bd4
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73226236"

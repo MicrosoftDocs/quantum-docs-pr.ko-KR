@@ -1,0 +1,41 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.noop
+name: NoOp
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  인수에 대해 id 연산 (no op)을 수행 합니다.
+
+
+  이 작업은 모든 형식의 값을 사용 하 고 아무 것도 수행 하지 않습니다.
+
+  이는 작업 형식의 입력이 예상 될 때마다 유용할 수 있지만 아무 동작도 수행 하지 않아야 합니다.
+
+  예를 들어 특정 오류 수정 증후군에서 오류가 발생 하지 않았음을 나타내는 경우 올바른 복구 절차를 `NoOp<Qubit[]>` 수 있습니다.
+
+  마찬가지로 작업에서 상태 준비 절차를 `NoOp<Qubit[]>` 입력으로 예상 하는 경우 $ \ket{0 \cdots 0} $ 상태를 준비 하는 데 사용할 수 있습니다.
+remarks: 거의 모든 경우에 `NoOp`의 형식 매개 변수를 명시적으로 지정 해야 합니다. 예를 들어 `NoOp<Qubit>`은 <xref:microsoft.quantum.intrinsic.i>와 동일 합니다.
+syntax: "operation NoOp (input : 'T) : Unit"
+input:
+  content: "(input : 'T)"
+  types:
+  - name: input
+    summary: 무시할 값입니다.
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- microsoft.quantum.intrinsic.i
+ms.openlocfilehash: 8752eb93c1fba59065518ffd4665ea6f110ce1cc
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73222683"

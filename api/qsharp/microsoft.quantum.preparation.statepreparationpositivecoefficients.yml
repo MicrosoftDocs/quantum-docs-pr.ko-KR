@@ -1,0 +1,62 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.preparation.statepreparationpositivecoefficients
+name: StatePreparationPositiveCoefficients
+type: function
+namespace: Microsoft.Quantum.Preparation
+summary: >-
+  지정 된 퀀텀 상태를 준비 하는 작업을 반환 합니다.
+
+
+  반환 된 작업 $U $는 $-\alpha_j\ge $0 $ \ket{0...0} $ $n에서 긍정 계수 $ \ket{\psi} $를 사용 하 여 $ $의 임의의 퀀텀 상태를 준비 합니다.
+
+
+  새로 할당 된 레지스터의 U 동작은 $ $ \begin{align} U \ket{0\cdots 0} = \ket{\psi} = \frac{\sum_{j = 0} ^ {2 ^ n-1} \alpha_j \ket{j}}{\sqrt{\sum_{j = 0} ^ {2 ^ n-1} | \alpha_j | ^ 2}}에 의해 제공 됩니다.
+
+  \end{align} $ $
+remarks: 음수 입력 계수 $ \alpha_j < $0는 $ | \alpha_j | $ 값을 사용 하 여 긍정적인 것으로 간주 됩니다. $2 ^ n $ 보다 작은 경우 `coefficients`는 $ \alpha_j = $0.0 요소로 채워집니다.
+examples: >-
+  다음 코드 조각은 stbit 레지스터 `qubitsLE`에서 $ \ket{\psi} = \ sqrt {1/8} \ k{0}+ \ sqrt {7/8} \ k{2}$ 퀀텀 상태를 준비 합니다.
+
+
+  ```qsharp
+
+  let amplitudes = [Sqrt(0.125), 0.0, Sqrt(0.875), 0.0];
+
+  let op = StatePreparationPositiveCoefficients(amplitudes);
+
+  using (qubits = Qubit[2]) {
+      let qubitsLE = LittleEndian(qubits);
+      op(qubitsLE);
+  }
+
+  ```
+syntax: 'function StatePreparationPositiveCoefficients (coefficients : Double[]) : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit is Adj + Ctl)'
+input:
+  content: '(coefficients : Double[])'
+  types:
+  - name: coefficients
+    summary: 최대 $2 ^ n $ 계수의 $ \alpha_j $의 배열입니다. $J $ th 계수는 작은 endian 형식으로 인코딩된 number state $ \ket{j} $를 인덱싱합니다.
+    isArray: true
+    isPrimitive: true
+    uid: Double
+output:
+  content: (Microsoft.Quantum.Arithmetic.LittleEndian => Unit is Adj + Ctl)
+  types:
+  - summary: 상태 준비 단일 작업 $U $.
+    isOperation: true
+    input:
+      types:
+      - uid: microsoft.quantum.arithmetic.littleendian
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+ms.openlocfilehash: 2a31449781d4b3bab1f2af40083df78bf6cc2083
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73226372"

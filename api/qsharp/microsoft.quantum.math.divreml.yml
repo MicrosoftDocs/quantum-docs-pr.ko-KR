@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.divreml
+name: DivRemL
+type: function
+namespace: Microsoft.Quantum.Math
+summary: 하나의 BigInteger 값을 다른 값으로 나누고 결과와 나머지를 튜플로 반환 합니다.
+remarks: 자세한 내용은 [BigInteger](https://docs.microsoft.com/dotnet/api/system.numerics.biginteger.divrem) 를 참조 하세요.
+syntax: 'function DivRemL (dividend : BigInt, divisor : BigInt) : (BigInt, BigInt)'
+input:
+  content: '(dividend : BigInt, divisor : BigInt)'
+  types:
+  - name: dividend
+    isPrimitive: true
+    uid: BigInt
+  - name: divisor
+    isPrimitive: true
+    uid: BigInt
+output:
+  content: (BigInt, BigInt)
+  types:
+  - types:
+    - isPrimitive: true
+      uid: BigInt
+    - isPrimitive: true
+      uid: BigInt
+ms.openlocfilehash: ca56fbcc7244ba45b660a09a32a06244312439d4
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73229636"

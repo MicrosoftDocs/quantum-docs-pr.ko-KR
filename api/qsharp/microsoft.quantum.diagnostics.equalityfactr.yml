@@ -1,0 +1,33 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.diagnostics.equalityfactr
+name: EqualityFactR
+type: function
+namespace: Microsoft.Quantum.Diagnostics
+summary: 기존 결과 변수가 예상 값을 가지는 것을 어설션 합니다.
+syntax: 'function EqualityFactR (actual : Result, expected : Result, message : String) : Unit'
+input:
+  content: '(actual : Result, expected : Result, message : String)'
+  types:
+  - name: actual
+    summary: 검사할 변수입니다.
+    isPrimitive: true
+    uid: Result
+  - name: expected
+    summary: 예상 값입니다.
+    isPrimitive: true
+    uid: Result
+  - name: message
+    summary: 어설션이 트리거될 때 사용할 오류 메시지 문자열입니다.
+    isPrimitive: true
+    uid: String
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+ms.openlocfilehash: fa2914770e2b2963b4f180a3fb6376a7c42fa4e8
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73226814"

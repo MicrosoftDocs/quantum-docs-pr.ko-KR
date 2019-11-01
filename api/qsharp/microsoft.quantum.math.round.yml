@@ -1,0 +1,25 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.round
+name: Round
+type: function
+namespace: Microsoft.Quantum.Math
+summary: 값을 가장 가까운 정수나 지정 된 소수 자릿수로 반올림 합니다.
+remarks: 자세한 내용은 [system.object](https://docs.microsoft.com/dotnet/api/system.math.round) 를 참조 하세요.
+syntax: 'function Round (a : Double) : Int'
+input:
+  content: '(a : Double)'
+  types:
+  - name: a
+    isPrimitive: true
+    uid: Double
+output:
+  content: Int
+  types:
+  - isPrimitive: true
+    uid: Int
+ms.openlocfilehash: e6f2c4fc27f954386c8932b2723330f4d655fc91
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73232101"

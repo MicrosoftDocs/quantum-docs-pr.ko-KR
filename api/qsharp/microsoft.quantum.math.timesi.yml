@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.timesi
+name: TimesI
+type: function
+namespace: Microsoft.Quantum.Math
+summary: 두 입력의 곱을 반환 합니다.
+syntax: 'function TimesI (a : Int, b : Int) : Int'
+input:
+  content: '(a : Int, b : Int)'
+  types:
+  - name: a
+    summary: 첫 번째 입력 $a $를 곱합니다.
+    isPrimitive: true
+    uid: Int
+  - name: b
+    summary: 두 번째 입력 $b $를 곱합니다.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Int
+  types:
+  - summary: 제품 $a \times b $입니다.
+    isPrimitive: true
+    uid: Int
+ms.openlocfilehash: ba6ae03bff214aa4ee999ef2df3c833a22399ed3
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73231472"

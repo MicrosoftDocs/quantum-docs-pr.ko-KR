@@ -1,0 +1,33 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.diagnostics.equalityfacti
+name: EqualityFactI
+type: function
+namespace: Microsoft.Quantum.Diagnostics
+summary: 기존 Int 변수에 예상 값이 있음을 어설션 합니다.
+syntax: 'function EqualityFactI (actual : Int, expected : Int, message : String) : Unit'
+input:
+  content: '(actual : Int, expected : Int, message : String)'
+  types:
+  - name: actual
+    summary: 확인할 숫자입니다.
+    isPrimitive: true
+    uid: Int
+  - name: expected
+    summary: 예상 값입니다.
+    isPrimitive: true
+    uid: Int
+  - name: message
+    summary: 어설션이 트리거될 때 사용할 오류 메시지 문자열입니다.
+    isPrimitive: true
+    uid: String
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+ms.openlocfilehash: b54eb946f5c8c2d829b86fa2685190ce33ff2dbf
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73226882"

@@ -1,0 +1,69 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.estimateenergy
+name: EstimateEnergy
+type: operation
+namespace: Microsoft.Quantum.Simulation
+summary: '`phaseEstAlgorithm`를 사용 하 여 결과 상태에 대 한 `qpeUnitary`에 대해 자동으로 할당 된 입력 상태 단계 추정에 `statePrepUnitary`를 적용 하 여 상태 준비를 수행 합니다.'
+syntax: 'operation EstimateEnergy (nQubits : Int, statePrepUnitary : (Qubit[] => Unit), qpeUnitary : (Qubit[] => Unit is Adj + Ctl), phaseEstAlgorithm : ((Microsoft.Quantum.Oracles.DiscreteOracle, Qubit[]) => Double)) : Double'
+input:
+  content: '(nQubits : Int, statePrepUnitary : (Qubit[] => Unit), qpeUnitary : (Qubit[] => Unit is Adj + Ctl), phaseEstAlgorithm : ((Microsoft.Quantum.Oracles.DiscreteOracle, Qubit[]) => Double))'
+  types:
+  - name: nQubits
+    summary: 시뮬레이션을 수행 하는 데 사용 되는 비트 수입니다.
+    isPrimitive: true
+    uid: Int
+  - name: statePrepUnitary
+    summary: 초기 동적 생성기에 대 한 상태 준비를 나타내는 oracle입니다.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+  - name: qpeUnitary
+    summary: 동적 생성기에서 그라운드 상태 $ \ket{\phi} $ 및 접지 상태 에너지 $E = \a\\, \delta t $ 인 시간 $ \delta t $의 진화를 나타내는 단일 $U 연산자를 나타내는 oracle입니다.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+  - name: phaseEstAlgorithm
+    summary: >-
+      지정 된 단일 작업에 대해 단계 예측을 수행 하는 작업입니다.
+
+      자세한 내용은 [반복 단계 예측](/quantum/libraries/characterization#iterative-phase-estimation) 을 참조 하세요.
+    isOperation: true
+    input:
+      types:
+      - uid: microsoft.quantum.oracles.discreteoracle
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Double
+output:
+  content: Double
+  types:
+  - summary: $U $로 표시 되는 생성기의 그라운드 상태 에너지 $ \\a$의 예상 $ \hat{\phi} $입니다.
+    isPrimitive: true
+    uid: Double
+ms.openlocfilehash: aff8ac5575b6a5e08dc80263a7a8d4bfec59fa12
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73223329"

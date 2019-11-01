@@ -1,0 +1,35 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.characterization.robustphaseestimation
+name: RobustPhaseEstimation
+type: operation
+namespace: Microsoft.Quantum.Characterization
+summary: 지정 된 oracle `U` 및 eigenstate에 대 한 강력한 비 반복적인 퀀텀 단계 추정 알고리즘을 수행 하 고 Heisenberg 한도에 분산 배율이 지정 된 단계의 단일 실제 값 추정치를 제공 합니다.
+remarks: 많은 수의 쿼리를 제한 하는 경우 $ \\\\\ge $의 예상 값에 대 한 표준 편차에 대 한 Cramer-rao-$ \a
+syntax: 'operation RobustPhaseEstimation (bitsPrecision : Int, oracle : Microsoft.Quantum.Oracles.DiscreteOracle, targetState : Qubit[]) : Double'
+references: '- 강력한 단계 추정 Shelby Kimmel, Guang Jia-hao Low, (https://arxiv.org/abs/1502.02677 Yoder를 통해 설정 된 범용 단일 비트 게이트의 강력한 보정'
+input:
+  content: '(bitsPrecision : Int, oracle : Microsoft.Quantum.Oracles.DiscreteOracle, targetState : Qubit[])'
+  types:
+  - name: bitsPrecision
+    summary: 이는 $ \phi \phi 10.7 \phi/\texts {queries} $와 같이 많은 수의 쿼리를 사용 하는 $ \a$의 추정치를 제공 합니다.
+    isPrimitive: true
+    uid: Int
+  - name: oracle
+    summary: 지정 된 정수에 대 한 ^ m $ $U를 구현 하는 작업은 $ $m.
+    uid: microsoft.quantum.oracles.discreteoracle
+  - name: targetState
+    summary: $ $U 하는 퀀텀 레지스터가 작동 합니다. $U $의 eigenstate $ \ket{\phi} $ $U를 저장 하는 경우 $ \phi\in (-\pi, \pi] $의 \ket{\phi} = e ^ {i\phi} \ket{\phi} $에 대해 알 수 없는 단계가 발생 합니다.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Double
+  types:
+  - isPrimitive: true
+    uid: Double
+ms.openlocfilehash: 169a828036fbe84f49e5d87399319d14a9584051
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73229058"

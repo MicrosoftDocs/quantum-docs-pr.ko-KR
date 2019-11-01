@@ -1,0 +1,45 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.incrementphasebymodularinteger
+name: IncrementPhaseByModularInteger
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: >-
+  정수 상수를 기준으로 하는 이상 비트 레지스터의 모듈식 증분을 수행 합니다.
+
+
+  `increment`에서 `modulus`를 사용 하 여 N을 표시 하 고 y로 `target`에서 인코딩된 정수를 표시 합니다. | y ⟩ ↦ | y + a (mod N) ⟩ 정수는 QFT로 거의 endian 형식으로 인코딩됩니다.
+remarks: >-
+  `target` 가장 높은 비트가 0으로 설정 된 것으로 가정 합니다.
+
+  또한에서는 target 값이 N 보다 작은 것으로 가정 합니다.
+
+
+  회로 다이어그램 및 설명은 [arXiv: vant-ph/0205095v3의 5 페이지](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=5)에서 그림 5를 참조 하세요.
+syntax: 'operation IncrementPhaseByModularInteger (increment : Int, modulus : Int, target : Microsoft.Quantum.Arithmetic.PhaseLittleEndian) : Unit'
+input:
+  content: '(increment : Int, modulus : Int, target : Microsoft.Quantum.Arithmetic.PhaseLittleEndian)'
+  types:
+  - name: increment
+    isPrimitive: true
+    uid: Int
+  - name: modulus
+    isPrimitive: true
+    uid: Int
+  - name: target
+    uid: microsoft.quantum.arithmetic.phaselittleendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- microsoft.quantum.canon.modularincrementle
+ms.openlocfilehash: 897e46cca640e714e1f000548ffd3226e8e27fa4
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73219028"

@@ -1,0 +1,36 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.preparation.blochspherecoordinates
+name: BlochSphereCoordinates
+type: function
+namespace: Microsoft.Quantum.Preparation
+summary: >-
+  단일가 나 비트 상태에 대 한 Bloch 구 좌표를 계산 합니다.
+
+
+  지정 된 두 복소수를 나타내는 0, a1 $ $a Bloch 구의 좌표를 계산 합니다. 즉, $a 0 \ket{0} + a1 \ket{1} = r e ^ {it} (e ^ {-i \eml\ket {(\ 테타/2)} \ket{0}+ e ^ {i \emlab\sin{(\ 테타/2)}{1}) $입니다.
+syntax: 'function BlochSphereCoordinates (a0 : Microsoft.Quantum.Math.ComplexPolar, a1 : Microsoft.Quantum.Math.ComplexPolar) : (Microsoft.Quantum.Math.ComplexPolar, Double, Double)'
+input:
+  content: '(a0 : Microsoft.Quantum.Math.ComplexPolar, a1 : Microsoft.Quantum.Math.ComplexPolar)'
+  types:
+  - name: a0
+    summary: 상태 $ \ket{0}$의 복합 계수입니다.
+    uid: microsoft.quantum.math.complexpolar
+  - name: a1
+    summary: 상태 $ \ket{1}$의 복합 계수입니다.
+    uid: microsoft.quantum.math.complexpolar
+output:
+  content: (Microsoft.Quantum.Math.ComplexPolar, Double, Double)
+  types:
+  - summary: '`(ComplexPolar(r, t), phi, theta)`를 포함 하는 튜플입니다.'
+    types:
+    - uid: microsoft.quantum.math.complexpolar
+    - isPrimitive: true
+      uid: Double
+    - isPrimitive: true
+      uid: Double
+ms.openlocfilehash: fc9dbef764c9d95de2183b9b093e00f20dfb0697
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73228140"

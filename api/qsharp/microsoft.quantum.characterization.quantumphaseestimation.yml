@@ -1,0 +1,35 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.characterization.quantumphaseestimation
+name: QuantumPhaseEstimation
+type: operation
+namespace: Microsoft.Quantum.Characterization
+summary: 지정 된 oracle `U` 및 `targetState`에 대 한 퀀텀 단계 추정 알고리즘을 수행 하 여 단계를 빅 endian 퀀텀 레지스터로 읽습니다.
+syntax: 'operation QuantumPhaseEstimation (oracle : Microsoft.Quantum.Oracles.DiscreteOracle, targetState : Qubit[], controlRegister : Microsoft.Quantum.Arithmetic.BigEndian) : Unit'
+input:
+  content: '(oracle : Microsoft.Quantum.Oracles.DiscreteOracle, targetState : Qubit[], controlRegister : Microsoft.Quantum.Arithmetic.BigEndian)'
+  types:
+  - name: oracle
+    summary: 지정 된 정수에 대 한 ^ m $ $U를 구현 하는 작업은 m입니다.
+    uid: microsoft.quantum.oracles.discreteoracle
+  - name: targetState
+    summary: $ \Ket{\phi} $에서 처리 된 $ $ 상태를 나타내는 퀀텀 레지스터가 $U $입니다. $ \Ket{\phi} $가 $U $, $U \ket{\phi} = e ^ {i\emi\$의 eigenstate 인 경우 [0, 2 \ pi) $에서 알 수 없는 단계입니다.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+  - name: controlRegister
+    summary: 제공 된 oracle을 제어 하는 데 사용할 수 있으며이 작업을 적용 한 다음에 $ \\a$의 표현을 포함 하는 빅 endian 표현 정수 레지스터입니다. ControlRegister는 초기 상태 $ \ket{00\cdots 0} $에서 시작 하는 것으로 간주 됩니다. 여기서 레지스터의 길이는 원하는 전체 자릿수를 나타냅니다.
+    uid: microsoft.quantum.arithmetic.bigendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: f5cb07ee948a0472bbd5b85ba13e12fa6a9eff39
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73229109"

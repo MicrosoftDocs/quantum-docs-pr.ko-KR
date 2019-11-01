@@ -1,0 +1,43 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.characterization.continuousphaseestimationiteration
+name: ContinuousPhaseEstimationIteration
+type: operation
+namespace: Microsoft.Quantum.Characterization
+summary: 단일 oracle의 임의의 실제 성능을 사용 하 여 반복적인 (일반적으로 제어) 단계 추정 알고리즘의 단일 반복을 수행 합니다.
+syntax: 'operation ContinuousPhaseEstimationIteration (oracle : Microsoft.Quantum.Oracles.ContinuousOracle, time : Double, theta : Double, targetState : Qubit[], controlQubit : Qubit) : Unit'
+input:
+  content: '(oracle : Microsoft.Quantum.Oracles.ContinuousOracle, time : Double, theta : Double, targetState : Qubit[], controlQubit : Qubit)'
+  types:
+  - name: oracle
+    summary: '$U ^ t $가 지정 된 레지스터에 적용 되는 작업 (예: "^ t $")이 지정 된 레지스터에 적용 되는 $t 작업입니다. 여기서 $U $은 단계가 예상 되는 단일이 고, $t 여기서 $는 oracle에 지정 된 정수 거듭제곱입니다.'
+    uid: microsoft.quantum.oracles.continuousoracle
+  - name: time
+    summary: 지정 된 단일 oracle을 적용 하는 횟수입니다.
+    isPrimitive: true
+    uid: Double
+  - name: theta
+    summary: 대상 상태에 대해 동작 하기 전에 컨트롤의 단계를 반전 하는 각도입니다.
+    isPrimitive: true
+    uid: Double
+  - name: targetState
+    summary: 지정 된 단일 oracle에 의해 처리 되는 상태 등록입니다.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+  - name: controlQubit
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 21fcfda2373e145d9565a73af5a89b7fe061d4f8
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73229245"

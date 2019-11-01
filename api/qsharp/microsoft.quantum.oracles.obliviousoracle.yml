@@ -1,0 +1,26 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.oracles.obliviousoracle
+name: ObliviousOracle
+type: newtype
+namespace: Microsoft.Quantum.Oracles
+summary: >-
+  명확한 진폭 증폭의 oracle을 나타냅니다.
+
+
+  Oracle $O $에 대 한 입력은 다음과 같습니다.
+
+
+  - $O $가 작동 하는 ancilla 레지스터 $a $입니다.
+
+  - 원하는 단일 $U $가 적용 되는 시스템 등록 $s $는 상태 $ \ket{t}\_a $로 설정 된 레지스터 $a $에서 게시 합니다.
+remarks: >-
+  $ $ O\ket {s}\_a\ket {\ psi}\_s = \lambda\ket{t}\_a U \ket{\psi}\_s + \sqrt{1-| \lambda | ^ 2} \ket{t ^ \perp}\_a\cdots $ $에 의해 정의 된이 oracle은 ancilla state $ \ket{s}\_a $ to에 대해 작동 합니다. $ \ket{t}\_a $로 플래그 지정 된 기반으로 모든 시스템 상태 $ \ket{\psi}\_s $에서 진폭 $ \lambda $를 사용 하 여 단일 $U $을 구현 합니다.
+
+  첫 번째 매개 변수는 $ \ket{s}\_a $의 기본 비트 레지스터입니다. 두 번째 매개 변수는 $ \ket{\psi}\_s $의 고 비트 레지스터입니다.
+syntax: newtype ObliviousOracle = ((Qubit[], Qubit[]) => Unit is Adj + Ctl);
+ms.openlocfilehash: f06527701dfad61843df66faca5dd265525b6aa6
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73231064"

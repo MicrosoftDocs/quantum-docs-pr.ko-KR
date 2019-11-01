@@ -1,0 +1,37 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.chemistry.jordanwigner.optimizedbexy
+name: OptimizedBEXY
+type: operation
+namespace: Microsoft.Quantum.Chemistry.JordanWigner
+summary: $ (X ^ {z + 1}\_pY ^ {z}\_p) Z\_{p-1}에 Pauli 문자열을 적용 하는 단일 $U $ 와 동일 $ on stbits $0. p $ 조건 화 된 on\{0, 1\}$ 및 $p $의 인덱스 $z 합니다. 즉, $ $ \begin{align} U\ket {z} \ k {p} \ k {\ psi} = \ket{z}\ket{p} (X ^ {z + 1}\_pY ^ {z}\_p) Z\_{p-1} ... Z_0\ket {\ psi} \end{align} $ $
+syntax: 'operation OptimizedBEXY (pauliBasis : Qubit, indexRegister : Microsoft.Quantum.Arithmetic.LittleEndian, targetRegister : Qubit[]) : Unit'
+references: '- 선형 T 복잡성 Ryan Babbush, Craig Gidney, Dominic Berry, Spectra Wiebe, Jarrod McClean, Alexandru 고, 연한, 오스틴 Fowler, Hartmut Neven https://arxiv.org/abs/1805.03662를 사용 하 여 퀀텀 회로에서 전자 인코딩'
+input:
+  content: '(pauliBasis : Qubit, indexRegister : Microsoft.Quantum.Arithmetic.LittleEndian, targetRegister : Qubit[])'
+  types:
+  - name: pauliBasis
+    summary: 이 고 비트가 $ \ket{0}$ 상태 이면 $ $X $가 적용 됩니다. $ \Ket{1}$ 상태 이면 $ $Y $가 적용 됩니다.
+    isPrimitive: true
+    uid: Qubit
+  - name: indexRegister
+    summary: 이 레지스터의 $ \ket{p} $ 상태에 따라 $ 또는 $Y $가 적용 되는가 $X 결정 됩니다.
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: targetRegister
+    summary: Pauli 연산자가 적용 되는 원하는 비트의 레지스터입니다.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: e0ac3f2f050ed584053f7da7a310f1855e992141
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73228463"

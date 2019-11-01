@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.diagnostics.nearequalityfactd
+name: NearEqualityFactD
+type: function
+namespace: Microsoft.Quantum.Diagnostics
+summary: 고전적인 부동 소수점 값에 필요한 값이 1e-10의 최대 허용 오차 보다 작은 것을 어설션 합니다.
+remarks: 이는 하드 코드 된 허용 오차를 $10 ^{-10}$로 <xref:microsoft.quantum.diagnostics.equalitywithintolerancefact>와 동일 합니다.
+syntax: 'function NearEqualityFactD (actual : Double, expected : Double) : Unit'
+input:
+  content: '(actual : Double, expected : Double)'
+  types:
+  - name: actual
+    summary: 확인할 숫자입니다.
+    isPrimitive: true
+    uid: Double
+  - name: expected
+    summary: 예상 값입니다.
+    isPrimitive: true
+    uid: Double
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+ms.openlocfilehash: 9bbf1ced753b2fde5a3f8fb20417053a47866ada
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73230503"

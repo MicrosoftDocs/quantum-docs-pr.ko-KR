@@ -1,0 +1,62 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.chemistry.jordanwigner.vqe.estimatetermexpectation
+name: EstimateTermExpectation
+type: operation
+namespace: Microsoft.Quantum.Chemistry.JordanWigner.VQE
+summary: >-
+  지정 된 요르단-Wigner Hamiltonian term에 연결 된 에너지를 계산 합니다.
+
+
+  이 작업은 각 측정 연산자에 연결 된 예상 값을 예측 하 고 샘플링을 사용 하 여 해당 계수를 곱합니다.
+
+  결과는 Wigner 용어의 에너지를 포함 하는 변수로 집계 됩니다.
+syntax: 'operation EstimateTermExpectation (inputStateUnitary : (Qubit[] => Unit is Adj), ops : Pauli[][], coeffs : Double[], nQubits : Int, nSamples : Int) : Double'
+input:
+  content: '(inputStateUnitary : (Qubit[] => Unit is Adj), ops : Pauli[][], coeffs : Double[], nQubits : Int, nSamples : Int)'
+  types:
+  - name: inputStateUnitary
+    summary: 상태 준비에 사용 되는 단일.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+  - name: ops
+    summary: 요르단-Wigner 용어의 측정 연산자입니다.
+    isArray: true
+    types:
+    - isArray: true
+      isPrimitive: true
+      uid: Pauli
+  - name: coeffs
+    summary: 요르단 Wigner term의 계수입니다.
+    isArray: true
+    isPrimitive: true
+    uid: Double
+  - name: nQubits
+    summary: 분자 시스템을 시뮬레이트하는 데 필요한 비트 수입니다.
+    isPrimitive: true
+    uid: Int
+  - name: nSamples
+    summary: 용어 예상을 추정 하는 데 사용할 샘플 수입니다.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Double
+  types:
+  - summary: 요르단-Wigner 항에 연결 된 에너지입니다.
+    isPrimitive: true
+    uid: Double
+ms.openlocfilehash: 9efa1c2aaa66d4b35e3266f785f837cb5e4dba27
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73228446"

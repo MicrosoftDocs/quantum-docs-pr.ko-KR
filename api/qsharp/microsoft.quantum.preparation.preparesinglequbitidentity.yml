@@ -1,0 +1,35 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.preparation.preparesinglequbitidentity
+name: PrepareSingleQubitIdentity
+type: operation
+namespace: Microsoft.Quantum.Preparation
+summary: >-
+  최대 혼합 상태에서 고 비트를 준비 합니다.
+
+
+  이 메서드는 depolarizing channel $ $ \begin{align} \Omega (\rho) \mathrel{: =} \frac {4}{1}를 적용 하 여 $ \boldone/$2 상태에서 지정 된 고 비트를 준비 합니다 .이 경우에는 \{0, 1, 2, 3\}} \omega\_{\mu} \rho s\시그마\_{\mu} ^ {\ 칼}, \end{align} $ $ where $ \sigma\_i $는 $i $ th Pauli 연산자이 고, 여기서 $ \rho $은 혼합 된 상태를 나타내는 밀도 연산자입니다.
+remarks: >-
+  상태에이 작업을 적용 한 결과를 설명 하는 혼합 상태 $ \boldone/$2는이 작업에서 수행 되는 임의의 선택 항목에 대 한 예상 값을 암시적으로 설명 합니다.
+
+  따라서 단일 응용 프로그램의 경우이 작업은 순수 상태를 순수 상태에 매핑하고 기대에 설명 된 대로 작동 합니다.
+
+  특히이 작업은 process tomography에서 사용 하 여 채널의 *비 unital* 구성 요소를 측정할 수 있습니다.
+syntax: 'operation PrepareSingleQubitIdentity (qubit : Qubit) : Unit'
+input:
+  content: '(qubit : Qubit)'
+  types:
+  - name: qubit
+    summary: 위에서 설명한 방식으로 상태가 depolarized 인 이상 비트입니다.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+ms.openlocfilehash: 944178e3a8473b2206de037031bd8def546425b8
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73226525"

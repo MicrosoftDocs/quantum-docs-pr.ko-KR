@@ -1,0 +1,33 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.cnotchain
+name: CNOTChain
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  현재 위치의 배열에 대 한 패리티를 계산 합니다.
+
+
+  이 클래스는 $ \ket{q_0} \ket{q_0 \oplus q_1} \ket{q_0 \oplus q_1 \oplus q_2} \co$ 패턴을 따릅니다.
+syntax: 'operation CNOTChain (qubits : Qubit[]) : Unit'
+input:
+  content: '(qubits : Qubit[])'
+  types:
+  - name: qubits
+    summary: 패리티를 계산 하 고 저장 하는 데 사용할 수 있는 비트의 배열입니다.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: fd49db5028b3124c05a424a135df2fc22d99e4e4
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73223091"

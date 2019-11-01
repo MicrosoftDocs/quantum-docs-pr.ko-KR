@@ -1,0 +1,33 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.diagnostics.equalityfactb
+name: EqualityFactB
+type: function
+namespace: Microsoft.Quantum.Diagnostics
+summary: 기존 Bool 변수에 예상 값이 있음을 어설션 합니다.
+syntax: 'function EqualityFactB (actual : Bool, expected : Bool, message : String) : Unit'
+input:
+  content: '(actual : Bool, expected : Bool, message : String)'
+  types:
+  - name: actual
+    summary: 검사할 변수입니다.
+    isPrimitive: true
+    uid: Bool
+  - name: expected
+    summary: 예상 값입니다.
+    isPrimitive: true
+    uid: Bool
+  - name: message
+    summary: 어설션이 트리거될 때 사용할 오류 메시지 문자열입니다.
+    isPrimitive: true
+    uid: String
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+ms.openlocfilehash: ce4d10aea1a9bd66394e500b069cbaff40cc5199
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73227052"

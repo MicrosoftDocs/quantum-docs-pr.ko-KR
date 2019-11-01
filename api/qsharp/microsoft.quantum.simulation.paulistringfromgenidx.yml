@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.paulistringfromgenidx
+name: PauliStringFromGenIdx
+type: function
+namespace: Microsoft.Quantum.Simulation
+summary: '`GeneratorIndex`에서 설명 하는 Pauli 문자열 및 해당 하는 pabit 인덱스를 추출 합니다.'
+syntax: 'function PauliStringFromGenIdx (generatorIndex : Microsoft.Quantum.Simulation.GeneratorIndex) : (Pauli[], Int[])'
+input:
+  content: '(generatorIndex : Microsoft.Quantum.Simulation.GeneratorIndex)'
+  types:
+  - name: generatorIndex
+    summary: Pauli 용어를 인코딩하는 `GeneratorIndex` 형식입니다.
+    uid: microsoft.quantum.simulation.generatorindex
+output:
+  content: (Pauli[], Int[])
+  types:
+  - summary: '`GeneratorIndex`에서 설명 하는 용어와 해당 용어에 대 한 인덱스의 Pauli 문자열은 작동 합니다.'
+    types:
+    - isArray: true
+      isPrimitive: true
+      uid: Pauli
+    - isArray: true
+      isPrimitive: true
+      uid: Int
+ms.openlocfilehash: e94fd2ddf1b6c18890cc0e4c82cef9d648808661
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73221663"

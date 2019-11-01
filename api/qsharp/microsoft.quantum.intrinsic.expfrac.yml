@@ -1,0 +1,46 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.intrinsic.expfrac
+name: ExpFrac
+type: operation
+namespace: Microsoft.Quantum.Intrinsic
+summary: >-
+  Dyadic 분수로 지정 된 인수를 사용 하 여 다중 기능 비트 Pauli 연산자의 지 수를 적용 합니다.
+
+
+  \begin{align} e ^ {i \pi k [P_0 S\oP_ {N-1}]/2 ^ N}, \end{align} 여기서 $P _i $은 `paulis`의 $i $ th 요소 이며 where $N = $`Length(paulis)`입니다.
+syntax: 'operation ExpFrac (paulis : Pauli[], numerator : Int, power : Int, qubits : Qubit[]) : Unit'
+input:
+  content: '(paulis : Pauli[], numerator : Int, power : Int, qubits : Qubit[])'
+  types:
+  - name: paulis
+    summary: 각 텐서에 대 한 제품 요소를 나타내는 단일 값의 배열입니다.
+    isArray: true
+    isPrimitive: true
+    uid: Pauli
+  - name: numerator
+    summary: Dyadic 분수를 회전 하는 각도를 나타내는 분자 ($k $)입니다.
+    isPrimitive: true
+    uid: Int
+  - name: power
+    summary: 제곱 비트 레지스터를 회전할 각도의 분모를 지정 하는 두 ($n $)의 제곱입니다.
+    isPrimitive: true
+    uid: Int
+  - name: qubits
+    summary: 지정 된 회전을에 적용 하려면 등록 합니다.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: d02f48d695db3dd2d7012df5bbf22718ffe41b74
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73223771"

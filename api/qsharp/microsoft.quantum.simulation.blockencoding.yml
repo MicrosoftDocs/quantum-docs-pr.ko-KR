@@ -1,0 +1,20 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.blockencoding
+name: blockEncoding
+type: newtype
+namespace: Microsoft.Quantum.Simulation
+summary: >-
+  관심이 있는 임의의 연산자가 왼쪽 위 블록에서 인코딩된 단일를 나타냅니다.
+
+
+  즉, `BlockEncoding`는 단일 $U $입니다. 여기서 임의의 연산자는 시스템 레지스터에 대해 작동 하는 해당 `s` $H $은 (는) 보조 상태 $ \ket{0}_a $에 해당 하는 왼쪽 위의 블록으로 인코딩됩니다. 말하자면
+
+
+  $ $ \begin{align} (\bra{0}_a \ otimes I_s) U (\ket{0}_a \ otimes I_s) = H \end{align} $ $.
+syntax: newtype BlockEncoding = ((Qubit[], Qubit[]) => Unit is Adj + Ctl);
+ms.openlocfilehash: 0991b1b54cdd8e908f60fc104edf588ae08e12e7
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73066033"

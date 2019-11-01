@@ -1,0 +1,24 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerblockencodinggeneratorsystem
+name: JordanWignerBlockEncodingGeneratorSystem
+type: function
+namespace: Microsoft.Quantum.Chemistry.JordanWigner
+summary: '`JWOptimizedHTerms`에 설명 된 Hamiltonian를 Pauli `GeneratorIndex`기준으로 표현 되는 `GeneratorSystem` 변환 합니다.'
+syntax: 'function JordanWignerBlockEncodingGeneratorSystem (data : Microsoft.Quantum.Chemistry.JordanWigner.JWOptimizedHTerms) : Microsoft.Quantum.Simulation.GeneratorSystem'
+input:
+  content: '(data : Microsoft.Quantum.Chemistry.JordanWigner.JWOptimizedHTerms)'
+  types:
+  - name: data
+    summary: '`JWOptimizedHTerms` 형식의 Hamiltonian에 대 한 설명입니다.'
+    uid: microsoft.quantum.chemistry.jordanwigner.jwoptimizedhterms
+output:
+  content: Microsoft.Quantum.Simulation.GeneratorSystem
+  types:
+  - summary: '`GeneratorSystem`Hamiltonian 표현입니다.'
+    uid: microsoft.quantum.simulation.generatorsystem
+ms.openlocfilehash: f63434d0a3414faf3fbe1882680411bc0a5e6443
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73228803"
