@@ -1,0 +1,48 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.preparation.preparechoistate
+name: PrepareChoiState
+type: operation
+namespace: Microsoft.Quantum.Preparation
+summary: 지정 된 작업에 대 한 Choi – Jamiłkowski 상태를 지정 된 참조 및 대상 레지스터로 준비 합니다.
+remarks: '퀀텀 프로세스의 Choi – Jamiłkowski state $J (\Lambda) $는 $ $ \begin{align} J (\Lambda) \mathrel{: =} (\boldone \otimes \aatimes \Lambda) (| \boldone\rangle\!\rangle\langle\!\langle\boldone |), \end{align} $ $ where $ |로 정의 됩니다. X\rangle\!\rangle $는 열 스택 규칙에서 행렬 $X $의 *벡터화* 입니다. 이 상태에 대 한 기존 설명 학습은 임의의 입력 상태에서 수행 되는 $ \Lambda $의 효과에 대 한 전체 정보를 제공 하 고, *퀀텀 프로세스 tomography*의 토대를 형성 합니다.'
+syntax: 'operation PrepareChoiState (op : (Qubit[] => Unit), reference : Qubit[], target : Qubit[]) : Unit'
+input:
+  content: '(op : (Qubit[] => Unit), reference : Qubit[], target : Qubit[])'
+  types:
+  - name: op
+    summary: 작업 $ \Lambda $ Choi – Jamiłkowski state $J (\Lambda)/2 ^ N $를 준비할 수 있습니다. 여기서 $N $은 `op`가 작동 하는 ubits의 수입니다.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+  - name: reference
+    summary: '`op`동작에 대 한 참조로 사용 되는 $ \ket{00\cdots 0} $ 상태에서 시작 하는 비트의 레지스터입니다.'
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+  - name: target
+    summary: 처음에 `op`를 적용할 $ \ket{00\cdots 0} $ 상태에 있는 나머지 비트의 레지스터입니다.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+seeAlso:
+- preparechoistatea
+- preparechoistatec
+- preparechoistateca
+ms.openlocfilehash: f1f0ea6233d13ce1850b3b8dfb210ab6b0e378f8
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73228123"

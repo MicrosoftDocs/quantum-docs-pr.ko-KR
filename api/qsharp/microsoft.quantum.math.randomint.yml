@@ -1,0 +1,27 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.randomint
+name: RandomInt
+type: operation
+namespace: Microsoft.Quantum.Math
+summary: 0 보다 크거나 같고 제공 된 상한 보다 작은 일관 되 게 샘플링 된 임의의 정수를 생성 합니다.
+remarks: 이 함수는 <xref:microsoft.quantum.intrinsic.random>를 호출 하므로 해당 임의성은 `Random`의 구현에 따라 달라 집니다.
+syntax: 'operation RandomInt (maxInt : Int) : Int'
+input:
+  content: '(maxInt : Int)'
+  types:
+  - name: maxInt
+    summary: 이 작업에서 반환할 정수 중 가장 큰 정수 보다 큰 정수입니다.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Int
+  types:
+  - summary: 지정 된 간격에서 임의로 정수 $x $ 즉, $ \Pr (x) = \frac{1}{\texttt{maxInt}} $를 사용 합니다.
+    isPrimitive: true
+    uid: Int
+ms.openlocfilehash: 83db1cc0e58cfbf2e3da4af4c72f59ccde4fedf9
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73220031"

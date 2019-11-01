@@ -1,0 +1,53 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.errorcorrection.measurestabilizergenerators
+name: MeasureStabilizerGenerators
+type: operation
+namespace: Microsoft.Quantum.ErrorCorrection
+summary: 안정기 그룹의 지정 된 생성기 집합을 측정 합니다.
+remarks: >-
+  이는 지정 된 생성기 집합이 통근 이나 출장 여부를 확인 하지 않습니다.
+
+  통근 이나 출장 않는 경우에는 측정값의 결과가 임의로 다를 수 있습니다.
+syntax: 'operation MeasureStabilizerGenerators (stabilizerGroup : Pauli[][], logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister, gadget : ((Pauli[], Qubit[]) => Result)) : Microsoft.Quantum.ErrorCorrection.Syndrome'
+input:
+  content: '(stabilizerGroup : Pauli[][], logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister, gadget : ((Pauli[], Qubit[]) => Result))'
+  types:
+  - name: stabilizerGroup
+    summary: >-
+      Multiqubit Pauli 연산자의 배열입니다.
+
+      예를 들어 `stabilizerGroup[0]`는 안정기 생성기 인 단일 수준 비트 Pauli 매트릭스의 목록입니다.
+    isArray: true
+    types:
+    - isArray: true
+      isPrimitive: true
+      uid: Pauli
+  - name: logicalRegister
+    summary: 안정기 코드가 정의 된 요소의 배열입니다.
+    uid: microsoft.quantum.errorcorrection.logicalregister
+  - name: gadget
+    summary: Multiqubit Pauli 연산자를 측정 하는 방법을 지정 하는 작업입니다.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Pauli
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Result
+output:
+  content: Microsoft.Quantum.ErrorCorrection.Syndrome
+  types:
+  - summary: 측정값의 결과입니다.
+    uid: microsoft.quantum.errorcorrection.syndrome
+ms.openlocfilehash: 1ebc1613c471e11a3d06878bc9ca48cf2d5be505
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73226763"

@@ -1,0 +1,14 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.bigendian
+name: BigEndian
+type: newtype
+namespace: Microsoft.Quantum.Arithmetic
+summary: 부호 없는 정수를 빅 endian 순서로 인코딩하는 레지스터입니다. Index `0`는 부호 없는 정수의 상위 비트를 인코딩합니다.
+remarks: '`BigEndian`는 설명서에서 `BE`으로 축약 됩니다.'
+syntax: newtype BigEndian = Qubit[];
+ms.openlocfilehash: a4d96ab9299d983583949de5ae8eebba64a189a4
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73221357"

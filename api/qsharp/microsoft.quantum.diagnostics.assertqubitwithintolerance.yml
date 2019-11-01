@@ -1,0 +1,36 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.diagnostics.assertqubitwithintolerance
+name: AssertQubitWithinTolerance
+type: operation
+namespace: Microsoft.Quantum.Diagnostics
+summary: 지정 된 허용 오차까지 강화 비트 `q` Pauli Z 연산자의 예상 eigenstate 임을 어설션 합니다.
+remarks: <xref:microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance>를 사용 하면 $ eigenstates $Z 아닌 임의의 eibit 상태를 어설션할 수 있습니다.
+syntax: 'operation AssertQubitWithinTolerance (expected : Result, q : Qubit, tolerance : Double) : Unit'
+input:
+  content: '(expected : Result, q : Qubit, tolerance : Double)'
+  types:
+  - name: expected
+    summary: '`Zero` 또는 `One`에서 예상 비트 수를 나타내는 상태입니다.'
+    isPrimitive: true
+    uid: Result
+  - name: q
+    summary: 상태가 어설션된의 비트입니다.
+    isPrimitive: true
+    uid: Qubit
+  - name: tolerance
+    summary: 예상 결과를 반환할 비트의 측정 확률에 대 한 허용 오차입니다.
+    isPrimitive: true
+    uid: Double
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+seeAlso:
+- assertqubitisinstatewithintolerance
+ms.openlocfilehash: ccb44aed5612c369ff7c4e687e72fc65fba4180e
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73227086"

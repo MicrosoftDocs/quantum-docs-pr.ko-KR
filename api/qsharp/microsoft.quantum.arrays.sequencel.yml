@@ -1,0 +1,42 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.sequencel
+name: SequenceL
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: 지정 된 간격의 정수 배열을 가져옵니다.
+remarks: '`from`와 `to`의 차이는 `Int` 값에 맞아야 합니다.'
+examples: >-
+  ```qsharp
+
+  let arr1 = SequenceL(0L, 3L); // [0L, 1L, 2L, 3L]
+
+  let arr2 = SequenceL(23L, 29L); // [23L, 24L, 25L, 26L, 27L, 28L, 29L]
+
+  let arr3 = SequenceL(-5L, -2L); // [-5L, -4L, -3L, -2L]
+
+  ```
+syntax: 'function SequenceL (from : BigInt, to : BigInt) : BigInt[]'
+input:
+  content: '(from : BigInt, to : BigInt)'
+  types:
+  - name: from
+    summary: 간격의 포함 시작 인덱스입니다.
+    isPrimitive: true
+    uid: BigInt
+  - name: to
+    summary: '`from`보다 작은 간격의 포함 끝 인덱스입니다.'
+    isPrimitive: true
+    uid: BigInt
+output:
+  content: BigInt[]
+  types:
+  - summary: '`from`, `from + 1`, ..., `to`시퀀스를 포함 하는 배열입니다.'
+    isArray: true
+    isPrimitive: true
+    uid: BigInt
+ms.openlocfilehash: 09d5798b0311285e671bc5ed1f9358c557a74946
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73217991"

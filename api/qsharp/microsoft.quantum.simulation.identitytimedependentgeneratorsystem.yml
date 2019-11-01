@@ -1,0 +1,21 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.identitytimedependentgeneratorsystem
+name: IdentityTimeDependentGeneratorSystem
+type: function
+namespace: Microsoft.Quantum.Simulation
+summary: Hamiltonian `H(s) = 0`와 일치 하는 시간 종속 생성기 시스템을 반환 합니다.
+syntax: 'function IdentityTimeDependentGeneratorSystem () : Microsoft.Quantum.Simulation.TimeDependentGeneratorSystem'
+input:
+  content: ()
+  types: []
+output:
+  content: TimeDependentGeneratorSystem.
+  types:
+  - summary: 모든 $s $에 대해 Hamiltonian $H (s) = $0의 진화를 나타내는 시간 종속 생성기 시스템입니다.
+    uid: microsoft.quantum.simulation.timedependentgeneratorsystem
+ms.openlocfilehash: 348b97223c63422bf7ab9ea08e5a1e0ee3e31738
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73065557"

@@ -1,0 +1,65 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.multiplexerbruteforcefromgenerator
+name: MultiplexerBruteForceFromGenerator
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  N-stbit number state $ \ket{j} $로 제어 될 때 단일 $V _j $를 적용 하는 곱하기 제어 된 단일 $U 작업을 반환 합니다.
+
+
+  $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $.
+syntax: 'function MultiplexerBruteForceFromGenerator (unitaryGenerator : (Int, (Int -> (Qubit[] => Unit is Adj + Ctl)))) : ((Microsoft.Quantum.Arithmetic.LittleEndian, Qubit[]) => Unit is Adj + Ctl)'
+input:
+  content: '(unitaryGenerator : (Int, (Int -> (Qubit[] => Unit is Adj + Ctl))))'
+  types:
+  - name: unitaryGenerator
+    summary: 첫 번째 요소 `Int`는 unitaries $N $의 수이 고, 두 번째 요소 `(Int -> ('T => () is Adj + Ctl))`는 $ [0, N-1] $의 정수 $j $를 사용 하는 함수 이며, $V _j $에서 단일 작업을 출력 합니다.
+    types:
+    - isPrimitive: true
+      uid: Int
+    - isFunction: true
+      input:
+        types:
+        - isPrimitive: true
+          uid: Int
+      output:
+        types:
+        - isOperation: true
+          input:
+            types:
+            - isArray: true
+              isPrimitive: true
+              uid: Qubit
+          output:
+            types:
+            - isPrimitive: true
+              uid: Unit
+          functors:
+          - Adjoint
+          - Controlled
+output:
+  content: ((Microsoft.Quantum.Arithmetic.LittleEndian, Qubit[]) => Unit is Adj + Ctl)
+  types:
+  - summary: '`unitaryGenerator`에 설명 된 unitaries을 적용 하는 곱하기 제어 된 단일 작업 $U $입니다.'
+    isOperation: true
+    input:
+      types:
+      - uid: microsoft.quantum.arithmetic.littleendian
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+seeAlso:
+- microsoft.quantum.canon.multiplexerbruteforcefromgenerator
+ms.openlocfilehash: 3a5fc9e4b21f14833f28513ad66baa20a4df3de4
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73222734"

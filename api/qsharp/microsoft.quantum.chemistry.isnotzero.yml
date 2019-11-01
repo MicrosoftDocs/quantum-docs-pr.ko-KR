@@ -1,0 +1,26 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.chemistry.isnotzero
+name: IsNotZero
+type: function
+namespace: Microsoft.Quantum.Chemistry
+summary: '`Double` 숫자가 약 0이 아닌지 여부를 확인 합니다.'
+syntax: 'function IsNotZero (number : Double) : Bool'
+input:
+  content: '(number : Double)'
+  types:
+  - name: number
+    summary: 확인할 수
+    isPrimitive: true
+    uid: Double
+output:
+  content: Bool
+  types:
+  - summary: '`number`에 `1e-15`보다 큰 절대값 값이 있으면 true를 반환 합니다.'
+    isPrimitive: true
+    uid: Bool
+ms.openlocfilehash: dad9a5f63a4adab9eb2ff8c4d969baaf1f2b346b
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73228837"

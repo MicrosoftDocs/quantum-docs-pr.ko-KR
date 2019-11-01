@@ -1,0 +1,42 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.pauliblockencoding
+name: PauliBlockEncoding
+type: function
+namespace: Microsoft.Quantum.Simulation
+summary: >-
+  Hamiltonian에 대 한 블록 인코딩 단일를 만듭니다.
+
+
+  Hamiltonian $H = \sum_{j}\alpha_j P_j $은 각각 실제 계수 $ \alpha_j $를 포함 하는 Pauli 용어 $P _j $의 합계로 설명 됩니다.
+remarks: 이는 $ \ sum_ {j} \ sqrt {\ alpha_j/\ alpha} \ k {j} $ 상태를 준비 하 고 준비 하지 않으며, 곱하기로 제어 되는 단일 <xref:microsoft.quantum.preparation.statepreparationpositivecoefficients> 및 <xref:microsoft.quantum.canon.multiplexoperationsfromgenerator>을 생성 하 여 얻을 수 있습니다.
+syntax: 'function PauliBlockEncoding (generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem) : (Double, Microsoft.Quantum.Simulation.BlockEncodingReflection)'
+input:
+  content: '(generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem)'
+  types:
+  - name: generatorSystem
+    summary: $H $를 Pauli 용어의 합계로 설명 하는 `GeneratorSystem`
+    uid: microsoft.quantum.simulation.generatorsystem
+output:
+  content: (Double, Microsoft.Quantum.Simulation.BlockEncodingReflection)
+  types:
+  - summary: >-
+      ## <a name="first-parameter"></a>첫 번째 매개 변수
+
+
+      계수 $ \alpha = \sum_{j} | \alpha_j | $ 계수의 1-표준을 기반으로 합니다.
+
+
+      ## <a name="second-parameter"></a>두 번째 매개 변수
+
+
+      Hamiltonian $H $의 `BlockEncodingReflection` 단일 $U $입니다. 이 단일 항목은 $U ^ 2 = I $를 충족 하므로 리플렉션 이기도 합니다.
+    types:
+    - isPrimitive: true
+      uid: Double
+    - uid: microsoft.quantum.simulation.blockencodingreflection
+ms.openlocfilehash: 352ab71457601c38b22e93f706cb59f50bf24151
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73216138"

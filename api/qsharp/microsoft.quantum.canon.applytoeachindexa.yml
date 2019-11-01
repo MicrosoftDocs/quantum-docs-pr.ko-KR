@@ -1,0 +1,51 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applytoeachindexa
+name: ApplyToEachIndexA
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  레지스터의 인덱싱된 각 요소에 단일 수준 비트 작업을 적용 합니다.
+
+  한정자 `A` 단일의 비트 연산이 adjointable 나타냅니다.
+syntax: "operation ApplyToEachIndexA (singleElementOperation : ((Int, 'T) => Unit is Adj), register : 'T[]) : Unit"
+input:
+  content: "(singleElementOperation: ((Int, t) = > Unit is Adj), register: ' t [])"
+  types:
+  - name: singleElementOperation
+    summary: 각 고 비트에 적용할 연산입니다.
+    isOperation: true
+    input:
+      types:
+      - isPrimitive: true
+        uid: Int
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+  - name: register
+    summary: 지정 된 작업을 적용할 대상 비트의 배열입니다.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: 단위
+  types:
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: 각 작업의 역할을 하는 대상입니다.
+functors:
+- Adjoint
+seeAlso:
+- microsoft.quantum.canon.applytoeachindex
+ms.openlocfilehash: 6b99e977120a417780875475b35094a44d1c4e08
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73068481"

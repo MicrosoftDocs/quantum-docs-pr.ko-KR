@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.diagnostics.equalityfactc
+name: EqualityFactC
+type: function
+namespace: Microsoft.Quantum.Diagnostics
+summary: 복소수에 필요한 값이 있음을 어설션 합니다.
+syntax: 'function EqualityFactC (actual : Microsoft.Quantum.Math.Complex, expected : Microsoft.Quantum.Math.Complex, message : String) : Unit'
+input:
+  content: '(actual : Microsoft.Quantum.Math.Complex, expected : Microsoft.Quantum.Math.Complex, message : String)'
+  types:
+  - name: actual
+    summary: 확인할 값입니다.
+    uid: microsoft.quantum.math.complex
+  - name: expected
+    summary: 예상 값입니다.
+    uid: microsoft.quantum.math.complex
+  - name: message
+    summary: 어설션이 트리거될 때 사용할 오류 메시지 문자열입니다.
+    isPrimitive: true
+    uid: String
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+ms.openlocfilehash: 7d9b6dc97fe76565b422792e1d8debb00c1bdaff
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73226967"

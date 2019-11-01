@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.oracles.deterministicstateoraclefromstateoracle
+name: DeterministicStateOracleFromStateOracle
+type: function
+namespace: Microsoft.Quantum.Oracles
+summary: '`StateOracle` 형식의 oracle을 `DeterministicStateOracle`로 변환 합니다.'
+syntax: 'function DeterministicStateOracleFromStateOracle (idxFlagQubit : Int, stateOracle : Microsoft.Quantum.Oracles.StateOracle) : Microsoft.Quantum.Oracles.DeterministicStateOracle'
+input:
+  content: '(idxFlagQubit : Int, stateOracle : Microsoft.Quantum.Oracles.StateOracle)'
+  types:
+  - name: idxFlagQubit
+    summary: '`stateOracle` $A $의 플래그를 명시적으로 지정 하는 $ 플래그입니다. 플래그 $f $ 및 system $s $ (예: $A \ket{0}\_f\ket {\ psi}\_s $)에 대 한 인덱스입니다.'
+    isPrimitive: true
+    uid: Int
+  - name: stateOracle
+    summary: '`StateOracle`형식의 상태 준비 oracle $A입니다.'
+    uid: microsoft.quantum.oracles.stateoracle
+output:
+  content: Microsoft.Quantum.Oracles.DeterministicStateOracle
+  types:
+  - summary: Oracle $A $와 같은 상태를 준비 하지만 이제는 `DeterministicStateOracle`형식 이므로, $a, s $는 더 이상 명시적으로 구분 되지 않습니다. 예를 들어  $A \ket{0\psi}\_{as} $입니다.
+    uid: microsoft.quantum.oracles.deterministicstateoracle
+seeAlso:
+- microsoft.quantum.canon.stateoracle
+- microsoft.quantum.canon.deterministicstateoracle
+ms.openlocfilehash: 5eda40115d4d4ca7b4187f76b5e0807695913407
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73231098"

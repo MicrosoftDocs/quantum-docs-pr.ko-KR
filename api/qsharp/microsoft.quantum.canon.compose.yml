@@ -1,0 +1,62 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.compose
+name: Compose
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  두 함수의 컴퍼지션을 생성 합니다.
+
+
+  즉, $ 및 $g $ $f 두 개의 함수가 지정 된 경우 $f \circ g $를 나타내는 새 함수를 반환 합니다.
+syntax: "function Compose (outer : ('U -> 'V), inner : ('T -> 'U)) : ('T -> 'V)"
+input:
+  content: "(outer : ('U -> 'V), inner : ('T -> 'U))"
+  types:
+  - name: outer
+    summary: 적용할 두 번째 함수입니다.
+    isFunction: true
+    input:
+      types:
+      - uid: "'U"
+        isLocal: true
+    output:
+      types:
+      - uid: "'V"
+        isLocal: true
+  - name: inner
+    summary: 적용할 첫 번째 함수입니다.
+    isFunction: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - uid: "'U"
+        isLocal: true
+output:
+  content: ('T -> 'V)
+  types:
+  - summary: $, $F (g (x)) = h (x) $ $x 모든 입력에 대 한 새 함수는 $를 $h 합니다.
+    isFunction: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - uid: "'V"
+        isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: 적용할 첫 번째 함수의 입력 형식입니다.
+- uid: "'U"
+  summary: 적용할 첫 번째 함수의 출력 형식과 적용할 두 번째 함수의 입력 형식입니다.
+- uid: "'V"
+  summary: 적용할 두 번째 함수의 출력 형식입니다.
+ms.openlocfilehash: 69fbd6a4fafbc61a63e41257b7100303fd48d4d4
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73223074"

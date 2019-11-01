@@ -1,0 +1,54 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.zip
+name: Zip
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: 두 배열이 지정 된 경우 각 쌍은 각 원래 배열의 요소를 포함 하도록 쌍의 새 배열을 반환 합니다.
+examples: >-
+  ```qsharp
+
+  let left = [1, 3, 71];
+
+  let right = [false, true];
+
+  let pairs = Zip(left, right); // [(1, false), (3, true)]
+
+  ```
+syntax: "function Zip (left : 'T[], right : 'U[]) : ('T, 'U)[]"
+input:
+  content: "(left : 'T[], right : 'U[])"
+  types:
+  - name: left
+    summary: 각 튜플의 첫 번째 요소에 대 한 값을 포함 하는 배열입니다.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+  - name: right
+    summary: 각 튜플의 두 번째 요소에 대 한 값을 포함 하는 배열입니다.
+    isArray: true
+    uid: "'U"
+    isLocal: true
+output:
+  content: ('T, 'U)[]
+  types:
+  - summary: 각 `idx`에 대해 `(left[idx], right[idx])` 폼의 쌍을 포함 하는 배열입니다. 두 배열의 길이가 같지 않은 경우에는 입력 중 짧은 값 만큼 출력 됩니다.
+    isArray: true
+    types:
+    - uid: "'T"
+      isLocal: true
+    - uid: "'U"
+      isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: 왼쪽 배열 요소의 형식입니다.
+- uid: "'U"
+  summary: 오른쪽 배열 요소의 형식입니다.
+seeAlso:
+- zip3
+- zip4
+ms.openlocfilehash: 9af79a617722ead8102ea4631d96934bf253beda
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73217821"

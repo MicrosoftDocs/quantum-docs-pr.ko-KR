@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.qft
+name: QFT
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: 빅 endian 표현의 정수를 포함 하는 퀀텀 레지스터에서 퀀텀 푸리에 변환을 수행 합니다.
+remarks: 입력 및 출력은 big endian 인코딩에 있는 것으로 간주 됩니다.
+syntax: 'operation QFT (qs : Microsoft.Quantum.Arithmetic.BigEndian) : Unit'
+input:
+  content: '(qs : Microsoft.Quantum.Arithmetic.BigEndian)'
+  types:
+  - name: qs
+    summary: 퀀텀 푸리에 변환이 적용 되는 퀀텀 레지스터
+    uid: microsoft.quantum.arithmetic.bigendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- microsoft.quantum.canon.applyquantumfouriertransformbe
+ms.openlocfilehash: 9791cc9812ee7709e17e0a32e0b98bd2ca85fbb8
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73222615"

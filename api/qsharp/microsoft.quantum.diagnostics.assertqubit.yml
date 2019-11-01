@@ -1,0 +1,32 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.diagnostics.assertqubit
+name: AssertQubit
+type: operation
+namespace: Microsoft.Quantum.Diagnostics
+summary: Eibit `q`가 Pauli Z 연산자의 예상 eigenstate 임을 어설션 합니다.
+remarks: <xref:microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance>를 사용 하면 $ eigenstates $Z 아닌 임의의 eibit 상태를 어설션할 수 있습니다.
+syntax: 'operation AssertQubit (expected : Result, q : Qubit) : Unit'
+input:
+  content: '(expected : Result, q : Qubit)'
+  types:
+  - name: expected
+    summary: '`Zero` 또는 `One`에서 예상 비트 수를 나타내는 상태입니다.'
+    isPrimitive: true
+    uid: Result
+  - name: q
+    summary: 상태가 어설션된의 비트입니다.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+seeAlso:
+- assertqubitisinstatewithintolerance
+ms.openlocfilehash: e926e8a106e7ef0999f30d00922394e611aa40a8
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73227171"

@@ -1,0 +1,33 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.chemistry.jordanwigner.vqe.estimateenergy
+name: EstimateEnergy
+type: operation
+namespace: Microsoft.Quantum.Chemistry.JordanWigner.VQE
+summary: >-
+  개별 요르단-Wigner 용어로 제공 되는 에너지를 합산 하 여 분자의 에너지를 추정 합니다.
+
+
+  이 작업은 회전 up-down 인덱싱 규칙을 암시적으로 사용 합니다.
+syntax: 'operation EstimateEnergy (jwHamiltonian : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerEncodingData, nSamples : Int) : Double'
+input:
+  content: '(jwHamiltonian : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerEncodingData, nSamples : Int)'
+  types:
+  - name: jwHamiltonian
+    summary: Wigner Hamiltonian입니다.
+    uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerencodingdata
+  - name: nSamples
+    summary: 용어 기대 예측에 사용할 샘플 수입니다.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Double
+  types:
+  - summary: 분자의 예상 에너지
+    isPrimitive: true
+    uid: Double
+ms.openlocfilehash: 057a695c6206679ec5aad4c8ee8f2bb8e5ffbbd3
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73225029"

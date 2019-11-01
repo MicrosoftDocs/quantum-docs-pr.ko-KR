@@ -1,0 +1,46 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.incrementphasebyinteger
+name: IncrementPhaseByInteger
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: >-
+  단계 회전을 사용 하 여, 부호 없는 퀀텀 레지스터를 고전 정수로 늘립니다.
+
+
+  `target`는 작은 endian 인코딩의 경우 부호 없는 정수 $x $로 인코드 하 고 `increment`는 $a $와 동일 하다 고 가정 합니다.
+
+  그런 다음이 작업을 수행 하면 단일 $ \ket{x} \maps\ket{x + a} $이 구현 됩니다. 여기서 더하기는 모듈로 $2 ^ n $, 여기서 $n = \texttt{Length (target!)}입니다. $.
+remarks: >-
+  증분은 퀀텀 레지스터가 아닌 기존 상수 이므로 회로가 간소화 되었습니다.
+
+
+  회로 다이어그램 및 설명은 [arXiv: 10-ant-ph/0008033v1의 6 페이지](https://arxiv.org/pdf/quant-ph/0008033.pdf#page=6) 에 있는 그림을 참조 하세요.
+syntax: 'operation IncrementPhaseByInteger (increment : Int, target : Microsoft.Quantum.Arithmetic.PhaseLittleEndian) : Unit'
+references: '- [*Thomas G. Draper*, arxiv: mant-ph/0008033](https://arxiv.org/pdf/quant-ph/0008033v1.pdf)'
+input:
+  content: '(increment : Int, target : Microsoft.Quantum.Arithmetic.PhaseLittleEndian)'
+  types:
+  - name: increment
+    summary: '`target` 증가 하는 정수입니다.'
+    isPrimitive: true
+    uid: Int
+  - name: target
+    summary: 퀀텀 레지스터는 이중 (QFT) 기반의 작은 endian 인코딩을 사용 하 여 부호 없는 정수를 인코딩합니다.
+    uid: microsoft.quantum.arithmetic.phaselittleendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- incrementbyintegerbe
+- incrementbyintegerle
+ms.openlocfilehash: 379e643826ca54e123c8b855f4bba48a9d79a137
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73219045"

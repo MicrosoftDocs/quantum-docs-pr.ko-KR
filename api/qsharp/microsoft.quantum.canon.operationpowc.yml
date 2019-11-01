@@ -1,0 +1,59 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.operationpowc
+name: OperationPowC
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  전원에 대 한 작업을 발생 시킵니다.
+
+  한정자 `C`는 작업을 제어할 수 있음을 나타냅니다.
+
+
+  즉, $ $U $를 나타내는 작업이 지정 된 경우 power $m $에 대해 ^ m $ $U 새 작업을 반환 합니다.
+syntax: "function OperationPowC (oracle : ('T => Unit is Ctl), power : Int) : ('T => Unit is Ctl)"
+input:
+  content: "(oracle : ('T => Unit is Ctl), power : Int)"
+  types:
+  - name: oracle
+    summary: 반복 될 게이트를 나타내는 연산이 $U입니다.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Controlled
+  - name: power
+    summary: $U $가 반복 되는 횟수입니다.
+    isPrimitive: true
+    uid: Int
+output:
+  content: ('T => Unit is Ctl)
+  types:
+  - summary: ^ M $ $U를 나타내는 새 작업입니다. 여기서 $m = \texttt{power} $입니다.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Controlled
+typeParameters:
+- uid: "'T"
+  summary: 켤 작업의 형식입니다.
+seeAlso:
+- microsoft.quantum.canon.operationpow
+ms.openlocfilehash: 5bc317597ef660bf92291b690fdb2d255eaaa616
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73230809"

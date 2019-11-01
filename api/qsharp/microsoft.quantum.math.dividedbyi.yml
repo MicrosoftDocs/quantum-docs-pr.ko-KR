@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.dividedbyi
+name: DividedByI
+type: function
+namespace: Microsoft.Quantum.Math
+summary: 두 입력의 몫을 반환 합니다.
+syntax: 'function DividedByI (a : Int, b : Int) : Int'
+input:
+  content: '(a : Int, b : Int)'
+  types:
+  - name: a
+    summary: 나눌 첫 번째 입력 $a $입니다.
+    isPrimitive: true
+    uid: Int
+  - name: b
+    summary: 분할할 두 번째 입력 $b $입니다.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Int
+  types:
+  - summary: 몫 $a/b $입니다.
+    isPrimitive: true
+    uid: Int
+ms.openlocfilehash: 7ca78817169fc56a42bfcd662c112d9d8c902635
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73229721"

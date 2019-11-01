@@ -1,0 +1,38 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.preparation.preparequbit
+name: PrepareQubit
+type: operation
+namespace: Microsoft.Quantum.Preparation
+summary: >-
+  지정 된 Pauli 연산자의 + 1 (`Zero`) eigenstate에서 원하는 비트를 준비 합니다.
+
+  Id 연산자가 지정 된 경우에는 최대 혼합 된 상태에서 해당 비트를 준비 합니다.
+
+
+  처음에는 최대이 $ \ket{0}$ 상태에 있는 경우이 작업을 통해 지정 된 Pauli 연산자의 $ + $1 eigenstate 또는 `PauliI`의 경우 대신 혼합 상태에서이 작업을 수행 합니다 (<xref:microsoft.quantum.preparation.preparesinglequbitidentity>참조).
+
+
+  이 연산은 $ \ket{0}$ 이외의 상태에 있는 경우 다음 게이트를 적용 합니다. $H $ for `PauliX`, $HS $ for `PauliY`, $I $ for `PauliZ`, <xref:microsoft.quantum.preparation.preparesinglequbitidentity>의 경우 `PauliI`.
+syntax: 'operation PrepareQubit (basis : Pauli, qubit : Qubit) : Unit'
+input:
+  content: '(basis : Pauli, qubit : Qubit)'
+  types:
+  - name: basis
+    summary: Pauli 연산자 $P $.
+    isPrimitive: true
+    uid: Pauli
+  - name: qubit
+    summary: 준비할 비트입니다.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+ms.openlocfilehash: be4eb730bebd00531aaa49302578b23f4a52237b
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73226542"

@@ -1,0 +1,42 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.incrementbymodularinteger
+name: IncrementByModularInteger
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: >-
+  정수 상수를 기준으로 하는 이상 비트 레지스터의 모듈식 증분을 수행 합니다.
+
+
+  `increment`에서 `modulus`를 사용 하 여 N을 표시 하 고 y로 `target`에서 인코딩된 정수를 입력 합니다 .이 작업은 \begin{align} \ket{y} \maps\ket{y + 1 \operatorname{mod} N} \end{align} 정수를 거의 endian 형식으로 인코딩합니다.
+remarks: Target의 값이 N 보다 작은 것으로 가정 합니다. <xref:microsoft.quantum.arithmetic.incrementphasebymodularinteger>는 `PhaseLittleEndian` 기준으로 동일한 작업을 구현 합니다.
+syntax: 'operation IncrementByModularInteger (increment : Int, modulus : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+input:
+  content: '(increment : Int, modulus : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  types:
+  - name: increment
+    summary: Y에 더할 정수 증가값입니다.
+    isPrimitive: true
+    uid: Int
+  - name: modulus
+    summary: Y + a를 mods 정수 N입니다.
+    isPrimitive: true
+    uid: Int
+  - name: target
+    summary: '`increment`를에 추가 하는 `LittleEndian` 형식의 정수 y입니다.'
+    uid: microsoft.quantum.arithmetic.littleendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- incrementphasebymodularinteger
+ms.openlocfilehash: 9b61ed007a08d176d1754a7c1cd6cd2d9edce7d2
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73219062"

@@ -1,0 +1,41 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.logical.equall
+name: EqualL
+type: function
+namespace: Microsoft.Quantum.Logical
+summary: 두 입력이 같으면 true를 반환 하 고,
+remarks: >-
+  다음은 동일 합니다.
+
+
+  ```Q#
+
+  let cond = a == b;
+
+  let cond = EqualL(a, b);
+
+  ```
+syntax: 'function EqualL (a : BigInt, b : BigInt) : Bool'
+input:
+  content: '(a : BigInt, b : BigInt)'
+  types:
+  - name: a
+    summary: 비교할 첫 번째 값입니다.
+    isPrimitive: true
+    uid: BigInt
+  - name: b
+    summary: 비교할 두 번째 값입니다.
+    isPrimitive: true
+    uid: BigInt
+output:
+  content: Bool
+  types:
+  - summary: '`a` `b`과 같은 경우에만 `true` 합니다.'
+    isPrimitive: true
+    uid: Bool
+ms.openlocfilehash: c3e2dd73d95a8697bbb4216de6a0682569d103d9
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73233121"

@@ -1,0 +1,61 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.diagnostics.assertoperationsequalinplace
+name: AssertOperationsEqualInPlace
+type: operation
+namespace: Microsoft.Quantum.Diagnostics
+summary: >-
+  두 작업이 지정 된 경우는 모든 입력 상태에 대해 동일 하 게 작동 한다는 것을 어설션 합니다.
+
+
+  이 어설션은 $V의 모든 상태에 대 한 작업의 동작을 확인 하 여 구현 됩니다. \otimes V_ {n-1} $, 여기서 $V _0 $는 $ \ket{0}$, $ \ket{1}$, $ \ket{+} $ 및 $ \ket{i} $ (+ 1 eigenstate Y 연산자의 경우) 중 하나입니다.
+
+
+  이 어설션은 $ opbits $n를 사용 하 고 비교 되는 작업을 여러 번 호출 해야 합니다.
+syntax: 'operation AssertOperationsEqualInPlace (nQubits : Int, givenU : (Qubit[] => Unit), expectedU : (Qubit[] => Unit is Adj)) : Unit'
+references: 상태 $ \ket{0}$, $ \ket{1}$, $ \ket{+} $ 및 $ \ket{i} $의 기준은 Chuang [ *, Nielsen,* ](https://arxiv.org/abs/quant-ph/9610001)Chuang에 설명 된 Nielsen 기반입니다.
+input:
+  content: '(nQubits : Int, givenU : (Qubit[] => Unit), expectedU : (Qubit[] => Unit is Adj))'
+  types:
+  - name: nQubits
+    summary: 작업 `givenU` 및 `expectedU` 작업을 수행할 수 있는, $ $n의 수입니다.
+    isPrimitive: true
+    uid: Int
+  - name: givenU
+    summary: 검사 될 $ 이상 비트 $n에 대 한 작업입니다.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+  - name: expectedU
+    summary: '`givenU` $n $의 참조 작업을 비교 합니다.'
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+seeAlso:
+- assertoperationsequalreferenced
+ms.openlocfilehash: a6c58f51bbc30f3917457d4137afb083533519fe
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73225760"

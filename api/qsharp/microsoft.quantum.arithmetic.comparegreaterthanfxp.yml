@@ -1,0 +1,35 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.comparegreaterthanfxp
+name: CompareGreaterThanFxP
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: 퀀텀 레지스터에 저장 된 두 개의 고정 소수점 숫자를 비교 하 고 결과에서 대칭 이동을 제어 합니다.
+remarks: 현재 구현에서는 두 개의 고정 소수점 숫자가 동일한 점 위치와 동일한 수의 값을 갖도록 요구 합니다.
+syntax: 'operation CompareGreaterThanFxP (fp1 : Microsoft.Quantum.Arithmetic.FixedPoint, fp2 : Microsoft.Quantum.Arithmetic.FixedPoint, result : Qubit) : Unit'
+input:
+  content: '(fp1 : Microsoft.Quantum.Arithmetic.FixedPoint, fp2 : Microsoft.Quantum.Arithmetic.FixedPoint, result : Qubit)'
+  types:
+  - name: fp1
+    summary: 비교할 첫 번째 고정 소수점 숫자입니다.
+    uid: microsoft.quantum.arithmetic.fixedpoint
+  - name: fp2
+    summary: 비교할 두 번째 고정 소수점 숫자입니다.
+    uid: microsoft.quantum.arithmetic.fixedpoint
+  - name: result
+    summary: 비교 결과입니다. `fp1 > fp2`되 면 대칭 이동 됩니다.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 6a7e87a53d91c928d45719dea8d7179ac347ec70
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73221289"

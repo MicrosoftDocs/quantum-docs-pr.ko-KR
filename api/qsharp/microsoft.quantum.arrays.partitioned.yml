@@ -1,0 +1,43 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.partitioned
+name: Partitioned
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: 배열을 여러 부분으로 분할 합니다.
+examples: >-
+  ```qsharp
+
+  // The following returns [[1,5],[3],[7]];
+
+  let split = Partitioned([2,1], [1,5,3,7]);
+
+  ```
+syntax: "function Partitioned (nElements : Int[], arr : 'T[]) : 'T[][]"
+input:
+  content: "(nElements : Int[], arr : 'T[])"
+  types:
+  - name: nElements
+    summary: 배열의 각 부분에 있는 요소 수
+    isArray: true
+    isPrimitive: true
+    uid: Int
+  - name: arr
+    summary: 분할할 입력 배열입니다.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: "'T[][]"
+  types:
+  - summary: 첫 번째 배열이 `arr`의 첫 번째 `nElements[0]`이 고 두 번째 배열이 `arr`의 다음 `nElements[1]` 인 여러 배열 마지막 배열은 나머지 모든 요소를 포함 합니다.
+    isArray: true
+    types:
+    - isArray: true
+      uid: "'T"
+      isLocal: true
+ms.openlocfilehash: 6e26d4d49f50c8e9ee4c18681f88272a45d2ef20
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73218093"

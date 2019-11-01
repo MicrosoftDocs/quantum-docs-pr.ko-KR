@@ -1,0 +1,23 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.randomsinglequbitpauli
+name: RandomSingleQubitPauli
+type: operation
+namespace: Microsoft.Quantum.Math
+summary: 단일 기능을 임의로 임의로 반환 합니다.
+remarks: 이 함수는 <xref:microsoft.quantum.intrinsic.random>를 호출 하므로 해당 임의성은 `Random`의 구현에 따라 달라 집니다.
+syntax: 'operation RandomSingleQubitPauli () : Pauli'
+input:
+  content: ()
+  types: []
+output:
+  content: Pauli
+  types:
+  - summary: '`[PauliI, PauliX, PauliY, PauliZ]`중 하나인 `Pauli` 연산자입니다.'
+    isPrimitive: true
+    uid: Pauli
+ms.openlocfilehash: 564e6c78859d5f74e0fc4ca9c5467e806742b7b2
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73219946"

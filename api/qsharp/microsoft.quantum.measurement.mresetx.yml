@@ -1,0 +1,26 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.measurement.mresetx
+name: MResetX
+type: operation
+namespace: Microsoft.Quantum.Measurement
+summary: X 단위로 단일 비트를 측정 하 고이를 표준 기준 상태로 다시 설정 합니다. | 0 〉 측정 합니다.
+syntax: 'operation MResetX (target : Qubit) : Result'
+input:
+  content: '(target : Qubit)'
+  types:
+  - name: target
+    summary: 측정할 단일 비트입니다.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Result
+  types:
+  - summary: Pauli $X $ 기준으로 측정 `target`의 결과입니다.
+    isPrimitive: true
+    uid: Result
+ms.openlocfilehash: 48c819595cf492588fd5d4b08e1315cfb092fcd1
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73231234"

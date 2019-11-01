@@ -1,0 +1,45 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.multiplyandaddbymodularinteger
+name: MultiplyAndAddByModularInteger
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: >-
+  은 (는) 정수 계열 레지스터에서 모듈식 곱하기 및 추가 정수 상수를 수행 합니다.
+
+
+  지정 된 모듈러스 $N $, 상수 승수 $a $ 및 \ket{b $y $에 대해 $ $ \begin{align} \ket{x} \ket{b} \maps\ket{x} \operatorname{mod} + a \mapsto x \end{align} N} summand $ $ 맵을 구현 합니다.
+remarks: >-
+  - 회로 다이어그램 및 설명의 경우 그림 6 [(arXiv: 5ant-ph/0205095v3 페이지](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=7) )을 참조 하세요.
+
+  - 이 작업은 [Arxiv: CMULT/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf) 의 (a) MOD (N)에 해당 합니다.
+syntax: 'operation MultiplyAndAddByModularInteger (constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian, summand : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+input:
+  content: '(constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian, summand : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  types:
+  - name: constMultiplier
+    isPrimitive: true
+    uid: Int
+  - name: modulus
+    summary: 와 관련 하 여 더하기 및 곱하기를 수행 하는 모듈러스 $N $입니다.
+    isPrimitive: true
+    uid: Int
+  - name: multiplier
+    summary: '`summand`의 각 기준 상태 레이블에 값이 추가 될 부호 없는 정수를 나타내는 퀀텀 레지스터입니다.'
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: summand
+    summary: 이 작업의 대상으로 사용할 부호 없는 정수를 나타내는 퀀텀 레지스터입니다.
+    uid: microsoft.quantum.arithmetic.littleendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 6f445f584af1c05266be8e68a4298d73376cda27
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73218773"

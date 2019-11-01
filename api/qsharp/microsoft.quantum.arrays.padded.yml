@@ -1,0 +1,53 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.padded
+name: Padded
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: 지정 된 값을 사용 하 여 지정 된 길이까지 채워진 배열을 반환 합니다.
+examples: >-
+  ```qsharp
+
+  let array = [10, 11, 12];
+
+  // The following line returns [10, 12, 15, 2, 2, 2].
+
+  let output = Padded(-6, array, 2);
+
+  // The following line returns [2, 2, 2, 10, 12, 15].
+
+  let output = Padded(6, array, 2);
+
+  ```
+syntax: "function Padded (nElementsTotal : Int, defaultElement : 'T, inputArray : 'T[]) : 'T[]"
+input:
+  content: "(nElementsTotal : Int, defaultElement : 'T, inputArray : 'T[])"
+  types:
+  - name: nElementsTotal
+    summary: 패딩 된 배열의 길이입니다. 양수 이면 `inputArray` 헤드에 채워집니다. 음수 이면 `inputArray` 끝에 채워집니다.
+    isPrimitive: true
+    uid: Int
+  - name: defaultElement
+    summary: 요소 패딩에 사용할 기본값입니다.
+    uid: "'T"
+    isLocal: true
+  - name: inputArray
+    summary: 출력 배열의 헤드에 값이 있는 배열입니다.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: "'T[]"
+  types:
+  - summary: '`output` 길이가 될 때까지 `defaultElement`s를 사용 하 여 head로 채워진 `inputArray` 인 배열 `output` `nElementsTotal`'
+    isArray: true
+    uid: "'T"
+    isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: 배열 요소의 형식입니다.
+ms.openlocfilehash: 3fb999af73e68de9143ddc051b8a43247f5282f0
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73218059"

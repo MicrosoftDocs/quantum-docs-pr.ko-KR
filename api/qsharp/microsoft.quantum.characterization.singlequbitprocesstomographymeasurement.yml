@@ -1,0 +1,45 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.characterization.singlequbitprocesstomographymeasurement
+name: SingleQubitProcessTomographyMeasurement
+type: operation
+namespace: Microsoft.Quantum.Characterization
+summary: 특정 채널을 지정 하 여 Pauli에서 단일 tomography 비트 프로세스를 수행 합니다.
+remarks: 이 작업에서 반환 되는 결과에 대 한 분포는 2 ~ 2-tomography의 특별 한 경우입니다. $ \Rho = J (\Lambda)/$2는 $ \Lambda $의 Choi – Jamiłkowski state입니다. 그런 다음 위의 분포가 $ $ \begin{align} \Pr (\texttt{Zero} | \rho;)과 동일 합니다. M) = \operatorname{Tr} (M \rho), \end{align} $ $ where $M = 2 (\boldone + P) ^ \mathrm{T}/2\cdot (\boldone + Q)/$2는 $P $ 및 $Q $에 해당 하는 유효 측정입니다.
+syntax: 'operation SingleQubitProcessTomographyMeasurement (preparation : Pauli, measurement : Pauli, channel : (Qubit => Unit)) : Result'
+input:
+  content: '(preparation : Pauli, measurement : Pauli, channel : (Qubit => Unit))'
+  types:
+  - name: preparation
+    summary: Pabit를 준비할 수 있는 Pauli 기준 요소 $P입니다.
+    isPrimitive: true
+    uid: Pauli
+  - name: measurement
+    summary: 이 요소는 원하는 비트를 측정할 수 있는 $Q $입니다.
+    isPrimitive: true
+    uid: Pauli
+  - name: channel
+    summary: Process tomography를 사용 하 여 동작을 예측 하는 단일 valbit channel $ \Lambda $.
+    isOperation: true
+    input:
+      types:
+      - isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+output:
+  content: Result
+  types:
+  - summary: >-
+      확률 $ $ \begin{align} \Pr (\texttt{Zero} | \Pr;)을 사용 하 여 결과 `Zero` P, Q) = \operatorname{Tr}\left (\frac{\boldone + Q}{2} \Lambda\left [\frac{\boldone + P}{2} \right] \right).
+
+      \end{align} $ $
+    isPrimitive: true
+    uid: Result
+ms.openlocfilehash: 48da4cd4d16a3466591c0c93710eed6b27a68fab
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73229024"

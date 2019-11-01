@@ -1,0 +1,28 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.logical.equalc
+name: EqualC
+type: function
+namespace: Microsoft.Quantum.Logical
+summary: 두 입력이 같으면 true를 반환 하 고,
+syntax: 'function EqualC (a : Microsoft.Quantum.Math.Complex, b : Microsoft.Quantum.Math.Complex) : Bool'
+input:
+  content: '(a : Microsoft.Quantum.Math.Complex, b : Microsoft.Quantum.Math.Complex)'
+  types:
+  - name: a
+    summary: 비교할 첫 번째 값입니다.
+    uid: microsoft.quantum.math.complex
+  - name: b
+    summary: 비교할 두 번째 값입니다.
+    uid: microsoft.quantum.math.complex
+output:
+  content: Bool
+  types:
+  - summary: '`a` `b`과 같은 경우에만 `true` 합니다.'
+    isPrimitive: true
+    uid: Bool
+ms.openlocfilehash: 73d36b39c05fc459371be744e043422e3e324d94
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73233257"

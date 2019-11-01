@@ -1,0 +1,27 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.invert2ssi
+name: Invert2sSI
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: 지정 된 정수 모듈로 2의 보수를 반전 합니다.
+syntax: 'operation Invert2sSI (xs : Microsoft.Quantum.Arithmetic.SignedLittleEndian) : Unit'
+input:
+  content: '(xs : Microsoft.Quantum.Arithmetic.SignedLittleEndian)'
+  types:
+  - name: xs
+    summary: n 비트 부호 있는 정수 (SignedLittleEndian)는 반전 모듈로 2의 보수입니다.
+    uid: microsoft.quantum.arithmetic.signedlittleendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: a850f62055280d43b691d12ef5ab7ef6491d5efb
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73218858"
