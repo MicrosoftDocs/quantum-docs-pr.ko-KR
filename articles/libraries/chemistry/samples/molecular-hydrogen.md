@@ -6,17 +6,17 @@ ms.author: gulow
 ms.date: 10/23/2018
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.examples.energyestimate
-ms.openlocfilehash: 32f18ea479a2c65eee2b0e16788dc9f0fabd5372
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: HT
+ms.openlocfilehash: 0fd457b152083af364d924502c18bc0813e34b83
+ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73185548"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73442582"
 ---
-## <a name="obtaining-energy-level-estimates"></a><span data-ttu-id="d3e69-103">에너지 수준 예상치 얻기</span><span class="sxs-lookup"><span data-stu-id="d3e69-103">Obtaining energy level estimates</span></span>
-<span data-ttu-id="d3e69-104">에너지 수준의 값을 예측 하는 것은 퀀텀 화학의 주요 응용 프로그램 중 하나입니다.</span><span class="sxs-lookup"><span data-stu-id="d3e69-104">Estimating the values of energy levels is one of the principal applications of quantum chemistry.</span></span> <span data-ttu-id="d3e69-105">여기서는 분자 Hydrogen의 정식 예제에 대해이를 수행 하는 방법을 간략하게 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="d3e69-105">Here, we outline how this may be performed for the canonical example of molecular Hydrogen.</span></span> <span data-ttu-id="d3e69-106">이 섹션에서 참조 하는 샘플은 화학 샘플 리포지토리에서 `MolecularHydrogen` 됩니다.</span><span class="sxs-lookup"><span data-stu-id="d3e69-106">The sample referenced in this section is `MolecularHydrogen` in the chemistry samples repository.</span></span> <span data-ttu-id="d3e69-107">출력을 그리는 시각적 예제는 `MolecularHydrogenGUI` 데모입니다.</span><span class="sxs-lookup"><span data-stu-id="d3e69-107">A more visual example that plots the output is the `MolecularHydrogenGUI` demo.</span></span>
+# <a name="obtaining-energy-level-estimates"></a><span data-ttu-id="26d72-103">에너지 수준 추정치 얻기</span><span class="sxs-lookup"><span data-stu-id="26d72-103">Obtaining energy level estimates</span></span>
+<span data-ttu-id="26d72-104">에너지 수준의 값을 예측 하는 것은 퀀텀 화학의 주요 응용 프로그램 중 하나입니다.</span><span class="sxs-lookup"><span data-stu-id="26d72-104">Estimating the values of energy levels is one of the principal applications of quantum chemistry.</span></span> <span data-ttu-id="26d72-105">여기서는 분자 Hydrogen의 정식 예제에 대해이를 수행 하는 방법을 간략하게 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="26d72-105">Here, we outline how this may be performed for the canonical example of molecular Hydrogen.</span></span> <span data-ttu-id="26d72-106">이 섹션에서 참조 하는 샘플은 화학 샘플 리포지토리에서 `MolecularHydrogen` 됩니다.</span><span class="sxs-lookup"><span data-stu-id="26d72-106">The sample referenced in this section is `MolecularHydrogen` in the chemistry samples repository.</span></span> <span data-ttu-id="26d72-107">출력을 그리는 시각적 예제는 `MolecularHydrogenGUI` 데모입니다.</span><span class="sxs-lookup"><span data-stu-id="26d72-107">A more visual example that plots the output is the `MolecularHydrogenGUI` demo.</span></span>
 
-<span data-ttu-id="d3e69-108">첫 번째 단계는 분자 Hydrogen를 나타내는 Hamiltonian를 생성 하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="d3e69-108">Our first step is to construct the Hamiltonian representing molecular Hydrogen.</span></span> <span data-ttu-id="d3e69-109">이는 NWChem 도구를 통해 생성 될 수 있지만,이 샘플에서 간결 하 게 Hamiltonian 용어를 수동으로 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="d3e69-109">Though this can be constructed through the NWChem tool, we manually add Hamiltonian terms for brevity in this sample.</span></span>
+<span data-ttu-id="26d72-108">첫 번째 단계는 분자 Hydrogen를 나타내는 Hamiltonian를 생성 하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="26d72-108">Our first step is to construct the Hamiltonian representing molecular Hydrogen.</span></span> <span data-ttu-id="26d72-109">이는 NWChem 도구를 통해 생성 될 수 있지만,이 샘플에서 간결 하 게 Hamiltonian 용어를 수동으로 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="26d72-109">Though this can be constructed through the NWChem tool, we manually add Hamiltonian terms for brevity in this sample.</span></span>
 
 ```csharp
     // These orbital integrals are represented using the OrbitalIntegral
@@ -39,7 +39,7 @@ ms.locfileid: "73185548"
     var fermionHamiltonian = new OrbitalIntegralHamiltonian(orbitalIntegrals).ToFermionHamiltonian();
 ```
 
-<span data-ttu-id="d3e69-110">Hamiltonian를 시뮬레이션 하려면 fermion 연산자를 연산자로 변환 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="d3e69-110">Simulating the Hamiltonian requires us to convert the fermion operators to qubit operators.</span></span> <span data-ttu-id="d3e69-111">이러한 변환은 다음과 같이 Wigner 인코딩을 통해 수행 됩니다.</span><span class="sxs-lookup"><span data-stu-id="d3e69-111">This conversion is performed through the Jordan-Wigner encoding as follows.</span></span>
+<span data-ttu-id="26d72-110">Hamiltonian를 시뮬레이션 하려면 fermion 연산자를 연산자로 변환 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="26d72-110">Simulating the Hamiltonian requires us to convert the fermion operators to qubit operators.</span></span> <span data-ttu-id="26d72-111">이러한 변환은 다음과 같이 Wigner 인코딩을 통해 수행 됩니다.</span><span class="sxs-lookup"><span data-stu-id="26d72-111">This conversion is performed through the Jordan-Wigner encoding as follows.</span></span>
 
 ```csharp
     // The Jordan-Wigner encoding converts the fermion Hamiltonian, 
@@ -60,7 +60,7 @@ ms.locfileid: "73185548"
     var qSharpData = QSharpFormat.Convert.ToQSharpFormat(qSharpHamiltonianData, qSharpWavefunctionData);
 ```
 
-<span data-ttu-id="d3e69-112">이제 [Hamiltonian Dynamics 시뮬레이션](xref:microsoft.quantum.libraries.standard.algorithms)에서 Hamiltonian를 나타내는 `qSharpData`를 `TrotterStepOracle` 함수로 전달 합니다.</span><span class="sxs-lookup"><span data-stu-id="d3e69-112">We now pass the `qSharpData` representing the Hamiltonian to the `TrotterStepOracle` function in [Simulating Hamiltonian dynamics](xref:microsoft.quantum.libraries.standard.algorithms).</span></span> <span data-ttu-id="d3e69-113">`TrotterStepOracle`는 Hamiltonian의 실시간 진화에 근사치를 계산 하는 퀀텀 작업을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="d3e69-113">`TrotterStepOracle` returns a quantum operation that approximates the real time-evolution of the Hamiltonian.</span></span>
+<span data-ttu-id="26d72-112">이제 [Hamiltonian Dynamics 시뮬레이션](xref:microsoft.quantum.libraries.standard.algorithms)에서 Hamiltonian를 나타내는 `qSharpData`를 `TrotterStepOracle` 함수로 전달 합니다.</span><span class="sxs-lookup"><span data-stu-id="26d72-112">We now pass the `qSharpData` representing the Hamiltonian to the `TrotterStepOracle` function in [Simulating Hamiltonian dynamics](xref:microsoft.quantum.libraries.standard.algorithms).</span></span> <span data-ttu-id="26d72-113">`TrotterStepOracle`는 Hamiltonian의 실시간 진화에 근사치를 계산 하는 퀀텀 작업을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="26d72-113">`TrotterStepOracle` returns a quantum operation that approximates the real time-evolution of the Hamiltonian.</span></span>
 
 ```qsharp
 // qSharpData passed from driver
@@ -78,9 +78,9 @@ let integratorOrder = 4;
 let (nQubits, (rescale, oracle)) =  TrotterStepOracle (qSharpData, stepSize, integratorOrder);
 ```
 
-<span data-ttu-id="d3e69-114">이제 표준 라이브러리의 단계 추정 알고리즘을 사용 하 여 위의 시뮬레이션을 통해 그라운드 상태 에너지를 배울 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d3e69-114">We can now use the standard library's phase estimation algorithms to learn the ground state energy using the above simulation.</span></span> <span data-ttu-id="d3e69-115">이렇게 하려면 퀀텀 접지 상태에 대 한 적절 한 근사값을 준비 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="d3e69-115">This requires preparing a good approximation to the quantum ground state.</span></span> <span data-ttu-id="d3e69-116">이러한 근사치에 대 한 제안은 `Broombridge` 스키마에 제공 되지만, 이러한 제안을 제외 하 고, 기본 접근 방식은 파괴을 적극적 하는 여러 개의 `hamiltonian.NElectrons`를 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="d3e69-116">Suggestions for such approximations are provided in the `Broombridge` schema, but absent these suggestions, the default approach adds a number of `hamiltonian.NElectrons` electrons to  greedily minimize the diagonal one-electron term energies.</span></span> <span data-ttu-id="d3e69-117">단계 예측 함수 및 작업은 [Microsoft의 특성화 네임 스페이스](xref:microsoft.quantum.characterization in DocFX notation)에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d3e69-117">The phase estimation functions and operations are located in the [Microsoft.Quantum.Characterization namespace](xref:microsoft.quantum.characterization in DocFX notation).</span></span>
+<span data-ttu-id="26d72-114">이제 표준 라이브러리의 단계 추정 알고리즘을 사용 하 여 위의 시뮬레이션을 통해 그라운드 상태 에너지를 배울 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="26d72-114">We can now use the standard library's phase estimation algorithms to learn the ground state energy using the above simulation.</span></span> <span data-ttu-id="26d72-115">이렇게 하려면 퀀텀 접지 상태에 대 한 적절 한 근사값을 준비 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="26d72-115">This requires preparing a good approximation to the quantum ground state.</span></span> <span data-ttu-id="26d72-116">이러한 근사치에 대 한 제안은 `Broombridge` 스키마에 제공 되지만, 이러한 제안을 제외 하 고, 기본 접근 방식은 파괴을 적극적 하는 여러 개의 `hamiltonian.NElectrons`를 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="26d72-116">Suggestions for such approximations are provided in the `Broombridge` schema, but absent these suggestions, the default approach adds a number of `hamiltonian.NElectrons` electrons to  greedily minimize the diagonal one-electron term energies.</span></span> <span data-ttu-id="26d72-117">단계 예측 함수 및 작업은 [Microsoft의 특성화 네임 스페이스](xref:microsoft.quantum.characterization in DocFX notation)에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="26d72-117">The phase estimation functions and operations are located in the [Microsoft.Quantum.Characterization namespace](xref:microsoft.quantum.characterization in DocFX notation).</span></span>
 
-<span data-ttu-id="d3e69-118">다음 코드 조각은 화학 시뮬레이션 라이브러리의 실시간 진화 출력이 퀀텀 단계 예측과 통합 될 수 있는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="d3e69-118">The following snippet shows how the real time-evolution output by the chemistry simulation library may be integrated with quantum phase estimation.</span></span>
+<span data-ttu-id="26d72-118">다음 코드 조각은 화학 시뮬레이션 라이브러리의 실시간 진화 출력이 퀀텀 단계 예측과 통합 될 수 있는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="26d72-118">The following snippet shows how the real time-evolution output by the chemistry simulation library may be integrated with quantum phase estimation.</span></span>
 
 ```qsharp
 operation GetEnergyByTrotterization (
@@ -119,7 +119,7 @@ operation GetEnergyByTrotterization (
 }
 ```
 
-<span data-ttu-id="d3e69-119">이제이 Q # 코드는 드라이버 프로그램에서 호출 될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d3e69-119">This Q# code may now be invoke from the driver program.</span></span> <span data-ttu-id="d3e69-120">다음에서는 전체 상태 시뮬레이터를 만들고 `GetEnergyByTrotterization`를 실행 하 여 그라운드 상태 에너지를 구합니다.</span><span class="sxs-lookup"><span data-stu-id="d3e69-120">In the following, we create a full-state simulator and run `GetEnergyByTrotterization` to obtain the ground state energy.</span></span>
+<span data-ttu-id="26d72-119">이제이 Q # 코드는 드라이버 프로그램에서 호출 될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="26d72-119">This Q# code may now be invoke from the driver program.</span></span> <span data-ttu-id="26d72-120">다음에서는 전체 상태 시뮬레이터를 만들고 `GetEnergyByTrotterization`를 실행 하 여 그라운드 상태 에너지를 구합니다.</span><span class="sxs-lookup"><span data-stu-id="26d72-120">In the following, we create a full-state simulator and run `GetEnergyByTrotterization` to obtain the ground state energy.</span></span>
 
 ```csharp
 using (var qsim = new QuantumSimulator())
@@ -149,4 +149,4 @@ using (var qsim = new QuantumSimulator())
 }
 ```
 
-<span data-ttu-id="d3e69-121">두 매개 변수가 반환 됩니다.</span><span class="sxs-lookup"><span data-stu-id="d3e69-121">Note that two parameters are returned.</span></span> <span data-ttu-id="d3e69-122">`energyEst`은 그라운드 상태 에너지를 예상 하는 것으로, 평균적으로 `-1.137`을 기준으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="d3e69-122">`energyEst` is the estimate of the ground state energy, and should be around `-1.137` on average.</span></span> <span data-ttu-id="d3e69-123">`phaseEst`는 단계 추정 알고리즘에서 반환 하는 원시 단계 이며 너무 커서 `trotterStep` 너무 커서 별칭이 발생 하는 경우를 진단 하는 데 유용 합니다.</span><span class="sxs-lookup"><span data-stu-id="d3e69-123">`phaseEst` is the raw phase returned by the phase estimation algorithm, and is useful to diagnose when aliasing occurs due to a `trotterStep` that is too large.</span></span>
+<span data-ttu-id="26d72-121">두 매개 변수가 반환 됩니다.</span><span class="sxs-lookup"><span data-stu-id="26d72-121">Note that two parameters are returned.</span></span> <span data-ttu-id="26d72-122">`energyEst`은 그라운드 상태 에너지를 예상 하는 것으로, 평균적으로 `-1.137`을 기준으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="26d72-122">`energyEst` is the estimate of the ground state energy, and should be around `-1.137` on average.</span></span> <span data-ttu-id="26d72-123">`phaseEst`는 단계 추정 알고리즘에서 반환 하는 원시 단계 이며 너무 커서 `trotterStep` 너무 커서 별칭이 발생 하는 경우를 진단 하는 데 유용 합니다.</span><span class="sxs-lookup"><span data-stu-id="26d72-123">`phaseEst` is the raw phase returned by the phase estimation algorithm, and is useful to diagnose when aliasing occurs due to a `trotterStep` that is too large.</span></span>
