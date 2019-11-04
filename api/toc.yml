@@ -1,0 +1,12 @@
+- name: 참고 자료
+  items:
+    - name: 'Q# 라이브러리'
+      href: qsharp/toc.yml
+    - name: .NET 라이브러리
+      items:
+        - name: 추적 시뮬레이터
+          href: 'https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators'
+        - name: 양자 화학
+          href: 'https://docs.microsoft.com/dotnet/api/microsoft.quantum.chemistry'
+    - name: Python 라이브러리
+      href: 'https://docs.microsoft.com/python/qsharp'

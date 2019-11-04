@@ -6,16 +6,16 @@ ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.language.intro
-ms.openlocfilehash: d8759b9f043d2e13f4b0c97d54bd824c7e87d6de
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 560926f6f3e05c32a935f01ca5107a614e743ee2
+ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73035269"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73442474"
 ---
 # <a name="the-q-programming-language"></a>Q# 프로그래밍 언어
 
-# <a name="introduction"></a>소개
+## <a name="introduction"></a>소개
 
 양자 컴퓨팅의 자연 모델은 양자 컴퓨터를 GPU, FPGA 및 기타 부속 모델 프로세서에 사용되는 것과 비슷한 보조 프로세서로 처리하는 것입니다.
 기본 제어 논리는 클래식 "호스트" 컴퓨터에서 클래식 코드를 실행합니다.
@@ -36,7 +36,7 @@ Q#의 최상위 구문은 사용자 정의 형식, 연산 및 함수입니다.
 - [문](xref:microsoft.quantum.language.statements)
 - [파일 구조](xref:microsoft.quantum.language.file-structure)
 
-# <a name="conventions"></a>규칙
+## <a name="conventions"></a>규칙
 
 모든 상황에서 일반적인 문장 부호를 일관되게 사용하기 위해 노력하고 있습니다.
 이러한 표시는 항상 동일한 사항을 의미하며 동일한 개념은 항상 동일한 방식으로 표시되므로 Q#을 보다 쉽게 학습하고 읽을 수 있게 됩니다.
