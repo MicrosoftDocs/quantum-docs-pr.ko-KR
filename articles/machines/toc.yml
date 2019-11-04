@@ -1,4 +1,4 @@
-- name: 클래식 컴퓨터 및 드라이버
+- name: 개요
   href: index.md
 - name: 양자 시뮬레이터
   href: full-state-simulator.md

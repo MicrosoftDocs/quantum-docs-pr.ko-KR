@@ -1,0 +1,16 @@
+- name: 양자역학
+  href: quantum-dynamics.md
+- name: 전자 시스템용 양자 모델
+  href: quantum-models.md
+- name: 제이양자화
+  href: second-quantization.md
+- name: 분자 적분 대칭
+  href: symmetries-molecular.md
+- name: 요르단-위그너 표현
+  href: jordan-wigner.md
+- name: 해밀턴 동역학 시뮬레이션
+  href: algorithms.md
+- name: 하트리-폭 이론
+  href: hartree-fock.md
+- name: 상관 관계가 지정된 파동 함수
+  href: multireference.md
