@@ -3,55 +3,91 @@ title: Microsoft Quantum 설명서
 summary: Microsoft Quantum Developer Kit 및 Q#(양자 알고리즘에 사용되는 언어)을 사용하는 방법을 알아봅니다. 주요 개념을 알아보고, 첫 번째 양자 프로그램을 작성합니다.
 metadata:
   title: Microsoft Quantum 설명서 - Q# API 참조
-  description: Microsoft Quantum Developer Kit 및 Q#(양자 알고리즘에 사용되는 언어)을 사용하는 방법을 알아봅니다. 주요 개념을 알아보고, 첫 번째 양자 프로그램을 작성합니다.
+  description: Microsoft Quantum Developer Kit 및 Q#(양자 프로그래밍에 사용되는 언어)을 사용하는 방법을 알아봅니다. 주요 개념을 알아보고, 첫 번째 양자 프로그램을 작성합니다.  QDK의 풍부한 도구와 라이브러리를 살펴봅니다.
   ms.prod: quantum
   ms.topic: landing-page
   ms.collection: collection
   author: cjgronlund
   ms.author: cgronlun
-  ms.date: 09/30/2019
-  ms.openlocfilehash: 692456cb6b117b206d202b01967202b7ac89e59d
-  ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+  ms.date: 10/21/2019
+  ms.openlocfilehash: f757c99b1f5b1a821c9c341c442e1080378949a8
+  ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 10/30/2019
-  ms.locfileid: "73065064"
+  ms.lasthandoff: 11/02/2019
+  ms.locfileid: "73442512"
 landingContent:
 - title: Microsoft Quantum 시작
   linkLists:
   - linkListType: overview
     links:
-    - text: Microsoft Quantum Developer Kit에 오신 것을 환영합니다!
+    - text: 양자 컴퓨팅에 대한 5가지 질문
       url: welcome.md
   - linkListType: get-started
     links:
-    - text: QDK 설치
-      url: install-guide/index.md
-    - text: QDK 업데이트
-      url: install-guide/update.md
-  - linkListType: quickstart
-    links:
-    - text: 첫 번째 양자 프로그램 작성
+    - text: 양자 난수 생성기 빌드
+      url: quickstarts/qrng.md
+    - text: Q#을 사용하는 양자 기본 사항
       url: quickstart.md
-- title: 양자 컴퓨팅에 대해 알아보기
-  linkLists:
-  - linkListType: concept
+    - text: Q#을 사용하여 효과적인 양자 프로그램 알아보기
+      url: quickstarts/search.md
+    - text: 화학 분야에서 가장 큰 문제를 푸는 방법 알아보기
+      url: https://cloudblogs.microsoft.com/quantum/2018/12/04/simulating-nature-with-the-new-microsoft-quantum-development-kit-chemistry-library/
+  - linkListType: learn
     links:
-    - text: 양자 컴퓨팅이란?
-      url: concepts/index.md
-    - text: 벡터 및 행렬
-      url: concepts/vectors-and-matrices.md
-    - text: 고급 행렬 개념
-      url: concepts/advanced-matrices.md
-    - text: 큐비트
-      url: concepts/the-qubit.md
-    - text: 소프트웨어 스택
-      url: concepts/software-stack.md
-- title: 양자 개발 기술
+    - text: Quantum Katas를 사용하여 알아보기
+      url: intro-to-katas.md
+    - text: Q# 샘플 찾아보기
+      url: https://docs.microsoft.com/samples/browse/?languages=qsharp
+- title: Q#/Python 또는 Juppyter Notebook을 사용하여 개발
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: Q#이란?
+    - text: Python 설치
+      url: install-guide/index.md#develop-with-python
+    - text: Jupyter 설치
+      url: install-guide/index.md#develop-with-jupyter-notebooks
+  - linkListType: how-to-guide
+    links:
+    - text: Python을 사용하는 Q# 샘플
+      url: https://docs.microsoft.com/samples/browse/?languages=python&products=qdk
+    - text: Q# Jupyter Notebook 텔레포트
+      url: https://docs.microsoft.com/samples/microsoft/quantum/quantum-teleportation/
+    - text: Q# Jupyter Notebook을 빌드하는 방법
+      url: https://docs.microsoft.com/samples/microsoft/quantum/intro-to-qsharp-jupyter/
+- title: Q# 개발 환경
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Visual Studio 설치
+      url: install-guide/index.md#develop-with-c-on-windows-using-visual-studio
+    - text: Visual Studio Code 설치
+      url: install-guide/index.md#develop-with-c-using-visual-studio-code
+- title: Q# 샘플
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: 간단한 세 가지 알고리즘
+      url: https://docs.microsoft.com/samples/microsoft/quantum/simple-quantum-algorithms
+    - text: Grover의 알고리즘을 사용하여 검색
+      url: https://docs.microsoft.com/samples/microsoft/quantum/searching-with-grovers-algorithm
+    - text: 양자 순간 이동
+      url: https://docs.microsoft.com/samples/microsoft/quantum/quantum-teleportation/
+    - text: 모든 샘플
+      url: https://docs.microsoft.com/samples/browse/?languages=qsharp
+- title: Q# 언어 및 개발 기술
+  linkLists:
+  - linkListType: learn
+    links:
+    - text: Q# 언어 소개
+      url: language/index.md
+  - linkListType: how-to-guide
+    links:
+    - text: 양자 시뮬레이터 및 호스트 애플리케이션
+      url: machines/index.md
+  - linkListType: how-to-guide
+    links:
+    - text: Q# 프로그램 개요
       url: techniques/file-structure.md
     - text: 연산 및 함수
       url: techniques/operations-and-functions.md
@@ -61,39 +97,51 @@ landingContent:
       url: techniques/working-with-qubits.md
     - text: '모두 배치: 순간 이동'
       url: techniques/putting-it-all-together.md
-- title: 컴퓨터 및 드라이버 관리
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: 클래식 드라이버 및 컴퓨터
-      url: machines/index.md
-    - text: QDK 전체 상태 시뮬레이터
-      url: machines/full-state-simulator.md
-    - text: 리소스 추정기
-      url: machines/resources-estimator.md
-    - text: 양자 추적 시뮬레이터
-      url: machines/qc-trace-simulator/index.md
-    - text: QDK Toffoli 시뮬레이터
-      url: machines/toffoli-simulator.md
-- title: Q# 언어 및 라이브러리
+- title: 양자 컴퓨팅 개념
   linkLists:
   - linkListType: concept
     links:
-    - text: Q# 언어 소개
-      url: language/index.md
-    - text: 릴리스 정보
-      url: relnotes/index.md
+    - text: 양자 컴퓨팅 개념
+      url: concepts/index.md
+    - text: 용어
+      url: Glossary.md
+- title: Q# 알고리즘 및 애플리케이션
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: 진폭 증폭
+      url: libraries/standard/algorithms.md
+    - text: 양자 단계 예측
+      url: libraries/standard/algorithms.md#quantum-phase-estimation
+    - text: 쇼어 알고리즘
+      url: libraries/standard/applications.md#shors-algorithm
+    - text: 해밀토니안 시뮬레이션
+      url: libraries/standard/applications.md
+- title: Q# 라이브러리
+  linkLists:
   - linkListType: reference
     links:
     - text: 표준 라이브러리
       url: libraries/standard/index.md
-    - text: 화학 라이브러리
-      url: libraries/chemistry/index.md
     - text: 숫자 라이브러리
       url: libraries/numerics/index.md
-  - linkListType: reference
+    - text: 화학 라이브러리
+      url: libraries/chemistry/index.md
+    - text: 화학 개념
+      url: libraries/chemistry/concepts/quantum-dynamics.md
+  - linkListType: how-to-guide
     links:
-    - text: Q# 참조
-      url: https://docs.microsoft.com/qsharp/api/qsharp/microsoft.quantum.bitwise?view=qsharp-preview
-    - text: C# 구성 요소
-      url: https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators?view=quantum-dotnet-latest
+    - text: 수 Q# 샘플
+      url: libraries/numerics/numerics.md
+    - text: 화학 Q# 예제
+      url: libraries/chemistry/samples/index.md
+    - text: NWChem을 사용하는 엔드투엔드
+      url: libraries/chemistry/samples/end-to-end.md
+- title: 커뮤니티 및 기여
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: QDK에 기여
+      url: contributing/index.md
+    - text: Microsoft Quantum 블로그 참조
+      url: https://cloudblogs.microsoft.com/quantum
