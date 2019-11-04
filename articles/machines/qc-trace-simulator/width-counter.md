@@ -1,17 +1,17 @@
 ---
 title: Width 카운터 | 퀀텀 컴퓨터 추적 시뮬레이터 | Microsoft Docs
-description: 퀀텀 컴퓨터 추적 시뮬레이터 개요
+description: 양자 컴퓨터 추적 시뮬레이터 개요
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.width-counter
-ms.openlocfilehash: e202c527e7e26751361e0c46355ffcefa9c95091
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: HT
+ms.openlocfilehash: ae0c0ec2e677be03dc8dc1497dc62ad9034295a4
+ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73184919"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73442402"
 ---
 # <a name="width-counter"></a>Width 카운터
 
@@ -29,7 +29,7 @@ operation MultiControlledXDriver( numberOfQubits : Int ) : Unit {
 }
 ```
 
-# <a name="using-width-counter-within-a-c-program"></a>C# 프로그램 내에서 Width 카운터 사용
+## <a name="using-width-counter-within-a-c-program"></a>C# 프로그램 내에서 Width 카운터 사용
 
 총 5 개에 대해 작동 하는 곱하기 제어 `X`는 2 개의 보조 비트를 할당 하 고 입력 너비가 5가 됩니다. 이 경우에 해당 하는지 확인 하려면 다음 C# 프로그램을 사용할 수 있습니다.
 

@@ -1,23 +1,23 @@
 ---
-title: 퀀텀 정보 참조 | Microsoft Docs
-description: 퀀텀 정보 참조
+title: 퀀텀 컴퓨팅 학습 리소스 | Microsoft Docs
+description: 퀀텀 컴퓨터 프로그래밍에 대 한 자세한 내용을 보려는 경우 퀀텀 컴퓨팅 항목의 심층 검사가 포함 된 참조 목록입니다.
 author: QuantumWriter
 uid: microsoft.quantum.more-information
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: ef0d8a6a268a717935070cefa73875150117bbec
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: HT
+ms.openlocfilehash: 7302acddb37a30ad3d20cabd08ce31d90bd155dc
+ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73210439"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73442523"
 ---
-# <a name="for-more-information"></a>자세한 내용
+# <a name="more-quantum-computing-learning-resources"></a>추가 퀀텀 컴퓨팅 학습 리소스
 
 이 간략 한 소개를 통해 퀀텀 컴퓨터를 다양 한 벡터 공간에서 단위 벡터로 정보를 저장 하는 장치로 표시 하는 방법 및 퀀텀 게이트를 사용 하 여 계산을 수행 하는 방식으로 정보를 회전 하는 방법에 대해 살펴보았습니다. a).  또한 개발자가 복잡 한 퀀텀 상태 및 서브루틴을 신속 하 게 이해할 수 있도록 하는 퀀텀 회로 및 지 속성과 같은 퀀텀 작업을 설명 하는 데 유용한 언어에 대해 설명 했습니다.
 
-이러한 도구는 퀀텀 소프트웨어 개발자에 게 기본적으로 적용 되는 반면,이 도구는 퀀텀 컴퓨터 프로그래밍 및 알고리즘 디자인에 대해 알려진 깊이 나 범위를 의미 하지 않습니다.  퀀텀 컴퓨팅은 신속 하 게 개발 하는 필드를 유지 하므로 문제를 해결 하기 위해 이러한 도구를 가장 잘 활용 하는 방법을 배우는 데 필요한 모든 정보가 포함 된 한 리소스가 없습니다.  이러한 이유로 퀀텀 컴퓨터 프로그래밍의 아트 및 장점에 대해 자세히 알아보려면 독자에 게 관심이 있을 수 있는 아래 목록을 컴파일해야 합니다.
+이러한 도구는 퀀텀 소프트웨어 개발자에 게 기본적으로 적용 되는 반면,이 도구는 퀀텀 컴퓨터 프로그래밍 및 알고리즘 디자인에 대해 알려진 깊이 나 범위를 의미 하지 않습니다.  퀀텀 컴퓨팅은 신속 하 게 개발 하는 필드를 유지 하므로 문제를 해결 하기 위해 이러한 도구를 가장 잘 활용 하는 방법을 배우는 데 필요한 모든 정보가 포함 된 한 리소스가 없습니다.  이러한 이유로 퀀텀 컴퓨터 프로그래밍의 아트 및 장점에 대해 자세히 알아보려면 독자에 게 관심이 있을 수 있는 참조 목록을 컴파일 했습니다.
 이 섹션에는 퀀텀 컴퓨팅 항목의 심층 적용 범위에 대 한 선택 된 참조가 포함 되어 있습니다.
 
 ## <a name="basic-quantum-computing"></a>기본 퀀텀 컴퓨팅 ##

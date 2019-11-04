@@ -6,14 +6,14 @@ ms.author: gulow
 ms.date: 10/23/2018
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.examples.energyestimate
-ms.openlocfilehash: 32f18ea479a2c65eee2b0e16788dc9f0fabd5372
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: HT
+ms.openlocfilehash: 0fd457b152083af364d924502c18bc0813e34b83
+ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73185548"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73442582"
 ---
-## <a name="obtaining-energy-level-estimates"></a>에너지 수준 예상치 얻기
+# <a name="obtaining-energy-level-estimates"></a>에너지 수준 추정치 얻기
 에너지 수준의 값을 예측 하는 것은 퀀텀 화학의 주요 응용 프로그램 중 하나입니다. 여기서는 분자 Hydrogen의 정식 예제에 대해이를 수행 하는 방법을 간략하게 설명 합니다. 이 섹션에서 참조 하는 샘플은 화학 샘플 리포지토리에서 `MolecularHydrogen` 됩니다. 출력을 그리는 시각적 예제는 `MolecularHydrogenGUI` 데모입니다.
 
 첫 번째 단계는 분자 Hydrogen를 나타내는 Hamiltonian를 생성 하는 것입니다. 이는 NWChem 도구를 통해 생성 될 수 있지만,이 샘플에서 간결 하 게 Hamiltonian 용어를 수동으로 추가 합니다.

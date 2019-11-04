@@ -5,14 +5,14 @@ author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 9c266fe16b8e2a265d91a99f8574a6acfcf03160
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: HT
+ms.openlocfilehash: 702d23293a1c340ddd3d7032d0e05294345469b2
+ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183253"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73442555"
 ---
-# <a name="what-is-q"></a>Q#이란? #
+# <a name="q-program-overview"></a>Q # 프로그램 개요
 
 Q #은 퀀텀 컴퓨팅을 위한 확장 가능한 다중 패러다임의 도메인별 프로그래밍 언어입니다. Q #은 퀀텀 컴퓨터에서 명령이 실행 되는 방식을 설명 하는 데 사용할 수 있는 퀀텀 프로그래밍 언어입니다. 대상으로 지정할 수 있는 컴퓨터가 시뮬레이터에서 실제 퀀텀 하드웨어로의 범위를 지정할 수 있습니다. Q #은 확장 가능 합니다. 몇 가지 방법으로 실행 되는 텔레포트와 같은 간단한 데모 프로그램을 작성 하는 데 사용할 수 있습니다. 또한 수백만 억 비트를 포함 하는 큰 컴퓨터를 필요로 하는 복잡 한 molecules의 시뮬레이션 등의 복잡 한 프로그램을 작성 하는 것도 지원 합니다. 실제 컴퓨터의 규모가 미래에도 불구 하 고 Q #을 사용 하면 프로그래머가 복잡 한 퀀텀 알고리즘을 프로그래밍할 수 있습니다. 무엇 보다도 Q #은 디버깅, 프로 파일링, 리소스 예측 및 특정 용도의 특정 용도의 시뮬레이션 등의 다양 한 작업을 확장 가능한 방식으로 지원 합니다. 
 

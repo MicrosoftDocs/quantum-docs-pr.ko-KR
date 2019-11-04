@@ -1,20 +1,19 @@
 ---
 title: Symmetries of 분자 적분 | Microsoft Docs
 description: Symmetries of 분자 적분 개념 문서
-keywords: SEO champ를 조회하지 않고 키워드를 추가하거나 편집하지 마십시오.
 author: nathanwiebe2
 ms.author: nawiebe
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.symmetries
-ms.openlocfilehash: d539b6339a937c7ab9049e7b50d7852272c25deb
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: HT
+ms.openlocfilehash: 041d600bc8d65e7d67f5fe7d61a69426fb42ffbc
+ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73185582"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73442387"
 ---
-## <a name="symmetries-of-molecular-integrals"></a>Symmetries of 분자 적분
+# <a name="symmetries-of-molecular-integrals"></a>Symmetries of 분자 적분
 
 [전자 시스템에 대 한 퀀텀 모델](xref:microsoft.quantum.chemistry.concepts.quantummodels)에서 제공 되는 Hamiltonian 인 Hamiltonian의 고유 대칭은 서로를 서로 상호 작용 하 고 nuclei를 사용 하 여 파괴에 대해 설명 하는 여러 가지 symmetries이 될 수 있습니다. Hamiltonian 용어를 압축 하는 데 활용 됩니다.
 일반적으로 기본 함수 $ \psi_j $에 대 한 추가 가정이 생성 되지 않는 경우에는 다음 [에 대 한 퀀텀 모델의 정수에서 즉시 볼 수 있는 \begin{equation} h_ {pqrs} = h_ {qpsr}, \tag{★} \label{eq: hpqrs} \begin{equation}만 있으면 됩니다. ](xref:microsoft.quantum.chemistry.concepts.quantummodels)$P, q $ 및 $r, s $가 통신에서 상호 관련 된 경우 해당 값이 동일 하 게 유지 된다는 것을 바탕으로 한 전자 시스템.

@@ -1,21 +1,18 @@
 ---
-title: Microsoft Quantum Development Kit 라이선스 | Microsoft Docs
+title: Microsoft Quantum Development Kit 라이선스
 description: Microsoft Quantum Development Kit 라이선스
-services: service-name-with-dashes-AZURE-ONLY
-keywords: SEO champ를 조회하지 않고 키워드를 추가하거나 편집하지 마십시오.
 author: QuantumWriter
-ms.author: MSFT-alias-person-or-DL
-ms.date: 10/09/2017
-ms.topic: article-type-from-white-list
-ms.openlocfilehash: e14720143144d4890358a1c6167541a0ea5a8362
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: HT
+ms.author: cpalmer
+ms.date: 11/04/2019
+ms.openlocfilehash: d864c3e4ecefa6f998b9a893ecc4a3995d67dac4
+ms.sourcegitcommit: c93fea5980d1d46fbda1e7c7153831b9337134bf
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73184936"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73463374"
 ---
 # <a name="microsoft-software-license-terms"></a>MICROSOFT 소프트웨어 사용 조건 
-# <a name="microsoft-quantum-development-kit-preview"></a>MICROSOFT 퀀텀 개발 키트 (미리 보기)
+## <a name="microsoft-quantum-development-kit-preview"></a>MICROSOFT 퀀텀 개발 키트 (미리 보기)
 
 
 * * *
@@ -61,13 +58,13 @@ ms.locfileid: "73184936"
     
     ㅁ. 소프트웨어를 공유, 게시, 배포 또는 제공 하 고, 다른 사람이 사용할 수 있는 독립 실행형 호스팅 솔루션으로 소프트웨어를 제공 하거나, 소프트웨어 또는 본 계약을 제 3 자에 게 양도할 수 있습니다.
 
-1. **수출 제한**. 소프트웨어에 적용되는 모든 국내 및 국제 수출법과 규정(목적지, 최종 사용자 및 최종 용도에 대한 제한 포함)을 준수해야 합니다. 수출 제한에 대한 자세한 내용은 http://aka.ms/exporting 을 참조하세요.
+1. **수출 제한**. 소프트웨어에 적용되는 모든 국내 및 국제 수출법과 규정(목적지, 최종 사용자 및 최종 용도에 대한 제한 포함)을 준수해야 합니다. 수출 제한에 대한 자세한 내용은 https://aka.ms/exporting 을 참조하세요.
 
 1. **지원 서비스**. Microsoft는 본 계약에 따라 소프트웨어에 대하여 어떠한 지원 서비스도 제공할 의무가 없습니다. 제공되는 모든 지원은 "모든 하자와 함께" 어떠한 종류의 보증 없이 "있는 그대로" 제공됩니다.
 
 1. **업데이트**. 소프트웨어에서는 주기적으로 업데이트를 확인하고 다운로드하여 설치할 수 있습니다. Microsoft 또는 인증된 소스에서만 업데이트를 다운로드할 수 있습니다. Microsoft는 귀하에게 업데이트를 제공하기 위해 귀하 시스템을 업데이트해야 할 수 있습니다. 추가 알림 없이 이러한 자동 업데이트를 수신하는 것에 동의합니다. 업데이트는 기존 소프트웨어, 서비스 또는 주변 디바이스의 일부를 포함하지 않거나 지원하지 않을 수 있습니다.
 
-1. **바인딩 중재 및 클래스 작업 면제. 이 섹션은 (또는 비즈니스의 사용자 환경이 인 경우)에 거주 하는 경우에 적용**됩니다.  귀하와 Microsoft 간 분쟁이 있을 경우 귀하와 Microsoft는 60일 동안 비공식적으로 해결하려고 시도하는 것에 동의합니다. 귀하와 Microsoft가 귀하와 Microsoft를 사용할 수 없는 경우 귀하와 Microsoft는 연방 중재 역할 ("FAA")에서 **미국 중재 연결 이전에 개별 중재를 바인딩하고** , **해결할 해야 앞의 법정에서의**는 것에 동의 합니다. 대신 중립 중재자가 결정합니다. **클래스 작업 소송, 클래스 전체 집단 중재, 개인 변호사-일반 작업**및 대표 용량에서 다른 사람이 작업 하는 다른 작업 **은 허용 되지 않습니다**. 모든 당사자의 동의 없이 개별 proceedings of the를 결합 하지도 않습니다. 전체 중재 계약은 더 많은 조건을 포함하며 http://aka.ms/arb-agreement-1 에 있습니다. 귀하와 Microsoft는 이러한 조건에 동의합니다.
+1. **바인딩 중재 및 클래스 작업 면제. 이 섹션은 (또는 비즈니스의 사용자 환경이 인 경우)에 거주 하는 경우에 적용**됩니다.  귀하와 Microsoft 간 분쟁이 있을 경우 귀하와 Microsoft는 60일 동안 비공식적으로 해결하려고 시도하는 것에 동의합니다. 귀하와 Microsoft가 귀하와 Microsoft를 사용할 수 없는 경우 귀하와 Microsoft는 연방 중재 역할 ("FAA")에서 **미국 중재 연결 이전에 개별 중재를 바인딩하고** , **해결할 해야 앞의 법정에서의**는 것에 동의 합니다. 대신 중립 중재자가 결정합니다. **클래스 작업 소송, 클래스 전체 집단 중재, 개인 변호사-일반 작업**및 대표 용량에서 다른 사람이 작업 하는 다른 작업 **은 허용 되지 않습니다**. 모든 당사자의 동의 없이 개별 proceedings of the를 결합 하지도 않습니다. 전체 중재 계약은 더 많은 조건을 포함하며 https://aka.ms/arb-agreement-1 에 있습니다. 귀하와 Microsoft는 이러한 조건에 동의합니다.
 
 1. **전체 규약**. 본 계약 및 Microsoft가 추가 구성 요소, 업데이트 또는 타사 애플리케이션에서 제공하는 다른 모든 조건은 소프트웨어에 대한 전면 합의입니다.
 

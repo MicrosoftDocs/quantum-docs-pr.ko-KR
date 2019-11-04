@@ -1,38 +1,34 @@
 ---
-title: 'Q # 스타일 가이드 | Microsoft Docs'
-description: 'Q # 스타일 가이드'
+title: Q# Style Guide | Microsoft Docs
+description: Q# Style Guide
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.style
-ms.openlocfilehash: 56455e9d5cd452b8620ee794f40563d1d3040193
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: HT
+ms.openlocfilehash: 4050e2ee9e516aed7a8ba1398792562926808ee0
+ms.sourcegitcommit: c93fea5980d1d46fbda1e7c7153831b9337134bf
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183848"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73463314"
 ---
-# <a name="q-style-guide"></a>Q # 스타일 가이드 #
-## <a name="general-conventions"></a>일반 규칙 ##
+# <a name="q-style-guide"></a>Q# Style Guide #
+## <a name="general-conventions"></a>General Conventions ##
 
-이 가이드에서 제안 하는 규칙은 Q #으로 작성 된 프로그램 및 라이브러리를 읽고 이해할 수 있도록 하기 위한 것입니다.
+The conventions suggested in this guide are intended to help make programs and libraries written in Q# easier to read and understand.
 
-# <a name="guidancetabguidance"></a>[지침](#tab/guidance)
+## <a name="guidance"></a>인도
 
 다음을 권장 합니다.
 
-- 사용자에 게 더 읽기 쉽고 이해 하기 쉬운 코드를 제공 하기 위해 의도적으로 수행 하는 경우가 아니면 규칙을 무시 하지 마십시오.
+- Never disregard a convention unless you’re doing so intentionally in order to provide more readable and understandable code for your users.
 
-# <a name="examplestabexamples"></a>[예](#tab/examples)
+## <a name="naming-conventions"></a>Naming Conventions ##
 
-***
-
-## <a name="naming-conventions"></a>명명 규칙 ##
-
-퀀텀 개발 키트를 제공할 때 퀀텀 개발자가 쉽게 읽을 수 있는 프로그램을 작성 하는 데 도움이 되는 함수 및 작업 이름에 대해 노력 하 고 있으며이를 최소화 합니다.
-의 중요 한 부분은 함수, 작업 및 형식에 대 한 이름을 선택할 때 프로그래머가 퀀텀 개념을 표현 하는 데 사용 하는 *어휘* 를 설정 하는 것입니다. 이 옵션을 사용 하면 명확 하 게 통신할 수 있도록 도와 드릴 수 있습니다.
-이는 도입 된 이름이 은둔 대신 명확성을 제공 하는지 확인 하는 책임을 집니다.
+In offering the Quantum Development Kit, we strive for function and operation names that help quantum developers write programs that are easy to read and that minimize surprise.
+An important part of that is that when we choose names for functions, operations, and types, we are establishing the *vocabulary* that programmers use to express quantum concepts; with our choices, we either help or hinder them in their effort to clearly communicate.
+This places a responsibility on us to make sure that the names we introduce offer clarity rather than obscurity.
 이 섹션에서는 Q # 개발 커뮤니티에서 가장 잘 활용 하는 데 도움이 되는 명시적 지침을 기준으로이 의무를 어떻게 충족 하는지 자세히 설명 합니다.
 
 ### <a name="operations-and-functions"></a>작업 및 함수 ###
@@ -67,7 +63,7 @@ ms.locfileid: "73183848"
 | 동사 | 예상 효과 |
 | ---- | ------ |
 | 신청 | 입력으로 제공 된 작업을 라고 합니다. |
-| 어설션하 | 가능한 퀀텀 측정의 결과에 대 한 가설은 시뮬레이터에 의해 확인 됩니다. |
+| Assert | 가능한 퀀텀 측정의 결과에 대 한 가설은 시뮬레이터에 의해 확인 됩니다. |
 | 견적 | 하나 이상의 측정값 으로부터 그려진 추정치를 나타내는 고전 값이 반환 됩니다. |
 | 측정값 | 퀀텀 측정이 수행 되며 결과가 사용자에 게 반환 됩니다. |
 | 준비 | 지정 된 비트 레지스터가 특정 상태로 초기화 됩니다. |

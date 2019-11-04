@@ -6,14 +6,14 @@ ms.author: gulow
 ms.date: 10/23/2018
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.examples.resourcecounts
-ms.openlocfilehash: b28a27c4c1f1e64644fcfb074a731ff7b65cacb6
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: HT
+ms.openlocfilehash: f9311c1987ced4336c4e98bdb984fbee009e9acc
+ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73184086"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73442464"
 ---
-## <a name="obtaining-resource-counts"></a>리소스 개수 가져오기
+# <a name="obtaining-resource-counts"></a>리소스 개수 가져오기
 
 기존 컴퓨터에서 $ 이상 비트 $n 시뮬레이트하는 비용은 $n $로 확대 됩니다. 이는 전체 상태 시뮬레이터로 수행할 수 있는 퀀텀 화학 시뮬레이션의 크기를 크게 제한 합니다. 대량 화학 인스턴스의 경우에도 유용한 정보를 얻을 수 있습니다. 여기서는 [추적 시뮬레이터](xref:microsoft.quantum.machines.qc-trace-simulator.intro)를 사용 하 여 자동화 된 방식으로 연금술 시뮬레이션에 대 한 T 게이트 또는 cnot 게이트 수와 같은 리소스 비용을 얻을 수 있는 방법을 살펴봅니다. 이러한 정보는 퀀텀 컴퓨터가 이러한 퀀텀 화학 알고리즘을 실행 하기에 충분히 큰 경우에 대해 알립니다. 참조는 제공 된 `GetGateCount` 샘플을 참조 하세요.
 
@@ -83,7 +83,7 @@ operation RunQubitizationStep (qSharpData: JordanWignerEncodingData) : Double {
 }
 ```
 
-이제 원하는 리소스를 추적 하도록 추적 시뮬레이터를 구성 합니다. 이 경우 `usePrimitiveOperationsCounter` 플래그를 `true`설정 하 여 기본 퀀텀 작업의 수를 계산 합니다. Q # 코드가 발생 하는 경우 probabiltiy의 측정 결과를 올바르게 어설션 하지 않는 경우 예외를 방지 하려면 기술 정보 `throwOnUnconstraintMeasurement` `false`로 설정 됩니다.
+이제 원하는 리소스를 추적 하도록 추적 시뮬레이터를 구성 합니다. 이 경우 `usePrimitiveOperationsCounter` 플래그를 `true`설정 하 여 기본 퀀텀 작업의 수를 계산 합니다. Q # 코드가 측정 결과의 확률 (있는 경우)을 올바르게 어설션 하지 않는 경우 예외를 방지 하려면 기술 정보 `throwOnUnconstraintMeasurement` `false`로 설정 됩니다.
 
 ```csharp
 private static QCTraceSimulator CreateAndConfigureTraceSim()
