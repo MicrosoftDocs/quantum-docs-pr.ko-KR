@@ -6,12 +6,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install
-ms.openlocfilehash: 3ec53934436b47908fd4d794a98933010f6059a7
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 2a098d89f13278d7137bf182a184a74afb9393be
+ms.sourcegitcommit: 2ca4755d1a63431e3cb2d2918a10ad477ec2e368
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73035302"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73462879"
 ---
 # <a name="install-the-microsoft-quantum-development-kit-qdk"></a>Microsoft QDK(Quantum Development Kit) 설치
 
@@ -26,11 +26,13 @@ ms.locfileid: "73035302"
 
 ## <a name="develop-with-python"></a>Python으로 개발
 
+Python용 qsharp 패키지를 사용하면 Python 내에서 Q# 작업 및 함수를 쉽게 시뮬레이션할 수 있습니다. IQ#(i-q-sharp로 발음)은 Jupyter 및 Python에서 주로 사용되며, Q# 작업을 컴파일하고 시뮬레이션하는 핵심 기능을 제공합니다.
+
 1. 필수 조건
 
     - [Python](https://www.python.org/downloads/) 3.6 이상
     - [PIP](https://pip.pypa.io/en/stable/installing) Python 패키지 관리자
-    - [.NET Core SDK 2.1 이상](https://www.microsoft.com/net/download)
+    - [.NET Core SDK 3.0 이상](https://www.microsoft.com/net/download)
 
 1. `iqsharp` 패키지를 설치합니다.
 
@@ -87,11 +89,16 @@ ms.locfileid: "73035302"
 
 ## <a name="develop-with-jupyter-notebooks"></a>Jupyter Notebook을 사용하여 개발
 
+교육 기관 설정, 과학 랩 및 온라인 기반 협업 프로그래밍에 자주 사용되는 Jupyter Notebook은 이제 Q#를 포함한 바로 코드 실행을 제공하며 지침, 메모 및 기타 콘텐츠도 함께 제공합니다.  사용자 고유의 Q# Notebook 만들기를 시작하려면 다음 작업을 수행해야 합니다.
+
+IQ#(i-q-sharp로 발음)은 Jupyter 및 Python에서 .NET Core SDK에 주로 사용되며, Q# 작업을 컴파일하고 시뮬레이션하는 핵심 기능을 제공합니다.
+
+
 1. 필수 조건
 
     - [Python](https://www.python.org/downloads/) 3.6 이상
     - [Jupyter Notebook](https://jupyter.readthedocs.io/en/latest/install.html)
-    - [.NET Core SDK 2.1 이상](https://www.microsoft.com/net/download)
+    - [.NET Core SDK 3.0 이상](https://www.microsoft.com/net/download)
 
 1. `iqsharp` 패키지를 설치합니다.
 
@@ -120,11 +127,22 @@ ms.locfileid: "73035302"
 
     - 다음 Notebook 셀을 실행합니다.
 
-        ![Jupyter Notebook 셀](~/media/install-guide-jupyter.png)
+        ![Q# 코드를 사용하는 Jupyter Notebook 셀](~/media/install-guide-jupyter.png)
 
         셀의 출력에 `SayHello`가 표시됩니다. Jupyter Notebook에서 실행하는 경우 Q# 코드가 컴파일되고 Notebook은 검색된 작업의 이름을 출력합니다.
 
+
+    - 새 셀에서 `%simulate` 매직을 사용하여 방금 만든 작업의 양자 컴퓨터에서 실행을 시뮬레이션합니다.
+
+        ![%simulate 매직을 사용하는 Jupyter Notebook 셀](~/media/install-guide-jupyter-simulate.png)
+
+        호출한 작업의 결과(여기서는 비어 있음)와 함께 메시지가 화면에 출력됩니다.
+
+
 ## <a name="develop-with-c-on-windows-using-visual-studio"></a>Windows C#에서 Visual Studio를 사용하여 C#으로 개발
+
+Visual Studio는 Q# 프로그램을 개발할 수 있는 풍부한 환경을 제공하며, 개발자에게 애플리케이션 빌드 방법을 안내하는 코드 완성 및 구문 강조 표시 같은 유용한 기능을 제공합니다.  Q# Visual Studio 확장에는 구문 강조 표시 및 IntelliSense 지원뿐 아니라 Q# 파일 및 프로젝트용 템플릿이 포함되어 있습니다.
+
 
 1. 필수 조건
 
@@ -158,12 +176,14 @@ ms.locfileid: "73035302"
 > [!NOTE]
 > * 단일 Visual Studio 솔루션 내에 여러 프로젝트가 있는 경우 솔루션에 포함된 모든 프로젝트는 솔루션과 동일한 폴더 또는 해당 하위 폴더 중 하나에 포함되어야 합니다.  
 
-## <a name="develop-with-c-using-vs-code"></a>VS Code를 사용하여 C#으로 개발
+## <a name="develop-with-c-using-visual-studio-code"></a>Visual Studio Code를 사용하여 C#으로 개발
+
+VS Code(Visual Studio Code)는 Windows, Linux 및 Mac을 포함한 여러 컴퓨터 환경에서 Q# 프로그램을 개발할 수 있는 풍부한 환경을 제공하며, 개발자에게 애플리케이션 빌드 방법을 안내하는 코드 완성 및 구문 강조 표시 같은 유용한 기능을 제공합니다.  Q# VS Code 확장에는 구문 강조 표시 및 Q# 코드 조각이 포함되어 있습니다.
 
 1. 필수 조건
 
    - [VS 코드](https://code.visualstudio.com/download)
-   - [.NET Core SDK 2.1 이상](https://www.microsoft.com/net/download)
+   - [.NET Core SDK 3.0 이상](https://www.microsoft.com/net/download)
 
 1. Quantum VS Code 확장을 설치합니다.
 
@@ -195,9 +215,11 @@ ms.locfileid: "73035302"
 
 ## <a name="develop-with-c-using-the-dotnet-command-line-tool"></a>`dotnet` 명령줄 도구를 사용하여 C#으로 개발
 
+물론 간단하게 .NET Core SDK 및 QDK 프로젝트 템플릿을 설치하여 명령줄에서 Q# 프로그램을 빌드하고 실행할 수도 있습니다. 
+
 1. 필수 조건
 
-    - [.NET Core SDK 2.1 이상](https://www.microsoft.com/net/download)
+    - [.NET Core SDK 3.0 이상](https://www.microsoft.com/net/download)
 
 1. .NET용 양자 프로젝트 템플릿을 설치합니다.
 

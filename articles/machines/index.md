@@ -1,19 +1,19 @@
 ---
-title: 양자 시뮬레이터 및 클래식 드라이버 | Microsoft Docs
+title: 양자 시뮬레이터 및 호스트 애플리케이션 | Microsoft Docs
 description: 클래식 컴퓨팅 .NET 언어(일반적으로 C# 또는 Q#)를 사용하여 양자 시뮬레이터을 구동하는 방법을 설명합니다.
 author: QuantumWriter
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines
-ms.openlocfilehash: 5ac79280669ae0acfe993a1c2ae1c069b0c01848
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 14aed75ed0ed192f88699b1c7dbacfae23f74642
+ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73035112"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73442214"
 ---
-# <a name="classical-drivers-and-machines"></a>클래식 드라이버 및 컴퓨터
+# <a name="quantum-simulators-and-host-applications"></a>양자 시뮬레이터 및 호스트 애플리케이션
 
 ## <a name="what-youll-learn"></a>학습할 내용
 
@@ -52,7 +52,7 @@ ms.locfileid: "73035112"
 * [추적 기반 리소스 추정기](xref:microsoft.quantum.machines.qc-trace-simulator.intro), `QCTraceSimulator` 클래스. 알고리즘의 전체 호출 그래프에 대해 리소스 사용량을 자세히 분석할 수 있습니다.
 * [Toffoli 시뮬레이터](xref:microsoft.quantum.machines.toffoli-simulator), `ToffoliSimulator` 클래스
 
-## <a name="writing-a-classical-driver-program"></a>클래식 드라이버 프로그램 작성
+## <a name="writing-a-host-application"></a>호스트 애플리케이션 작성
 
 [양자 프로그램을 작성](xref:microsoft.quantum.write-program)할 때 간단한 텔레포트 알고리즘용 C# 드라이버를 작성했습니다. C# 드라이버는 다음과 같은 4가지 주요 목적으로 사용됩니다.
 
@@ -94,7 +94,7 @@ Q#에는 파일 시스템에 액세스하는 메커니즘이 없으므로 이러
 * 배열을 `Microsoft.Quantum.Simulation.Core.QArray<T>` 개체에 래핑해야 합니다.
     `QArray` 클래스에는 순서가 지정된 적절한 개체 컬렉션(`IEnumerable<T>`)을 사용할 수 있는 생성자가 있습니다.
 * Q#에서 빈 튜플 `()`은 C#에서는 `QVoid.Instance`로 표시됩니다.
-* 비어 있지 않은 튜플은 .NET `ValueType` 인스턴스로 표시됩니다.
+* 비어 있지 않은 튜플은 .NET `ValueTuple` 인스턴스로 표시됩니다.
 * Q# 사용자 정의 형식은 기본 형식으로 전달됩니다.
 * 연산 또는 함수를 `Run` 메서드에 전달하려면 시뮬레이터의 `Get<>` 메서드를 사용하여 연산 또는 함수의 클래스 인스턴스를 가져와기 때문입니다.
 
