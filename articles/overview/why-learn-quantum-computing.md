@@ -1,0 +1,39 @@
+---
+title: 양자 컴퓨팅을 배워야 하는 이유는 무엇인가요?
+description: ''
+author: natke
+ms.author: nakersha
+ms.date: 10/16/2019
+ms.topic: article
+uid: microsoft.quantum.overview.why
+ms.openlocfilehash: 1ccf21aad9473f18a33bf6b12e14b021ac159cbb
+ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73443905"
+---
+# <a name="why-learn-quantum-computing"></a><span data-ttu-id="03c4d-102">양자 컴퓨팅을 배워야 하는 이유는 무엇인가요?</span><span class="sxs-lookup"><span data-stu-id="03c4d-102">Why learn quantum computing?</span></span>
+
+<span data-ttu-id="03c4d-103">양자 컴퓨터는 멋지지만 양자 컴퓨팅을 학습해야 하는 이유는 무엇인가요?</span><span class="sxs-lookup"><span data-stu-id="03c4d-103">Quantum computers are cool but why should you learn quantum computing?</span></span> <span data-ttu-id="03c4d-104">이 섹션에서는 지금 양자 컴퓨팅을 학습하는 것이 좋은 생각이라는 점에 대한 몇 가지 이유를 설명하려고 합니다.</span><span class="sxs-lookup"><span data-stu-id="03c4d-104">In this section, we are going to give you some reasons why learning quantum computing today is a great idea.</span></span>
+
+## <a name="join-the-quantum-revolution"></a><span data-ttu-id="03c4d-105">양자 혁명 참여</span><span class="sxs-lookup"><span data-stu-id="03c4d-105">Join the quantum revolution</span></span>
+
+<span data-ttu-id="03c4d-106">연구자는 이제 막 미래의 양자 기술에 대한 가능성을 상상하기 시작했습니다.</span><span class="sxs-lookup"><span data-stu-id="03c4d-106">Researchers have just started to envision the possibilities for future quantum technologies.</span></span> <span data-ttu-id="03c4d-107">오늘날 일부의 사람들이 2차 양자 혁명이라고 부르기 시작하는 것을 목격하고 있습니다.</span><span class="sxs-lookup"><span data-stu-id="03c4d-107">Today we are witnessing the beginning of what some people call the second quantum revolution.</span></span> <span data-ttu-id="03c4d-108">1차 혁명은 양자 물리학을 사용하여 레이저 및 트랜지스터와 같이 세상을 변화시키는 발명품을 창조하는 것으로 이루어졌습니다.</span><span class="sxs-lookup"><span data-stu-id="03c4d-108">The first revolution consisted of using quantum physics to create world-changing inventions like the laser and the transistor.</span></span> <span data-ttu-id="03c4d-109">지난 10년 동안 과학은 개별 입자 수준에서 양자 시스템을 제어하기 시작했습니다.</span><span class="sxs-lookup"><span data-stu-id="03c4d-109">In the last decade, science has started to gain control over quantum systems at the level of individual particles.</span></span> <span data-ttu-id="03c4d-110">이로 인해 엄청난 가능성의 문이 열리고 있으며, 대부분은 아직 발견되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="03c4d-110">This is opening the door to immense possibilities, most of which are yet to be discovered.</span></span> <span data-ttu-id="03c4d-111">보는 것에 그치지 말고 지금 행동하세요!</span><span class="sxs-lookup"><span data-stu-id="03c4d-111">Stop witnessing and start doing!</span></span> <span data-ttu-id="03c4d-112">지금 바로 내일의 세계를 형성할 기술에 기여할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="03c4d-112">Today you can start to contribute to the technology that will shape the world of tomorrow.</span></span>
+
+## <a name="solving-great-challenges-requires-diverse-communities"></a><span data-ttu-id="03c4d-113">많은 과제를 해결하려면 다양한 커뮤니티가 필요함</span><span class="sxs-lookup"><span data-stu-id="03c4d-113">Solving great challenges requires diverse communities</span></span>
+
+<span data-ttu-id="03c4d-114">효율적인 양자 컴퓨팅을 달성하는 것은 거의 틀림없이 이 시대의 가장 큰 과제 중 하나입니다.</span><span class="sxs-lookup"><span data-stu-id="03c4d-114">To achieve efficient quantum computing is arguably one of the greatest challenges of our age.</span></span> <span data-ttu-id="03c4d-115">복잡성은 안정적이고 확장 가능한 양자 하드웨어, 효율적인 양자 소프트웨어, 강력하고 저렴한 오류 수정 프로토콜, 실용적인 실제 애플리케이션 등 다양한 측면을 해결해야 한다는 사실에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="03c4d-115">Its complexity lies in the fact that many different aspects need to be solved: reliable and scalable quantum hardware, efficient quantum software, robust and inexpensive error correction protocols, practical real-world applications, among many others.</span></span> <span data-ttu-id="03c4d-116">이러한 까다로운 문제를 해결하기 위해 함께 일하는 과학자, 엔지니어 및 개발자로 구성된 대규모 커뮤니티가 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="03c4d-116">We need a large community of scientists, engineers and developers working together to address these challenging problems.</span></span> <span data-ttu-id="03c4d-117">이 커뮤니티를 형성하려면 다른 모든 분야의 사람들로 구성된 광범위한 네트워크가 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="03c4d-117">Forming this community requires a broad network of people from all different fields.</span></span> <span data-ttu-id="03c4d-118">배경에 관계없이 지금 즉시 양자 혁명에 참여할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="03c4d-118">Whatever your background, you can participate in the quantum revolution today.</span></span> <span data-ttu-id="03c4d-119">모든 사람이 양자 세계에 참여하는 것을 환영합니다!</span><span class="sxs-lookup"><span data-stu-id="03c4d-119">Everyone is welcome to jump into the quantum boat!</span></span>
+
+## <a name="get-inspired-by-the-quantum-world"></a><span data-ttu-id="03c4d-120">양자 세계에서 영감을 얻기</span><span class="sxs-lookup"><span data-stu-id="03c4d-120">Get inspired by the quantum world</span></span>
+
+<span data-ttu-id="03c4d-121">여전히 내결함성이 있는 양자 컴퓨터를 달성하기까지 많은 과제가 남아 있더라도 이미 양자 컴퓨팅이 클래식 컴퓨터 과학에 영향을 주는 결과를 관찰하고 있습니다.</span><span class="sxs-lookup"><span data-stu-id="03c4d-121">Even if we are still far from achieving fault-tolerant quantum computers, we are already observing some impactful consequences of quantum computing in classical computer science.</span></span> <span data-ttu-id="03c4d-122">지난 몇 년 동안 양자 컴퓨팅에 사용되는 기술을 기반으로 하는 새 알고리즘이 많이 개발되었습니다.</span><span class="sxs-lookup"><span data-stu-id="03c4d-122">In the last few years, many new algorithms were developed based on the techniques used in quantum computing.</span></span> <span data-ttu-id="03c4d-123">이러한 알고리즘은 소위 양자 유도 알고리즘이며 클래식 컴퓨터에서 실행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="03c4d-123">These are the so-called quantum inspired algorithms and can run on classical computers.</span></span> <span data-ttu-id="03c4d-124">이러한 알고리즘의 몇 가지 예로 이전의 클래식 메서드보다 더 빠르게 수행되는 추천 시스템 또는 유전자 알고리즘이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="03c4d-124">Some examples of these algorithms are recommendation systems or genetic algorithms that perform faster than any previous classical method.</span></span> <span data-ttu-id="03c4d-125">또한 양자 컴퓨팅을 학습하면 클래식 프로그래밍에 대한 관점을 전환시키는 계산에 대한 새로운 사고 방식을 발견할 수도 있습니다!</span><span class="sxs-lookup"><span data-stu-id="03c4d-125">By learning quantum computing you will also discover a new way of thinking about computation that will shift your perspective on classical programming!</span></span>
+
+## <a name="quantum-computing-is-fun"></a><span data-ttu-id="03c4d-126">양자 컴퓨팅은 재미있습니다!</span><span class="sxs-lookup"><span data-stu-id="03c4d-126">Quantum computing is fun!</span></span>
+
+<span data-ttu-id="03c4d-127">위에서 설명한 실제 영향 외에도 양자 컴퓨팅은 재미 있다고 생각합니다.</span><span class="sxs-lookup"><span data-stu-id="03c4d-127">In addition to the real-world impact discussed above, we believe quantum computing is fun.</span></span> <span data-ttu-id="03c4d-128">양자 컴퓨팅을 학습하는 것은 최첨단 지식과 미래의 기술을 구축하는 데 도움이 되는 기술을 얻을 수 있는 가치 있는 경험입니다.</span><span class="sxs-lookup"><span data-stu-id="03c4d-128">Learning quantum computing is a rewarding experience where you will come away with cutting-edge knowledge and the skills to help build the technology of the future.</span></span>
+
+## <a name="next-steps"></a><span data-ttu-id="03c4d-129">다음 단계</span><span class="sxs-lookup"><span data-stu-id="03c4d-129">Next steps</span></span>
+
+* [<span data-ttu-id="03c4d-130">Q#이란?</span><span class="sxs-lookup"><span data-stu-id="03c4d-130">What is Q#?</span></span>](xref:microsoft.quantum.overview.qsharp)
+* [<span data-ttu-id="03c4d-131">Microsoft Quantum Development Kit 시작</span><span class="sxs-lookup"><span data-stu-id="03c4d-131">Get started with the Microsoft Quantum Development Kit</span></span>](xref:microsoft.quantum.welcome)

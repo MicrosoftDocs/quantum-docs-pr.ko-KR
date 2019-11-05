@@ -1,4 +1,4 @@
-- name: 'Q# 및 파일 구조'
+- name: 'Q# 프로그램 개요'
   href: file-structure.md
 - name: 연산 및 함수
   href: operations-and-functions.md
