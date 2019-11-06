@@ -15,9 +15,10 @@ operations:
   summary: 이전 PQRS 간 패리티 차이를 계산 합니다. 용어 및 다음 PQRS 부채. 이 차이는 보조 비트에서 계산 됩니다.
 - uid: microsoft.quantum.research.chemistry.jwoptimizedstatepreparation
   summary: Spin orbitals를 실행 하 여 시험 상태의 단순 상태 준비
-ms.openlocfilehash: 8737229d1362a444f54d1a8d0791da9312923224
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73215951"
+metadata:
+  ms.openlocfilehash: 8737229d1362a444f54d1a8d0791da9312923224
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73215951"

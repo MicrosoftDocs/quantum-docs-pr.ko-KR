@@ -5,9 +5,10 @@ type: newtype
 namespace: Microsoft.Quantum.ErrorCorrection
 summary: 각각 `X` 및 `Z` 오류에 대 한 인코더, 디코더 및 해당 증후군 측정 절차에서 정의한 대로 Calderbank – Shor – Steane (CSS) 코드를 나타냅니다.
 syntax: newtype CSS = (Microsoft.Quantum.ErrorCorrection.EncodeOp, Microsoft.Quantum.ErrorCorrection.DecodeOp, Microsoft.Quantum.ErrorCorrection.SyndromeMeasOp, Microsoft.Quantum.ErrorCorrection.SyndromeMeasOp);
-ms.openlocfilehash: d2dd8df5aeb53f1dd0df26e1770929bb13fc6f41
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73234719"
+metadata:
+  ms.openlocfilehash: d2dd8df5aeb53f1dd0df26e1770929bb13fc6f41
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73234719"

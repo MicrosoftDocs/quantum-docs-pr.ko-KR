@@ -49,9 +49,10 @@ output:
   - summary: $M (P (\ket{00 or\cdpi 0} \bra{00 \cdots 0})) $가 `Zero`반환 하는 빈도의 예상 $ \hat{p} $은 비편향 이항 평가기 $ \hat{p} = n\_{\uparrow}/n\_{\text{measurements}} $, 여기서 $n\_{\ uparrow} $는 관찰 된 `Zero` 결과의 수입니다.
     isPrimitive: true
     uid: Double
-ms.openlocfilehash: cfc90cee0b98b88391ee23218489669600a97920
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73229177"
+metadata:
+  ms.openlocfilehash: cfc90cee0b98b88391ee23218489669600a97920
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73229177"

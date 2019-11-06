@@ -1,6 +1,6 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.core
-name: Microsoft 양자
+name: Microsoft.Quantum.Core
 summary: " # <a name=\"summary\"></a>요약\n 이 네임 스페이스는 Q # 핵심 함수 및 작업을 포함 합니다.\n\n # <a name=\"remarks\"></a>설명\n 이 네임 스페이스는 Q # 컴파일러에서 자동으로 열리므로이 네임 스페이스의 모든 요소를 항상 사용할 수 있습니다."
 functions:
 - uid: microsoft.quantum.core.length
@@ -13,9 +13,10 @@ functions:
   summary: 지정 된 범위의 정의 된 시작 값을 반환 합니다.
 - uid: microsoft.quantum.core.rangestep
   summary: 범위의 다음 값이 계산 되는 방법을 지정 하는 정수를 반환 합니다.
-ms.openlocfilehash: 41c28f8e8e11990ec1cf9b315478996a1e0811f4
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73056902"
+metadata:
+  ms.openlocfilehash: 41c28f8e8e11990ec1cf9b315478996a1e0811f4
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73056902"

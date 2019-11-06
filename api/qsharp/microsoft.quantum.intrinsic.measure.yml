@@ -31,9 +31,10 @@ output:
   - summary: $ + $1 eigenvalue가 관찰 되는지 여부를 `Zero` 하 고 $-$1 eigenvalue가 관찰 되 면 `One` 합니다.
     isPrimitive: true
     uid: Result
-ms.openlocfilehash: 65390f851d82eb579d89072dc770f3ce077ce515
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73234107"
+metadata:
+  ms.openlocfilehash: 65390f851d82eb579d89072dc770f3ce077ce515
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73234107"

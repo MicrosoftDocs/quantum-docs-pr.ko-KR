@@ -1,6 +1,6 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.errorcorrection
-name: Microsoft 양자 수정
+name: Microsoft.Quantum.ErrorCorrection
 summary: " # <a name=\"summary\"></a>요약\n 이 네임 스페이스에는 퀀텀 오류 수정에 대 한 함수, 작업 및 사용자 정의 형식이 포함 되어 있습니다."
 functions:
 - uid: microsoft.quantum.errorcorrection.bitflipcode
@@ -109,9 +109,10 @@ newtypes:
   summary: 퀀텀 코드의 오류 증후군를 지정 하는 `Result[]` 측정 결과의 형식입니다.
 - uid: microsoft.quantum.errorcorrection.syndromemeasop
   summary: 오류 수정 코드 블록의 증후군을 측정 하는 데 사용 되는 작업을 나타냅니다.
-ms.openlocfilehash: 6e1ef3ba9f22dac172e4edfb93bf1012e7bb21b4
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73056791"
+metadata:
+  ms.openlocfilehash: 6e1ef3ba9f22dac172e4edfb93bf1012e7bb21b4
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73056791"

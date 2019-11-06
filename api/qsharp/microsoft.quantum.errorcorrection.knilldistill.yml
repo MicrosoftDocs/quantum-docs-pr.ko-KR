@@ -30,9 +30,10 @@ output:
   - summary: '`true`경우에는 프로시저 성공 및 고품질 복사를 수락 해야 합니다. `false`경우 프로시저가 실패 하 고 레지스터의 상태가 undefined로 간주 되어야 합니다.'
     isPrimitive: true
     uid: Bool
-ms.openlocfilehash: 81d87b3dcd6f669a63847e331865b1f2c389f3ce
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73226729"
+metadata:
+  ms.openlocfilehash: 81d87b3dcd6f669a63847e331865b1f2c389f3ce
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73226729"

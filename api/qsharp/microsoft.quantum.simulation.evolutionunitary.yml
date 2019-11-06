@@ -9,9 +9,10 @@ summary: >-
 
   첫 번째 매개 변수는 시간 진화의 기간 이며 두 번째 매개 변수는 단일에 의해 처리 되는 고 비트 레지스터입니다.
 syntax: newtype EvolutionUnitary = ((Double, Qubit[]) => Unit is Adj + Ctl);
-ms.openlocfilehash: 185e621920a7800fd2c78ccbfb7b4ca12d51e8ba
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73067087"
+metadata:
+  ms.openlocfilehash: 185e621920a7800fd2c78ccbfb7b4ca12d51e8ba
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73067087"
