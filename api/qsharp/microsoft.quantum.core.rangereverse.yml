@@ -7,21 +7,22 @@ summary: 입력 범위의 역순 인 새 범위를 반환 합니다.
 remarks: 범위를 반대로 하는 것은 단순히 `end`.`-step`.`start`범위의 실제 마지막 요소가 `end`와 다를 수 있기 때문입니다.
 syntax: 'function RangeReverse (r : Range) : Range'
 input:
-  content: '(r: Range)'
+  content: '(r : Range)'
   types:
   - name: r
     summary: 입력 범위.
     isPrimitive: true
     uid: Range
 output:
-  content: 범위
+  content: Range
   types:
   - summary: 지정 된 범위의 역순 인 새 범위입니다.
     isPrimitive: true
     uid: Range
-ms.openlocfilehash: 978a476556d01f48533540333b5951f83da3d6dc
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73066628"
+metadata:
+  ms.openlocfilehash: 978a476556d01f48533540333b5951f83da3d6dc
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73066628"

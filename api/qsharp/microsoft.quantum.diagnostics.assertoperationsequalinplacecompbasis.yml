@@ -9,9 +9,9 @@ summary: >-
   이는 두 unitaries의 같음에 대 한 필수 조건 이지만 충분 하지 않습니다.
 syntax: 'operation AssertOperationsEqualInPlaceCompBasis (nQubits : Int, givenU : (Qubit[] => Unit), expectedU : (Qubit[] => Unit is Adj)) : Unit'
 input:
-  content: '(nQubits: Int, givenU: (Adj [] = > Unit), expectedU: ([] = > Unit is))'
+  content: '(nQubits : Int, givenU : (Qubit[] => Unit), expectedU : (Qubit[] => Unit is Adj))'
   types:
-  - name: N의 비트
+  - name: nQubits
     summary: 작업 `givenU` 및 `expectedU` 작업을 수행할 수 있는, $ $n의 수입니다.
     isPrimitive: true
     uid: Int
@@ -27,7 +27,7 @@ input:
       types:
       - isPrimitive: true
         uid: Unit
-  - name: 예기치 않은
+  - name: expectedU
     summary: '`givenU` $n $의 참조 작업을 비교 합니다.'
     isOperation: true
     input:
@@ -42,13 +42,14 @@ input:
     functors:
     - Adjoint
 output:
-  content: 단위
+  content: Unit
   types:
   - isPrimitive: true
     uid: Unit
-ms.openlocfilehash: 5841b6dc60047c051b38305c177f54d3eb84e087
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73066560"
+metadata:
+  ms.openlocfilehash: 5841b6dc60047c051b38305c177f54d3eb84e087
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73066560"

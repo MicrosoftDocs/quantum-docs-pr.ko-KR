@@ -7,7 +7,7 @@ summary: 외부 및 내부 연산을 지정 하면는 외부 작업에 의해 �
 remarks: 외부 작업은 항상 adjointable으로 간주 되지만 결합 된 작업을 제어 하기 위해 제어 하지 않아도 됩니다.
 syntax: "function ConjugatedByC (outerOperation : ('T => Unit is Adj), innerOperation : ('T => Unit is Ctl)) : ('T => Unit is Ctl)"
 input:
-  content: "(outerOperation: (' t = > Unit is Adj), innerOperation: (' t = > Unit is Ctl))"
+  content: "(outerOperation : ('T => Unit is Adj), innerOperation : ('T => Unit is Ctl))"
   types:
   - name: outerOperation
     summary: $U $는 켤레 $V $로 사용 해야 합니다. 외부 작업 $U $은 (는) adjointable 해야 하지만 제어할 필요가 없습니다.
@@ -36,7 +36,7 @@ input:
     functors:
     - Controlled
 output:
-  content: (' T = > 단위는 Ctl)
+  content: ('T => Unit is Ctl)
   types:
   - summary: 해당 작업이 단일 $U ^ {\dagger} V U $로 표시 되는 새 작업입니다.
     isOperation: true
@@ -58,9 +58,10 @@ seeAlso:
 - conjugatedbya
 - conjugatedbyca
 - applywith
-ms.openlocfilehash: 64b754d98164ea9d7ef5fcdc17141a5b1ef008d4
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73067971"
+metadata:
+  ms.openlocfilehash: 64b754d98164ea9d7ef5fcdc17141a5b1ef008d4
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73067971"

@@ -1,6 +1,6 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.math
-name: Microsoft 양자
+name: Microsoft.Quantum.Math
 functions:
 - uid: microsoft.quantum.math.abscomplex
   summary: '`Complex`형식 복소수의 절대값을 반환 합니다.'
@@ -252,9 +252,10 @@ operations:
   summary: 0 보다 크거나 같고 1 보다 작은 간격의 임의의 실수를 반환 합니다.
 - uid: microsoft.quantum.math.randomsinglequbitpauli
   summary: 단일 기능을 임의로 임의로 반환 합니다.
-ms.openlocfilehash: 7f30ee26a1155b64946e8fb16f5692ec602aa602
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73056293"
+metadata:
+  ms.openlocfilehash: 7f30ee26a1155b64946e8fb16f5692ec602aa602
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73056293"
