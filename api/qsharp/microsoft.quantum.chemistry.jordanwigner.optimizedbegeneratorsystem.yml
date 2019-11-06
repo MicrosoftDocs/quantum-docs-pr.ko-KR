@@ -5,9 +5,10 @@ type: newtype
 namespace: Microsoft.Quantum.Chemistry.JordanWigner
 summary: 정수 `n`지정 된 정수 `n`에 대 한 `OptimizedBETermIndex` 데이터를 반환 하는 함수입니다 .이 함수는 첫 번째 `Int`의 용어 수와 `Double`에서 모든 용어 계수의 절대값 합계와 함께 사용 됩니다.
 syntax: newtype OptimizedBEGeneratorSystem = (Int, Double, (Int -> Microsoft.Quantum.Chemistry.JordanWigner.OptimizedBETermIndex));
-ms.openlocfilehash: 4f3375a952bbd72331742d77c3a6e2a56b1814c8
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73228480"
+metadata:
+  ms.openlocfilehash: 4f3375a952bbd72331742d77c3a6e2a56b1814c8
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73228480"

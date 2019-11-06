@@ -21,9 +21,10 @@ output:
   types:
   - summary: '`termType`에서 추가 된 추가 정보와 함께 `term`표시 되는 Hamiltonian 용어를 나타내는 GeneratorIndex입니다.'
     uid: microsoft.quantum.simulation.generatorindex
-ms.openlocfilehash: edfd08b1e9f80a0f468d50a10a7ad3ff0187511c
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73228871"
+metadata:
+  ms.openlocfilehash: edfd08b1e9f80a0f468d50a10a7ad3ff0187511c
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73228871"

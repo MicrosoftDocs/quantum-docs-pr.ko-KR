@@ -15,9 +15,10 @@ summary: >-
   - 지정 된 리플렉션을 수행할 대상 레지스터입니다.
 remarks: 이 oracle $O = \boldone-(1-e ^ {i \phi}) \ket{\psi}\bra{\psi} $는 1 단계에서 단일 순수 상태 $ \ket{\psi} $에 대해 부분 반사를 수행 합니다.
 syntax: newtype ReflectionOracle = ((Double, Qubit[]) => Unit is Adj + Ctl);
-ms.openlocfilehash: 7ca6551a83ae279c5a937556d7c2c9dde98e4522
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73230860"
+metadata:
+  ms.openlocfilehash: 7ca6551a83ae279c5a937556d7c2c9dde98e4522
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73230860"

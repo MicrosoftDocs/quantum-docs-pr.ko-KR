@@ -8,9 +8,10 @@ summary: >-
 
   스택은 정수 용량, 스택 포인터 및 `Result` 배열로 구성 됩니다.
 syntax: newtype ResultStack = (Int, Int, Result[]);
-ms.openlocfilehash: 4a0ba6c9e5e4489fd7a28d33df7d179268d46efe
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73222377"
+metadata:
+  ms.openlocfilehash: 4a0ba6c9e5e4489fd7a28d33df7d179268d46efe
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73222377"

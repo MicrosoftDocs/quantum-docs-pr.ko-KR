@@ -14,9 +14,10 @@ operations:
   summary: '`Z` 기준으로 단일 비트를 측정 하 고이를 표준 기준 상태로 다시 설정 합니다. | 0 〉 측정을 따릅니다.'
 - uid: microsoft.quantum.measurement.multim
   summary: 지정 된 배열의 각 고 비트를 표준 기준으로 측정 합니다.
-ms.openlocfilehash: 872031f8a6ebd77e72cd74e1c98e7347c09ca14a
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73210987"
+metadata:
+  ms.openlocfilehash: 872031f8a6ebd77e72cd74e1c98e7347c09ca14a
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73210987"

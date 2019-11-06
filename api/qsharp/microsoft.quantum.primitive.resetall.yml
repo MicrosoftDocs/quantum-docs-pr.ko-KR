@@ -1,6 +1,6 @@
 ### YamlMime:QSharpType
 uid: microsoft.quantum.primitive.resetall
-name: 모두 reset
+name: ResetAll
 type: operation
 namespace: Microsoft.Quantum.Primitive
 summary: >-
@@ -12,20 +12,21 @@ summary: >-
   @"microsoft.quantum.intrinsic.resetall"를 사용 하세요.
 syntax: 'operation ResetAll (qubits : Qubit[]) : Unit'
 input:
-  content: '(비트율 비트:'
+  content: '(qubits : Qubit[])'
   types:
-  - name: 이상 비트
+  - name: qubits
     isArray: true
     isPrimitive: true
     uid: Qubit
 output:
-  content: 단위
+  content: Unit
   types:
   - isPrimitive: true
     uid: Unit
-ms.openlocfilehash: abd8e8f8af35044846860d4f4405eb37bf2a25fa
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73066407"
+metadata:
+  ms.openlocfilehash: abd8e8f8af35044846860d4f4405eb37bf2a25fa
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73066407"

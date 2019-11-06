@@ -9,7 +9,7 @@ summary: >-
   한정자 `A` 단일의 비트 연산이 adjointable 나타냅니다.
 syntax: "operation ApplyToEachIndexA (singleElementOperation : ((Int, 'T) => Unit is Adj), register : 'T[]) : Unit"
 input:
-  content: "(singleElementOperation: ((Int, t) = > Unit is Adj), register: ' t [])"
+  content: "(singleElementOperation : ((Int, 'T) => Unit is Adj), register : 'T[])"
   types:
   - name: singleElementOperation
     summary: 각 고 비트에 적용할 연산입니다.
@@ -32,7 +32,7 @@ input:
     uid: "'T"
     isLocal: true
 output:
-  content: 단위
+  content: Unit
   types:
   - isPrimitive: true
     uid: Unit
@@ -43,9 +43,10 @@ functors:
 - Adjoint
 seeAlso:
 - microsoft.quantum.canon.applytoeachindex
-ms.openlocfilehash: 6b99e977120a417780875475b35094a44d1c4e08
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73068481"
+metadata:
+  ms.openlocfilehash: 6b99e977120a417780875475b35094a44d1c4e08
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73068481"

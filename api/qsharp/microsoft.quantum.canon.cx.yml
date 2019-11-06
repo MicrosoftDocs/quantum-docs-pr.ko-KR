@@ -29,27 +29,28 @@ remarks: >-
   ```
 syntax: 'operation CX (control : Qubit, target : Qubit) : Unit'
 input:
-  content: '(컨트롤: 고 비트, 대상:의 비트)'
+  content: '(control : Qubit, target : Qubit)'
   types:
   - name: control
     summary: CX gate의 비트를 제어 합니다.
     isPrimitive: true
     uid: Qubit
-  - name: 대상
+  - name: target
     summary: CX gate의 대상입니다.
     isPrimitive: true
     uid: Qubit
 output:
-  content: 단위
+  content: Unit
   types:
   - isPrimitive: true
     uid: Unit
 functors:
 - Adjoint
 - Controlled
-ms.openlocfilehash: 26cbc8dc2f22cdf8583d453b84e53b0151619f5d
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73067869"
+metadata:
+  ms.openlocfilehash: 26cbc8dc2f22cdf8583d453b84e53b0151619f5d
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73067869"
