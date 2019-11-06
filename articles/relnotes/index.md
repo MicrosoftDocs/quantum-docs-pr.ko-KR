@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: 169a8ac31c53f2892624618a227d8bdbdc458458
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 868d256270516cf99c228a757a11c6dc1a6319df
+ms.sourcegitcommit: c93fea5980d1d46fbda1e7c7153831b9337134bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "72958882"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73463330"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit 릴리스 정보
 
@@ -20,6 +20,19 @@ ms.locfileid: "72958882"
 설치 지침은[설치 가이드](xref:microsoft.quantum.install)를 참조하세요.
 
 업데이트 지침은 [업데이트 가이드](xref:microsoft.quantum.update)를 참조하세요.
+
+## <a name="version-0101911307"></a>버전 0.10.1911.307
+
+*릴리스 날짜: 2019년 11월 1일*
+
+이 릴리스에는 다음이 포함됩니다.
+
+- .NET Core SDK 버전에 종속되지 않도록 언어 서버를 자체 포함 실행 파일로 배포하는 Visual Studio Code 및 Visual Studio 확장 업데이트  
+- .NET Core 3.0으로 마이그레이션
+- 새 `Fail` 메서드가 도입된 Microsoft.Quantum.Simulation.Core.IOperationFactory의 주요 변경 내용입니다. SimulatorBase를 확장하지 않는 사용자 지정 시뮬레이터에만 영향을 줍니다. 자세한 내용은 [GitHub에서 끌어오기 요청 보기를 참조하세요](https://github.com/microsoft/qsharp-runtime/pull/59).
+- 사용되지 않는 특성에 대한 새로운 지원
+
+[라이브러리](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [컴파일러](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [런타임](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [샘플](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) 및 [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed)에 대한 비공개 PR의 전체 목록을 참조하세요.  
 
 ## <a name="version-0919093002"></a>버전 0.9.1909.3002
 
@@ -283,7 +296,7 @@ Quantum Development Kit의 0.2 버전에서 업그레이드하는 경우, [Q# �
 
 ### <a name="community-contributions"></a>커뮤니티 기여
 
-**** http://github.com/Microsoft/Quantum 에서 열려 있는 코드베이스에 기여해 주신 다음 분들께 감사의 말씀을 드립니다. 이분들의 기여 덕분에 Q# 코드의 샘플이 매우 다양해졌습니다.
+**감사합니다.** http://github.com/Microsoft/Quantum 에서 열려 있는 코드베이스에 기여해 주신 다음 분들께 감사의 말씀을 드립니다. 이분들의 기여 덕분에 Q# 코드의 샘플이 매우 다양해졌습니다.
 
 * Rolf Huisman([@RolfHuisman](https://github.com/RolfHuisman)): Q# 변환기에 대한 QASM을 만들어 QASM/Q# 개발자의 환경을 개선했습니다. [PR #58](https://github.com/Microsoft/Quantum/pull/58).
 
@@ -448,7 +461,7 @@ Microsoft.Quantum.Canon 네임스페이스의 RandomWalkPhaseEstimation 작업�
 #### <a name="hardware-and-software-requirements"></a>하드웨어 및 소프트웨어 요구 사항
 
 - Quantum Development Kit에 포함된 시뮬레이터를 사용하려면 Microsoft Windows의 64비트 설치를 실행해야 합니다.
-- Quantum Development Kit와 함께 설치되는 Microsoft의 퀀텀 시뮬레이터에서는 AVX(Advance Vector Extensions)를 활용하며 AVX 사용 가능 CPU가 필요합니다. Q1 2011(Sandy Bridge) 이상에서 제공되는 Intel 프로세서는 AVX를 지원합니다. 초기 CPU에 대한 지원을 평가하고 나중에 세부 정보를 발표할 수 있습니다.
+- Quantum Development Kit와 함께 설치되는 Microsoft의 퀀텀 시뮬레이터에서는 AVX(Advanced Vector Extensions)를 활용하며 AVX 사용 가능 CPU가 필요합니다. Q1 2011(Sandy Bridge) 이상에서 제공되는 Intel 프로세서는 AVX를 지원합니다. 초기 CPU에 대한 지원을 평가하고 나중에 세부 정보를 발표할 수 있습니다.
 
 #### <a name="project-creation"></a>프로젝트 만들기
 
