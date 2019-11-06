@@ -1,6 +1,6 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.arithmetic
-name: Microsoft 양자
+name: Microsoft.Quantum.Arithmetic
 summary: " # <a name=\"summary\"></a>요약\n 이 네임 스페이스는 coherently 컴퓨팅 산술 연산에 사용 되는 함수 및 작업을 포함 합니다."
 functions:
 - uid: microsoft.quantum.arithmetic.bigendianaslittleendian
@@ -215,9 +215,10 @@ newtypes:
     예를 들어 $ \ket{x} $가 계산을 기준으로 하는 정수 $x $의 작은 endian 인코딩이 면 $ \operatorname{QFTLE} \ket{x} $는 QFT의 $x $의 인코딩입니다.
 - uid: microsoft.quantum.arithmetic.signedlittleendian
   summary: Little endian에 저장 된 부호 있는 정수 형식입니다 (LittleEndian 참조).
-ms.openlocfilehash: 95a399e09ad5c1617c34a68302f9212a8ec4e0ad
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73065149"
+metadata:
+  ms.openlocfilehash: 95a399e09ad5c1617c34a68302f9212a8ec4e0ad
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73065149"

@@ -6,7 +6,7 @@ namespace: Microsoft.Quantum.Simulation
 summary: 두 `GeneratorSystem`의 선형 보간을 나타내는 `TimeDependentGeneratorSystem`를 반환 합니다.
 syntax: 'function InterpolateGeneratorSystems (generatorSystemStart : Microsoft.Quantum.Simulation.GeneratorSystem, generatorSystemEnd : Microsoft.Quantum.Simulation.GeneratorSystem) : Microsoft.Quantum.Simulation.TimeDependentGeneratorSystem'
 input:
-  content: '(generatorSystemStart: GeneratorSystem, generatorSystemEnd: GeneratorSystem) (영문)'
+  content: '(generatorSystemStart : Microsoft.Quantum.Simulation.GeneratorSystem, generatorSystemEnd : Microsoft.Quantum.Simulation.GeneratorSystem)'
   types:
   - name: generatorSystemStart
     summary: 시작 `GeneratorSystem`입니다.
@@ -15,16 +15,17 @@ input:
     summary: 끝 `GeneratorSystem`입니다.
     uid: microsoft.quantum.simulation.generatorsystem
 output:
-  content: TimeDependentGeneratorSystem.
+  content: Microsoft.Quantum.Simulation.TimeDependentGeneratorSystem
   types:
   - summary: '`generatorSystemStart`에서 가중치 $ (1-s) $를 사용 하 고 `generatorSystemEnd`에서 가중치 $s $를 사용 하 여 입력 생성기 시스템의 합계인 시스템을 나타내는 `TimeDependentGeneratorSystem`입니다.'
     uid: microsoft.quantum.simulation.timedependentgeneratorsystem
 seeAlso:
 - microsoft.quantum.canon.generatorsystem
 - microsoft.quantum.canon.timedependentgeneratorsystem
-ms.openlocfilehash: ac01ddee211ddf2ad741b611707aa6e5e6ea70f9
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73065523"
+metadata:
+  ms.openlocfilehash: ac01ddee211ddf2ad741b611707aa6e5e6ea70f9
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73065523"

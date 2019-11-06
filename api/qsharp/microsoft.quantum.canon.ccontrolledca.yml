@@ -9,7 +9,7 @@ summary: >-
   한정자 `CA` 작업을 제어 하 고 adjointable 나타냅니다.
 syntax: "function CControlledCA (op : ('T => Unit is Ctl + Adj)) : ((Bool, 'T) => Unit is Ctl + Adj)"
 input:
-  content: "(op: (' t = > Unit은 Ctl + Adj))"
+  content: "(op : ('T => Unit is Ctl + Adj))"
   types:
   - name: op
     summary: 조건부로 적용 될 작업입니다.
@@ -26,7 +26,7 @@ input:
     - Adjoint
     - Controlled
 output:
-  content: ((Bool, t) = > Unit is Ctl + Adj)
+  content: ((Bool, 'T) => Unit is Ctl + Adj)
   types:
   - summary: 클래식 컨트롤 비트가 true 인 경우 op 인 새 작업입니다.
     isOperation: true
@@ -48,9 +48,10 @@ typeParameters:
   summary: 조건부로 적용할 작업의 입력 형식입니다.
 seeAlso:
 - microsoft.quantum.canon.ccontrolled
-ms.openlocfilehash: 918146c6f167050490d3a9047cf75dc66236b004
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73068073"
+metadata:
+  ms.openlocfilehash: 918146c6f167050490d3a9047cf75dc66236b004
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73068073"

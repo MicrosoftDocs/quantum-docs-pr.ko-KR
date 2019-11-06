@@ -7,7 +7,7 @@ summary: <xref:microsoft.quantum.arithmetic.phaselittleendian>형식의 대상 �
 remarks: 레지스터는 <xref:microsoft.quantum.canon.qftle>를 사용 하 여 `PhaseLittleEndian` 변환 된 다음 `op`의 응용 프로그램 후 원래 표현으로 반환 됩니다.
 syntax: 'operation ApplyPhaseLEOperationOnLE (op : (Microsoft.Quantum.Arithmetic.PhaseLittleEndian => Unit), target : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
-  content: '(op: (PhaseLittleEndian = > Unit), target: LittleEndian) (영문)'
+  content: '(op : (Microsoft.Quantum.Arithmetic.PhaseLittleEndian => Unit), target : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
   - name: op
     summary: 적용 될 작업입니다.
@@ -19,11 +19,11 @@ input:
       types:
       - isPrimitive: true
         uid: Unit
-  - name: 대상
+  - name: target
     summary: 작업이 적용 되는 레지스터입니다.
     uid: microsoft.quantum.arithmetic.littleendian
 output:
-  content: 단위
+  content: Unit
   types:
   - isPrimitive: true
     uid: Unit
@@ -31,9 +31,10 @@ seeAlso:
 - microsoft.quantum.canon.applyphaseleoperationonlea
 - microsoft.quantum.canon.applyphaseleoperationonlea
 - microsoft.quantum.canon.applyphaseleoperationonleca
-ms.openlocfilehash: f610069706c06a3454c15b2f5170cce4b478530d
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73057073"
+metadata:
+  ms.openlocfilehash: f610069706c06a3454c15b2f5170cce4b478530d
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73057073"

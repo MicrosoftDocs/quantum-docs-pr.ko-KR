@@ -12,27 +12,25 @@ summary: >-
   그러면 $U $의 보조 레지스터 크기가 1 배 비트로 늘어납니다.
 remarks: 그러면 $U $의 보조 레지스터 크기가 1 배 비트로 늘어납니다.
 syntax: 'function BlockEncodingToReflection (blockEncoding : Microsoft.Quantum.Simulation.BlockEncoding) : Microsoft.Quantum.Simulation.BlockEncodingReflection'
-references: >-
-  - Hamiltonian Simulation by Qubitization
-    Guang Hao Low, Isaac L. Chuang
-    https://arxiv.org/abs/1610.06546
+references: '- Hamiltonian 시뮬레이션의 Guang Jia-hao Low, Isaac Chuang https://arxiv.org/abs/1610.06546'
 input:
-  content: '(블록 인코딩: Microsoft 양자-BlockEncoding)'
+  content: '(blockEncoding : Microsoft.Quantum.Simulation.BlockEncoding)'
   types:
   - name: blockEncoding
     summary: 리플렉션으로 변환할 `BlockEncoding` 단일 $U $입니다.
     uid: microsoft.quantum.simulation.blockencoding
 output:
-  content: BlockEncodingReflection.
+  content: Microsoft.Quantum.Simulation.BlockEncodingReflection
   types:
   - summary: 단일 $U ' $는 레지스터 `a` 및 $H $를 차단 하 고 $U ' ^ \a턴 = U ' $를 만족 하는 `s` 합니다.
     uid: microsoft.quantum.simulation.blockencodingreflection
 seeAlso:
 - microsoft.quantum.canon.blockencoding
 - microsoft.quantum.canon.blockencodingreflection
-ms.openlocfilehash: 47eba3c59ef30f89139830aa4d9b98d22d141d8f
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73065625"
+metadata:
+  ms.openlocfilehash: 47eba3c59ef30f89139830aa4d9b98d22d141d8f
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73065625"

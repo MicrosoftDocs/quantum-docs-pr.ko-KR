@@ -1,6 +1,6 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.diagnostics
-name: Microsoft 양자 진단
+name: Microsoft.Quantum.Diagnostics
 functions:
 - uid: microsoft.quantum.diagnostics.allequalityfactb
   summary: 부울 값의 두 배열이 동일한 것을 어설션 합니다.
@@ -74,9 +74,10 @@ operations:
 - uid: microsoft.quantum.diagnostics.assertqubitwithintolerance
   summary: 지정 된 허용 오차까지 강화 비트 `q` Pauli Z 연산자의 예상 eigenstate 임을 어설션 합니다.
 summary: " # <a name=\"summary\"></a>요약\n 이 네임 스페이스는 어설션 작업 및 클레임 함수를 비롯 하 여 진단 목적에 유용한 함수 및 작업을 포함 합니다."
-ms.openlocfilehash: c387a7dc3b2e997d00d54457b0af89a04fa918d3
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73056867"
+metadata:
+  ms.openlocfilehash: c387a7dc3b2e997d00d54457b0af89a04fa918d3
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73056867"

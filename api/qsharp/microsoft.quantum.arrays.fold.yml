@@ -53,9 +53,10 @@ typeParameters:
   summary: '`folder` 함수가 작동 하는 상태 유형 (예:)은 첫 번째 인수로 수락 하 고를 반환 합니다.'
 - uid: "'T"
   summary: '`array` 요소의 형식입니다.'
-ms.openlocfilehash: 4be4752029b10351cfb3fe0fa6aa61b84b157510
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73214353"
+metadata:
+  ms.openlocfilehash: 4be4752029b10351cfb3fe0fa6aa61b84b157510
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73214353"

@@ -18,13 +18,13 @@ remarks: >-
   공식적으로는 이러한 요구 사항을 완화 하는 바꾸기 작업을 지정할 수 있지만,이 경우에는 바꾸기 작업이 임의의 퀀텀 작업에 대해 일반적으로 실제로 realizable 되지 않으므로이 옵션으로 여기에 포함 되지 않습니다.
 syntax: 'operation AssertOperationsEqualReferenced (nQubits : Int, actual : (Qubit[] => Unit), expected : (Qubit[] => Unit is Adj)) : Unit'
 input:
-  content: '(N Bits: Int, actual: (Adj [] = > Unit)이 필요 합니다. ([] = > Unit is))'
+  content: '(nQubits : Int, actual : (Qubit[] => Unit), expected : (Qubit[] => Unit is Adj))'
   types:
-  - name: N의 비트
+  - name: nQubits
     summary: 각 작업에 전달할 비트 수입니다.
     isPrimitive: true
     uid: Int
-  - name: 실제
+  - name: actual
     summary: 테스트할 작업입니다.
     isOperation: true
     input:
@@ -36,7 +36,7 @@ input:
       types:
       - isPrimitive: true
         uid: Unit
-  - name: 있어야
+  - name: expected
     summary: 테스트 중인 작업의 예상 동작을 정의 하는 작업입니다.
     isOperation: true
     input:
@@ -51,13 +51,14 @@ input:
     functors:
     - Adjoint
 output:
-  content: 단위
+  content: Unit
   types:
   - isPrimitive: true
     uid: Unit
-ms.openlocfilehash: 0dfadb6be785c7ba4eaa517c725b79955e037a32
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73066577"
+metadata:
+  ms.openlocfilehash: 0dfadb6be785c7ba4eaa517c725b79955e037a32
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73066577"

@@ -26,7 +26,7 @@ remarks: >-
   ```
 syntax: "function CurriedOp (op : (('T, 'U) => Unit)) : ('T -> ('U => Unit))"
 input:
-  content: "(op: (' t, ' U) = > Unit))"
+  content: "(op : (('T, 'U) => Unit))"
   types:
   - name: op
     summary: 입력이 쌍 인 작업입니다.
@@ -42,7 +42,7 @@ input:
       - isPrimitive: true
         uid: Unit
 output:
-  content: (> (' U = > 단위))
+  content: ('T -> ('U => Unit))
   types:
   - summary: 쌍의 첫 번째 요소를 수락 하 고 원래 작업의 입력에 대 한 두 번째 요소를 입력으로 받아 들이는 작업을 반환 하는 작업입니다.
     isFunction: true
@@ -66,9 +66,10 @@ typeParameters:
   summary: 쌍에 정의 된 함수의 첫 번째 구성 요소 형식입니다.
 - uid: "'U"
   summary: 쌍에 정의 된 함수의 두 번째 구성 요소 형식입니다.
-ms.openlocfilehash: 788648d24ba536926504caba92e768ecb34e001a
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73067903"
+metadata:
+  ms.openlocfilehash: 788648d24ba536926504caba92e768ecb34e001a
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73067903"

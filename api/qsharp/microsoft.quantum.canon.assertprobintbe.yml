@@ -12,27 +12,28 @@ summary: >-
   이 작업은 제거 되었습니다.
 syntax: 'operation AssertProbIntBE (stateIndex : Int, prob : Double, qubits : Microsoft.Quantum.Arithmetic.BigEndian, tolerance : Double) : Unit'
 input:
-  content: '(stateIndex: Int, 문제: Double,  bits:, tolerance: Double)'
+  content: '(stateIndex : Int, prob : Double, qubits : Microsoft.Quantum.Arithmetic.BigEndian, tolerance : Double)'
   types:
   - name: stateIndex
     isPrimitive: true
     uid: Int
-  - name: 문제
+  - name: prob
     isPrimitive: true
     uid: Double
-  - name: 이상 비트
+  - name: qubits
     uid: microsoft.quantum.arithmetic.bigendian
-  - name: 허용
+  - name: tolerance
     isPrimitive: true
     uid: Double
 output:
-  content: 단위
+  content: Unit
   types:
   - isPrimitive: true
     uid: Unit
-ms.openlocfilehash: 687e30ca8468329cc4b491ec124156a46d954282
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73068413"
+metadata:
+  ms.openlocfilehash: 687e30ca8468329cc4b491ec124156a46d954282
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73068413"
