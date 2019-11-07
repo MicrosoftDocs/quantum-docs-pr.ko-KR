@@ -6,20 +6,22 @@ ms.author: nakersha
 ms.date: 10/16/2019
 ms.topic: article
 uid: microsoft.quantum.overview.why
-ms.openlocfilehash: 1ccf21aad9473f18a33bf6b12e14b021ac159cbb
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: 389b745a9f19caa6272e7d537e3ee5f884cec36b
+ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73443905"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73529920"
 ---
 # <a name="why-learn-quantum-computing"></a>양자 컴퓨팅을 배워야 하는 이유는 무엇인가요?
 
-양자 컴퓨터는 멋지지만 양자 컴퓨팅을 학습해야 하는 이유는 무엇인가요? 이 섹션에서는 지금 양자 컴퓨팅을 학습하는 것이 좋은 생각이라는 점에 대한 몇 가지 이유를 설명하려고 합니다.
+양자 컴퓨터는 멋지지만 양자 컴퓨팅을 학습해야 하는 이유는 무엇인가요?
+
+이 섹션에서는 지금 양자 컴퓨팅을 학습하는 것이 좋은 생각이라는 점에 대한 몇 가지 이유를 설명하려고 합니다.
 
 ## <a name="join-the-quantum-revolution"></a>양자 혁명 참여
 
-연구자는 이제 막 미래의 양자 기술에 대한 가능성을 상상하기 시작했습니다. 오늘날 일부의 사람들이 2차 양자 혁명이라고 부르기 시작하는 것을 목격하고 있습니다. 1차 혁명은 양자 물리학을 사용하여 레이저 및 트랜지스터와 같이 세상을 변화시키는 발명품을 창조하는 것으로 이루어졌습니다. 지난 10년 동안 과학은 개별 입자 수준에서 양자 시스템을 제어하기 시작했습니다. 이로 인해 엄청난 가능성의 문이 열리고 있으며, 대부분은 아직 발견되지 않았습니다. 보는 것에 그치지 말고 지금 행동하세요! 지금 바로 내일의 세계를 형성할 기술에 기여할 수 있습니다.
+연구자는 이제 막 미래의 양자 기술에 대한 가능성을 상상하기 시작했습니다. 오늘날 일부의 사람들이 2차 양자 혁명이라고 부르기 시작하는 것을 목격하고 있습니다. 1차 혁명은 양자 물리학을 사용하여 레이저 및 트랜지스터와 같이 세상을 변화시키는 발명품을 창조하는 것으로 이루어졌습니다. 지난 10년 동안 과학은 개별 입자 수준에서 양자 시스템을 제어하기 시작했으며 대부분은 아직 발견되지 않은 엄청난 가능성을 향한 문을 열었습니다. 보는 것에 그치지 말고 지금 행동하세요! 지금 바로 내일의 세계를 형성할 기술에 기여할 수 있습니다.
 
 ## <a name="solving-great-challenges-requires-diverse-communities"></a>많은 과제를 해결하려면 다양한 커뮤니티가 필요함
 

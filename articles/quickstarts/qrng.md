@@ -6,12 +6,12 @@ ms.author: megbrow@microsoft.com
 ms.date: 10/25/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.qrng
-ms.openlocfilehash: a7c077eda3e46430cbe6598cb899adb460451f75
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: c3039b92c4b3235a397d5cf31280ac2673706e9d
+ms.sourcegitcommit: 2ca4755d1a63431e3cb2d2918a10ad477ec2e368
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73443922"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73462841"
 ---
 # <a name="quickstart-implement-a-quantum-random-number-generator-in-q"></a>빠른 시작: Q#에서 양자 난수 생성기 구현
 Q#으로 양자 난수 생성기를 작성하는 간단한 양자 알고리즘 예제입니다. 이 알고리즘은 양자 메커니즘의 특성을 활용하여 난수를 생성합니다. 
@@ -69,4 +69,4 @@ Q# 연산에서는 Q#의 기본 형식인 `Qubit` 데이터 형식을 도입합�
 
 <img src="./Measurement2.svg" width="450">
 
-측정 결과는 완전히 임의적이므로 임의의 비트를 얻었습니다. 이 함수를 여러 번 호출하여 정수를 만들 수 있습니다. 예를 들어 이 함수를 세 번 호출하여 세 개의 임의 비트를 얻으면 임의의 3비트 숫자(즉, 0~7 사이의 임의 숫자)를 빌드할 수 있습니다.
+측정 결과는 완전히 임의적이므로 임의의 비트를 얻었습니다. 이 연산을 여러 번 호출하여 정수를 만들 수 있습니다. 예를 들어 이 연산을 세 번 호출하여 세 개의 임의 비트를 얻으면 임의의 3비트 숫자(즉, 0~7 사이의 임의 숫자)를 빌드할 수 있습니다.
