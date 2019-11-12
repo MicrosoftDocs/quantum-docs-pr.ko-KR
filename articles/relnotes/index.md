@@ -461,7 +461,7 @@ Microsoft.Quantum.Canon 네임스페이스의 RandomWalkPhaseEstimation 작업�
 #### <a name="hardware-and-software-requirements"></a>하드웨어 및 소프트웨어 요구 사항
 
 - Quantum Development Kit에 포함된 시뮬레이터를 사용하려면 Microsoft Windows의 64비트 설치를 실행해야 합니다.
-- Quantum Development Kit와 함께 설치되는 Microsoft의 퀀텀 시뮬레이터에서는 AVX(Advanced Vector Extensions)를 활용하며 AVX 사용 가능 CPU가 필요합니다. Q1 2011(Sandy Bridge) 이상에서 제공되는 Intel 프로세서는 AVX를 지원합니다. 초기 CPU에 대한 지원을 평가하고 나중에 세부 정보를 발표할 수 있습니다.
+- Quantum Development Kit와 함께 설치되는 Microsoft의 퀀텀 시뮬레이터에서는 AVX(고급 벡터 확장)를 활용하며 AVX 사용 가능 CPU가 필요합니다. Q1 2011(Sandy Bridge) 이상에서 제공되는 Intel 프로세서는 AVX를 지원합니다. 초기 CPU에 대한 지원을 평가하고 나중에 세부 정보를 발표할 수 있습니다.
 
 #### <a name="project-creation"></a>프로젝트 만들기
 
