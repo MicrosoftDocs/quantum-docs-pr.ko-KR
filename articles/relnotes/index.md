@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: 868d256270516cf99c228a757a11c6dc1a6319df
-ms.sourcegitcommit: c93fea5980d1d46fbda1e7c7153831b9337134bf
+ms.openlocfilehash: 90fd8ad455702ef4f962e1b3291c650eb0afea2e
+ms.sourcegitcommit: 87dd450cea5bcac76a42f0bdc224bfae712efdde
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73463330"
+ms.lasthandoff: 11/17/2019
+ms.locfileid: "74153315"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit 릴리스 정보
 
@@ -20,6 +20,17 @@ ms.locfileid: "73463330"
 설치 지침은[설치 가이드](xref:microsoft.quantum.install)를 참조하세요.
 
 업데이트 지침은 [업데이트 가이드](xref:microsoft.quantum.update)를 참조하세요.
+
+## <a name="version-01019111607"></a>버전 0.10.1911.1607
+
+*릴리스 날짜: 2019년 11월 17일*
+
+이 릴리스에는 다음이 포함됩니다.
+
+- [Quantum Katas](https://github.com/Microsoft/QuantumKatas) 및 Jupyter Notebooks에 대한 성능 수정
+
+[라이브러리](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [컴파일러](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [런타임](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [샘플](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) 및 [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed)에 대한 비공개 PR의 전체 목록을 참조하세요.  
+
 
 ## <a name="version-0101911307"></a>버전 0.10.1911.307
 
