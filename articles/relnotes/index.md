@@ -160,7 +160,7 @@ ms.locfileid: "74153315"
 
 [F# 드라이버에 Q#를 사용하는 샘플](https://github.com/Microsoft/Quantum/pull/164)을 추가했습니다.  
 
-**감사합니다.** http://github.com/Microsoft/Quantum 에서 열려 있는 코드베이스에 기여해 주신 분들께 감사의 말씀을 전합니다. 이러한 기여는 Q# 코드의 다양한 샘플을 모으는 데 큰 도움이 됩니다.
+**감사합니다.** [http://github.com/Microsoft/Quantum](http://github.com/Microsoft/Quantum ) 에서 열려 있는 코드베이스에 기여해 주신 분들께 감사의 말씀을 전합니다. 이러한 기여는 Q# 코드의 다양한 샘플을 모으는 데 큰 도움이 됩니다.
 
 * Mathias Soeken([@msoeken](https://github.com/msoeken)): Oracle 함수 합성. [PR #135](https://github.com/Microsoft/Quantum/pull/135).
 
@@ -307,7 +307,7 @@ Quantum Development Kit의 0.2 버전에서 업그레이드하는 경우, [Q# �
 
 ### <a name="community-contributions"></a>커뮤니티 기여
 
-**감사합니다.** http://github.com/Microsoft/Quantum 에서 열려 있는 코드베이스에 기여해 주신 다음 분들께 감사의 말씀을 드립니다. 이분들의 기여 덕분에 Q# 코드의 샘플이 매우 다양해졌습니다.
+**감사합니다.** [http://github.com/Microsoft/Quantum](http://github.com/Microsoft/Quantum ) 에서 열려 있는 코드베이스에 기여해 주신 다음 분들께 감사의 말씀을 드립니다. 이분들의 기여 덕분에 Q# 코드의 샘플이 매우 다양해졌습니다.
 
 * Rolf Huisman([@RolfHuisman](https://github.com/RolfHuisman)): Q# 변환기에 대한 QASM을 만들어 QASM/Q# 개발자의 환경을 개선했습니다. [PR #58](https://github.com/Microsoft/Quantum/pull/58).
 
@@ -331,13 +331,13 @@ Quantum Development Kit의 0.2 버전에서 업그레이드하는 경우, [Q# �
 
 ## <a name="version-0218063001"></a>버전 0.2.1806.3001
 
-릴리스 날짜:  2018년 6월 30일
+*릴리스 날짜: 2018년 6월 30일*
 
 이 릴리스는 [GitHub에 보고된 이슈 #48](https://github.com/Microsoft/Quantum/issues/48)에 대한 빠른 수정입니다(사용자 이름에 공백이 포함된 경우 Q# 컴파일이 실패함). 해당하는 새 버전(`0.2.1806.3001-preview`)이 포함된 `0.2.1806.1503`과 같은 업데이트 지침을 따릅니다.
 
 ## <a name="version-0218061503"></a>버전 0.2.1806.1503
 
-릴리스 날짜:  2018년 6월 22일
+*릴리스 날짜: 2018년 6월 22일*
 
 이 릴리스에는 향상된 디버깅 환경 및 향상된 성능뿐 아니라 다양한 커뮤니티 기여도 포함됩니다.  구체적으로 살펴보면 다음과 같습니다.
 
