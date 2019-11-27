@@ -360,7 +360,7 @@ Quantum Development Kit의 0.2 버전에서 업그레이드하는 경우, [Q# �
 
 ### <a name="community-contributions"></a>커뮤니티 기여
 
-Q# 코더 커뮤니티는 성장하고 있으며 http://github.com/Microsoft/quantum 에서 열려 있는 코드베이스에 제출된 첫 번째 사용자가 라이브러리 및 샘플에 기여해 주셔서 감사합니다.  다음 기여자분들께 **깊은 감사의 말씀을 드립니다.**
+Q# 코더 커뮤니티는 성장하고 있으며 http://github.com/Microsoft/quantum 에서 열려 있는 코드베이스에 제출된 첫 번째 사용자가 라이브러리 및 샘플에 기여해 주셔서 감사합니다.  다음 기여자분들께 **깊은 감사의 말씀을 드립니다**.
 * Mathias Soeken([@msoeken](https://github.com/msoeken)): 지정된 순열을 구현하도록 Toffoli 네트워크를 생성하는 변환 기반 논리 합성 메서드를 정의하는 샘플에 기여했습니다. 이 코드는 전체적으로 Q# 함수 및 작업으로 작성됩니다.  [PR #41](https://github.com/Microsoft/Quantum/pull/41).
 * RolfHuisman([@RolfHuisman](https://github.com/RolfHuisman)): Microsoft MVP Rolf Huisman은 클래식 제어 흐름 및 제한된 퀀텀 작업이 포함되지 않은 제한된 프로그램 클래스에 대한 Q# 코드에서 플랫 QASM 코드를 생성하는 샘플에 기여했습니다. [PR #59](https://github.com/Microsoft/Quantum/pull/59)
 * Sarah Kasier([@crazy4pi314](https://github.com/crazy4pi314)): 제어된 작업에 대한 라이브러리 함수를 제출하여 코드베이스를 개선하도록 도왔습니다. [PR #53](https://github.com/Microsoft/Quantum/pull/53)
