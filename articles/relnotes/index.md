@@ -317,7 +317,7 @@ Quantum Development Kit의 0.2 버전에서 업그레이드하는 경우, [Q# �
 
 ## <a name="version-021809701"></a>버전 0.2.1809.701
 
-릴리스 날짜: ** 2018년 9월 10일
+릴리스 날짜:  2018년 9월 10일
 
 이 릴리스에는 커뮤니티에서 보고한 다음 이슈 등에 대한 버그 수정이 포함됩니다.
 
@@ -367,7 +367,7 @@ Q# 코더 커뮤니티는 성장하고 있으며 http://github.com/Microsoft/qua
 * Jessica Lemieux([@Lemj3111](https://github.com/Lemj3111)): @"microsoft.quantum.canon.quantumphaseestimation"을 수정하고 새 단위 테스트를 만들었습니다.  [PR #54](https://github.com/Microsoft/Quantum/pull/54)
 * Tama McGlinn([@TamaHobbit](https://github.com/TamaHobbit)): QuantumSimulator 인스턴스가 삭제되었는지 확인하여 Teleportation 샘플을 정리했습니다. [PR #20](https://github.com/Microsoft/Quantum/pull/20)
 
-또한 **** Commercial Engineering Services 팀의 기여자로서 Hackathon이 진행되는 동안 설명서에 중요한 변경 내용을 제공해 주신 다음 Microsoft 소프트웨어 엔지니어분들께도 깊은 감사의 말씀을 드립니다.  해당 변경 내용은 모두를 위한 설명 및 온보딩 환경을 크게 개선했습니다.
+또한 큰 **감사 합니다.** Commercial Engineering Services 팀의 기여자로서 Hackathon이 진행되는 동안 설명서에 중요한 변경 내용을 제공해 주신 다음 Microsoft 소프트웨어 엔지니어분들께도 깊은 감사의 말씀을 드립니다.  해당 변경 내용은 모두를 위한 설명 및 온보딩 환경을 크게 개선했습니다.
 * Sascha Corti
 * Mihaela Curmei
 * John Donnelly
@@ -419,7 +419,7 @@ dotnet clean
 
 ## <a name="version-0218022202"></a>버전 0.2.1802.2202
 
-릴리스 날짜: ** 2018년 2월 26일
+릴리스 날짜:  2018년 2월 26일
 
 이 릴리스에서는 더 많은 플랫폼, 언어 상호 운용성 및 성능 향상에 대한 개발을 지원합니다. 구체적으로 살펴보면 다음과 같습니다.
 
@@ -454,7 +454,7 @@ Microsoft.Quantum.Canon 네임스페이스의 RandomWalkPhaseEstimation 작업�
 
 ## <a name="version-0118011707"></a>버전 0.1.1801.1707
 
-릴리스 날짜: ** 2018년 1월 18일
+릴리스 날짜:  2018년 1월 18일
 
 이 릴리스에서는 커뮤니티에서 보고한 일부 이슈를 수정합니다. 구체적으로는 다음과 같습니다.
 
@@ -465,7 +465,7 @@ Microsoft.Quantum.Canon 네임스페이스의 RandomWalkPhaseEstimation 작업�
 
 ## <a name="version-011712901"></a>버전 0.1.1712.901
 
-릴리스 날짜: ** 2017년 12월 11일
+릴리스 날짜:  2017년 12월 11일
 
 ### <a name="known-issues"></a>알려진 문제
 
