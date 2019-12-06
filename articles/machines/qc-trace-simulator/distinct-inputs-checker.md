@@ -1,17 +1,17 @@
 ---
 title: 고유 입력 검사기 | 퀀텀 컴퓨터 추적 시뮬레이터 | Microsoft Docs
-description: 퀀텀 컴퓨터 추적 시뮬레이터 개요
+description: 양자 컴퓨터 추적 시뮬레이터 개요
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.distinct-inputs
-ms.openlocfilehash: 0df28f6d74279db4678c3485a23a9341680eec52
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: ce3f156a84a4509781a74c9276b953c79670a756
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73184698"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74864307"
 ---
 # <a name="distinct-inputs-checker"></a>고유 입력 검사기
 
@@ -28,7 +28,7 @@ operation DoBoth(q1 : Qubit, q2 : Qubit, op1 : (Qubit => Unit), op2 : (Qubit => 
 사용자가이 프로그램을 볼 때 `q1`와 `q2`는 서로 다른 commute에서 작동 하는 다른 `op1` 및 `op2`이 호출 되는 순서는 중요 하지 않다고 가정 합니다. 이제이 작업을 사용 하는 예를 살펴보겠습니다.
 
 ```qsharp
-operation DisctinctQubitCaptured2Test () : Unit {
+operation CapturedQubits () : Unit {
 
     using (q = Qubit[3]) {
         let op1 = CNOT(_, q[1]);

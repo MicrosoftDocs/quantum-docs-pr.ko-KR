@@ -5,12 +5,12 @@ author: cgranade
 uid: microsoft.quantum.libraries.diagnostics
 ms.author: chgranad@microsoft.com
 ms.topic: article
-ms.openlocfilehash: b59f91b660281167eab182529b415b6d379e3d63
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: d5889b8d5a92801b0ada65f7a17c655c959fc57f
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2019
-ms.locfileid: "73184494"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74864341"
 ---
 # <a name="diagnostics"></a>진단 #
 
@@ -42,7 +42,7 @@ Message($"About to rotate by an angle of {angle}...");
 
 ## <a name="facts-and-assertions"></a>팩트 및 어설션 ##
 
-[테스트 및 디버깅](xref:microsoft.quantum.techniques.testing-and-debugging)에 설명 된 대로 시그니처 `Unit -> Unit` 또는 `Unit => Unit`를 사용 하는 함수 또는 작업을 *단위 테스트*로 호출할 수 있습니다.
+[테스트 및 디버깅](xref:microsoft.quantum.techniques.testing-and-debugging)에 설명 된 대로 시그니처 `Unit -> Unit` 또는 `Unit => Unit`를 사용 하는 함수 또는 작업은 각각 *단위 테스트*로 표시 될 수 있습니다.
 각 단위 테스트는 일반적으로 해당 프로그램의 정확성을 확인 하는 하나 이상의 조건과 함께 작은 퀀텀 프로그램으로 구성 됩니다.
 이러한 조건은 입력 값을 확인 하는 _팩트_형식 또는 입력으로 전달 된 하나 이상의 이상 상태를 확인 하는 _어설션_형식으로 제공 될 수 있습니다.
 
@@ -109,7 +109,7 @@ using (register = Qubit()) {
 따라서 필요한 상태를 어설션할 수 있도록 서로 독립적인 세 가지 어설션을 지정 해야 합니다.
 이를 위해 $ \alpha $ 및 $ \alpha $를 지정 하 고 각각을 독립적으로 어설션하는 각 Pauli에 대 한 `Zero` 관찰 확률을 찾습니다.
 $X $, $y $ 및 $z $를 각각 Pauli $X $, $Y $ 및 $Z $ 측정값에 대 한 `Result` 값으로 사용 합니다.
-그런 다음 퀀텀 측정값에 대 한 유사도 함수를 사용 하 여 \begin{align} \Pr (x = \texttt{Zero} | \pr, \pr) & = \frac12 + a\_r b\_r + a\_i b\_\\\\ \Pr (y = \texttt{Zero} | \pr , \beta) & = \frac12 + a\_r b\_i-a\_i b\_r \\\\ \Beta (z = \texttt{Zero} | \beta, \beta) & = \frac12\left (1 + a\_r ^ 2 + a\_i ^ 2 + b\_r ^ 2 + b\_i ^ 2 \right).
+그런 다음 퀀텀 측정값에 대 한 유사도 함수를 사용 하 여 \begin{align} \Pr (x = \texttt{Zero} | \pr, \pr) & = \frac12 + a\_r b\_r + a\_i b\_\\\\ \Pr (y = \texttt{Zero} | \pr, \pr) & = \frac12 + a\_r b\_i-a\_i b\_r \\\\ \Pr (z = \texttt{Zero} | \pr, \pr) & = \frac12\left (1 + a\_r ^ 2 + a\_i ^ 2 + b\_r ^ 2 + b\_i ^ 2 \right).
 \end{align}
 
 <xref:microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance> 작업에서는 $ \alpha $ 및 $ \alpha $의 지정 된 표현이 <xref:microsoft.quantum.math.complex>형식의 값으로 지정 된 이러한 어설션을 구현 합니다.
@@ -129,7 +129,7 @@ $T $가 진화 시간을 나타내는 경우 예상 대로 ^ \aa&gt (t) = U (-t)
 
 > [!NOTE]
 > 위에 설명 된 참조 어설션은 $2n $ Choi – $ Jamiłkowski isomorphism에 대 한 $n 작업을 연결 하는 수학적 프레임 워크인 [–](https://en.wikipedia.org/wiki/Channel-state_duality)을 기반으로 작동 합니다.
-> 특히 $ \ket{\beta_{00}의 $} \mathrel{: =} (\ket{00} + \ket{11})/\sqrt{2}$로 $n $에 $n 대 한 id 작업을 나타냅니다.
+> 특히 $ \ket{\ beta_의 ${00}} \mathrel{: =} (\ket{00} + \ket{11})/\sqrt{2}$를 $n $에 $n 대 한 id 작업을 나타냅니다.
 > 작업 <xref:microsoft.quantum.preparation.preparechoistate>이 isomorphism를 구현 하 여 지정 된 작업을 나타내는 상태를 준비 합니다.
 
 대략 이러한 전략은 시간 공간 균형에 따라 구분 됩니다.

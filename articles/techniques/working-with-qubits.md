@@ -6,12 +6,12 @@ ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.techniques.qubits
-ms.openlocfilehash: d1a8ccc9423a9a04e12bc98e3783790232b2f5d8
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 477b358c3eba58b62926b4e9094770c9741cac92
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183474"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74864256"
 ---
 # <a name="working-with-qubits"></a>이상 비트 작업 #
 
@@ -43,7 +43,7 @@ using (register = Qubit[5]) {
 
 첫째, 단일 기능 비트 Pauli 연산자 $X $, $Y $ 및 $Z $는 Q #에서 각각 `Y`형식의 내장 작업 `X`, `Z`및 `(Qubit => Unit is Adj + Ctl)`로 표시 됩니다.
 [내장 작업 및 함수](xref:microsoft.quantum.libraries.standard.prelude)에 설명 된 대로 $X $ 등의 `X`를 비트 대칭 작업으로 생각할 수 있습니다.
-이를 통해 일부 클래식 비트 $s 문자열에 대해 $ \ket{s_0 s_1 \cs_n} $ 형식의 상태를 준비할 수 있습니다.
+이를 통해 일부 기존 비트 문자열 $s $에 대해 $ \ket{s_0 s_1 \dots . s_n} $ 형식의 상태를 준비할 수 있습니다.
 
 ```qsharp
 operation PrepareBitString(bitstring : Bool[], register : Qubit[]) : Unit 
@@ -72,7 +72,7 @@ operation Example() : Unit {
 > [!TIP]
 > 나중에이 작업을 작성 하는 보다 간단한 방법으로 수동 흐름 제어를 요구 하지 않습니다.
 
-\Ket transform{0} $를 사용 하 여 $ \ket{+} = \left (\ket{0} + \ket{1}\left)/\left{2}$ 및 $ \ket{-} = \left (\ket{1}-Hadamard{2}\left)/\left $H $와 같은 상태를 준비할 수도 있습니다. : Q #에서 내장 작업으로 표시 되는 `H : (Qubit => Unit is Adj + Ctl)`:
+\Ket transform{0} $를 사용 하 여 $ \ket{+} = \left (\ket{0} + \ket{1}\left)/\left{2}$ 및 $ \ket{-} = \left (\ket{1}-Hadamard{2}\left)/\left $H $와 같은 상태를 준비할 수도 있습니다.
 
 ```qsharp
 operation PreparePlusMinusState(bitstring : Bool[], register : Qubit[]) : Unit {
@@ -90,7 +90,7 @@ operation PreparePlusMinusState(bitstring : Bool[], register : Qubit[]) : Unit {
 
 ## <a name="measurements"></a>측정값 ##
 
-기본 제공 되는 내장 형식이 아닌 작업 인 `Measure` 작업을 사용 하 여 `Qubit` 형식의 개체에서 클래식 정보를 추출 하 고, 값이 예약 된 `Result`형식이 포함 된 기존 값을 할당 하 여 결과가 아니요 임을 나타낼 수 있습니다. 퀀텀 상태가 깁니다. `Measure`에 대 한 입력은 `Pauli` 형식의 개체 (예: `PauliX`) 및 `Qubit`형식의 개체에 의해 표현 되는 Bloch 구의 Pauli 축입니다. 
+기본 제공 되는 내장 형식이 아닌 작업 인 `Measure` 작업을 사용 하 여 `Qubit` 형식의 개체에서 클래식 정보를 추출 하 고 `Result`예약 된 형식이 포함 된 기존 값을 할당 하 여 결과가 더 이상 퀀텀 상태가 아님을 나타냅니다. `Measure`에 대 한 입력은 `Pauli` 형식의 개체 (예: `PauliX`) 및 `Qubit`형식의 개체에 의해 표현 되는 Bloch 구의 Pauli 축입니다. 
 
 간단한 예는 $ \ket{0}$ 상태에서 하나 비트를 만든 다음 Hadamard gate ``H``를 적용 한 다음 `PauliZ` 기준으로 결과를 측정 하는 다음 작업입니다. 
 
@@ -129,7 +129,7 @@ operation AllMeasurementsZero (qs : Qubit[], pauli : Pauli) : Bool {
 }
 ```
 
-Q # 언어를 사용 하면 기존 제어 흐름에 대 한 종속성을 사용 하 여 값을 측정할 수 있습니다. 이를 통해에서는 unitaries 구현을 위한 계산 비용을 줄일 수 있는 강력한 확률 가젯을 구현할 수 있습니다. 예를 들어, Q #의 *반복* 을 구현 하는 것이 더 쉽습니다. Q #의 경우에는 기본 게이트 측면에서 *예상 되* 는 저비용의 확률 회로 이지만 실제 실행 및 실제 가능한 다양 한 branchings 인터리브. 
+Q # 언어를 사용 하면 기존 제어 흐름에 대 한 종속성을 사용 하 여 값을 측정할 수 있습니다. 이를 통해에서는 unitaries 구현을 위한 계산 비용을 줄일 수 있는 강력한 확률 가젯을 구현할 수 있습니다. 예를 들어, Q #의 *반복* 을 구현 하는 것은 간단 합니다. Q #의 경우에는 기본 게이트를 기준으로 낮은 비용을 *예상* 하는 확률 회로 이지만 실제 실행 및 가능한 여러 가지 branchings의 실제 인터리브에 따라 실질적인 비용이 달라 집니다. 
 
 반복-성공 (RUS) 패턴을 용이 하 게 하기 위해 Q #에서 구문을 지원 합니다.
 ```qsharp
@@ -167,7 +167,7 @@ operation RUScircuit (qubit : Qubit) : Unit {
 
 이 예에서는 전체 반복 전-픽스업 루프의 범위에 있고 루프에서 초기화 되 고 픽스업 단계에서 업데이트 되는 변경 가능한 변수 `finished`를 사용 하는 방법을 보여 줍니다.
 
-마지막으로, $ \ket{+} $ 상태에서 시작 하 여 퀀텀 상태 $ \frac{1}{\sqrt{3}} \left (\sqrt{2}\ket{0}+ \ket{1}\right) $를 준비 하는 RUS 패턴의 예를 보여 줍니다. [표준 라이브러리와 함께 제공 되는 단위 테스트 샘플](https://github.com/Microsoft/Quantum/blob/master/Samples/src/UnitTesting/RepeatUntilSuccessCircuits.qs)도 참조 하세요. 
+마지막으로, $ \ket{+} $ 상태에서 시작 하 여 퀀텀 상태 $ \frac{1}{\sqrt{3}} \left (\sqrt{2}\ket{0}+ \ket{1}\right) $를 준비 하는 RUS 패턴의 예를 보여 줍니다. [표준 라이브러리와 함께 제공 되는 단위 테스트 샘플](https://github.com/microsoft/Quantum/blob/master/samples/diagnostics/unit-testing/RepeatUntilSuccessCircuits.qs)도 참조 하세요. 
 
 ```qsharp
 operation RepeatUntilSuccessStatePreparation( target : Qubit ) : Unit {
@@ -212,4 +212,4 @@ operation RepeatUntilSuccessStatePreparation( target : Qubit ) : Unit {
 }
 ```
  
-이 작업에 표시 되는 주목할 만한 프로그래밍 기능은 퀀텀 작업과 관련 된 루프의 보다 복잡 한 `fixup` 부분으로, `AssertProb` 문을 사용 하 여 특정 특정 지점에서 퀀텀 상태를 측정 하는 확률을 확인할 수 있습니다. 프로그램별. `Assert` 및 `AssertProb` 문에 대 한 자세한 내용은 [테스트 및 디버깅](xref:microsoft.quantum.techniques.testing-and-debugging) 을 참조 하세요. 
+이 작업에 표시 되는 주목할 만한 프로그래밍 기능은 퀀텀 작업과 관련 된 루프의 더 복잡 한 `fixup` 부분으로, `AssertProb` 문을 사용 하 여 프로그램의 특정 지점에서 퀀텀 상태를 측정 하는 확률을 확인 합니다. `Assert` 및 `AssertProb` 문에 대 한 자세한 내용은 [테스트 및 디버깅](xref:microsoft.quantum.techniques.testing-and-debugging) 을 참조 하세요. 

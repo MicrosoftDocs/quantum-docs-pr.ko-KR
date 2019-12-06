@@ -6,12 +6,12 @@ uid: microsoft.quantum.libraries.characterization
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: d77085aa8aa83c18858056bab1858d990efdb36e
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 1eb48da9d4ae2a730019e2707dcb2c69b998491e
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73185565"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74864375"
 ---
 # <a name="quantum-characterization-and-statistics"></a>퀀텀 특성화 및 통계 #
 
@@ -30,7 +30,7 @@ ms.locfileid: "73185565"
 ## <a name="iterative-phase-estimation"></a>반복 단계 예측 ##
 
 퀀텀 용어를 기준으로 퀀텀 프로그래밍을 보면 퀀텀 단계 추정에 대 한 유용한 대안이 될 수 있습니다.
-즉, 퀀텀 단계 추정에서와 같이 단계의 이진 표현을 포함 하도록 $-hbit 레지스터 $n을 준비 하는 대신, *기존* 에이전트가 다음을 통해 퀀텀 시스템의 속성을 학습 하는 프로세스로 단계 예측을 볼 수 있습니다. 값.
+즉, 퀀텀 단계 추정에서와 같이 단계의 이진 표현을 포함 하도록 $-hbit 레지스터 $n을 준비 하는 대신, *기존* 에이전트가 측정값을 통해 퀀텀 시스템의 속성을 학습 하는 프로세스로 단계 예측을 볼 수 있습니다.
 Kickback 단계를 사용 하 여 블랙 박스 작업의 응용 프로그램을 알 수 없는 각도 만큼 회전으로 전환 하는 퀀텀 사례에서 작업을 진행 하면서 각 단계에서 회전 직후 회전 하는 ancilla를 측정 합니다.
 이는 퀀텀 사례에 설명 된 단계를 수행 하는 데 하나의 추가 kickback 필요 하지만 반복적인 방식으로 각 단계의 측정 결과에서 단계를 알아보는 것입니다.  
 아래에서 제안 하는 각 방법은 실험을 설계 하 고 다양 한 데이터 처리 방법을 사용 하 여 단계를 학습할 수 있는 다른 전략을 사용 합니다.  각 사용자에 게는 엄격한 오류 범위를 포함 하는 것부터 이전 정보를 포함 하는 기능, 오류를 허용 하거나 메모리 limitted 클래식 컴퓨터에서 실행 하는 기능에 이르기까지 고유한 이점이 있습니다.
@@ -39,7 +39,7 @@ Kickback 단계를 사용 하 여 블랙 박스 작업의 응용 프로그램을
 Oracles의 [데이터 구조](xref:microsoft.quantum.libraries.data-structures)에 대 한 섹션에 설명 된 대로 튜플 형식으로 정의 된 <xref:microsoft.quantum.oracles.discreteoracle> 사용자 정의 형식에의 한 Q # 라고 모델은 `((Int, Qubit[]) => Unit : Adjoint, Controlled)`합니다.
 구체적으로 인 `U : DiscreteOracle`경우에는 `m : Int`에 대 한 $U ^ m $을 구현 `U(m)`.
 
-이 정의를 사용 하 여 반복 단계 예측의 각 단계는 초기 상태 $ \ket{\phi} $와 함께 $ \ket{+} $ 상태에서 보조 비트를 준비 하 여 진행 됩니다 .이는 $U [eigenvector](xref:microsoft.quantum.concepts.matrix-advanced) (m) $, 즉 $U (m) \ket{\phi} = e ^ {im\em}입니다. \ket{\phi} $.  
+이 정의를 사용 하 여 반복 단계 예측의 각 단계는 초기 상태 $ \ket{\phi} $와 함께 $ \ket{+} $ 상태에서 보조 비트를 준비 하 여 진행 됩니다 .이는 $U [eigenvector](xref:microsoft.quantum.concepts.matrix-advanced) (m) $, 즉 $U (m) \ket{\phi} = e ^ {im\eml\ k {\ l o} $입니다.  
 그런 다음 `U(m)`의 제어 된 응용 프로그램을 사용 하 여 $ \left (R\_1 (m \left) \ket{+} \left) $ 상태를 준비 합니다.
 퀀텀 사례에서와 같이 oracle `U(m)` 제어 되는 응용 프로그램의 영향은 $ \ket{+} $에서 알 수 없는 단계에 대해 $R _1 $을 적용 하는 것과 정확 하 게 동일 합니다 .이에 따라 $U $의 효과를 보다 간단한 방식으로 설명할 수 있습니다.
 필요에 따라이 알고리즘은 \ket{\psi} (-m\theta) $을 $R 적용 하 여 상태 $ = \left (R\_1 (m [\phi-\theta]) \ket{+} \right) \ket{\phi} $ $를 가져와 컨트롤을 회전 합니다.
@@ -47,17 +47,17 @@ Oracles의 [데이터 구조](xref:microsoft.quantum.libraries.data-structures)�
 
 이 시점에서 반복 단계 예측을 통해 얻은 `Result` 값에서 단계를 다시 생성 하는 것은 기존 통계 유추 문제입니다.
 고정 유추 방법이 제공 되는 경우 얻은 정보를 최대화 하는 $m $ 값을 찾는 것은 단순히 통계의 문제입니다.
-이 기존 유추를 해결 하기 위해 Q # 라고에서 제공 되는 통계 알고리즘을 설명 하기 전에 Bayesian 매개 변수 추정 정해진 이론적 수준에서 반복적 단계 예측을 간략하게 설명 하 여이를 강조 합니다. 문제의.
+이 기존 유추 문제를 해결 하기 위해 Q # 라고에서 제공 된 통계 알고리즘을 설명 하기 전에 Bayesian 매개 변수 추정 정해진 이론적 수준에서 반복적 단계 예측을 간략하게 설명 하 여이를 강조 합니다.
 
 ### <a name="iterative-phase-estimation-without-eigenstates"></a>Eigenstates 없이 반복 단계 예측 ###
 
 Eigenstate가 아닌 입력 상태를 제공 하는 경우 ($U (m) \ket{\phi\_j} = e ^ {im\emname\_j} $ 인 경우 단계 추정 프로세스는 단일 에너지 eigenstate에 대 한 퀀텀 상태를 명확 하 게 안내 합니다.  궁극적으로 수렴 하는 eigenstate는 관찰 된 `Result`를 생성할 가능성이 가장 높은 eigenstate입니다.
 
-특히, 한 번의 PE 단계는 \begin{align} \sum_j \sqrt{\Pr (\a\_j)} \ket{\phi\_j} \mapi\_a\_j\frac {\ sqrt {\ Pr (\a\_j)} \sqrt{\Pr (\text{Result} | \)에 대해 다음과 같은 비 단일 변환을 수행 합니다. 화\_j)} \ket{\phi\_j}} {\sqrt{\Pr (\\a\_j) \ sum\_j \Pr (\text{Result} | \a\_j)}}.
-\end{align} 여러 `Result` 값에 대해이 프로세스가 반복 되므로 $ \prod_k\Pr (\text{Result}\_k | \a\_j) $의 최대 값이 없는 eigenstates는 계속 해 서 표시 되지 않습니다.
+특히, PE의 단일 단계는 상태 \begin{align} \ sum_j \sqrt{\Pr (\a\_j)} \ket{\phi\_j} \maps\\a\a\_j\frac {\ sqrt {\ Pr (\_\\aaj)}에 대해 다음과 같은 비 단일 변환을 수행 합니다. \sqrt{\Pr (\text{Result} | \a\_j)} \ket{\phi\_j}} {\sqrt{\Pr (\\a\_j) \sum\_j \Pr (\text{Result} | \\a\_j)}}.
+이 프로세스가 여러 `Result` 값에 대해 반복 되는 것으로 \end{align}, 최대 값이 $ \ prod_k \Pr (\text{Result}\_k | \\a\_j) $ 인 eigenstates는 계속 해 서 표시 되지 않습니다.
 따라서 실험을 제대로 선택 하면 유추 프로세스는 단일 eigenvalue를 사용 하 여 상태로 수렴 하는 경향이 있습니다.
 
-Bayes ' 정리 \begin{align} \frac{\sqrt{\Pr (\\a\_j)} \sqrt{\Pr (\text{Result} |\_\\\\\ket{\phi j)}\_j}} {\sqrt{\Pr (\\a\_j) \ sum\_j \Pr (\text{Result} | \s\_j)}} = \sum_j \sqrt{\Pr (\a\_j | \text{Result})} \ket{\phi\_j}입니다.
+Bayes ' 정리 \begin{align} \frac{\sqrt{\Pr (\a\_j)} \sqrt{\Pr (\text{Result} | \a\_j)} \ket{\phi\_j}} {\sqrt{s로 생성 되는 상태를 추가로 제안 합니다. \Phi (\a\_j) \phi\_j \Phi (\text{Result} | \a\_j)}} = \ sum_j \sqrt{\Pr (\aa\_j | \text{Result})} \ket{\phi\_j}.
 \end{align} 여기 $ \Pr (\a\_j | \text{Result}) $는 지정 된 eigenstates에 대 한 각 가설에 ascribe 확률로 interpretted 수 있습니다.
 
 1. 측정 전의 퀀텀 상태에 대 한 지식
@@ -71,7 +71,7 @@ Bayes ' 정리 \begin{align} \frac{\sqrt{\Pr (\\a\_j)} \sqrt{\Pr (\text{Result} 
 ### <a name="bayesian-phase-estimation"></a>Bayesian 단계 예측 ###
 
 > [!TIP]
-> Bayesian 단계 예측에 대 한 자세한 내용은 [**PhaseEstimation**](https://github.com/Microsoft/Quantum/tree/master/Samples/src/PhaseEstimation) 샘플을 참조 하세요.
+> Bayesian 단계 예측에 대 한 자세한 내용은 [**PhaseEstimation**](https://github.com/microsoft/Quantum/tree/master/samples/characterization/phase-estimation) 샘플을 참조 하세요.
 
 Bayesian 단계 추정의 개념은 간단 합니다.
 단계 추정 프로토콜에서 측정 통계를 수집한 다음 Bayesian 유추를 사용 하 여 결과를 처리 하 고 예상 된 매개 변수를 제공 합니다.
@@ -82,15 +82,15 @@ Bayesian 단계 추정의 개념은 간단 합니다.
 이 Bayesian 유추 프로세스가 작동 하는 방식을 이해 하려면 단일 `Zero` 결과를 처리 하는 경우를 고려 합니다.
 $X = \ket{+} \bra{+}-\ket{-}\bra{-}$와 같이 $ \ket{+} $는 `Zero`에 해당 하는 $X $의 유일한 긍정 eigenstate입니다.
 입력 상태 $ \ket{\psi}\ket{\phi} $로 지정 된 첫 번째 [값에서`PauliX` 측정](xref:microsoft.quantum.concepts.pauli) 에 대 한 `Zero`를 관찰 하는 확률에 대 한 확률 \braket{+ | \psi} \right | ^ 2.
-\end{equation} 반복적인 단계 예측의 경우 $ \ket{\psi} = R_1 (m [\phi-\theta]) \ket{+} $ (\begin{align} \Pr (\texttt{Zero} | \asa, m, \테타) & = \left | \braket{+ | R_1 (m [\phi-\theta]) | +} \right | ^ 2 \\\\ & = \right | \frac12 \left (\bra{0} + \bra{1} \left) \left (\ket{0} + e ^ {i m [\phi-\theta]} \ket{1} \left) \left | ^ 2 \\\\ & = \left | \frac{1 + e ^ {i m [\phi-\theta]}{2} \right | ^ 2 \\\\ & = \right ^ 2 (m [\phi-\theta]/2) \tag{★} \label{eq:}.
+\end{equation} 반복적인 단계 예측의 경우 $ \ket{\psi} = R_1 (m [\phi-\theta]) \ket{+} $ (\begin{align} \Pr (\texttt{Zero} | \\asa; m, \테타) & = \left | \braket{+ | R_1 (m [\phi-\theta]) | +} \right | ^ 2 \\\\ & = \right | \frac12 \left (\bra{0} + \bra{1} \left) \left (\ket{0} + e ^ {i m [\phi-\theta]} \ket{1} \left) \left | ^ 2 \\\\ & = \left | \frac{1 + e ^ {i m [\phi-\theta]}{2} \right | ^ 2 \\\\ & = \right ^ 2 (m [\phi-\theta]/2) \tag{★} \label{eq:}.
 \end{align} 반복 단계 추정은 해당 sinusoid로 지정 된 바이어스로 동전을 대칭 이동 하는 기능을 제공 하 여 사인 곡선 함수의 진동 범위가 빈도를 학습 하는 것으로 구성 됩니다.
 기존의 기존 용어에 따라 $ \eqref{eq:} $는 반복적인 단계 예측에 대 한 *가능성 함수* 를 호출 합니다.
 
 반복 단계 예측 가능성 함수에서 `Result`를 관찰 한 후에는 Bayes ' 규칙을 사용 하 여 이러한 관찰을 수행 해야 하는 단계를 규정 하 고 있습니다.
-구체적으로, \begin{equation} \A\\\\\\\\frac{\Pr (d | \) \Pr (\aa>} {\int \Pr (d | \\a) \Pr (\aa) {\mathrm d} \phi} \Aa> \begin{equation} 여기서 $d \cin \\{\texttt{Zero}, \texttt{One}\\} $는 `Result`이 고 $ \\신념 $에 대 한 이전 의견을 설명 합니다.
+Concretely, \begin{equation} \Pr(\phi | d) = \frac{\Pr(d | \phi) \Pr(\phi)}{\int \Pr(d | \phi) \Pr(\phi){\mathrm d}\phi} \Pr(\phi), \end{equation} where $d \in \\{\texttt{Zero}, \texttt{One}\\}$ is a `Result`, and where $\Pr(\phi)$ describes our prior beliefs about $\phi$.
 그러면 사후 배포 $ \Pr (\\a| d) $에서 신념에 대 한 자세한 내용은 다음 `Result`에 대 한 앞 즉시 설명 하기 때문에 반복적인 단계 예측의 반복적인 특성을 명시적으로 만듭니다.
 
-이 절차를 수행 하는 동안 언제 든 지 클래식 컨트롤러에서 유추 된 $ \hat{\phi} $ 단계를 \begin{equation} \hat{\phi} \mathrel{: =} \로 보고할 수 있습니다. [\\a| \text{data}] = \int \Las\pr (\\a| \text{data}) {\mathrm d} \\\a\a\ 텍스트 {data} $는 가져온 모든 `Result` 값의 전체 레코드를 나타냅니다.
+이 절차를 수행 하는 동안 언제 든 지 클래식 컨트롤러에서 유추 된 $ \hat{\phi} $ 단계를 \begin{equation} \hat{\phi} \mathrel{로 보고할 수 있습니다. =} \ [\\a| \text{data}] = \int \Las\pr (\laa| \text{data}) {\mathrm d} \\a\ariation} where $ \text{data} $는 가져온 모든 `Result` 값의 전체 레코드를 나타냅니다.
 
 정확한 Bayesian 유추는 실제로 intractable입니다.
 이에 대 한 자세한 내용은 $ 비트 변수 $x $를 $n 합니다.
@@ -104,12 +104,12 @@ $X = \ket{+} \bra{+}-\ket{-}\bra{-}$와 같이 $ \ket{+} $는 `Zero`에 해당 �
 
 효율적인 기존 사후 처리 단계를 사용 하는 예 중 하나는 위에 언급 된 시그니처와 입력이 있는 [강력한 단계 추정 알고리즘](https://arxiv.org/abs/1502.02677)입니다. 입력 된 단일 블랙 박스 $U $가 `DiscreteOracle` 형식으로 패키지 되는 것으로 가정 합니다. 따라서 정수는 제어 된 $U $로만 쿼리 합니다. `Qubit[]` 레지스터의 입력 상태가 eigenstate $U \ket{\psi} = e ^ {i\em} \ k {\ psi} $ 인 경우, 강력한 단계 추정 알고리즘은 $ \eml$의 예상 $ \hat{\phi}\in [-\pi, \pi) $를 `Double`로 반환 합니다.
 
-가장 많이 사용 되는 다른 변형에서 공유 되는 강력한 단계 추정의 가장 중요 한 기능은 $ \hat{\phi} $의 재구성 품질이 Heisenberg 제한 되어 있다는 것입니다. 즉, 값이 $ \sigma $ 인 $ \hat{\phi} $의 편차가 $ \sigma $ 인 경우 $ \sigma $는 $U $ (예: $ \sigma = \mathcal{O} (1/Q) $로 만든 $Q 총 쿼리 수에 반비례 하 게 비례 합니다. 이제 편차에 대 한 정의는 예측 알고리즘 마다 다릅니다. 경우에 따라 $ \mathcal{O} (1) $ probability를 사용 하는 경우 예상 오류 $ | \hat{\phi}-\phi |를 의미할 수 있습니다. \circ\le \sigma $를 일부 순환 측정값 $ \sigma $에\_합니다. 강력한 단계 예측의 경우 편차는 일정 한 간격으로 \mathbb{E}을 정확 하 게 분산 하는 것은 $ \sigma ^ 2 =\_\hat{\phi} [(\sigma\_{2 \ pi} (\hat{\phi}-\phi + \sigma)-\sigma) ^ 2] $입니다. 좀 더 정확 하 게 말하자면, 강력한 단계 추정의 표준 편차는 같지 $ $ \begin{align} 2.0 \dpi/Q \pi \pi 2le 2 \ pi/2 ^ {n} \pi 10.7 \ pi/Q, \end{align} $ $에 해당 합니다. 여기서 하한값은 asymptotically $Q 큼 범위는 작은 샘플 크기에 대해서도 보장 됩니다.  $N $는 `bitsPrecision` 입력으로 선택 되며, $Q $를 암시적으로 정의 합니다.
+가장 많이 사용 되는 다른 변형에서 공유 되는 강력한 단계 추정의 가장 중요 한 기능은 $ \hat{\phi} $의 재구성 품질이 Heisenberg 제한 되어 있다는 것입니다. 즉, 값이 $ \sigma $ 인 $ \hat{\phi} $의 편차가 $ \sigma $ 인 경우 $ \sigma $는 $U $ (예: $ \sigma = \mathcal{O} (1/Q) $로 만든 $Q 총 쿼리 수에 반비례 하 게 비례 합니다. 이제 편차에 대 한 정의는 예측 알고리즘 마다 다릅니다. 경우에 따라 $ \mathcal{O} (1) $ probability를 사용 하는 경우 예상 오류 $ | \hat{\phi}-\phi |를 의미할 수 있습니다. \circ\le \sigma $를 일부 순환 측정값 $ \sigma $에\_합니다. 강력한 단계 예측의 경우 편차는 일정 한 간격으로 \mathbb{E}을 정확 하 게 분산 하는 것은 $ \sigma ^ 2 =\_\hat{\phi} [(\sigma\_{2 \ pi} (\hat{\phi}-\phi + \sigma)-\sigma) ^ 2] $입니다. 좀 더 정확 하 게 말하자면, 강력한 단계 추정의 표준 편차는 같지 $ $ \begin{align} 2.0 \pi/Q \pi \pi \pi 2 \ pi/2 ^ {n} \pi 10.7 \ pi/Q, \end{align} $ $를 충족 합니다. 여기서 하한값은 asymptotically large $Q $로 제한 되며, 상한값은 작은 샘플 크기에 대해서도 보장 됩니다.  $N $는 `bitsPrecision` 입력으로 선택 되며, $Q $를 암시적으로 정의 합니다.
 
 그 밖의 관련 세부 정보에는 $1 $ ancilla?의 작은 공간 오버 헤드 또는 프로시저가 비 적응 (예를 들어, 퀀텀 실험의 필수 시퀀스는 중간 측정 결과와 무관)이 있습니다. 단계 추정 알고리즘의 선택이 중요 한이 예제와 향후 예제에서는 @"microsoft.quantum.canon.robustphaseestimation"와 같은 설명서를 참조 하 고 해당 구현에 대 한 참조 된 게시를 참조 해야 합니다.
 
 > [!TIP]
-> 강력한 단계 예측을 사용 하는 많은 샘플이 있습니다. 다양 한 물리적 시스템의 그라운드 상태 에너지를 추출 하는 단계를 예측 하려면 [ **H2 시뮬레이션** 샘플](https://github.com/Microsoft/Quantum/tree/master/Samples/src/H2SimulationCmdLine), [ **simpleising** 샘플](https://github.com/Microsoft/Quantum/tree/master/Samples/src/SimpleIsing)및 [ **model** 샘플](https://github.com/Microsoft/Quantum/tree/master/Samples/src/HubbardSimulation)을 참조 하세요.
+> 강력한 단계 예측을 사용 하는 많은 샘플이 있습니다. 다양 한 물리적 시스템의 그라운드 상태 에너지를 추출 하는 단계를 예측 하려면 [ **H2 시뮬레이션** 샘플](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line), [ **simpleising** 샘플](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/simple)및 [ **model** 샘플](https://github.com/microsoft/Quantum/tree/master/samples/simulation/hubbard)을 참조 하세요.
 
 
 ### <a name="continuous-oracles"></a>연속 Oracles ###
@@ -121,7 +121,7 @@ $X = \ket{+} \bra{+}-\ket{-}\bra{-}$와 같이 $ \ket{+} $는 `Zero`에 해당 �
 $H $의 eigenstate $ \ket{\phi} $는 $H \ket{\phi} = \em\ket{\phi} $이 고 모든 $t $, \begin{station} U (t) \ket{\phi} = e ^ {\\emt} \ket{\phi}.에 대 한 $U (t) $의 eigenstate 이기도 합니다.
 \end{equation}
 
-[Bayesian 단계 예측](#bayesian-phase-estimation) 에 대해 설명한 것과 정확히 동일한 분석을 적용할 수 있으며,이 함수는 보다 일반적인 oracle 모델인 $ $ \Pr (\texttt{Zero} | \\; t, \pr) = \pr ^ 2 \ left (\frac{t [\\an\테타]} @no__ t_1_ \right).
+[Bayesian 단계 예측](#bayesian-phase-estimation) 에 대해 설명한 것과 정확히 동일한 분석을 적용할 수 있으며,이 함수는 보다 일반적인 oracle 모델인 $ $ \Pr (\texttt{Zero} | \\; t, \pr) = \pr ^ 2 \ left (\frac{t [\\an\테타]}{2}\pr)와 정확히 동일 합니다.
 $ $ 또한 [Hamiltonian 시뮬레이션](xref:microsoft.quantum.libraries.applications#hamiltonian-simulation)의 경우와 마찬가지로 $ 동적 생성기의 시뮬레이션 인 $U 경우 $ \aa$를 에너지로 해석 합니다.
 따라서 연속 쿼리를 사용 하 여 단계 예측을 사용 하면 $t $를 정수로 요구 하 여 선택한 [실험을 손상](https://arxiv.org/abs/1510.03859) [시 키 지](https://arxiv.org/abs/1111.3633v2) 않고 시뮬레이션 된 [에너지 스펙트럼의](https://arxiv.org/abs/quant-ph/0604193)시뮬레이션을 molecules 수 있습니다.
 

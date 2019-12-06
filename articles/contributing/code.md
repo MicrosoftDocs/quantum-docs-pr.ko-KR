@@ -6,14 +6,14 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.code
-ms.openlocfilehash: cca50e6c63d4bb982aa5f0a59fc19d08ecbec508
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 3ff15a744bf15924564d5a8fee54f4fbce4c04ee
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73185905"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74864426"
 ---
-# <a name="contributing-code"></a>코드 참여 #
+# <a name="contributing-code"></a>코드 기여 #
 
 문제를 보고 하 고 설명서를 개선 하는 것 외에도 퀀텀 개발 키트에 대 한 코드는 퀀텀 프로그래밍 커뮤니티의 동료에 게 도움이 되는 매우 직접적인 방법일 수 있습니다.
 코드를 사용 하면 문제를 해결 하거나, 새 예제를 제공 하거나, 기존 라이브러리를 더 쉽게 사용할 수 있도록 하거나 완전히 새로운 기능을 추가할 수 있습니다.
@@ -30,13 +30,14 @@ ms.locfileid: "73185905"
 
 라고과 같은 라이브러리를 구성 하는 Q # 함수, 작업 및 사용자 정의 형식은 [**Microsoft/QuantumLibraries**](https://github.com/Microsoft/QuantumLibraries/) 리포지토리에서 개발의 일부로 자동으로 테스트 됩니다.
 예를 들어 새 끌어오기 요청을 열면 [Azure Pipelines](https://azure.microsoft.com/services/devops/pipelines/) 구성에서 끌어오기 요청의 변경 내용이 퀀텀 프로그래밍 커뮤니티에 의존 하는 기존 기능을 중단 하지 않았는지 확인 합니다.
-이러한 테스트는 [xunit](https://xunit.github.io/) 프레임 워크에 대 한 테스트로 Q # 함수 및 작업을 노출 하는 [Microsoft.](https://www.nuget.org/packages/Microsoft.Quantum.Xunit/) n e t. n e t. n e t.
 
-[`Standard/tests/Standard.Tests.csproj`](https://github.com/microsoft/QuantumLibraries/blob/master/Standard/tests/Standard.Tests.csproj) 는이 xunit 통합을 사용 하 여 `Test`에서 끝나는 모든 함수 또는 작업을 실행 합니다.
-예를 들어 다음 함수를 사용 하 여 <xref:microsoft.quantum.canon.fst> 및 <xref:microsoft.quantum.canon.snd> 함수가 모두 대표적인 예의 올바른 출력을 반환 하는지 확인 합니다.
+최신 Q # 버전을 사용 하 여 단위 테스트는 `@Test("QuantumSimulator")` 특성을 사용 하 여 정의 됩니다. 인수는 "QuantumSimulator", "ToffoliSimulator", "TraceSimulator" 또는 실행 대상을 지정 하는 정규화 된 이름일 수 있습니다. 다른 실행 대상을 정의 하는 여러 특성이 동일한 호출 가능에 연결 될 수 있습니다. 일부 테스트는 `Test`에서 끝나는 모든 Q # 함수 및 작업을 [xunit](https://xunit.github.io/) 프레임 워크로 노출 하는 사용 되지 않는 [Microsoft.](https://www.nuget.org/packages/Microsoft.Quantum.Xunit/) n e t. n e t 장치 패키지를 계속 사용 합니다. 이 패키지는 더 이상 단위 테스트를 정의 하는 데 필요 하지 않습니다. 
+
+다음 함수를 사용 하 여 <xref:microsoft.quantum.canon.fst> 및 <xref:microsoft.quantum.canon.snd> 함수에서 대표적인 예의 올바른 출력을 반환 하는지 확인할 수 있습니다.
 `Fst` 또는 `Snd`의 출력이 잘못 된 경우 `fail` 문을 사용 하 여 테스트 실패를 발생 시킵니다.
 
 ```qsharp
+@Test("QuantumSimulator")
 function PairTest () : Unit {
     let pair = (12, PauliZ);
 
@@ -56,6 +57,7 @@ function PairTest () : Unit {
 예를 들어 다음 테스트는 <xref:microsoft.quantum.canon.applywith>에 의해 호출 되는 `H(q); X(q); H(q);` `Z(q)`와 동일한 지 확인 합니다.
 
 ```qsharp
+@Test("QuantumSimulator")
 operation WithTest () : Unit {
     let actual = ApplyWith(H, X, _);
     let expected = Z;

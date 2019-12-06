@@ -6,12 +6,12 @@ ms.author: mamykhai@microsoft.com
 uid: microsoft.quantum.techniques.testing-and-debugging
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 25679331f1bed9f98b86c6eb20f511c891bac1af
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: d352ffa315b654cfcf8991fa116465d3dad49f0a
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183491"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74864273"
 ---
 # <a name="testing-and-debugging"></a>테스트 및 디버깅
 
@@ -30,7 +30,7 @@ Q #은 퀀텀 프로그램에 대 한 단위 테스트 만들기를 지원 하 �
 #### <a name="visual-studio-2019tabtabid-vs2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
 Visual Studio 2019를 엽니다. `File` 메뉴로 이동 하 여 `New` > `Project...`를 선택 합니다.
-프로젝트 템플릿 탐색기의 `Installed` > `Visual C#`에서 `Q# Test Project` 템플릿을 선택 합니다.
+오른쪽 위 모서리에서 `Q#`을 검색 하 고 `Q# Test Project` 템플릿을 선택 합니다.
 
 #### <a name="command-line--visual-studio-codetabtabid-vscode"></a>[명령줄/Visual Studio Code](#tab/tabid-vscode)
 
@@ -43,12 +43,13 @@ $ code . # To open in Visual Studio Code
 
 ****
 
-두 경우 모두 새 프로젝트에는 두 개의 파일이 열립니다.
-첫 번째 파일인 `Tests.qs`는 새 Q # 단위 테스트를 정의 하는 편리한 장소를 제공 합니다.
-처음에이 파일에는 새로 할당 된 \ket가 ${0}$ 상태에 있는지 확인 하 고 메시지를 인쇄 하는 하나의 샘플 단위 테스트 `AllocateQubitTest` 포함 되어 있습니다.
+새 프로젝트에는 새 Q # 단위 테스트를 정의 하는 데 편리한 장소를 제공 하는 단일 파일 `Tests.qs`포함 됩니다.
+처음에이 파일에는 새로 할당 된 \ket가 ${0}$ 상태에 있는지 확인 하 고 메시지를 인쇄 하는 하나의 샘플 단위 테스트 `AllocateQubit` 포함 되어 있습니다.
 
 ```qsharp
-    operation AllocateQubitTest () : Unit {
+    @Test("QuantumSimulator")
+    operation AllocateQubit () : Unit {
+
         using (q = Qubit()) {
             Assert([PauliZ], [q], Zero, "Newly allocated qubit must be in the |0⟩ state.");
         }
@@ -57,28 +58,16 @@ $ code . # To open in Visual Studio Code
     }
 ```
 
-`(Unit -> Unit)`과 호환 되는 형식 `(Unit => Unit)` 또는 함수와 호환 되는 모든 Q # 작업을 단위 테스트로 실행할 수 있습니다. 
-
-두 번째 파일인 `TestSuiteRunner.cs`에는 Q # 단위 테스트를 검색 하 고 실행 하는 메서드가 포함 되어 있습니다. `OperationDriver` 특성으로 주석이 지정 된 `TestTarget` 메서드입니다.
-`OperationDriver` 특성은 Xunit 확장 라이브러리의 일부입니다. x x x. x x x.
-단위 테스트 프레임 워크는 검색 된 모든 Q # 단위 테스트에 대 한 `TestTarget` 메서드를 호출 합니다.
-프레임 워크는 `op` 인수를 통해 단위 테스트 설명을 메서드에 전달 합니다. 다음 코드 줄:
-```csharp
-op.TestOperationRunner(sim);
+: new: `Unit` 형식의 인수를 사용 하 고 `Unit`를 반환 하는 모든 Q # 작업 또는 함수는 `@Test("...")` 특성을 통해 단위 테스트로 표시 될 수 있습니다. 위의 `"QuantumSimulator"` 해당 특성에 대 한 인수는 테스트가 실행 되는 대상을 지정 합니다. 단일 테스트를 여러 대상에서 실행할 수 있습니다. 예를 들어 `AllocateQubit`위의 `@Test("ResourcesEstimator")` 특성을 추가 합니다. 
+```qsharp
+    @Test("QuantumSimulator")
+    @Test("ResourcesEstimator")
+    operation AllocateQubit () : Unit {
+        ...
 ```
-`QuantumSimulator`에서 단위 테스트를 실행 합니다.
+파일을 저장 하 고 모든 테스트를 실행 합니다. 이제 두 개의 단위 테스트가 있습니다. 여기에는 AllocateQuantumSimulator 비트가 실행 되 고 하나는 ResourceEstimator에서 실행 됩니다. 
 
-기본적으로 단위 테스트 검색 메커니즘은 다음 속성을 충족 하는 모든 Q # 함수 또는 호환 되는 형식의 작업을 찾습니다.
-* `OperationDriver` 특성으로 주석이 지정 된 메서드와 동일한 어셈블리에 있습니다.
-* `OperationDriver` 특성으로 주석이 지정 된 메서드와 동일한 네임 스페이스에 있습니다.
-* 이름이 `Test`로 끝나는 경우
-
-어셈블리, 네임 스페이스 및 단위 테스트 함수 및 작업에 대 한 접미사는 `OperationDriver` 특성의 선택적 매개 변수를 사용 하 여 설정할 수 있습니다.
-* `AssemblyName` 매개 변수는 테스트를 위해 검색 중인 어셈블리의 이름을 설정 합니다.
-* `TestNamespace` 매개 변수는 테스트를 위해 검색 중인 네임 스페이스의 이름을 설정 합니다.
-* `Suffix`는 단위 테스트로 간주 되는 작업 또는 함수 이름의 접미사를 설정 합니다.
-
-또한 선택적 매개 변수 `TestCasePrefix` 사용 하 여 테스트 사례의 이름에 대 한 접두사를 설정할 수 있습니다. 작업 이름 앞에 있는 접두사는 테스트 사례 목록에 표시 됩니다. 예를 들어 `TestCasePrefix = "QSim:"`는 검색 된 테스트 목록에서 `AllocateQubitTest`을 `QSim:AllocateQubitTest`으로 표시 합니다. 이는 예를 들어 테스트를 실행 하는 데 사용 되는 시뮬레이터를 표시 하는 데 유용할 수 있습니다.
+Q # 컴파일러는 기본 제공 대상 "QuantumSimulator", "ToffoliSimulator" 및 "ResourcesEstimator"를 단위 테스트에 대 한 올바른 실행 대상으로 인식 합니다. 또한 사용자 지정 실행 대상을 정의 하는 정규화 된 이름을 지정할 수 있습니다. 
 
 ### <a name="running-q-unit-tests"></a>Q # 단위 테스트 실행
 
@@ -90,7 +79,7 @@ op.TestOperationRunner(sim);
 > Visual Studio의 기본 프로세서 아키텍처 설정은 각 솔루션에 대 한 솔루션 옵션 (`.suo`) 파일에 저장 됩니다.
 > 이 파일을 삭제 하는 경우 프로세서 아키텍처로 `X64`을 다시 선택 해야 합니다.
 
-프로젝트를 빌드하고 `Test` 메뉴로 이동 하 여 `Windows` > `Test Explorer`를 선택 합니다. `AllocateQubitTest` `Not Run Tests` 그룹의 테스트 목록에 표시 됩니다. `Run All`를 선택 하거나이 개별 테스트를 실행 하 고 통과 해야 합니다.
+프로젝트를 빌드하고 `Test` 메뉴로 이동 하 여 `Windows` > `Test Explorer`를 선택 합니다. `AllocateQubit` `Not Run Tests` 그룹의 테스트 목록에 표시 됩니다. `Run All`를 선택 하거나이 개별 테스트를 실행 하 고 통과 해야 합니다.
 
 #### <a name="command-line--visual-studio-codetabtabid-vscode"></a>[명령줄/Visual Studio Code](#tab/tabid-vscode)
 
@@ -122,30 +111,17 @@ Test Run Successful.
 Test execution time: 1.9607 Seconds
 ```
 
+단위 테스트는 이름 및/또는 실행 대상에 따라 필터링 할 수 있습니다.
+
+```bash 
+$ dotnet test --filter "Target=QuantumSimulator"
+$ dotnet test --filter "Name=AllocateQubit"
+```
+
+
 ***
 
-## <a name="logging-and-assertions"></a>로깅 및 어설션
-
-Q #의 함수는 의도 하지 않은 동작의 한 가지 중요 한 결과 이며, 출력 형식이 빈 튜플 인 함수를 실행 하는 경우에는 Q # 프로그램 내에서 관찰 하지 못할 수 `()`.
-즉, 대상 컴퓨터는 이러한 누락으로 인 한 `()` 반환 하는 함수를 실행 하지 않도록 선택할 수 있습니다 .이는 다음 Q # 코드의 동작을 수정 하지 않습니다.
-이를 통해 함수는 어설션 및 디버깅 논리를 Q # 프로그램에 포함 하는 데 유용한 도구를 `()` 반환 합니다. 
-
-### <a name="logging"></a>로깅
-
 내장 함수 <xref:microsoft.quantum.intrinsic.message>에는 `(String -> Unit)` 형식이 있으며 진단 메시지를 만들 수 있습니다.
-
-`QuantumSimulator`의 `onLog` 작업을 사용 하 여 Q # 코드에서 `Message`를 호출할 때 수행 되는 작업을 정의할 수 있습니다. 기본적으로 기록 된 메시지는 표준 출력으로 출력 됩니다.
-
-단위 테스트 도구 모음을 정의 하는 경우 기록 된 메시지를 테스트 출력으로 보낼 수 있습니다. Q # 테스트 프로젝트 템플릿에서 프로젝트를 만든 경우이 리디렉션은 도구 모음에 대해 미리 구성 되며 기본적으로 다음과 같이 만들어집니다.
-
-```qsharp
-using (var sim = new QuantumSimulator())
-{
-    // OnLog defines action(s) performed when Q# test calls operation Message
-    sim.OnLog += (msg) => { output.WriteLine(msg); };
-    op.TestOperationRunner(sim);
-}
-```
 
 #### <a name="visual-studio-2019tabtabid-vs2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
@@ -156,11 +132,15 @@ using (var sim = new QuantumSimulator())
 #### <a name="command-line--visual-studio-codetabtabid-vscode"></a>[명령줄/Visual Studio Code](#tab/tabid-vscode)
 
 각 테스트에 대 한 통과/실패 상태는 `dotnet test`하 여 콘솔에 출력 됩니다.
-실패 한 테스트의 경우 위의 `output.WriteLine(msg)` 호출 결과로 기록 된 출력도 콘솔에 출력 되어 오류를 진단 하는 데 도움이 됩니다.
+실패 한 테스트의 경우 출력은 오류를 진단 하는 데 도움이 되도록 콘솔에도 출력 됩니다.
 
 ***
 
-### <a name="assertions"></a>어설션을
+## <a name="assertions"></a>어설션
+
+Q #의 함수에는 _논리적인_ 부작용이 없으므로 출력 형식이 빈 튜플 인 함수를 실행 하는 _다른 종류_ 의 효과는 Q # 프로그램 내에서 관찰 될 수 `()`.
+즉, 대상 컴퓨터는 이러한 누락으로 인 한 `()` 반환 하는 함수를 실행 하지 않도록 선택할 수 있습니다 .이는 다음 Q # 코드의 동작을 수정 하지 않습니다.
+이를 통해 함수는 어설션 및 디버깅 논리를 Q # 프로그램에 포함 하는 데 유용한 도구를 `()` 반환 합니다. 
 
 동일한 논리를 적용 하 여 어설션을 구현할 수 있습니다. 간단한 예제를 살펴보겠습니다.
 
@@ -201,9 +181,9 @@ using (register = Qubit())
 
 퀀텀 프로그램의 문제를 해결 하는 데 도움이 되도록 <xref:microsoft.quantum.diagnostics> 네임 스페이스는 대상 컴퓨터의 현재 상태 (<xref:microsoft.quantum.diagnostics.dumpmachine> 및 <xref:microsoft.quantum.diagnostics.dumpregister>)를 파일에 덤프할 수 있는 두 가지 함수를 제공 합니다. 각각의 생성 된 출력은 대상 컴퓨터에 따라 다릅니다.
 
-### <a name="dumpmachine"></a>컴퓨터 \ 컴퓨터
+### <a name="dumpmachine"></a>DumpMachine
 
-퀀텀 개발 키트의 일부로 배포 되는 전체 상태 퀀텀 시뮬레이터는 전체 퀀텀 시스템의 [wave 함수](https://en.wikipedia.org/wiki/Wave_function) 를 파일에 기록 하 고, 각 요소가 해당 값의 진폭을 나타내는 복소수의 1 차원 배열입니다. 계산 기준 상태 $ \ket{n} $를 측정할 확률 (where $ \ket{n} = \ket{b_{n-1}...) b_1b_0} $ for bits $\{b_i\}$. 예를 들어, 두 개의 om비트만 할당 된 컴퓨터에서 및 퀀텀 상태 $ $ \begin{align} \ket{\psi} = \frac{1}{\sqrt{2}} \ket{00}-\frac{(1 + i)}{2} \ket{10}, \end{align} $ $ 호출 <xref:microsoft.quantum.diagnostics.dumpmachine>이 출력을 생성 합니다. :
+퀀텀 개발 키트의 일부분으로 배포 되는 전체 상태 퀀텀 시뮬레이터는 전체 퀀텀 시스템의 [wave 함수](https://en.wikipedia.org/wiki/Wave_function) 를 파일에 기록 하 고, 각 요소가 계산 기준 상태 $ \ket{n} $를 측정할 확률의 진폭을 나타냅니다. 여기서 $ \ket{n} = \ket{b_ {n-1} ... bits $\{에 대 한 b_1b_0} $ b_i\}$. 예를 들어, 두 개의 om비트만 할당 된 컴퓨터에서 및 퀀텀 상태 $ $ \begin{align} \ket{\psi} = \frac{1}{\sqrt{2}} \ket{00}-\frac{(1 + i)}{2} \ket{10}, \end{align} $ $ 호출은이 출력을 생성 합니다.
 
 ```
 # wave function for qubits with ids (least to most significant): 0;1
@@ -333,7 +313,7 @@ namespace Samples {
 
 <xref:microsoft.quantum.diagnostics.dumpregister>은 (는) <xref:microsoft.quantum.diagnostics.dumpmachine>와 같이 작동 합니다. 단,이는 해당 하는 것과 관련 된 정보만으로 정보의 양을 제한 하는 데 사용 됩니다.
 
-<xref:microsoft.quantum.diagnostics.dumpmachine>와 마찬가지로 <xref:microsoft.quantum.diagnostics.dumpregister>에 의해 생성 되는 정보는 대상 컴퓨터에 따라 다릅니다. 전체 상태 퀀텀 시뮬레이터에 대해 wave 함수를 파일에 기록 합니다 .이 함수는 <xref:microsoft.quantum.diagnostics.dumpmachine>와 동일한 형식으로 제공 된이를 통해 생성 된 퀀텀 하위 시스템의 전역 단계까지 파일에 기록 합니다.  예를 들어 두 개의 기능이 할당 된 컴퓨터를 다시 사용 하 고 퀀텀 상태 $ $ \begin{align} \ket{\psi} = \frac{1}{\sqrt{2}} \ket{00}-\frac{(1 + i)}{2} \ket{10} =-e ^ {-i \ pi/4} ((\frac{1}{\sqrt{2}} \ k{0}-\frac{(1 + i)}{2} \ket{1}) \otimes \frac{-(1 + i)} {\sqrt{2}} \ket{0}), \end{align} $ $ <xref:microsoft.quantum.diagnostics.dumpregister>에 대 한 호출 `qubit[0]`이 출력을 생성 합니다.
+<xref:microsoft.quantum.diagnostics.dumpmachine>와 마찬가지로 <xref:microsoft.quantum.diagnostics.dumpregister>에 의해 생성 되는 정보는 대상 컴퓨터에 따라 다릅니다. 전체 상태 퀀텀 시뮬레이터에 대해 wave 함수를 파일에 기록 합니다 .이 함수는 <xref:microsoft.quantum.diagnostics.dumpmachine>와 동일한 형식으로 제공 된이를 통해 생성 된 퀀텀 하위 시스템의 전역 단계까지 파일에 기록 합니다.  예를 들어 두 개의 om비트만 할당 된 컴퓨터를 다시 사용 하 고 퀀텀 상태 $ $ \begin{align} \ket{\psi} = \frac{1}{\sqrt{2}} \ket{00}-\frac{(1 + i)}{2} \ket{10} =-e ^ {-i \ pi/4} ((\frac{1}{\sqrt{2}} \ket{0}-\frac{(1 + i)}{2} \ket{1}) \frac \frac{-(1 + i)} {\sqrt{2}} \ket{0}), \end{align} $ $ `qubit[0]`에 대 한 호출 <xref:microsoft.quantum.diagnostics.dumpregister>이 출력을 생성 합니다. :
 
 ```
 # wave function for qubits with ids (least to most significant): 0
@@ -382,7 +362,6 @@ namespace app
 
 ## <a name="debugging"></a>디버깅
 
-`Assert` 및 `Dump` 함수 및 작업을 기반으로 하는 Q #은 표준 Visual Studio 디버깅 기능의 하위 집합을 지원 합니다. [줄 중단점 설정](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints), F10 키를 [사용 하 여 코드 단계별 실행](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger) 및 [클래식 변수의 값 검사 ](https://docs.microsoft.com/visualstudio/debugger/autos-and-locals-windows)시뮬레이터에서 코드를 실행 하는 동안 가능 합니다.
+`Assert` 및 `Dump` 함수 및 작업을 기반으로 하는 Q #은 표준 Visual Studio 디버깅 기능의 하위 집합을 지원 합니다. [줄 중단점 설정](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints), F10 키를 [사용 하 여 코드 단계별](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger) 실행 및 [클래식 변수의 값 검사](https://docs.microsoft.com/visualstudio/debugger/autos-and-locals-windows) 는 모두 시뮬레이터에서 코드를 실행 하는 동안 가능 합니다.
 
-Visual Studio Code 디버깅은 아직 지원 되지 않습니다.
-
+Visual Studio Code 디버깅은 OmniSharp에서 제공 하는 C# Visual Studio Code 확장에 대해에서 제공 하는 디버깅 기능을 활용 하 고 [최신 버전](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)을 설치 해야 합니다. 

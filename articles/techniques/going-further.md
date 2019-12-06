@@ -5,18 +5,17 @@ author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 4677b0f9c4f64a9c1bc46d34e8a883dc006ba8f0
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: c079364f8808304e0132fa2a4226cd6400e81339
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183304"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74863149"
 ---
-# <a name="going-further"></a>자세히 살펴보기 #
+# <a name="going-further"></a>더 나아가기 #
 
 이제 Q #에서 흥미로운 퀀텀 프로그램을 작성 하는 방법에 대해 알아보았습니다 .이 섹션에서는 앞으로 살펴보겠습니다.
 
-<!-- Moved Debugging and Testing Quantum Programs section to a separate article -->
 
 ## <a name="generic-operations-and-functions"></a>제네릭 작업 및 함수 ##
 
@@ -24,7 +23,7 @@ ms.locfileid: "73183304"
 > 이 섹션에서는 [의 C#제네릭 ](https://docs.microsoft.com/dotnet/csharp/programming-guide/generics/introduction-to-generics), [제네릭의 F# ](https://docs.microsoft.com/dotnet/fsharp/language-reference/generics/)제네릭, [ C++ 템플릿](https://docs.microsoft.com/cpp/cpp/templates-cpp)또는 다른 언어의 메타 프로그래밍에 대 한 유사한 접근 방법에 대 한 몇 가지 기본적인 지식이 있다고 가정 합니다.
 
 정의할 수 있는 많은 함수와 연산은 실제로 해당 입력의 형식에 의존 하지 않고 다른 함수 또는 작업을 통해서만 암시적으로 해당 형식을 사용 합니다.
-예를 들어 많은 기능 언어에 공통적인 *map* 개념을 살펴보겠습니다. 함수 $f (x) $ 및 값 $\{x_1, x_2, \dots, x_n\}$, map은 새 컬렉션 $\{f (x_1), f (x_2), \dots, f ()\}$를 반환 합니다.
+예를 들어 많은 기능 언어에 공통적인 *map* 개념을 살펴보겠습니다. 함수 $f (x) $ 및 값 $\{x_1, x_2, x_n 점,\}\{$, map은 새 컬렉션 $ x_1 f (x_2), f (x_n), \dots, f (\}) $를 반환 합니다.
 Q #에서이를 구현 하려면 먼저 해당 함수를 사용할 수 있습니다.
 필요한 형식을 확인 하는 동안 ★를 자리 표시자로 사용 하 여 `Map`에 대 한 간단한 예제를 작성해 보겠습니다.
 
@@ -119,7 +118,7 @@ function Compose(outerFn : (B -> C), innerFn : (A -> B)) : (A -> C) {
 
 여기서는 `A`, `B`및 `C`를 정확 하 게 지정 해야 하므로 새로운 `Compose` 함수의 유틸리티를 심각 하 게 제한 합니다.
 모든 `Compose` `A`, `B`및 `innerFn` 및 `outerFn`를 *통해* `C`에만 의존 합니다.
-또는 `A`, `B`및 `C`에 대해 작동 함을 나타내는 *`Compose`에 형식* 매개 변수를 추가할 수 있습니다. 이러한 매개 변수는 `innerFn` 및 `outerFn`에서 예상한 것과 일치 합니다. :
+대신, 이러한 매개 변수가 `innerFn` 및 `outerFn`에서 예상한 것과 일치 하는 한 `A`, `B`및 `C`에 대해 작동 함을 나타내는 *`Compose`에 형식* 매개 변수를 추가할 수 있습니다.
 
 ```qsharp
 function ComposeImpl<'A, 'B, 'C>(outerFn : ('B -> 'C), innerFn : ('A -> 'B), input : 'A) : 'C {
@@ -178,6 +177,6 @@ is Adj + Ctl {
 }
 ```
 
-`With` 조합 기---는 adjoint를 지 원하는 작업 (예: `WithA`---에 적용 되는 형식으로 사용 됩니다. 즉, `With`만 포함 하는 구조에 대 한 제어를 추가 하는 것과 같은 좋은 프로그래밍 스타일입니다. 내부 작업에 제어를 전파 합니다. 작업의 `body` 외에도, 작업의 `controlled` 본문에 대 한 구현이 `controlled auto` 문으로의 구현이 아닌 명시적으로 제공 되었습니다. 그 이유는 회로 구조에서 각 및 `body`의 모든 개별 게이트에 컨트롤을 추가 하는 것과 비교 하 여 유용한 컨트롤을 쉽게 추가 하는 방법입니다. 
+`With` 조합 기는 adjoint를 지 원하는 작업 (예: `WithA`---에 적용 되는 형식으로---합니다. 즉,이 예제에서는 내부 작업에만 제어를 전파 하는 것과 `With` 관련 된 구조에 대 한 제어를 추가 하는 것과 같은 좋은 프로그래밍 스타일입니다. 작업의 `body` 외에도, 작업의 `controlled` 본문에 대 한 구현이 `controlled auto` 문으로의 구현이 아닌 명시적으로 제공 되었습니다. 그 이유는 회로 구조에서 각 및 `body`의 모든 개별 게이트에 컨트롤을 추가 하는 것과 비교 하 여 유용한 컨트롤을 쉽게 추가 하는 방법입니다. 
 
 그러나이 코드는 곱하기 제어 `X` 작업을 구현 하는 것과 동일한 목표를 달성 하는 다른 함수 `MultiControlledXClean`와 비교 하는 것이 좋습니다. 그러나 `using` 메커니즘을 사용 하 여 여러 가지 깨끗 한 비트를 사용 합니다. 

@@ -1,21 +1,21 @@
 ---
 title: 'Q # 표준 라이브러리-응용 프로그램 | Microsoft Docs'
-description: 'Q # 표준 라이브러리'
+description: Q# 표준 라이브러리
 author: QuantumWriter
 uid: microsoft.quantum.libraries.applications
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: e6eca45dd67b3566340c2a2a4fded0f6e7c3c5c3
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: ef22460a5bca63ebaf32c0ba21984e103ec8ebdd
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73185174"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74864392"
 ---
 # <a name="applications"></a>애플리케이션 #
 
-## <a name="hamiltonian-simulation"></a>Hamiltonian 시뮬레이션 ##
+## <a name="hamiltonian-simulation"></a>해밀토니안 시뮬레이션 ##
 
 퀀텀 시스템의 시뮬레이션은 퀀텀 계산의 가장 흥미로운 응용 프로그램 중 하나입니다.
 기존 컴퓨터에서 퀀텀 메커니즘을 시뮬레이션 하는 어려움은 일반적으로 상태-벡터 표현의 차원 $N로 확장 됩니다.
@@ -24,13 +24,13 @@ ms.locfileid: "73185174"
 그러나이 상황은 퀀텀 하드웨어에서 매우 다를 수 있습니다. 퀀텀 시뮬레이션의 가장 일반적인 변형은 시간 독립적 Hamiltonian 시뮬레이션 문제 라고 합니다. 여기에는 시스템 Hamiltonian $H $ (Hermitian 행렬) 및 일부 초기 퀀텀 상태 $ \ket{\psi (0)} $에 대 한 설명이 제공 됩니다 .이에 대해서는 퀀텀 컴퓨터에서 $를 사용 하 여 일부 $n 기준으로 인코딩됩니다. 폐쇄 된 시스템의 퀀텀 상태는 Schrödinger 수식 $ $ \begin{align} i\frac {d \ket{\psi (t)}} {d t} & = H \ket{\psi (t)}, \end{align} $ $으로 발전 하 고 있습니다 .이 목표는 단일 시간 진화 연산자 $U (t) = e ^ {-iHt} $를 고정 된 시간에 구현 하는 것입니다 $t $ , 여기서 $ \ket{\psi (t)} = U (t) \ket{\psi (0)} $은 Schrödinger 방정식을 해결 합니다.
 와 유사 시간 종속 Hamiltonian 시뮬레이션 문제는 동일한 수식을 해결 하지만 이제는 $H (t) $를 사용 하 여 시간을 계산 합니다.
 
-Hamiltonian 시뮬레이션은 다른 여러 퀀텀 시뮬레이션 문제의 주요 구성 요소 이며 Hamiltonian 시뮬레이션 문제에 대 한 해결 방법은 synthesizing에 대 한 기본 퀀텀 게이트 시퀀스를 설명 하는 알고리즘입니다. 오류 $\\| \tilde{U}-U (t)\\| [spectral](xref:microsoft.quantum.concepts.matrix-advanced)의 \le \le $입니다. 이러한 알고리즘의 복잡성은 퀀텀 컴퓨터에서 관심 있는 Hamiltonian에 대 한 설명을 액세스 하는 방법에 매우 강력한 영향을 줍니다. 예를 들어 최악의 경우, $n $ ombits에 대해 작동 하는 $H $은 각 matrix 요소에 대해 하나씩 $2 ^ n \times 2 ^ n $ 숫자의 목록으로 제공 되어야 합니다. 즉, 데이터를 읽기만 하면 지 수 시간이 이미 필요 합니다. 최상의 경우에는 $O \ket{t}\ket{\psi (0)} = \ket{t}U (t) \ket{\psi (0)} $ 일반적으로에서 문제를 해결 하는 검정 상자에 대 한 액세스를 가정할 수 있습니다. 이러한 입력 모델은 특히 유용 하지 않습니다. 즉, 기존의 접근 방식 보다는 더 이상 유용 하지 않으며, 검은색 상자는 구현에 대 한 기본 게이트 복잡성을 숨깁니다 .이는 다양 한 기능을 지 원하는 것입니다.
+Hamiltonian 시뮬레이션은 다른 여러 퀀텀 시뮬레이션 문제의 주요 구성 요소 이며 Hamiltonian 시뮬레이션 문제에 대 한 해결 방법은 synthesizing에 대 한 기본 퀀텀 게이트의 시퀀스를 설명 하는 알고리즘입니다. 오류 $\\| \tilde{U}-U (t)\\[spectral](xref:microsoft.quantum.concepts.matrix-advanced)의 \le \le $입니다. 이러한 알고리즘의 복잡성은 퀀텀 컴퓨터에서 관심 있는 Hamiltonian에 대 한 설명을 액세스 하는 방법에 매우 강력한 영향을 줍니다. 예를 들어 최악의 경우, $n $ ombits에 대해 작동 하는 $H $은 각 matrix 요소에 대해 하나씩 $2 ^ n \times 2 ^ n $ 숫자의 목록으로 제공 되어야 합니다. 즉, 데이터를 읽기만 하면 지 수 시간이 이미 필요 합니다. 최상의 경우에는 $O \ket{t}\ket{\psi (0)} = \ket{t}U (t) \ket{\psi (0)} $ 일반적으로에서 문제를 해결 하는 검정 상자에 대 한 액세스를 가정할 수 있습니다. 이러한 입력 모델은 특히 유용 하지 않습니다. 즉, 기존의 접근 방식 보다는 더 이상 유용 하지 않으며, 검은색 상자는 구현에 대 한 기본 게이트 복잡성을 숨깁니다 .이는 다양 한 기능을 지 원하는 것입니다.
 
 ### <a name="descriptions-of-hamiltonians"></a>Hamiltonians에 대 한 설명 ###
 
 따라서 입력 형식에 대 한 추가 가정이 필요 합니다. 현실적인 물리적 시스템이 나 흥미로운 계산 문제에 대 한 설명 및 충분히 제한적인 입력 모델 등 흥미로운 Hamiltonians을 포함 하는 데 충분 한 설명이 포함 된 입력 모델 간에 미세한 균형을 맞추어야 합니다. 퀀텀 컴퓨터에서 효율적으로 구현할 수 있습니다. 이 문서의 다양 한 특수 입력 모델을 찾을 수 있으며,이는 퀀텀에서 클래식으로 범위가 달라질 수 있습니다. 
 
-퀀텀 입력 모델의 예로 [샘플 기반 Hamiltonian 시뮬레이션](http://www.nature.com/articles/s41534-017-0013-7) 에서는 Hamiltonian $H $로 사용 되는 밀도 행렬 $ \rho $의 복사본을 생성 하는 퀀텀 작업에 대 한 블랙 박스 액세스를 가정 합니다. [단일 액세스 모델](https://arxiv.org/abs/1202.5822) 에서 Hamiltonian는 대신 unitaries $ $ \begin{align} H & = \sum ^ {d-1}\_{j = 0} a\_j \hat{U}\_j, \end{align} $ $ (여기서 $a\_j > 0 $)의 합계로 분해 됩니다. 및 $ \hat{U}\_j $는 unitaries입니다. 그런 다음 원하는 $ \hat{U}\_j $ 및 oracle $A \ket{0}= \sum ^ {d-1}\_를 선택 하는 단일 oracle $V = \sum ^ {d-1}\_{j = 0} \ket{j}\bra{j}\otimes \hat{U}\_j $에 대 한 블랙 박스 액세스 권한이 있다고 가정 합니다. j = 0} \sqrt{a\_j/\ sum ^ {d-1}\_{k = 0} \alpha\_j} \ket{j} $는 이러한 계수를 인코딩합니다. [스파스 Hamiltonian 시뮬레이션](https://arxiv.org/abs/quant-ph/0301023)의 경우 Hamiltonian는 모든 행에서 0이 아닌 $d = \mathcal{O} (\Text{polylog} (N)) $0 요소만 포함 된 스파스 행렬 이라고 가정 합니다. 또한 이러한 0이 아닌 요소의 위치와 해당 값을 출력 하는 효율적인 퀀텀 회로의 존재를 가정 합니다. [Hamiltonian 시뮬레이션 알고리즘](xref:microsoft.quantum.more-information) 의 복잡성은 이러한 검은색 상자에 대 한 쿼리 수 측면에서 평가 되며, 기본 게이트 복잡성은 이러한 검은색 상자를 구현 하는 데 어려움이 매우 높습니다.
+퀀텀 입력 모델의 예로 [샘플 기반 Hamiltonian 시뮬레이션](http://www.nature.com/articles/s41534-017-0013-7) 에서는 Hamiltonian $H $로 사용 되는 밀도 행렬 $ \rho $의 복사본을 생성 하는 퀀텀 작업에 대 한 블랙 박스 액세스를 가정 합니다. [단일 액세스 모델](https://arxiv.org/abs/1202.5822) 에서 Hamiltonian는 대신 unitaries $ $ \begin{align} H & = \sum ^ {d-1}\_{j = 0} a\_j \hat{U}\_j, \end{align} $ $ where ($a\_j > 0 $은 계수이 고 $ \hat{U}\_j $는 unitaries입니다. 그런 다음 원하는 $ \hat{U}\_j $를 선택 하는 단일 oracle $V = \sum ^ {d-1}\_{j = 0} \ket{j}\bra{j}\otimes \hat{U}\_j $에 대 한 블랙 박스 액세스 권한이 있다고 가정 합니다. oracle $A \ket{0}= \sum ^ {d-1}\_{j = 0} \sqrt{a\_j/\ sum ^ {d-1}\_{k = 0} \sum\_j} \ket{j} $는 이러한 계수를 만드는 퀀텀 상태를 만듭니다. [스파스 Hamiltonian 시뮬레이션](https://arxiv.org/abs/quant-ph/0301023)의 경우 Hamiltonian는 모든 행에서 0이 아닌 $d = \mathcal{O} (\Text{polylog} (N)) $0 요소만 포함 된 스파스 행렬 이라고 가정 합니다. 또한 이러한 0이 아닌 요소의 위치와 해당 값을 출력 하는 효율적인 퀀텀 회로의 존재를 가정 합니다. [Hamiltonian 시뮬레이션 알고리즘](xref:microsoft.quantum.more-information) 의 복잡성은 이러한 검은색 상자에 대 한 쿼리 수 측면에서 평가 되며, 기본 게이트 복잡성은 이러한 검은색 상자를 구현 하는 데 어려움이 매우 높습니다.
 
 > [!NOTE]
 > 큰 O 표기법은 알고리즘의 복잡성 확장을 설명 하는 데 주로 사용 됩니다. G $ 라는 두 개의 실제 함수 $f g $ $g (x) = \mathcal{O} (f (x)) $는 모든 > \le x $g $0에 대 한 $x (x) \le c f (x) $와 같은 절대 양의 상수가\_0, c\_0 $ $x 있음을 의미 합니다. 
@@ -45,21 +45,21 @@ Hamiltonian 시뮬레이션은 다른 여러 퀀텀 시뮬레이션 문제의 �
 
 퀀텀 시뮬레이션 알고리즘은 Hamiltonian의 지정 된 설명을 기본 퀀텀 게이트 시퀀스로 변환 합니다. 즉, Hamiltonian에 의해 전체적으로 대략적인 시간이 진화 합니다.
 
-Hamiltonian 분해 Hermitian 부분을 합산 하는 특별 한 경우 Trotter Suzuki 분해는 Hamiltonians 구성 요소 합계를 분리 하는 Hermitian를 시뮬레이션 하는 데 특히 간단 하 고 직관적인 알고리즘입니다. 예를 들면이 패밀리의 첫 번째 주문 통합자는 $ $ \begin{align} U (t) & = \left (e ^ {-iH\_0 t/r} e ^ {-iH\_1 t)와 비슷합니다./r} \cume ^ {-iH\_{d-1} t/r} \left) ^ {r} + \mathcal{O} (d ^ 2 \max_j\\| H\_j\\| ^ 2 t ^ 2/r), \end{align} $ $ $r d $ 약관의 제품을 사용 합니다. 
+Hamiltonian 분해 Hermitian 부분을 합산 하는 특별 한 경우 Trotter Suzuki 분해는 Hamiltonians 구성 요소 합계를 분리 하는 Hermitian를 시뮬레이션 하는 데 특히 간단 하 고 직관적인 알고리즘입니다. 예를 들면이 패밀리의 첫 번째 주문 통합자는 $ $ \begin{align} U (t) & = \left (e ^ {-iH\_0 t/r} e ^ {-iH\_1과 근사치를 갖습니다. t/r} \c도트 e ^ {-iH\_{d-1} t/r} \left) ^ {r} + \mathcal{O} (d ^ 2 \ max_j\\| H\_j\\| ^ 2 t ^ 2/r), \end{align} $ $ $r d $ 약관의 제품을 사용 합니다. 
 
 > [!TIP]
 > Trotter-Suzuki 시뮬레이션 알고리즘의 응용 프로그램은 샘플에서 설명 합니다.
-> 각 대상 컴퓨터에서 제공 되는 내장 작업만 사용 하는 Ising 모델의 경우 [ **simpleising** 샘플](https://github.com/Microsoft/Quantum/tree/master/Samples/src/SimpleIsing)을 참조 하세요.
-> Trotter-Suzuki library 컨트롤 구조를 사용 하는 Ising 모델의 경우 [ **IsingTrotter** 샘플](https://github.com/Microsoft/Quantum/tree/master/Samples/src/IsingTrotterEvolution)을 참조 하세요.
-> Trotter-Suzuki library 컨트롤 구조를 사용 하는 분자 Hydrogen의 경우 [ **H2 시뮬레이션** 샘플](https://github.com/Microsoft/Quantum/tree/master/Samples/src/H2SimulationCmdLine)을 참조 하세요.
+> 각 대상 컴퓨터에서 제공 되는 내장 작업만 사용 하는 Ising 모델의 경우 [ **simpleising** 샘플](https://github.com/microsoft/Quantum/blob/master/samples/simulation/ising/simple)을 참조 하세요.
+> Trotter-Suzuki library 컨트롤 구조를 사용 하는 Ising 모델의 경우 [ **IsingTrotter** 샘플](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/trotter-evolution)을 참조 하세요.
+> Trotter-Suzuki library 컨트롤 구조를 사용 하는 분자 Hydrogen의 경우 [ **H2 시뮬레이션** 샘플](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line)을 참조 하세요.
 
-대부분의 경우 시뮬레이션 알고리즘을 구현 하지만 해당 구현에 대 한 세부 정보에 관심이 없습니다. 예를 들면 두 번째 주문 통합자는 $ $ \begin{align} U (t) & = \left (e ^ {-iH\_0 t/2r} e ^ {-iH\_1 t/2r} \c도트 e ^ {-) 근사치를 계산 합니다. iH\_{d-1} t/2r} e ^ {-iH\_{d-1} t/2r} \c도트 e ^ {-iH\_1 t/2r} e ^ {- iH\_0 t/2r} \right) ^ {r} + \mathcal{O} (d ^ 3 \max_j\\| H\_j\\| ^ 3 t ^ 3/r ^ 2), $2rd $ 약관의 제품을 사용 하 여 $ $ \end{align}. 더 큰 주문에는 더 많은 용어가 포함 되 고, 최적화 된 변형에는 지 수에 대 한 매우 특수 한 순서 필요할 수 있습니다. 다른 고급 알고리즘은 중간 단계에서 ancilla의 사용을 포함할 수도 있습니다. 따라서 라고의 시뮬레이션 알고리즘을 사용자 정의 형식으로 패키지 합니다.
+대부분의 경우 시뮬레이션 알고리즘을 구현 하지만 해당 구현에 대 한 세부 정보에 관심이 없습니다. 예를 들면 두 번째 주문 통합자는 $ $ \begin{align} U (t) & = \left (e ^ {-iH\_0 t/2r} e ^ {-iH\_1 t/2r} \c도트 e ^ {-iH\_{d-1} t/2r}를 대략적으로 계산 합니다. e ^ {-iH\_{d-1} t/2r} \c도트 e ^ {-iH\_1 t/2r} e ^ {-iH\_0 t/2r} \left) ^ {r} + \mathcal{O} (d ^ 3 \ max_j\\| H\_j\\| ^ 3 t ^ 3/r ^ 2), $2rd $ 약관의 제품을 사용 하 여 $ $ \end{align}. 더 큰 주문에는 더 많은 용어가 포함 되 고, 최적화 된 변형에는 지 수에 대 한 매우 특수 한 순서 필요할 수 있습니다. 다른 고급 알고리즘은 중간 단계에서 ancilla의 사용을 포함할 수도 있습니다. 따라서 라고의 시뮬레이션 알고리즘을 사용자 정의 형식으로 패키지 합니다.
 
 ```qsharp
 newtype SimulationAlgorithm = ((Double, EvolutionGenerator, Qubit[]) => Unit is Adj + Ctl);
 ```
 
-첫 번째 매개 변수 `Double` 시뮬레이션의 시간입니다. [데이터 구조의](xref:microsoft.quantum.libraries.data-structures)동적 생성기 표현 섹션에서 설명 하는 두 번째 매개 변수 `EvolutionGenerator`는와 함께 제공 되는 시간 독립적 Hamiltonian의 기존 설명입니다. Hamiltonian의 각 용어를 퀀텀 회로에서 시뮬레이션할 수 있는 방법에 대 한 지침입니다. 이러한 형식의 형식에는 두 번째 매개 변수 `Qubit[]`(시뮬레이션 된 시스템의 퀀텀 상태를 저장 하는 레지스터)에 $e ^ {-iHt} $가 있습니다. 시간에 따라 달라 지는 경우에도 `EvolutionSchedule` 형식으로 사용자 정의 형식을 정의 합니다 .이 형식은 시간이 종속 된 Hamiltonian에 대 한 기존 설명입니다.
+첫 번째 매개 변수 `Double` 시뮬레이션의 시간입니다. [데이터 구조의](xref:microsoft.quantum.libraries.data-structures)동적 생성기 표현 섹션에서 설명 하는 두 번째 매개 변수 `EvolutionGenerator`는 퀀텀 회로에서 Hamiltonian의 각 용어를 시뮬레이션 하는 방법에 대 한 지침을 포함 하는 시간 독립적 Hamiltonian 패키지에 대 한 기존 설명입니다. 이러한 형식의 형식에는 두 번째 매개 변수 `Qubit[]`(시뮬레이션 된 시스템의 퀀텀 상태를 저장 하는 레지스터)에 $e ^ {-iHt} $가 있습니다. 시간에 따라 달라 지는 경우에도 `EvolutionSchedule` 형식으로 사용자 정의 형식을 정의 합니다 .이 형식은 시간이 종속 된 Hamiltonian에 대 한 기존 설명입니다.
 
 ```qsharp
 newtype TimeDependentSimulationAlgorithm = ((Double, EvolutionSchedule, Qubit[]) => Unit : Adjoint, Controlled);
@@ -83,13 +83,13 @@ function TimeDependentTrotterSimulationAlgorithm(
 ```
 
 > [!TIP]
-> 시뮬레이션 라이브러리의 응용 프로그램은 샘플에서 설명 합니다. `SimulationAlgorithm`를 사용 하는 Ising 모델의 단계 예측에 대해서는 [ **IsingPhaseEstimation** 샘플](https://github.com/Microsoft/Quantum/tree/master/Samples/src/IsingPhaseEstimation)을 참조 하세요.
-> `TimeDependentSimulationAlgorithm`를 사용 하는 Ising 모델의 adiabatic 상태 준비는 [ **AdiabaticIsing** 샘플](https://github.com/Microsoft/Quantum/tree/master/Samples/src/AdiabaticIsing)을 참조 하세요.
+> 시뮬레이션 라이브러리의 응용 프로그램은 샘플에서 설명 합니다. `SimulationAlgorithm`를 사용 하는 Ising 모델의 단계 예측에 대해서는 [ **IsingPhaseEstimation** 샘플](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/phase-estimation)을 참조 하세요.
+> `TimeDependentSimulationAlgorithm`를 사용 하는 Ising 모델의 adiabatic 상태 준비는 [ **AdiabaticIsing** 샘플](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/adiabatic)을 참조 하세요.
 
 
 ### <a name="adiabatic-state-preparation--phase-estimation"></a>Adiabatic 상태 준비 & 단계 예측 ###
 
-Hamiltonian 시뮬레이션의 한 가지 일반적인 응용 프로그램은 adiabatic 상태 준비입니다. 여기에는 두 개의 Hamiltonians $H\_{\text{start}} $ 및 $H\_{\text{start}} $과, Hamiltonian $H\_{\text{start}} $의 그라운드 상태에 해당 하는 퀀텀 상태 $ \ket{\psi (0)} $가 제공 됩니다. 일반적 $H으로 $ \ket{\psi (0)} $는 계산 기준 상태 $ \ket{0\cdots 0} $로 쉽게 준비할 수 있도록 {\text{start}} $\_를 선택 합니다. 시간이 종속 된 시뮬레이션 문제에서 이러한 Hamiltonians을 보간 하는 경우 sufficientl {\text{end}} $\_$H 최종 Hamiltonian의 그라운드 상태에서 확률이 높은 종료 될 수 있습니다. Hamiltonian 그라운드 상태에 대 한 좋은 근사치을 준비 하는 것은 시간에 종속 된 Hamiltonian 시뮬레이션 알고리즘에 대해 서브루틴으로 호출 하 여 이러한 방식으로 진행 될 수 있지만, 다른 개념적으로 variational 양자와 같은 다른 방법으로 eigensolver 찾기가 가능 합니다.
+Hamiltonian 시뮬레이션의 한 가지 일반적인 응용 프로그램은 adiabatic 상태 준비입니다. 여기에는 두 개의 Hamiltonians $H\_{\text{start}} $ 및 $H\_{\text{start}} $과, Hamiltonian $H\_{\text{start}} $의 그라운드 상태에 해당 하는 퀀텀 상태 $ \ket{\psi (0)} $가 제공 됩니다. 일반적 $H으로 $ \ket{\psi (0)} $는 계산 기준 상태 $ \ket{0\cdots 0} $로 쉽게 준비할 수 있도록 {\text{start}} $\_를 선택 합니다. 시간이 종속 된 시뮬레이션 문제에서 이러한 Hamiltonians을 보간 하는 경우에는\_{\text{end}} $ $H 최종 Hamiltonian의 그라운드 상태에서 확률이 높은 종료 될 수 있습니다. Hamiltonian 그라운드 상태에 대 한 좋은 근사치을 준비 하는 것은 시간에 종속 된 Hamiltonian 시뮬레이션 알고리즘에 대해 서브루틴으로 호출 하 여 이러한 방식으로 진행 될 수 있지만, 다른 개념적으로 variational 양자와 같은 다른 방법으로 eigensolver 찾기가 가능 합니다.
 
 그러나 퀀텀 화학의 또 다른 응용 프로그램은 화학 반응의 중간 단계를 나타내는 Hamiltonians의 그라운드 상태 에너지를 추정 하는 것입니다. 예를 들어 이러한 체계는 adiabatic 상태 준비를 사용 하 여 그라운드 상태를 만든 다음, 제한 된 오류와 함께이 에너지를 추출 하는 단계 예측의 서브루틴으로 시간 독립적 Hamiltonian 시뮬레이션을 통합할 수 있습니다. 성공 확률입니다. 
 
@@ -128,13 +128,13 @@ operation AdiabaticStateEnergyEstimate(
 `nQubits`는 초기 퀀텀 상태를 인코딩하는 데 사용 되는 수 비트 수입니다. `statePrepUnitary` 계산 기준 $ \ket{0\cdots 0} $에서 시작 상태를 준비 합니다. `adiabaticUnitary`은 `InterpolatedEvolution` 함수에서 생성 된 것과 같은 adiabatic 상태 준비를 구현 하는 단일 작업입니다. `qpeUnitary`은 결과 퀀텀 상태에서 단계 예측을 수행 하는 데 사용 되는 단일 작업입니다. `phaseEstAlgorithm` 단계 추정 알고리즘을 선택 하는 것입니다.
 
 > [!TIP]
-> Adiabatic 상태 준비의 응용 프로그램은 샘플에 설명 되어 있습니다. Adiabatic 상태 준비의 수동 구현을 사용 하는 Ising 모델 및 `AdiabaticEvolution` 함수 사용에 대 한 자세한 내용은 [ **AdiabaticIsing** 샘플](https://github.com/Microsoft/Quantum/tree/master/Samples/src/AdiabaticIsing)을 참조 하세요.
-> Ising 모델에서 단계 예측 및 adiabatic 상태 준비는 [ **IsingPhaseEstimation** 샘플](https://github.com/Microsoft/Quantum/tree/master/Samples/src/IsingPhaseEstimation)을 참조 하세요.
+> Adiabatic 상태 준비의 응용 프로그램은 샘플에 설명 되어 있습니다. Adiabatic 상태 준비의 수동 구현을 사용 하는 Ising 모델 및 `AdiabaticEvolution` 함수 사용에 대 한 자세한 내용은 [ **AdiabaticIsing** 샘플](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/adiabatic)을 참조 하세요.
+> Ising 모델에서 단계 예측 및 adiabatic 상태 준비는 [ **IsingPhaseEstimation** 샘플](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/phase-estimation)을 참조 하세요.
 
 > [!TIP]
-> [분자 Hydrogen의 시뮬레이션](https://github.com/Microsoft/Quantum/tree/master/Samples/src/H2SimulationCmdLine) 은 흥미로운 간단한 샘플입니다. 모델 및 실험적 결과가 [O'Malley et](https://arxiv.org/abs/1512.06860) 에 보고 되었습니다. Pauli 행렬이 필요 하 고 $ \hat H = g\_{0}합니다. I\_0I\_1 + g\_1 {Z\_0} + g\_2 {Z\_1} + g\_3 {Z\_0} {Z\_1} + g\_4 {Y\_0} {Y\_1} + g\_5 {X\_0} {X\_1} $입니다. 이는 두 Hydrogen 원소 사이의 거리 $R $에서 상수 $g $가 계산 되는 2 개의 비트 비트만을 필요로 하는 효과적인 Hamiltonian. 라고 함수를 사용 하 여 paulis는 unitaries로 변환 된 다음 Trotter-Suzuki 분해를 사용 하 여 짧은 기간에 걸쳐 발전 했습니다. Adiabatic 상태 준비를 사용 하지 않고 $H _2 $ 그라운드 상태에 대 한 적절 한 근사값을 만들 수 있으므로 canon의 단계 예측을 활용 하 여 직접 상태 에너지를 찾을 수 있습니다.
+> [분자 Hydrogen의 시뮬레이션](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line) 은 흥미로운 간단한 샘플입니다. 모델 및 실험적 결과가 [O'Malley et](https://arxiv.org/abs/1512.06860) 에 보고 되었습니다. Pauli 행렬이 필요 하 고 $ \hat H = g\_의 형식으로 사용 합니다. {0}I\_0I\_1 + g\_1 {Z\_0} + g\_2 {Z\_1} + g\_3 {Z\_0} {Z\_1} + g\_4 {Y\_0} {Y\_1} + g\_5 {X\_0} {X\_1} $입니다. 이는 두 Hydrogen 원소 사이의 거리 $R $에서 상수 $g $가 계산 되는 2 개의 비트 비트만을 필요로 하는 효과적인 Hamiltonian. 라고 함수를 사용 하 여 paulis는 unitaries로 변환 된 다음 Trotter-Suzuki 분해를 사용 하 여 짧은 기간에 걸쳐 발전 했습니다. Adiabatic 상태 준비를 사용 하지 않고 $H _2 $ 그라운드 상태에 대 한 적절 한 근사값을 만들 수 있으므로 canon의 단계 예측을 활용 하 여 직접 상태 에너지를 찾을 수 있습니다.
 
-## <a name="shors-algorithm"></a>Shor의 알고리즘 ##
+## <a name="shors-algorithm"></a>쇼어 알고리즘 ##
 Shor의 알고리즘은 현재 일반적으로 intractable 문제를 해결 하는 데 퀀텀 컴퓨터를 사용할 수 있다는 것을 보여 주므로 퀀텀 컴퓨팅에서 가장 중요 한 개발 중 하나입니다.
 Shor의 알고리즘은 퀀텀 컴퓨터를 사용 하 여 많은 수의 수를 제공 하는 빠른 방법을 제공 하며,이는 *팩터링*이라는 문제입니다.
 수많은 현재 인 cryptosystems의 보안은 팩터링에 대 한 빠른 알고리즘이 없다는 가정을 기반으로 합니다.
@@ -151,7 +151,7 @@ Shor의 알고리즘은 하이브리드 알고리즘으로 간주할 수 있습�
 
 $ 및 $N $ $a 두 개의 정수를 지정 하는 경우 ($a < N $), order 찾기가 라고도 하는 기간 찾기를 목표로 하는 $r $ of $a $의 _주문_ $N을 찾는 것입니다. 여기서 $r $는 $a ^ r \equiv 1 \text{Mod} N $와 같이 최소 양의 정수로 정의 됩니다.  
 
-퀀텀 컴퓨터를 사용 하 여 순서를 찾으려면 _a $: $ $ U_a\ket {x} \equiv \ket{(ax) \text{mod} N}의 단일 $U 연산자에 적용 되는 단계 추정 알고리즘을 사용할 수 있습니다. $ $ 고유 벡터 of $U _a $은 정수 $s $ 및 $0 \ leq s \text{r-$1에 대 한 것입니다. , $ $ \ket{x_s} \equiv 1/\sqrt{r} \sum\_{k = 0} ^ {r-1} e ^ {\frac{-2\pi i N o} {r}} \ket{a ^ k\text {mod} N}, $ $는 $U _a $의 _eigenstates_ 입니다.
+퀀텀 컴퓨터를 사용 하 여 순서를 찾으려면 다음의 단일 연산자에 적용 되는 단계 추정 알고리즘을 사용할 수 있습니다. $U _a $: $ $ U_a \ket{x} \equiv \ket{(ax) \text{mod} N}. $ $ 고유 벡터 of $U _a $ 및 $0 \ leq s \text{r-$1 $ $ \ket{x_s} \equiv 1/\sqrt{r} \sum\_{k = 0} ^ {r-1} e ^ {\frac{-2\pi i N o} {r}} \ket{a ^ k\text {mod} N}, $ $는 $U _a $의 _eigenstates_ 입니다.
 $U _a $의 고유 값는 $ $ U\_a \ket{x\_s} = e ^ {2 \ pi i s/r} \ket{x\_s}입니다. $$
 
 따라서 단계 예측은 $e ^ {2 \ pi i s/r} $에서 고유 값를 출력 합니다. 여기서 $r $은 $s/r $의 [연속 된 분수](https://en.wikipedia.org/wiki/Continued_fraction) 를 사용 하 여 효율적으로 학습할 수 있습니다.
@@ -169,7 +169,7 @@ $ \Ket{1}$ 상태에서 $n $ 이상 비트의 퀀텀 레지스터를 준비할 �
 
 회로에는 QFT와 여러 개의 제어 된 게이트가 포함 됩니다.
 QFT 게이트가 [이전](xref:microsoft.quantum.libraries.standard.algorithms)에 설명 되어 있습니다.
-제어 하는 $U _a $ gate는 $ \ket{x} $를 $ \ket{(ax) \text{mod} N} $로 매핑하고, 해당 컨트롤은 $ \ket{1}$이 고 $ \ket{x} $를 $ \ket{x} $에 매핑합니다.
+제어 되는 $U _a $ gate 맵은 $ \ket{x} $를 $ \ket{(ax) \text{mod} N} $로 매핑하고, 컨트롤의가 $ \ket{1}$ 이면 $ \ket{x} $를 $ \ket{x} $에 매핑합니다.
 
 $ (A ^ nx) \text{mod} N $을 얻기 위해 일반적으로 _ {a ^ n} $를 $U 적용 하기만 하면 됩니다. 여기서는 $a ^ n \text{mod} N $를 계산 하 여 퀀텀 회로에 연결 합니다.  
 이러한 모듈식 산술 연산을 수행 하기 위한 회로는 [퀀텀 산술 설명서](./algorithms.md#arithmetic)에 설명 되어 있습니다. 특히 제어 되는 $U\_{a ^ i} $ 작업을 구현 하려면 모듈식 지 수 회로가 필요 합니다.
