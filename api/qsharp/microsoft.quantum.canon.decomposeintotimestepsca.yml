@@ -37,7 +37,7 @@ input:
     summary: >-
       사용할 Trotter – Suzuki 통합자의 순서를 선택 합니다.
 
-      현재 주문 1과 2가 지원 됩니다.
+      주문 1과 주문 2, 4, 6,... 는 현재 지원 됩니다.
     isPrimitive: true
     uid: Int
 output:
@@ -62,9 +62,9 @@ typeParameters:
 - uid: "'T"
   summary: 각 시간 단계가 작동 해야 하는 형식입니다. 일반적으로 `Qubit[]` 또는 `Qubit`중 하나입니다.
 metadata:
-  ms.openlocfilehash: 328db9b314320c724cf03adb19ee59d63a33e56e
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: ac9e4b4359c77205b7a823c334222a049ff49c10
+  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73067835"
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74863967"

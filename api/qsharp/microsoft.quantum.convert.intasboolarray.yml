@@ -4,7 +4,10 @@ name: IntAsBoolArray
 type: function
 namespace: Microsoft.Quantum.Convert
 summary: 반환 된 배열에 대 한 작은 endian 표현을 사용 하 여 양의 정수의 이진 표현을 생성 합니다.
-remarks: 입력 `number`은 최대 $2 ^ {\texttt{bits}}-$1 이어야 합니다.
+remarks: >-
+  입력 `bits`는 0에서 63 사이 여야 합니다.
+
+  입력 `number`는 0에서 $2 ^ {\texttt{bits}}-$1 사이 여야 합니다.
 syntax: 'function IntAsBoolArray (number : Int, bits : Int) : Bool[]'
 input:
   content: '(number : Int, bits : Int)'
@@ -25,9 +28,9 @@ output:
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: 5f9dcb138c24390f5abfec3e0b9b12263b6119d6
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: e75eede507f04178755e886258e7eb73a6cc3dce
+  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73220371"
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74858992"

@@ -1,0 +1,48 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.permutequbits
+name: PermuteQubits
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: 교환 작업을 사용 하 여 Permutes 된 비트
+examples: >-
+  지정 된 주문 = [2, 1, 0] 및 등록 $ \ket{\ alpha_0} \ket{\ alpha_1} \ket{\ alpha_2} $ PermuteQubits는 레지스터를 $ \ket{\ alpha_2} \ket{\ alpha_1} \ket{\ alpha_0} $로 변경 합니다.
+
+
+  ```qsharp
+
+  // The following two lines are equivalent
+
+  PermuteQubits([2, 1, 0], register);
+
+  SWAP(register[0], register[2]);
+
+  ```
+syntax: 'operation PermuteQubits (ordering : Int[], register : Qubit[]) : Unit'
+input:
+  content: '(ordering : Int[], register : Qubit[])'
+  types:
+  - name: ordering
+    summary: 이제 인덱스 i의 새 정렬에 대해 설명 합니다. 여기서는 이제 [i]를 순서 대로 정렬 합니다.
+    isArray: true
+    isPrimitive: true
+    uid: Int
+  - name: register
+    summary: 작업할의 비트 레지스터입니다.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+metadata:
+  ms.openlocfilehash: ad5b37017edfc6ba3cb2f552172da1b910227681
+  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+  ms.translationtype: MT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74866583"
