@@ -3,13 +3,7 @@ uid: microsoft.quantum.extensions.convert.tostringdformat
 name: ToStringDFormat
 type: function
 namespace: Microsoft.Quantum.Extensions.Convert
-summary: >-
-  > [!WARNING]
-
-  > 사용되지 않음
-
-
-  @"microsoft.quantum.convert.doubleasstringwithformat"를 사용 하세요.
+summary: ToStringDFormat은 더 이상 사용 되지 않습니다. 대신 @"microsoft.quantum.convert.doubleasstringwithformat"를 사용하십시오.
 syntax: 'function ToStringDFormat (a : Double, fmt : String) : String'
 input:
   content: '(a : Double, fmt : String)'
@@ -26,9 +20,9 @@ output:
   - isPrimitive: true
     uid: String
 metadata:
-  ms.openlocfilehash: e3f15a6b9b0445436e114434e9eb68b1712a276e
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: f296f29d50f8af35eeea270d3eacdf9ca28c0395
+  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73228225"
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74865599"
