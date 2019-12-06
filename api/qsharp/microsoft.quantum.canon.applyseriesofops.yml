@@ -1,0 +1,49 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applyseriesofops
+name: ApplySeriesOfOps
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: Ops 및 해당 대상의 목록을 배열에 순차적으로 적용 합니다.
+syntax: "operation ApplySeriesOfOps (listOfOps : ('T[] => Unit)[], targets : Int[][], register : 'T[]) : Unit"
+input:
+  content: "(listOfOps : ('T[] => Unit)[], targets : Int[][], register : 'T[])"
+  types:
+  - name: listOfOps
+    summary: 각각의 배열을 적용 하는 작업의 목록입니다. 가장 낮은 인덱스 순으로 순차적으로 적용 됩니다.
+    isArray: true
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+  - name: targets
+    summary: Op의 대상을 설명 하는 중첩 된 배열입니다. 각 배열에는 사용할 인덱스를 설명 하는 정수 목록이 포함 되어야 합니다.
+    isArray: true
+    types:
+    - isArray: true
+      isPrimitive: true
+      uid: Int
+  - name: register
+    summary: 작업할의 비트 레지스터입니다.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+seeAlso:
+- microsoft.quantum.canon.applyoprepeatedlyover
+metadata:
+  ms.openlocfilehash: ce758e52e510397f780e6d69cc7c15e4d13878ae
+  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+  ms.translationtype: MT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74866651"

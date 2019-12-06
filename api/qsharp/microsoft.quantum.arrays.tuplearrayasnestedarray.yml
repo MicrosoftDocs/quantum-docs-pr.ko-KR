@@ -1,0 +1,47 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.tuplearrayasnestedarray
+name: TupleArrayAsNestedArray
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: 2 튜플의 목록을 중첩 된 배열로 변환 합니다.
+syntax: "function TupleArrayAsNestedArray (tupleList : ('T, 'T)[]) : 'T[][]"
+input:
+  content: "(tupleList : ('T, 'T)[])"
+  types:
+  - name: tupleList
+    summary: 중첩 배열로 전환 될 2 튜플의 목록입니다.
+    isArray: true
+    types:
+    - uid: "'T"
+      isLocal: true
+    - uid: "'T"
+      isLocal: true
+output:
+  content: "'T[][]"
+  types:
+  - summary: >-
+      길이가 tupleList와 일치 하는 중첩 된 배열입니다.
+
+
+      ## <a name="example"></a>예제
+
+
+      ```qsharp
+
+      // The following returns [[2, 3], [4, 5]]
+
+      TupleArrayAsNestedArray([(2, 3), (4, 5)]);
+
+      ```
+    isArray: true
+    types:
+    - isArray: true
+      uid: "'T"
+      isLocal: true
+metadata:
+  ms.openlocfilehash: edc939bc4ebfe093ec4a97eda24888f6d7810e82
+  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+  ms.translationtype: MT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74866464"

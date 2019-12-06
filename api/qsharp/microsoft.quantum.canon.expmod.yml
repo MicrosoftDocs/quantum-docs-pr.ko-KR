@@ -3,13 +3,7 @@ uid: microsoft.quantum.canon.expmod
 name: ExpMod
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: >-
-  > [!WARNING]
-
-  > 사용되지 않음
-
-
-  @"microsoft.quantum.math.expmodi"를 사용 하세요.
+summary: 예기치 않은 Mod는 더 이상 사용 되지 않습니다. 대신 @"microsoft.quantum.math.expmodi"를 사용하십시오.
 syntax: 'function ExpMod (expBase : Int, power : Int, modulus : Int) : Int'
 input:
   content: '(expBase : Int, power : Int, modulus : Int)'
@@ -29,9 +23,9 @@ output:
   - isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 8941f07c816bdeddb61bea225b14db5acf46f2aa
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: ffc92d4aa69dfd9ac6a7ed1405d051231ffc8bb5
+  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73227851"
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74863933"

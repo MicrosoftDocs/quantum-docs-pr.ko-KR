@@ -3,44 +3,23 @@ uid: microsoft.quantum.extensions.bitwise
 name: Microsoft.Quantum.Extensions.Bitwise
 functions:
 - uid: microsoft.quantum.extensions.bitwise.and
-  summary: >-
-    > [!WARNING]
-
-    > 사용 되지 않음 @"microsoft.quantum.bitwise.and"를 사용 하세요.
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\n및는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.bitwise.and\"를 사용하십시오.\n@\"microsoft.quantum.bitwise.and\"를 사용하세요."
 - uid: microsoft.quantum.extensions.bitwise.not
-  summary: >-
-    > [!WARNING]
-
-    > 사용 되지 않음 @"microsoft.quantum.bitwise.not"를 사용 하세요.
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\n는 사용 되지 않습니다. 대신 @\"microsoft.quantum.bitwise.not\"를 사용하십시오.\n@\"microsoft.quantum.bitwise.not\"를 사용하세요."
 - uid: microsoft.quantum.extensions.bitwise.or
-  summary: >-
-    > [!WARNING]
-
-    > 사용 되지 않음 @"microsoft.quantum.bitwise.or"를 사용 하세요.
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\n또는는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.bitwise.or\"를 사용하십시오.\n@\"microsoft.quantum.bitwise.or\"를 사용하세요."
 - uid: microsoft.quantum.extensions.bitwise.parity
-  summary: >-
-    > [!WARNING]
-
-    > 사용 되지 않음 @"microsoft.quantum.bitwise.parity"를 사용 하세요.
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\n패리티는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.bitwise.parity\"를 사용하십시오.\n@\"microsoft.quantum.bitwise.parity\"를 사용하세요."
 - uid: microsoft.quantum.extensions.bitwise.xbits
-  summary: >-
-    > [!WARNING]
-
-    > 사용 되지 않음 @"microsoft.quantum.bitwise.xbits"를 사용 하세요.
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nXBits는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.bitwise.xbits\"를 사용하십시오.\n@\"microsoft.quantum.bitwise.xbits\"를 사용하세요."
 - uid: microsoft.quantum.extensions.bitwise.xor
-  summary: >-
-    > [!WARNING]
-
-    > 사용 되지 않음 @"microsoft.quantum.bitwise.xor"를 사용 하세요.
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nXor은 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.bitwise.xor\"를 사용하십시오.\n@\"microsoft.quantum.bitwise.xor\"를 사용하세요."
 - uid: microsoft.quantum.extensions.bitwise.zbits
-  summary: >-
-    > [!WARNING]
-
-    > 사용 되지 않음 @"microsoft.quantum.bitwise.zbits"를 사용 하세요.
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nZBits는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.bitwise.zbits\"를 사용하십시오.\n@\"microsoft.quantum.bitwise.zbits\"를 사용하세요."
 metadata:
-  ms.openlocfilehash: ac63e91ec3fefe0002f14b1542eaa97456bd33aa
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 69399e7aa3c7173b1173f278a79046e639db71d6
+  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73056752"
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74858400"

@@ -3,189 +3,81 @@ uid: microsoft.quantum.extensions.math
 name: Microsoft.Quantum.Extensions.Math
 functions:
 - uid: microsoft.quantum.extensions.math.absb
-  summary: >-
-    > [!WARNING]
-
-    > 사용 되지 않음 @"microsoft.quantum.math.absl"를 사용 하세요.
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nAbsB는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.math.absl\"를 사용하십시오.\n@\"microsoft.quantum.math.absl\"를 사용하세요."
 - uid: microsoft.quantum.extensions.math.absd
-  summary: >-
-    > [!WARNING]
-
-    > 사용 되지 않음 @"microsoft.quantum.math.absd"를 사용 하세요.
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nAbsD는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.math.absd\"를 사용하십시오.\n@\"microsoft.quantum.math.absd\"를 사용하세요."
 - uid: microsoft.quantum.extensions.math.absi
-  summary: >-
-    > [!WARNING]
-
-    > 사용 되지 않음 @"microsoft.quantum.math.absi"를 사용 하세요.
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nAbsI는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.math.absi\"를 사용하십시오.\n@\"microsoft.quantum.math.absi\"를 사용하세요."
 - uid: microsoft.quantum.extensions.math.arccos
-  summary: >-
-    > [!WARNING]
-
-    > 사용 되지 않음 @"microsoft.quantum.math.arccos"를 사용 하세요.
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nArcCos는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.math.arccos\"를 사용하십시오.\n@\"microsoft.quantum.math.arccos\"를 사용하세요."
 - uid: microsoft.quantum.extensions.math.arcsin
-  summary: >-
-    > [!WARNING]
-
-    > 사용 되지 않음 @"microsoft.quantum.math.arcsin"를 사용 하세요.
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nArcSin는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.math.arcsin\"를 사용하십시오.\n@\"microsoft.quantum.math.arcsin\"를 사용하세요."
 - uid: microsoft.quantum.extensions.math.arctan
-  summary: >-
-    > [!WARNING]
-
-    > 사용 되지 않음 @"microsoft.quantum.math.arctan"를 사용 하세요.
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nArcTan은 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.math.arctan\"를 사용하십시오.\n@\"microsoft.quantum.math.arctan\"를 사용하세요."
 - uid: microsoft.quantum.extensions.math.arctan2
-  summary: >-
-    > [!WARNING]
-
-    > 사용 되지 않음 @"microsoft.quantum.math.arctan2"를 사용 하세요.
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nArcTan2는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.math.arctan2\"를 사용하십시오.\n@\"microsoft.quantum.math.arctan2\"를 사용하세요."
 - uid: microsoft.quantum.extensions.math.ceiling
-  summary: >-
-    > [!WARNING]
-
-    > 사용 되지 않음 @"microsoft.quantum.math.ceiling"를 사용 하세요.
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\n상한은 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.math.ceiling\"를 사용하십시오.\n@\"microsoft.quantum.math.ceiling\"를 사용하세요."
 - uid: microsoft.quantum.extensions.math.cos
-  summary: >-
-    > [!WARNING]
-
-    > 사용 되지 않음 @"microsoft.quantum.math.cos"를 사용 하세요.
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nCos는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.math.cos\"를 사용하십시오.\n@\"microsoft.quantum.math.cos\"를 사용하세요."
 - uid: microsoft.quantum.extensions.math.cosh
-  summary: >-
-    > [!WARNING]
-
-    > 사용 되지 않음 @"microsoft.quantum.math.cosh"를 사용 하세요.
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nCosh는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.math.cosh\"를 사용하십시오.\n@\"microsoft.quantum.math.cosh\"를 사용하세요."
 - uid: microsoft.quantum.extensions.math.divremb
-  summary: >-
-    > [!WARNING]
-
-    > 사용 되지 않음 @"microsoft.quantum.math.divreml"를 사용 하세요.
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nDivRemB는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.math.divreml\"를 사용하십시오.\n@\"microsoft.quantum.math.divreml\"를 사용하세요."
 - uid: microsoft.quantum.extensions.math.e
-  summary: >-
-    > [!WARNING]
-
-    > 사용 되지 않음 @"microsoft.quantum.math.e"를 사용 하세요.
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nE는 사용 되지 않습니다. @\"microsoft.quantum.math.e\"를 사용 하세요. 사용합니다.\n@\"microsoft.quantum.math.e\"를 사용하세요."
 - uid: microsoft.quantum.extensions.math.expd
-  summary: >-
-    > [!WARNING]
-
-    > 사용 되지 않음 @"microsoft.quantum.math.expd"를 사용 하세요.
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\n더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.math.expd\"를 사용하십시오.\n@\"microsoft.quantum.math.expd\"를 사용하세요."
 - uid: microsoft.quantum.extensions.math.floor
-  summary: >-
-    > [!WARNING]
-
-    > 사용 되지 않음 @"microsoft.quantum.math.floor"를 사용 하세요.
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nFloor는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.math.floor\"를 사용하십시오.\n@\"microsoft.quantum.math.floor\"를 사용하세요."
 - uid: microsoft.quantum.extensions.math.ieeeremainder
-  summary: >-
-    > [!WARNING]
-
-    > 사용 되지 않음 @"microsoft.quantum.math.ieeeremainder"를 사용 하세요.
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nIEEERemainder는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.math.ieeeremainder\"를 사용하십시오.\n@\"microsoft.quantum.math.ieeeremainder\"를 사용하세요."
 - uid: microsoft.quantum.extensions.math.log
-  summary: >-
-    > [!WARNING]
-
-    > 사용 되지 않음 @"microsoft.quantum.math.log"를 사용 하세요.
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\n로그는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.math.log\"를 사용하십시오.\n@\"microsoft.quantum.math.log\"를 사용하세요."
 - uid: microsoft.quantum.extensions.math.log10
-  summary: >-
-    > [!WARNING]
-
-    > 사용 되지 않음 @"microsoft.quantum.math.log10"를 사용 하세요.
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nLog10는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.math.log10\"를 사용하십시오.\n@\"microsoft.quantum.math.log10\"를 사용하세요."
 - uid: microsoft.quantum.extensions.math.maxb
-  summary: >-
-    > [!WARNING]
-
-    > 사용 되지 않음 @"microsoft.quantum.math.maxl"를 사용 하세요.
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nMaxB는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.math.maxl\"를 사용하십시오.\n@\"microsoft.quantum.math.maxl\"를 사용하세요."
 - uid: microsoft.quantum.extensions.math.maxd
-  summary: >-
-    > [!WARNING]
-
-    > 사용 되지 않음 @"microsoft.quantum.math.maxd"를 사용 하세요.
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nMaxD는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.math.maxd\"를 사용하십시오.\n@\"microsoft.quantum.math.maxd\"를 사용하세요."
 - uid: microsoft.quantum.extensions.math.maxi
-  summary: >-
-    > [!WARNING]
-
-    > 사용 되지 않음 @"microsoft.quantum.math.maxi"를 사용 하세요.
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nMaxI는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.math.maxi\"를 사용하십시오.\n@\"microsoft.quantum.math.maxi\"를 사용하세요."
 - uid: microsoft.quantum.extensions.math.minb
-  summary: >-
-    > [!WARNING]
-
-    > 사용 되지 않음 @"microsoft.quantum.math.minl"를 사용 하세요.
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nMinB는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.math.minl\"를 사용하십시오.\n@\"microsoft.quantum.math.minl\"를 사용하세요."
 - uid: microsoft.quantum.extensions.math.mind
-  summary: >-
-    > [!WARNING]
-
-    > 사용 되지 않음 @"microsoft.quantum.math.mind"를 사용 하세요.
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\n유의는 사용 되지 않습니다. 대신 @\"microsoft.quantum.math.mind\"를 사용하십시오.\n@\"microsoft.quantum.math.mind\"를 사용하세요."
 - uid: microsoft.quantum.extensions.math.mini
-  summary: >-
-    > [!WARNING]
-
-    > 사용 되지 않음 @"microsoft.quantum.math.mini"를 사용 하세요.
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\n미니는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.math.mini\"를 사용하십시오.\n@\"microsoft.quantum.math.mini\"를 사용하세요."
 - uid: microsoft.quantum.extensions.math.modpowb
-  summary: >-
-    > [!WARNING]
-
-    > 사용 되지 않음 @"microsoft.quantum.math.modpowl"를 사용 하세요.
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nModPowB는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.math.modpowl\"를 사용하십시오.\n@\"microsoft.quantum.math.modpowl\"를 사용하세요."
 - uid: microsoft.quantum.extensions.math.pi
-  summary: >-
-    > [!WARNING]
-
-    > 사용 되지 않음 @"microsoft.quantum.math.pi"를 사용 하세요.
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nPI는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.math.pi\"를 사용하십시오.\n@\"microsoft.quantum.math.pi\"를 사용하세요."
 - uid: microsoft.quantum.extensions.math.powd
-  summary: >-
-    > [!WARNING]
-
-    > 사용 되지 않음 @"microsoft.quantum.math.powd"를 사용 하세요.
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nPowD는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.math.powd\"를 사용하십시오.\n@\"microsoft.quantum.math.powd\"를 사용하세요."
 - uid: microsoft.quantum.extensions.math.round
-  summary: >-
-    > [!WARNING]
-
-    > 사용 되지 않음 @"microsoft.quantum.math.round"를 사용 하세요.
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\n라운드는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.math.round\"를 사용하십시오.\n@\"microsoft.quantum.math.round\"를 사용하세요."
 - uid: microsoft.quantum.extensions.math.signb
-  summary: >-
-    > [!WARNING]
-
-    > 사용 되지 않음 @"microsoft.quantum.math.signl"를 사용 하세요.
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nSignB는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.math.signl\"를 사용하십시오.\n@\"microsoft.quantum.math.signl\"를 사용하세요."
 - uid: microsoft.quantum.extensions.math.signd
-  summary: >-
-    > [!WARNING]
-
-    > 사용 되지 않음 @"microsoft.quantum.math.signd"를 사용 하세요.
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nSignD는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.math.signd\"를 사용하십시오.\n@\"microsoft.quantum.math.signd\"를 사용하세요."
 - uid: microsoft.quantum.extensions.math.signi
-  summary: >-
-    > [!WARNING]
-
-    > 사용 되지 않음 @"microsoft.quantum.math.signi"를 사용 하세요.
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nSignI는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.math.signi\"를 사용하십시오.\n@\"microsoft.quantum.math.signi\"를 사용하세요."
 - uid: microsoft.quantum.extensions.math.sin
-  summary: >-
-    > [!WARNING]
-
-    > 사용 되지 않음 @"microsoft.quantum.math.sin"를 사용 하세요.
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nSin은 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.math.sin\"를 사용하십시오.\n@\"microsoft.quantum.math.sin\"를 사용하세요."
 - uid: microsoft.quantum.extensions.math.sinh
-  summary: >-
-    > [!WARNING]
-
-    > 사용 되지 않음 @"microsoft.quantum.math.sinh"를 사용 하세요.
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nSinh는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.math.sinh\"를 사용하십시오.\n@\"microsoft.quantum.math.sinh\"를 사용하세요."
 - uid: microsoft.quantum.extensions.math.sqrt
-  summary: >-
-    > [!WARNING]
-
-    > 사용 되지 않음 @"microsoft.quantum.math.sqrt"를 사용 하세요.
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nSqrt는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.math.sqrt\"를 사용하십시오.\n@\"microsoft.quantum.math.sqrt\"를 사용하세요."
 - uid: microsoft.quantum.extensions.math.tan
-  summary: >-
-    > [!WARNING]
-
-    > 사용 되지 않음 @"microsoft.quantum.math.tan"를 사용 하세요.
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nTan은 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.math.tan\"를 사용하십시오.\n@\"microsoft.quantum.math.tan\"를 사용하세요."
 - uid: microsoft.quantum.extensions.math.tanh
-  summary: >-
-    > [!WARNING]
-
-    > 사용 되지 않음 @"microsoft.quantum.math.tanh"를 사용 하세요.
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nTanh는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.math.tanh\"를 사용하십시오.\n@\"microsoft.quantum.math.tanh\"를 사용하세요."
 - uid: microsoft.quantum.extensions.math.truncate
-  summary: >-
-    > [!WARNING]
-
-    > 사용 되지 않음 @"microsoft.quantum.math.truncate"를 사용 하세요.
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nTruncate는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.math.truncate\"를 사용하십시오.\n@\"microsoft.quantum.math.truncate\"를 사용하세요."
 metadata:
-  ms.openlocfilehash: a1a8cda192f7e95141eb2e34baa37ddaae4cb8c9
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 1eb20bd8834d2a34022ee503808fd26eccaf8c64
+  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73056327"
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74858839"
