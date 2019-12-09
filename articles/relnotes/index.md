@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: 90fd8ad455702ef4f962e1b3291c650eb0afea2e
-ms.sourcegitcommit: 87dd450cea5bcac76a42f0bdc224bfae712efdde
+ms.openlocfilehash: c709f1eb130d37f930ffc4acc4bd663b8b8ba24a
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2019
-ms.locfileid: "74153315"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74863166"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit 릴리스 정보
 
@@ -20,6 +20,18 @@ ms.locfileid: "74153315"
 설치 지침은[설치 가이드](xref:microsoft.quantum.install)를 참조하세요.
 
 업데이트 지침은 [업데이트 가이드](xref:microsoft.quantum.update)를 참조하세요.
+
+## <a name="version-01019120501"></a>버전 0.10.1912.0501
+
+*릴리스 날짜: 2019년 12월 5일*
+
+이 릴리스에는 다음이 포함됩니다.
+
+- Q# 단위 테스트를 위한 새 테스트 속성은 [여기에서](https://docs.microsoft.com/qsharp/api/qsharp/microsoft.quantum.diagnostics.test) 업데이트된 API 설명서 및 [여기에서](xref:microsoft.quantum.techniques.testing-and-debugging) 업데이트된 테스트 & 디버깅 가이드를 참조하세요.
+- Q# 프로그램 실행 오류 발생 시 스택 추적 추가
+- [OmniSharp C# Visual Studio Code 확장](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)의 업데이트로 인한 Visual Studio Code 중단점 지원
+
+[라이브러리](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [컴파일러](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [런타임](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [샘플](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) 및 [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed)에 대한 비공개 PR의 전체 목록을 참조하세요.  
 
 ## <a name="version-01019111607"></a>버전 0.10.1911.1607
 
@@ -205,7 +217,7 @@ Quantum Development Kit 버전 0.5의 기존 Q# 프로젝트가 있는 경우, �
 
 - Q#를 학습할 수 있는 좋은 방법을 제공하는 Jupyter Notebook에 대한 지원이 추가됩니다.  [새 Jupyter Notebook 샘플을 확인하고 사용자 고유의 노트북을 작성하는 방법을 알아보세요](xref:microsoft.quantum.install). 
 
-- 정수 adder 산술을 Quantum Canon 라이브러리에 추가합니다.  [새 정수 adder를 사용하는 방법](https://github.com/Microsoft/Quantum/blob/master/Samples/src/Arithmetic/Adder%20Example.ipynb)을 설명하는 Jupyter Notebook도 참조하세요.
+- 정수 adder 산술을 Quantum Canon 라이브러리에 추가합니다.  [새 정수 adder를 사용하는 방법](https://github.com/microsoft/Quantum/blob/master/samples/arithmetic/AdderExample.ipynb)을 설명하는 Jupyter Notebook도 참조하세요.
 
 - 커뮤니티가 보고한 DumpRegister 문제의 버그를 수정했습니다([#148](https://github.com/Microsoft/Quantum/issues/148)).
 
@@ -360,7 +372,7 @@ Quantum Development Kit의 0.2 버전에서 업그레이드하는 경우, [Q# �
 
 ### <a name="community-contributions"></a>커뮤니티 기여
 
-Q# 코더 커뮤니티는 성장하고 있으며 http://github.com/Microsoft/quantum 에서 열려 있는 코드베이스에 제출된 첫 번째 사용자가 라이브러리 및 샘플에 기여해 주셔서 감사합니다.  다음 기여자분들께 **깊은 감사의 말씀을 드립니다**.
+Q# 코더 커뮤니티는 성장하고 있으며 http://github.com/Microsoft/quantum 에서 열려 있는 코드베이스에 제출된 첫 번째 사용자가 라이브러리 및 샘플에 기여해 주셔서 감사합니다.  다음 기여자분들께 깊은 감사의 말씀을 드립니다.
 * Mathias Soeken([@msoeken](https://github.com/msoeken)): 지정된 순열을 구현하도록 Toffoli 네트워크를 생성하는 변환 기반 논리 합성 메서드를 정의하는 샘플에 기여했습니다. 이 코드는 전체적으로 Q# 함수 및 작업으로 작성됩니다.  [PR #41](https://github.com/Microsoft/Quantum/pull/41).
 * RolfHuisman([@RolfHuisman](https://github.com/RolfHuisman)): Microsoft MVP Rolf Huisman은 클래식 제어 흐름 및 제한된 퀀텀 작업이 포함되지 않은 제한된 프로그램 클래스에 대한 Q# 코드에서 플랫 QASM 코드를 생성하는 샘플에 기여했습니다. [PR #59](https://github.com/Microsoft/Quantum/pull/59)
 * Sarah Kasier([@crazy4pi314](https://github.com/crazy4pi314)): 제어된 작업에 대한 라이브러리 함수를 제출하여 코드베이스를 개선하도록 도왔습니다. [PR #53](https://github.com/Microsoft/Quantum/pull/53)
