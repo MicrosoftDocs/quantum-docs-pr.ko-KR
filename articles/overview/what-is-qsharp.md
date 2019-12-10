@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 10/22/2019
 ms.topic: article
 uid: microsoft.quantum.overview.qsharp
-ms.openlocfilehash: 3fd288439c7db7f939240b4388c9cdb114b6535c
-ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+ms.openlocfilehash: e04d72bafe390ff5c79af408db1d9400754b06ce
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73529982"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74864290"
 ---
 # <a name="what-is-q"></a>Q#이란?
 
@@ -25,12 +25,11 @@ Q#프로그래밍 언어는 양자 컴퓨터의 내부의 논리에 대해 걱�
 
 초기 시대의 양자 컴퓨팅 알고리즘은 클래식 컴퓨팅의 회로 다이어그램과 유사한 다이어그램으로 시각화되었습니다.  회로 모델은 Microsoft에서 수년간 양자 컴퓨팅 연구에 유용했지만, 개발자는 양자 회로를 넘어서 Q#을 사용하여 양자 알고리즘과 애플리케이션을 개발할 수 있다고 생각합니다. Q# 언어는 수십 년간 클래식 소프트웨어 개발을 통해 습득한 것을 활용하고, 양자 컴퓨팅을 대상으로 하는 고급 언어 기능을 양자 개발자에게 제공합니다.
 
-
 ## <a name="how-does-q-work"></a>Q#은 어떻게 작동하나요?
 
 Q#의 기본 구성 요소 중 하나는 `Qubit` 형식이며, 실제 큐비트처럼 복사하거나 직접 액세스할 수 없습니다. 대신, 이를 측정하여 `Zero` 및 `One`의 두 가지 가능한 값을 사용할 수 있는 Q# 형식의 `Result` 변수에 측정 결과를 저장할 수 있습니다. 이와 같은 구문을 통해 알고리즘은 항상 양자 물리학의 법칙을 준수하며 양자 컴퓨터 또는 시뮬레이터에서 올바르게 실행될 수 있습니다.
 
-또한 Q#에는 모든 양자 규칙이 적용될 수 있도록 조건 또는 루프 같은 클래식 논리 기능도 포함되어 있습니다. 예를 들어, 양자 연산을 확실하게 실행하기 위해 루프 실행 방법을 제한하는 기능입니다.
+또한 Q#에는 모든 양자 규칙이 적용될 수 있도록 조건 및 루프 같은 클래식 논리 기능도 포함되어 있습니다. 예를 들어, 결정적 클래식 서브루틴만 포함할 수 있는 함수 내에서 퀀텀 작업이 호출되지 않도록 루프가 실행되는 방식을 제한합니다.
 
 Q# 프로그램은 종종 C# 또는 Python으로 작성된 호스트 프로그램과 쌍을 이루어 클래식 코드와 양자 코드를 편리하게 구성할 수 있습니다. QDK는 C# 및 Python과 같은 언어를 지원하는 것 외에도 IQ# Juppyter 커널을 사용하여 Jupyter Notebook을 지원합니다.
 
