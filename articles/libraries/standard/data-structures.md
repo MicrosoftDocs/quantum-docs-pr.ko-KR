@@ -6,12 +6,12 @@ uid: microsoft.quantum.libraries.data-structures
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: e8b28561f1aba37cb5bf41c6176386d19bfacf06
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 6eb47de84fdfbb9d35fdfc2988883f8e1cffa332
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2019
-ms.locfileid: "73184511"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74864358"
 ---
 # <a name="data-structures-and-modeling"></a>데이터 구조 및 모델링 #
 
@@ -20,7 +20,7 @@ ms.locfileid: "73184511"
 또한 라고은 퀀텀 개념을 나타내는 데 사용 되는 사용자 정의 형식과 함께 퀀텀 시스템의 제어에 사용 되는 기존 데이터로 작업 하기 위한 작업, 함수 및 유형도 제공 합니다.
 예를 들어 <xref:microsoft.quantum.arrays.reversed> 함수는 배열을 입력으로 사용 하 고 동일한 배열을 역순으로 반환 합니다.
 그런 다음 `Qubit[]` 형식의 배열에서 사용할 수 있습니다 .이를 위해 정수의 퀀텀 표현 사이를 변환할 때 불필요 한 $ \operatorname{SWAP} $ 게이트를 적용 하지 않아도 됩니다.
-이와 유사 하 게 이전 단원에서 `(Int, Int -> T)` 형식의 형식은 임의 액세스 컬렉션을 나타내는 데 유용할 수 있으므로 <xref:microsoft.quantum.arrays.lookupfunction> 함수는 배열 형식에서 이러한 형식을 생성 하는 convienent 방법을 제공 합니다.
+이와 유사 하 게, 이전 단원에서 `(Int, Int -> T)` 형식의 형식은 임의 액세스 컬렉션을 나타내는 데 유용할 수 있으므로 <xref:microsoft.quantum.arrays.lookupfunction> 함수는 배열 형식에서 이러한 형식을 생성 하는 편리한 방법을 제공 합니다.
 
 ### <a name="pairs"></a>문자짝 ###
 
@@ -77,7 +77,7 @@ Q #에서이 추상화는 작업을 첫 번째 클래스 값으로 사용 하 �
 
 이러한 oracles는 [Grover의 검색](https://en.wikipedia.org/wiki/Grover%27s_algorithm) 및 퀀텀 시뮬레이션 알고리즘과 같은 유명한 예를 포함 하 여 다양 한 컨텍스트에서 표시 됩니다.
 여기서는 두 가지 응용 프로그램 (진폭 증폭 및 단계 예측)에 필요한 oracles에 중점을 둡니다.
-먼저 진폭 proceding 앞에 oracles를 설명 합니다.
+단계 예측을 진행 하기 전에 먼저 진폭 증폭 oracles에 대해 설명 합니다.
 
 ### <a name="amplitude-amplification-oracles"></a>진폭 증폭 Oracles ###
 
@@ -94,7 +94,7 @@ Oracles는 이러한 공간에 $ \pm $1 단계를 적용 하 여 Pauli 연산자
 대상 하위 공간 $P _1 $을 표시 하는 oracle은 정확히 동일한 형식을 사용 합니다.
 대상 하위 공간의 모든 상태 $ \ket{x} $에 대해 (즉, 출력 하는 알고리즘에 대 한 모든 상태) _1 \ k {x} =-\ket{x} $를 $P 합니다.
 마찬가지로 대상 하위 공간에 없는 모든 상태 $ \ket{y} $에 대해 _1 \ k {y} = \ket{y} $를 $P 합니다.
-그런 다음이 두 반사를 결합 하 여 $Q 진폭 시행의 단일 단계를 구성 하는 연산자를 형성 합니다. 여기서 전체 빼기 기호는 제어 되는 응용 프로그램에서 고려해 야 하는 것이 중요 합니다.
+그런 다음이 두 반사를 결합 하 여 진폭 시행의 단일 단계를 구성 하는 연산자를 형성 합니다. $Q = P_0 P_1 $. 여기서 전체 빼기 기호는 제어 되는 응용 프로그램에서 고려 하는 경우에만 중요 합니다.
 그런 다음 초기 하위 공간에 있는 $ \ket{\psi} $ 초기 상태를 수행 하 고 $ \ket{\psi} \mapsq ^ m \ket{\psi} $를 수행 하 여 진폭 증폭을 진행 합니다.
 이러한 반복을 수행 하는 경우에는 표시 된 공간을 사용 하 여 $ \sin ^ 2 (\sin) $ 겹치는 초기 상태로 시작 하는 경우 $2m 다음 $m에이 겹치는 항목은 $ \sin ^ 2 ([+ 1] \sin) $가 됩니다.
 따라서 일반적 $m으로 $ [2m + 1] \theta = \ pi/2 $;를 사용 하 여 $ [ 그러나 이러한 고정 선택은 고정 소수점 진폭 증폭과 같은 일부 형태의 진폭 증폭에는 중요 하지 않습니다.
@@ -145,20 +145,20 @@ is Adj + Ctl {
 }
 ```
 
-그런 다음 이러한 두 oracles을 함께 결합 하 여 두 상태 간 회전 하 고 $ \sqrt{2 ^ n} $에 비례 하는 Hadamard 게이트의 여러 계층을 사용 하 여 $ \ket{+} ^ {\otimes n} $를 $ \ket{0}$로 변환할 수 있습니다 (ie $m \otimes \sqrt{2 ^ n} $). 결과 $0 $가 관찰 될 때까지 초기 상태를 준비 하 고 측정 하 여 $ \ket{0}$ 상태를 명확 하 게 준비 하는 데 필요한 약 $2 ^ n $ 계층에 대 한 것입니다.
+그런 다음 이러한 두 oracles를 결합 하 여 두 상태 사이를 회전 하 고 $ \sqrt{2 ^ n}에 비례 하는 Hadamard 게이트의 여러 계층을 사용 하 여 $ \ket{+} ^ {\otimes n} $를 $ \ket{0}$로 변형할 수 있습니다. (ie $m \otimes \sqrt{2 ^ n} $) 및 결과 $0 $가 관찰 될 때까지 초기 상태를 준비 하 고 측정 하 여 $ \ket{0}$ 상태를 명확 하 게 준비 하는 데 필요한 대략적인 $2 ^ n $ 계층에 대 한 것입니다.
 
 ### <a name="phase-estimation-oracles"></a>단계 추정 Oracles ###
 
 단계 예측의 경우 oracles는 다소 자연스럽 게 됩니다.
 단계 추정의 목표는 단일 행렬의 고유 값에서 샘플링할 수 있는 서브루틴을 디자인 하는 것입니다.
-이 메서드는 화학 및 자재 과학의 많은 물리적 문제를 발생 시키기 때문에 이러한 고유 값은의 단계 다이어그램에 대 한 중요 한 정보를 제공 하는 퀀텀 시스템의 주력할을 제공 하는 퀀텀 시뮬레이션에 위한 됩니다. molecules에 대 한 자료 및 반응 dynamics.
+이 메서드는 화학 및 자재 과학의 많은 물리적 문제를 발생 시키기 때문에, 이러한 고유 값은의 단계 다이어그램에 대 한 중요 한 정보를 제공 하는 퀀텀 시스템의 그라운드 상태 주력할 제공 합니다. molecules에 대 한 자료 및 반응 dynamics.
 단계 추정의 모든 버전에는 입력이 필요 합니다.
 이는 두 가지 유형의 oracles 중 하나로 설명 되는 일반적으로입니다.
 
 > [!TIP]
 > 아래에 설명 된 두 oracle 형식은 모두 샘플에서 설명 합니다.
-> 연속 쿼리 oracles 대해 자세히 알아보려면 [ **PhaseEstimation** 샘플](https://github.com/Microsoft/Quantum/tree/master/Samples/src/PhaseEstimation)을 참조 하세요.
-> 불연속 쿼리 oracles에 대해 자세히 알아보려면 [ **IsingPhaseEstimation** 샘플](https://github.com/Microsoft/Quantum/tree/master/Samples/src/IsingPhaseEstimation)을 참조 하세요.
+> 연속 쿼리 oracles 대해 자세히 알아보려면 [ **PhaseEstimation** 샘플](https://github.com/microsoft/Quantum/tree/master/samples/characterization/phase-estimation)을 참조 하세요.
+> 불연속 쿼리 oracles에 대해 자세히 알아보려면 [ **IsingPhaseEstimation** 샘플](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/phase-estimation)을 참조 하세요.
 
 Oracle의 첫 번째 형식은 개별 쿼리를 호출 하 고 사용자 정의 형식 <xref:microsoft.quantum.oracles.discreteoracle>를 나타내기 때문에 단일 매트릭스가 포함 됩니다.
 $U $가 예측 하려는 고유 값의 단일 인 경우 $U $에 대 한 oracle은 단순히 $U $를 구현 하는 서브루틴에 대 한 독립 실행형입니다.
@@ -166,8 +166,8 @@ $U $가 예측 하려는 고유 값의 단일 인 경우 $U $에 대 한 oracle�
 이 행렬의 고유 값를 사용 하 여 초기 및 대상 상태 $ \sin ^ 2 (\sin) $ 사이에서 겹치는 항목을 추정 하는 데 사용할 수 있습니다. 그 외에도 quadratically를 사용 하는 경우 보다 작은 샘플을 사용 해야 합니다.
 이는 Grover oracle $Q $를 사용 하 여 진폭 추정의 모니커를 입력으로 적용 하는 단계 예측의 적용을 획득 합니다.
 퀀텀 metrology에서 널리 사용 되는 또 다른 일반적인 응용 프로그램에는 작은 회전 각도를 계산 하는 작업이 포함 됩니다.
-즉, $R _z (\theta) $ 형식의 알 수 없는 회전 게이트에서 $ \theta $를 추정 하려고 합니다.
-이러한 경우, 게이트에서 $ \theta $의 고정 된 값을 학습 하기 위해 상호 작용 하는 서브루틴은 $ $ \begin{align} U & = R_z (\theta) \\\\ & = \begin{bmatrix} e ^ {-i \theta/2} & 0 \\\\ 0 & e ^ {i \입니다. 테타/2} \end{bmatrix}.
+즉, \theta ($R _z) $ 형식의 알 수 없는 회전 게이트를 위해 $ \theta $를 추정 하고자 합니다.
+이러한 경우, 게이트에서 $ \theta $의 고정 된 값을 학습 하기 위해 상호 작용 하는 서브루틴은 $ $ \begin{align} U & = R_z (\theta) \\\\ & = \begin{bmatrix} e ^ {-i \theta/2} & 0 \\\\ 0 & e ^ {a\ 테타/2} \end{bmatrix}.
 \end{align} $ $
 
 단계 예측에 사용 되는 두 번째 유형의 oracle은 <xref:microsoft.quantum.oracles.continuousoracle> 형식으로 표현 되는 연속 쿼리 oracle입니다.
@@ -185,8 +185,8 @@ $U (t) $의 고유 값는 $H $의 고유 값와 직접 관련 됩니다.
 이는 $E $;에 대 한 대부분의 정보를 제공 하는 실험을 정확 하 게 선택할 수 있기 때문에, 효율성의 마지막 온스를 모두 단계 예측 알고리즘에서 잡은 것이 중요 합니다. 반면 불연속 쿼리를 기반으로 하는 메서드는 알고리즘에서 가장 적합 한 정수 수의 쿼리를 선택 하 여 해당 메서드를 손상 된 상태로 만들어야 합니다.
 
 이에 대 한 구체적인 예로, 출입문의 회전 각도는 아니지만 회전 퀀텀 시스템의 procession 빈도를 추정 하는 문제를 고려해 야 합니다.
-이러한 퀀텀 dynamics를 설명 하는 단일 $U (t) = R_z (2 \ 오메가 t) $ for 진화 time $t $ 및 unknown frequency $ \000s $입니다.
-이 컨텍스트에서는 단일 $R _z $ gate를 사용 하 여 모든 $t $에 대 한 $U (t) $를 시뮬레이션할 수 있으며, 따라서이를 개별 쿼리로 제한 하지 않아도 됩니다.
+이러한 퀀텀 dynamics를 설명 하는 단일는 진화 $t 시간에 대 한 $U (t) = R_z (2 \ 오메가 t) $이 고 알 수 없는 frequency $ \000s $입니다.
+이 컨텍스트에서는 단일 $R _z $ gate를 사용 하 여 모든 $t $에 대 한 $U (t) $를 시뮬레이션할 수 있으며,이 경우에는 불연속 쿼리로만 제한 하지 않아도 됩니다.
 이러한 연속 모델에는 또한 로그 함수의 분기 컷에 의해 마스킹 되는 단계 정보 때문에 연속 쿼리를 사용 하는 단계 예측 프로세스에서 $2 \ pi $ 보다 큰 빈도를 확인할 수 있습니다. $t $의 비 비례하여 값에 대해 수행 된 실험의 결과에서 표시 됩니다.
 따라서 단계 예측 oracle의 이러한 연속 쿼리 모델과 같은 문제의 경우에는 적합 하지 않지만 불연속 쿼리 모델에도 적합 합니다.
 이러한 이유로 Q #에는 두 가지 쿼리 형태 모두에 대 한 기능이 있으며 사용자에 게 제공 하 여 요구 사항 및 사용 가능한 oracle 유형에 맞는 단계 추정 알고리즘을 결정 합니다.
@@ -199,17 +199,17 @@ $U (t) $의 고유 값는 $H $의 고유 값와 직접 관련 됩니다.
 
 $ $ \begin{align} H & = \sum ^ {d-1} _ {j = 0} H_j, \end{align} $ $
 
-각 용어에의 한 시간-진화는 퀀텀 컴퓨터에서 쉽게 구현할 수 있습니다. 예를 들어 $H _j $가 valbit 레지스터 `qubits`의 첫 번째 및 두 번째 요소에 대해 작동 하는 Pauli $X _1X_2 $ 연산자 인 경우, 언제 든 지 $t $에 대 한 시간 진화는 서명 `Exp([PauliX,PauliX], t, qubits[1..2])`있는 작업 `((Pauli[], Double, Qubit[]) => Unit is Adj + Ctl)`를 호출 하 여 간단히 구현할 수 있습니다. Hamiltonian 시뮬레이션의 뒷부분에서 설명 했 듯이, 한 가지 해결 방법은 $H $에서 간단한 작업의 시퀀스로 대략적인 시간 진화를 수행 하는 것입니다.
+각 용어에의 한 시간-진화는 퀀텀 컴퓨터에서 쉽게 구현할 수 있습니다. 예를 들어 $H _j $가 valbit 레지스터 `qubits`의 1 번째 및 두 번째 요소에서 작동 하는 _1X_2 $ 연산자 $X 경우 언제 든 지 시간을 기준으로 시간을 증가 시킬 수 있습니다. $t $는 서명 `Exp([PauliX,PauliX], t, qubits[1..2])`있는 작업 `((Pauli[], Double, Qubit[]) => Unit is Adj + Ctl)`를 호출 하 여 간단히 구현할 수 있습니다. Hamiltonian 시뮬레이션의 뒷부분에서 설명 했 듯이, 한 가지 해결 방법은 $H $에서 간단한 작업의 시퀀스로 대략적인 시간 진화를 수행 하는 것입니다.
 
-$ $ \begin{align} U (t) & = \left (e ^ {-iH\_0 t/r} e ^ {-iH\_1 t/r} \cume ^ {-iH\_{d-1} t/r} \left) ^ {r} + \mathcal{O} (d ^ 2 \max_j \\| H\_j\\| ^ 2 t ^ 2/r), \end{align} $ $
+$ $ \begin{align} U (t) & = \left (e ^ {-iH\_0 t/r} e ^ {-iH\_1 t/r} \c도트 e ^ {-iH\_{d-1} t/r} \left) ^ {r} + \mathcal{O} (d ^ 2 \ max_j \\| H\_j\\| ^ 2 t ^ 2/r), \end{align} $ $
 
 여기서 정수 $r > $0는 근사값 오류를 제어 합니다.
 
 동적 생성기 모델링 라이브러리는 간단한 생성기를 기준으로 복잡 한 생성기를 위한 프레임 워크를 제공 합니다. 이러한 설명은 시뮬레이션 라이브러리를 사용 하 여 선택의 시뮬레이션 알고리즘에의 한 시간 진화를 구현 하는 것과 같은 여러 세부 정보가 자동으로 처리 되는 것을 말합니다.
 
 > [!TIP]
-> 아래에 설명 된 동적 생성기 라이브러리는 샘플에서 설명 합니다. Ising 모델을 기반으로 하는 예제는 [ **Isinggenerators** 샘플](https://github.com/Microsoft/Quantum/tree/master/Samples/src/IsingGenerators)을 참조 하세요.
-> 분자 Hydrogen를 기반으로 하는 예제는 [**H2SimulationCmdLine**](https://github.com/Microsoft/Quantum/tree/master/Samples/src/H2SimulationCmdLine) 및 [**H2SimulationGUI**](https://github.com/Microsoft/Quantum/tree/master/Samples/src/H2SimulationGUI) 샘플을 참조 하세요.
+> 아래에 설명 된 동적 생성기 라이브러리는 샘플에서 설명 합니다. Ising 모델을 기반으로 하는 예제는 [ **Isinggenerators** 샘플](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/generators)을 참조 하세요.
+> 분자 Hydrogen를 기반으로 하는 예제는 [**H2SimulationCmdLine**](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line) 및 [**H2SimulationGUI**](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/gui) 샘플을 참조 하세요.
 
 ### <a name="complete-description-of-a-generator"></a>생성기의 전체 설명 ###
 
@@ -225,7 +225,7 @@ newtype EvolutionGenerator = (EvolutionSet, GeneratorSystem);
 newtype GeneratorSystem = (Int, (Int -> GeneratorIndex));
 ```
 
-튜플의 첫 번째 요소 `Int`는 Hamiltonian에서 용어 $d $의 수를 저장 하 고, 두 번째 요소 `(Int -> GeneratorIndex)`는 $\{0, 1,..., d-1\}$의 정수 인덱스를 각각 고유 하 게 식별 하는 `GeneratorIndex` 사용자 정의 형식에 매핑하는 함수입니다. Hamiltonian의 기본 용어입니다. Hamiltonian의 용어 컬렉션을 배열 `GeneratorIndex[]`아니라 함수로 표현 하 여 `GeneratorIndex`의 즉석 계산을 수행할 수 있습니다 .이는 많은 수의 용어로 Hamiltonians를 설명할 때 특히 유용 합니다.
+튜플의 첫 번째 요소 `Int`는 Hamiltonian에서 용어 $d $의 수를 저장 하 고, 두 번째 요소 `(Int -> GeneratorIndex)`는 $\{0, 1,..., d-1\}$의 정수 인덱스를 Hamiltonian의 각 기본 용어를 고유 하 게 식별 하는 `GeneratorIndex` 사용자 정의 형식에 매핑하는 함수입니다. Hamiltonian의 용어 컬렉션을 배열 `GeneratorIndex[]`아니라 함수로 표현 하 여 `GeneratorIndex`의 즉석 계산을 수행할 수 있습니다 .이는 많은 수의 용어로 Hamiltonians를 설명할 때 특히 유용 합니다.
 
 매우 `GeneratorIndex`에 의해 식별 되는 기본 용어에 대 한 규칙은 적용 하기가 쉽지 않습니다. 예를 들어, 기본 용어는 위에서 설명한 대로 Pauli 연산자 일 수 있지만, 일반적으로 퀀텀 화학 시뮬레이션에서 사용 되는 Fermionic annihilation 및 만들기 연산자 일 수 있습니다. `GeneratorIndex`는 해당 하는 용어의 시간 혁신을 퀀텀 회로로 구현할 수 있는 방법을 설명 하지 않으므로 의미가 없습니다.
 
@@ -244,7 +244,7 @@ $ $ \begin{align} H & = \sum ^ {d-1} _ {j = 0} a_j H_j, \end{align} $ $ 여기�
 newtype GeneratorIndex = ((Int[], Double[]), Int[]);
 ```
 
-이 인코딩에서 첫 번째 매개 변수 `Int[]`는 Pauli 문자열을 지정 합니다. 여기서 $ \hat I\rightarrow $0, $ \hat X\rightarrow $1, $ \hat Y\rightarrow $2 및 $ \hat Z\rightarrow $3입니다. 두 번째 매개 변수 `Double[]`는 Hamiltonian에서 Pauli 문자열의 계수를 저장 합니다. 이 배열의 첫 번째 요소만 사용 됩니다. 세 번째 매개 변수 `Int[]`는이 Pauli 문자열이 작동 하는 요소를 인덱싱합니다. 중복 된 요소가 없어야 합니다. 따라서 Hamiltonian term $0.4 \hat X_0 \hat Y_8\hat I_2\hat Z_1 $는로 나타낼 수 있습니다.
+이 인코딩에서 첫 번째 매개 변수 `Int[]`는 Pauli 문자열을 지정 합니다. 여기서 $ \hat I\rightarrow $0, $ \hat X\rightarrow $1, $ \hat Y\rightarrow $2 및 $ \hat Z\rightarrow $3입니다. 두 번째 매개 변수 `Double[]`는 Hamiltonian에서 Pauli 문자열의 계수를 저장 합니다. 이 배열의 첫 번째 요소만 사용 됩니다. 세 번째 매개 변수 `Int[]`는이 Pauli 문자열이 작동 하는 요소를 인덱싱합니다. 중복 된 요소가 없어야 합니다. 따라서 Hamiltonian term $0.4 \hat X_0 \hat Y_8 \hat I_2 \hat Z_1 $는로 나타낼 수 있습니다.
 
 ```qsharp
 let generatorIndexExample = GeneratorIndex(([1,2,0,3], [0.4]]), [0,8,2,1]);

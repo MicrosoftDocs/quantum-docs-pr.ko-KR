@@ -6,12 +6,12 @@ uid: microsoft.quantum.libraries.error-correction
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 5aac40686ba9b45a51e0274a1828f2ff7cce6fc3
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: e1b78cf94ae0a043ad275d4cb06b230eafd7fc85
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2019
-ms.locfileid: "73184443"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74863200"
 ---
 # <a name="error-correction"></a>오류 수정 #
 
@@ -28,34 +28,34 @@ ms.locfileid: "73184443"
 이를 통해 퀀텀 사례에 대 한 오류 수정을 일반화 하는 방법을 확인 하는 것이 좋습니다.
 따라서 $ \ket{\overline{0}} = \ket{000} = \ket{0} \otimes \ket{0} \otimes \ket{0}$를 사용 하 고 $ \ket{\overline{1}} = \ket{111}$를 사용 합니다.
 그런 다음, 선형으로 모든 입력에 대 한 반복 코드를 정의 했습니다. 예를 들어 $ \ket{\overline{+}} = (\ket{\overline{0}} + \ket{\overline{1}})/\sqrt{2} = (\ket{000} + \ket{111})/\sqrt{2}$입니다.
-특히 중간의 비트에 대해 \begin{align}를 실행 하는 비트 전환 $X 오류를 허용 하는 경우 두 분기 모두에서 필요한 수정 내용이 정확 하 게 $X _1 $: $ $ X_1 \ket{\overline{+}} & = \frac{1}{\sqrt{2}} \left (X_1 \ket{000} + X_1 \ket @no__입니다. t_3_ \right) \\\\ & = \frac{1}{\right{2}} \right (\ket{010} + \ket{101} \right).
+특히, 비트 대칭 이동 오류 $X는 중간의 두 분기에 필요한 수정 내용이 정확 하 게 $X _1 $: $ $ \begin{align} X_1 \ket{\overline{+}} & = \frac{1}{\sqrt{2}} \left (X_1 \ket{000} + X_1 \ket{111} \right) \\\\ & = \frac{1}{\sqrt{2}} \left (\ket{010} + \ket{101} \right)입니다.
 \end{align} $ $
 
 보호 하려는 상태를 측정 하지 않고이를 어떻게 확인할 수 있는지 확인 하려면 각각의 서로 다른 비트 대칭 이동 오류가 다음 논리 상태에 미치는 것을 기록 하는 것이 좋습니다.
 
 | 오류 $E $ | $E \ket{\overline{0}} $ | $E \ket{\overline{1}} $ |
 | --- | --- | --- |
-| $ \boldone $ | $ \ket{000}$ | $ \ket{111}$ |
-| $X _0 $ | $ \ket{100}$ | $ \ket{011}$ |
-| $X _1 $ | $ \ket{010}$ | $ \ket{101}$ |
-| $X _2 $ | $ \ket{001}$ | $ \ket{110}$ |
+| $\boldone$ | $ \ket{000}$ | $ \ket{111}$ |
+| $X_0$ | $ \ket{100}$ | $ \ket{011}$ |
+| $X_1$ | $ \ket{010}$ | $ \ket{101}$ |
+| $X_2$ | $ \ket{001}$ | $ \ket{110}$ |
 
 인코딩할 상태를 보호 하기 위해 $ \ket{\overline{0}} $ 및 $ \ket{\overline{1}} $를 구별 하지 않고 id $ \boldone $와 다른 세 개의 오류를 구별할 수 있어야 합니다.
 예를 들어 $Z _0 $을 측정 하는 경우 오류 없는 경우에서 $ \ket{\overline{0}} $ 및 $ \ket{\overline{1}} $에 대해 다른 결과를 얻게 되므로는 인코딩된 상태를 축소 합니다.
 반면, 각 계산 기준 상태에서 처음 두 비트의 패리티 $Z _0 Z_1 $을 측정 하는 것이 좋습니다.
 Pauli 연산자의 각 측정 측정은 측정 되는 상태에 해당 하는 eigenvalue를 확인 하므로, 위의 표에 있는 각 state $ \ket{\psi} $에 대해 $Z _0 Z_1 \ket{\psi} $을 계산 하 여 $ \pm\ket{\psi} $가 있는지 확인할 수 있습니다.
-$Z _0 Z_1 \ket{000} = \ket{000}${111} $Z 이며이 측정값이 두 인코딩된 상태에 대해 동일한 작업을 수행 하는 것으로 결론을.
-반면에 $Z _0 Z_1 \ket{100} =-\ket{100}$ 및 $Z _0 Z_1 \ket{011} =-\ket{011}$를 측정 하므로 $Z _0 Z_1 $를 측정 하면 발생 한 오류에 대 한 유용한 정보가 표시 됩니다.
+$Z _0 Z_1 \ket{000} = \ket{000}$ 이며이 측정값이 두 인코딩된 상태에 대해 동일한 작업을 수행 하는 것으로 결론을 $Z 합니다.
+반면에 $Z _0 Z_1 \ket{100} =-\ket{100}$ 및 $Z _0 Z_1 \ket{011} =-\ket{011}$로 측정 한 결과 $Z _0 Z_1 $를 측정 하면 발생 한 오류에 대 한 유용한 정보가 표시 됩니다.
 
-이를 강조 하기 위해 위의 표를 반복 하지만 각 행에 $Z _0 Z_1 $ 및 $Z _1 Z_2 $ 측정 결과를 추가 합니다.
+이를 강조 하기 위해 위의 표를 반복 하지만 각 행에 $Z _0 Z_1 $ 및 $Z _1 Z_2 $의 측정 결과를 추가 합니다.
 각각의 Q # `Result` 값 `Zero` 및 `One`에 해당 하는 관찰 된 eigenvalue의 부호 ($ + $ 또는 $-$)를 기준으로 각 측정 결과를 나타냅니다.
 
-| 오류 $E $ | $E \ket{\overline{0}} $ | $E \ket{\overline{1}} $ | $Z _0 Z_1 $의 결과 | $Z _1 Z_2 $의 결과 |
+| 오류 $E $ | $E \ket{\overline{0}} $ | $E \ket{\overline{1}} $ | $Z _0 Z_1 $ 결과 | $Z _1 Z_2 $의 결과 |
 | --- | --- | --- | --- | --- |
-| $ \boldone $ | $ \ket{000}$ | $ \ket{111}$ | $+$ | $+$ |
-| $X _0 $ | $ \ket{100}$ | $ \ket{011}$ | $-$ | $+$ |
-| $X _1 $ | $ \ket{010}$ | $ \ket{101}$ | $-$ | $-$ |
-| $X _2 $ | $ \ket{001}$ | $ \ket{110}$ | $+$ | $-$ |
+| $\boldone$ | $ \ket{000}$ | $ \ket{111}$ | $+$ | $+$ |
+| $X_0$ | $ \ket{100}$ | $ \ket{011}$ | $-$ | $+$ |
+| $X_1$ | $ \ket{010}$ | $ \ket{101}$ | $-$ | $-$ |
+| $X_2$ | $ \ket{001}$ | $ \ket{110}$ | $+$ | $-$ |
 
 따라서 두 측정값의 결과는 어떤 비트 대칭 오류가 발생 했는지를 고유 하 게 결정 하지만 인코딩된 상태에 대 한 정보는 노출 하지 않습니다.
 이러한 결과를 *증후군*로 호출 하 고 증후군를 *복구*로 발생 시킨 오류에 다시 매핑하는 프로세스를 참조 합니다.
@@ -67,7 +67,7 @@ $Z _0 Z_1 \ket{000} = \ket{000}${111} $Z 이며이 측정값이 두 인코딩된
 > 마찬가지로 `Z` 단계 전환 작업을 적용 하면 $ \ket{\overline{1}} $이 $-\ket{\overline{1}} $에 매핑되고 $ \ket{\overline{+}} $가 $ \ket{\overline{-}} $에 매핑됩니다.
 > 보다 일반적으로 더 많은 오류를 처리 하 고 $Z $ errors 및 $X $ errors를 처리 하는 코드를 만들 수 있습니다.
 
-모든 코드 상태에서 동일한 방식으로 작동 하는 퀀텀 오류 수정의 측정값을 설명 하는 것은 *안정기 정해진*의 essense입니다.
+모든 코드 상태에서 동일한 방식으로 작동 하는 퀀텀 오류 수정의 측정을 설명할 수 있는 정보는 *안정기 정해진*의 핵심입니다.
 Q # 라고에서는 안정기 코드에서의 인코딩 및 디코딩을 설명 하 고, 오류에서 복구 하는 방법을 설명 하는 프레임 워크를 제공 합니다.
 이 섹션에서는 몇 가지 간단한 퀀텀 오류 수정 코드에이 프레임 워크 및 해당 응용 프로그램을 설명 합니다.
 
@@ -117,6 +117,6 @@ using (scratch = Qubit[nScratch]) {
 }
 ```
 
-이에 대 한 자세한 내용은 [비트 대칭 코드 샘플](https://github.com/Microsoft/Quantum/tree/master/Samples/src/BitFlipCode)을 살펴보세요.
+이에 대 한 자세한 내용은 [비트 대칭 코드 샘플](https://github.com/microsoft/Quantum/tree/master/samples/error-correction/bit-flip-code)을 살펴보세요.
 
-비트 대칭 코드를 제외 하 고 Q # 라고은 [5 ~ 5 ~ 5](https://arxiv.org/abs/1305.08)비트 코드의 구현과 함께 제공 되며, 두 가지 모두 [](https://arxiv.org/abs/quant-ph/9705052)임의의 단일 비트 오류를 수정할 수 있습니다.
+비트 대칭 코드를 제외 하 고 Q # 라고은 [5 ~ 5 ~ 5](https://arxiv.org/abs/quant-ph/9602019)비트 코드의 구현과 함께 제공 되며, 두 가지 모두 [](https://arxiv.org/abs/quant-ph/9705052)임의의 단일 비트 오류를 수정할 수 있습니다.
