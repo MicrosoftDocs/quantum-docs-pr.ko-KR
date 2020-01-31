@@ -3,7 +3,11 @@ uid: microsoft.quantum.arithmetic.greaterthan
 name: GreaterThan
 type: operation
 namespace: Microsoft.Quantum.Arithmetic
-summary: $ 및 $y $ $x 두 정수의 비교를 엄격 하 게 비교 합니다. Y $를 > $x 경우에는 결과의 상태가 전환 됩니다. 그렇지 않으면 해당 상태를 유지 합니다.
+summary: >-
+  비교 결과에 따라 대상의 범위를 대칭 이동 하는 두 개의 정수를 해당 형식으로 인코딩된 두 정수 사이에 보다 큼 비교를 적용 합니다.
+
+
+  $ 및 $y $ $x 두 정수의 비교를 엄격 하 게 비교 합니다. Y $를 > $x 경우에는 결과의 비트가 대칭 이동 됩니다. 그렇지 않으면 결과의 비트가 상태를 유지 합니다.
 remarks: 는 $x-y = (x ' + y) ' $를 사용 합니다. 여기서은 1의 보수를 나타냅니다.
 syntax: 'operation GreaterThan (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, result : Qubit) : Unit'
 references: >-
@@ -33,9 +37,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 6961a6a4f22d2290a264298a3be3b15f7bdb0ac7
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 062d892ad66b8ab41e8ad0bbd2fce6e1eaff0baa
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73214948"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76870855"

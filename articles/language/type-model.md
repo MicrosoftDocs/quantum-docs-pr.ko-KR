@@ -6,12 +6,12 @@ uid: microsoft.quantum.language.type-model
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 4e251053d1b8306bf8956314d8099e95c56bce55
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 0aabb144779da301b71ad215c8e975cc29b4dcce
+ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "73184749"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76871637"
 ---
 # <a name="the-type-model"></a>형식 모델
 
@@ -120,7 +120,7 @@ Q #에서는 생성 된 튜플의 콘텐츠를 변경 하는 메커니즘을 제
 
 Q # 파일은 법적 형식의 단일 값을 포함 하는 새 명명 된 형식을 정의할 수 있습니다.
 `T`모든 튜플 형식에 대해 `newtype` 문으로 `T`의 하위 형식인 새 사용자 정의 형식을 선언할 수 있습니다.
-예를 들어 @"microsoft.quantum.canon" 네임 스페이스에서 복소수는 사용자 정의 형식으로 정의 됩니다.
+예를 들어 @"microsoft.quantum.math" 네임 스페이스에서 복소수는 사용자 정의 형식으로 정의 됩니다.
 
 ```qsharp
 newtype Complex = (Double, Double);
@@ -141,7 +141,7 @@ newtype Nested = (Double, (ItemName : Int, String));
 명명 된 항목은 `::`액세스 연산자를 통해 직접 액세스할 수 있다는 장점이 있습니다. 
 
 ```qsharp
-function Addition (c1 : Complex, c2 : Complex) : Complex {
+function ComplexAddition(c1 : Complex, c2 : Complex) : Complex {
     return Complex(c1::Re + c2::Re, c1::Im + c2::Im);
 }
 ```
@@ -151,7 +151,7 @@ function Addition (c1 : Complex, c2 : Complex) : Complex {
 이러한 "래핑 해제" 식의 형식은 사용자 정의 형식의 기본 형식입니다. 
 
 ```qsharp
-function PrintMsg (value : Nested) : Unit {
+function PrintedMessage(value : Nested) : Unit {
     let (d, (_, str)) = value!;
     Message ($"{str}, value: {d}");
 }
@@ -227,7 +227,7 @@ newtype Polar = (Radius : Double, Phase : Double);
 ## <a name="operation-and-function-types"></a>작업 및 함수 형식
 
 Q # _작업_ 은 퀀텀 서브루틴입니다.
-즉, 퀀텀 작업을 포함 하는 호출 가능 루틴입니다.
+즉, 양자 연산을 포함하는 호출 가능 루틴입니다.
 
 Q # _함수_ 는 퀀텀 알고리즘 내에서 사용 되는 기존 서브루틴입니다.
 기존 코드를 포함할 수 있지만 퀀텀 작업은 포함 되지 않습니다.
@@ -286,27 +286,28 @@ Q #은 입력 유형과 관련 하 여 반공 변 (contravariant)입니다. 입�
 즉, 다음과 같은 정의가 제공 됩니다.
 
 ```qsharp
-operation Invertible (qs : Qubit[]) : Unit 
+operation Invert(qubits : Qubit[]) : Unit 
 is Adj {...} 
-operation Unitary (qs : Qubit[]) : Unit 
+
+operation ApplyUnitary(qubits : Qubit[]) : Unit 
 is Adj + Ctl {...} 
 
-function ConjugateInvertibleWith (
-   inner: (Qubit[] => Unit is Adj),
-   outer : (Qubit[] => Unit is Adj))
+function ConjugateInvertWith(
+    inner : (Qubit[] => Unit is Adj),
+    outer : (Qubit[] => Unit is Adj))
 : (Qubit[] => Unit is Adj) {...}
 
-function ConjugateUnitaryWith (
-   inner: (Qubit[] => Unit is Adj + Ctl),
-   outer : (Qubit[] => Unit is Adj))
+function ConjugateUnitaryWith(
+    inner : (Qubit[] => Unit is Adj + Ctl),
+    outer : (Qubit[] => Unit is Adj))
 : (Qubit[] => Unit is Adj + Ctl) {...}
 ```
 
 다음은 true입니다.
 
-- `Invertible` 또는 `Unitary`의 `inner` 인수를 사용 하 여 `ConjugateInvertibleWith` 작업을 호출할 수 있습니다.
-- `ConjugateUnitaryWith` 작업은 `Unitary`의 `inner` 인수를 사용 하 여 호출할 수 있지만 `Invertible`는 호출할 수 없습니다.
-- `ConjugateInvertibleWith`에서 반환 될 수 `(Qubit[] => Unit is Adj + Ctl)` 형식의 값입니다.
+- `Invert` 또는 `ApplyUnitary`의 `inner` 인수를 사용 하 여 `ConjugateInvertWith` 함수를 호출할 수 있습니다.
+- `ConjugateUnitaryWith` 함수는 `ApplyUnitary`의 `inner` 인수를 사용 하 여 호출할 수 있지만 `Invert`는 호출할 수 없습니다.
+- `ConjugateInvertWith`에서 반환 될 수 `(Qubit[] => Unit is Adj + Ctl)` 형식의 값입니다.
 
 > [!IMPORTANT]
 > Q # 0.3에서는 사용자 정의 형식의 동작에 상당한 차이가 있습니다.
@@ -377,14 +378,12 @@ Q # 작업의이 예제는 [측정](https://github.com/microsoft/Quantum/tree/ma
 ```qsharp
 /// # Summary
 /// Prepares a state and measures it in the Pauli-Z basis.
-operation MeasureOneQubit () : Result {
+operation MeasureOneQubit() : Result {
         mutable result = Zero;
 
         using (qubit = Qubit()) { // Allocate a qubit
             H(qubit);               // Use a quantum operation on that qubit
-
             set result = M(qubit);      // Measure the qubit
-
             if (result == One) {    // Reset the qubit so that it can be released
                 X(qubit);
             }
@@ -396,12 +395,11 @@ operation MeasureOneQubit () : Result {
 
 이 함수의 예는 [PhaseEstimation](https://github.com/microsoft/Quantum/tree/master/samples/characterization/phase-estimation) 샘플에서 가져온 것입니다. 순수 하 게 클래식 코드를 포함 합니다. 위의 예제와는 달리, 더 이상 할당 되지 않으며 퀀텀 작업을 사용 하지 않는 것을 볼 수 있습니다.
 
-
 ```qsharp
 /// # Summary
 /// Given two arrays, returns a new array that is the pointwise product
 /// of each of the given arrays.
-function MultiplyPointwise (left : Double[], right : Double[]) : Double[] {
+function PointwiseProduct(left : Double[], right : Double[]) : Double[] {
     mutable product = new Double[Length(left)];
 
     for (idxElement in IndexRange(left)) {
@@ -417,7 +415,10 @@ function MultiplyPointwise (left : Double[], right : Double[]) : Double[] {
 /// # Summary
 /// Translate MCT masks into multiple-controlled Toffoli gates (with single
 /// targets).
-function GateMasksToToffoliGates (qubits : Qubit[], masks : MCMTMask[]) : MCTGate[] {
+function GateMasksToToffoliGates(
+    qubits : Qubit[], 
+    masks : MCMTMask[]) 
+: MCTGate[] {
 
     mutable result = new MCTGate[0];
     let n = Length(qubits);

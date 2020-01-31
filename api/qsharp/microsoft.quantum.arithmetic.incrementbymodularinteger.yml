@@ -7,22 +7,27 @@ summary: >-
   정수 상수를 기준으로 하는 이상 비트 레지스터의 모듈식 증분을 수행 합니다.
 
 
-  `increment`에서 `modulus`를 사용 하 여 N을 표시 하 고 y로 `target`에서 인코딩된 정수를 입력 합니다 .이 작업은 \begin{align} \ket{y} \maps\ket{y + 1 \operatorname{mod} N} \end{align} 정수를 거의 endian 형식으로 인코딩합니다.
-remarks: Target의 값이 N 보다 작은 것으로 가정 합니다. <xref:microsoft.quantum.arithmetic.incrementphasebymodularinteger>는 `PhaseLittleEndian` 기준으로 동일한 작업을 구현 합니다.
+  `target` $에 의해 $y에서 $N $ 및 정수로 인코딩된 $a $, `modulus` `increment`를 나타냅니다.
+
+  그런 다음이 작업은 다음 변환을 수행 합니다. \begin{align} \ket{y} \maps\ket{(y + a) \operatorname{mod} N} \end{align} 정수는 작은 endian 형식으로 인코딩됩니다.
+remarks: >-
+  Target의 초기 값이 $ $N 보다 작고 증분 $a $가 $N $ 보다 작은 것으로 가정 합니다.
+
+  <xref:microsoft.quantum.arithmetic.incrementphasebymodularinteger>는 `PhaseLittleEndian` 기준으로 동일한 작업을 구현 합니다.
 syntax: 'operation IncrementByModularInteger (increment : Int, modulus : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
   content: '(increment : Int, modulus : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
   - name: increment
-    summary: Y에 더할 정수 증가값입니다.
+    summary: $Y $에 더할 정수 증가값 $a $입니다.
     isPrimitive: true
     uid: Int
   - name: modulus
-    summary: Y + a를 mods 정수 N입니다.
+    summary: Mods $y + a $의 정수 $N $입니다.
     isPrimitive: true
     uid: Int
   - name: target
-    summary: '`increment`를에 추가 하는 `LittleEndian` 형식의 정수 y입니다.'
+    summary: $A $를 `increment` 하는 `LittleEndian` 형식의 정수 $y $는에 추가 됩니다.
     uid: microsoft.quantum.arithmetic.littleendian
 output:
   content: Unit
@@ -33,11 +38,11 @@ functors:
 - Adjoint
 - Controlled
 seeAlso:
-- incrementphasebymodularinteger
+- microsoft.quantum.arithmetic.incrementphasebymodularinteger
 metadata:
-  ms.openlocfilehash: 9b61ed007a08d176d1754a7c1cd6cd2d9edce7d2
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 975d4548eadbc61f8174b6719d067ffed32797dd
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73219062"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76871603"

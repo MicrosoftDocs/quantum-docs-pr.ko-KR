@@ -6,12 +6,12 @@ uid: microsoft.quantum.libraries.applications
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: ef22460a5bca63ebaf32c0ba21984e103ec8ebdd
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+ms.openlocfilehash: 3e629e095bd2ee492496066710ef6fd4e578a543
+ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74864392"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868971"
 ---
 # <a name="applications"></a>애플리케이션 #
 
@@ -69,15 +69,16 @@ newtype TimeDependentSimulationAlgorithm = ((Double, EvolutionSchedule, Qubit[])
 
 ```qsharp
 function TrotterSimulationAlgorithm(
-    trotterStepSize: Double, 
-    trotterOrder: Int) 
-    : SimulationAlgorithm {
+    trotterStepSize : Double, 
+    trotterOrder : Int) 
+: SimulationAlgorithm {
     ...
 }
+
 function TimeDependentTrotterSimulationAlgorithm(
-    trotterStepSize: Double, 
-    trotterOrder: Int) 
-    : TimeDependentSimulationAlgorithm {
+    trotterStepSize : Double, 
+    trotterOrder : Int) 
+: TimeDependentSimulationAlgorithm {
     ...
 }
 ```
@@ -99,11 +100,11 @@ Hamiltonian 시뮬레이션의 한 가지 일반적인 응용 프로그램은 ad
 
 ```qsharp
 function InterpolatedEvolution(
-        interpolationTime: Double, 
-        evolutionGeneratorStart: EvolutionGenerator,
-        evolutionGeneratorEnd: EvolutionGenerator,
-        timeDependentSimulationAlgorithm: TimeDependentSimulationAlgorithm)
-        : (Qubit[] => Unit is Adj + Ctl) {
+        interpolationTime : Double, 
+        evolutionGeneratorStart : EvolutionGenerator,
+        evolutionGeneratorEnd : EvolutionGenerator,
+        timeDependentSimulationAlgorithm : TimeDependentSimulationAlgorithm)
+: (Qubit[] => Unit is Adj + Ctl) {
         ...
 }
  
@@ -114,13 +115,13 @@ function InterpolatedEvolution(
 또한 일반적인 퀀텀 화학 실험의 모든 단계를 자동으로 수행 하는 유용한 작업을 정의 합니다. 예를 들어 다음과 같이 adiabatic 상태 준비로 생성 된 상태의 에너지 추정치를 반환 합니다.
 
 ```qsharp
-operation AdiabaticStateEnergyEstimate( 
-    nQubits : Int, 
-    statePrepUnitary: (Qubit[] => Unit),
-    adiabaticUnitary: (Qubit[] => Unit),
+operation EstimateAdiabaticStateEnergy(
+    nQubits : Int,
+    statePrepUnitary : (Qubit[] => Unit),
+    adiabaticUnitary : (Qubit[] => Unit),
     qpeUnitary: (Qubit[] => Unit is Adj + Ctl),
-    phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double)) 
-    : Double {
+    phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double))
+: Double {
 ...
 }
 ```
@@ -174,7 +175,7 @@ QFT 게이트가 [이전](xref:microsoft.quantum.libraries.standard.algorithms)�
 $ (A ^ nx) \text{mod} N $을 얻기 위해 일반적으로 _ {a ^ n} $를 $U 적용 하기만 하면 됩니다. 여기서는 $a ^ n \text{mod} N $를 계산 하 여 퀀텀 회로에 연결 합니다.  
 이러한 모듈식 산술 연산을 수행 하기 위한 회로는 [퀀텀 산술 설명서](./algorithms.md#arithmetic)에 설명 되어 있습니다. 특히 제어 되는 $U\_{a ^ i} $ 작업을 구현 하려면 모듈식 지 수 회로가 필요 합니다.
 
-위의 회로는 [퀀텀 단계 예측](xref:microsoft.quantum.characterization.quantumphaseestimation) 에 해당 하 고 주문 찾기를 명시적으로 사용 하도록 설정 하는 반면 필요한 것은 필요한 비트 수를 줄일 수 있습니다. [ArXiv: Beauregard/0205095v3의 8 페이지에](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8)설명 된 대로 주문 찾기에 대해의 방법을 따르거나 Microsoft에서 제공 하는 단계 예측 루틴 중 하나를 사용할 수 있습니다. 예를 들어 [강력한 단계 예측](xref:microsoft.quantum.characterization.robustphaseestimation) 은 또 하나의 추가 비트를 사용 합니다.
+위의 회로는 [퀀텀 단계 예측](xref:microsoft.quantum.characterization.quantumphaseestimation) 에 해당 하 고 주문 찾기를 명시적으로 사용 하도록 설정 하는 반면 필요한 것은 필요한 비트 수를 줄일 수 있습니다. [ArXiv: Beauregard/0205095v3의 8 페이지에](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8)설명 된 대로 주문 찾기에 대해의 방법을 따르거나, Microsoft 양자에서 사용할 수 있는 단계 예측 루틴 중 하나를 사용할 수 있습니다. 예를 들어 [강력한 단계 예측](xref:microsoft.quantum.characterization.robustphaseestimation) 은 또 하나의 추가 비트를 사용 합니다.
  
 ### <a name="factoring"></a>프로필과 ###
 팩터링의 목표는 정수 $N $의 두 소수 요소를 확인 하는 것입니다. 여기서 $N $는 $n $ 비트 숫자입니다.  

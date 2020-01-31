@@ -6,12 +6,12 @@ ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.glossary
-ms.openlocfilehash: ce15fee2be68d41f0b806be50320b562a749c3b7
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: 5c7f2c4a572f6194ee846f056016a25b8c5303a2
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73442543"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820762"
 ---
 # <a name="quantum-computing-glossary"></a>퀀텀 컴퓨팅 용어집
 
@@ -31,7 +31,7 @@ ms.locfileid: "73442543"
 |측정|이상 비트 (또는 나머지 비트 집합)에서 고전적인 비트를 가져옵니다. 자세한 내용은 [다음을 참조](xref:microsoft.quantum.concepts.qubit) 하세요.|
 |변경 가능|값을 만든 후 해당 값을 변경할 수 있는 변수입니다.|
 |네임스페이스|관련 된 이름 (일반적으로 작업, 함수 및 형식)의 컬렉션에 대 한 레이블입니다. 예를 들어, 네임 스페이스 [`Microsoft.Quantum.Preparation`](xref:microsoft.quantum.preparation) 초기 상태를 준비 하는 데 도움이 되는 표준 라이브러리에 정의 된 모든 기호에 레이블을 지정 합니다.|
-|작업(Operation)|Q #에서 퀀텀 실행의 기본 단위입니다. 이는 C, C++ 또는 Python의 함수 또는 C# 또는 Java의 정적 메서드와 거의 동일합니다.|
+|작업|Q #에서 퀀텀 실행의 기본 단위입니다. 이는 C, C++ 또는 Python의 함수 또는 C# 또는 Java의 정적 메서드와 거의 동일합니다.|
 |운영자 응용 프로그램|퀀텀 작업을 수행 하는 중입니다. 일반적으로 현재 상태 벡터에 단일 행렬을 적용 합니다. 자세한 내용은 [퀀텀 개념 소개를](xref:microsoft.quantum.concepts.intro) 참조 하세요.|
 |Oracle|런타임에 퀀텀 알고리즘에 데이터 종속 정보를 제공 하는 서브루틴입니다. 일반적으로 superposition에 있는 입력에 해당 하는 출력의 superposition을 제공 하는 것이 목표입니다.   |
 |부분 응용 프로그램|모든 필수 매개 변수 없이 함수 또는 작업을 호출 합니다. 는 이후 응용 프로그램에서 제공 된 누락 된 매개 변수만 필요한 새 호출 가능를 반환 합니다.|
@@ -41,8 +41,7 @@ ms.locfileid: "73442543"
 |퀀텀 상태|시스템의 그래픽 표현입니다. 이는 일반적으로 복잡 한 열 벡터로 표시 됩니다. 자세한 내용은 <xref:microsoft.quantum.concepts.vectors>을 참조하세요. |
 |고 비트|퀀텀 저장소의 단위입니다. 자세한 내용은 <xref:microsoft.quantum.concepts.qubit> 섹션을 참조 하세요.|
 |반복-성공-성공|확률적가 성공 하는 퀀텀 알고리즘입니다. 오류가 발생 하면 루틴이 성공 하거나 제한에 도달할 때까지 다시 시도 됩니다. |
-|소프트웨어 스택|퀀텀 컴퓨터를 작동 하는 데 필요한 컴파일러, 시뮬레이터 및 런타임 뿐만 아니라 기존 및 퀀텀 소프트웨어의 전체 집합입니다. 자세한 내용은 <xref:microsoft.quantum.concepts.software-stack> 섹션을 참조 하세요. |
 |대상 컴퓨터|추상 퀀텀 프로그램을 하드웨어 또는 시뮬레이션으로 낮추는 컴파일 대상입니다. 여기에는 일반적으로 게이트 교체, 오류 수정 인코딩, 기 하 도형 레이아웃 등을 비롯 한 많은 용도로 다시 쓰기가 포함 됩니다.|
-|튜플이|괄호를 통해 쉼표로 구분 된 형식으로 그룹화 합니다. |
+|Tuple|괄호를 통해 쉼표로 구분 된 형식으로 그룹화 합니다. |
 |사용자 정의 형식|단일 단위로 참조 될 수 있는 기본 제공 또는 이전에 정의 된 형식의 컬렉션입니다.|
 

@@ -1,17 +1,17 @@
 ---
 title: 깊이 카운터 | 퀀텀 컴퓨터 추적 시뮬레이터 | Microsoft Docs
-description: 퀀텀 컴퓨터 추적 시뮬레이터 개요
+description: 양자 컴퓨터 추적 시뮬레이터 개요
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.depth-counter
-ms.openlocfilehash: f5fcaa64e91290d377eeba597df2e307e187277c
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 07f927c794e2c62e53e4e053b5bc683d24bbed8d
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73184902"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820473"
 ---
 # <a name="depth-counter"></a>수준 카운터
 
@@ -20,12 +20,12 @@ ms.locfileid: "73184902"
 
 기본적으로 모든 작업에는 깊이 1이 있는 T 게이트를 제외 하 고 깊이 0이 있습니다. 즉, 기본적으로 작업의 T 수준만 계산 됩니다 (종종 바람직한 경우). 수집 된 통계는 작업 호출 그래프의 모든 가장자리에 걸쳐 집계 됩니다. 
 
-이제 <xref:microsoft.quantum.intrinsic.ccnot> 작업의 <xref:microsoft.quantum.intrinsic.t> 깊이를 계산 해 보세요. 다음 Q # 드라이버 코드를 사용 합니다. 
+이제 <xref:microsoft.quantum.intrinsic.ccnot> 작업의 <xref:microsoft.quantum.intrinsic.t> 깊이를 계산 해 보세요. 다음 Q # 샘플 코드를 사용 합니다.
 
 ```qsharp
-open Microsoft.Quantum.Primitive;
-operation CCNOTDriver() : Unit {
+open Microsoft.Quantum.Intrinsic;
 
+operation ApplySampleWithCCNOT() : Unit {
     using (qubits = Qubit[3]) {
         CCNOT(qubits[0], qubits[1], qubits[2]);
         T(qubits[0]);
@@ -35,7 +35,7 @@ operation CCNOTDriver() : Unit {
 
 ## <a name="using-depth-counter-within-a-c-program"></a>C# 프로그램 내에서 Depth 카운터 사용
 
-`CCNOT`에 `T` 깊이가 5이 고 `CCNOTDriver` `T` 깊이 6이 있는지 확인 하려면 다음 C# 코드를 사용할 수 있습니다.
+`CCNOT`에 `T` 깊이가 5이 고 `ApplySampleWithCCNOT` `T` 깊이 6이 있는지 확인 하려면 다음 C# 코드를 사용할 수 있습니다.
 
 ```csharp 
 using Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators;
@@ -43,17 +43,17 @@ using System.Diagnostics;
 var config = new QCTraceSimulatorConfiguration();
 config.useDepthCounter = true;
 var sim = new QCTraceSimulator(config);
-var res = CCNOTDriver.Run(sim).Result;
+var res = ApplySampleWithCCNOT.Run(sim).Result;
 
-double tDepth = sim.GetMetric<Primitive.CCNOT, CCNOTDriver>(DepthCounter.Metrics.Depth);
-double tDepthAll = sim.GetMetric<CCNOTDriver>(DepthCounter.Metrics.Depth);
+double tDepth = sim.GetMetric<Intrinsic.CCNOT, ApplySampleWithCCNOT>(DepthCounter.Metrics.Depth);
+double tDepthAll = sim.GetMetric<ApplySampleWithCCNOT>(DepthCounter.Metrics.Depth);
 ```
 
-프로그램의 첫 번째 부분은 `CCNOTDriver`를 실행 합니다. 두 번째 부분에서는 메서드 `QCTraceSimulator.GetMetric` 사용 하 여 `CCNOT` 및 `CCNOTDriver`의 `T` 깊이를 가져옵니다. 
+프로그램의 첫 번째 부분은 `ApplySampleWithCCNOT`를 실행 합니다. 두 번째 부분에서는 메서드 `QCTraceSimulator.GetMetric` 사용 하 여 `CCNOT` 및 `ApplySampleWithCCNOT`의 `T` 깊이를 가져옵니다. 
 
 ```csharp
-double tDepth = sim.GetMetric<Primitive.CCNOT, CCNOTDriver>(DepthCounter.Metrics.Depth);
-double tDepthAll = sim.GetMetric<CCNOTDriver>(DepthCounter.Metrics.Depth);
+double tDepth = sim.GetMetric<Intrinsic.CCNOT, ApplySampleWithCCNOT>(DepthCounter.Metrics.Depth);
+double tDepthAll = sim.GetMetric<ApplySampleWithCCNOT>(DepthCounter.Metrics.Depth);
 ```
 
 마지막으로 `Depth Counter` 여 수집 된 모든 통계를 CSV 형식으로 출력 하려면 다음을 사용할 수 있습니다.

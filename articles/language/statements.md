@@ -6,12 +6,12 @@ uid: microsoft.quantum.language.statements
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 5bcbee868c76aaf53d0b7969e6e634da62689aaa
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 9157cf3336ce0894816dbfbaf13ce0e712a6b096
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73184868"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821068"
 ---
 # <a name="statements-and-other-constructs"></a>문 및 기타 구문
 
@@ -29,7 +29,7 @@ ms.locfileid: "73184868"
 Markdown에 대 한 확장으로, Q #의 작업, 함수 및 사용자 정의 형식에 대 한 상호 참조는 참조 되는 코드 개체의 정규화 된 이름으로 대체 되는 `@"<ref target>"``<ref target>`을 사용 하 여 포함할 수 있습니다.
 선택적으로 설명서 엔진에서 추가 Markdown 확장을 지원할 수도 있습니다.
 
-다음은 그 예입니다.
+예:
 
 ```qsharp
 /// # Summary
@@ -54,8 +54,7 @@ Markdown에 대 한 확장으로, Q #의 작업, 함수 및 사용자 정의 형
 ///
 /// # See Also
 /// - Microsoft.Quantum.Intrinsic.H
-operation ApplyTwice<'T>(op : ('T => Unit), target : 'T) : Unit
-{
+operation ApplyTwice<'T>(op : ('T => Unit), target : 'T) : Unit {
     op(target);
     op(target);
 }
@@ -90,7 +89,6 @@ Q #은 다른 .NET 언어로 이름을 지정 하는 것과 동일한 규칙을 
 
 ```qsharp
 namespace NS {
-
     open Microsoft.Quantum.Intrinsic; // opens the namespace
     open Microsoft.Quantum.Math as Math; // defines a short name for the namespace
 }
@@ -181,7 +179,7 @@ for (i in 1 .. 2 .. 10) {
 왼쪽의 형식이 식 형식과 일치 하는 모든 이항 연산자에 대해 비슷한 문을 사용할 수 있습니다. 예를 들어 다음과 같이 값을 누적 하는 편리한 방법을 제공 합니다.
 ```qsharp
 mutable results = new Result[0];
-for (q in qubits) {
+for (qubit in qubits) {
     set results += [M(q)];
     // ...
 }
@@ -193,7 +191,7 @@ for (q in qubits) {
 ```qsharp
 newtype Complex = (Re : Double, Im : Double);
 
-function AddAll (reals : Double[], ims : Double[]) : Complex[] {
+function ElementwisePlus(reals : Double[], ims : Double[]) : Complex[] {
     mutable res = Complex(0.,0.);
 
     for (r in reals) {
@@ -209,19 +207,17 @@ function AddAll (reals : Double[], ims : Double[]) : Complex[] {
 배열의 경우 표준 라이브러리에는 여러 일반적인 배열 초기화 및 조작 요구에 필요한 도구가 포함 되어 있으므로 첫 번째 위치의 배열 항목을 업데이트 하지 않아도 됩니다. 필요에 따라 업데이트 및 재할당 문이 대안을 제공 합니다.
 
 ```qsharp
-operation RandomInts(maxInt : Int, nrSamples : Int) : Int[] {
-
+operation GenerateRandomInts(max : Int, nSamples : Int) : Int[] {
     mutable samples = new Double[0];
-    for (i in 1 .. nrSamples) {
-        set samples += [RandomInt(maxInt)];
+    for (i in 1 .. nSamples) {
+        set samples += [RandomInt(max)];
     }
     return samples;
 }
 
-operation SampleUniformDistr(nrSamples : Int, prec : Int) : Double[] {
-
-    let normalization = 1. / IntAsDouble(prec);
-    mutable samples = RandomInts(prec, nrSamples);
+operation SampleUniformDistrbution(nSamples : Int, nSteps : Int) : Double[] {
+    let normalization = 1. / IntAsDouble(nSteps);
+    mutable samples = GenerateRandomInts(nSteps, nSamples);
     
     for (i in IndexRange(samples) {
         let value = IntAsDouble(samples[i]);
@@ -236,10 +232,9 @@ operation SampleUniformDistr(nrSamples : Int, prec : Int) : Double[] {
 
 함수
 ```qsharp
-function EmbedPauli (pauli : Pauli, location : Int, n : Int) : Pauli[]
-{
-    mutable pauliArray = new Pauli[n];
-    for (index in 0 .. n - 1) {
+function PauliEmbedding(pauli : Pauli, length : Int, location : Int) : Pauli[] {
+    mutable pauliArray = new Pauli[length];
+    for (index in 0 .. length - 1) {
         set pauliArray w/= index <- 
             index == location ? pauli | PauliI;
     }    
@@ -249,15 +244,15 @@ function EmbedPauli (pauli : Pauli, location : Int, n : Int) : Pauli[]
 예를 들어 `Microsoft.Quantum.Arrays`에서 `ConstantArray` 함수를 사용 하 고 복사 및 업데이트 식을 반환 하는 것은 간단 합니다.
 
 ```qsharp
-function EmbedPauli (pauli : Pauli, i : Int, n : Int) : Pauli[] {
-    return ConstantArray(n, PauliI) w/ i <- pauli;
+function PauliEmbedding(pauli : Pauli, length : Int, location : Int) : Pauli[] {
+    return ConstantArray(length, PauliI) w/ location <- pauli;
 }
 ```
 
 ### <a name="binding-scopes"></a>바인딩 범위
 
 일반적으로 기호 바인딩은 범위를 벗어난 것으로,에서 발생 하는 문 블록의 끝에서 사용할 수 없게 됩니다.
-이 규칙에는 다음과 같은 두 가지 예외가 있습니다.
+이 규칙에는 두 가지 예외가 있습니다.
 
 - `for` 루프의 루프 변수 바인딩은 for 루프 본문의 범위 내에 있지만 루프가 끝난 후에는 범위 내에 있지 않습니다.
 - `repeat`/`until` 루프 (본문, 테스트 및 픽스업)의 세 부분은 모두 단일 범위로 처리 되므로 본문에 바인딩된 기호는 테스트 및 픽스업에서 사용할 수 있습니다.
@@ -330,8 +325,8 @@ if (a == b) {
 
 ```qsharp
 // ...
-for (qb in qubits) { // qubits contains a Qubit[]
-    H(qb);
+for (qubit in qubits) { // qubits contains a Qubit[]
+    H(qubit);
 }
 
 mutable results = new (Int, Results)[Length(qubits)];
@@ -359,13 +354,13 @@ for ((index, measured) in results) {
 ```qsharp
 mutable iter = 1;
 repeat {
-    ProbabilisticCircuit(qs);
-    let success = ComputeSuccessIndicator(qs);
+    ProbabilisticCircuit(qubits);
+    let success = ComputeSuccessIndicator(qubits);
 }
 until (success || iter > maxIter)
 fixup {
     iter += 1;
-    ComputeCorrection(qs);
+    ComputeCorrection(qubits);
 }
 ```
 
@@ -374,25 +369,25 @@ fixup {
 픽스업 실행을 완료 하면 해당 문의 범위가 끝나기 때문에 본문 또는 픽스업 중에 만든 기호 바인딩을 후속 반복에서 사용할 수 없습니다.
 
 예를 들어 다음 코드는 Hadamard 및 T 게이트를 사용 하 여 $V _3 = (\boldone + 2 i Z)/\sqrt{5}$ 중요 한 회전 게이트를 구현 하는 확률 회로입니다.
-루프는 평균 8/5 회 반복에서 종료 됩니다.
+루프는 평균에서 $ \frac{8}{5}$ 반복에서 종료 됩니다.
 자세한 내용은 [*반복-성공--성공: 단일 기능 비트 unitaries*](https://arxiv.org/abs/1311.1074) (Paetznick 및 svore, 2014)의 비결 정적 분해를 참조 하세요.
 
 ```qsharp
-using (anc = Qubit()) {
+using (qubit = Qubit()) {
     repeat {
-        H(anc);
-        T(anc);
-        CNOT(target,anc);
-        H(anc);
-        Adjoint T(anc);
-        H(anc);
-        T(anc);
-        H(anc);
-        CNOT(target,anc);
-        T(anc);
+        H(qubit);
+        T(qubit);
+        CNOT(target, qubit);
+        H(qubit);
+        Adjoint T(qubit);
+        H(qubit);
+        T(qubit);
+        H(qubit);
+        CNOT(target, qubit);
+        T(qubit);
         Z(target);
-        H(anc);
-        let result = M(anc);
+        H(qubit);
+        let result = M(qubit);
     } until (result == Zero);
 }
 ```
@@ -438,7 +433,7 @@ if (result == One) {
 } 
 ```
 
-or
+또는
 
 ```qsharp
 if (i == 1) {
@@ -450,7 +445,7 @@ if (i == 1) {
 }
 ```
 
-### <a name="return"></a>Return
+### <a name="return"></a>반환 값
 
 Return 문은 작업 또는 함수의 실행을 종료 하 고 호출자에 게 값을 반환 합니다.
 `return`키워드와 해당 형식의 식, 종료 세미콜론으로 구성 됩니다.
@@ -468,19 +463,19 @@ Return 문은 작업 또는 함수의 실행을 종료 하 고 호출자에 게 
 return 1;
 ```
 
-or
+또는
 
 ```qsharp
 return ();
 ```
 
-or
+또는
 
 ```qsharp
 return (results, qubits);
 ```
 
-### <a name="fail"></a>불합격
+### <a name="fail"></a>실패
 
 Fail 문은 작업 실행을 종료 하 고 호출자에 게 오류 값을 반환 합니다.
 `fail`키워드와 문자열 및 종료 세미콜론으로 구성 됩니다.
@@ -495,7 +490,7 @@ Fail 문은 작업 실행을 종료 하 고 호출자에 게 오류 값을 반�
 fail $"Impossible state reached";
 ```
 
-or
+또는
 
 ```qsharp
 fail $"Syndrome {syn} is incorrect";
@@ -519,15 +514,15 @@ fail $"Syndrome {syn} is incorrect";
 예를 들면 다음과 같습니다.
 
 ```qsharp
-using (q = Qubit()) {
+using (qubit = Qubit()) {
     // ...
 }
-using ((ancilla, qubits) = (Qubit(), Qubit[bits * 2 + 3])) {
+using ((auxiliary, qubits) = (Qubit(), Qubit[bits * 2 + 3])) {
     // ...
 }
 ```
 
-### <a name="dirty-qubits"></a>더티 비트
+### <a name="borrowed-qubits"></a>빌려의 비트
 
 `borrowing` 문은 임시 사용을 위해 필요한 비트를 가져오는 데 사용 됩니다. 문은 키워드 `borrowing`으로 구성 되 고, 여는 괄호 `(`, 바인딩, 닫는 괄호 `)`및 해당 요소를 사용할 수 있는 문 블록으로 구성 됩니다.
 바인딩은 `using` 문에 있는 것과 동일한 패턴 및 규칙을 따릅니다.
@@ -535,10 +530,10 @@ using ((ancilla, qubits) = (Qubit(), Qubit[bits * 2 + 3])) {
 예를 들면 다음과 같습니다.
 
 ```qsharp
-borrowing (q = Qubit()) {
+borrowing (qubit = Qubit()) {
     // ...
 }
-borrowing ((ancilla, qubits) = (Qubit(), Qubit[bits * 2 + 3])) {
+borrowing ((auxiliary, qubits) = (Qubit(), Qubit[bits * 2 + 3])) {
     // ...
 }
 ```
@@ -547,8 +542,7 @@ borrowing ((ancilla, qubits) = (Qubit(), Qubit[bits * 2 + 3])) {
 대출자는가 중에 있던 상태와 동일한 상태를 유지 하도록 커밋 합니다. 즉, 문 블록의 시작과 끝에 있는 상태는 동일 해야 합니다.
 특히 borrowing 범위에는 측정값이 포함 되지 않아야 하는 일반적인 상태가 아닐 수도 있습니다. 
 
-이러한 비트를 종종 "더티 ancilla" 이라고 합니다.
-더티 ancilla use의 예제를 보려면 Toffoli 기반 모듈식 곱하기 (Haner, Roet2n Er 및 Svs2017) [*와 함께 + 2를 사용 하 여 팩터링*](https://arxiv.org/abs/1611.07995) 을 참조 하세요.
+[*Toffoli 기반 모듈식 곱하기*](https://arxiv.org/abs/1611.07995) (Haner, Roet2n Er 및 svs2017)를 사용 하 여 + 2의 팩터링 사용을 참조 하세요.
 
 Borrowing를 사용 하는 경우 시스템은 먼저 사용 중인에서 요청을 채우려고 시도 하지만,이는 `borrowing` 문의 본문 중에는 액세스 되지 않습니다.
 이러한 것이 충분 하지 않은 경우 요청을 완료 하기 위해 새 비트를 할당 합니다.

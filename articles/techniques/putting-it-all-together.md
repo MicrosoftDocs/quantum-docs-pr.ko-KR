@@ -1,23 +1,23 @@
 ---
-title: 'Q # 기술-모두 함께 배치 | Microsoft Docs'
-description: 'Q # 기술-모두 함께 배치'
+title: '모두 통합-Q # 기술 | Microsoft Docs'
+description: '모든 것을 함께 저장-Q # 기술'
 uid: microsoft.quantum.techniques.puttingittogether
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: f65b3e260f98a7a90da13b62edd6cc63d200f5af
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 3605826da159757d4b321dbf4ec6acd7f4e6be05
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183270"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820167"
 ---
 # <a name="putting-it-all-together-teleportation"></a>모두 함께 배치: Teleportation #
 [퀀텀 회로](xref:microsoft.quantum.concepts.circuits)에 정의 된 teleportation 회로의 예제로 돌아가 보겠습니다. 지금까지 배운 개념을 설명 하는 데이 방법을 사용할 예정입니다. 퀀텀 teleportation에 대 한 설명은 아래에 설명 되어 있으며, 그 다음에는 Q #의 코드 구현 연습이 제공 됩니다. 
 
 ## <a name="quantum-teleportation-theory"></a>퀀텀 Teleportation: 이론
-퀀텀 teleportation은 알 수 없는 퀀텀 상태 ('__메시지__' 라고 함)를 한 위치의 특정 위치에서 다른 위치에 있는 이상으로 전송 하는 기술입니다 (' 여기 ' 및 '__여기__ __'로__표시 됨). 각각). __메시지__ 는 다음과 같이 diac 표기법을 사용 하 여 벡터로 나타낼 수 있습니다. 
+퀀텀 teleportation은 알 수 없는 퀀텀 상태 ('__메시지__' 라고 함)를 한 위치에 있는 특정 위치에서 다른 위치에 있는 이상으로 전송 하는 기술입니다 (각각 ' 여기 ' 및 '__여기__ __'로__표시 됨). __메시지__ 는 다음과 같이 diac 표기법을 사용 하 여 벡터로 나타낼 수 있습니다. 
 
 $ $ \ket{\psi} = \alpha\ket{0} + \beta\ket{1} $ $
 
@@ -56,7 +56,7 @@ $ \ket{1}$  | $ \frac{1}{\sqrt{2}} (\ket{0}-\ket{1}) $
 
 위의 출력의 각 용어에 대 한 첫 번째 Hadamard를 적용 하는 경우 다음과 같은 결과를 얻을 수 있습니다.
 
-$ $ \frac{\alpha}{\sqrt{2}} (\frac{1}{\sqrt{2}} (\ket{0} + \ket{1})) \ket{00} + \frac{\alpha}{\sqrt{2}} (\frac{1}{\sqrt{2}} (\ket{0} + \ket{1})) \ket{11} + \frac{\beta}{ \sqrt{2}} (\frac{1}{\sqrt{2}} (\ket{0}-\ket{1})) \ket{10} + \frac{\beta}{\sqrt{2}} (\frac{1}{\sqrt{2}} (\ket{0}-\ket{1})) \ket{01} $ $
+$ $ \frac{\alpha}{\sqrt{2}} (\frac{1}{\sqrt{2}} (\ket{0} + \ket{1})) \ket{00} + \frac{\alpha}{\sqrt{2}} (\frac{1}{\sqrt{2}} (\ket{0} + \ket{1})) \ket{11} + \frac{\beta}{\sqrt{2}} (\frac{1}{\sqrt{2}} (\ket{0}-\ket{1})) \ket{10} + \frac{\beta}{\sqrt{2}} (\frac{1}{\sqrt{2}} (\ket{0}-\ket{1})) \ket{01} $ $
 
 각 용어에는 $2 \frac{1}{\sqrt{2}} $ 요인이 있습니다. 다음 결과를 제공 하는 것과 같은 결과를 얻을 수 있습니다.
 
@@ -64,7 +64,7 @@ $ $ \frac{\alpha}{2}(\ket{0} + \ket{1}) \ket{00} + \frac{\alpha}{2}(\ket{0} + \k
 
 $ \Frac{1}{2}$ 요인은 각 용어에 공통적으로 적용 되므로 이제는 괄호를 벗어날 수 있습니다.
 
-$ $ \frac{1}{2}\big [\alpha (\ket{0} + \ket{1}) \ket{00} + \alpha (\ket{0} + \ket{1}) \ket{11} + \beta (\ket{0}-\ket{1}) \ket{10} + \beta (\ket{0}-\ket{1}) \ket{01}\-ppst> $ $
+$ $ \frac{1}{2}\big [\alpha (\ket{0} + \ket{1}) \ket{00} + \alpha (\ket{0} + \ket{1}) \ket{11} + \beta (\ket{0}-\ket{1}) \ket{10} + \beta (\ket{0}-\ket{1}) \ket{01}\big] $ $
 
 그러면 다음을 제공 하는 각 용어에 대해 괄호를 곱합니다.
 
@@ -125,7 +125,7 @@ operation Teleport(msg : Qubit, there : Qubit) : Unit {
 ```
 
 ### <a name="step-1-create-an-entangled-state"></a>1 단계: entangled 상태 만들기
-그런 다음 @"microsoft.quantum.primitive.h" 및 @"microsoft.quantum.primitive.cnot" 작업을 사용 하 여 `here`와 `there` 간에 entangled 쌍을 만들 수 있습니다.
+그런 다음 @"microsoft.quantum.intrinsic.h" 및 @"microsoft.quantum.intrinsic.cnot" 작업을 사용 하 여 `here`와 `there` 간에 entangled 쌍을 만들 수 있습니다.
 
 ```qsharp
         H(here);
@@ -141,7 +141,7 @@ operation Teleport(msg : Qubit, there : Qubit) : Unit {
 ```
 
 ### <a name="step-3--4-measuring-and-interpreting-the-result"></a>3 단계 & 4 단계: 결과 측정 및 해석
-마지막으로 @"microsoft.quantum.primitive.m"를 사용 하 여 `if` 문으로 표시 된 대로 측정을 수행 하 고 필요한 게이트 작업을 수행 하 여 원하는 상태를 가져옵니다.
+마지막으로 @"microsoft.quantum.intrinsic.m"를 사용 하 여 `if` 문으로 표시 된 대로 측정을 수행 하 고 필요한 게이트 작업을 수행 하 여 원하는 상태를 가져옵니다.
 
 ```qsharp
         // Measure out the entanglement

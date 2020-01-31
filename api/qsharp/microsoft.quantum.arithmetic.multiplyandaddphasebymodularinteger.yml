@@ -3,11 +3,11 @@ uid: microsoft.quantum.arithmetic.multiplyandaddphasebymodularinteger
 name: MultiplyAndAddPhaseByModularInteger
 type: operation
 namespace: Microsoft.Quantum.Arithmetic
-summary: ModularAddProductLE와 동일 하지만 summand가 QFT로 정수를 인코딩하는 것으로 가정 합니다.
+summary: MultiplyAndAddByModularInteger와 동일 하지만 summand가 QFT로 정수를 인코딩하는 것으로 가정 합니다.
 remarks: >-
   `phaseSummand` 가장 높은 비트가 0으로 설정 된 것으로 가정 합니다.
 
-  `phaseSummand` 값이 N 보다 작은 것으로 가정 합니다.
+  또한 `phaseSummand` 값이 $N $ 보다 작음을 가정 합니다.
 syntax: 'operation MultiplyAndAddPhaseByModularInteger (constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian, phaseSummand : Microsoft.Quantum.Arithmetic.PhaseLittleEndian) : Unit'
 input:
   content: '(constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian, phaseSummand : Microsoft.Quantum.Arithmetic.PhaseLittleEndian)'
@@ -16,11 +16,14 @@ input:
     isPrimitive: true
     uid: Int
   - name: modulus
+    summary: 와 관련 하 여 더하기 및 곱하기를 수행 하는 모듈러스 $N $입니다.
     isPrimitive: true
     uid: Int
   - name: multiplier
+    summary: '`summand`의 각 기준 상태 레이블에 값이 추가 될 부호 없는 정수를 나타내는 퀀텀 레지스터입니다.'
     uid: microsoft.quantum.arithmetic.littleendian
   - name: phaseSummand
+    summary: 이 작업의 대상으로 사용할 부호 없는 정수를 나타내는 퀀텀 레지스터입니다.
     uid: microsoft.quantum.arithmetic.phaselittleendian
 output:
   content: Unit
@@ -31,11 +34,11 @@ functors:
 - Adjoint
 - Controlled
 seeAlso:
-- microsoft.quantum.canon.modularaddproductle
+- microsoft.quantum.arithmetic.multiplyandaddbymodularinteger
 metadata:
-  ms.openlocfilehash: f4dab26f55a61d0f3cbaf0b9b17fe4615f74356a
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 3728e95ad26768d486af79e7c4158a2a2715bbd2
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73214846"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76871399"

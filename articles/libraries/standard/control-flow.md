@@ -6,12 +6,12 @@ uid: microsoft.quantum.concepts.control-flow
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 5e865dbb48029724b6f507ecb63b85d10d80c9a7
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: ff73cef12a3b8c2a6559308dc244c7c2e865ba9f
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73185650"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820456"
 ---
 # <a name="higher-order-control-flow"></a>고차 제어 흐름 #
 
@@ -52,9 +52,9 @@ Q #에서는 <xref:microsoft.quantum.arrays.indexrange>를 사용 하 여이를 
 ```qsharp
 /// # Summary
 /// Applies $H$ to all qubits in a register.
-operation HAll(register : Qubit[]) : Unit 
-is Adj + Ctl {
-
+operation ApplyHadamardToAll(
+    register : Qubit[])
+: Unit is Adj + Ctl {
     for (qubit in register) {
         H(qubit);
     }
@@ -108,9 +108,9 @@ function Sum(xs : Int[]) {
 예를 들어 $UVU ^ {\dagger} $ 패턴은 퀀텀 프로그래밍에서 매우 일반적입니다 .이는 라고이이 패턴에 대 한 추상화로 <xref:microsoft.quantum.canon.applywith> 작업을 제공 하는 것입니다.
 또한이 추상화를 사용 하면 각 `U`에 대해 작업을 수행할 필요가 없는 `U(qubit); V(qubit); Adjoint U(qubit);` 시퀀스를 `Controlled` 하는 것 처럼 회로에 더 효율적으로 compliation 수 있습니다.
 이를 확인 하려면 $c (U) $를 `Controlled U([control], target)`를 나타내는 단일 항목으로 사용 하 고 $c (V) $를 동일한 방식으로 정의 해야 합니다.
-그런 다음 임의의 상태 $ \ket{\psi} $, \begin{align} c (U) c (V) c (U) ^ \dagger \ket{1} \otimes & = \ket{1} \otime (UVU ^ {\dagger} \ket{\psi}) \\\\ & = (\boldone \otimes U) (c (V)) (\boldone \otimes U ^ \dagger) \ k{1} \otimes \ket{\psi}.
+그런 다음 임의의 상태 $ \ket{\psi} $에 대해 \begin{align} c (U) c (V) c (U) ^ \dagger \ket{1} \otimes \ket{\psi} & ={1} \otime (UVU ^ {\dagger} \ket{\psi}) \\\\ & = (\boldone \otimes U) (c (V)) (\boldone \otimes U ^ \dagger) \ket{\psi}.{1} \otimes
 `Controlled`의 정의를 \end{align} 합니다.
-반면에 \begin{align} c (U) c (V) c (U) ^ \dagger \ket{0} \otimes \ket{\psi} & ={0} \otime \ket{\psi} \\\\ & = \ket{0} \otimes (UU ^ \dagger \boldone) \\\\ & = (\otimes U) (c ( V)) (\boldone \otimes U ^ \otimes) \ket{0} \otimes \ket{\psi}.
+반면, \begin{align} c (U) c (V) c (U) ^ \dagger \ket{0} \otimes \ket{\psi} & ={0} \otimes \ket{\psi} \\\\ & = \ket{0} \otime (UU ^ \dagger \ket{\psi} \\\\ & = (\boldone \otime U) (c (V)) (\otimes U ^ \dagger) \ket{\psi}.{0} \otimes
 \end{align}는이 방식으로 모든 입력 상태에 대해 $ out을 $U 수 있다는 결론을 수 있습니다.
 즉, $c (UVU ^ \dagger) = U c (V) U ^ \ara$입니다.
 일반적으로 제어 작업은 비용이 많이 들 수 있으므로 `WithC` 및 `WithCA`와 같은 제어 되는 변형을 사용 하면 적용 해야 하는 제어 함수 수를 줄일 수 있습니다.
@@ -123,30 +123,30 @@ function Sum(xs : Int[]) {
 >     ('T => Unit is Adj + Ctl), 'T) => Unit
 > ```
 
-마찬가지로 <xref:microsoft.quantum.canon.bind>는 일련의 다른 작업을 차례로 적용 하는 작업을 생성 합니다.
+마찬가지로 <xref:microsoft.quantum.canon.bound>는 일련의 다른 작업을 차례로 적용 하는 작업을 생성 합니다.
 예를 들어, 다음은 동일 합니다.
 
 ```qsharp
 H(qubit); X(qubit);
-Bind([H, X], qubit);
+Bound([H, X], qubit);
 ```
 
 반복 패턴과 결합 하면 특히 유용 하 게 사용할 수 있습니다.
 
 ```qsharp
 // Bracket the quantum Fourier transform with $XH$ on each qubit.
-ApplyWith(ApplyToEach(Bind([H, X]), _), QFT, _);
+ApplyWith(ApplyToEach(Bound([H, X]), _), QFT, _);
 ```
 
 ### <a name="time-ordered-composition"></a>시간이 지정 된 컴퍼지션 ###
 
 부분 응용 프로그램 및 기존 함수 측면에서 흐름 제어를 고려 하 여 계속 진행할 수 있으며, 기존 흐름 제어 측면에서 매우 복잡 한 퀀텀 개념을 모델링할 수 있습니다.
 이러한 비유는 단일 연산자가 호출 작업의 부작용과 정확히 일치 한다는 것을 인식 하 여 정확 하 게 구성 됩니다. 특정 단일 연산자 역할을 하는 명령을 내보내는 기존 서브루틴의 호출 시퀀스입니다.
-이 보기에서 `Bind([A, B])(target)`는 `A(target); B(target);`와 동일 하기 때문에 매트릭스 제품을 정확 하 게 표현 합니다 .이는 $BA $에 해당 하는 호출 시퀀스를 `Bind`.
+이 보기에서 `Bound([A, B])(target)`는 `A(target); B(target);`와 동일 하기 때문에 매트릭스 제품을 정확 하 게 표현 합니다 .이는 $BA $에 해당 하는 호출 시퀀스를 `Bound`.
 
 보다 정교한 예는 [Trotter – Suzuki 확장](https://arxiv.org/abs/math-ph/0506007v1)입니다.
 [데이터 구조의](xref:microsoft.quantum.libraries.data-structures)동적 생성기 표현 섹션에서 설명한 것 처럼 Trotter – Suzuki 확장은 행렬 지 수를 표현 하는 데 특히 유용한 방법을 제공 합니다.
-예를 들어, 가장 낮은 순서로 확장을 적용 하면 $ 및 $B $ $A 하는 모든 연산자 ($A = A ^ \aa$ 및 $B = B ^ \aate$)가 생성 됩니다. \begin{align} \tag{★} \label{eq: trotter-suzuki-0} \dagger (i [A + B] t) = \lim_{n\to\infty} \dagger (\dagger (i A t/n) \dagger (i B t/n) ) \ n.
+예를 들어, 가장 낮은 순서로 확장을 적용 하면 $ 및 $B $ $A 하는 모든 연산자 ($A = A ^ \aa$ 및 $B = B ^ \aate$)가 생성 됩니다. \begin{align} \tag{★} \label{eq: trotter-suzuki-0} \dagger (i [A + B] t) = \ lim_ {n\to\infty} \\sts (\dagger (i A t/n) \dagger (i B t/n) \dagger) ^ n.
 \end{align} 것 구어체 $A + B $에서 $A $ 및 $B $를 통해 지속적으로 변화 하는 상태를 대략적으로 수 있습니다.
 $E ^ {i t A} $를 적용 하는 작업 `A : (Double, Qubit[]) => Unit` $A $에서 진화를 나타내는 경우 호출 시퀀스를 다시 정렬 하는 것과 관련 하 여 Trotter – Suzuki 확장의 표현이 명확 하 게 됩니다.
 구체적으로 `A = U(0, _, _)` 및 `B = U(1, _, _)``U : ((Int, Double, Qubit[]) => Unit is Adj + Ctl` 작업을 지정 하는 경우 폼의 시퀀스를 생성 하 여 $t의 `U`의 정수 부분을 나타내는 새 작업을 정의할 수 있습니다.
@@ -183,12 +183,11 @@ DecomposeIntoTimeStepsCA((2, U), 1);
 
 ```qsharp
 operation _ControlledOnBitString(
-        bits : Bool[],
-        oracle: (Qubit[] => Unit is Adj + Ctl),
-        controlRegister : Qubit[],
-        targetRegister: Qubit[]) 
-: Unit 
-is Adj + Ctl {
+    bits : Bool[],
+    oracle: (Qubit[] => Unit is Adj + Ctl),
+    controlRegister : Qubit[],
+    targetRegister: Qubit[])
+: Unit is Adj + Ctl
 ```
 
 `Bool` 배열로 표시 되는 비트 문자열을 사용 하 여 지정 된 작업 `oracle`에 적용 하려는 시설이 무엇 임을 지정 합니다.
@@ -201,6 +200,7 @@ $X ^ {\dagger} = X $ 이므로이는 $ \ket{0\dots 0} = X ^ {s\_0} \otimes X ^ {
 이 구성은 정확히 `ApplyWith`하므로 새 작업의 본문을 적절 하 게 작성 합니다.
 
 ```qsharp
+{
     ApplyWithCA(
         ApplyPauliFromBitString(PauliX, false, bits, _),
         (Controlled oracle)(_, targetRegister),
@@ -219,8 +219,8 @@ $X ^ {\dagger} = X $ 이므로이는 $ \ket{0\dots 0} = X ^ {s\_0} \otimes X ^ {
 
 ```qsharp
 function ControlledOnBitString(
-        bits : Bool[],
-        oracle: (Qubit[] => Unit is Adj + Ctl)) 
+    bits : Bool[],
+    oracle: (Qubit[] => Unit is Adj + Ctl))
 : ((Qubit[], Qubit[]) => Unit is Adj + Ctl) {
     return _ControlledOnBitString(bits, oracle, _, _);
 }

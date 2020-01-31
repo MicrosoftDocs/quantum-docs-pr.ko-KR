@@ -6,12 +6,12 @@ ms.author: thhaner
 ms.date: 5/14/2019
 ms.topic: article
 uid: microsoft.quantum.numerics.usage
-ms.openlocfilehash: 332781a4356015461426ee7640fd931a41450367
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: ca24ff60cd9ae5077c7f4bae0012fe1180d7e6d4
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73184613"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821034"
 ---
 # <a name="using-the-numerics-library"></a>숫자 라이브러리 사용
 
@@ -28,7 +28,7 @@ ms.locfileid: "73184613"
 open Microsoft.Quantum.Arithmetic;
 ```
 
-## <a name="types"></a>형식
+## <a name="types"></a>유형
 
 숫자 라이브러리는 다음 형식을 지원 합니다.
 
@@ -64,7 +64,7 @@ open Microsoft.Quantum.Arithmetic;
     - 역 (1/x)
     - 측정 (고전적인 Double)
 
-이러한 각 작업에 대 한 자세한 내용 및 자세한 설명서는 [docs.microsoft.com](https://docs.microsoft.com/en-us/quantum) 에서 Q # 라이브러리 참조 문서를 참조 하세요.
+이러한 각 작업에 대 한 자세한 내용 및 자세한 설명서는 [docs.microsoft.com](https://docs.microsoft.com/quantum) 에서 Q # 라이브러리 참조 문서를 참조 하세요.
 
 ## <a name="sample-integer-addition"></a>샘플: 정수 더하기
 
@@ -72,15 +72,14 @@ open Microsoft.Quantum.Arithmetic;
 
 퀀텀 개발 키트를 사용 하 여 다음과 같이이 작업을 적용할 수 있습니다.
 ```qsharp
-operation MyAdditionTest (xInt : Int, yInt : Int, n : Int) : Unit
-{
+operation TestMyAddition(xValue : Int, yValue : Int, n : Int) : Unit {
     using ((xQubits, yQubits) = (Qubit[n], Qubit[n]))
     {
         x = LittleEndian(xQubits); // define bit order
         y = LittleEndian(yQubits);
         
-        ApplyXorInPlace(xInt, x); // initialize values
-        ApplyXorInPlace(yInt, y);
+        ApplyXorInPlace(xValue, x); // initialize values
+        ApplyXorInPlace(yValue, y);
         
         AddI(x, y); // perform addition x+y into y
         
@@ -93,20 +92,20 @@ operation MyAdditionTest (xInt : Int, yInt : Int, n : Int) : Unit
 
 퀀텀 컴퓨터에서 $ \sin (x) $와 같은 부드러운 함수를 평가 하려면 ($x $은 퀀텀 `FixedPoint` number) 퀀텀 개발 키트 숫자 라이브러리는 작업 `EvaluatePolynomialFxP` 및 `Evaluate[Even/Odd]PolynomialFxP`를 제공 합니다.
 
-첫 번째 `EvaluatePolynomialFxP`에서는 $ $ P (x) = a_0 + a_1x + a_2x ^ 2 + \cdots ^ d, $ $ 형식의 다항식을 평가할 수 있습니다. 여기서 $d $은 *정도*를 나타냅니다. 이렇게 하려면 `[a_0,..., a_d]` 다항식 계수 (`Double[]`형식), 입력 `x : FixedPoint` 및 출력 `y : FixedPoint` (처음에는 0)만 필요 합니다.
+첫 번째 `EvaluatePolynomialFxP`에서는 $ $ P (x) = a_0 + a_1x + a_2x ^ 2 + \c9+ a_dx ^ d, $ $ 형식의 다항식을 평가할 수 있습니다. 여기서 $d $는 *각도*를 나타냅니다. 이렇게 하려면 `[a_0,..., a_d]` 다항식 계수 (`Double[]`형식), 입력 `x : FixedPoint` 및 출력 `y : FixedPoint` (처음에는 0)만 필요 합니다.
 ```qsharp
-EvaluatePolynomialFxP([1.0, 2.0], xFxP, yFxP);
+EvaluatePolynomialFxP([1.0, 2.0], x, y);
 ```
 결과 $P (x) = 1 + 2x $는 `yFxP`에 저장 됩니다.
 
-두 번째, `EvaluateEvenPolynomialFxP`및 세 번째 `EvaluateOddPolynomialFxP`는 각각 짝수 및 홀수 함수의 사례에 대 한 특수화입니다. 즉, 짝수/홀수 $f 함수에 대해 (x) $ 및 $ $ P_ {짝수} (x) = a_0 + a_1 x ^ 2 + a_2 x ^ 4 + \cs+ a_d x ^ {2d}의 경우 $ $ $f (x) $는 $P _ {짝수} (x) $ 또는 $P _ {홀수} (x): = x\cdot P_ {짝수} (x) $로도 매우 근접 합니다. 각기.
+두 번째, `EvaluateEvenPolynomialFxP`및 세 번째 `EvaluateOddPolynomialFxP`는 각각 짝수 및 홀수 함수의 사례에 대 한 특수화입니다. 즉, 짝수/홀수 함수 $f (x) $ 및 $ $ P_ {짝수} (x) = a_0 + a_1 x ^ 2 + a_2 x ^ 4 + \cs+ a_d x ^ {2d}의 경우 $ $ $f (x) $는 $P _ {짝수} (x) $ 또는 $P _ {홀수} (x): = x\cdot P_ {짝수} (x) $에서 각각 합니다.
 Q #에서 이러한 두 가지 사례는 다음과 같이 처리할 수 있습니다.
 ```qsharp
-EvaluateEvenPolynomialFxP([1.0, 2.0], xFxP, yFxP);
+EvaluateEvenPolynomialFxP([1.0, 2.0], x, y);
 ```
 이는 $P _ {짝수} (x) = 1 + 2x ^ 2 $를 평가 합니다.
 ```qsharp
-EvaluateOddPolynomialFxP([1.0, 2.0], xFxP, yFxP);
+EvaluateOddPolynomialFxP([1.0, 2.0], x, y);
 ```
 $P _ {홀수} (x) = x + 2x ^ 3 $를 평가 합니다.
 

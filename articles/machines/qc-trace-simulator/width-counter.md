@@ -6,23 +6,22 @@ ms.author: vadym@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.width-counter
-ms.openlocfilehash: ae0c0ec2e677be03dc8dc1497dc62ad9034295a4
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: 9c3601e74eec17bd6b463e90f8f3085c959d6f95
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73442402"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820371"
 ---
 # <a name="width-counter"></a>Width 카운터
 
 `Width Counter`은 각 작업에 의해 할당 되 고 가져온 것과 같은 수를 계산 합니다.
-`Microsoft.Quantum.Primitive` 네임 스페이스의 모든 작업은 단일의 비트 회전, T 게이트, 단일 관찰 가능 개체 게이트, CNOT 게이트 및 여러의 측정을 기준으로 표현 됩니다. 일부 기본 작업에서는 추가 비트를 할당할 수 있습니다. 예를 들어 제어 `X` 게이트 또는 제어 된 `T` 게이트를 곱합니다. 곱하기 제어 `X` 게이트의 구현에 의해 할당 된 추가 된 추가 비트 수를 계산 해 보겠습니다.
+`Microsoft.Quantum.Intrinsic` 네임 스페이스의 모든 작업은 단일의 비트 회전, T 게이트, 단일 관찰 가능 개체 게이트, CNOT 게이트 및 여러의 측정을 기준으로 표현 됩니다. 일부 기본 작업에서는 추가 비트를 할당할 수 있습니다. 예를 들어 제어 `X` 게이트 또는 제어 된 `T` 게이트를 곱합니다. 곱하기 제어 `X` 게이트의 구현에 의해 할당 된 추가 된 추가 비트 수를 계산 해 보겠습니다.
 
 ```qsharp
-open Microsoft.Quantum.Primitive;
+open Microsoft.Quantum.Intrinsic;
 open Microsoft.Quantum.Arrays;
-operation MultiControlledXDriver( numberOfQubits : Int ) : Unit {
-
+operation ApplyMultiControlledX( numberOfQubits : Int ) : Unit {
     using(qubits = Qubit[numberOfQubits]) {
         Controlled X (Rest(qubits), Head(qubits));
     } 
@@ -38,20 +37,20 @@ var config = new QCTraceSimulatorConfiguration();
 config.useWidthCounter = true;
 var sim = new QCTraceSimulator(config);
 int totalNumberOfQubits = 5;
-var res = MultiControlledXDriver.Run(sim, totalNumberOfQubits).Result;
+var res = ApplyMultiControlledX.Run(sim, totalNumberOfQubits).Result;
 
 double allocatedQubits = 
-    sim.GetMetric<Primitive.X, MultiControlledXDriver>(
+    sim.GetMetric<Primitive.X, ApplyMultiControlledX>(
         WidthCounter.Metrics.ExtraWidth,
         functor: OperationFunctor.Controlled); 
 
 double inputWidth =
-    sim.GetMetric<Primitive.X, MultiControlledXDriver>(
+    sim.GetMetric<Primitive.X, ApplyMultiControlledX>(
         WidthCounter.Metrics.InputWidth,
         functor: OperationFunctor.Controlled);
 ```
 
-프로그램의 첫 번째 부분은 `MultiControlledXDriver`를 실행 합니다. 두 번째 부분에서는 `QCTraceSimulator.GetMetric` 메서드를 사용 하 여 할당 된 요소 수 뿐만 아니라 입력으로 받은 `X` 제어 되는 값을 가져옵니다. 
+프로그램의 첫 번째 부분은 `ApplyMultiControlledX`를 실행 합니다. 두 번째 부분에서는 `QCTraceSimulator.GetMetric` 메서드를 사용 하 여 할당 된 요소 수 뿐만 아니라 입력으로 받은 `X` 제어 되는 값을 가져옵니다. 
 
 마지막으로 width 카운터에 의해 수집 된 모든 통계를 CSV 형식으로 출력 하려면 다음을 사용할 수 있습니다.
 ```csharp

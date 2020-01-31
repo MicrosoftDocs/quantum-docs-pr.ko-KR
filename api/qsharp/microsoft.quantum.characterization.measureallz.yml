@@ -3,30 +3,24 @@ uid: microsoft.quantum.characterization.measureallz
 name: MeasureAllZ
 type: operation
 namespace: Microsoft.Quantum.Characterization
-summary: >-
-  는 Pauli Z 기준으로 원하는 비트의 레지스터를 측정 합니다.
-
-
-  즉,는 지정 된 레지스터에서 작업 $Z \otimes Z \otimes \cst\otimes Z $를 측정 합니다.
+summary: MeasureAllZ는 더 이상 사용 되지 않습니다. 대신 @"microsoft.quantum.measurement.measureallz"를 사용하십시오.
 syntax: 'operation MeasureAllZ (register : Qubit[]) : Result'
 input:
   content: '(register : Qubit[])'
   types:
   - name: register
-    summary: 측정할 레지스터입니다.
     isArray: true
     isPrimitive: true
     uid: Qubit
 output:
   content: Result
   types:
-  - summary: $Z \otimes Z \otimes \cst\otimes Z $를 측정 한 결과입니다.
-    isPrimitive: true
+  - isPrimitive: true
     uid: Result
 metadata:
-  ms.openlocfilehash: d9582f1656cbee854600eaf37bf3a0effa52869f
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 894ff0836f6efef5124a118bdea16057a3d84a77
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73229143"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76870889"

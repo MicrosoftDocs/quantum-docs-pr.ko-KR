@@ -6,12 +6,12 @@ ms.author: anpaz@microsoft.com
 ms.date: 1/22/2019
 ms.topic: article
 uid: microsoft.quantum.machines.resources-estimator
-ms.openlocfilehash: 591e306b3001934bd81342a533e3f6ca25129781
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 960fda3dade7648f9cd24496c3a49fd11d6f807a
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73184987"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820864"
 ---
 # <a name="the-resourcesestimator-target-machine"></a>ResourcesEstimator 대상 컴퓨터
 
@@ -97,7 +97,7 @@ namespace Quantum.MyProgram
 * __QubitClifford__: 실행 된 단일 Clifford 및 Pauli 게이트의 수입니다.
 * __Measure__: 실행 된 측정값의 수입니다.
 * __R__: T, Clifford 및 Pauli 게이트를 제외 하 고 실행 된 단일 비트 회전의 수입니다.
-* __T__: t 게이트, T_x = .H 및 T_y = Hy를 포함 하 여 t 게이트 및 해당 변화 시키고의 수를 실행 했습니다.
+* __T__: t 게이트, T_x = .h 및 T_y = Hy)를 포함 한 t 게이트 및 해당 변화 시키고의 수를 실행 합니다.
 * __Depth__: Q # 작업에 의해 실행 되는 퀀텀 회로의 깊이입니다. 기본적으로 T 게이트만 깊이에서 계산 됩니다. 자세한 내용은 [깊이 카운터](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter) 를 참조 하세요.
 * __Width__: Q # 작업을 실행 하는 동안 할당 된 최고 비트 수입니다.
 * __BorrowedWidth__: Q # 작업 내에서 빌려 온 최대 수 비트 수입니다.
@@ -105,29 +105,29 @@ namespace Quantum.MyProgram
 
 ## <a name="providing-the-probability-of-measurement-outcomes"></a>측정 결과의 확률 제공
 
-<xref:microsoft.quantum.primitive> 네임 스페이스의 <xref:microsoft.quantum.primitive.assertprob>를 사용 하 여 Q # 프로그램의 실행을 구동 하는 데 도움이 되는 예상 측정 확률에 대 한 정보를 제공할 수 있습니다. 다음 예제에서는 이에 대해 설명합니다.
+<xref:microsoft.quantum.intrinsic> 네임 스페이스의 <xref:microsoft.quantum.intrinsic.assertprob>를 사용 하 여 Q # 프로그램의 실행을 구동 하는 데 도움이 되는 예상 측정 확률에 대 한 정보를 제공할 수 있습니다. 다음 예제에서는 이에 대해 설명합니다.
 
 ```qsharp
-operation Teleportation (source : Qubit, target : Qubit) : Unit {
+operation Teleport(source : Qubit, target : Qubit) : Unit {
 
-    using (ancilla = Qubit()) {
+    using (qubit = Qubit()) {
 
-        H(ancilla);
-        CNOT(ancilla, target);
+        H(q);
+        CNOT(qubit, target);
 
-        CNOT(source, ancilla);
+        CNOT(source, qubit);
         H(source);
 
         AssertProb([PauliZ], [source], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
-        AssertProb([PauliZ], [ancilla], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
+        AssertProb([PauliZ], [qubit], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
 
         if (M(source) == One)  { Z(target); X(source); }
-        if (M(ancilla) == One) { X(target); X(ancilla); }
+        if (M(qubit) == One) { X(target); X(qubit); }
     }
 }
 ```
 
-`ResourcesEstimator`에서 `AssertProb` 발생 하면 `source`에 대 한 `PauliZ` 측정을 기록 하 고 확률 0.5에 `ancilla` 결과를 제공 해야 합니다. 나중에 `M` 실행 되는 경우 결과 확률의 기록 된 값을 찾아 `M` 확률 0.5에 `Zero` 또는 `One`을 반환 합니다.
+`ResourcesEstimator`에서 `AssertProb` 발생 하면 `source`에 대 한 `PauliZ` 측정을 기록 하 고 확률 0.5에 `q` 결과를 제공 해야 합니다. 나중에 `M` 실행 되는 경우 결과 확률의 기록 된 값을 찾아 `M` 확률 0.5에 `Zero` 또는 `One`을 반환 합니다.
 
 
 ## <a name="see-also"></a>참고 항목

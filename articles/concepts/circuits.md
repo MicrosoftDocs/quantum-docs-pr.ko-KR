@@ -1,17 +1,17 @@
 ---
 title: 퀀텀 회로 | Microsoft Docs
-description: 퀀텀 회로
+description: 양자 회로
 author: QuantumWriter
 uid: microsoft.quantum.concepts.circuits
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 7c2afa58fd70d893529cf794ae07df480466aaec
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: fe845aa0dde7c780ea6721dfe2559119e90b4aa5
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73210697"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820796"
 ---
 # <a name="quantum-circuits"></a>퀀텀 회로
 그 순간에는 단일 변환 $ \text{CNOT} _{01}(H\otimes 1) $를 고려 하십시오.
@@ -39,7 +39,7 @@ $ $ \mathrm{CNOT}_{01}(H\otimes 1) \ket{00} = \frac{1}{\sqrt{2}} \left (\ket{00}
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
 ![](~/media/concepts_2.png)
 
-[Hadamard](xref:microsoft.quantum.primitive.h) gate는 단일의 비트 레지스터에서 작동 합니다.
+[Hadamard](xref:microsoft.quantum.intrinsic.h) gate는 단일의 비트 레지스터에서 작동 합니다.
 
 퀀텀 게이트는 처음에는 관문을 중심으로 가장 왼쪽의 게이트가 있는 시간순으로 정렬 됩니다.
 즉, 퀀텀을 퀀텀 상태를 유지 하는 경우 와이어는 다이어그램의 각 게이트를 통해 퀀텀 상태를 왼쪽에서 오른쪽으로 가져옵니다.
@@ -72,7 +72,7 @@ $ $ \mathrm{CNOT}_{01}(H\otimes 1) \ket{00} = \frac{1}{\sqrt{2}} \left (\ket{00}
 
 ## <a name="controlled-gates"></a>제어 된 게이트
 Multi-factor bit 퀀텀 회로 다이어그램에 기본 제공 되는 다른 구문은 제어입니다.
-$ \Lambda (G) $ $G로 표시 되는 퀀텀 단일 제어 되는 게이트의 작업은 제품 상태 입력 $ \Lambda (G) (\lambda \ket{0} + \lambda \ket의 다음 예제를 확인 하 여이를 이해할 수 있습니다{1}) \ket{\psi} = \alpha \ket{0} \ket{\psi} + \alpha \ket{1} G\ket {\ psi} $.
+퀀텀 단일 제어 출입문의 동작입니다. $ \Lambda (G) $로 표시 된 단일의 값은 $ \Lambda (g) $G (\lambda \ket{0} + \lambda \ket{1}) \ket{\psi} = \lambda{0} \ket{\psi} + \lambda \ket{1} G\ket {\ psi} $의 다음 예제를 살펴보면 이해할 수 있습니다.
 즉, 제어 되는 게이트는 $ \psi $를 포함 하는 레지스터에 $G $을 적용 합니다 .이 경우 컨트롤의 값이 $1 $ 인 경우에만 적용 됩니다.
 일반적으로 회로 다이어그램에서 이와 같이 제어 되는 작업을 설명 합니다.
 
@@ -81,7 +81,7 @@ $ \Lambda (G) $ $G로 표시 되는 퀀텀 단일 제어 되는 게이트의 작
 ![](~/media/concepts_5.png)
 
 여기서 검정 원은 게이트가 제어 되는 퀀텀 비트를 나타내며, 세로는 컨트롤의 값이 $1 $ 인 경우 적용 되는 단일를 나타냅니다.
-$G = X $ 및 $G = Z $와 같은 특수 한 경우에는 제어 되는 게이트 버전을 설명 하는 다음과 같은 표기법이 제공 됩니다 (제어 된 X 게이트는 [$CNOT $ gate](xref:microsoft.quantum.primitive.cnot)임을 유의).
+$G = X $ 및 $G = Z $와 같은 특수 한 경우에는 제어 되는 게이트 버전을 설명 하는 다음과 같은 표기법이 제공 됩니다 (제어 된 X 게이트는 [$CNOT $ gate](xref:microsoft.quantum.intrinsic.cnot)임을 유의).
 
 <!--- ![](.\media\6.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
@@ -106,7 +106,7 @@ is Ctl { // Auto-generate the controlled specialization of the operation
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
 ![측정 회로](~/media/concepts_7.png)
 
-Q #에서는이 목적을 위해 [측정값 연산자](xref:microsoft.quantum.primitive.measure) 를 구현 합니다.
+Q #에서는이 목적을 위해 [측정값 연산자](xref:microsoft.quantum.intrinsic.measure) 를 구현 합니다.
 자세한 내용은 [측정에](xref:microsoft.quantum.libraries.standard.prelude#measurements) 대 한 섹션을 참조 하세요.
 
 마찬가지로 subcircuit

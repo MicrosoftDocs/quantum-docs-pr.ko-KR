@@ -6,19 +6,19 @@ ms.author: vadym@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.invalidated-qubits
-ms.openlocfilehash: 283cc7d7d88f731f40fa396c38ae5ea8dd90537f
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+ms.openlocfilehash: 093937346488725eacb69ef7da6affde764ec5c1
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74863183"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820881"
 ---
 # <a name="invalidated-qubits-use-checker"></a>무효화 되는 사용 검사기
 
 `Invalidated Qubits Use Checker`은 코드에서 잠재적 버그를 검색 하기 위해 설계 된 퀀텀 컴퓨터 [TraceSimulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) 의 일부입니다. `Invalidated Qubits Use Checker`에서 검색 된 문제를 설명 하는 다음의 Q # 코드 부분을 고려 합니다.
 
 ```qsharp
-operation UseReleasedQubit () : Unit {
+operation UseReleasedQubit() : Unit {
     mutable q = new Qubit[1];
     using (ans = Qubit()) {
         set q w/= 0 <- ans;

@@ -17,23 +17,23 @@ functions:
 - uid: microsoft.quantum.canon.assertresultequal
   summary: "\n> [!WARNING]\n> 사용되지 않음\n\nAssertResultEqual는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.diagnostics.equalityfactr\"를 사용하십시오.\n대신 @\"Microsoft.Quantum.Diagnostics.EqualityFactR\"를 사용하십시오."
 - uid: microsoft.quantum.canon.bigendiantolittleendian
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nBigEndianToLittleEndian는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.arithmetic.bigendianaslittleendian\"를 사용하십시오.\n@\"Microsoft.Quantum.Arithmetic.BigEndianAsLittleEndian\"를 사용하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nBigEndianToLittleEndian는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.arithmetic.bigendianaslittleendian\"를 사용하십시오.\n@\"Microsoft.Quantum.Arithmetic.BigEndianAsLittleEndian\"를 사용 하세요."
 - uid: microsoft.quantum.canon.bind
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nBind는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.canon.bound\"를 사용하십시오.\n@\"microsoft.quantum.canon.bound\"를 사용하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nBind는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.canon.bound\"를 사용하십시오.\n@\"microsoft.quantum.canon.bound\"를 사용 하세요."
 - uid: microsoft.quantum.canon.binda
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nBindA는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.canon.bounda\"를 사용하십시오.\n@\"microsoft.quantum.canon.bounda\"를 사용하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nBindA는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.canon.bounda\"를 사용하십시오.\n@\"microsoft.quantum.canon.bounda\"를 사용 하세요."
 - uid: microsoft.quantum.canon.bindc
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nBindC는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.canon.boundc\"를 사용하십시오.\n@\"microsoft.quantum.canon.boundc\"를 사용하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nBindC는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.canon.boundc\"를 사용하십시오.\n@\"microsoft.quantum.canon.boundc\"를 사용 하세요."
 - uid: microsoft.quantum.canon.bindca
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nBindCA는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.canon.boundca\"를 사용하십시오.\n@\"microsoft.quantum.canon.boundca\"를 사용하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nBindCA는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.canon.boundca\"를 사용하십시오.\n@\"microsoft.quantum.canon.boundca\"를 사용 하세요."
 - uid: microsoft.quantum.canon.bitsize
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nBitSize는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.math.bitsizei\"를 사용하십시오.\n@\"microsoft.quantum.math.bitsizei\"를 사용하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nBitSize는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.math.bitsizei\"를 사용하십시오.\n@\"microsoft.quantum.math.bitsizei\"를 사용 하세요."
 - uid: microsoft.quantum.canon.boolarrfrompositiveint
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nBoolArrFromPositiveInt는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.convert.intasboolarray\"를 사용하십시오.\n@\"microsoft.quantum.convert.intasboolarray\"를 사용하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nBoolArrFromPositiveInt는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.convert.intasboolarray\"를 사용하십시오.\n@\"microsoft.quantum.convert.intasboolarray\"를 사용 하세요."
 - uid: microsoft.quantum.canon.boolarrfromresultarr
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nBoolArrFromResultArr는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.convert.resultarrayasboolarray\"를 사용하십시오.\n@\"microsoft.quantum.convert.resultarrayasboolarray\"를 사용하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nBoolArrFromResultArr는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.convert.resultarrayasboolarray\"를 사용하십시오.\n@\"microsoft.quantum.convert.resultarrayasboolarray\"를 사용 하세요."
 - uid: microsoft.quantum.canon.boolfromresult
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nBoolFromResult는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.convert.resultasbool\"를 사용하십시오.\n@\"microsoft.quantum.convert.resultasbool\"를 사용하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nBoolFromResult는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.convert.resultasbool\"를 사용하십시오.\n@\"microsoft.quantum.convert.resultasbool\"를 사용 하세요."
 - uid: microsoft.quantum.canon.bound
   summary: 단일 입력에 대해 작동 하는 작업 배열이 지정 된 경우 지정 된 각 작업을 순서 대로 수행 하는 새 작업을 생성 합니다.
 - uid: microsoft.quantum.canon.bounda
@@ -69,11 +69,7 @@ functions:
 
     한정자 `CA` 작업을 제어 하 고 adjointable 나타냅니다.
 - uid: microsoft.quantum.canon.compose
-  summary: >-
-    두 함수의 컴퍼지션을 생성 합니다.
-
-
-    즉, $ 및 $g $ $f 두 개의 함수가 지정 된 경우 $f \circ g $를 나타내는 새 함수를 반환 합니다.
+  summary: 두 함수의 컴퍼지션을 반환 합니다.
 - uid: microsoft.quantum.canon.conjugatedby
   summary: 외부 및 내부 연산을 지정 하면는 외부 작업에 의해 내부 작업을 변화 시키고 하는 새 작업을 반환 합니다.
 - uid: microsoft.quantum.canon.conjugatedbya
@@ -83,7 +79,7 @@ functions:
 - uid: microsoft.quantum.canon.conjugatedbyca
   summary: 외부 및 내부 연산을 지정 하면는 외부 작업에 의해 내부 작업을 변화 시키고 하는 새 작업을 반환 합니다.
 - uid: microsoft.quantum.canon.continuedfractionconvergent
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nContinuedFractionConvergent는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.math.continuedfractionconvergenti\"를 사용하십시오.\n@\"microsoft.quantum.math.continuedfractionconvergenti\"를 사용하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nContinuedFractionConvergent는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.math.continuedfractionconvergenti\"를 사용하십시오.\n@\"microsoft.quantum.math.continuedfractionconvergenti\"를 사용 하세요."
 - uid: microsoft.quantum.canon.controlledonbitstring
   summary: 컨트롤 레지스터 상태가 지정 된 비트 마스크에 해당 하는 경우 대상 레지스터에 oracle을 적용 하는 단일 연산자를 반환 합니다.
 - uid: microsoft.quantum.canon.controlledonint
@@ -95,9 +91,11 @@ functions:
 
     즉, 두 개의 입력으로 작업을 제공 하는 경우이 함수는 isomorphism $f (x, y) \equiv f (x) (y) $를 적용 하 여 한 입력의 작업을 반환 하는 하나의 입력 작업을 반환 합니다.
 - uid: microsoft.quantum.canon.curryop
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\n통화 Yop는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.canon.curriedop\"를 사용하십시오.\n@\"microsoft.quantum.canon.curriedop\"를 사용하세요."
-- uid: microsoft.quantum.canon.decomposeintotimestepsca
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\n통화 Yop는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.canon.curriedop\"를 사용하십시오.\n@\"microsoft.quantum.canon.curriedop\"를 사용 하세요."
+- uid: microsoft.quantum.canon.decomposedintotimestepsca
   summary: 지정 된 작업에 대해 Trotter – Suzuki 인티그레이터를 구현 하는 작업을 반환 합니다.
+- uid: microsoft.quantum.canon.decomposeintotimestepsca
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nDecomposeIntoTimeStepsCA는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.canon.decomposedintotimestepsca\"를 사용하십시오."
 - uid: microsoft.quantum.canon.delayed
   summary: 지정 된 인수를 사용 하 여 지정 된 작업을 적용 하는 작업을 반환 합니다.
 - uid: microsoft.quantum.canon.delayeda
@@ -109,9 +107,9 @@ functions:
 - uid: microsoft.quantum.canon.embedpauli
   summary: 단일 기능 비트를 지정 하는 경우 해당 인덱스에서 지정 된 단일 값 비트 연산자를 사용 하 여 다른 모든 인덱스에서 `PauliI` 하는 다중 값 비트 Pauli 연산자를 반환 합니다.
 - uid: microsoft.quantum.canon.expmod
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\n예기치 않은 Mod는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.math.expmodi\"를 사용하십시오.\n@\"microsoft.quantum.math.expmodi\"를 사용하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\n예기치 않은 Mod는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.math.expmodi\"를 사용하십시오.\n@\"microsoft.quantum.math.expmodi\"를 사용 하세요."
 - uid: microsoft.quantum.canon.extendedgcd
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nExtendedGCD는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.math.extendedgreatestcommondivisori\"를 사용하십시오.\n@\"microsoft.quantum.math.extendedgreatestcommondivisori\"를 사용하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nExtendedGCD는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.math.extendedgreatestcommondivisori\"를 사용하십시오.\n@\"microsoft.quantum.math.extendedgreatestcommondivisori\"를 사용 하세요."
 - uid: microsoft.quantum.canon.filter
   summary: "\n> [!WARNING]\n> 사용되지 않음\n\n필터는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.arrays.filtered\"를 사용하십시오.\n대신 @\"Microsoft.Quantum.Arrays.Filtered\"를 사용하십시오."
 - uid: microsoft.quantum.canon.forall
@@ -121,31 +119,31 @@ functions:
 - uid: microsoft.quantum.canon.fst
   summary: 쌍이 지정 된 경우 첫 번째 요소를 반환 합니다.
 - uid: microsoft.quantum.canon.gcd
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nGCD는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.math.greatestcommondivisori\"를 사용하십시오.\n@\"microsoft.quantum.math.greatestcommondivisori\"를 사용하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nGCD는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.math.greatestcommondivisori\"를 사용하십시오.\n@\"microsoft.quantum.math.greatestcommondivisori\"를 사용 하세요."
 - uid: microsoft.quantum.canon.ignore
   summary: 작업 또는 함수의 출력을 무시 합니다.
 - uid: microsoft.quantum.canon.intabs
   summary: "\n> [!WARNING]\n> 사용되지 않음\n\nIntAbs는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.math.absi\"를 사용하십시오.\n이 함수는 제거 되었습니다."
 - uid: microsoft.quantum.canon.intarrayfromrange
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nIntArrayFromRange는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.convert.rangeasintarray\"를 사용하십시오.\n@\"microsoft.quantum.convert.rangeasintarray\"를 사용하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nIntArrayFromRange는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.convert.rangeasintarray\"를 사용하십시오.\n@\"microsoft.quantum.convert.rangeasintarray\"를 사용 하세요."
 - uid: microsoft.quantum.canon.intmax
   summary: "\n> [!WARNING]\n> 사용되지 않음\n\nIntMax는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.math.maxi\"를 사용하십시오.\n이 함수는 제거 되었습니다."
 - uid: microsoft.quantum.canon.inversemod
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nInverseMod는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.math.inversemodi\"를 사용하십시오.\n@\"microsoft.quantum.math.inversemodi\"를 사용하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nInverseMod는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.math.inversemodi\"를 사용하십시오.\n@\"microsoft.quantum.math.inversemodi\"를 사용 하세요."
 - uid: microsoft.quantum.canon.iscoprime
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nIsCoprime은 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.math.iscoprimei\"를 사용하십시오.\n@\"microsoft.quantum.math.greatestcommondivisori\"를 사용하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nIsCoprime은 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.math.iscoprimei\"를 사용하십시오.\n@\"microsoft.quantum.math.greatestcommondivisori\"를 사용 하세요."
 - uid: microsoft.quantum.canon.isresultone
   summary: 지정 된 결과 값이 `One`같은지 테스트 합니다.
 - uid: microsoft.quantum.canon.isresultzero
   summary: 지정 된 결과 값이 `Zero`같은지 테스트 합니다.
 - uid: microsoft.quantum.canon.littleendiantobigendian
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nLittleEndianToBigEndian는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.arithmetic.littleendianasbigendian\"를 사용하십시오.\n@\"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian\"를 사용하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nLittleEndianToBigEndian는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.arithmetic.littleendianasbigendian\"를 사용하십시오.\n@\"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian\"를 사용 하세요."
 - uid: microsoft.quantum.canon.map
   summary: "\n> [!WARNING]\n> 사용되지 않음\n\nMap은 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.arrays.mapped\"를 사용하십시오.\n대신 @\"Microsoft.Quantum.Arrays.Mapped\"를 사용하십시오."
 - uid: microsoft.quantum.canon.mapindex
   summary: "\n> [!WARNING]\n> 사용되지 않음\n\nMapIndex는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.arrays.mappedbyindex\"를 사용하십시오.\n대신 @\"Microsoft.Quantum.Arrays.MappedByIndex\"를 사용하십시오."
 - uid: microsoft.quantum.canon.modulus
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\n모듈러스는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.math.modulusi\"를 사용하십시오.\n@\"microsoft.quantum.math.modulusi\"를 사용하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\n모듈러스는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.math.modulusi\"를 사용하십시오.\n@\"microsoft.quantum.math.modulusi\"를 사용 하세요."
 - uid: microsoft.quantum.canon.multiplexerbruteforcefromgenerator
   summary: >-
     N-\ket{j} $로 제어 될 때 단일 $V _j $를 적용 하는 곱하기 제어 된 단일 $U 작업을 반환 합니다.
@@ -193,13 +191,13 @@ functions:
 - uid: microsoft.quantum.canon.pad
   summary: "\n> [!WARNING]\n> 사용되지 않음\n\nPad는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.arrays.padded\"를 사용하십시오.\n대신 @\"Microsoft.Quantum.Arrays.Padded\"를 사용하십시오."
 - uid: microsoft.quantum.canon.paulifrombitstring
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nPauliFromBitString은 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.convert.boolarrayaspauli\"를 사용하십시오.\n@\"microsoft.quantum.convert.boolarrayaspauli\"를 사용하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nPauliFromBitString은 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.convert.boolarrayaspauli\"를 사용하십시오.\n@\"microsoft.quantum.convert.boolarrayaspauli\"를 사용 하세요."
 - uid: microsoft.quantum.canon.pnormalize
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nPNormalize는 사용 되지 않습니다. 대신 @\"microsoft.quantum.math.pnormalized\"를 사용하십시오.\n@\"microsoft.quantum.math.pnormalized\"를 사용하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nPNormalize는 사용 되지 않습니다. 대신 @\"microsoft.quantum.math.pnormalized\"를 사용하십시오.\n@\"microsoft.quantum.math.pnormalized\"를 사용 하세요."
 - uid: microsoft.quantum.canon.positiveintfromboolarr
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nPositiveIntFromBoolArr는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.convert.boolarrayasint\"를 사용하십시오.\n@\"microsoft.quantum.convert.boolarrayasint\"를 사용하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nPositiveIntFromBoolArr는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.convert.boolarrayasint\"를 사용하십시오.\n@\"microsoft.quantum.convert.boolarrayasint\"를 사용 하세요."
 - uid: microsoft.quantum.canon.positiveintfromresultarr
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nPositiveIntFromResultArr는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.convert.resultarrayasint\"를 사용하십시오.\n@\"microsoft.quantum.canon.resultarrayasint\"를 사용하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nPositiveIntFromResultArr는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.convert.resultarrayasint\"를 사용하십시오.\n@\"microsoft.quantum.canon.resultarrayasint\"를 사용 하세요."
 - uid: microsoft.quantum.canon.restrictedtosubregister
   summary: 작업을 레지스터의 인덱스 배열, 즉 subregister로 제한 합니다.
 - uid: microsoft.quantum.canon.restrictedtosubregistera
@@ -218,19 +216,19 @@ functions:
 
     한정자 `CA` 작업을 제어 하 고 adjointable 나타냅니다.
 - uid: microsoft.quantum.canon.restricttosubregister
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nRestrictToSubregister는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.canon.restrictedtosubregister\"를 사용하십시오.\n@\"microsoft.quantum.canon.restrictedtosubregister\"를 사용하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nRestrictToSubregister는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.canon.restrictedtosubregister\"를 사용하십시오.\n@\"microsoft.quantum.canon.restrictedtosubregister\"를 사용 하세요."
 - uid: microsoft.quantum.canon.restricttosubregistera
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nRestrictToSubregisterA는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.canon.restrictedtosubregistera\"를 사용하십시오.\n@\"microsoft.quantum.canon.restrictedtosubregistera\"를 사용하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nRestrictToSubregisterA는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.canon.restrictedtosubregistera\"를 사용하십시오.\n@\"microsoft.quantum.canon.restrictedtosubregistera\"를 사용 하세요."
 - uid: microsoft.quantum.canon.restricttosubregisterc
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nRestrictToSubregisterC는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.canon.restrictedtosubregisterc\"를 사용하십시오.\n@\"microsoft.quantum.canon.restrictedtosubregisterc\"를 사용하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nRestrictToSubregisterC는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.canon.restrictedtosubregisterc\"를 사용하십시오.\n@\"microsoft.quantum.canon.restrictedtosubregisterc\"를 사용 하세요."
 - uid: microsoft.quantum.canon.restricttosubregisterca
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nRestrictToSubregisterCA는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.canon.restrictedtosubregisterca\"를 사용하십시오.\n@\"microsoft.quantum.canon.restrictedtosubregisterca\"를 사용하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nRestrictToSubregisterCA는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.canon.restrictedtosubregisterca\"를 사용하십시오.\n@\"microsoft.quantum.canon.restrictedtosubregisterca\"를 사용 하세요."
 - uid: microsoft.quantum.canon.resultarrfromboolarr
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nResultArrFromBoolArr는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.convert.boolarrayasresultarray\"를 사용하십시오.\n@\"microsoft.quantum.convert.resultarrayasboolarray\"를 사용하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nResultArrFromBoolArr는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.convert.boolarrayasresultarray\"를 사용하십시오.\n@\"microsoft.quantum.convert.resultarrayasboolarray\"를 사용 하세요."
 - uid: microsoft.quantum.canon.resultasint
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nResultAsInt는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.convert.resultarrayasint\"를 사용하십시오.\n@\"microsoft.quantum.convert.resultarrayasint\"를 사용하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nResultAsInt는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.convert.resultarrayasint\"를 사용하십시오.\n@\"microsoft.quantum.convert.resultarrayasint\"를 사용 하세요."
 - uid: microsoft.quantum.canon.resultfrombool
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nResultFromBool은 사용 되지 않습니다. 대신 @\"microsoft.quantum.convert.boolasresult\"를 사용하십시오.\n@\"microsoft.quantum.convert.boolasresult\"를 사용하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nResultFromBool은 사용 되지 않습니다. 대신 @\"microsoft.quantum.convert.boolasresult\"를 사용하십시오.\n@\"microsoft.quantum.convert.boolasresult\"를 사용 하세요."
 - uid: microsoft.quantum.canon.reverse
   summary: "\n> [!WARNING]\n> 사용되지 않음\n\n역방향은 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.arrays.reversed\"를 사용하십시오.\n대신 @\"Microsoft.Quantum.Arrays.Reversed\"를 사용하십시오."
 - uid: microsoft.quantum.canon.snd
@@ -238,19 +236,19 @@ functions:
 - uid: microsoft.quantum.canon.splitarray
   summary: "\n> [!WARNING]\n> 사용되지 않음\n\nSplitArray는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.arrays.partitioned\"를 사용하십시오.\n대신 @\"Microsoft.Quantum.Arrays.Partitioned\"를 사용하십시오."
 - uid: microsoft.quantum.canon.stackcapacity
-  summary: <xref:microsoft.quantum.canon.resultstack>의 용량을 검색 합니다.
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nStackCapacity는 더 이상 사용 되지 않습니다."
 - uid: microsoft.quantum.canon.stacklength
-  summary: <xref:microsoft.quantum.canon.resultstack>에 저장 된 요소의 수를 검색 합니다.
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nStackLength는 더 이상 사용 되지 않습니다."
 - uid: microsoft.quantum.canon.stacknew
-  summary: 지정 된 용량을 사용 하 여 비어 있는 새 <xref:microsoft.quantum.canon.resultstack>를 만듭니다.
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nStackNew는 더 이상 사용 되지 않습니다."
 - uid: microsoft.quantum.canon.stackpeek
-  summary: <xref:microsoft.quantum.canon.resultstack>의 맨 위 요소를 검색 합니다.
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nStackPeek는 더 이상 사용 되지 않습니다."
 - uid: microsoft.quantum.canon.stackpop
-  summary: <xref:microsoft.quantum.canon.resultstack>에서 맨 위에 있는 요소를 제거 합니다.
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nStackPop은 더 이상 사용 되지 않습니다."
 - uid: microsoft.quantum.canon.stackpush
-  summary: <xref:microsoft.quantum.canon.resultstack>에 새 요소를 푸시합니다.
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nStackPush는 더 이상 사용 되지 않습니다."
 - uid: microsoft.quantum.canon.tooperation
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nToOperation은 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.convert.functionasoperation\"를 사용하십시오.\n@\"microsoft.quantum.convert.functionasoperation\"를 사용하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nToOperation은 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.convert.functionasoperation\"를 사용하십시오.\n@\"microsoft.quantum.convert.functionasoperation\"를 사용 하세요."
 - uid: microsoft.quantum.canon.transformedoperation
   summary: 함수 및 작업이 지정 된 경우 지정 된 함수가 입력을 변환 하는 새 작업을 반환 합니다.
 - uid: microsoft.quantum.canon.transformedoperationa
@@ -277,26 +275,28 @@ functions:
 
     한정자 `CA`는 작업을 제어 하 고 adjointable 나타냅니다.
 - uid: microsoft.quantum.canon.uncurryop
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nUncurryOp는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.canon.uncurriedop\"를 사용하십시오.\n@\"microsoft.quantum.canon.uncurriedop\"를 사용하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nUncurryOp는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.canon.uncurriedop\"를 사용하십시오.\n@\"microsoft.quantum.canon.uncurriedop\"를 사용 하세요."
 - uid: microsoft.quantum.canon.uncurryopa
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nUncurryOpA는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.canon.uncurriedopa\"를 사용하십시오.\n@\"microsoft.quantum.canon.uncurriedopa\"를 사용하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nUncurryOpA는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.canon.uncurriedopa\"를 사용하십시오.\n@\"microsoft.quantum.canon.uncurriedopa\"를 사용 하세요."
 - uid: microsoft.quantum.canon.uncurryopc
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nUncurryOpC는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.canon.uncurriedopc\"를 사용하십시오.\n@\"microsoft.quantum.canon.uncurriedopc\"를 사용하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nUncurryOpC는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.canon.uncurriedopc\"를 사용하십시오.\n@\"microsoft.quantum.canon.uncurriedopc\"를 사용 하세요."
 - uid: microsoft.quantum.canon.uncurryopca
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nUncurryOpCA는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.canon.uncurriedopca\"를 사용하십시오.\n@\"microsoft.quantum.canon.uncurriedopca\"를 사용하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nUncurryOpCA는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.canon.uncurriedopca\"를 사용하십시오.\n@\"microsoft.quantum.canon.uncurriedopca\"를 사용 하세요."
 - uid: microsoft.quantum.canon.weightonepaulis
   summary: 지정 된 수의 값에 대 한 모든 무게 1 Pauli 연산자의 배열을 반환 합니다.
 - uid: microsoft.quantum.canon.xor
-  summary: 이는 두 비트의 배타적 OR를 계산 합니다.
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nXOR은 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.logical.xor\"를 사용하십시오.\n@\"microsoft.quantum.logical.xor\"를 사용 하세요."
 operations:
 - uid: microsoft.quantum.canon.adiabaticstateenergyunitary
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nAdiabaticStateEnergyUnitary는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.simulation.estimateenergywithadiabaticevolution\"를 사용하십시오.\n@\"microsoft.quantum.simuilation.pnormalized\"를 사용하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nAdiabaticStateEnergyUnitary는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.simulation.estimateenergywithadiabaticevolution\"를 사용하십시오.\n@\"microsoft.quantum.simuilation.pnormalized\"를 사용 하세요."
 - uid: microsoft.quantum.canon.andladder
-  summary: >-
-    대상 성능에서 제어 되는 ' 및 사다리 '를 수행 합니다.
-
-
-    이는 계산 기반 벡터에 지정 된 단일를 적용 합니다. $ $ \begin{align} \ket{x\_1, \stix\_n} \ket{y\_1, \ststa y\_{n-1}} \maps\ket{x\_1, \dots, x\_n} \ket{y\_1 \oplus (x\_1 \stx\_2), \ 점, y\_{n-1} \oplus (x\_1 \stx\_, \end{align} $ $ where $ \ket{x\_1, \dots, x\_n} $는 `controls`의 계산 기준 상태를 나타내며, 여기서 $ \ket{y\_1, \stay\_{n-1}} $는 `targets`의 계산 기준 상태를 나타냅니다.
+  summary: 대상의 레지스터에서 제어 되는 "및 사다리"를 수행 합니다.
+- uid: microsoft.quantum.canon.applyand
+  summary: Adjoint 작업을 수행 하는 측정을 사용 하 여 두 컨트롤의가 모두 1 상태인 경우에만 지정 된 대상 값을 반전 합니다.
+- uid: microsoft.quantum.canon.applycnotchain
+  summary: 내부에서의 레지스터 패리티를 계산 합니다.
+- uid: microsoft.quantum.canon.applycnotchainwithtarget
+  summary: 대상 비트의 배열에 대 한 패리티를 계산 합니다.
 - uid: microsoft.quantum.canon.applydiagonalunitary
   summary: >-
     일련의 복잡 한 단계 배열을 다양 한 양의 레지스터의 숫자 기반 상태에 적용 합니다.
@@ -348,6 +348,8 @@ operations:
   summary: 클래식 결과 값이 0이 조건 화 된 제어 가능한 작업을 적용 합니다.
 - uid: microsoft.quantum.canon.applyifzeroca
   summary: 기존 결과 값에 0이 조건 화 된 단일 작업을 적용 합니다.
+- uid: microsoft.quantum.canon.applylowdepthand
+  summary: 지정 된 대상 값을 반전 합니다. 두 컨트롤이 모두 1 상태에 있는 경우에만 T-수준 1을 사용 하 여 adjoint 작업을 수행 합니다.
 - uid: microsoft.quantum.canon.applymulticontrolledc
   summary: >-
     단일 제어 작업의 곱셈 제어 버전을 적용 합니다.
@@ -375,27 +377,27 @@ operations:
 - uid: microsoft.quantum.canon.applyquantumfouriertransformbe
   summary: "\n> [!WARNING]\n> 사용되지 않음\n\nApplyQuantumFourierTransformBE는 더 이상 사용 되지 않습니다. 대신 @ \"applyquantumfouriertransform (bigendianaslittleendian (qs))\"를 사용 하세요.\n이 작업은 제거 되었습니다."
 - uid: microsoft.quantum.canon.applyquantumfouriertransformle
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nApplyQuantumFourierTransformLE는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.canon.applyquantumfouriertransform\"를 사용하십시오.\n@\"microsoft.quantum.canon.applyquantumfouriertransform\"를 사용하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nApplyQuantumFourierTransformLE는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.canon.applyquantumfouriertransform\"를 사용하십시오.\n@\"microsoft.quantum.canon.applyquantumfouriertransform\"를 사용 하세요."
 - uid: microsoft.quantum.canon.applyreversedopbigendian
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nApplyReversedOpBigEndian는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.arithmetic.applyreversedopbe\"를 사용하십시오.\n@\"Microsoft.Quantum.Arithmetic.ApplyReversedOpBE\"를 사용하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nApplyReversedOpBigEndian는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.arithmetic.applyreversedopbe\"를 사용하십시오.\n@\"Microsoft.Quantum.Arithmetic.ApplyReversedOpBE\"를 사용 하세요."
 - uid: microsoft.quantum.canon.applyreversedopbigendiana
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nApplyReversedOpBigEndianA는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.arithmetic.applyreversedopbea\"를 사용하십시오.\n@\"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEA\"를 사용하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nApplyReversedOpBigEndianA는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.arithmetic.applyreversedopbea\"를 사용하십시오.\n@\"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEA\"를 사용 하세요."
 - uid: microsoft.quantum.canon.applyreversedopbigendianc
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nApplyReversedOpBigEndianC는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.arithmetic.applyreversedopbec\"를 사용하십시오.\n@\"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEC\"를 사용하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nApplyReversedOpBigEndianC는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.arithmetic.applyreversedopbec\"를 사용하십시오.\n@\"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEC\"를 사용 하세요."
 - uid: microsoft.quantum.canon.applyreversedopbigendianca
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nApplyReversedOpBigEndianCA는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.arithmetic.applyreversedopbeca\"를 사용하십시오.\n@\"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEC\"를 사용하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nApplyReversedOpBigEndianCA는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.arithmetic.applyreversedopbeca\"를 사용하십시오.\n@\"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEC\"를 사용 하세요."
 - uid: microsoft.quantum.canon.applyreversedoplittleendian
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nApplyReversedOpLittleEndian는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.arithmetic.applyreversedople\"를 사용하십시오.\n@\"Microsoft.Quantum.Arithmetic.ApplyReversedOpLE\"를 사용하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nApplyReversedOpLittleEndian는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.arithmetic.applyreversedople\"를 사용하십시오.\n@\"Microsoft.Quantum.Arithmetic.ApplyReversedOpLE\"를 사용 하세요."
 - uid: microsoft.quantum.canon.applyreversedoplittleendiana
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nApplyReversedOpLittleEndianA는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.arithmetic.applyreversedoplea\"를 사용하십시오.\n@\"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEA\"를 사용하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nApplyReversedOpLittleEndianA는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.arithmetic.applyreversedoplea\"를 사용하십시오.\n@\"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEA\"를 사용 하세요."
 - uid: microsoft.quantum.canon.applyreversedoplittleendianc
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nApplyReversedOpLittleEndianC는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.arithmetic.applyreversedoplec\"를 사용하십시오.\n@\"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEC\"를 사용하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nApplyReversedOpLittleEndianC는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.arithmetic.applyreversedoplec\"를 사용하십시오.\n@\"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEC\"를 사용 하세요."
 - uid: microsoft.quantum.canon.applyreversedoplittleendianca
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nApplyReversedOpLittleEndianCA는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.arithmetic.applyreversedopleca\"를 사용하십시오.\n@\"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEC\"를 사용하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nApplyReversedOpLittleEndianCA는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.arithmetic.applyreversedopleca\"를 사용하십시오.\n@\"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEC\"를 사용 하세요."
 - uid: microsoft.quantum.canon.applyripplecarrycomparatorbe
   summary: "\n> [!WARNING]\n> 사용되지 않음\n\nApplyRippleCarryComparatorBE는 더 이상 사용 되지 않습니다. 대신 @ \"compareusingripplecarry (bigendianaslittleendian (x), bigendianaslittleendian (y), output)\"을 사용 하세요.\n이 작업은 제거 되었습니다."
 - uid: microsoft.quantum.canon.applyripplecarrycomparatorle
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nApplyRippleCarryComparatorLE는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.arithmetic.compareusingripplecarry\"를 사용하십시오.\n@\"Microsoft.Quantum.Arithmetic.CompareUsingRippleCarry\"를 사용하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nApplyRippleCarryComparatorLE는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.arithmetic.compareusingripplecarry\"를 사용하십시오.\n@\"Microsoft.Quantum.Arithmetic.CompareUsingRippleCarry\"를 사용 하세요."
 - uid: microsoft.quantum.canon.applyseriesofops
   summary: Ops 및 해당 대상의 목록을 배열에 순차적으로 적용 합니다.
 - uid: microsoft.quantum.canon.applyseriesofopsa
@@ -528,7 +530,7 @@ operations:
 - uid: microsoft.quantum.canon.applywitha
   summary: 두 작업을 수행 하는 경우 conjugated로 다른 작업을 적용 합니다.
 - uid: microsoft.quantum.canon.applywithc
-  summary: ''
+  summary: 두 작업을 수행 하는 경우 conjugated로 다른 작업을 적용 합니다.
 - uid: microsoft.quantum.canon.applywithca
   summary: 두 작업을 수행 하는 경우 conjugated로 다른 작업을 적용 합니다.
 - uid: microsoft.quantum.canon.applywithinputtransformation
@@ -542,9 +544,9 @@ operations:
 - uid: microsoft.quantum.canon.approximateqft
   summary: 퀀텀 레지스터에 AQFT (대략적인 퀀텀 푸리에 변환)을 적용 합니다.
 - uid: microsoft.quantum.canon.asserthighestbit
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nAssertHighestBit는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.arithmetic.assertmostsignificantbit\"를 사용하십시오.\n@\"Microsoft.Quantum.Arithmetic.AssertMostSignificantBit\"를 사용하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nAssertHighestBit는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.arithmetic.assertmostsignificantbit\"를 사용하십시오.\n@\"Microsoft.Quantum.Arithmetic.AssertMostSignificantBit\"를 사용 하세요."
 - uid: microsoft.quantum.canon.assertlessthanphasele
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nAssertLessThanPhaseLE는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.arithmetic.assertphaselessthan\"를 사용하십시오.\n@\"Microsoft.Quantum.Arithmetic.AssertPhaseLessThan\"를 사용하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nAssertLessThanPhaseLE는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.arithmetic.assertphaselessthan\"를 사용하십시오.\n@\"Microsoft.Quantum.Arithmetic.AssertPhaseLessThan\"를 사용 하세요."
 - uid: microsoft.quantum.canon.assertphase
   summary: >-
     Equal superposition 상태의 단계가 예상 값을 포함 한다는 것을 어설션 합니다.
@@ -553,20 +555,14 @@ operations:
     구체적으로 말해서, 일부 임의 실수 t에 대해 $ \frac{e ^ {i t}} {\phi{2}} (e ^ {i\phi k} \ k{1}) $로 표현 될 수 있는 퀀텀 상태의 $ \eml$ 단계는 예상 값을 갖습니다.
 - uid: microsoft.quantum.canon.assertprobintbe
   summary: "\n> [!WARNING]\n> 사용되지 않음\n\nAssertProbIntBE는 더 이상 사용 되지 않습니다. 대신 @ \"assertprobint (stateindex, 문제, bigendianaslittleendian (?), tolerance)\"를 사용 하세요.\n이 작업은 제거 되었습니다."
+- uid: microsoft.quantum.canon.cascadecnot
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nCascadeCNOT는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.canon.applycnotchain\"를 사용하십시오.\n@\"microsoft.quantum.canon.applycnotchain\"를 사용 하세요."
 - uid: microsoft.quantum.canon.cnotchain
-  summary: >-
-    현재 위치의 배열에 대 한 패리티를 계산 합니다.
-
-
-    이 클래스는 $ \ket{q_0} \ket{q_0 \oplus q_1} \ket{q_0 \oplus q_1 \oplus q_2} \co$ 패턴을 따릅니다.
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nCNOTChain은 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.canon.applycnotchain\"를 사용하십시오."
 - uid: microsoft.quantum.canon.cnotchaintarget
-  summary: >-
-    대상 비트의 배열에 대 한 패리티를 계산 합니다.
-
-
-    배열이 처음에 $ \ket{q_0} \ket{q_1} \cdots q_ {\text{target}}} $ 상태에 있는 경우, 최종 상태는 $ \ket{q_0} \ket{q_1 \cdots q_0} \cdots \text{target}}} q_ {n-1} \cdots \co\o q_0 \cdots {$로 지정 됩니다.
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nCNOTChainTarget는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.canon.applycnotchainwithtarget\"를 사용하십시오."
 - uid: microsoft.quantum.canon.copymostsignificantbitle
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nCopyMostSignificantBitLE는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.arithmetic.copymostsignificantbit\"를 사용하십시오.\n@\"Microsoft.Quantum.Arithmetic.CopyMostSignificantBit\"를 사용하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nCopyMostSignificantBitLE는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.arithmetic.copymostsignificantbit\"를 사용하십시오.\n@\"Microsoft.Quantum.Arithmetic.CopyMostSignificantBit\"를 사용 하세요."
 - uid: microsoft.quantum.canon.cx
   summary: >-
     제어 된 X (CX) 게이트를 한 쌍의 비트에 적용 합니다.
@@ -604,30 +600,32 @@ operations:
     \begin{align} H_Y \mathrel{: =} \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\\\ & \end{bmatrix}.
 
     \end{align}
+- uid: microsoft.quantum.canon.inplacemajority
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nInPlaceMajority는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.arithmetic.applymajorityinplace\"를 사용하십시오.\n@\"microsoft.quantum.arithmetic.applymajorityinplace\"를 사용 하세요."
 - uid: microsoft.quantum.canon.inplacexorbe
   summary: "\n> [!WARNING]\n> 사용되지 않음\n\nInPlaceXorBE는 더 이상 사용 되지 않습니다. 대신 @ \"applyreversedopleca (applyxorinplace (value, _), target)\"을 사용 하세요.\n이 작업은 제거 되었습니다."
 - uid: microsoft.quantum.canon.inplacexorle
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nInPlaceXorLE은 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.measurement.applyxorinplace\"를 사용하십시오.\n@\"Microsoft.Quantum.Measurement.ApplyXorInPlace\"를 사용하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nInPlaceXorLE은 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.measurement.applyxorinplace\"를 사용하십시오.\n@\"Microsoft.Quantum.Measurement.ApplyXorInPlace\"를 사용 하세요."
 - uid: microsoft.quantum.canon.integerincrementle
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nIntegerIncrementLE는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.arithmetic.incrementbyinteger\"를 사용하십시오.\n@\"Microsoft.Quantum.Arithmetic.IncrementByInteger\"를 사용하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nIntegerIncrementLE는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.arithmetic.incrementbyinteger\"를 사용하십시오.\n@\"Microsoft.Quantum.Arithmetic.IncrementByInteger\"를 사용 하세요."
 - uid: microsoft.quantum.canon.integerincrementphasele
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nIntegerIncrementPhaseLE는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.arithmetic.incrementphasebyinteger\"를 사용하십시오.\n@\"Microsoft.Quantum.Arithmetic.IncrementPhaseByInteger\"를 사용하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nIntegerIncrementPhaseLE는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.arithmetic.incrementphasebyinteger\"를 사용하십시오.\n@\"Microsoft.Quantum.Arithmetic.IncrementPhaseByInteger\"를 사용 하세요."
 - uid: microsoft.quantum.canon.iteratethroughcartesianpower
-  summary: Arr product [0, bound-1] × [0, bound-1] × [0, bound-1]을 통해 arr 이라는 변수를 반복 하 고 데카르트 product의 모든 요소에 대해 op (arr)를 호출 합니다.
+  summary: 정수 범위의 데카르트 제곱에 있는 각 인덱스에 대해 작업을 적용 합니다.
 - uid: microsoft.quantum.canon.iteratethroughcartesianproduct
-  summary: 데카르트 곱을 [0, 경계 [0]-1] × [0, 경계 [1]-1] × [0, 경계 [Length (경계)-1]-1]을 (를) 나타내며 데카르트 product의 모든 요소에 대해 op (arr)를 호출 하는 `arr`를 말합니다.
+  summary: 여러 범위의 데카르트 곱에서 각 인덱스에 대 한 작업을 적용 합니다.
 - uid: microsoft.quantum.canon.measureintegerbe
   summary: "\n> [!WARNING]\n> 사용되지 않음\n\nMeasureIntegerBE는 더 이상 사용 되지 않습니다. 대신 @ \"measureinteger (bigendianaslittleendian (target))\"를 사용 하세요.\n이 작업은 제거 되었습니다."
 - uid: microsoft.quantum.canon.modularaddproductle
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nModularAddProductLE는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.arithmetic.multiplyandaddbymodularinteger\"를 사용하십시오.\n@\"Microsoft.Quantum.Arithmetic.MultiplyAndAddByModularInteger\"를 사용하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nModularAddProductLE는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.arithmetic.multiplyandaddbymodularinteger\"를 사용하십시오.\n@\"Microsoft.Quantum.Arithmetic.MultiplyAndAddByModularInteger\"를 사용 하세요."
 - uid: microsoft.quantum.canon.modularaddproductphasele
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nModularAddProductPhaseLE는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.arithmetic.multiplyandaddphasebymodularinteger\"를 사용하십시오.\n@\"Microsoft.Quantum.Arithmetic.MultiplyAndAddPhaseByModularInteger\"를 사용하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nModularAddProductPhaseLE는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.arithmetic.multiplyandaddphasebymodularinteger\"를 사용하십시오.\n@\"Microsoft.Quantum.Arithmetic.MultiplyAndAddPhaseByModularInteger\"를 사용 하세요."
 - uid: microsoft.quantum.canon.modularincrementle
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nModularIncrementLE는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.arithmetic.modularincrementbyinteger\"를 사용하십시오.\n@\"Microsoft.Quantum.Arithmetic.ModularIncrementByInteger\"를 사용하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nModularIncrementLE는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.arithmetic.modularincrementbyinteger\"를 사용하십시오.\n@\"Microsoft.Quantum.Arithmetic.ModularIncrementByInteger\"를 사용 하세요."
 - uid: microsoft.quantum.canon.modularincrementphasele
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nModularIncrementPhaseLE는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.arithmetic.incrementphasebymodularinteger\"를 사용하십시오.\n@\"Microsoft.Quantum.Arithmetic.IncrementPhaseByModularInteger\"를 사용하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nModularIncrementPhaseLE는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.arithmetic.incrementphasebymodularinteger\"를 사용하십시오.\n@\"Microsoft.Quantum.Arithmetic.IncrementPhaseByModularInteger\"를 사용 하세요."
 - uid: microsoft.quantum.canon.modularmultiplybyconstantle
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nModularMultiplyByConstantLE는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.arithmetic.multiplybymodularinteger\"를 사용하십시오.\n@\"Microsoft.Quantum.Arithmetic.MultiplyByModularInteger\"를 사용하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nModularMultiplyByConstantLE는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.arithmetic.multiplybymodularinteger\"를 사용하십시오.\n@\"Microsoft.Quantum.Arithmetic.MultiplyByModularInteger\"를 사용 하세요."
 - uid: microsoft.quantum.canon.multiplexoperations
   summary: >-
     숫자 상태의 배열에 의해 제어 되는 작업 배열을 적용 합니다.
@@ -690,25 +688,22 @@ operations:
 - uid: microsoft.quantum.canon.swapreverseregister
   summary: 에서는 교환 게이트를 사용 하 여 레지스터에서의 비트 순서를 반대로 바꿉니다.
 - uid: microsoft.quantum.canon.with
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\n는 사용 되지 않습니다. 대신 @\"microsoft.quantum.canon.applywith\"를 사용하십시오.\n@\"Microsoft.Quantum.Canon.ApplyWith\"를 사용하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\n는 사용 되지 않습니다. 대신 @\"microsoft.quantum.canon.applywith\"를 사용하십시오.\n@\"Microsoft.Quantum.Canon.ApplyWith\"를 사용 하세요."
 - uid: microsoft.quantum.canon.witha
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nWithA는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.canon.applywitha\"를 사용하십시오.\n@\"Microsoft.Quantum.Canon.ApplyWithA\"를 사용하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nWithA는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.canon.applywitha\"를 사용하십시오.\n@\"Microsoft.Quantum.Canon.ApplyWithA\"를 사용 하세요."
 - uid: microsoft.quantum.canon.withc
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nWithC는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.canon.applywithc\"를 사용하십시오.\n@\"Microsoft.Quantum.Canon.ApplyWithC\"를 사용하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nWithC는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.canon.applywithc\"를 사용하십시오.\n@\"Microsoft.Quantum.Canon.ApplyWithC\"를 사용 하세요."
 - uid: microsoft.quantum.canon.withca
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nWithCA는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.canon.applywithca\"를 사용하십시오.\n@\"Microsoft.Quantum.Canon.ApplyWithCA\"를 사용하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nWithCA는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.canon.applywithca\"를 사용하십시오.\n@\"Microsoft.Quantum.Canon.ApplyWithCA\"를 사용 하세요."
 newtypes:
 - uid: microsoft.quantum.canon.ccnotop
   summary: CCNOT gate의 서명 유형입니다.
 - uid: microsoft.quantum.canon.resultstack
-  summary: >-
-    `Result` 변수의 마지막으로 시작 된 스택입니다.
-
-    스택은 정수 용량, 스택 포인터 및 `Result` 배열로 구성 됩니다.
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nResultStack은 더 이상 사용 되지 않습니다."
 metadata:
-  ms.openlocfilehash: 457d211ace716ddc09ebcd94c5cbc3c33b42d704
-  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+  ms.openlocfilehash: 8d54303daeb32281b1e531fce50443c132c14093
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 12/05/2019
-  ms.locfileid: "74858550"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76870727"

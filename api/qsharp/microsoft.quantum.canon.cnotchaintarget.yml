@@ -3,41 +3,16 @@ uid: microsoft.quantum.canon.cnotchaintarget
 name: CNOTChainTarget
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: >-
-  대상 비트의 배열에 대 한 패리티를 계산 합니다.
-
-
-  배열이 처음에 $ \ket{q_0} \ket{q_1} \cdots $ 상태에 있는 경우, 최종 상태는 $ \ket{q_0} \ket{q_1 \cdots q_0} \cst\ket{q_{n-1} \cdots \co\co\oq_0 \cdots q_ {\text{target}}} $로 지정 됩니다.
-remarks: >-
-  다음은 동일 합니다.
-
-
-  ```qsharp
-
-  CNOTChainTarget(Most(qs), Last(qs));
-
-  ```
-
-
-  및
-
-
-  ```qsharp
-
-  CNOTChain(qs);
-
-  ```
+summary: CNOTChainTarget는 더 이상 사용 되지 않습니다. 대신 @"microsoft.quantum.canon.applycnotchainwithtarget"를 사용하십시오.
 syntax: 'operation CNOTChainTarget (qubits : Qubit[], targetQubit : Qubit) : Unit'
 input:
   content: '(qubits : Qubit[], targetQubit : Qubit)'
   types:
   - name: qubits
-    summary: 패리티를 계산 하는 데 사용할 비트의 배열입니다.
     isArray: true
     isPrimitive: true
     uid: Qubit
   - name: targetQubit
-    summary: "'가 중 비트 '의 패리티가 XORed 하는 마지막입니다."
     isPrimitive: true
     uid: Qubit
 output:
@@ -49,9 +24,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 26893296ec8fe7ec8d8cc5309e2bd5066f315849
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 691709d2406862885887a1e35d093611063d26cf
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73068039"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76871297"

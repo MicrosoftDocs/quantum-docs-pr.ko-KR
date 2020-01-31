@@ -3,32 +3,22 @@ uid: microsoft.quantum.amplitudeamplification.ampampbyoraclephases
 name: AmpAmpByOraclePhases
 type: function
 namespace: Microsoft.Quantum.AmplitudeAmplification
-summary: 부분 반사를 위해 oracles에 의해 진폭 증폭
-remarks: >-
-  이는 `AmpAmpByReflectionPhases`보다 시작 및 대상 상태를 형성 하는 보다 엄격한 조건을 적용 합니다.
-
-  대상 상태가 $ \ket{1}\_f $로 표시 되어 있다고 가정 합니다.
-
-  \Begin{align} A\ket{0}\_{f} \ket{0}\_s = \lambda\ket{1}\_f\ket {\ text {target}}\_s + \sqrt{1-| \lambda | ^ 2} \ket{0}\_s\cadn \end{align} 대부분의 경우 `flagQubit` 및 `ancillaRegister`은 $ \ket{0}\_{f} \ket{0}\_s $ 상태에서 초기화 됩니다.
+summary: AmpAmpByOraclePhases는 더 이상 사용 되지 않습니다. 대신 @"microsoft.quantum.amplitudeamplification.amplitudeamplificationfromstatepreparation"를 사용하십시오.
 syntax: 'function AmpAmpByOraclePhases (phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, stateOracle : Microsoft.Quantum.Oracles.StateOracle, idxFlagQubit : Int) : (Qubit[] => Unit is Adj + Ctl)'
 input:
   content: '(phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, stateOracle : Microsoft.Quantum.Oracles.StateOracle, idxFlagQubit : Int)'
   types:
   - name: phases
-    summary: 부분 반사의 단계
     uid: microsoft.quantum.amplitudeamplification.reflectionphases
   - name: stateOracle
-    summary: 시작 상태를 준비 하는 단일 oracle $A $
     uid: microsoft.quantum.oracles.stateoracle
   - name: idxFlagQubit
-    summary: 플래그에 대 한 인덱스입니다.
     isPrimitive: true
     uid: Int
 output:
   content: (Qubit[] => Unit is Adj + Ctl)
   types:
-  - summary: 부분 반사에 의해 구현 되는 oracles에 의해 진폭 증폭을 구현 하는 작업입니다.
-    isOperation: true
+  - isOperation: true
     input:
       types:
       - isArray: true
@@ -42,9 +32,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: cacd3b34fae01697ee5bba414d9a7422b3260e2f
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: a5a20dbb207841bf5dd9e46746814b4d7560cc67
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73215832"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76869231"

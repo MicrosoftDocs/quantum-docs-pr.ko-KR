@@ -1,17 +1,17 @@
 ---
-title: 'Q # 기술-테스트 및 디버깅 | Microsoft Docs'
-description: 'Q # 기술-테스트 및 디버깅'
+title: '테스트 및 디버깅-Q # 기술 | Microsoft Docs'
+description: '테스트 및 디버깅-Q # 기술'
 author: tcNickolas
 ms.author: mamykhai@microsoft.com
 uid: microsoft.quantum.techniques.testing-and-debugging
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: d352ffa315b654cfcf8991fa116465d3dad49f0a
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+ms.openlocfilehash: cfc71f08be0f190d9f5f4a48796e3d0ad06d6107
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74864273"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820116"
 ---
 # <a name="testing-and-debugging"></a>테스트 및 디버깅
 
@@ -50,8 +50,8 @@ $ code . # To open in Visual Studio Code
     @Test("QuantumSimulator")
     operation AllocateQubit () : Unit {
 
-        using (q = Qubit()) {
-            Assert([PauliZ], [q], Zero, "Newly allocated qubit must be in the |0⟩ state.");
+        using (qubit = Qubit()) {
+            Assert([PauliZ], [qubit], Zero, "Newly allocated qubit must be in the |0⟩ state.");
         }
         
         Message("Test passed");
@@ -136,7 +136,7 @@ $ dotnet test --filter "Name=AllocateQubit"
 
 ***
 
-## <a name="assertions"></a>어설션
+## <a name="assertions"></a>어설션을
 
 Q #의 함수에는 _논리적인_ 부작용이 없으므로 출력 형식이 빈 튜플 인 함수를 실행 하는 _다른 종류_ 의 효과는 Q # 프로그램 내에서 관찰 될 수 `()`.
 즉, 대상 컴퓨터는 이러한 누락으로 인 한 `()` 반환 하는 함수를 실행 하지 않도록 선택할 수 있습니다 .이는 다음 Q # 코드의 동작을 수정 하지 않습니다.

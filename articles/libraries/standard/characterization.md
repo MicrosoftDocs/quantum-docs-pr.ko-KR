@@ -6,12 +6,12 @@ uid: microsoft.quantum.libraries.characterization
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 1eb48da9d4ae2a730019e2707dcb2c69b998491e
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+ms.openlocfilehash: 51124dc78feedf6d5c85fe224898e66a1c5ed459
+ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74864375"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76870352"
 ---
 # <a name="quantum-characterization-and-statistics"></a>퀀텀 특성화 및 통계 #
 
@@ -87,7 +87,7 @@ $X = \ket{+} \bra{+}-\ket{-}\bra{-}$와 같이 $ \ket{+} $는 `Zero`에 해당 �
 기존의 기존 용어에 따라 $ \eqref{eq:} $는 반복적인 단계 예측에 대 한 *가능성 함수* 를 호출 합니다.
 
 반복 단계 예측 가능성 함수에서 `Result`를 관찰 한 후에는 Bayes ' 규칙을 사용 하 여 이러한 관찰을 수행 해야 하는 단계를 규정 하 고 있습니다.
-Concretely, \begin{equation} \Pr(\phi | d) = \frac{\Pr(d | \phi) \Pr(\phi)}{\int \Pr(d | \phi) \Pr(\phi){\mathrm d}\phi} \Pr(\phi), \end{equation} where $d \in \\{\texttt{Zero}, \texttt{One}\\}$ is a `Result`, and where $\Pr(\phi)$ describes our prior beliefs about $\phi$.
+구체적으로, \begin{equation} \A\\\\\\\\frac{\Pr (d | \) \Pr (\aa>} {\int \Pr (d | \\a) \Pr (\aa) {\mathrm d} \phi} \Aa> \begin{equation} 여기서 $d \cin \\{\texttt{Zero}, \texttt{One}\\} $는 `Result`이 고 $ \Pr (\aa) $은 이전 신념 about $ \\as$를 설명 합니다.
 그러면 사후 배포 $ \Pr (\\a| d) $에서 신념에 대 한 자세한 내용은 다음 `Result`에 대 한 앞 즉시 설명 하기 때문에 반복적인 단계 예측의 반복적인 특성을 명시적으로 만듭니다.
 
 이 절차를 수행 하는 동안 언제 든 지 클래식 컨트롤러에서 유추 된 $ \hat{\phi} $ 단계를 \begin{equation} \hat{\phi} \mathrel{로 보고할 수 있습니다. =} \ [\\a| \text{data}] = \int \Las\pr (\laa| \text{data}) {\mathrm d} \\a\ariation} where $ \text{data} $는 가져온 모든 `Result` 값의 전체 레코드를 나타냅니다.
@@ -106,7 +106,7 @@ Concretely, \begin{equation} \Pr(\phi | d) = \frac{\Pr(d | \phi) \Pr(\phi)}{\int
 
 가장 많이 사용 되는 다른 변형에서 공유 되는 강력한 단계 추정의 가장 중요 한 기능은 $ \hat{\phi} $의 재구성 품질이 Heisenberg 제한 되어 있다는 것입니다. 즉, 값이 $ \sigma $ 인 $ \hat{\phi} $의 편차가 $ \sigma $ 인 경우 $ \sigma $는 $U $ (예: $ \sigma = \mathcal{O} (1/Q) $로 만든 $Q 총 쿼리 수에 반비례 하 게 비례 합니다. 이제 편차에 대 한 정의는 예측 알고리즘 마다 다릅니다. 경우에 따라 $ \mathcal{O} (1) $ probability를 사용 하는 경우 예상 오류 $ | \hat{\phi}-\phi |를 의미할 수 있습니다. \circ\le \sigma $를 일부 순환 측정값 $ \sigma $에\_합니다. 강력한 단계 예측의 경우 편차는 일정 한 간격으로 \mathbb{E}을 정확 하 게 분산 하는 것은 $ \sigma ^ 2 =\_\hat{\phi} [(\sigma\_{2 \ pi} (\hat{\phi}-\phi + \sigma)-\sigma) ^ 2] $입니다. 좀 더 정확 하 게 말하자면, 강력한 단계 추정의 표준 편차는 같지 $ $ \begin{align} 2.0 \pi/Q \pi \pi \pi 2 \ pi/2 ^ {n} \pi 10.7 \ pi/Q, \end{align} $ $를 충족 합니다. 여기서 하한값은 asymptotically large $Q $로 제한 되며, 상한값은 작은 샘플 크기에 대해서도 보장 됩니다.  $N $는 `bitsPrecision` 입력으로 선택 되며, $Q $를 암시적으로 정의 합니다.
 
-그 밖의 관련 세부 정보에는 $1 $ ancilla?의 작은 공간 오버 헤드 또는 프로시저가 비 적응 (예를 들어, 퀀텀 실험의 필수 시퀀스는 중간 측정 결과와 무관)이 있습니다. 단계 추정 알고리즘의 선택이 중요 한이 예제와 향후 예제에서는 @"microsoft.quantum.canon.robustphaseestimation"와 같은 설명서를 참조 하 고 해당 구현에 대 한 참조 된 게시를 참조 해야 합니다.
+그 밖의 관련 세부 정보에는 $1 $ ancilla?의 작은 공간 오버 헤드 또는 프로시저가 비 적응 (예를 들어, 퀀텀 실험의 필수 시퀀스는 중간 측정 결과와 무관)이 있습니다. 단계 추정 알고리즘의 선택이 중요 한이 예제와 향후 예제에서는 @"microsoft.quantum.characterization.robustphaseestimation"와 같은 설명서를 참조 하 고 해당 구현에 대 한 참조 된 게시를 참조 해야 합니다.
 
 > [!TIP]
 > 강력한 단계 예측을 사용 하는 많은 샘플이 있습니다. 다양 한 물리적 시스템의 그라운드 상태 에너지를 추출 하는 단계를 예측 하려면 [ **H2 시뮬레이션** 샘플](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line), [ **simpleising** 샘플](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/simple)및 [ **model** 샘플](https://github.com/microsoft/Quantum/tree/master/samples/simulation/hubbard)을 참조 하세요.
@@ -154,25 +154,27 @@ operation RobustPhaseEstimation(bitsPrecision : Int, oracle : DiscreteOracle, ei
 
 ```qsharp
 operation H2EstimateEnergy(
-    idxBondLength : Int, 
+    idxBondLength : Int,
     trotterStepSize : Double,
-    phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double)) 
+    phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double))
 : Double
 ```
 
-이러한 방대한 단계 추정 알고리즘은 대상 응용 프로그램에 가장 적합 한 항목을 선택 하기 위해 이해 해야 하는 다양 한 속성 및 입력 매개 변수에 대해 최적화 됩니다. 예를 들어 일부 단계 추정 알고리즘은 적응입니다. 즉, 이후 단계는 이전 단계의 측정 결과에 의해 일반적으로 제어 됩니다. 일부 경우에는 임의 실수에 의해 블랙 박스 단일 oracle을 exponentiate 하는 기능이 필요 하 고, 다른 사용자에 게는 정수 거듭제곱이 필요 하지만 단계 추정 모듈로 $2 \ pi $를 해결할 수 있습니다. 일부는 많은 보조 비트 비트가 필요 하며 다른 하나는 하나만 필요 합니다.
+이러한 방대한 단계 추정 알고리즘은 대상 응용 프로그램에 가장 적합 한 항목을 선택 하기 위해 이해 해야 하는 다양 한 속성 및 입력 매개 변수에 대해 최적화 됩니다. 예를 들어 일부 단계 추정 알고리즘은 적응입니다. 즉, 이후 단계는 이전 단계의 측정 결과에 의해 일반적으로 제어 됩니다. 일부 경우에는 임의 실수에 의해 블랙 박스 단일 oracle을 exponentiate 하는 기능이 필요 하 고, 다른 사용자에 게는 정수 거듭제곱이 필요 하지만 단계 추정 모듈로 $2 \ pi $를 해결할 수 있습니다. 일부는 많은 보조 비트 비트가 필요 하며, 다른 일부는 하나만 필요 합니다.
 
 마찬가지로 임의의 워크 단계 예측을 사용 하는 것은 canon과 함께 제공 되는 다른 알고리즘과 거의 동일한 방식으로 진행 됩니다.
 
 ```qsharp
-operation ExampleOracle(eigenphase : Double, time : Double, register : Qubit[]) : Unit
-is Adj + Ctl {
+operation ApplyExampleOracle(
+    eigenphase : Double,
+    time : Double,
+    register : Qubit[])
+: Unit is Adj + Ctl {
     Rz(2.0 * eigenphase * time, register[0]);
 }
 
-operation BayesianPhaseEstimationCanonSample(eigenphase : Double) : Double {
-
-    let oracle = ContinuousOracle(ExampleOracle(eigenphase, _, _));
+operation EstimateBayesianPhase(eigenphase : Double) : Double {
+    let oracle = ContinuousOracle(ApplyExampleOracle(eigenphase, _, _));
     using (eigenstate = Qubit()) {
         X(eigenstate);
         // The additional inputs here specify the mean and variance of the prior, the number of

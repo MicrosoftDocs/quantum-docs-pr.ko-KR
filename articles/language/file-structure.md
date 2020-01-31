@@ -6,12 +6,12 @@ uid: microsoft.quantum.language.file-structure
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 40b2e7ddf5def6285250dffe130b152429dce1f8
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 364d353c55bda38f227456909755d13dc7e67080
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73185191"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821085"
 ---
 # <a name="file-structure"></a>파일 구조
 
@@ -21,7 +21,7 @@ Q # 파일은 네임 스페이스 선언 시퀀스로 구성 됩니다.
 네임 스페이스 선언 외부에 나타날 수 있는 유일한 텍스트는 주석입니다.
 특히 네임 스페이스에 대 한 문서 주석은 선언 앞에 나옵니다.
 
-## <a name="namespace-declarations"></a>네임 스페이스 선언
+## <a name="namespace-declarations"></a>네임스페이스 선언
 
 Q # 파일은 일반적으로 정확히 하나의 네임 스페이스 선언을 포함 하지만, 없거나 비어 있거나 주석을 포함 하거나, 여러 네임 스페이스를 포함할 수 있습니다.
 네임 스페이스 선언은 중첩 될 수 없습니다.
@@ -66,7 +66,7 @@ Q #에서는 [q # 형식 모델](xref:microsoft.quantum.language.type-model) 섹
 
 사용자 정의 형식 선언은 `newtype`키워드로 구성 된 다음 사용자 정의 형식 이름, `=`, 유효한 형식 사양 및 종료 세미콜론으로 구성 됩니다.
 
-다음은 그 예입니다.
+예:
 
 ```qsharp
 newtype PairOfInts = (Int, Int);
@@ -84,7 +84,7 @@ newtype PairOfInts = (Int, Int);
 
 작업 이름은 네임 스페이스 내에서 고유 해야 하며 형식 및 함수 이름과 충돌 하지 않을 수 있습니다.
 
-작업 선언은 `operation`키워드로 구성 된 다음 작업의 이름인 기호, 작업에 대 한 인수를 정의 하는 형식화 된 식별자 튜플, 콜론 `:`, 작업의 결과 형식을 설명 하는 형식 주석으로 구성 됩니다. 선택적으로 작업 특징, 여는 중괄호 `{`, 작업 선언의 본문 및 최종 닫는 중괄호 `}`포함 된 주석입니다.
+작업 선언은 `operation`키워드, 작업의 인수를 정의 하는 형식화 된 식별자 튜플, 작업에 대 한 인수를 정의 하는 형식화 된 식별자 튜플, 콜론 `:`, 작업의 결과 형식에 대 한 인수를 정의 하는 형식 주석, 선택적인 중괄호 `{`, 작업 선언 본문, 최종 닫는 중괄호 `}`로 구성 됩니다.
 
 작업 선언의 본문은 기본 구현 또는 특수화 목록으로 구성 됩니다.
 기본 본문 특수화의 구현만 명시적으로 지정 해야 하는 경우에는 선언 내에서 직접 기본 구현을 지정할 수 있습니다.
@@ -138,7 +138,7 @@ is Ctl + Adj {
 }
 ```
 
-위의 예제에서 `adjoint invert;`는 본문 구현을 반전 하 여 adjoint 특수화가 생성 되 고 `controlled adjoint invert;`는 지정 된 구현을 반전 하 여 제어 된 adjoint 특수화가 생성 됨을 나타냅니다. 제어 된 특수화.
+위의 예제에서 `adjoint invert;`는 본문 구현을 반전 하 여 adjoint 특수화가 생성 되 고 `controlled adjoint invert;`는 제어 된 특수화의 지정 된 구현을 반전 하 여 제어 된 adjoint 특수화가 생성 됨을 나타냅니다.
 
 `Adjoint` 및/또는 `Controlled` 함수의 응용 프로그램을 지 원하는 작업의 경우 반환 형식은 반드시 `Unit`해야 합니다. 
 
@@ -187,12 +187,12 @@ Q # 작업에는 다음과 같은 명시적 특수화 선언이 포함 될 수 �
 기본 본문 외에도 하나 이상의 특수화를 명시적으로 선언 해야 하는 경우 기본 본문의 구현은 적절 한 특수화 선언에도 래핑해야 합니다.
 
 ```qsharp
-operation CountOnes(qs: Qubit[]) : Int {
+operation CountOnes(qubits: Qubit[]) : Int {
 
     body (...) // default body specialization
     {
         mutable n = 0;
-        for (q in qs) {
+        for (qubit in qubits) {
             set n += M(q) == One ? 1 | 0;
         }
         return n;
@@ -208,7 +208,7 @@ Adjoint 없이 작업을 지정 하는 것은 유효 합니다. 예를 들어 �
 작업은 해당 선언에 adjoint 특수화의 암시적 또는 명시적 선언이 포함 된 경우 `Adjoint` 함수를 지원 합니다.
 명시적으로 선언 된 adjoint 특수화는 adjoint 특수화가 있음을 의미 합니다. 
 
-본문이-success 루프, set 문, 측정값, return 문 또는 `Adjoint` 함수를 지원 하지 않는 다른 작업에 대 한 호출을 포함 하는 작업의 경우 `invert` 또는 다음에 adjoint 특수화를 자동 생성 @no__ t_2_ 지시문은 사용할 수 없습니다.
+본문이 반복 될 때까지 루프, set 문, 측정값, return 문 또는 `Adjoint` 함수를 지원 하지 않는 다른 작업에 대 한 호출을 포함 하는 작업의 경우에는 `invert` 또는 `auto` 지시문 다음에 adjoint 특수화 자동 생성이 가능 하지 않습니다.
 
 ### <a name="controlled"></a>제어
 
@@ -236,7 +236,7 @@ Adjoint 없이 작업을 지정 하는 것은 유효 합니다. 예를 들어 �
 작업 선언은 다음과 같이 간단할 수 있습니다 .이는 기본 Pauli X 작업을 정의 합니다.
 
 ```qsharp
-operation X (q : Qubit) : Unit
+operation X (qubit : Qubit) : Unit
 is Adj + Ctl {
     body intrinsic;
     adjoint self;
@@ -282,7 +282,7 @@ operation Teleport (source : Qubit, target : Qubit) : Unit {
 함수는 Q #에서 순수 하 게 사용할 수 있는 루틴입니다.
 각 Q # 소스 파일은 원하는 수의 함수를 정의할 수 있습니다.
 
-함수 선언은 `function`키워드와 함수 이름, 형식화 된 식별자 튜플, 함수의 반환 형식을 설명 하는 형식 주석 및의 구현을 설명 하는 문 블록으로 구성 됩니다. 칩셋용으로.
+함수 선언은 `function`키워드와 함수 이름, 형식화 된 식별자 튜플, 함수의 반환 형식을 설명 하는 형식 주석, 함수의 구현을 설명 하는 문 블록으로 구성 됩니다.
 
 함수를 정의 하는 문 블록은 `{`로 묶어야 하 고 다른 문 블록과 같이 `}` 해야 합니다.
 

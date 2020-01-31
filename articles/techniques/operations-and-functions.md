@@ -1,17 +1,17 @@
 ---
-title: 'Q # 기술-작업 및 함수 | Microsoft Docs'
-description: 'Q # 기술-작업 및 함수'
+title: '작업 및 함수-Q # 기술 | Microsoft Docs'
+description: '작업 및 함수-Q # 기술'
 uid: microsoft.quantum.techniques.opsandfunctions
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 06da09dc9c6e0ba0331db6bc0cd3d2ddeb287113
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 1fca20bb44cc42008f7d25d2fc71a39b962525c2
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183457"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820779"
 ---
 # <a name="q-operations-and-functions"></a>Q # 작업 및 함수
 
@@ -66,7 +66,7 @@ operation Superdense(here : Qubit, there : Qubit) : (Result, Result) {
 이러한 특수화의 존재는 다음 예제에서 `is Adj + Ctl` 작업 시그니처의 일부로 선언할 수 있습니다. 이렇게 암시적으로 선언 된 각 특수화에 해당 하는 구현은 컴파일러에 의해 생성 됩니다. 
 
 ```qsharp
-operation PrepareEntangledPair(here : Qubit, there : Qubit) : Unit {
+operation PrepareEntangledPair(here : Qubit, there : Qubit) : Unit
 is Adj + Ctl { // implies the existence of an adjoint, a controlled, and a controlled adjoint specialization
     H(here);
     CNOT(here, there);
@@ -111,7 +111,7 @@ is Ctl + Adj {
     controlled adjoint invert; 
 }
 ```
-위의 예제에서 `adjoint invert;`는 본문 구현을 반전 하 여 adjoint 특수화가 생성 되 고 `controlled adjoint invert;`는 지정 된 구현을 반전 하 여 제어 된 adjoint 특수화가 생성 됨을 나타냅니다. 제어 된 특수화.
+위의 예제에서 `adjoint invert;`는 본문 구현을 반전 하 여 adjoint 특수화가 생성 되 고 `controlled adjoint invert;`는 제어 된 특수화의 지정 된 구현을 반전 하 여 제어 된 adjoint 특수화가 생성 됨을 나타냅니다.
 
 이에 대 한 더 많은 예제는 [고차 제어 흐름](xref:microsoft.quantum.concepts.control-flow)에서 볼 수 있습니다.
 
@@ -163,7 +163,7 @@ operation U(target : Qubit) : Unit {
 
 `U`가 호출 될 때마다 `target`에서 다른 작업이 수행 됩니다.
 특히 컴파일러는 `U(target); Adjoint U(target);` `U`에 `adjoint auto` 특수화 선언을 추가한 경우 id (즉, op)로 작동 하도록 보장할 수 없습니다.
-이는 [벡터 및 행렬](xref:microsoft.quantum.concepts.vectors)에서 보았던 adjoint의 정의를 위반 하 여, 작업 <xref:microsoft.quantum.math.randomreal> 호출한 작업에서 adjoint 특수화를 자동으로 생성할 수 있도록 하 여 컴파일러에서 제공 하는 보증을 중단 합니다. ; <xref:microsoft.quantum.math.randomreal>는 adjoint 또는 제어 된 버전이 존재 하지 않는 작업입니다.
+이는 [벡터 및 매트릭스](xref:microsoft.quantum.concepts.vectors)에서 보았던 adjoint의 정의를 위반 하 여, 작업 <xref:microsoft.quantum.math.randomreal> 호출한 작업에서 adjoint 특수화를 자동으로 생성할 수 있도록 하 여 컴파일러에서 제공 하는 보증을 중단 합니다. <xref:microsoft.quantum.math.randomreal>는 adjoint 또는 제어 된 버전이 존재 하지 않는 작업입니다.
 
 반면에 `Square`와 같은 함수 호출을 안전 하 게 사용할 수 있다는 것은 컴파일러가 출력을 안정적으로 유지 하기 위해 `Square` 입력을 유지 해야 한다는 것을 확신할 수 있다는 것입니다.
 따라서 함수에서 최대한 많은 고전 논리를 격리 하면 다른 함수와 작업에서 해당 논리를 쉽게 다시 사용할 수 있습니다.
