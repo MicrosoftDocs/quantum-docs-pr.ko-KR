@@ -7,11 +7,13 @@ summary: >-
   정수 상수를 기준으로 하는 이상 비트 레지스터의 모듈식 증분을 수행 합니다.
 
 
-  `increment`에서 `modulus`를 사용 하 여 N을 표시 하 고 y로 `target`에서 인코딩된 정수를 표시 합니다. | y ⟩ ↦ | y + a (mod N) ⟩ 정수는 QFT로 거의 endian 형식으로 인코딩됩니다.
+  `target` $에 의해 $y에서 $N $ 및 정수로 인코딩된 $a $, `modulus` `increment`를 나타냅니다.
+
+  그런 다음이 작업은 다음 변환을 수행 합니다. \begin{align} \ket{y} \maps\ket{(y + a) \operatorname{mod} N} \end{align} 정수는 QFT로 거의 endian 형식으로 인코딩됩니다.
 remarks: >-
   `target` 가장 높은 비트가 0으로 설정 된 것으로 가정 합니다.
 
-  또한에서는 target 값이 N 보다 작은 것으로 가정 합니다.
+  또한은 대상의 값이 $ $N 미만 이라고 가정 합니다.
 
 
   회로 다이어그램 및 설명은 [arXiv: vant-ph/0205095v3의 5 페이지](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=5)에서 그림 5를 참조 하세요.
@@ -20,12 +22,15 @@ input:
   content: '(increment : Int, modulus : Int, target : Microsoft.Quantum.Arithmetic.PhaseLittleEndian)'
   types:
   - name: increment
+    summary: $Y $에 더할 정수 증가값 $a $입니다.
     isPrimitive: true
     uid: Int
   - name: modulus
+    summary: Mods $y + a $의 정수 $N $입니다.
     isPrimitive: true
     uid: Int
   - name: target
+    summary: '`increment` $a $가에 추가 되는, 단계에서 인코딩된 작은 endian 형식의 정수 $y $입니다.'
     uid: microsoft.quantum.arithmetic.phaselittleendian
 output:
   content: Unit
@@ -36,11 +41,11 @@ functors:
 - Adjoint
 - Controlled
 seeAlso:
-- microsoft.quantum.canon.modularincrementle
+- microsoft.quantum.arithmetic.incrementbymodularinteger
 metadata:
-  ms.openlocfilehash: 897e46cca640e714e1f000548ffd3226e8e27fa4
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 69240c9ecac0917f8f2a6d1f6a3554cc93269cbd
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73219028"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76871416"

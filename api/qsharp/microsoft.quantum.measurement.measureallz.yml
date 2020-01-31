@@ -1,0 +1,32 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.measurement.measureallz
+name: MeasureAllZ
+type: operation
+namespace: Microsoft.Quantum.Measurement
+summary: >-
+  는 Pauli Z 기준으로 원하는 비트의 레지스터를 측정 합니다.
+
+
+  전체 레지스터의 패리티를 표시 하는 $Z \otimes Z \otimes \cst\otimes Z $ 기준으로 stbits의 레지스터를 측정 합니다.
+syntax: 'operation MeasureAllZ (register : Qubit[]) : Result'
+input:
+  content: '(register : Qubit[])'
+  types:
+  - name: register
+    summary: 측정할 레지스터입니다.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Result
+  types:
+  - summary: $Z \otimes Z \otimes \cst\otimes Z $를 측정 한 결과입니다.
+    isPrimitive: true
+    uid: Result
+metadata:
+  ms.openlocfilehash: a893d5b42ad39fce0f2a0516d1a99c8f03a0b37e
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.translationtype: MT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76872345"

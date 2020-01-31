@@ -10,11 +10,11 @@ summary: >-
 
 
   즉, $ $U $를 나타내는 작업이 지정 된 경우 power $m $에 대해 ^ m $ $U 새 작업을 반환 합니다.
-syntax: "function OperationPowCA (oracle : ('T => Unit is Ctl + Adj), power : Int) : ('T => Unit is Ctl + Adj)"
+syntax: "function OperationPowCA (op : ('T => Unit is Ctl + Adj), power : Int) : ('T => Unit is Ctl + Adj)"
 input:
-  content: "(oracle : ('T => Unit is Ctl + Adj), power : Int)"
+  content: "(op : ('T => Unit is Ctl + Adj), power : Int)"
   types:
-  - name: oracle
+  - name: op
     summary: 반복 될 게이트를 나타내는 연산이 $U입니다.
     isOperation: true
     input:
@@ -54,9 +54,9 @@ typeParameters:
 seeAlso:
 - microsoft.quantum.canon.operationpow
 metadata:
-  ms.openlocfilehash: d671ba738ec1d8d24b6fe956230ab0af60dbbda1
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: d5fcdf5fe3cefd5ecc5bf0421960db542a7f59a3
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73211718"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76871518"

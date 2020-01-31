@@ -37,11 +37,13 @@ operations:
 - uid: microsoft.quantum.arithmetic.applyleoperationonphasele
   summary: <xref:microsoft.quantum.arithmetic.littleendian>형식의 대상 레지스터에서 입력으로 등록 <xref:microsoft.quantum.arithmetic.phaselittleendian>를 사용 하는 작업을 적용 합니다.
 - uid: microsoft.quantum.arithmetic.applyleoperationonphaselea
-  summary: ''
+  summary: <xref:microsoft.quantum.arithmetic.littleendian>형식의 대상 레지스터에서 입력으로 등록 <xref:microsoft.quantum.arithmetic.phaselittleendian>를 사용 하는 작업을 적용 합니다.
 - uid: microsoft.quantum.arithmetic.applyleoperationonphaselec
-  summary: ''
+  summary: <xref:microsoft.quantum.arithmetic.littleendian>형식의 대상 레지스터에서 입력으로 등록 <xref:microsoft.quantum.arithmetic.phaselittleendian>를 사용 하는 작업을 적용 합니다.
 - uid: microsoft.quantum.arithmetic.applyleoperationonphaseleca
-  summary: ''
+  summary: <xref:microsoft.quantum.arithmetic.littleendian>형식의 대상 레지스터에서 입력으로 등록 <xref:microsoft.quantum.arithmetic.phaselittleendian>를 사용 하는 작업을 적용 합니다.
+- uid: microsoft.quantum.arithmetic.applymajorityinplace
+  summary: 은 (는) 다양 한 비트의 레지스터에 세 가지 주요 비트 작업을 적용 합니다.
 - uid: microsoft.quantum.arithmetic.applyphaseleoperationonle
   summary: <xref:microsoft.quantum.arithmetic.phaselittleendian>형식의 대상 레지스터에서 입력으로 등록 <xref:microsoft.quantum.arithmetic.littleendian>를 사용 하는 작업을 적용 합니다.
 - uid: microsoft.quantum.arithmetic.applyphaseleoperationonlea
@@ -67,11 +69,7 @@ operations:
 - uid: microsoft.quantum.arithmetic.applyreversedopleca
   summary: 빅 endian 형식을 사용 하 여 부호 없는 정수를 레지스터 인코딩에 사용 하는 작업을 적용 합니다.
 - uid: microsoft.quantum.arithmetic.applyxorinplace
-  summary: >-
-    정수에서 1 비트를 기반으로 하는 작은 endian 레지스터에 `X` 작업을 적용 합니다.
-
-
-    에서 `value`를 표시 하 고 y가 `target`에서 인코딩된 부호 없는 정수 인 경우 $ \ket{y}\rightarrow \ket{y\oplus a} $ 맵에서 지정 된 작업을 수행 `InPlaceXorLE` 합니다. 여기서 $ \oplus $는 배타적 비트 OR 연산자입니다.
+  summary: 는 고전적인 정수와, 비트의 레지스터가 나타내는 정수 사이에 비트 XOR 연산을 적용 합니다.
 - uid: microsoft.quantum.arithmetic.assertallzerofxp
   summary: 퀀텀 고정 소수점 숫자가 0으로 초기화 됨을 어설션 하는 도우미 함수입니다. 즉, 모든 요소는 $ \ket{0}$ 상태에 있습니다.
 - uid: microsoft.quantum.arithmetic.assertmostsignificantbit
@@ -79,20 +77,14 @@ operations:
 - uid: microsoft.quantum.arithmetic.assertphaselessthan
   summary: PhaseLittleEndian에서 인코딩된 `number` `value`보다 작음을 어설션 합니다.
 - uid: microsoft.quantum.arithmetic.assertprobint
-  summary: >-
-    퀀텀 레지스터의 특정 상태에 대 한 확률이 예상 값을 가지는 것을 어설션 합니다.
-
-
-    $N $-stbit 퀀텀 상태 $ \ket{\psi} = \sum ^ {2 ^ n-1} _ {j = 0} \alpha_j \ket{j} $로 지정 된 경우 $ \ket{j} $ $j 인덱싱된 상태 $ $의 확률 $ | \alpha_j | ^ 2 $가 예상 값을 포함 한다는 것을 어설션 합니다.
+  summary: 퀀텀 레지스터의 특정 상태에 대 한 확률이 예상 값을 가지는 것을 어설션 합니다.
 - uid: microsoft.quantum.arithmetic.carry
   summary: 해독 가능한 전달 게이트를 구현 합니다. `carryIn`에서 인코딩된 전달 비트와 `summand1` 및 `summand2`에서 인코딩된 두 개의 summand 비트가 지정 된 경우는 `summand1`에서 `carryIn`, `summand2` 및 `summand2`의 비트 xor을 계산 하 고, 운반은 xored `carryOut`합니다.
 - uid: microsoft.quantum.arithmetic.cascadeccnot
   summary: >-
     레지스터 중 하나에 대 한 다음의 비트에서 작동 하는 두 개의 두 비트 레지스터의 해당 비트에서 제어 되는 CCNOT 게이트의 cascade를 구현 합니다.
 
-    두 레지스터의 위치 0에 있는 이상에서 시작 하 여, CCNOT은 대상 레지스터의 위치 1에 있는 나머지 비트에 적용 되 고, 대상 레지스터의 위치 2에 있는, 위치 1의 이상 비트에 의해 제어 됩니다. 위치 `Length(nQubits)-1`의 대상입니다.
-- uid: microsoft.quantum.arithmetic.cascadecnot
-  summary: 지정 된의 위치 1에서를 대상으로 하는 제어로 서 위치 1의 이상 위치에서 해당 하는 위치 1의이를 대상으로 하는 제어로 서 위치 1에 있는 이상으로 이동 하는 CNOT 게이트의 캐스케이딩을 구현 합니다. , 등은 대상으로 `Length(register)-1`의 고 비트입니다.
+    두 레지스터의 위치 0에 있는 이상에서, CCNOT은 대상 레지스터의 위치 1에 있는 나머지 비트에 적용 되 고, 대상 레지스터의 위치 2에 있는 두 번째 위치에 있는 두 번째 위치에 있는, 위치 1의 해당 위치에서 제어 하는 `Length(nQubits)-1`위치에서 대상의 작업으로 종료 됩니다.
 - uid: microsoft.quantum.arithmetic.comparegreaterthanfxp
   summary: 퀀텀 레지스터에 저장 된 두 개의 고정 소수점 숫자를 비교 하 고 결과에서 대칭 이동을 제어 합니다.
 - uid: microsoft.quantum.arithmetic.comparegti
@@ -100,13 +92,7 @@ operations:
 - uid: microsoft.quantum.arithmetic.comparegtsi
   summary: '부호 있는 정수 비교 래퍼: `result = xs > ys`.'
 - uid: microsoft.quantum.arithmetic.compareusingripplecarry
-  summary: >-
-    이는 두 개의 정수 `x`와 동일한 크기의 비트 레지스터에 저장 된 `y` `x > y`충족 하는지 테스트 합니다. True 이면 1이 XORed 출력으로 변환 됩니다. 그렇지 않으면 0이 출력의 XORed 됩니다.
-
-
-    즉,이 단일 $U $은 $ $ \begin{align} U\ket {x} \ k {y} \ k {z} = \ket{x}\ket{y}\ket{z\oplus (x > y)}를 만족 합니다.
-
-    \end{align} $ $.
+  summary: 이 연산은 값의 XOR를 출력의 비트에 적용 하 여, 값의 레지스터가 나타내는 정수가 다른 정수 보다 큰지 테스트 합니다.
 - uid: microsoft.quantum.arithmetic.computereciprocalfxp
   summary: 고정 소수점 숫자 $x $에 대해 $1/x $를 계산 합니다.
 - uid: microsoft.quantum.arithmetic.computereciprocali
@@ -122,29 +108,15 @@ operations:
 - uid: microsoft.quantum.arithmetic.evaluatepolynomialfxp
   summary: 고정 소수점 표현에서 다항식을 계산 합니다.
 - uid: microsoft.quantum.arithmetic.greaterthan
-  summary: $ 및 $y $ $x 두 정수의 비교를 엄격 하 게 비교 합니다. Y $를 > $x 경우에는 결과의 상태가 전환 됩니다. 그렇지 않으면 해당 상태를 유지 합니다.
+  summary: 비교 결과에 따라 대상의 범위를 대칭 이동 하는 두 개의 정수를 해당 형식으로 인코딩된 두 정수 사이에 보다 큼 비교를 적용 합니다.
 - uid: microsoft.quantum.arithmetic.incrementbyinteger
   summary: 단계 회전을 사용 하 여, 부호 없는 퀀텀 레지스터를 고전 정수로 늘립니다.
 - uid: microsoft.quantum.arithmetic.incrementbymodularinteger
-  summary: >-
-    정수 상수를 기준으로 하는 이상 비트 레지스터의 모듈식 증분을 수행 합니다.
-
-
-    `increment`에서 `modulus`를 사용 하 여 N을 표시 하 고 y로 `target`에서 인코딩된 정수를 입력 합니다 .이 작업은 \begin{align} \ket{y} \maps\ket{y + 1 \operatorname{mod} N} \end{align} 정수를 거의 endian 형식으로 인코딩합니다.
+  summary: 정수 상수를 기준으로 하는 이상 비트 레지스터의 모듈식 증분을 수행 합니다.
 - uid: microsoft.quantum.arithmetic.incrementphasebyinteger
   summary: 단계 회전을 사용 하 여, 부호 없는 퀀텀 레지스터를 고전 정수로 늘립니다.
 - uid: microsoft.quantum.arithmetic.incrementphasebymodularinteger
-  summary: >-
-    정수 상수를 기준으로 하는 이상 비트 레지스터의 모듈식 증분을 수행 합니다.
-
-
-    `increment`에서 `modulus`를 사용 하 여 N을 표시 하 고 y로 `target`에서 인코딩된 정수를 표시 합니다. | y ⟩ ↦ | y + a (mod N) ⟩ 정수는 QFT로 거의 endian 형식으로 인코딩됩니다.
-- uid: microsoft.quantum.arithmetic.inplacemajority
-  summary: >-
-    이렇게 하면 3 개의 환경에서 과반수 함수를 계산 합니다.
-
-
-    출력을 $z $로 표시 하 고 입력을 $x $ 및 $y $로 표시 하는 경우 작업은 $ \ket{xyz} \rightarrow \ket{x \oplus z} \ket{y \oplus z} \ket{\operatorname{MAJ} (x, y, z)} $ 변환을 수행 합니다.
+  summary: 정수 상수를 기준으로 하는 이상 비트 레지스터의 모듈식 증분을 수행 합니다.
 - uid: microsoft.quantum.arithmetic.invert2ssi
   summary: 지정 된 정수 모듈로 2의 보수를 반전 합니다.
 - uid: microsoft.quantum.arithmetic.maj
@@ -154,19 +126,11 @@ operations:
 - uid: microsoft.quantum.arithmetic.measureinteger
   summary: '퀀텀 레지스터의 콘텐츠를 측정 하 고 정수로 변환 합니다. 측정은 표준 계산 단위 (예: `PauliZ`의 eigenbasis와 관련 하 여 수행 됩니다.'
 - uid: microsoft.quantum.arithmetic.multiplyandaddbymodularinteger
-  summary: >-
-    은 (는) 정수 계열 레지스터에서 모듈식 곱하기 및 추가 정수 상수를 수행 합니다.
-
-
-    지정 된 모듈러스 $N $, 상수 승수 $a $ 및 \ket{b $y $에 대해 $ $ \begin{align} \ket{x} \ket{b} \maps\ket{x} \operatorname{mod} + a \mapsto x \end{align} N} summand $ $ 맵을 구현 합니다.
+  summary: 은 (는) 정수 계열 레지스터에서 모듈식 곱하기 및 추가 정수 상수를 수행 합니다.
 - uid: microsoft.quantum.arithmetic.multiplyandaddphasebymodularinteger
-  summary: ModularAddProductLE와 동일 하지만 summand가 QFT로 정수를 인코딩하는 것으로 가정 합니다.
+  summary: MultiplyAndAddByModularInteger와 동일 하지만 summand가 QFT로 정수를 인코딩하는 것으로 가정 합니다.
 - uid: microsoft.quantum.arithmetic.multiplybymodularinteger
-  summary: >-
-    이상 비트 레지스터에서 정수 상수로 모듈식 곱하기를 수행 합니다.
-
-
-    에서 모듈러스를 N 및 constMultiplier로 표시 하면이 연산은 계산 기준으로 정의 된 단일을 구현 합니다. | y ⟩ ↦ | a ⋅ y (mod N) ⟩, 0과 N-1 사이의 모든 y
+  summary: 이상 비트 레지스터에서 정수 상수로 모듈식 곱하기를 수행 합니다.
 - uid: microsoft.quantum.arithmetic.multiplyfxp
   summary: 퀀텀 레지스터의 두 고정 소수점 숫자를 곱합니다.
 - uid: microsoft.quantum.arithmetic.multiplyi
@@ -176,22 +140,19 @@ operations:
 - uid: microsoft.quantum.arithmetic.preparefxp
   summary: 퀀텀 고정 소수점 수를 기존 상수로 초기화 합니다.
 - uid: microsoft.quantum.arithmetic.ripplecarryaddercdkm
-  summary: >-
-    해독 가능한 내부 ripple-두 개의 정수를 추가 합니다.
-
-    LittleEndian에서 인코딩된 두 개의 $n $ bit 정수는 `xs` 및 `ys`를 등록 하 고,이 작업은 두 정수의 합계를 계산 합니다 .이 정수는 결과의 $n $ 최하위 비트를 `ys`에 보관 하 고, 운반 비트는 `carry`합니다.
+  summary: 해독 가능한 내부 ripple-두 개의 정수를 추가 합니다.
 - uid: microsoft.quantum.arithmetic.ripplecarryadderd
   summary: >-
     해독 가능한 내부 ripple-두 개의 정수를 추가 합니다.
 
-    LittleEndian에서 인코딩된 두 개의 $n $ bit 정수는 `xs` 및 `ys`를 등록 하 고,이 작업은 두 정수의 합계를 계산 합니다 .이 정수는 결과의 $n $ 최하위 비트를 `ys`에 보관 하 고, 운반 비트는 `carry`합니다.
+    LittleEndian에서 인코딩된 두 개의 $n $ bit 정수는 `xs` 및 `ys`를 등록 하 고,이 작업은 두 정수의 합계를 계산 합니다. 이러한 정수는 결과의 $n $ 최하위 비트를 `ys`에 유지 하 고, 운반 비트는 xored `carry`합니다.
 - uid: microsoft.quantum.arithmetic.ripplecarryaddernocarryttk
-  summary: 해독 가능, 내부 ripple-수행 하지 않고 두 개의 정수를 추가 합니다. LittleEndian에서 인코딩된 $n $ bit 정수 두 개 (`xs` 및 `ys`)가 지정 되 면 연산은 두 정수 모듈로 $2 ^ n $의 합계를 계산 합니다. 여기서 $n $은 입력 `xs` 및 `ys`의 비트 크기입니다. 이는 운반 비트를 계산 하지 않습니다.
+  summary: 해독 가능, 내부 ripple-수행 하지 않고 두 개의 정수를 추가 합니다.
 - uid: microsoft.quantum.arithmetic.ripplecarryadderttk
   summary: >-
     해독 가능한 내부 ripple-두 개의 정수를 추가 합니다.
 
-    LittleEndian에서 인코딩된 두 개의 $n $ bit 정수는 `xs` 및 `ys`를 등록 하 고,이 작업은 두 정수의 합계를 계산 합니다 .이 정수는 결과의 $n $ 최하위 비트를 `ys`에 보관 하 고, 운반 비트는 `carry`합니다.
+    LittleEndian에서 인코딩된 두 개의 $n $ bit 정수는 `xs` 및 `ys`를 등록 하 고,이 작업은 두 정수의 합계를 계산 합니다. 이러한 정수는 결과의 $n $ 최하위 비트를 `ys`에 유지 하 고, 운반 비트는 xored `carry`합니다.
 - uid: microsoft.quantum.arithmetic.squarefxp
   summary: 고정 소수점 수를 제곱 합니다.
 - uid: microsoft.quantum.arithmetic.squarei
@@ -216,9 +177,9 @@ newtypes:
 - uid: microsoft.quantum.arithmetic.signedlittleendian
   summary: Little endian에 저장 된 부호 있는 정수 형식입니다 (LittleEndian 참조).
 metadata:
-  ms.openlocfilehash: 95a399e09ad5c1617c34a68302f9212a8ec4e0ad
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: f4bdca1f7b6339079cd1e13cfafc2de4e592901a
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73065149"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76870445"

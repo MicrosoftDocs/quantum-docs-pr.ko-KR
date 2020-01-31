@@ -10,11 +10,7 @@ functions:
 - uid: microsoft.quantum.oracles.oracletodiscrete
   summary: "\"블랙 박스\" oracle을 나타내는 작업을 수행 하는 경우 \"블랙 박스\" oracle을 여러 번 반복 하는 불연속 시간 oracle이 반환 됩니다."
 - uid: microsoft.quantum.oracles.reflectionoraclefromdeterministicstateoracle
-  summary: >-
-    Oracle에서 지정 된 상태에 대 한 리플렉션을 생성 합니다.
-
-
-    <xref:microsoft.quantum.oracles.deterministicstateoracle>형식의 oracle $O $가 지정 된 경우이 함수의 결과는 $ \ket{\psi} $ where $O \ket{0} = \ket{\psi} $ 상태를 중심으로 반영 됩니다.
+  summary: Oracle에서 지정 된 상태에 대 한 리플렉션을 생성 합니다.
 - uid: microsoft.quantum.oracles.stateoraclefromdeterministicstateoracle
   summary: '`DeterministicStateOracle` 형식의 oracle을 `StateOracle`로 변환 합니다.'
 newtypes:
@@ -73,9 +69,9 @@ newtypes:
 
     - 필요한 퀀텀 상태 $ \ket{\psi}\_s $를 저장할 시스템 등록 $s $입니다.
 metadata:
-  ms.openlocfilehash: 10eb2c7acebf805b955816abe2bf1cabb95ce059
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 7e582286b69563bc4baa856f5236e5c2bd292ae0
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73216104"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76870006"

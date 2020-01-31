@@ -3,23 +3,21 @@ uid: microsoft.quantum.canon.stackpop
 name: StackPop
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: <xref:microsoft.quantum.canon.resultstack>에서 맨 위에 있는 요소를 제거 합니다.
+summary: StackPop은 더 이상 사용 되지 않습니다.
 syntax: 'function StackPop (stack : Microsoft.Quantum.Canon.ResultStack) : Microsoft.Quantum.Canon.ResultStack'
 input:
   content: '(stack : Microsoft.Quantum.Canon.ResultStack)'
   types:
   - name: stack
-    summary: 팝 할 스택입니다.
     uid: microsoft.quantum.canon.resultstack
 output:
   content: Microsoft.Quantum.Canon.ResultStack
   types:
-  - summary: 최상위 요소가 제거 된 `stack`입니다. 새 스택은 이전 스택과 동일한 용량을 갖지만 길이는 1로 줄어듭니다.
-    uid: microsoft.quantum.canon.resultstack
+  - uid: microsoft.quantum.canon.resultstack
 metadata:
-  ms.openlocfilehash: 371952e68e9c06fc11d9e8c309a4d388b80a9556
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 23c54fb83155e32415348d160649580a8b0cc501
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73219368"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76871467"
