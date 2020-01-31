@@ -29,7 +29,15 @@
 - name: 방법 가이드
   items:
     - name: QDK 설치
-      href: install-guide/index.md
+      items:
+        - name: 설치 개요
+          href: install-guide/index.md
+        - name: 'Q# + C#'
+          href: install-guide/csinstall.md
+        - name: 'Q# + Python'
+          href: install-guide/pyinstall.md
+        - name: 'Q# Jupyter Notebook'
+          href: install-guide/qjupyter.md
     - name: QDK 업데이트
       href: install-guide/update.md
     - name: 'Q# 프로젝트 만들기'
@@ -58,7 +66,7 @@
       topicHref: contributing/index.md
     - name: 용어
       href: Glossary.md
-    - name: Blob에 대한 자세한 내용은
+    - name: 참조 항목
       href: for-more-info.md
     - name: License
       href: license.md
