@@ -6,12 +6,12 @@ ms.author: vadym@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.intro
-ms.openlocfilehash: 7fd9d1fa4fb3c5dd216d846038abd40454ece2e8
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 929745a6da6034599e97d2f573190308fde6eb75
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73035129"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820439"
 ---
 # <a name="quantum-trace-simulator"></a>양자 추적 시뮬레이터
 
@@ -24,29 +24,26 @@ Microsoft 양자 컴퓨터 추적 시뮬레이터는 실제로 양자 컴퓨터�
 
 ## <a name="providing-the-probability-of-measurement-outcomes"></a>측정 결과의 확률 제공
 
-양자 알고리즘에는 두 가지 종류의 측정값이 표시됩니다. 첫 번째 종류는 사용자가 일반적으로 결과의 확률을 알고 있는 경우에 보조적 역할을 수행합니다. 이 경우 사용자는 이 정보를 나타내기 위해 <xref:microsoft.quantum.primitive> 네임스페이스의 <xref:microsoft.quantum.primitive.assertprob>을 쓸 수 있습니다. 다음 예제에서는 이에 대해 설명합니다.
+양자 알고리즘에는 두 가지 종류의 측정값이 표시됩니다. 첫 번째 종류는 사용자가 일반적으로 결과의 확률을 알고 있는 경우에 보조적 역할을 수행합니다. 이 경우 사용자는 이 정보를 나타내기 위해 <xref:microsoft.quantum.intrinsic> 네임스페이스의 <xref:microsoft.quantum.intrinsic.assertprob>을 쓸 수 있습니다. 다음 예제에서는 이에 대해 설명합니다.
 
 ```qsharp
-operation Teleportation (source : Qubit, target : Qubit) : Unit {
-
-    using (ancilla = Qubit()) {
-
-        H(ancilla);
-        CNOT(ancilla, target);
-
-        CNOT(source, ancilla);
+operation TeleportQubit(source : Qubit, target : Qubit) : Unit {
+    using (qubit = Qubit()) {
+        H(qubit);
+        CNOT(qubit, target);
+        CNOT(source, qubit);
         H(source);
 
         AssertProb([PauliZ], [source], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
-        AssertProb([PauliZ], [ancilla], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
+        AssertProb([PauliZ], [q], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
 
         if (M(source) == One)  { Z(target); X(source); }
-        if (M(ancilla) == One) { X(target); X(ancilla); }
+        if (M(q) == One) { X(target); X(q); }
     }
 }
 ```
 
-추적 시뮬레이터가 `AssertProb`를 실행할 때 `source` 및 `ancilla`에 대해 `PauliZ`를 측정하면 확률이 0.5일 때 `Zero` 결과가 제공됩니다. 시뮬레이터는 나중에 `M`을 실행할 경우 기록된 결과 확률 값을 찾을 수 있으며 `M`은 확률이 0.5일 때 `Zero` 또는 `One`을 반환합니다. 양자 상태를 추적하는 동일한 코드를 시뮬레이터에서 실행하는 경우 이러한 시뮬레이터는 `AssertProb`의 제공된 확률이 올바른지 확인합니다.
+추적 시뮬레이터가 `AssertProb`를 실행할 때 `source` 및 `q`에 대해 `PauliZ`를 측정하면 확률이 0.5일 때 `Zero` 결과가 제공됩니다. 시뮬레이터는 나중에 `M`을 실행할 경우 기록된 결과 확률 값을 찾을 수 있으며 `M`은 확률이 0.5일 때 `Zero` 또는 `One`을 반환합니다. 양자 상태를 추적하는 동일한 코드를 시뮬레이터에서 실행하는 경우 이러한 시뮬레이터는 `AssertProb`의 제공된 확률이 올바른지 확인합니다.
 
 ## <a name="running-your-program-with-the-quantum-computer-trace-simulator"></a>양자 컴퓨터 추적 시뮬레이터를 사용하여 프로그램 실행 
 

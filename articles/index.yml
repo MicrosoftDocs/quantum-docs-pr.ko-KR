@@ -1,21 +1,21 @@
 ### YamlMime:Landing
-title: Microsoft Quantum 설명서
-summary: Microsoft Quantum Developer Kit 및 Q#(양자 알고리즘에 사용되는 언어)을 사용하는 방법을 알아봅니다. 주요 개념을 알아보고, 첫 번째 양자 프로그램을 작성합니다.
+title: Microsoft Quantum Development Kit
+summary: Microsoft Quantum Developer Kit 및 Q#(양자 알고리즘 프로그래밍 언어)을 사용하는 방법을 알아봅니다.
 metadata:
-  title: Microsoft Quantum 설명서 - Q# API 참조
-  description: Microsoft Quantum Developer Kit 및 Q#(양자 프로그래밍에 사용되는 언어)을 사용하는 방법을 알아봅니다. 주요 개념을 알아보고, 첫 번째 양자 프로그램을 작성합니다.  QDK의 풍부한 도구와 라이브러리를 살펴봅니다.
+  title: Microsoft Quantum Development Kit - Q# API 참조
+  description: Microsoft Quantum Developer Kit 및 Q#(양자 알고리즘 프로그래밍 언어)을 사용하는 방법을 알아봅니다. 주요 개념을 알아보고, 첫 번째 양자 프로그램을 작성합니다.  QDK의 풍부한 도구와 라이브러리를 살펴봅니다.
   ms.prod: quantum
   ms.topic: landing-page
   ms.collection: collection
   author: cjgronlund
   ms.author: cgronlun
   ms.date: 10/21/2019
-  ms.openlocfilehash: f757c99b1f5b1a821c9c341c442e1080378949a8
-  ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+  ms.openlocfilehash: 53ee7b0a1ba7a83fb943f18afd27b5c699f848b2
+  ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/02/2019
-  ms.locfileid: "73442512"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76820728"
 landingContent:
 - title: Microsoft Quantum 시작
   linkLists:
@@ -44,9 +44,9 @@ landingContent:
   - linkListType: how-to-guide
     links:
     - text: Python 설치
-      url: install-guide/index.md#develop-with-python
+      url: install-guide/pyinstall.md
     - text: Jupyter 설치
-      url: install-guide/index.md#develop-with-jupyter-notebooks
+      url: install-guide/qjupyter.md
   - linkListType: how-to-guide
     links:
     - text: Python을 사용하는 Q# 샘플
@@ -60,9 +60,9 @@ landingContent:
   - linkListType: how-to-guide
     links:
     - text: Visual Studio 설치
-      url: install-guide/index.md#develop-with-c-on-windows-using-visual-studio
+      url: install-guide/csinstall.md
     - text: Visual Studio Code 설치
-      url: install-guide/index.md#develop-with-c-using-visual-studio-code
+      url: install-guide/csinstall.md
 - title: Q# 샘플
   linkLists:
   - linkListType: how-to-guide

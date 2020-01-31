@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: c709f1eb130d37f930ffc4acc4bd663b8b8ba24a
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+ms.openlocfilehash: c135dacb2fc305fa97874cb4abcf4e2ac489b9e4
+ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74863166"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76871620"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit 릴리스 정보
 
@@ -20,6 +20,19 @@ ms.locfileid: "74863166"
 설치 지침은[설치 가이드](xref:microsoft.quantum.install)를 참조하세요.
 
 업데이트 지침은 [업데이트 가이드](xref:microsoft.quantum.update)를 참조하세요.
+
+## <a name="version-01020012831"></a>버전 0.10.2001.2831
+
+*릴리스 날짜: 2020년 1월 29일*
+
+이 릴리스에는 다음이 포함됩니다.
+
+- 새 Microsoft.Quantum.SDK NuGet 패키지. 자세한 내용은 [README](https://github.com/microsoft/qsharp-compiler/blob/master/src/QuantumSdk/README.md)를 참조하세요.
+- .NET Core 3.1에 대한 지원 추가. 이전 .NET Core SDK 버전으로 빌드하면 문제가 발생할 수 있으므로 버전 3.1.100을 설치하는 것이 좋습니다.
+- Microsoft.Quantum.QsCompiler.Experimental에서 사용할 수 있는 새 컴파일러 변환
+- IQ#에서 출력 상태 벡터를 HTML로 노출하는 새 기능
+- Hadamard 및 SWAP 테스트를 위한 Microsoft.Quantum.Characterization에 EstimateFrequencyA 지원 추가
+- 이제 AmplitudeAmplification 네임스페이스에서 Q# 스타일 가이드 사용
 
 ## <a name="version-01019120501"></a>버전 0.10.1912.0501
 
@@ -123,11 +136,11 @@ ms.locfileid: "74863166"
 이 릴리스에는 숫자 라이브러리가 추가되었습니다. [새 숫자 라이브러리를 사용](xref:microsoft.quantum.numerics.usage)하는 방법에 대한 자세한 정보를 알아보고, [새 샘플](https://github.com/microsoft/quantum/tree/master/Numerics)을 사용해 보세요.  [PR #102](https://github.com/Microsoft/QuantumLibraries/pull/102)  
 
 이 릴리스에서는 화학 라이브러리가 확장 및 업데이트되었습니다.
-* 구성 요소, 확장성, 일반 코드 정리의 모듈화가 향상되었습니다.  [PR #58](https://github.com/microsoft/QuantumLibraries/pull/58)
+* 구성 요소, 확장성, 일반 코드 정리의 모듈화가 향상되었습니다.  [PR #58](https://github.com/microsoft/QuantumLibraries/pull/58).
 * [다중 참조 wavefunction(파동 함수)](xref:microsoft.quantum.chemistry.concepts.multireference)에 대한 지원(스파스 다중 참조 파동 함수 및 단일 결합 클러스터 모두)이 추가되었습니다.  [PR #110](https://github.com/Microsoft/QuantumLibraries/pull/110)
 * (감사합니다!) [1QBit](https://1qbit.com) 기여자([@valentinS4t1qbit](https://github.com/ValentinS4t1qbit)): 변이 가설 풀이(variational ansatz)를 사용한 에너지 평가입니다. [PR #120](https://github.com/Microsoft/QuantumLibraries/pull/120)
 * [Broombridge](xref:microsoft.quantum.libraries.chemistry.schema.broombridge) 스키마가 새 [0.2 버전](xref:microsoft.quantum.libraries.chemistry.schema.spec_v_0_2)으로 업데이트되고, 단일 결합 클러스터 사양이 추가되었습니다. [Issue #65](https://github.com/microsoft/QuantumLibraries/issues/65)
-* Python 상호 운용성이 화학 라이브러리 기능에 추가되었습니다. 이 [샘플](https://github.com/microsoft/Quantum/tree/master/Chemistry/PythonIntegration)을 사용해 보세요. [Issue #53](https://github.com/microsoft/QuantumLibraries/issues/53), [PR #110](https://github.com/Microsoft/QuantumLibraries/pull/110)
+* Python 상호 운용성이 화학 라이브러리 기능에 추가되었습니다. 이 [샘플](https://github.com/microsoft/Quantum/tree/master/Chemistry/PythonIntegration)을 사용해 보세요. [이슈 #53](https://github.com/microsoft/QuantumLibraries/issues/53) [PR #110](https://github.com/Microsoft/QuantumLibraries/pull/110).
 
 ## <a name="version-061905"></a>버전 0.6.1905
 
@@ -319,7 +332,7 @@ Quantum Development Kit의 0.2 버전에서 업그레이드하는 경우, [Q# �
 
 ### <a name="community-contributions"></a>커뮤니티 기여
 
-**감사합니다.** [http://github.com/Microsoft/Quantum](http://github.com/Microsoft/Quantum ) 에서 열려 있는 코드베이스에 기여해 주신 다음 분들께 감사의 말씀을 드립니다. 이분들의 기여 덕분에 Q# 코드의 샘플이 매우 다양해졌습니다.
+**감사합니다.** [http://github.com/Microsoft/Quantum](http://github.com/Microsoft/Quantum ) 에서 열려 있는 코드베이스에 기여해 주신 다음 분들께 감사의 말씀을 드립니다. 이러한 기여는 Q# 코드의 다양한 샘플을 모으는 데 큰 도움이 됩니다.
 
 * Rolf Huisman([@RolfHuisman](https://github.com/RolfHuisman)): Q# 변환기에 대한 QASM을 만들어 QASM/Q# 개발자의 환경을 개선했습니다. [PR #58](https://github.com/Microsoft/Quantum/pull/58).
 
@@ -329,7 +342,7 @@ Quantum Development Kit의 0.2 버전에서 업그레이드하는 경우, [Q# �
 
 ## <a name="version-021809701"></a>버전 0.2.1809.701
 
-릴리스 날짜:  2018년 9월 10일
+*릴리스 날짜:* 2018년 9월 10일
 
 이 릴리스에는 커뮤니티에서 보고한 다음 이슈 등에 대한 버그 수정이 포함됩니다.
 
@@ -351,13 +364,13 @@ Quantum Development Kit의 0.2 버전에서 업그레이드하는 경우, [Q# �
 
 *릴리스 날짜: 2018년 6월 22일*
 
-이 릴리스에는 향상된 디버깅 환경 및 향상된 성능뿐 아니라 다양한 커뮤니티 기여도 포함됩니다.  구체적으로 살펴보면 다음과 같습니다.
+이 릴리스에는 향상된 디버깅 환경 및 향상된 성능뿐 아니라 다양한 커뮤니티 기여도 포함됩니다.  특히 다음에 대한 내용을 설명합니다.
 
 * QuantumSimulator 대상 머신에 대한 작고 큰 시뮬레이션에서 모두 성능이 향상됨
 * 향상된 디버깅 기능
 * 버그 수정, 새 도우미 함수, 작업 및 새 샘플의 커뮤니티 기여
 
-### <a name="performance-improvements"></a>성능 개선
+### <a name="performance-improvements"></a>성능 향상
 
 이 업데이트에는 모든 머신에서 많고 적은 큐비트의 상당한 성능 향상이 포함됩니다.  이 향상된 기능은 Quantum Development Kit에서 표준 샘플인 H<sub>2</sub> 시뮬레이션을 사용하여 쉽게 표시됩니다.
 
@@ -431,9 +444,9 @@ dotnet clean
 
 ## <a name="version-0218022202"></a>버전 0.2.1802.2202
 
-릴리스 날짜:  2018년 2월 26일
+*릴리스 날짜:* 2018년 2월 26일
 
-이 릴리스에서는 더 많은 플랫폼, 언어 상호 운용성 및 성능 향상에 대한 개발을 지원합니다. 구체적으로 살펴보면 다음과 같습니다.
+이 릴리스에서는 더 많은 플랫폼, 언어 상호 운용성 및 성능 향상에 대한 개발을 지원합니다. 특히 다음에 대한 내용을 설명합니다.
 
 - macOS 및 Linux 기반 개발 지원 
 - 플랫폼 간 Visual Studio Code 지원을 포함한 .NET Core 호환성
@@ -466,7 +479,7 @@ Microsoft.Quantum.Canon 네임스페이스의 RandomWalkPhaseEstimation 작업�
 
 ## <a name="version-0118011707"></a>버전 0.1.1801.1707
 
-릴리스 날짜:  2018년 1월 18일
+*릴리스 날짜:* 2018년 1월 18일
 
 이 릴리스에서는 커뮤니티에서 보고한 일부 이슈를 수정합니다. 구체적으로는 다음과 같습니다.
 
@@ -477,7 +490,7 @@ Microsoft.Quantum.Canon 네임스페이스의 RandomWalkPhaseEstimation 작업�
 
 ## <a name="version-011712901"></a>버전 0.1.1712.901
 
-릴리스 날짜:  2017년 12월 11일
+*릴리스 날짜:* 2017년 12월 11일
 
 ### <a name="known-issues"></a>알려진 문제
 
@@ -502,7 +515,7 @@ Microsoft.Quantum.Canon 네임스페이스의 RandomWalkPhaseEstimation 작업�
 
 - 퀀텀 시뮬레이터는 OpenMP를 사용하여 필요한 선형 대수를 병렬로 처리합니다. 기본적으로 OpenMP는 사용 가능한 모든 하드웨어 스레드를 사용합니다. 즉, 필요한 조정이 실제 작업을 방해하기 때문에 적은 수의 큐비트를 포함하는 프로그램이 느리게 실행되는 경우가 많습니다. 환경 변수 OMP_NUM_THREADS를 작은 수로 설정하여 이 문제를 해결할 수 있습니다. 대략적으로 스레드 1개는 최대 4개 정도의 큐비트에 적합하며 알고리즘에 따라 많이 달라지지만 큐비트당 추가 스레드가 적합합니다.
 
-#### <a name="debugging"></a>디버그
+#### <a name="debugging"></a>디버깅
 
 - F11(한 단계씩 코드 실행)은 Q# 코드에서 작동하지 않습니다.
 - 중단점 및 단일 단계 일시 중지에서 Q# 코드의 코드 강조 표시는 정확하지 않을 수 있습니다. 올바른 줄이 강조 표시되지만 때때로 강조 표시가 줄의 잘못된 열에서 시작 및 종료됩니다.
