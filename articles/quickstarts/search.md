@@ -6,12 +6,12 @@ ms.author: chgranad@microsoft.com
 ms.date: 10/19/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.search
-ms.openlocfilehash: 75028a1dc29abe5fbea2e789d896563f3d6331c9
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: c1fd578fdb3d56a7b48972e6ccc9b1605047fe36
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73443939"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820354"
 ---
 # <a name="quickstart-implement-grovers-search-algorithm-in-q"></a>빠른 시작: Q#에서 Grover의 검색 알고리즘 구현
 
@@ -23,7 +23,7 @@ Grover의 검색 알고리즘을 사용하면 양자 컴퓨터에서 검색 중�
 
 Grover의 검색 알고리즘은 몇 줄의 코드만으로 빌드할 수 있습니다.
 
-## <a name="prerequisites"></a>필수 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 - Microsoft [Quantum Development Kit][install]
 
@@ -43,11 +43,11 @@ Grover의 알고리즘은 목록의 항목이 검색 중인 항목인지 여부�
 
 1. 다음 코드를 새 프로젝트의 `Operations.qs` 파일에 추가합니다.
 
-    [!code-qsharp[](~/quantum/samples/algorithms/simple-grover/SimpleGrover.qs?highlight=5,27)]
+    :::code language="qsharp" source="~/quantum/samples/algorithms/simple-grover/SimpleGrover.qs" range="4-23" highlight="5,27":::
 
 1. 검색하는 목록을 정의하려면 새 `Reflections.qs` 파일을 만들고, 다음 코드를 붙여넣습니다.
 
-    [!code-qsharp[](~/quantum/samples/algorithms/simple-grover/Reflections.qs)]
+    :::code language="qsharp" source="~/quantum/samples/algorithms/simple-grover/Reflections.qs" range="4-70":::
 
     `ReflectAboutMarked` 연산은 검색 중인 표시된 입력, 즉 0과 1이 교대로 반복되는 문자열을 정의합니다. 이 샘플은 표시된 입력을 하드 코딩하며, 다른 입력을 검색하도록 확장하거나 모든 입력에 대해 일반화할 수 있습니다.
 
@@ -57,7 +57,7 @@ Grover의 알고리즘은 목록의 항목이 검색 중인 항목인지 여부�
 
     Python에서 새 Q# 프로그램을 실행하려면 다음 코드를 `host.py`로 저장합니다.
 
-    [!code-python[](~/quantum/samples/algorithms/simple-grover/host.py)]
+    :::code language="python" source="~/quantum/samples/algorithms/simple-grover/host.py" range="9-14":::
 
     그러면 명령줄에서 Python 호스트 프로그램을 실행할 수 있습니다.
 
@@ -75,7 +75,7 @@ Grover의 알고리즘은 목록의 항목이 검색 중인 항목인지 여부�
 
     C#에서 새 Q# 프로그램을 실행하려면 다음 C# 코드를 포함하도록 `Driver.cs`를 수정합니다.
 
-    [!code-csharp[](~/quantum/samples/algorithms/simple-grover/Host.cs)]
+    :::code language="csharp" source="~/quantum/samples/algorithms/simple-grover/Host.cs" range="4-23":::
 
     그러면 명령줄에서 C# 호스트 프로그램을 실행할 수 있습니다.
 
@@ -94,7 +94,7 @@ Grover의 알고리즘은 목록의 항목이 검색 중인 항목인지 여부�
 
     Visual Studio를 사용하여 C#에서 새 Q# 프로그램을 실행하려면 다음 C# 코드를 포함하도록 `Driver.cs`를 수정합니다.
 
-    [!code-csharp[](~/quantum/samples/algorithms/simple-grover/Host.cs)]
+    :::code language="csharp" source="~/quantum/samples/algorithms/simple-grover/Host.cs" range="4-23":::
 
     그런 다음, F5 키를 누르면 프로그램이 실행되고 새 창에 다음 결과가 표시됩니다. 
 
