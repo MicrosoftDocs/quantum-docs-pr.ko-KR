@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 10/17/2019
 ms.topic: overview
 uid: microsoft.quantum.overview.katas
-ms.openlocfilehash: 7fb8dba2a10f9a983ebee52e394260bbdc0d2f9c
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: af54a2260147b8ca07919b241548aac85ed0d8a1
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73444143"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821102"
 ---
 # <a name="learn-quantum-computing-with-the-quantum-katas"></a>Quantum Katas에서 양자 컴퓨팅 알아보기
 
@@ -19,7 +19,7 @@ ms.locfileid: "73444143"
 
 ## <a name="learning-by-doing"></a>작업을 통한 학습
 
-이 프로젝트에 수집된 자습서 및 katas는 작업을 통한 학습을 강조합니다. 매우 간단한 과제부터 매우 어려운 과제까지 진행되는 특정 토픽을 다루는 프로그래밍 작업을 제공합니다. 각 작업에서는 코드를 입력해야 합니다. 첫 번째 작업에서는 한 줄만 입력하면 되고, 마지막 작업에서는 상당한 크기의 코드 조각을 입력해야 합니다.
+이 프로젝트에 수집되는 자습서와 연습은 작업을 수행하여 학습하는 방법을 강조합니다. 즉 매우 간단한 과제에서 상당히 까다로운 과제로 진행되는 특정 항목을 다루는 프로그래밍 작업을 제공합니다. 각 작업에서는 코드를 입력해야 합니다. 첫 번째 작업에서는 한 줄만 입력하면 되고, 마지막 작업에서는 상당한 크기의 코드 조각을 입력해야 합니다.
 
 가장 중요한 점으로, katas는 작업에 대한 솔루션을 설정하고 실행하고 유효성을 검사하는 테스트 프레임워크를 포함하고 있습니다. 따라서 자신의 솔루션에 대한 피드백을 즉시 받을 수 있으며, 접근 방식이 잘못된 경우 방법을 다시 생각해 볼 수 있습니다.
 
@@ -36,10 +36,12 @@ ms.locfileid: "73444143"
 
 ### <a name="introduction-to-quantum-computing-concepts"></a>양자 컴퓨팅 개념 소개
 
-* [복소수](https://github.com/microsoft/QuantumKatas/blob/master/tutorials/ComplexArithmetic)
-* [선형 대수](https://github.com/microsoft/QuantumKatas/blob/master/tutorials/LinearAlgebra)
-* [큐비트의 개념](https://github.com/microsoft/QuantumKatas/blob/master/tutorials/Qubit)
-* [단일 큐비트 양자 게이트](https://github.com/microsoft/QuantumKatas/blob/master/tutorials/SingleQubitGates)
+* [복소수](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/ComplexArithmetic)
+* [선형 대수](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/LinearAlgebra)
+* [큐비트의 개념](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/Qubit)
+* [단일 큐비트 양자 게이트](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/SingleQubitGates)
+* [다중 큐비트 시스템](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/MultiQubitSystems)
+* [다중 큐비트 게이트](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/MultiQubitGates)
 
 ### <a name="quantum-computing-fundamentals"></a>양자 컴퓨팅 기본 사항
 
@@ -52,10 +54,10 @@ ms.locfileid: "73444143"
 
 * [양자 순간 이동](https://github.com/microsoft/QuantumKatas/tree/master/Teleportation)
 * [초고밀도 코딩](https://github.com/microsoft/QuantumKatas/tree/master/SuperdenseCoding)
-* [도이치–조사 알고리즘](https://github.com/microsoft/QuantumKatas/blob/master/tutorials/DeutschJozsaAlgorithm)
+* [도이치–조사 알고리즘](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/ExploringDeutschJozsaAlgorithm)
 * [Grover 검색 알고리즘 구현](https://github.com/microsoft/QuantumKatas/tree/master/GroversAlgorithm)
-* [Grover 검색 알고리즘의 상위 수준 속성 살펴보기](https://github.com/microsoft/QuantumKatas/blob/master/tutorials/ExploringGroversAlgorithm)
-* Grover 알고리즘을 사용하여 실제 문제 해결: [SAT 문제](https://github.com/microsoft/QuantumKatas/blob/master/SolveSATWithGrover) 및 [그래프 색 지정 문제](https://github.com/microsoft/QuantumKatas/blob/master/GraphColoring)
+* [Grover 검색 알고리즘의 상위 수준 속성 살펴보기](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/ExploringGroversAlgorithm)
+* Grover 알고리즘을 사용하여 실제 문제 해결: [SAT 문제](https://github.com/microsoft/QuantumKatas/tree/master/SolveSATWithGrover) 및 [그래프 색 지정 문제](https://github.com/microsoft/QuantumKatas/tree/master/GraphColoring)
 
 ### <a name="protocols-and-libraries"></a>프로토콜 및 라이브러리
 
@@ -66,8 +68,8 @@ ms.locfileid: "73444143"
 
 ### <a name="entanglement-games"></a>얽힘 게임
 
-* [CHSH 게임](https://github.com/microsoft/QuantumKatas/blob/master/CHSHGame)
-* [GHZ 게임](https://github.com/microsoft/QuantumKatas/blob/master/GHZGame)
+* [CHSH 게임](https://github.com/microsoft/QuantumKatas/tree/master/CHSHGame)
+* [GHZ 게임](https://github.com/microsoft/QuantumKatas/tree/master/GHZGame)
 * [머민-페레스 매직 스퀘어 게임](https://github.com/microsoft/QuantumKatas/tree/master/MagicSquareGame)
 
 ## <a name="resources"></a>리소스

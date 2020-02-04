@@ -6,16 +6,18 @@ author: natke
 ms.author: nakersha
 ms.date: 10/23/2019
 ms.topic: overview
-ms.openlocfilehash: 8fb3b7181632bd6f2b562735546adbf4b461a1b6
-ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+ms.openlocfilehash: 4308bf7e0e48e5735419fab836e479641455e9a5
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73530014"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76819930"
 ---
 # <a name="get-started-with-the-quantum-development-kit-qdk"></a>QDK(Quantum Development Kit) 시작
 
-Microsoft Quantum Development Kit에 오신 것을 환영합니다!  여기서는 Q#을 사용한 양자 프로그래밍을 학습하는 데 필요한 모든 도구를 확인할 수 있습니다.  Q#을 사용하여 양자 컴퓨팅 학습을 안내하기 위해 양자 프로그램 코딩을 시작하려는 사용자와 아직 코딩을 시작할 준비가 되지 않았지만 Q# 및 양자 프로그래밍에 대해 자세히 알아보려는 사용자 모두를 위한 학습 가이드인 시작 가이드를 제공합니다.
+Microsoft Quantum Development Kit에 오신 것을 환영합니다!  여기서는 Q#을 사용한 양자 프로그래밍을 학습하는 데 필요한 모든 도구를 확인할 수 있습니다.  Q#을 사용하여 양자 컴퓨팅 학습을 안내하기 위해 이 시작 가이드를 제공합니다. 이는 양자 프로그램 코딩을 시작하려는 사용자 및 아직 코딩을 시작할 준비가 되지 않았지만 Q# 및 양자 프로그래밍에 대해 더 자세히 알아보려는 사용자를 위한 것입니다. 
+
+코딩을 시작할 준비가 되었으면 [지금 QDK를 설치하세요](xref:microsoft.quantum.install).
 
 ## <a name="questions-about-quantum-computing"></a>양자 컴퓨팅에 대한 질문
 
@@ -54,9 +56,8 @@ Q# 및 Quantum Development Kit는 컴퓨팅에서 가장 까다로운 문제를 
 * [Q# 샘플](https://docs.microsoft.com/samples/browse/?languages=qsharp)을 검색하여 양자 컴퓨팅으로 풀 수 있는 문제를 알아봅니다.
 
 * 다음과 같은 호스트 프로그래밍 언어 및 개발 환경을 선택하여 로컬 머신에서 개발합니다.
-  * [Python](xref:microsoft.quantum.install#develop-with-python)을 사용하여 개발
-  * [Visual Studio](xref:microsoft.quantum.install#develop-with-c-on-windows-using-visual-studio)를 사용하여 개발
-  * [Visual Studio Code](xref:microsoft.quantum.install#develop-with-c-using-visual-studio-code)를 사용하여 개발
-  * [Jupyter Notebook](xref:microsoft.quantum.install#develop-with-jupyter-notebooks)을 사용하여 개발
+  * [Q# + Python](xref:microsoft.quantum.install.python)을 사용하여 개발
+  * [Q# + C#](xref:microsoft.quantum.install.cs)을 사용하여 개발
+  * [Q# Jupyter Notebook](xref:microsoft.quantum.install.jupyter)을 사용하여 개발
 
 * [QDK](xref:microsoft.quantum.contributing) 오픈 소스 프로젝트에 기여하여 Microsoft Quantum 커뮤니티에 참여
