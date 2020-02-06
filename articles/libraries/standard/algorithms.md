@@ -6,12 +6,12 @@ ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.libraries.standard.algorithms
-ms.openlocfilehash: 91f65b05c83367c2d2ece93212369dc448d8c2a8
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 1c45808207a2020f603448eba05900cdc40b4916
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821017"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036358"
 ---
 # <a name="quantum-algorithms"></a>퀀텀 알고리즘 #
 
@@ -48,7 +48,8 @@ Q #에서는 진폭 증폭을 명확한 진폭 증폭의 특수화로 도입 했
 
 QFT의 대략적인 일반화로, 원하는 알고리즘 정확도에 꼭 필요 하지 않은 회전을 정리 하 여 추가 최적화를 허용 하는 <xref:microsoft.quantum.canon.approximateqft> 연산을 제공 합니다.
 대략적인 QFT에는 <xref:microsoft.quantum.intrinsic.h> 작업 뿐만 아니라 dyadic $Z $-회전 작업 <xref:microsoft.quantum.intrinsic.rfrac> 필요 합니다.
-입력 및 출력은 big endian 인코딩 ( [k 표기법](xref:microsoft.quantum.concepts.dirac)과 동일 하 게 왼쪽에 있는 가장 낮은 비트/고 비트)으로 인코딩된 것으로 간주 됩니다.
+입력 및 출력은 big endian 인코딩---로 인코딩된 것으로 간주 됩니다. 즉, 인덱스 `0`의 이상 비트는 이진 정수 표현의 맨 왼쪽 (가장 높은 비트)으로 인코딩됩니다.
+이는 [k 표기법](xref:microsoft.quantum.concepts.dirac)에 맞게 정렬 됩니다. $ \ket{100}$ 상태에 있는 세 가지의 레지스터는 $ \ket{1}$ 상태에 있고, $q _1 $ 및 $q _2 $은 모두 state $ \ket{0}$에 $q 해당 합니다.
 근사값 매개 변수 $a $는 $Z $-회전 (예: $a \in [0 ... n] $)의 정리 수준을 결정 합니다.
 이 경우 $ $k > $-회전 $2\ pi/2 ^ k $ $Z QFT 회로에서 제거 됩니다.
 $K \ge \ log_2 (n) + \ log_2 (1/\ge) + $3에 대해 알려져 있습니다. 하나는 $\\|에 바인딩될 수 있습니다. \operatorname{QFT}-\operatorname{AQFT} \\| < \epsilon $.
@@ -56,11 +57,11 @@ $K \ge \ log_2 (n) + \ log_2 (1/\ge) + $3에 대해 알려져 있습니다. 하�
 
 ## <a name="arithmetic"></a>산술 ##
 
-산술 연산은 기존 컴퓨팅에서 중앙 역할을 수행 하는 것과 마찬가지로 퀀텀 컴퓨팅 에서도 위한 됩니다.  Shor의 팩터링 알고리즘, 퀀텀 시뮬레이션 메서드 및 많은 oracular 알고리즘 등의 알고리즘은 일관 된 산술 연산을 사용 합니다.  대부분의 산술 방식은 퀀텀 adder 회로를 기반으로 작성 됩니다.  가장 간단한 adder는 기존 입력 $b $를 사용 하 고 정수 $ \ket{a} $를 보유 하는 퀀텀 상태에 값을 추가 합니다.  수학적으로 adder (기존 입력 $b $의 $ \operatorname{Add} (b) $)에는 속성이 있습니다.
+산술 연산은 기존 컴퓨팅에서 중앙 역할을 수행 하는 것과 마찬가지로 퀀텀 컴퓨팅 에서도 필수적인 역할을 합니다.  Shor의 팩터링 알고리즘, 퀀텀 시뮬레이션 메서드 및 많은 oracular 알고리즘 등의 알고리즘은 일관 된 산술 연산을 사용 합니다.  대부분의 산술 방식은 퀀텀 adder 회로를 기반으로 작성 됩니다.  가장 간단한 adder는 기존 입력 $b $를 사용 하 고 정수 $ \ket{a} $를 보유 하는 퀀텀 상태에 값을 추가 합니다.  수학적으로 adder (기존 입력 $b $의 $ \operatorname{Add} (b) $)에는 속성이 있습니다.
 
 $ $ \operatorname{Add} (b) \ket{a} = \ket{a + b}.
 $ $이 기본 adder 회로는 adder 보다 incrementer입니다.
-$ $ \Operatorname{Add}\ket{a}\ket{b} = \ket{a}\ket{a + b}를 통해 두 개의 퀀텀 입력을 포함 하는 adder으로 변환할 수 있습니다. $ $ $n $ 제어 된 응용 프로그램을 사용 하 여 \begin{align} \operatorname{Add} \ket{a} \ket{b} & = \Lambda\_{a\_0} \lambda (\operatorname{Add} (1) \lambda) \Lambda {a\_1} \lambda (\operatorname{Add} (2) \lambda) \Tions\_{a\_2} \lambda (\operatorname{Add} (4) \lambda) \cor\람다\_{a\_{n-1}} \lambda (\ a m e {Add} ({{n-1}}) \right) \ket{a}\ket{b} \\\\ & = \ket{a} \ket{b + a}, \end{align} for $n $ bit 정수 $a $ 및 $b $ 및 더하기 모듈로 $2 ^ n $.  $ \Lambda\_x (A) $는 $로의 모든 $A 작업에 대해 $를 $x 사용 하 여이를 제어 합니다.
+$ $ \Operatorname{Add}\ket{a}\ket{b} = \ket{a}\ket{a + b}를 통해 두 개의 퀀텀 입력을 포함 하는 adder으로 변환할 수 있습니다. $ $ $n $ 제어 된 응용 프로그램을 사용 하 여 \begin{align} \operatorname{Add} \ket{a} \ket{b} & = \Lambda\_{a\_0} \lambda (\operatorname{Add} (1) \lambda) \Lambda {a\_1} \lambda (\operatorname{Add} (2) \lambda) \Tions\_{a\_2} \lambda (\operatorname{Add} (4) \lambda) \cor\람다\_{a\_{n-1}} \lambda (\ a m e {Add} ({{n-1}}) \right) \ket{a}\ket{b} \\\\ & = \ket{a} \ket{b + a}, \end{align} for $n $ bit 정수 $a $ 및 $b $ 및 더하기 모듈로 $2 ^ n $.\_  $ \Lambda\_x (A) $는 $로의 모든 $A 작업에 대해 $를 $x 사용 하 여이를 제어 합니다.
 
 이와 유사 하 게 제어 되는 일련의 제어 된 추가를 사용 하 여 일반적으로 제어 되는 곱하기 (Shor의 팩터링 알고리즘에 필수적인 모듈식 형태)를 수행할 수 있습니다. \begin{align} \operatorname{Mult} (a) \ket{x}\ket{b} & = \lambda\_{x\_0} \lambda (\operatorname{Add} (2 ^ 0 a) \lambda) \lambda {a\_1} \lambda (\_(2 ^ 1a) \lambda) \Ton\_{a\_2} \lambda (\operatorname{Add} (2 ^ 2 a) \lambda) \cst\람다\_{x\_{ n-1}} \left (\operatorname{Add} ({2 ^ {n-1}} a) \left) \ket{x}\ket{b} \\\\ & = \ket{x}\ket{b + ax}.
 \end{align}는 위의 $ \operatorname{Mult} $ 정의에서 확인할 수 있는, 퀀텀 컴퓨터에 대 한 곱셈 미묘한 있습니다.  이와 달리이 회로의 퀀텀 버전은 입력 레지스터가 아니라 보조 레지스터에 입력 제품을 저장 합니다.  이 예제에서 레지스터는 $b 값을 사용 하 여 초기화 되지만 일반적으로 값 0을 유지 하기 시작 합니다.  일반적으로 일반 $a $ 및 $x $에 대 한 곱하기 역이 아니기 때문에이는에 필요 합니다.  모든 퀀텀 작업, 측정 저장은 해독 가능 하므로 곱하기를 반전 하기 위한 충분 한 정보를 유지 해야 합니다.  이러한 이유로 결과가 별도의 배열에 저장 됩니다.  곱하기와 같이, 되돌릴 수 없는 작업의 출력을 별도의 레지스터에 저장 하는이 트릭은 Chartwnett가 있는 "배치 Nett 트릭" 이라고 하며,이는 되돌릴 수 있는 작업과 퀀텀 컴퓨팅 모두에서 기본 도구입니다.

@@ -6,12 +6,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.update
-ms.openlocfilehash: ed2a90749bbe245dde97424fc3191682f995d85b
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: f19285ae0e008b3460d06430a236f098d716e268
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76819742"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036324"
 ---
 # <a name="update-the-microsoft-quantum-development-kit-qdk"></a>Microsoft Quantum Development Kit (QDK) 업데이트
 
@@ -28,10 +28,12 @@ Microsoft Quantum Development Kit (QDK)를 최신 버전으로 업데이트 하�
 Q # 작업을 호스트 하 C# 는 데 또는 Python을 사용 하는지 여부에 관계 없이 다음 지침에 따라 q # 프로젝트를 업데이트 합니다.
 
 1. 먼저 [.NET Core SDK 3.1](https://dotnet.microsoft.com/download)의 최신 버전이 있는지 확인 합니다. 명령 프롬프트에서 다음 명령을 실행 합니다.
-    ```bash
+
+    ```dotnetcli
     dotnet --version
     ```
-출력이 `3.1.100` 이상 인지 확인 합니다. 그렇지 않은 경우 [최신 버전](https://dotnet.microsoft.com/download) 을 설치 하 고 다시 확인 합니다. 그런 다음 설치 (Visual Studio, Visual Studio Code 또는 직접 명령줄)에 따라 아래 지침을 따릅니다.
+
+    출력이 `3.1.100` 이상 인지 확인 합니다. 그렇지 않은 경우 [최신 버전](https://dotnet.microsoft.com/download) 을 설치 하 고 다시 확인 합니다. 그런 다음 설치 (Visual Studio, Visual Studio Code 또는 직접 명령줄)에 따라 아래 지침을 따릅니다.
 
 ### <a name="update-q-projects-in-visual-studio"></a>Visual Studio의 업데이트 Q # 프로젝트
  
@@ -40,18 +42,22 @@ Q # 작업을 호스트 하 C# 는 데 또는 Python을 사용 하는지 여부�
 3. 메뉴에서 **빌드** -> **솔루션 정리** 를 선택 합니다.
 4. 각 .csproj 파일에서 대상 프레임 워크를 `netcoreapp3.0` (또는 라이브러리 프로젝트인 경우 `netstandard2.1`)로 업데이트 합니다.
     즉, 다음 폼의 줄을 편집 합니다.
+
     ```xml
     <TargetFramework>netcoreapp3.0</TargetFramework>
     ```
+
     대상 프레임 워크를 지정 하는 방법에 대 한 자세한 내용은 [여기](https://docs.microsoft.com/dotnet/standard/frameworks#how-to-specify-target-frameworks)에서 찾을 수 있습니다.
 5. 솔루션의 모든 파일을 저장 하 고 닫습니다.
 6. **도구** -> **명령줄** -> 를 선택 **개발자 명령 프롬프트**
 7. 솔루션의 각 프로젝트에 대해 다음 명령을 실행 합니다.
-    ```bash
+
+    ```dotnetcli
     dotnet add [project_name].csproj package Microsoft.Quantum.Development.Kit
     ```
-    프로젝트에서 다른 Microsoft 양자 패키지 (예: 양자)를 사용 하는 경우에도 명령을 실행 합니다.
-8. 명령 프롬프트를 닫고 **빌드** -> **솔루션** 빌드를 선택 합니다 (다시 빌드는 처음에 실패 하므로 솔루션 다시 빌드를 선택 *하지* 않음).
+
+   프로젝트에서 다른 Microsoft 양자 패키지 (예: 양자)를 사용 하는 경우에도 명령을 실행 합니다.
+8. 명령 프롬프트를 닫고 **빌드** -> **솔루션 빌드** 를 선택 합니다 (솔루션 다시 빌드를 선택 *하지* 않음).
 
 이제 [Visual Studio QDK 확장 업데이트](#update-visual-studio-qdk-extension)로 건너뛸 수 있습니다.
 
@@ -66,24 +72,30 @@ Q # 작업을 호스트 하 C# 는 데 또는 Python을 사용 하는지 여부�
 
 1. 프로젝트 파일이 포함 된 폴더로 이동 합니다.
 2. 다음 명령 실행:
-    ```bash
+
+    ```dotnetcli
     dotnet clean [project_name].csproj
     ```
 
 3. 각 .csproj 파일에서 대상 프레임 워크를 `netcoreapp3.0` (또는 라이브러리 프로젝트인 경우 `netstandard2.1`)로 업데이트 합니다.
     즉, 다음 폼의 줄을 편집 합니다.
+
     ```xml
     <TargetFramework>netcoreapp3.0</TargetFramework>
     ```
+
     대상 프레임 워크를 지정 하는 방법에 대 한 자세한 내용은 [여기](https://docs.microsoft.com/dotnet/standard/frameworks#how-to-specify-target-frameworks)에서 찾을 수 있습니다.
 4. 다음 명령 실행:
-    ```bash
+
+    ```dotnetcli
     dotnet add package Microsoft.Quantum.Development.Kit
     ```
+
     프로젝트에서 다른 Microsoft 양자 패키지 (예: 양자)를 사용 하는 경우에도 명령을 실행 합니다.
 5. 모든 파일을 저장 하 고 닫습니다.
 6. 각 프로젝트 종속성에 대해 1-4을 반복한 다음 주 프로젝트가 포함 된 폴더로 다시 이동 하 고를 실행 합니다.
-    ```bash
+
+    ```dotnetcli
     dotnet build [project_name].csproj
     ```
 
@@ -105,14 +117,14 @@ QDK를 업데이트 하는 프로세스는 개발 언어 및 환경에 따라 �
 
 1. `iqsharp` 커널을 업데이트 합니다. 
 
-    ```bash
+    ```dotnetcli
     dotnet tool update -g Microsoft.Quantum.IQSharp
     dotnet iqsharp install
     ```
 
 2. `iqsharp` 버전 확인
 
-    ```bash
+    ```dotnetcli
     dotnet iqsharp --version
     ```
 
@@ -122,6 +134,7 @@ QDK를 업데이트 하는 프로세스는 개발 언어 및 환경에 따라 �
     iqsharp: 0.10.1912.501
     Jupyter Core: 1.2.20112.0
     ```
+
     `iqsharp` 버전이 더 높기 때문에 [최신 릴리스와](xref:microsoft.quantum.relnotes)일치 해야 합니다.
 
 3. `qsharp` 패키지 업데이트
@@ -144,7 +157,9 @@ QDK를 업데이트 하는 프로세스는 개발 언어 및 환경에 따라 �
     Summary: Python client for Q#, a domain-specific quantum programming language
     ...
     ```
+
 5. `.qs` 파일의 위치에서 다음 명령을 실행 합니다.
+
     ```bash
     python -c "import qsharp; qsharp.reload()"
     ```
@@ -155,14 +170,14 @@ QDK를 업데이트 하는 프로세스는 개발 언어 및 환경에 따라 �
 
 1. `iqsharp` 커널을 업데이트 합니다.
 
-    ```bash
+    ```dotnetcli
     dotnet tool update -g Microsoft.Quantum.IQSharp
     dotnet iqsharp install
     ```
 
 2. `iqsharp` 버전 확인
 
-    ```bash
+    ```dotnetcli
     dotnet iqsharp --version
     ```
 
@@ -172,9 +187,11 @@ QDK를 업데이트 하는 프로세스는 개발 언어 및 환경에 따라 �
     iqsharp: 0.10.1912.501
     Jupyter Core: 1.2.20112.0
     ```
+
     `iqsharp` 버전이 더 높기 때문에 [최신 릴리스와](xref:microsoft.quantum.relnotes)일치 해야 합니다.
 
 3. Jupyter Notebook의 셀에서 다음 명령을 실행 합니다.
+
     ```
     %workspace reload
     ```
@@ -210,10 +227,10 @@ QDK를 업데이트 하는 프로세스는 개발 언어 및 환경에 따라 �
 
 1. .NET 용 퀀텀 프로젝트 템플릿 업데이트
 
-    ```bash
+    ```dotnetcli
     dotnet new -i Microsoft.Quantum.ProjectTemplates
     ```
 
-## <a name="whats-next"></a>다음은 무엇일까요?
+## <a name="whats-next"></a>다음 단계
 
 선호 하는 환경에서 퀀텀 개발 키트를 업데이트 했으므로 계속 해 서 퀀텀 프로그램을 개발 하 고 실행할 수 있습니다. 프로그램을 아직 작성 하지 않은 경우 [첫 번째 퀀텀 프로그램](xref:microsoft.quantum.write-program)을 시작할 수 있습니다.

@@ -6,12 +6,12 @@ uid: microsoft.quantum.libraries.characterization
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 51124dc78feedf6d5c85fe224898e66a1c5ed459
-ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+ms.openlocfilehash: 0c347113339a77e9eaf63dc0967c320f8b063a0e
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76870352"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036256"
 ---
 # <a name="quantum-characterization-and-statistics"></a>퀀텀 특성화 및 통계 #
 
@@ -88,7 +88,7 @@ $X = \ket{+} \bra{+}-\ket{-}\bra{-}$와 같이 $ \ket{+} $는 `Zero`에 해당 �
 
 반복 단계 예측 가능성 함수에서 `Result`를 관찰 한 후에는 Bayes ' 규칙을 사용 하 여 이러한 관찰을 수행 해야 하는 단계를 규정 하 고 있습니다.
 구체적으로, \begin{equation} \A\\\\\\\\frac{\Pr (d | \) \Pr (\aa>} {\int \Pr (d | \\a) \Pr (\aa) {\mathrm d} \phi} \Aa> \begin{equation} 여기서 $d \cin \\{\texttt{Zero}, \texttt{One}\\} $는 `Result`이 고 $ \Pr (\aa) $은 이전 신념 about $ \\as$를 설명 합니다.
-그러면 사후 배포 $ \Pr (\\a| d) $에서 신념에 대 한 자세한 내용은 다음 `Result`에 대 한 앞 즉시 설명 하기 때문에 반복적인 단계 예측의 반복적인 특성을 명시적으로 만듭니다.
+그러면 사후 배포 $ \Pr (\\ax) $가 다음 `Result`의 관찰 바로 앞에 신념을 설명 하므로 반복적인 단계 예측의 반복적인 특성을 명시적으로 만듭니다.
 
 이 절차를 수행 하는 동안 언제 든 지 클래식 컨트롤러에서 유추 된 $ \hat{\phi} $ 단계를 \begin{equation} \hat{\phi} \mathrel{로 보고할 수 있습니다. =} \ [\\a| \text{data}] = \int \Las\pr (\laa| \text{data}) {\mathrm d} \\a\ariation} where $ \text{data} $는 가져온 모든 `Result` 값의 전체 레코드를 나타냅니다.
 

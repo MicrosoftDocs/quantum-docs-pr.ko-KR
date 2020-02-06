@@ -6,12 +6,12 @@ ms.author: gulow
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.chemistry.concepts.installation
-ms.openlocfilehash: fd43c783fa82c7219e143a57759919606fdd197f
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: de13d1814821c612ed74a347dc8ffb5881063576
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73184205"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036477"
 ---
 # <a name="chemistry-library-installation-and-validation"></a>화학 라이브러리 설치 및 유효성 검사
 
@@ -51,18 +51,18 @@ Install-Package Microsoft.Quantum.Chemistry
 
 **명령줄 또는 Visual Studio Code:** 명령줄을 사용 하거나 Visual Studio Code 내에서 `dotnet` 명령을 사용 하 여 NuGet 패키지 참조를 프로젝트에 추가할 수 있습니다.
 
-```bash
+```dotnetcli
 dotnet add package Microsoft.Quantum.Chemistry
 ```
 
 ## <a name="verifying-your-installation"></a>설치 확인 
 
 퀀텀 개발 키트의 나머지와 마찬가지로 퀀텀 화학 라이브러리에는 신속 하 게 시작 및 실행 하는 데 도움이 되는 여러 가지 문서화 된 샘플이 제공 됩니다.
-이러한 예제를 사용 하 여 설치를 테스트 하려면 [주 샘플 리포지토리](https://github.com/Microsoft/Quantum)를 복제 한 다음 샘플 중 하나를 실행 합니다.  예를 들어 [`MolecularHydrogen`](https://github.com/Microsoft/Quantum/tree/master/Chemistry/MolecularHydrogen) 샘플을 실행 하려면 다음을 수행 합니다.
+이러한 예제를 사용 하 여 설치를 테스트 하려면 [주 샘플 리포지토리](https://github.com/Microsoft/Quantum)를 복제 한 다음 샘플 중 하나를 실행 합니다.  예를 들어 [`MolecularHydrogen`](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/MolecularHydrogen) 샘플을 실행 하려면 다음을 수행 합니다.
 
 ```bash
 git clone https://github.com/Microsoft/Quantum.git
-cd Quantum/Chemistry/MolecularHydrogen
+cd Quantum/samples/chemistry/MolecularHydrogen
 dotnet run
 ```
 
@@ -78,11 +78,11 @@ dotnet run
 
 MolecularHydrogen 샘플은 수동으로 구성 된 분자 입력 데이터를 사용 합니다.  이는 작은 예제에 적합 하지만, 규모의 퀀텀 연금술에는 수백만 또는 수십억 개의 용어로 Hamiltonians 필요 합니다. 확장 가능한 계산 화학 패키지에 의해 생성 된 이러한 Hamiltonians는 너무 커서 수동으로 가져올 수 없습니다. 
 
-퀀텀 개발 키트에 대 한 퀀텀 화학 library는 환경 분자 과학 연구소에서 개발한 [**Nwchem**](http://www.nwchem-sw.org/) 계산 연금술 플랫폼과 같이 계산 화학 패키지에서 잘 작동 하도록 설계 되었습니다. EMSL)를 미국 태평양 북서부 지역에서
+퀀텀 개발 키트에 대 한 퀀텀 화학 라이브러리는 계산 연금술 패키지에서 잘 작동 하도록 설계 되었습니다. 특히 태평양 연안 국가의 과학에 게는 EMSL (환경적 분자 연구소)에서 개발한 [**Nwchem**](http://www.nwchem-sw.org/) 계산 화학 플랫폼이 있습니다.
 특히 `Microsoft.Quantum.Chemistry` 패키지는 [Broombridge 스키마](xref:microsoft.quantum.libraries.chemistry.schema.broombridge)에 표시 되는 퀀텀 화학 시뮬레이션 문제의 인스턴스를 로드 하기 위한 도구를 제공 하며, 최신 버전의 NWChem에서 내보내기도 지원 합니다.
 
 퀀텀 개발 키트와 함께 NWChem을 사용 하 여 시작 하 고 실행 하려면 다음 방법 중 하나를 사용 하는 것이 좋습니다.
-- 기존 Broombridge [파일을 사용](https://github.com/Microsoft/Quantum/tree/master/Chemistry/IntegralData/YAML)하 여 시작 합니다.
+- 기존 Broombridge [파일을 사용](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/IntegralData/YAML)하 여 시작 합니다.
 - 웹 기반 프런트 엔드를 사용 하는 [Microsoft Quantum Development Kit에 대 한 Emsl 화살표 작성기](https://arrows.emsl.pnnl.gov/api/qsharp_chem) 를 사용 하 여 새 Broombridge 분자 입력 파일을 생성 합니다.  
 - PNNL에서 제공 하는 [Docker 이미지](https://hub.docker.com/r/nwchemorg/nwchem-qc/) 를 사용 하 여 NWChem을 실행 하거나
 - 플랫폼용 [NWChem을 컴파일합니다](http://www.nwchem-sw.org/index.php/Compiling_NWChem) .
@@ -90,9 +90,10 @@ MolecularHydrogen 샘플은 수동으로 구성 된 분자 입력 데이터를 �
 NWChem을 사용 하 여 퀀텀 개발 ... Kit 화학 라이브러리로 분석 하는 방법에 대 한 자세한 내용은 [NWChem을 사용](xref:microsoft.quantum.chemistry.examples.endtoend) 하 여 종단 간을 참조 하세요.
 
 ### <a name="getting-started-using-broombridge-files-provided-with-the-samples"></a>샘플과 함께 제공 되는 Broombridge 파일을 사용 하 여 시작
-퀀텀 개발 키트 샘플 리포지토리의 [Broombridge 폴더에](https://github.com/Microsoft/Quantum/tree/master/Chemistry/IntegralData/YAML) 는 형식이 인 분자 데이터 파일이 포함 되어 있습니다.  
 
-간단한 예로, 화학 라이브러리 샘플 [GetGateCount](https://github.com/Microsoft/Quantum/tree/master/Chemistry/GetGateCount) 를 사용 하 여 Broombridge 파일 중 하나에서 Hamiltonian를 로드 하 고 퀀텀 시뮬레이션 algorigthms의 게이트 예측을 수행 합니다.
+퀀텀 개발 키트 샘플 리포지토리의 [Broombridge 폴더에](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/IntegralData/YAML) 는 형식이 인 분자 데이터 파일이 포함 되어 있습니다.  
+
+간단한 예로, 화학 라이브러리 샘플 [GetGateCount](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/GetGateCount) 를 사용 하 여 Broombridge 파일 중 하나에서 Hamiltonian를 로드 하 고 퀀텀 시뮬레이션 algorigthms의 게이트 예측을 수행 합니다.
 
 ```bash
 cd Quantum/Chemistry/GetGateCount
@@ -171,5 +172,3 @@ PowerShell의 기본 제공 도움말 기능을 사용 하 여 자세한 정보�
 Convert-NWChemToBroombridge -?
 Get-Help Convert-NWChemToBroombridge -Full
 ```
-
-

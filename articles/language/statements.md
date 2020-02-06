@@ -6,16 +6,16 @@ uid: microsoft.quantum.language.statements
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 9157cf3336ce0894816dbfbaf13ce0e712a6b096
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 9a6f5d53ec21090d0c13f4369e0270d264cd1e9b
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821068"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036494"
 ---
 # <a name="statements-and-other-constructs"></a>문 및 기타 구문
 
-## <a name="comments"></a>의견
+## <a name="comments"></a>주석
 
 주석은 두 개의 슬래시, `//`로 시작 하 고 줄의 끝까지 계속 됩니다.
 설명은 Q # 소스 파일의 어디에 나 나타날 수 있습니다.
@@ -29,7 +29,7 @@ ms.locfileid: "76821068"
 Markdown에 대 한 확장으로, Q #의 작업, 함수 및 사용자 정의 형식에 대 한 상호 참조는 참조 되는 코드 개체의 정규화 된 이름으로 대체 되는 `@"<ref target>"``<ref target>`을 사용 하 여 포함할 수 있습니다.
 선택적으로 설명서 엔진에서 추가 Markdown 확장을 지원할 수도 있습니다.
 
-예:
+다음은 그 예입니다.
 
 ```qsharp
 /// # Summary
@@ -191,7 +191,7 @@ for (qubit in qubits) {
 ```qsharp
 newtype Complex = (Re : Double, Im : Double);
 
-function ElementwisePlus(reals : Double[], ims : Double[]) : Complex[] {
+function ComplexSum(reals : Double[], ims : Double[]) : Complex[] {
     mutable res = Complex(0.,0.);
 
     for (r in reals) {
@@ -273,7 +273,7 @@ let n = 8;
 ...                 // n is 8
 ```
 
-및
+and
 
 ```qsharp
 if (a == b) {

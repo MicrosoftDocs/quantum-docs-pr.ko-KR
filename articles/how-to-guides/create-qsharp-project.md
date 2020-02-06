@@ -7,12 +7,12 @@ ms.date: 10/19/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.howto.createproject
-ms.openlocfilehash: 5fa32f14291fa2070b49e4bb3b720cbf31ee614b
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: c093284f1ea33b72d4d264992b0ba6bf6bc72782
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76819895"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036443"
 ---
 # <a name="create-a-q-project-in-your-development-environment"></a>개발 환경에서 Q # 프로젝트 만들기
 
@@ -30,13 +30,13 @@ Q # 프로젝트에는 퀀텀 코드를 포함 하는 Q # 파일 뿐만 아니�
 
 ## <a name="create-a-python-project"></a>Python 프로젝트 만들기
 
-1. 필수 조건
+1. 필수 구성 요소
 
      * [Python 용 퀀텀 개발 키트](xref:microsoft.quantum.install.python) 설치
 
 1. 프로젝트에 대 한 폴더를 만들고 해당 폴더로 이동 합니다.
 
-1. `Operation.qs`이라는 Q # 파일을 만들고 Q # 코드를 추가 합니다. 예:
+1. `Operation.qs`이라는 Q # 파일을 만들고 Q # 코드를 추가 합니다. 다음은 그 예입니다.
 
     ```qsharp
     namespace HelloWorld {
@@ -50,7 +50,7 @@ Q # 프로젝트에는 퀀텀 코드를 포함 하는 Q # 파일 뿐만 아니�
     }
     ```
 
-1. Q # 작업을 호출 하는 `host.py` 라는 python 호스트 파일을 만듭니다. 예:
+1. Q # 작업을 호출 하는 `host.py` 라는 python 호스트 파일을 만듭니다. 다음은 그 예입니다.
 
     ```python
     import qsharp
@@ -77,7 +77,7 @@ Q # 프로젝트에는 퀀텀 코드를 포함 하는 Q # 파일 뿐만 아니�
 
 ## <a name="create-a-q-jupyter-notebook-project"></a>Q # Jupyter Notebook 프로젝트 만들기
 
-1. 필수 조건
+1. 필수 구성 요소
 
     * [Jupyter 노트북용 퀀텀 개발 키트](xref:microsoft.quantum.install.jupyter) 설치
 
@@ -87,7 +87,7 @@ Q # 프로젝트에는 퀀텀 코드를 포함 하는 Q # 파일 뿐만 아니�
     jupyter notebook
     ```
 
-1. 명령줄에 표시된 URL로 이동합니다. 예: [http://localhost:8888/?token=c790a52ba54f0cf77465c3c8983d776348285b0280d91b85 ]
+1. 명령줄에 표시된 URL로 이동합니다. 예: [http://localhost:8888/?token=c790a52ba54f0cf77465c3c8983d776348285b0280d91b85]
 
 1. 브라우저에 Jupyter 페이지가 나타납니다. **파일** 탭에서 **새로** 만들기 > **q #** 를 선택 하 여 q # 커널을 사용 하 여 jupyter 노트북을 만듭니다. 첫 번째 노트북 셀에 다음 코드를 추가 합니다.
 
@@ -113,7 +113,7 @@ Q # 프로젝트에는 퀀텀 코드를 포함 하는 Q # 파일 뿐만 아니�
 
 ## <a name="create-a-c-project-on-windows-using-visual-studio"></a>Visual Studio C# 를 사용 하 여 Windows에서 프로젝트 만들기
 
-1. 필수 조건
+1. 필수 구성 요소
 
     * [Visual Studio 용 퀀텀 개발 키트 확장](xref:microsoft.quantum.install.cs) 설치
 
@@ -142,7 +142,7 @@ Q # 프로젝트에는 퀀텀 코드를 포함 하는 Q # 파일 뿐만 아니�
 
 ## <a name="create-a-c-project-using-vs-code"></a>VS Code를 C# 사용 하 여 프로젝트 만들기
 
-1. 필수 조건
+1. 필수 구성 요소
 
     * [VS Code에 대 한 퀀텀 개발 키트 확장](xref:microsoft.quantum.install.cs) 을 설치 합니다.
 
@@ -167,13 +167,13 @@ Q # 프로젝트에는 퀀텀 코드를 포함 하는 Q # 파일 뿐만 아니�
 
 ## <a name="create-a-c-project-using-the-dotnet-command-line-tool"></a>`dotnet` 명령줄 C# 도구를 사용 하 여 프로젝트 만들기
 
-1. 필수 조건
+1. 필수 구성 요소
 
     * [명령줄에 대 한 퀀텀 개발 키트](xref:microsoft.quantum.install.cs) 설치
 
 1. 새 애플리케이션 만들기
 
-    ```bash
+    ```dotnetcli
     dotnet new console -lang Q# -o <project name>
     ```
 
@@ -187,7 +187,7 @@ Q # 프로젝트에는 퀀텀 코드를 포함 하는 Q # 파일 뿐만 아니�
 
 1. 애플리케이션 실행
 
-    ```bash
+    ```dotnetcli
     dotnet run
     ```
 
@@ -195,6 +195,6 @@ Q # 프로젝트에는 퀀텀 코드를 포함 하는 Q # 파일 뿐만 아니�
 
 이제 명령줄 도구를 사용 하 여 퀀텀 개발을 계속 합니다.
 
-## <a name="whats-next"></a>다음은 무엇일까요?
+## <a name="whats-next"></a>다음 단계
 
 이제 기본 설정 환경에서 프로젝트를 만들었으므로 퀀텀 개발을 계속할 수 있습니다.

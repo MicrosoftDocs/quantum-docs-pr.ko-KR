@@ -6,12 +6,12 @@ ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.language.expressions
-ms.openlocfilehash: 09d493df4e1178fee1f7a5946cfda2f411111006
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 83fe697aa07a8ab28bd64437c8f5746bc5893b27
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73185208"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036317"
 ---
 # <a name="expressions"></a>식
 
@@ -22,7 +22,7 @@ ms.locfileid: "73185208"
 
 [형식 모델](xref:microsoft.quantum.language.type-model#tuple-types) 에 설명 된 단순 값과 단일 요소 튜플의 동등성은 `(6)` 그룹의 모호성을 제거 하 고 단일 요소 튜플로 `(6)` 합니다.
 
-## <a name="symbols"></a>기호만
+## <a name="symbols"></a>Symbols
 
 `'T` 형식의 값에 바인딩하거나 할당 된 기호의 이름은 `'T`형식의 식입니다.
 예를 들어 `count` 기호가 `5`정수 값에 바인딩되면 `count`는 정수 식입니다.
@@ -61,7 +61,7 @@ Q #의 `Double` 리터럴은 후행 "d" 또는 " C#d"가 필요 하거나 허용
 
 두 개의 정수 또는 큰 정수 식이 지정 된 경우 `%` (모듈러스), `&&&` (비트 AND), `|||` (비트 OR) 또는 `^^^` (비트 XOR) 연산자를 사용 하 여 새 정수 또는 큰 정수 식을 지정할 수 있습니다.
 
-왼쪽에 정수 또는 큰 정수 식이 있고 오른쪽에 정수 식이 지정 된 경우 `<<<` (산술 왼쪽 시프트) 또는 `>>>` (산술 오른쪽 시프트) 연산자를 사용 하 여 왼쪽과 같은 형식의 새 식을 만들 수 있습니다. 식.
+왼쪽에 정수 또는 큰 정수 식이 있고 오른쪽에 정수 식이 지정 된 경우 `<<<` (산술 왼쪽 시프트) 또는 `>>>` (산술 오른쪽 시프트) 연산자를 사용 하 여 왼쪽 식과 같은 형식의 새 식을 만들 수 있습니다.
 
 이동 작업에 대 한 두 번째 매개 변수 (이동 크기)는 0 보다 크거나 같아야 합니다. 음수 시프트 금액의 동작은 정의 되지 않습니다.
 시프트 연산의 이동 양은 32 비트에도 맞아야 합니다. 그렇지 않으면 런타임 오류가 발생 합니다.
@@ -94,9 +94,9 @@ Q #의 `Double` 리터럴은 후행 "d" 또는 " C#d"가 필요 하거나 허용
 두 `Bool` 리터럴 값은 `true` 및 `false`됩니다.
 
 동일한 기본 형식의 두 식이 지정 된 경우 `==` 및 `!=` 이항 연산자를 사용 하 여 `Bool` 식을 생성할 수 있습니다.
-두 식이 (응답)가 같으면 식이 true가 됩니다.
+식은 두 식이 같으면 true이 고, 그렇지 않으면 false입니다.
 
-사용자 정의 형식의 값을 비교할 수 없습니다. 값만 비교할 수 있습니다. 예를 들면 다음과 같습니다.
+사용자 정의 형식의 값을 비교할 수 없습니다. 래핑 해제 된 값만 비교할 수 있습니다. 예를 들어 "래핑 해제" 연산자 `!` ( [Q # 형식 모델 페이지](xref:microsoft.quantum.language.type-model#user-defined-types)에 설명 되어 있음)를 사용 합니다.
 
 ```qsharp
 newtype WrappedInt = Int;     // Yes, this is a contrived example
@@ -112,7 +112,7 @@ let t = x == y;               // This will cause a compiler error.
 `Double` 값에 대 한 같음 비교는 반올림 결과 때문에 잘못 될 수 있습니다.
 예를 들어 `49.0 * (1.0/49.0) != 1.0`합니다.
 
-두 숫자 식을 지정 하는 경우 이항 연산자 `>`, `<`, `>=`및 `<=`를 사용 하 여 첫 번째 식이 각각 보다 크거나 보다 작거나 같은 경우 true 인 새 부울 식을 생성할 수 있습니다. 또는 두 번째 식 보다 작거나 같습니다.
+두 개의 숫자 식을 지정 하는 경우 이항 연산자 `>`, `<`, `>=`및 `<=`를 사용 하 여 첫 번째 식이 두 번째 식 보다 크거나 같고 보다 작거나 같은 경우 true 인 새 부울 식을 생성할 수 있습니다.
 
 두 부울 식을 지정 하는 경우 `and` 및 `or` 이항 연산자를 사용 하 여 두 식이 모두 true 인 경우 true 인 새 부울 식을 생성할 수 있습니다.
 
@@ -125,7 +125,7 @@ Q #에서는 `fail` 문과 `Log` 표준 함수에 문자열을 사용할 수 있
 Q #의 문자열은 리터럴 또는 보간된 문자열입니다.
 문자열 리터럴은 대부분의 언어에서 간단한 문자열 리터럴과 유사 합니다. 큰따옴표 안에 포함 된 유니코드 문자 시퀀스 `"`입니다.
 문자열 내에서 백슬래시 문자 `\`를 사용 하 여 큰따옴표 문자를 이스케이프 처리 하 고, `\n`으로 새 줄을 삽입 하 고, `\r`로 캐리지 리턴을 삽입 하 고, 탭을 `\t`로 삽입할 수 있습니다.
-예를 들면 다음과 같습니다.
+예:
 
 ```qsharp
 "\"Hello world!\", she said.\n"
@@ -229,7 +229,7 @@ SomeOtherFun(Fun);           // This also causes a compilation error.
 형식 매개 변수가 있는 인수가 지정 되지 않은 상태로 남아 있는 경우 부분 응용 프로그램에 필요 합니다 (아래 참조).
 또한 다른 함수를 사용 하는 작업을 호출할 수 있는 경우에도 유용 합니다.
 
-예를 들어 `Func` 서명 `('T1, 'T2, 'T1) -> 'T2`있는 경우 `Op1` 및 `Op2`에 서명 `(Qubit[] => Unit is Adj)`있고 `Op3`에 서명 `(Qubit[] => Unit)`를 사용 하 여 첫 번째 인수로 `Func`를 호출 하면 두 번째 인수로 `Op1`. 및는 세 번째 `Op3` 합니다.
+예를 들어 `Func` 서명 `('T1, 'T2, 'T1) -> 'T2`있는 경우 `Op1` 및 `Op2`에 서명 `(Qubit[] => Unit is Adj)`가 있고 `Op3`에 `(Qubit[] => Unit)`를 사용 하 여 첫 번째 인수로 `Func`를 호출 하 고, 두 번째 인수로 `Op1`를 호출 하 고, 세 번째 인수로 `Op2`를 호출 합니다.`Op3`
 
 ```qsharp
 let combinedOp = Func<(Qubit[] => Unit), (Qubit[] => Unit is Adj)>(Op1, Op2, Op3);
@@ -320,7 +320,7 @@ let g = Foo(arg)!;      // Syntax error
 
 공통 요소 형식이 작업 또는 함수 형식이 면 모든 요소에 동일한 입력 및 출력 형식이 있어야 합니다.
 배열의 요소 형식은 모든 요소에서 지원 되는 모든 함수을 지원 합니다.
-예를 들어 `Op1`, `Op2`및 `Op3` 모두 `Qubit[] => Unit`되지만 `Op1`는 `Adjoint`를 지원 하 고 `Op2`를 지원 하며 `Controlled`를 지원 합니다.
+예를 들어 `Op1`, `Op2`및 `Op3` 모두 `Qubit[] => Unit`되지만 `Op1`는 `Adjoint`를 지원 하 고 `Op2`를 지원 하며 `Controlled`를 지원 합니다.`Op3`
 
 - `[Op1, Op2]`은 `(Qubit[] => Unit)` 작업의 배열입니다.
 - `[Op1, Op3]`은 `(Qubit[] => Unit is Adj)` 작업의 배열입니다.
@@ -457,7 +457,7 @@ newtype Complex = (Re : Double, Im : Double);
 ```
 `c` `Complex(1.,-1.)`형식 값이 포함 된 경우 `c w/ Re <- 0.`는 `Complex(0.,-1.)`로 계산 되는 `Complex` 형식의 식입니다.
 
-## <a name="conditional-expressions"></a>조건식
+## <a name="conditional-expressions"></a>조건 식
 
 동일한 형식 및 부울 식의 다른 두 식이 지정 된 경우 물음표 `?` 및 세로 막대 `|`를 사용 하 여 조건 식을 지정할 수 있습니다.
 예를 들어 `a==b ? c | d`합니다.
@@ -465,7 +465,7 @@ newtype Complex = (Re : Double, Im : Double);
 
 두 식은 동일한 입력 및 출력을 포함 하는 작업으로 평가 될 수 있지만 다른 함수을 지원 합니다.
 이 경우 조건식의 형식은 두 식에서 지원 되는 모든 함수를 지 원하는 입력 및 출력을 사용 하는 작업입니다.
-예를 들어 `Op1`, `Op2`및 `Op3` 모두 `Qubit[]=>Unit`되지만 `Op1`는 `Adjoint`를 지원 하 고 `Op2`를 지원 하며 `Controlled`를 지원 합니다.
+예를 들어 `Op1`, `Op2`및 `Op3` 모두 `Qubit[]=>Unit`되지만 `Op1`는 `Adjoint`를 지원 하 고 `Op2`를 지원 하며 `Controlled`를 지원 합니다.`Op3`
 
 - `flag ? Op1 | Op2`은 `(Qubit[] => Unit)` 작업입니다.
 - `flag ? Op1 | Op3`은 `(Qubit[] => Unit is Adj)` 작업입니다.
@@ -488,19 +488,19 @@ newtype Complex = (Re : Double, Im : Double);
 
 우선 순위 순으로 최고에서 최저 순으로 연산자.
 
-연산자 | 숫자 | 설명 | 피연산자 형식
+연산자 | 숫자 | Description | 피연산자 형식
 ---------|----------|---------|---------------
- 후행 `!` | 플러스 | 래핑 취소 | 사용자 정의 형식
- `-`, `~~~`, `not` | 플러스 | 숫자 음수, 비트 보수, 논리 부정 | `Int` `BigInt`, `~~~`에 대 한 `-`, `Bool` 또는 `not`에 대 한 `Int`, `BigInt` 또는 `Double`
+ 후행 `!` | 단항 연산자 | 래핑 취소 | 사용자 정의 형식
+ `-`, `~~~`, `not` | 단항 연산자 | 숫자 음수, 비트 보수, 논리 부정 | `Int` `BigInt`, `~~~`에 대 한 `-`, `Bool` 또는 `not`에 대 한 `Int`, `BigInt` 또는 `Double`
  `^` | 이진 | 정수 거듭제곱 | 지 수에 대 한 기준 `Int` `Int` 또는 `BigInt`
- `/`, `*`, `%` | 이진 | 나누기, 곱하기, 정수 모듈러스 | `/` 및 `*`, `Int` 또는 `BigInt`에 대 한 `Int`, `BigInt` 또는 `Double`
+ `/`, `*`, `%` | 이진 | 나누기, 곱하기, 정수 모듈러스 | `/` 및 `*`, `Int` 또는 `BigInt`에 대 한 `Int`, `BigInt` 또는 `Double``%`
  `+`, `-` | 이진 | 더하기 또는 문자열 및 배열 연결, 빼기 | `Int`, `BigInt` 또는 `Double`, 추가로 `String` 또는 배열 형식 `+`
  `<<<`, `>>>` | 이진 | 왼쪽 시프트, 오른쪽 시프트 | `Int` 또는 `BigInt`
  `<`, `<=`, `>`, `>=` | 이진 | 보다 작음, 작거나 같음, 보다 큼, 보다 큼, 크거나 같음 비교 | `Int`, `BigInt` 또는 `Double`
  `==`, `!=` | 이진 | 같음, 같지 않음 비교 | 모든 기본 형식
- `&&&` | 이진 | 비트 and | `Int` 또는 `BigInt`
+ `&&&` | 이진 | 비트 AND | `Int` 또는 `BigInt`
  `^^^` | 이진 | 비트 XOR | `Int` 또는 `BigInt`
- <code>\|\|\|</code> | 이진 | 비트 or | `Int` 또는 `BigInt`
+ <code>\|\|\|</code> | 이진 | 비트 OR | `Int` 또는 `BigInt`
  `and` | 이진 | 논리적 AND | `Bool`
  `or` | 이진 | 논리적 OR | `Bool`
  `..` | Binary/삼항 | Range 연산자 | `Int`

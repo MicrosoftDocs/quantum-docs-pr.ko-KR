@@ -3,15 +3,15 @@ title: 숫자 라이브러리 설치 및 유효성 검사 | Microsoft Docs
 description: 숫자 라이브러리 설치 및 유효성 검사
 author: thomashaener
 ms.author: thhaner
-ms.date: 5/14/2019
+ms.date: 05/14/2019
 ms.topic: article
 uid: microsoft.quantum.numerics.installation
-ms.openlocfilehash: 8369a6f342ee8e6f56b69bd1f2ce3df40e4093aa
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: c41bb73ea484271689eea2ca1b59ce6639dc15a7
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73184630"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036460"
 ---
 # <a name="numerics-library-installation-and-validation"></a>숫자 라이브러리 설치 및 유효성 검사
 
@@ -33,7 +33,7 @@ ms.locfileid: "73184630"
 
 또는 패키지 관리자 콘솔을 사용 하 여 명령줄 인터페이스를 통해 숫자 라이브러리를 프로젝트에 추가할 수 있습니다.
 
-![](~/media/vs2017-nuget-console-menu.png)
+![](../../media/vs2017-nuget-console-menu.png)
 
 패키지 관리자 콘솔에서 다음을 실행 합니다.
 
@@ -45,7 +45,7 @@ Install-Package Microsoft.Quantum.Numerics
 
 **명령줄 또는 Visual Studio Code:** 명령줄을 사용 하거나 Visual Studio Code 내에서 `dotnet` 명령을 사용 하 여 NuGet 패키지 참조를 프로젝트에 추가할 수 있습니다.
 
-```bash
+```dotnetcli
 dotnet add package Microsoft.Quantum.Numerics
 ```
 
@@ -55,10 +55,10 @@ dotnet add package Microsoft.Quantum.Numerics
 퀀텀 개발 키트의 나머지와 마찬가지로 숫자 라이브러리에는 최대한 빨리 시작 하는 데 도움이 되는 샘플이 포함 되어 있습니다.
 이러한 예제를 사용 하 여 설치를 테스트 하려면 [주 샘플 리포지토리](https://github.com/Microsoft/Quantum) 를 복제 한 다음 샘플 중 하나를 실행 합니다.
 
-[`CustomModAdd`](https://github.com/microsoft/Quantum/tree/master/Numerics/CustomModAdd) 샘플을 실행 하려면 다음을 수행 합니다.
+[`CustomModAdd`](https://github.com/microsoft/Quantum/tree/master/samples/numerics/CustomModAdd) 샘플을 실행 하려면 다음을 수행 합니다.
 
 ```bash
 git clone https://github.com/Microsoft/Quantum.git
-cd Quantum/Numerics/CustomModAdd
+cd Quantum/samples/numerics/CustomModAdd
 dotnet run
 ```

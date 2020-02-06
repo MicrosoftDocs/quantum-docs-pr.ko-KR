@@ -6,12 +6,12 @@ ms.author: nawiebe@microsoft.com
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.secondquantization
-ms.openlocfilehash: b3cc7eb8139d2df6e02de371ccf7a423e58ea76d
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 4b7b5a6be6d0c1f3520128609e6b9fa83e5460d5
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73210400"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036426"
 ---
 # <a name="second-quantization"></a>두 번째 양자화
 
@@ -153,7 +153,7 @@ n_i \ket{1}_i & = \ket{1}_i.
 \end{align} 위의 `FermionTerm` 예제와 마찬가지로이 숫자 연산자는 다음과 같이 생성 됩니다.
 ```csharp
     // Let us use a new method to compactly create a sequence of ladder
-    // operators. Note that we have ommitted specifying whether the 
+    // operators. Note that we have omitted specifying whether the 
     // operators are raising or lowering. In this case, the first half
     // will be raising operators, and the second half will be lowering 
     // operators.
@@ -221,7 +221,7 @@ $ $ 이러한 연산자는 ' commute '로, 일반적으로 모든 $i에 대해 \
 
 \begin{align} h\_{pqrs} & = \int\_{-\infty} ^ \infty \int\_{-\infty} ^ \infty\psi\_p ^\*(x\_1) \int\_q ^\*(x\_2) \int (\frac{1}{| x_1-x_2 |} \int) \int\_r (x\_2) \int\_s (x\_1) \mathrm{d} ^ 3 x\_1 \ mathrm {d} ^ 3 x\_2. \ label {eq : 적분} \end{align}
 
-$H\_{pq} $은 (는) 모든 용어에 단일 파괴 포함 되 고,\_{pqrs} $ $h는 두 전자 라고이 있습니다.
+이러한 모든 용어에는 단일 파괴 포함 되 고 $h,\_{pqrs} $은 두 전자 pq 이라는 용어를 포함 하기 때문에 $h\_{} $ 라는 용어는 1-전자 적분 이라고 합니다.
 이러한 계수 값을 계산 하려면 정수 계열이 필요 하므로 이러한 계수를 적분 이라고 합니다.
 한 가지 전자 용어는 개별 파괴의 kinetic 에너지와 nuclei의 전기 필드와의 상호 작용을 설명 합니다.
 반면에 두 전자/반자 정수는 파괴 간의 상호 작용을 설명 합니다.
