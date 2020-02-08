@@ -6,12 +6,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install
-ms.openlocfilehash: b209f0b600d973c3870c66060e1b484ec519322f
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 0e9dd1c74316eeb1fa7bbbf657d2e78231ee4294
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820711"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036511"
 ---
 # <a name="install-the-microsoft-quantum-development-kit-qdk"></a>Microsoft QDK(Quantum Development Kit) 설치
 
@@ -19,7 +19,7 @@ ms.locfileid: "76820711"
 
 - Go 프로그래밍 언어
 - Q#의 복합 기능을 추상화하는 라이브러리 세트
-- Q#으로 작성된 양자 프로그램을 실행하기 위한 Python 및 .NET 언어용 API(예: C#, F# 및 VB.NET)
+- Q#으로 작성된 양자 프로그램을 실행하기 위한 Python 및 .NET 언어(C#, F# 및 VB.NET)용 API
 - 개발을 용이하게 하는 도구
 
 Q# 프로그램은 종종 .NET 언어(일반적으로 C#) 또는 Python으로 작성된 호스트 프로그램과 쌍을 이룹니다. 이를 통해 클래식 프로그램 내에서 양자 작업을 호출할 수 있습니다.
