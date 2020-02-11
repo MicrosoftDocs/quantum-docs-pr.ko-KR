@@ -6,12 +6,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.cs
-ms.openlocfilehash: 1fd829c684502092bb7491b0f46b5f690320c941
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 7803846279f230f5fc0ee8424bd39be735a650ca
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76831021"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036290"
 ---
 # <a name="develop-with-q--c"></a>Q # +를 사용 하 여 개발C#
 
@@ -23,12 +23,12 @@ Q #은 .NET 언어에서 잘 작동 하도록 빌드 되었습니다 (특히 C#)
 - [Q # + C# Visual Studio Code (Windows, Linux 및 Mac) 사용](#VSC)
 - [Q # + C# `dotnet` 명령줄 도구 사용](#command)
 
-## Visual Studio를 사용 하 C# 여 Q # +를 사용 하 여 개발<a name="VS"></a>
+## Visual Studio를 사용 하 C# 여 Q # +를 사용 하 여 개발 <a name="VS"></a>
 
 Visual Studio는 Q # 프로그램을 개발 하기 위한 풍부한 환경을 제공 합니다. Q # Visual Studio 확장에는 구문 강조 표시, 코드 완성 및 IntelliSense 지원 뿐만 아니라 Q # 파일 및 프로젝트에 대 한 템플릿이 포함 되어 있습니다.
 
 
-1. 필수 조건
+1. 필수 구성 요소
 
     - [Visual Studio](https://visualstudio.microsoft.com/downloads/) 16.3, .NET Core 플랫폼 간 개발 워크로드 설정
 
@@ -59,11 +59,11 @@ Visual Studio는 Q # 프로그램을 개발 하기 위한 풍부한 환경을 �
 > [!NOTE]
 > * 단일 Visual Studio 솔루션 내에 여러 프로젝트가 있는 경우 솔루션에 포함된 모든 프로젝트는 솔루션과 동일한 폴더 또는 해당 하위 폴더 중 하나에 포함되어야 합니다.  
 
-## Visual Studio Code를 사용 하 여 C# Q # + 개발<a name="VSC"></a>
+## Visual Studio Code를 사용 하 여 C# Q # + 개발 <a name="VSC"></a>
 
 Visual Studio Code (VS Code)는 Windows, Linux 및 Mac에서 Q # 프로그램을 개발 하기 위한 풍부한 환경을 제공 합니다.  Q # VS Code 확장에는 Q # 구문 강조 표시, 코드 완성 및 Q # 코드 조각을 위한 지원이 포함 됩니다.
 
-1. 필수 조건
+1. 필수 구성 요소
 
    - [VS 코드](https://code.visualstudio.com/download)
    - [.NET Core SDK 3.1 이상](https://www.microsoft.com/net/download)
@@ -105,13 +105,13 @@ Visual Studio Code (VS Code)는 Windows, Linux 및 Mac에서 Q # 프로그램을
 
 물론 간단하게 .NET Core SDK 및 QDK 프로젝트 템플릿을 설치하여 명령줄에서 Q# 프로그램을 빌드하고 실행할 수도 있습니다. 
 
-1. 필수 조건
+1. 필수 구성 요소
 
     - [.NET Core SDK 3.1 이상](https://www.microsoft.com/net/download)
 
 1. .NET용 양자 프로젝트 템플릿을 설치합니다.
 
-    ```bash
+    ```dotnetcli
     dotnet new -i Microsoft.Quantum.ProjectTemplates
     ```
 
@@ -121,8 +121,8 @@ Visual Studio Code (VS Code)는 Windows, Linux 및 Mac에서 Q # 프로그램을
 
     - 새 애플리케이션 만들기
 
-       ```bash
-       dotnet new console -lang Q# -o runSayHello
+       ```dotnetcli
+       dotnet new console -lang "Q#" -o runSayHello
        ```
 
     - 새 애플리케이션 디렉터리로 이동합니다.
@@ -135,13 +135,13 @@ Visual Studio Code (VS Code)는 Windows, Linux 및 Mac에서 Q # 프로그램을
 
     - 애플리케이션 실행
 
-        ```bash
+        ```dotnetcli
         dotnet run
         ```
 
         다음 출력이 표시됩니다. `Hello quantum world!`
 
     
-## <a name="whats-next"></a>다음은 무엇일까요?
+## <a name="whats-next"></a>다음 단계
 
 지금까지 기본 설정 환경에 Quantum Development Kit를 설치했으므로 [첫 번째 양자 프로그램](xref:microsoft.quantum.write-program)을 작성 및 실행할 수 있습니다.
