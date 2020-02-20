@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: c135dacb2fc305fa97874cb4abcf4e2ac489b9e4
-ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+ms.openlocfilehash: be1eff8127be9fb024a1dc2de3ec82952ac2dc2b
+ms.sourcegitcommit: b7e205aaa7fa1ca9f0daa163e46154945f4bc965
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76871620"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77441044"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit 릴리스 정보
 
@@ -21,13 +21,14 @@ ms.locfileid: "76871620"
 
 업데이트 지침은 [업데이트 가이드](xref:microsoft.quantum.update)를 참조하세요.
 
+
 ## <a name="version-01020012831"></a>버전 0.10.2001.2831
 
 *릴리스 날짜: 2020년 1월 29일*
 
 이 릴리스에는 다음이 포함됩니다.
 
-- 새 Microsoft.Quantum.SDK NuGet 패키지. 자세한 내용은 [README](https://github.com/microsoft/qsharp-compiler/blob/master/src/QuantumSdk/README.md)를 참조하세요.
+- 새 Microsoft.Quantum.SDK NuGet 패키지
 - .NET Core 3.1에 대한 지원 추가. 이전 .NET Core SDK 버전으로 빌드하면 문제가 발생할 수 있으므로 버전 3.1.100을 설치하는 것이 좋습니다.
 - Microsoft.Quantum.QsCompiler.Experimental에서 사용할 수 있는 새 컴파일러 변환
 - IQ#에서 출력 상태 벡터를 HTML로 노출하는 새 기능
@@ -385,7 +386,7 @@ Quantum Development Kit의 0.2 버전에서 업그레이드하는 경우, [Q# �
 
 ### <a name="community-contributions"></a>커뮤니티 기여
 
-Q# 코더 커뮤니티는 성장하고 있으며 http://github.com/Microsoft/quantum 에서 열려 있는 코드베이스에 제출된 첫 번째 사용자가 라이브러리 및 샘플에 기여해 주셔서 감사합니다.  다음 기여자분들께 깊은 감사의 말씀을 드립니다.
+Q# 코더 커뮤니티는 성장하고 있으며 http://github.com/Microsoft/quantum 에서 열려 있는 코드베이스에 제출된 첫 번째 사용자가 라이브러리 및 샘플에 기여해 주셔서 감사합니다.  **다음 기여자분들께** 깊은 감사의 말씀을 드립니다.
 * Mathias Soeken([@msoeken](https://github.com/msoeken)): 지정된 순열을 구현하도록 Toffoli 네트워크를 생성하는 변환 기반 논리 합성 메서드를 정의하는 샘플에 기여했습니다. 이 코드는 전체적으로 Q# 함수 및 작업으로 작성됩니다.  [PR #41](https://github.com/Microsoft/Quantum/pull/41).
 * RolfHuisman([@RolfHuisman](https://github.com/RolfHuisman)): Microsoft MVP Rolf Huisman은 클래식 제어 흐름 및 제한된 퀀텀 작업이 포함되지 않은 제한된 프로그램 클래스에 대한 Q# 코드에서 플랫 QASM 코드를 생성하는 샘플에 기여했습니다. [PR #59](https://github.com/Microsoft/Quantum/pull/59)
 * Sarah Kasier([@crazy4pi314](https://github.com/crazy4pi314)): 제어된 작업에 대한 라이브러리 함수를 제출하여 코드베이스를 개선하도록 도왔습니다. [PR #53](https://github.com/Microsoft/Quantum/pull/53)
