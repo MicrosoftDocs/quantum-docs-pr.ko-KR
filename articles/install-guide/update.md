@@ -1,17 +1,18 @@
 ---
 title: Microsoft Quantum Development Kit (QDK)를 업데이트 하는 방법 알아보기
+description: 'Q # 프로젝트와 Microsoft Quantum Development Kit를 현재 버전으로 업데이트 하는 방법을 설명 합니다.'
 author: natke
 ms.author: nakersha
 ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.update
-ms.openlocfilehash: f19285ae0e008b3460d06430a236f098d716e268
-ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
+ms.openlocfilehash: 264b5640216b2c0a468b625cdef4b9e0123d8b39
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "77036324"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904760"
 ---
 # <a name="update-the-microsoft-quantum-development-kit-qdk"></a>Microsoft Quantum Development Kit (QDK) 업데이트
 

@@ -1,24 +1,24 @@
 ---
-title: Symmetries of 분자 적분 | Microsoft Docs
-description: Symmetries of 분자 적분 개념 문서
+title: Symmetries of 분자 적분
+description: 'Q # OrbitalIntegral 형식을 사용 하 여 분자 symmetries를 열거 하는 방법에 대해 알아봅니다.'
 author: nathanwiebe2
 ms.author: nawiebe
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.symmetries
-ms.openlocfilehash: 041d600bc8d65e7d67f5fe7d61a69426fb42ffbc
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: b7e7b79af17af544c4a784eff08500498afc9f67
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73442387"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904471"
 ---
 # <a name="symmetries-of-molecular-integrals"></a>Symmetries of 분자 적분
 
-[전자 시스템에 대 한 퀀텀 모델](xref:microsoft.quantum.chemistry.concepts.quantummodels)에서 제공 되는 Hamiltonian 인 Hamiltonian의 고유 대칭은 서로를 서로 상호 작용 하 고 nuclei를 사용 하 여 파괴에 대해 설명 하는 여러 가지 symmetries이 될 수 있습니다. Hamiltonian 용어를 압축 하는 데 활용 됩니다.
-일반적으로 기본 함수 $ \psi_j $에 대 한 추가 가정이 생성 되지 않는 경우에는 다음 [에 대 한 퀀텀 모델의 정수에서 즉시 볼 수 있는 \begin{equation} h_ {pqrs} = h_ {qpsr}, \tag{★} \label{eq: hpqrs} \begin{equation}만 있으면 됩니다. ](xref:microsoft.quantum.chemistry.concepts.quantummodels)$P, q $ 및 $r, s $가 통신에서 상호 관련 된 경우 해당 값이 동일 하 게 유지 된다는 것을 바탕으로 한 전자 시스템.
+[전자 시스템에 대 한 퀀텀 모델](xref:microsoft.quantum.chemistry.concepts.quantummodels)에서 제공 되는 Hamiltonian 인 Hamiltonian의 고유 대칭은 서로를 서로 상호 작용 하 고 nuclei를 사용 하 여 파괴를 설명 하는, symmetries의 용어를 압축 하는 데 활용할 수 있는 몇 가지 Hamiltonian를 제공 합니다.
+일반적으로 기본 함수 $ \ psi_j $에 대해 더 이상 가정이 생성 되지 않는 경우에는 \begin{st} h_ {pqrs} = h_ {qpsr}만 있으면 됩니다. \t $p, q $ 및 $r, s $가 통신에서 상호 관련 된 경우 해당 값이 동일 하 게 유지 된다는 것을 확인 하면 전자 시스템에 대 한 값이 동일 하 게 ★ 유지 된다는 것을 확인 하 여 [전자 시스템에 대 한](xref:microsoft.quantum.chemistry.concepts.quantummodels) 값이 동일 하 게 유지 된다는 것을 확인 했을 때 hpqrs ()
 
-계산 orbitals가 실제 값 (가우스 궤도 기반) 인 것으로 가정 하면 \begin{ke} h_ {pqrs} = h_ {qpsr} = h_ {srqp} = h_ {rspq} = h_ {rqps} = h_ {psrq} = h_ {spqr} = h_ {qrsp} .\tag {★} \label{eq: hpqrsreal} \end{ 수식} 이러한 가정을 보유 한 경우 위의 symmetries을 사용 하 여 Hamiltonian의 행렬 요소를 $8 $로 저장 하는 데 필요한 데이터를 줄일 수 있습니다. 이렇게 하면 일관 된 방식으로 데이터를 가져오는 것이 약간 더 어려워집니다.
+사용자가 가우스 궤도를 기준으로 하는 경우에는 spin orbitals가 실제 값 이라고 가정 하면 \begin{st} h_ {pqrs} = h_ {qpsr} =입니다. h_ {srqp} = h_ {rspq} = h_ {rqps} = h_ {psrq} = h_ {spqr} = h_ {qrsp} .\tag {★} \label{eq: hpqrsreal} \end{ 수식} 이러한 가정을 보유 한 경우 위의 symmetries을 사용 하 여 Hamiltonian의 행렬 요소를 $8 $로 저장 하는 데 필요한 데이터를 줄일 수 있습니다. 이렇게 하면 일관 된 방식으로 데이터를 가져오는 것이 약간 더 어려워집니다.
 다행히 Hamiltonian 시뮬레이션 라이브러리에는 [LIQUI $ | \rangle $](https://www.microsoft.com/en-us/research/project/language-integrated-quantum-operations-liqui/) 에서 또는 [Nwchem](http://www.nwchem-sw.org/index.php/Main_Page)에서 직접 정수 파일을 가져오는 데 사용할 수 있는 서브루틴이 있습니다.
 
 분자 궤도 정수 (예: $h\_{pq} $ 및 $h\_{pqrs} $ 용어)는이 대칭을 표현 하는 데 도움이 되는 다양 한 기능을 제공 하는 `OrbitalIntegral` 유형을 사용 하 여 표현 됩니다.

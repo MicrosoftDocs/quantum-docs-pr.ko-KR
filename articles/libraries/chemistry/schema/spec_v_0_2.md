@@ -1,16 +1,17 @@
 ---
-title: Broombridge 스키마 사양
+title: Broombridge 스키마 사양 (ver 0.2)
+description: Microsoft 퀀텀 화학 library에 대 한 Broombridge 퀀텀 화학 schema v 0.2의 사양에 대해 자세히 설명 합니다.
 author: guanghaolow
 ms.author: gulow@microsoft.com
 ms.date: 05/28/2019
 ms.topic: article
 uid: microsoft.quantum.libraries.chemistry.schema.spec_v_0_2
-ms.openlocfilehash: 2f4be96bc6f1e8e6fe21b93bc0d9ab2aa367fd53
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: df7e651b7d32e672c6e83346ff603132bd55c1a2
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73185310"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907276"
 ---
 # <a name="broombridge-specification-v02"></a>Broombridge 사양 v 0.2 #
 
@@ -68,7 +69,7 @@ Quantity 개체는 다음 중 하나 여야 합니다.
 - 스파스 배열 수량 개체입니다.
 
 
-### <a name="examples"></a>예시 ###
+### <a name="examples"></a>예 ###
 
 이 섹션은 정보를 제공 합니다.
 
@@ -136,7 +137,7 @@ Broombridge 개체에는 값이 JSON 배열인 속성 `problem_description` 있�
 각 문제 설명 개체의 `hamiltonian` 속성은 특정 퀀텀 화학 문제에 대 한 Hamiltonian에 대 한 설명으로, 한 개 및 두 개의 본문 용어를 실수의 스파스 배열로 나열 합니다.
 각 문제 설명 개체에서 설명 하는 Hamiltonian 연산자는 다음 형식을 사용 합니다.
 
-$ $ H = \sum\_\{i, j\}\sum\_{\sigma\in\\{\uparrow, \down화살표\\}} H\_\{ij\} a ^\{\aa\}\_{i , \sigma} a\_{j, \sigma} + \frac{1}{2}\sum\_\{i, j, k, l\}\sum\_{\시그마, \rho\in\\{\uparrow, \frac\\}} h\_{ijkl} a ^ \\_{i , \sigma} a ^ \dagger\_{k, \rho} a\_{l, \rho} a\_{j,, $ $
+$ $ H = \sum\_\{i, j\}\sum\_{\sigma\in\\{\uparrow, \down화살표\\}} H\_\{ij\} a ^\{\sum\}\_{i, \sigma} a\_{j, \sigma} + \frac{1}{2}\sum\_\{i, j, k, l\}\sum\_{\sum, \rho\in\\{ijkl, \down화살표\\}} H\_{} a ^ \sum\_{i , \sigma} a ^ \dagger\_{k, \rho} a\_{l, \rho} a\_{j,, $ $
 
 여기에서 _ {ijkl} = (ij | kl) $ in Mulliken 규칙을 $h 합니다.
 
@@ -146,7 +147,7 @@ $ $ h_ {ij} = \int {\mathrm d} x \int ^ *\_i (x) \int (\frac{1}{2}\nabla ^ 2 + \
 
 그리고 두 전자 단어는
 
-$ $ h\_\{ijkl\} = \iint \{\mathrm d\}x ^ 2 \psi ^\{\*\}\_\_i (x\_1) \psi\_j (x\{1) \iint 1\}\{\|x\_1-x\_2\|\}\psi\_k ^\{\*\}(x\_2) \psi\_l (x\_2).
+$ $ h\_\{ijkl\} = \iint \{\mathrm d\}x ^ 2 \psi ^\{\*\}\_\_i (x\_1) \psi\_j (x 1) \iint\{1\}\{\|x\_1-x\_2\|\}\_psi\{k ^ \*\}\_(x\_2) \psi\_l (x 2).
 $$
 
 `integral_sets` 속성의 각 요소에 대 한 [`basis_set` 속성](#basis-set-object) 에 대 한 설명에 설명 된 대로, 사용 되는 기본 함수는 실제 값 이라고 명확 하 게 가정 합니다.
@@ -174,14 +175,14 @@ $$
 Hamiltonian 개체의 `one_electron_integrals` 속성은 인덱스가 두 정수이 고 해당 값이 숫자인 스파스 배열 수량 이어야 합니다.
 모든 용어에는 `i >= j``[i, j]` 인덱스가 있어야 합니다.
 
-> 두고 이는 Hamiltonian가 Hermitian 임을 나타내는 _ {ij} = h_ {ji} $ $h 하는 대칭을 반영 합니다.
+> 두고 이는 Hamiltonian가 Hermitian의 결과로 _ {ij} = h_ {ji} $ $h 하는 대칭을 반영 합니다.
 
 
 ###### <a name="example"></a>예제 ######
 
 이 섹션은 정보를 제공 합니다.
 
-다음 스파스 배열 수량은 Hamiltonian $ $ H = \left (-5.0 (a ^\{\left\}\_{1, \uparrow} a\_{1, \uparrow} + a ^\{\left\}\_{1, a\_{1입니다. , \downarrow}) + 0.17 (a ^\{\dagger\}\_{2, \uparrow} a\_{1, \uparrow} + a ^\{\dagger\}\_{1, \uparrow} a\_{2, + a ^\{\dagger\}\_{2 , \downarrow} a\_{1, \downarrow} + a ^\{\dagger\}\_{1, \downarrow} a\_{2, \downarrow}) \dagger)\\,
+다음 스파스 배열 수량은 Hamiltonian $ $ H = \left (-5.0 (a ^\{\left \_{1을 나타냅니다.\_{1, \uparrow} + a ^\{\left\}\_{1, \downarrow} a\_{1, \downarrow}) + 0.17 (a ^\{\left\}\_{2, \uparrow} a\_{1, \uparrow} + a ^\{\left\}\_{1, a\_{2, + a ^\{\left\}\_{2 , \downarrow} a\_{1, \downarrow} + a ^\{\dagger\}\_{1, \downarrow} a\_{2, \downarrow}) \dagger)\\,\}
 $$
 
 ```yaml
@@ -206,7 +207,7 @@ Hamiltonian 개체의 `two_electron_integrals` 속성은 `index_convention`라�
 
 각 `two_electron_integrals` 속성에는 `index_convention` 속성이 있어야 합니다.
 `index_convention` 속성의 값은 표 1에 나열 된 허용 되는 값 중 하나 여야 합니다.
-`index_convention` 값이 `mulliken`되는 경우에는 `two_electron_integrals` 스파스 배열 수량의 각 요소에 대해 Broombridge 문서를 로드 하는 파서는 두 전자 $h 연산자 (_ {i, j, k, l} a ^ \dagger_i a ^ \dagger_j a_k a_l $)와 같은 Hamiltonian 항을 인스턴스화해야 합니다. , 여기서 $i $, $j $, $k $ 및 $l $는 값의 정수 여야 하며, 여기서 $h _ {i, j, k, l} $은 스파스 배열 수량의 요소 `[i, j, k, l, h(i, j, k, l)]`입니다.
+`index_convention` 값이 `mulliken`되는 경우 스파스 배열 수량 `two_electron_integrals`의 각 요소에 대해 Broombridge 문서를 로드 하는 파서는 두 전자 $h 연산자 (_ {i)와 같은 Hamiltonian 항을 인스턴스화해야 합니다. j, k, l} a ^ \ dagger_i a ^ \ dagger_j a_k a_l $. 여기서 $i $, $j $, $k $ 및 $l $는 값의 정수 여야 하며, 여기서 $h _ {i, j, k, l} $은 스파스 배열 수량의 요소 `[i, j, k, l, h(i, j, k, l)]`입니다.
 
 ###### <a name="symmetries"></a>Symmetries ######
 
@@ -234,7 +235,7 @@ Hamiltonian 개체의 `two_electron_integrals` 속성은 `index_convention`라�
 
 다음 개체는 Hamiltonian를 지정 합니다.
 
-$ $ H = \frac12 \sum\_{\sum, \rho\in\\{\uparrow, \downix\\}} \sum \dagger} (1.6 a ^ {\dagger}\_{1, \rho} a ^ {\rho}\_{1, \sigma}-a\_{1, \dagger} a\_{1, 0.1 a ^ {\_{6 , \sigma} a ^ {\dagger}\_{1, \rho} a\_{3, \rho} a\_{2, \sigma}-0.1 a ^ {\dagger}\_{6, \sigma} a ^ {\dagger}\_{1, \rho} a\_{2, \rho} a\_{3 , \sigma}-0.1 a ^ {\dagger}\_{1, \sigma} a ^ {\dagger}\_{6, \rho} a\_{3, \rho} a\_{2, \sigma}-0.1 a ^ {\dagger}\_{1, \sigma} a ^ {\dagger}\_{6, \rho} a\_{2 , \rho}\_{3, \sigma} $ $ $ $-0.1 a ^ {\dagger}\_{3, \sigma} a ^ {\dagger}\_{2, \rho} a\_{6, \rho} a\_{1, \sigma}-0.1 a ^ {\dagger}\_{3, \sigma} a ^ {\dagger}\_{2 , \rho} a\_{1, \rho} a\_{6, \sigma}-0.1 a ^ {\dagger}\_{2, \sigma} a ^ {\dagger}\_{3, \rho} a\_{6, \rho} a\_{1, \sigma}-0.1 a ^ {\dagger}\_{2 , \sigma} a ^ {\dagger}\_{3, \rho} a\_{1, \rho} a\_{6, \sigma}\Biggr)\\, \textrm{Ha}.
+$ $ H = \frac12 \sum\_{\sum, \rho\in\\{\uparrow, \downi\\}} \Ampgr (1.6 a ^ {\dagger}\_{1, \sigma} a ^ {\dagger}\_{1, \rho} a\_{1, \rho} a\_{1, \sigma}-0.1 a ^ {\dagger}\_{6, \sigma} a ^ {\dagger}\_{1, \rho} a\_{3, \rho} a\_{2, \sigma}-0.1 a ^ {\dagger}\_{6, \sigma} a ^ {\dagger}\_{1, \rho} a\_{2 , \rho} a\_{3, \sigma}-0.1 a ^ {\dagger}\_{1, \sigma} a ^ {\dagger}\_{6, \rho} a\_{3, \rho} a\_{2, \sigma}-0.1 a ^ {\dagger}\_{1, \sigma} a ^ {\dagger}\_{6, \rho} a\_{2, \rho} a\_{3, \sigma} $ $ $ $-0.1 a ^ {\dagger}\_{3, \sigma} a ^ {\dagger}\_{2, \rho} a\_{6, \rho} a\_{1, \sigma}-0.1 a ^ {\dagger}\_{3 , \sigma} a ^ {\dagger}\_{2, \rho} a\_{1, \rho}\_{6, \sigma}-0.1 a ^ {\dagger}\_{2, \sigma} a ^ {\dagger}\_{3, \rho} a\_{6, \rho} a\_{1, \sigma}-0.1 a ^ {\dagger}\_{2, \sigma} a ^ {\dagger}\_{3, \rho} a\_{1, \rho} a\_{6, \sigma}\Biggr)\\, \textrm{Ha}.
 $$
 
 ```yaml
@@ -263,7 +264,7 @@ two_electron_integrals:
 
 `method` 속성의 값이 `sparse_multi_configurational`인 경우 상태 개체에는 기본 상태 배열과 정규화 되지 않은 amplitudes을 포함 하는 `superposition` 속성이 있어야 합니다.
 
-예를 들어 초기 상태 $ $ \ket{G0} = \ket{G1} = \ket{G2} = (a ^ {\dagger}\_{1, \uparrow}a ^ {\dagger}\_{2, \uparrow}a ^ {\dagger}\_{2, \downarrow}) \ket{0} $ $ $ $ \ket{E} = \frac{0.1 (a ^ {\dagger}\_{1) , \uparrow}a ^ {\dagger}\_{2, \uparrow}a ^ {\dagger}\_{2, \downarrow}) + 0.2 (a ^ {\dagger}\_{1, \uparrow}a ^ {\dagger}\_{3, \uparrow}a ^ {\dagger}\_{2, \downarrow})} {\sqrt{| 0.1 | ^ 2 + | 0.2 | ^ 2}} \ket{0}, $ $ where $ \ket{E} $에는 에너지 $0.987 \textrm{Ha} $가 표시 됩니다.
+예를 들어 초기 상태 $ $ \ket{G0} = \ket{G1} = \ket{G2} = (a ^ {\dagger}\_{1, \uparrow}a ^ {\dagger}\_{2, \uparrow}a ^ {\dagger}\_{2, \downarrow}) \ket{0} $ $ $ $ \ket{E} = \frac{0.1 (a ^ {\dagger}\_{1, \uparrow}a ^ {\dagger}\_{2, \uparrow}a ^ {\dagger}\_{2, \downarrow}) + 0.2 (a ^ {\dagger}\_{1, \uparrow}a ^ {\dagger}\_{3, \uparrow}a ^ {\dagger}\_{2, \downarrow})} {\sqrt{| 0.1 | ^ 2 + | 0.2 | ^ 2}} \ket{0}, $ $ where $ \ket{E} $에는 에너지 $0.987 \textrm{Ha} $가 표시 됩니다.
 ```yaml
 initial_state_suggestions: # optional. If not provided, spin-orbitals will be filled to minimize one-body diagonal term energies.
   - label: "|G0>"
@@ -296,7 +297,7 @@ JSON 개체에는 두 개의 본문 클러스터 연산자와 해당 amplitudes�
 
 $ $ \ket{\text{UCCSD}} = e ^ {T-T ^ \dagger}\ket{\text{reference}}, $ $
 
-$ $ T = 0.1 a ^ {\dagger}\_{3, \uparrow}a\_{2, \downarrow} + 0.2 a ^ {\dagger}\_{2, \uparrow}a\_{2, \downarrow}-0.3 a ^ {\dagger}\_{1, \uparrow}a ^ {\dagger}\_{3, \downarrow}a\_{3 , \uparrow}a\_{2, \downarrow} $ $는로 표시 됩니다.
+$ $ T = 0.1 a ^ {\dagger}\_{3, \uparrow}a\_{2, \downarrow} + 0.2 a ^ {\dagger}\_{2, \uparrow}a\_{2, \downarrow}-0.3 a ^ {\dagger}\_{1, \uparrow}a ^ {\dagger}\_{3, \downarrow}a\_{3, \uparrow}a\_{2, \downarrow} $ $는 다음으로 표시 됩니다.
 ```yaml
 initial_state_suggestions: # optional. If not provided, spin-orbitals will be filled to minimize one-body diagonal term energies.
   - label: "UCCSD"
@@ -341,7 +342,7 @@ initial_state_suggestions: # optional. If not provided, spin-orbitals will be fi
 - {"units": "ev", "value": 27.2113831301723}
 ```
 
-### <a name="table-2-allowed-index-conventions"></a>표 2. 허용 되는 인덱스 규칙 ###
+### <a name="table-2-allowed-index-conventions"></a>테이블 2. 허용 되는 인덱스 규칙 ###
 
 이 섹션은 규범입니다.
 

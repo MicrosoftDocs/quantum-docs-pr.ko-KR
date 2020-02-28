@@ -1,19 +1,19 @@
 ---
-title: 상관 관계가 지정 된 wavefunctions | Microsoft Docs
-description: 퀀텀 Dynamics 개념 문서
+title: 상관 관계가 지정된 파동 함수
+description: Microsoft 퀀텀 화학 라이브러리를 사용 하 여 wavefunctions의 동적 및 비동적 상관 관계에 대해 알아봅니다.
 author: guanghaolow
 ms.author: gulow@microsoft.com
 ms.date: 05/28/2019
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.multireference
-ms.openlocfilehash: 0b14f373d31c5b63e313e07810daf62d9195b1d3
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 005ef86382ca72969b06a4206cab01f3845718e2
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73184035"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904437"
 ---
-# <a name="correlated-wavefunctions"></a>상관 관계가 지정 된 wavefunctions
+# <a name="correlated-wavefunctions"></a>상관 관계가 지정된 파동 함수
 
 특히 평형 기 하 도형 근처의 많은 시스템에서 [Hartree – Fock](xref:microsoft.quantum.chemistry.concepts.hartreefock) 이론은 단일 결정 참조 상태를 통해 분자 속성에 대 한 질적 설명을 제공 합니다. 그러나 양적 정확도를 얻기 위해 상관 관계 효과를 고려해 야 합니다. 
 
@@ -24,9 +24,9 @@ ms.locfileid: "73184035"
 화학 라이브러리는 택배의 superposition로 multireference 문제에 대 한 0 번째 order wavefunction를 지정 하는 방법을 제공 합니다. 스파스 multireference wavefunctions를 호출 하는이 방법은 소수의 구성 요소만 superposition를 지정 하기에 충분 한 경우에 적용 됩니다. 또한 라이브러리는 일반화 된 단일 연결 클러스터 ansatz를 통해 단일 결정 참조의 위에 동적 상관 관계를 포함 하는 메서드를 제공 합니다. 또한 퀀텀 컴퓨터에서 이러한 상태를 생성 하는 퀀텀 회로를 생성 합니다. 이러한 상태는 [Broombridge 스키마](xref:microsoft.quantum.libraries.chemistry.schema.broombridge)에 지정 될 수 있으며, 이러한 상태를 화학 라이브러리를 통해 수동으로 지정 하는 기능도 제공 합니다.
 
 ## <a name="sparse-multi-reference-wavefunction"></a>스파스 다중 참조 wavefunction
-다중 참조 상태 $ \ket{\psi_{\rm {MCSCF}}} $은 (는) $N $-전자 determininants의 선형 조합으로 명시적으로 지정할 수 있습니다.
-\begin{align} \ket{\psi_{\rm {MCSCF}}} \propto \sum_{i_1 < i_2 < \< c i_N} \lambda_{i_1, i_2, \propto, \dagger_{i_1}a} a ^ \dagger_{i_2}\cdots ^ \dagger_{i_N}\ket a ^{0}.
-예를 들어 \end{align}는 다음과 같이 화학 라이브러리에서 $ \propto (0.1 a ^ \dagger_1a ^ \dagger_2a ^ \dagger_6-0.2 a ^ \dagger_2a ^ \dagger_1a ^ \dagger_5){0}\ket $를 지정할 수 있습니다.
+다중 참조 상태 $ \ket{\ psi_ {\rm {MCSCF}} $은 (는) $N $-전자 s 이후 determininants의 선형 조합으로 명시적으로 지정할 수 있습니다.
+\begin{align} \ket{\ psi_ {\rm {MCSCF}}} \propto \ sum_ {i_1 < i_2 < \cit< i_N} \ lambda_ {i_1} i_2} a ^ \ i_N {dagger_} \cdpi a ^ \ i_1 {dagger_} \ket i_2.{0}
+예를 들어 \end{align}에 대 한 상태 $ \propto (0.1 a ^ \ dagger_1a ^ \ dagger_2a ^ \ dagger_6-0.2 a ^ \ dagger_2a ^ \ dagger_1a ^ \ dagger_5) \ket{0}$는 다음과 같이 연금술 라이브러리에 지정할 수 있습니다.
 ```csharp
 // Create a list of tuples where the first item of each 
 // tuple are indices to the creation operators acting on the
@@ -42,18 +42,18 @@ var wavefunction = new FermionWavefunction<int>(superposition);
 Superposition 구성 요소에 대 한 명시적 표현은 몇 가지 구성 요소만 지정 해야 하는 경우에 적용 됩니다. 필요한 상태를 정확 하 게 캡처하기 위해 많은 구성 요소가 필요한 경우에는이 표현을 사용 하지 않아야 합니다. 그 이유는 퀀텀 컴퓨터에서이 상태를 준비 하는 퀀텀 회로의 게이트 비용으로, superposition 구성 요소 수와 최소의 quadratically, superposition amplitudes의 1-표준을 사용 하 여 최대의입니다.
 
 ## <a name="unitary-coupled-cluster-wavefunction"></a>단일 연결-클러스터 wavefunction
-Chemistery library를 사용 하 여 단일 연결 클러스터 wavefunction $ \ket{\psi_{\rm {UCC}} $를 지정할 수도 있습니다. 이 경우, 예를 들어, $ \ket{\psi_{\rm{SCF}}} $와 같은 단일 결정 참조 상태가 있습니다. 그런 다음, 단일 연결 클러스터 wavefunction의 구성 요소는 참조 상태에서 작동 하는 단일 연산자를 통해 implicity 지정 됩니다.
-이 단일 연산자는 일반적으로 $e ^ {T-T ^ \dagger} $로 작성 됩니다. 여기서 $T-T ^ \aaa $는 Hermitian 클러스터 연산자입니다. 따라서 \begin{align} \ket{\psi_{\rm {UCC}}} = e ^ {T-T ^ \dagger}\ket{\psi_{\rm{SCF}}}.
+Chemistery library를 사용 하 여 단일 연결 클러스터 wavefunction $ \ket{\ psi_ {\rm {UCC}}}을 지정할 수도 있습니다. 이 경우, 예를 들어, $ \ket{\ psi_ {\rm{SCF}}} $와 같은 단일 결정 참조 상태가 있습니다. 그런 다음, 단일 연결 클러스터 wavefunction의 구성 요소는 참조 상태에서 작동 하는 단일 연산자를 통해 implicity 지정 됩니다.
+이 단일 연산자는 일반적으로 $e ^ {T-T ^ \dagger} $로 작성 됩니다. 여기서 $T-T ^ \aaa $는 Hermitian 클러스터 연산자입니다. 따라서 \begin{align} \ket{\ psi_ {\rm {UCC}}} = e ^ {T-T ^ \dagger}\ket{\ psi_ {\rm{SCF}}}.
 \end{align}
 
-클러스터 연산자 $T = T_1 + T_2 + \cum$를 부분으로 분할 하는 것도 일반적입니다. 여기서 $T _j $ 부분은 $j $-body 용어를 포함 합니다. 일반화 된 결합 클러스터 이론에서 단일 (단일 본문 클러스터)는 \begin{align} T_1 = \sum_{pq}t ^ {p} _ {q} a ^ \dagger_p a_q, \end{align}입니다.
+또한 클러스터 연산자 $T = T_1 + T_2 + \ci$를 부분으로 분할 하는 것이 일반적입니다 .이 경우 _j $에 $T $j $-body 용어가 포함 됩니다. 일반화 된 클러스터 이론에서 단일 (단일 본문 클러스터)는 \begin{align} T_1 = \ sum_ {pq} T ^ {p} _ {q} a ^ \ dagger_p a_q, \end{align} 형식입니다.
 
-두 개의 본문 클러스터 연산자 (double)는 \begin{align} T_2 = \sum_{pqrs}t ^ {pq} _ {rs} a ^ \dagger_p a ^ \dagger_q a_r a_s 형식입니다.
+및 두 개의 본문 클러스터 연산자 (double)는 \begin{align} T_2 = \ sum_ {pqrs} T ^ {pq} _ {rs} a ^ \ dagger_p ^ \ dagger_q a_r a_s 형식입니다.
 \end{align}
 
 더 높은 주문 용어 (삼중 쌍, quadruples 등)는 가능 하지만 현재는 연금술 라이브러리에서 지원 되지 않습니다.
 
-예를 들어 $ \ket{\psi_{\rm{SCF}}} = a ^ \dagger_1 a ^ \dagger_2\ket{0}$를 사용 하 고 $T = 0.123 a ^ \dagger_0 a_1 + 0.456 a ^ \dagger_0a ^ \dagger_3 a_1 a_2-0.789 a ^ \dagger_3a ^ \dagger_2 a_1 a_0 $를 사용할 수 있습니다. 그러면 다음과 같이이 상태가 화학 라이브러리에서 인스턴스화됩니다.
+예를 들어 $ \ket{\ psi_ {\rm{SCF}}} = a ^ \ dagger_1 a ^ \ dagger_2 \ket{0}$를 사용 하 고 let $T = 0.123 a ^ \ dagger_0 a_1 + 0.456 a ^ \ dagger_0a ^ \ dagger_3 a_1 a_2 dagger_3a-0.789 a ^ \ dagger_2 ^ \ a_1 a_0 $를 사용 합니다. 그러면 다음과 같이이 상태가 화학 라이브러리에서 인스턴스화됩니다.
 ```csharp
 // Create a list of indices of the creation operators
 // for the single-reference state
@@ -77,7 +77,7 @@ var clusterOperator = new[]
 var wavefunction = new FermionWavefunction<int>(reference, clusterOperator);
 ```
 
-대신 정수 인덱스 대신 `SpinOrbital` 인덱스를 지정 하 여 Spin convervation을 명시적으로 만들 수 있습니다. 예를 들어 $ \ket{\psi_{\rm{SCF}}} = a ^ \dagger_{1, \uparrow} a ^ \dagger_{2, \downarrow}\ket{0}$ 및 let $T = 0.123 a ^ \dagger_{0, \uparrow} a_ {1, \uparrow} + 0.456 a ^ \dagger_{0, \uparrow} a ^ \dagger_{3, \downarrow} a_ {1, \uparrow} a_ {2, \ 아래쪽 화살표}-0.789 a ^ \dagger_{3 \uparrow} a ^ \dagger_{2, \uparrow} a_ {1, \uparrow} a_ {0, \uparrow} $ be spin convserving. 그러면 다음과 같이이 상태가 화학 라이브러리에서 인스턴스화됩니다.
+대신 정수 인덱스 대신 `SpinOrbital` 인덱스를 지정 하 여 Spin convervation을 명시적으로 만들 수 있습니다. 예를 들어 $ \ket{\ psi_ {\rm{SCF}}} = a ^ \ dagger_ {1, \uparrow} a ^ \ dagger_ {2, \downarrow}\ket{0}$ 및 let $T = 0.123 a ^ \ dagger_ {0을 사용할 수 있습니다. \uparrow} a_ {1, \uparrow} + 0.456 a ^ \ dagger_ {0, \uparrow} a ^ \ dagger_ {3, \downarrow} a_ {1, \uparrow} a_ {2, \downarrow}-0.789 a ^ \ dagger_ {3, \uparrow} a ^ \ dagger_ {2, \uparrow} a_ {1, \uparrow} a_ {0, \uparrow} $ be spin convserving. 그러면 다음과 같이이 상태가 화학 라이브러리에서 인스턴스화됩니다.
 ```csharp
 // Create a list of indices of the creation operators
 // for the single-reference state

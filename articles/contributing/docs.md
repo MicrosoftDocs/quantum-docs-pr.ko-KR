@@ -1,17 +1,17 @@
 ---
-title: 참여 설명서 | Microsoft Docs
-description: 참여 설명서
+title: Microsoft QDK 문서에 기여
+description: Microsoft 퀀텀 설명서 집합에 개념 또는 API 콘텐츠를 참여 하는 방법에 대해 알아봅니다.
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.docs
-ms.openlocfilehash: 1e24dd859c0b75a161f4f3c7151e2eec227075a2
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: d244a7841b4093031d6225230a6cbefb22cc6a39
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183678"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904896"
 ---
 # <a name="improving-documentation"></a>설명서 개선 #
 
@@ -24,8 +24,8 @@ ms.locfileid: "73183678"
 
 즉, 각 설명서 형태는 세부 정보에서 약간 다릅니다.
 
-- **개념 설명서** 는 https://docs.microsoft.com/quantum 에 게시 된 문서 집합으로 구성 되며,이를 통해 퀀텀 컴퓨팅의 기본 사항에서 교환 형식에 대 한 기술 사양을 설명 하는 모든 것을 설명 합니다. 이러한 문서는 풍부한 설명서 집합을 만드는 데 사용 되는 Markdown variant 인 [Flavored Markdown (DFM)](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html)로 작성 되었습니다.
-- **API 참조** 는 https://docs.microsoft.com/qsharp/api/ 에 게시 된 각 Q # 함수, 작업 및 사용자 정의 형식에 대 한 페이지 집합입니다. 이러한 페이지에는 호출 가능한 각에 대 한 입력 및 작업과 추가 정보에 대 한 링크와 예제가 나와 있습니다. API 참조는 각 릴리스의 일부로 Q # 소스 코드의 small DFM 문서에서 자동으로 추출 됩니다.
+- **개념 설명서** 는 https://docs.microsoft.com/quantum에 게시 된 문서 집합으로 구성 되며,이를 통해 퀀텀 컴퓨팅의 기본 사항에서 교환 형식에 대 한 기술 사양을 설명 하는 모든 것을 설명 합니다. 이러한 문서는 풍부한 설명서 집합을 만드는 데 사용 되는 Markdown variant 인 [Flavored Markdown (DFM)](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html)로 작성 되었습니다.
+- **API 참조** 는 https://docs.microsoft.com/qsharp/api/에 게시 된 각 Q # 함수, 작업 및 사용자 정의 형식에 대 한 페이지 집합입니다. 이러한 페이지에는 호출 가능한 각에 대 한 입력 및 작업과 추가 정보에 대 한 링크와 예제가 나와 있습니다. API 참조는 각 릴리스의 일부로 Q # 소스 코드의 small DFM 문서에서 자동으로 추출 됩니다.
 - 각 샘플 및 kata에 포함 된 **추가 정보<!---->** 파일은 해당 샘플 또는 kata를 사용 하는 방법, 포함 된 내용, 나머지 퀀텀 개발 키트와의 관계를 설명 합니다. 이러한 파일은 코드 리포지토리에 직접 문서를 연결 하는 데 널리 사용 되는 [DFM (GitHub Flavored Markdown)](https://github.github.com/gfm/)을 사용 하 여 작성 되었습니다.
 
 ## <a name="contributing-to-the-conceptual-documentation"></a>개념 설명서에 기여 ##
@@ -45,48 +45,85 @@ ms.locfileid: "73183678"
 
 API 참조에 대 한 향상 된 기능을 제공 하기 위해 문서화 되는 코드에서 직접 끌어오기 요청을 여는 것이 가장 유용 합니다.
 각 함수, 작업 또는 사용자 정의 형식은 문서 주석을 지원 합니다 (`//`대신 `///`으로 표시 됨).
-퀀텀 개발 키트의 각 릴리스를 컴파일할 때 이러한 주석은 각 호출의 입력 및 출력에 대 한 세부 정보, 각 호출 가능의 가정 및 사용 방법에 대 한 예제를 포함 하 여 https://docs.microsoft.com/qsharp/api/ 에서 API 참조를 생성 하는 데 사용 됩니다.
+퀀텀 개발 키트의 각 릴리스를 컴파일할 때 이러한 주석은 각 호출의 입력 및 출력에 대 한 세부 정보, 각 호출 가능의 가정 및 사용 방법에 대 한 예제를 포함 하 여 https://docs.microsoft.com/qsharp/api/에서 API 참조를 생성 하는 데 사용 됩니다.
 
 > [!IMPORTANT]
 > 이러한 파일은 각각의 새 릴리스로 덮어쓰므로 생성 된 API 설명서를 수동으로 편집 하지 마십시오.
 > 우리는 커뮤니티에 대 한 기여를 제공 하 고 변경 내용이 릴리스 후 사용자의 릴리스를 계속 하는 데 도움이 되도록 합니다.
 
-예를 들어 `PrepareTrialState(angles : Double[], register : Qubit[]) : Unit`작업을 고려 합니다.
-문서 설명은 사용자가 `angles`을 해석 하는 방법, `register`초기 상태에 대 한 작업을 수행 하는 작업, `register`의 영향 등에 대해 알아보는 데 도움이 됩니다.
+예를 들어 `ControlledOnBitString<'T> (bits : Bool[], oracle : ('T => Unit is Adj + Ctl)) : ((Qubit[], 'T) => Unit is Adj + Ctl)`함수를 살펴보겠습니다.
+설명서 주석은 사용자가 `bits` 및 `oracle`를 해석 하는 방법 및 함수에 대 한 정보를 이해 하는 데 도움이 됩니다.
 이러한 각 정보는 설명서 주석에서 특수 하 게 명명 된 Markdown 섹션에 의해 Q # 컴파일러에 제공 될 수 있습니다.
-`PrepareTrialState`예를 들어 다음과 같은 항목을 작성할 수 있습니다.
+`ControlledOnBitString`예를 들어 다음과 같은 항목을 작성할 수 있습니다.
 
 ```qsharp
-/// # Summary
-/// Given a register of qubits, prepares them in a trial state by rotating each
-/// independently.
-///
-/// # Description
-/// This operation prepares the input register by performing a
-/// $Y$ rotation on each qubit by an angle given in `angles`.
-///
-/// # Input
-/// ## angles
-/// An array of parameters
-/// ## register
-/// A register of qubits initially in the $\ket{00\cdots0}$ state.
-///
-/// # Example
-/// To prepare an equal superposition $\ket{++\cdots+}$ over all input qubits:
-/// ```qsharp
-/// PrepareTrialState(ConstantArray(Length(register), PI() / 2.0), register);
-/// ```
-///
-/// # Remarks
-/// This operation is generally useful in the inner loop of an optimization
-/// algorithm.
-///
-/// # See Also
-/// - Microsoft.Quantum.Intrinsic.Ry
-operation PrepareTrialState(angles : Double[], register : Qubit[]) : Unit {
-    // ...
-}
+ /// # Summary
+ /// Returns a unitary operation that applies an oracle on the target register if the 
+ /// control register state corresponds to a specified bit mask.
+ ///
+ /// # Description
+ /// The output of this function is an operation that can be represented by a
+ /// unitary transformation $U$ such that
+ /// \begin{align}
+ ///     U \ket{b_0 b_1 \cdots b_{n - 1}} \ket{\psi} = \ket{b_0 b_1 \cdots b_{n-1}} \otimes
+ ///     \begin{cases}
+ ///         V \ket{\psi} & \textrm{if} (b_0 b_1 \cdots b_{n - 1}) = \texttt{bits} \\\\
+ ///         \ket{\psi} & \textrm{otherwise}
+ ///     \end{cases},
+ /// \end{align}
+ /// where $V$ is a unitary transformation that represents the action of the
+ /// `oracle` operation.
+ ///
+ /// # Input
+ /// ## bits
+ /// The bit string to control the given unitary operation on.
+ /// ## oracle
+ /// The unitary operation to be applied on the target register.
+ ///
+ /// # Output
+ /// A unitary operation that applies `oracle` on the target register if the control 
+ /// register state corresponds to the bit mask `bits`.
+ ///
+ /// # Remarks
+ /// The length of `bits` and `controlRegister` must be equal.
+ ///
+ /// Given a Boolean array `bits` and a unitary operation `oracle`, the output of this function
+ /// is an operation that performs the following steps:
+ /// * apply an `X` operation to each qubit of the control register that corresponds to `false` 
+ /// element of the `bits`;
+ /// * apply `Controlled oracle` to the control and target registers;
+ /// * apply an `X` operation to each qubit of the control register that corresponds to `false` 
+ /// element of the `bits` again to return the control register to the original state.
+ ///
+ /// The output of the `Controlled` functor is a special case of `ControlledOnBitString` where `bits` is equal to `[true, ..., true]`.
+ ///
+ /// # Example
+ /// The following code snippets are equivalent:
+ /// ```qsharp
+ /// (ControlledOnBitString(bits, oracle))(controlRegister, targetRegister);
+ /// ```
+ /// and
+ /// ```qsharp
+ /// within {
+ ///     ApplyPauliFromBitString(PauliX, false, bits, controlRegister);
+ /// } apply {
+ ///     Controlled oracle(controlRegister, targetRegister);
+ /// }
+ /// ```
+ ///
+ /// The following code prepares a state $\frac{1}{2}(\ket{00} - \ket{01} + \ket{10} + \ket{11})$:
+ /// ```qsharp
+ /// using (register = Qubit[2]) {
+ ///     ApplyToEach(H, register);
+ ///     (ControlledOnBitString([false], Z))(register[0..0], register[1]);
+ /// }
+ /// ```
+ function ControlledOnBitString<'T> (bits : Bool[], oracle : ('T => Unit is Adj + Ctl)) : ((Qubit[], 'T) => Unit is Adj + Ctl)
+ {
+     return ControlledOnBitStringImpl(bits, oracle, _, _);
+ }
 ```
+[`ControlledOnBitString` 함수에 대 한 API 설명서](xref:microsoft.quantum.canon.controlledonbitstring)에서 위의 코드에 대해 렌더링 된 버전을 볼 수 있습니다.
 
 문서 작성에 대 한 일반적인 관행 외에도 API 문서 주석을 작성 하면 몇 가지 사항을 염두에 두어야 합니다.
 

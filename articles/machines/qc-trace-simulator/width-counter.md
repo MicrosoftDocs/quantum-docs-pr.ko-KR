@@ -1,17 +1,17 @@
 ---
-title: Width 카운터 | 퀀텀 컴퓨터 추적 시뮬레이터 | Microsoft Docs
-description: 양자 컴퓨터 추적 시뮬레이터 개요
+title: Width 카운터
+description: 퀀텀 프로그램에서 각 작업에 의해 할당 되 고 빌려 온 것과 같은 수를 계산 하는 Microsoft QDK Width 카운터에 대해 알아봅니다.
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.width-counter
-ms.openlocfilehash: 9c3601e74eec17bd6b463e90f8f3085c959d6f95
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: a76292222950310acc90dded02980e4a5b792e76
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820371"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907089"
 ---
 # <a name="width-counter"></a>Width 카운터
 

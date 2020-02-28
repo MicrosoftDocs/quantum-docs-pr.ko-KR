@@ -1,17 +1,17 @@
 ---
-title: 숫자 라이브러리 설치 및 유효성 검사 | Microsoft Docs
-description: 숫자 라이브러리 설치 및 유효성 검사
+title: Microsoft 퀀텀 숫자 라이브러리-설치 및 유효성 검사
+description: Microsoft 퀀텀 숫자 라이브러리를 Visual Studio 2019 이상 설치에 추가 하는 방법에 대해 알아봅니다.
 author: thomashaener
 ms.author: thhaner
 ms.date: 05/14/2019
 ms.topic: article
 uid: microsoft.quantum.numerics.installation
-ms.openlocfilehash: c41bb73ea484271689eea2ca1b59ce6639dc15a7
-ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
+ms.openlocfilehash: cb0d00a509b3986b605dd7f15f9bccc0661bb894
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "77036460"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906341"
 ---
 # <a name="numerics-library-installation-and-validation"></a>숫자 라이브러리 설치 및 유효성 검사
 
@@ -33,7 +33,7 @@ ms.locfileid: "77036460"
 
 또는 패키지 관리자 콘솔을 사용 하 여 명령줄 인터페이스를 통해 숫자 라이브러리를 프로젝트에 추가할 수 있습니다.
 
-![](../../media/vs2017-nuget-console-menu.png)
+![명령줄에서 패키지 관리자 콘솔 사용](../../media/vs2017-nuget-console-menu.png)
 
 패키지 관리자 콘솔에서 다음을 실행 합니다.
 

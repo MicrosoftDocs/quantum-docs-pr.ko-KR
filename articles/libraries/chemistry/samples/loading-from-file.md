@@ -1,22 +1,22 @@
 ---
-title: 파일에서 Hamiltonian 로드 | Microsoft Docs
-description: 파일에서 Hamiltonian 로드 문서
+title: 파일에서 해밀토니안 로드
+description: Broombridge 스키마를 사용 하 여 large Hamiltonian를 자동으로 생성 하는 방법을 알아봅니다.
 author: guanghaolow
 ms.author: gulow
 ms.date: 10/23/2018
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.examples.loadhamiltonian
-ms.openlocfilehash: 18f257efe8d53d2a22af4840bd8d17ab6b80a503
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: 715dbcefc10ecc5af45f2bdd228890f1cb28886b
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73442341"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907293"
 ---
 # <a name="loading-a-hamiltonian-from-file"></a>파일에서 해밀토니안 로드
 이전에는 개별 용어를 추가 하 여 Hamiltonians를 만들었습니다. 이는 작은 예제에 적합 하지만, 규모의 퀀텀 연금술에는 수백만 또는 수십억 개의 용어로 Hamiltonians 필요 합니다. NWChem과 같은 화학 패키지에 의해 생성 된 이러한 Hamiltonians는 너무 커서 수동으로 가져올 수 없습니다. 이 샘플에서는 [Broombridge 스키마](xref:microsoft.quantum.libraries.chemistry.schema.broombridge)로 표시 되는 분자 `FermionHamiltonian` 인스턴스가 자동으로 생성 되는 방법을 설명 합니다. 참조의 경우 제공 된 `LithiumHydrideGUI` 샘플 또는 `RunSimulation` 샘플을 검사할 수 있습니다. [LIQUi | >](https://www.microsoft.com/en-us/research/project/language-integrated-quantum-operations-liqui/)에서 사용 하는 형식에서 가져오기에 대 한 제한 된 지원을 사용할 수도 있습니다.
 
-샘플 리포지토리의 `IntegralData/YAML` 폴더에 제공 되는 Nitrogen 분자의 예제를 살펴보겠습니다. `Broombridge` 체계를 로드 하는 방법은 간단 합니다.
+샘플 리포지토리의 `IntegralData/YAML` 폴더에 제공 되는 Nitrogen 분자의 예제를 살펴보겠습니다. `Broombridge` 스키마를 로드 하는 방법은 간단 합니다.
 
 ```csharp
 // This is the name of the file we want to load

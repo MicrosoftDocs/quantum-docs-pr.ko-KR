@@ -1,17 +1,17 @@
 ---
-title: 'Q # 표준 라이브러리-특징 | Microsoft Docs'
-description: 'Q # 표준 라이브러리-특징'
+title: 퀀텀 특성화 및 통계
+description: 추정 단계의 측정 통계를 사용 하 여 퀀텀 프로그래밍에서 결과 값을 예측 하는 방법을 알아봅니다.
 author: QuantumWriter
 uid: microsoft.quantum.libraries.characterization
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 0c347113339a77e9eaf63dc0967c320f8b063a0e
-ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
+ms.openlocfilehash: 7ed92c29020ccf389faa099f5bd80516af525578
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "77036256"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907191"
 ---
 # <a name="quantum-characterization-and-statistics"></a>퀀텀 특성화 및 통계 #
 

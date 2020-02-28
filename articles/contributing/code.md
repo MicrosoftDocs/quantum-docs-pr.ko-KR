@@ -1,17 +1,17 @@
 ---
-title: 코드 참여 | Microsoft Docs
-description: 코드 참여
+title: Microsoft QDK에 코드 기여
+description: Microsoft Quantum Development Kit (QDK)에 샘플 및 라이브러리 코드를 제공 하는 방법에 대해 알아봅니다.
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.code
-ms.openlocfilehash: f9e0f0d9540102331aea64a1245cbaa4833e1e02
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 1882e640dacf3987745ed225fef18636726f70a8
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76819963"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907480"
 ---
 # <a name="contributing-code"></a>코드 기여 #
 

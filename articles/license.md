@@ -1,17 +1,17 @@
 ---
 title: Microsoft Quantum Development Kit 라이선스
-description: Microsoft Quantum Development Kit 라이선스
+description: Microsoft Quantum Development Kit에 대 한 사용 조건, 부인 및 사용자 권한입니다.
 author: QuantumWriter
 ms.author: cpalmer
 ms.date: 11/04/2019
-ms.openlocfilehash: d864c3e4ecefa6f998b9a893ecc4a3995d67dac4
-ms.sourcegitcommit: c93fea5980d1d46fbda1e7c7153831b9337134bf
+ms.openlocfilehash: 0d3aa9ae9e4f232ba2403512ff6e2394ecedeb22
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73463374"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907123"
 ---
-# <a name="microsoft-software-license-terms"></a>MICROSOFT 소프트웨어 사용 조건 
+# <a name="microsoft-software-license-terms"></a>Microsoft 소프트웨어 사용 조건 
 ## <a name="microsoft-quantum-development-kit-preview"></a>MICROSOFT 퀀텀 개발 키트 (미리 보기)
 
 
@@ -37,7 +37,7 @@ ms.locfileid: "73463374"
 
      b. **확인**합니다. 소프트웨어를 통해이 날짜의 정기 미리 알림 메시지를 받을 수 있습니다.
 
-     c. **데이터에 액세스**합니다. 실행이 중지 되 면 소프트웨어에서 사용 되는 데이터에 액세스할 수 없습니다.
+     다. **데이터에 액세스**합니다. 실행이 중지 되 면 소프트웨어에서 사용 되는 데이터에 액세스할 수 없습니다.
 
 1. **시험판 소프트웨어**. 소프트웨어가 시험판 버전입니다. 올바르게 작동하지 않을 수 있습니다. 정식으로 출시되는 버전과 다를 수 있습니다.
 
@@ -52,7 +52,7 @@ ms.locfileid: "73463374"
 
     b. 소프트웨어를 리버스 엔지니어링, 디컴파일 또는 디스어셈블 합니다.
 
-    c. Microsoft 또는 해당 공급 업체의 소프트웨어에 대 한 알림을 제거, 최소화, 차단 또는 수정 합니다.
+    다. Microsoft 또는 해당 공급 업체의 소프트웨어에 대 한 알림을 제거, 최소화, 차단 또는 수정 합니다.
 
     d. 법률 또는 맬웨어를 만들거나 전파 하는 방식으로 소프트웨어를 사용 합니다. 디스크나
     
@@ -76,8 +76,8 @@ ms.locfileid: "73463374"
 
     b. **캐나다**. 이 소프트웨어를 캐나다에서 구입한 경우 자동 업데이트 기능을 끄거나, 디바이스의 인터넷 연결을 해제하거나(그러나 인터넷에 다시 연결하는 경우 소프트웨어에서 업데이트 확인을 다시 시작하고 설치함), 소프트웨어를 제거하여 업데이트 수신을 중지할 수 있습니다. 제품 설명서(있는 경우)에서 특정 디바이스나 소프트웨어에 대한 업데이트를 해제하는 방법을 설명할 수도 있습니다.
 
-    c. **독일 및 오스트리아**
-<p style="margin-left: 60px">i <strong>보증</strong>. 적절하게 사용이 허가된 소프트웨어는 대체로 소프트웨어와 함께 제공되는 Microsoft 자료에 설명된 대로 작동됩니다. 그러나 Microsoft는 사용이 허가된 소프트웨어와 관련하여 어떠한 계약 보증도 제공하지 않습니다.</p>
+    다. **독일 및 오스트리아**
+<p style="margin-left: 60px">i. <strong>보증</strong>. 적절하게 사용이 허가된 소프트웨어는 대체로 소프트웨어와 함께 제공되는 Microsoft 자료에 설명된 대로 작동됩니다. 그러나 Microsoft는 사용이 허가된 소프트웨어와 관련하여 어떠한 계약 보증도 제공하지 않습니다.</p>
 <p style="margin-left: 60px">ii. <strong>책임의 제한</strong>. 의도적인 행위, 심각한 부주의, 제조물 책임법에 따른 청구 및 개인 또는 신체 부상이나 사망의 경우 Microsoft는 성문법에 따라 책임을 집니다.</p>
 <p style="margin-left: 60px">앞 조항 ii.에 따라 Microsoft는 Microsoft가 이러한 중요한 계약 의무를 위반하거나 본 계약의 적절한 수행을 가능하게 하는 사항을 이행하지 않거나, 이행을 위반하거나, 본 계약을 목적 및 당사자가 지속적으로 신뢰할 수 있도록 하는 준수 사항을 위반하는 경우에만 약간의 부주의에 대해 책임집니다. 다른 경우 약간의 부주의에 대해 책임지지 않습니다.</p>
 

@@ -1,17 +1,17 @@
 ---
-title: 퀀텀 개발 키트 Toffoli 시뮬레이터 | Microsoft Docs
-description: Microsoft의 퀀텀 Development Kit Toffoli 시뮬레이터 개요
+title: 퀀텀 개발 키트 Toffoli 시뮬레이터
+description: 수백만 개의 다양 한 비트와 함께 사용할 수 있는 특별 한 용도의 퀀텀 시뮬레이터 인 Microsoft QDK Toffoli 시뮬레이터에 대해 알아봅니다.
 author: alan-geller
 ms.author: ageller@microsoft.com
 ms.date: 01/16/2019
 ms.topic: article
 uid: microsoft.quantum.machines.toffoli-simulator
-ms.openlocfilehash: 26940d1a8fe31f1035e2d23a68940cd999517c6b
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: 8a29caaa0fa058600a74e7d130e644374cbfa19c
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73442355"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907021"
 ---
 # <a name="quantum-development-kit-toffoli-simulator"></a>퀀텀 개발 키트 Toffoli 시뮬레이터
 

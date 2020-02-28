@@ -1,17 +1,17 @@
 ---
-title: 화학 라이브러리 설치 및 유효성 검사 | Microsoft Docs
-description: 화학 라이브러리 설치 및 유효성 검사
+title: 'Microsoft Q # 화학 라이브러리 설치 및 유효성 검사'
+description: Microsoft 퀀텀 화학 라이브러리를 설치 하 고 NWChem 계산 화학 플랫폼과 함께 사용 하는 방법을 알아봅니다.
 author: guanghaolow
 ms.author: gulow
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.chemistry.concepts.installation
-ms.openlocfilehash: de13d1814821c612ed74a347dc8ffb5881063576
-ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
+ms.openlocfilehash: 48bf7bc980e238e622053f5c2bdd09604c572596
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "77036477"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907361"
 ---
 # <a name="chemistry-library-installation-and-validation"></a>화학 라이브러리 설치 및 유효성 검사
 
@@ -21,25 +21,25 @@ ms.locfileid: "77036477"
 **Visual Studio 2019:** Visual Studio 2019을 사용 하는 경우 NuGet 패키지 관리자를 사용 하 여 퀀텀 화학 패키지를 추가할 수 있습니다.
 패키지 관리자를 열려면 아래 스크린샷에서와 같이 화학 라이브러리를 추가 하려는 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 "NuGet 패키지 관리 ..."를 선택 합니다.
 
-![](~/media/vs2017-nuget-manage-packages.png)
+![Visual Studio 2019에서 NuGet 패키지 관리자 사용](~/media/vs2017-nuget-manage-packages.png)
 
 찾아보기 탭에서 패키지 이름 "Microsoft. m a."를 검색 합니다.
 
 > [!NOTE]
 > "시험판 포함"을 사용 해야 합니다.
 
-![](~/media/vs2017-nuget-package-search.png)
+![시험판 포함 확인란](~/media/vs2017-nuget-package-search.png)
 
 그러면 다운로드할 수 있는 패키지가 나열 됩니다.
 왼쪽 창에서 "Microsoft"를 클릭 하 고 오른쪽 창에서 최신 시험판 버전을 선택한 후 "설치"를 클릭 합니다.
 
-![](~/media/vs2017-nuget-select-chem.png)
+![최신 Microsoft 양자 패키지를 설치 합니다.](~/media/vs2017-nuget-select-chem.png)
 
 자세한 내용은 [패키지 관리자 UI 가이드](https://docs.microsoft.com/nuget/tools/package-manager-ui)를 참조 하세요.
 
 또는 패키지 관리자 콘솔을 사용 하 여 명령줄 인터페이스를 통해 퀀텀 화학 라이브러리를 프로젝트에 추가할 수 있습니다.
 
-![](~/media/vs2017-nuget-console-menu.png)
+![명령줄에서 패키지 관리자 콘솔 사용](~/media/vs2017-nuget-console-menu.png)
 
 패키지 관리자 콘솔에서 다음을 실행 합니다.
 

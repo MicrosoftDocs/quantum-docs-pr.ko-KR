@@ -1,17 +1,17 @@
 ---
-title: 끌어오기 요청 열기 | Microsoft Docs
-description: 끌어오기 요청 열기
+title: 끌어오기 요청 열기
+description: Microsoft Quantum Development Kit에 코드 또는 설명서를 제공할 준비가 되 면 GitHub 끌어오기 요청을 제출 하는 방법에 대해 알아봅니다.
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.pulls
-ms.openlocfilehash: d70a0a0319d14cfdae4910b897733d77b236f2f9
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: a4373a65688893c95e0475356c8f6fca0912f8c5
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183729"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907463"
 ---
 # <a name="opening-pull-requests"></a>끌어오기 요청 열기 #
 
@@ -42,19 +42,19 @@ Git에서 작업 하는 경우 변경 내용은 해당 변경 내용이 리포�
 `feature`이라는 _분기_ 에서 기여를 시작 했다고 가정 합니다.
 그러면 **Microsoft/퀀텀** 분기가 다음과 같이 표시 될 수 있습니다.
 
-![](~/media/git-workflow-step0.png)
+![GitHub의 작업 분기](~/media/git-workflow-step0.png)
 
 로컬 리포지토리에서 변경을 수행 하는 경우 다른 리포지토리에서 변경 내용을 _끌어_ 업스트림에 발생 한 변경 내용을 파악할 수 있습니다.
 
-![](~/media/git-workflow-step1.png)
+![업스트림 리포지토리에서 변경 내용 끌어오기 및 병합](~/media/git-workflow-step1.png)
 
 끌어오기 요청은 동일한 방식으로 작동 하지만, 역방향: 끌어오기 요청을 열 때 업스트림 리포지토리가에서 기여를 가져오도록 요청 합니다.
 
-![](~/media/git-workflow-step2.png)
+![변경 내용을 원래 리포지토리로 다시 가져오도록 요청](~/media/git-workflow-step2.png)
 
 리포지토리 중 하나로 끌어오기 요청을 열면 GitHub는 커뮤니티의 다른 사용자가 변경 내용 요약을 보고, 의견을 잡고, 더 나은 기여를 지 원하는 방법에 대 한 제안을 제공할 수 있는 기회를 제공 합니다.
 
-![](~/media/pull-request-header.png)
+![GitHub의 끌어오기 요청 스크린샷](~/media/pull-request-header.png)
 
 이 프로세스를 사용 하면 GitHub 기능을 사용 하 여 기여를 개선 하 고 퀀텀 프로그래밍 커뮤니티에 대 한 고품질 제품을 유지 관리할 수 있습니다.
 

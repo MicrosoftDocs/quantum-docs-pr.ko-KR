@@ -1,17 +1,17 @@
 ---
-title: 퀀텀 Dynamics | Microsoft Docs
-description: 퀀텀 Dynamics 개념 문서
+title: 퀀텀 Dynamics
+description: 퀀텀 dynamics와 클래식 dynamics의 유사성 및 차이점을 알아봅니다.
 author: nathanwiebe2
 ms.author: nawiebe@microsoft.com
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.quantumdynamics
-ms.openlocfilehash: 0fd27e59921fdf8429bf164c4c64cfa3b8e44160
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 9cb74ccd4b7806a90c0701300860d777fa8e5d75
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73185344"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904488"
 ---
 # <a name="quantum-dynamics"></a>퀀텀 Dynamics
 
@@ -22,7 +22,7 @@ ms.locfileid: "73185344"
 기존 dynamics에서 뉴턴의 두 번째 동작 법칙에서 파티클의 위치가 $F (x, t) = ma = m\frac {\ dd ^ 2} {\dd t ^ 2} {x} (t) $에 따라 진화 하는 것을 알고 있습니다. 여기서 $F (x, t) $는 force이 고, $m $a $은 (는)입니다.
 그런 다음 초기 위치 $x (0) $, 진화 시간 $t $ 및 파티클에 적용 되는 요인에 대 한 설명을 지정 하 고 나 서 $x (t) $에 대 한 뉴턴의 방정식에 지정 된 차등 수식을 해결 하 여 $x (t) $를 찾을 수 있습니다.
 이러한 방식으로 강제를 지정 하는 것은 어려운 문제입니다.
-따라서 시스템의 잠재적 에너지 면에서이를 의미 하는 경우가 많습니다 .이 경우 $-\partial_x V (x, t) = m \frac{\dd ^ 2} {\dd t ^ 2} {x} (t) $를 제공 합니다.
+따라서 시스템의 잠재적 에너지 면에서이를 의미 하는 경우가 많습니다 .이는 $-\ partial_x V (x, t) = m \frac{\dd ^ 2} {\dd t ^ 2} {x} (t) $를 제공 합니다.
 따라서 파티클의 경우 시스템의 dynamics는 잠재적 에너지 함수, 파티클 질량 및 진화 시간에 의해서만 지정 됩니다.
 
 보다 광범위 한 언어는 $F = ma $를 초과 하는 기존 dynamics에 대해 도입 되는 경우가 많습니다.
@@ -30,7 +30,7 @@ ms.locfileid: "73185344"
 Hamiltonian 메커니즘에서 시스템의 총 에너지와 (일반화 된) 위치 및 momenta는 임의의 고전 개체의 동작을 설명 하는 데 필요한 모든 정보를 제공 합니다.
 특히 $f (x, p, t) $는 시스템의 일반화 된 위치 $x $ 및 momenta $p $의 일부 함수 이며 $H (x, p, t) $를 Hamiltonian 함수로 사용 하면 됩니다.
 예를 들어 $f (x, p, t) = x (t) $ 및 $H (x, p, t) = p ^ 2 (t)/2m-V (x, t) $를 사용 하는 경우 Newtonian dynamics의 위 사례를 복구 합니다.
-일반 성을에는 \begin{align} \frac{d}{dt} f & = \partial_t f-(\aa_x H\partial_p f + \aaap h\partial_ax f)\\\\ & \defeq \partial_t f + \\{f, H\\}가 있습니다.
+일반 성을에서 \begin{align} \frac{d}{dt} f & = \ partial_t f-(\ partial_x H \ partial_p f + \ partial_p H \ partial_x f)\\\\ & \defeq \ partial_t f + \\{f, H\\}를 사용할 수 있습니다.
 \end{align} 여기서 $\\{f, H\\} $은 (는) ubiquitously를 [정의 하는](https://en.wikipedia.org/wiki/Poisson_bracket) 중앙 역할로 인해 기존 dynamics에서 표시 됩니다.
 
 퀀텀 dynamics는 정확히 동일한 언어를 사용 하 여 설명할 수 있습니다.
@@ -47,13 +47,13 @@ Hamiltonian 또는 총 에너지는 closed 퀀텀 시스템의 dynamics를 완�
 퀀텀 메커니즘에서 position 및 모멘텀의 analogues를 연산자로 교체 해야 하는 것 처럼 Hamiltonian 함수는 비슷한 연산자로 대체 되어야 합니다.
 예를 들어 사용 가능한 공간의 파티클에는 $H (x, p) = p ^ 2/2m $가 있지만 퀀텀 메커니즘에서 Hamiltonian operator $ \hat{H} $은 $ \hat{H} = \hat{p} ^ 2/2m $입니다. 여기서 $ \hat{p} $은 모멘텀 연산자입니다.
 이 관점에서, 클래식에서 퀀텀 dynamics로 전환 하는 것은 일반 dynamics에서 사용 되는 변수를 연산자로 바꾸는 것만 포함 합니다.
-일반적인 고전 Hamiltonian를 퀀텀 언어로 변환 하 여 Hamiltonian 연산자를 생성 한 후에는 임의의 퀀텀 기계적 수량 (즉, 퀀텀 기계적 연산자) $ \hat{f} (t) $ via \begin{를 통해 dynamics를 표현할 수 있습니다. align} \frac{d}{dt} \hat{f} = \partial_t \hat{f} + [\hat{f}, \hat{H}], \end{align} where $ [f, H] = fH-Hf $를 commutator 라고 합니다.
+일반적인 고전 Hamiltonian를 퀀텀 언어로 변환 하 여 Hamiltonian 연산자를 생성 한 후에는 임의의 퀀텀 기계적 수량 (즉, 퀀텀 기계적 연산자) $ \hat{f} (t) $ via \begin{를 통해 dynamics를 표현할 수 있습니다. align} \frac{d}{dt} \hat{f} = \ partial_t \hat{f} + [\hat{f}, \hat{H}], \end{align} where $ [f, H] = fH-Hf $를 commutator 라고 합니다.
 이 식은 위의 정규식과 정확히 동일 합니다. 포아송 괄호 $\\{f, H\\} $는 $f $ 및 $H $ 사이의 commutator 대체 된다는 차이가 있습니다.
 기존 Hamiltonian을 사용 하 고이를 사용 하 여 퀀텀 Hamiltonian를 찾는이 프로세스는 퀀텀 용어에서 정식 양자화으로 알려져 있습니다.
 
 가장 관심이 있는 연산자 $f는 무엇 인가요?  이에 대 한 대답은 해결 하려는 문제에 따라 달라 집니다.
 가장 유용 하 게 사용할 수 있는 것은 이전 개념 문서에서 설명 하는 것 처럼 dynamics에 대해 알아볼 모든 항목을 추출 하는 데 사용할 수 있는 퀀텀 상태 연산자입니다.
-이 작업을 수행 하 고 결과를 순수 상태를 포함 하는 사례로 단순화 한 후에는 퀀텀 상태에 대 한 Schrödinger 수식이 \begin{align} i\partial_t \ket{\psi (t)} = \hat{H} (t) \ket{\psi (t)}로 검색 됩니다.
+이 작업을 수행 하 고 결과를 순수 상태를 포함 하는 경우로 단순화 한 후에는 퀀텀 상태에 대 한 Schrödinger 수식이 \begin{align} a\ partial_t \ket{\psi (t)} = \hat{H} (t) \ket{\psi (t)}로 검색 됩니다.
 \end{align}
 
 이 수식은 위에 제공 된 것 보다 직관적이 지 않지만 퀀텀 또는 클래식 컴퓨터에서 퀀텀 dynamics를 시뮬레이션 하는 방법을 이해 하는 가장 간단한 식을 생성 합니다.

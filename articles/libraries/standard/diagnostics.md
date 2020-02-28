@@ -1,16 +1,16 @@
 ---
-title: 'Q # 표준 라이브러리-진단 | Microsoft Docs'
-description: 'Q # 표준 라이브러리-진단'
+title: 'Q # 표준 라이브러리의 진단'
+description: '퀀텀 프로그램의 실수 또는 오류를 catch 하는 데 사용 되는 Q # 표준 라이브러리의 진단 기능 및 작업에 대해 알아봅니다.'
 author: cgranade
 uid: microsoft.quantum.libraries.diagnostics
 ms.author: chgranad@microsoft.com
 ms.topic: article
-ms.openlocfilehash: 67ec6780d8cbbda7223d46026a9df97cebc92b33
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: ba2f248327bb3db4ee895f8e65ea31c17e42b5f4
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820983"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906239"
 ---
 # <a name="diagnostics"></a>진단 #
 

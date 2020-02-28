@@ -1,17 +1,17 @@
 ---
-title: 'Q # 표준 라이브러리-제어 및 흐름 | Microsoft Docs'
-description: 'Q # 표준 라이브러리-제어 및 흐름'
+title: 'Q # standard libararies의 흐름 제어'
+description: 'Microsoft Q # 표준 라이브러리의 흐름 제어 작업 및 함수에 대해 알아봅니다.'
 author: QuantumWriter
 uid: microsoft.quantum.concepts.control-flow
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: ff73cef12a3b8c2a6559308dc244c7c2e865ba9f
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: b41b3edd7a3e3ac13dbda106a869f4cba8183600
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820456"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907174"
 ---
 # <a name="higher-order-control-flow"></a>고차 제어 흐름 #
 

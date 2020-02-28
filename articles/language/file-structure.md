@@ -1,17 +1,17 @@
 ---
-title: 파일 구조 | Microsoft Docs
-description: 'Q # 파일 구조'
+title: 'Q # 파일 구조'
+description: 'Q # 프로그램 및 라이브러리에서 네임 스페이스, 작업, 함수 및 사용자 정의 형식 선언을 구조화 하는 방법에 대해 알아봅니다.'
 author: QuantumWriter
 uid: microsoft.quantum.language.file-structure
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 364d353c55bda38f227456909755d13dc7e67080
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: b4bb7d4d70677dbd5d921a9f68313760499a56a1
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821085"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907395"
 ---
 # <a name="file-structure"></a>파일 구조
 
@@ -66,7 +66,7 @@ Q #에서는 [q # 형식 모델](xref:microsoft.quantum.language.type-model) 섹
 
 사용자 정의 형식 선언은 `newtype`키워드로 구성 된 다음 사용자 정의 형식 이름, `=`, 유효한 형식 사양 및 종료 세미콜론으로 구성 됩니다.
 
-예:
+다음은 그 예입니다.
 
 ```qsharp
 newtype PairOfInts = (Int, Int);
@@ -231,7 +231,7 @@ Adjoint 없이 작업을 지정 하는 것은 유효 합니다. 예를 들어 �
 해당 본문에 제어 된 adjoint 버전이 없는 다른 작업에 대 한 호출이 포함 된 작업의 경우, `invert``distribute` 또는 `auto` 지시문 다음에 adjoint 특수화를 자동으로 생성 하는 것은 불가능 합니다.
 
 
-### <a name="examples"></a>예시
+### <a name="examples"></a>예
 
 작업 선언은 다음과 같이 간단할 수 있습니다 .이는 기본 Pauli X 작업을 정의 합니다.
 

@@ -1,17 +1,17 @@
 ---
-title: 요르단-Wigner 표현 | Microsoft Docs
-description: 요르단-Wigner 표현의 개념 문서
+title: 요르단-Wigner 표현
+description: Hamiltonian 연산자를 퀀텀 컴퓨터에서 보다 쉽게 구현할 수 있는 단일 행렬에 매핑하는 Wigner 표현에 대해 알아봅니다.
 author: nathanwiebe2
 ms.author: nawiebe@microsoft.com
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.jordanwigner
-ms.openlocfilehash: 5d9038e440a2022547395e889e149a531a7ef818
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 17cb473c6d33e3356d5da886f47985c3828d4d1f
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820541"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904522"
 ---
 # <a name="jordan-wigner-representation"></a>요르단-Wigner 표현
 
@@ -25,7 +25,7 @@ Wigner 표현은 파생 시킬 직선입니다.
 State $ \ket{0}_j $는 spin 궤도 $j $가 비어 있고 $ \ket{1}_j $가이를 의미 함을 의미 합니다.
 즉,이는 기본적으로 지정 된 spin 궤도의 직업을 저장할 수 있습니다.
 그런 다음 $a ^ \ dagger_j \ket{0}_j = \ket{1}_j $ 및 $a ^ \ dagger_j \ket{1}_j = $0이 있습니다.
-\Begin{align} a ^ dagger_j & = \begin{bmatrix}0 & 0 \\\ 1 & 0 \end{bmatrix} = \frac{X_j} iY_j를 확인 하는 것이 쉽습니다. \nonumber\\\\ a_j & = \begin{bmatrix}0 & 1 \\\ 0 & 0 \end{bmatrix} = \frac{X_j + iY_j}{2}, \end{align} 여기서 $X _j $ 및 $Y _j $는 $X $ 및-$Y $ 연산자가 $입니다.
+\Begin{align} a ^ dagger_j & = \begin{bmatrix}0 & 0 \\\ 1 & 0 \end{bmatrix} = \frac{X_j} iY_j를 확인 하는 것이 쉽습니다. \nonumber\\\\ a_j & = \begin{bmatrix}0 & 1 \\\ 0 & 0 \end{bmatrix} = \frac{X_j + iY_j}{2}, \end{align} 여기서 $X _j $ 및 $Y _j $는 $X $ 및-$Y $ 연산자가 $입니다.{2}
 
 >[!NOTE]
 > Q #에서 $ \ket{0}$ 상태는 $Z $ 연산자의 + 1 eigenstate를 나타냅니다. \Ket의 일부 영역에서 ${0}$은 낮은 에너지 접지 상태를 나타내며, 따라서 $Z $ 연산자의-1 eigenstate입니다. 따라서 일부 수식은 인기 있는 자료와 다를 수 있습니다.

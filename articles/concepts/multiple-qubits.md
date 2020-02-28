@@ -1,17 +1,17 @@
 ---
-title: 여러 비트 Microsoft Docs
-description: 다중 큐비트
+title: 다중 큐비트
+description: 둘 이상의 이상에서 작업을 수행 하는 방법에 대해 알아봅니다.
 author: QuantumWriter
 uid: microsoft.quantum.concepts.multiple-qubits
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: e9c043f4ee41a878b9544a27d5ea052fce29f06e
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+ms.openlocfilehash: 2fa227c823cd87df9c799c043c699e4ce818b8e3
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74863219"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907548"
 ---
 # <a name="multiple-qubits"></a>여러 비트
 
@@ -27,7 +27,7 @@ ms.locfileid: "74863219"
 
 ## <a name="representing-two-qubits"></a>두 개의 비트를 나타내는
 1 ~ 2의 비트 상태 간의 주요 차이점은 두 번째 비트 상태는 2 차원이 아닌 4 차원 이라는 것입니다.
-이는 두 번째 비트 상태에 대 한 계산 기준이 한 수준 비트 상태의 텐서 products로 구성 되기 때문입니다.  예를 들어 \begin{align} 00 \equiv \begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} & = \begin{bmatrix}1 \\\\ 0\\\\ 0\\\\ 0 \end{bmatrix}, \qquad 01 \equiv \begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}0 \\\\ 1 \end{bmatrix} = \begin{bmatrix}0 \\\\ 1\\\\ 0\\\\ 0 \end{bmatrix},\\\\ 10 \equiv \begin{bmatrix}0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} & = \begin{bmatrix}0 \\\\ 0\\\\ 1\\\\ 0 \end{bmatrix}, \qquad 11 \equiv \begin{bmatrix}0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix}0 \\\\ 1 \end{bmatrix} = \begin{bmatrix}0 \\\\ 0\\\\ 0 @no__ t_40_ \\ 1 \end{bmatrix}.
+이는 두 번째 비트 상태에 대 한 계산 기준이 한 수준 비트 상태의 텐서 products로 구성 되기 때문입니다.  예를 들어 \begin{align} 00 \equiv \begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} & = \begin{bmatrix}1 \\\\ 0\\\\ 0\\\\ 0 \end{bmatrix}, \qquad 01 \equiv \begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}0 \\\\ 1 \end{bmatrix} = \begin{bmatrix}0 \\\\ 1\\\\ 0\\\\ 0 \end{bmatrix},\\\\ 10 \equiv \begin{bmatrix}0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} & = \begin{bmatrix}0 \\\\ 0\\\\ 1\\\\ 0 \end{bmatrix}, \qquad 11 \equiv \begin{bmatrix}0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix}0 \\\\ 1 \end{bmatrix} = \begin{bmatrix}0 \\\\ 0\\\\ 0 @no__ t_40_ \\ 1 \end{bmatrix}.\\
 \end{align}
 
 보다 일반적으로이 생성을 사용 하 여 $2 ^ n $ 차원에 대 한 단위 벡터로 나타내는 $ 이상 비트 $n의 퀀텀 상태를 확인 하는 것이 쉽습니다.  벡터입니다.
@@ -103,7 +103,7 @@ $ $ \operatorname{CNOT} = \begin{bmatrix} 1 \ 0 \ 0 \ 0 \\\\ 0 \ 1 \ 0 \ 0 \\\\ 
 
 $ $ \begin{bmatrix} a\ b\\\\ c\ d \end{bmatrix} $ $
 
-및
+and
 
 $ $ \begin{bmatrix} e \ f\\\\ g \ h \end{bmatrix} $ $
 

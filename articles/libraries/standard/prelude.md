@@ -1,17 +1,17 @@
 ---
-title: 'Q # 표준 라이브러리-prelude | Microsoft Docs'
-description: 'Q # 표준 라이브러리-prelude'
+title: QDK의 내장 작업 및 함수
+description: 클래식 함수 및 단일 함수, 회전 및 측정 작업을 포함 하 여 QDK의 내장 작업 및 함수에 대해 알아봅니다.
 author: QuantumWriter
 uid: microsoft.quantum.libraries.standard.prelude
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: dddb3d4a5ebcdca16da41a5ae5520d98ea900a7f
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: b1c26c632f36b6c254d940a89b13638f7592ab80
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73183236"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907208"
 ---
 # <a name="the-prelude"></a>Prelude #
 
@@ -27,7 +27,7 @@ Q # 컴파일러 및 퀀텀 개발 키트에 포함 된 대상 컴퓨터는 Q #�
 - 측정을 구현 하는 작업입니다.
 
 Clifford + $T $ gate 집합은 퀀텀 컴퓨팅을 위한 [유니버설](xref:microsoft.quantum.concepts.multiple-qubits) 이므로 negligibly 작은 오류 내에서 임의 퀀텀 알고리즘을 구현 하는 데에는 충분 합니다.
-Q #은 회전도 제공 하 여 프로그래머는 단일의 단일 기능 및 CNOT gate 라이브러리 내에서 작업을 수행할 수 있습니다. 이 라이브러리는 프로그래머가 Clifford + $T $ 분해를 직접 표현할 필요가 없으며, 단일 highbit unitaries를 Clifford 및 $T $ 게이트로 컴파일하기 위한 매우 효율적인 메서드가 필요 하지 않기 때문에 훨씬 더 쉽습니다. ( [여기](xref:microsoft.quantum.more-information) 참조 추가 정보).
+Q #은 회전도 제공 하 여 프로그래머는 단일의 단일 기능 및 CNOT gate 라이브러리 내에서 작업을 수행할 수 있습니다. 이 라이브러리는 프로그래머가 Clifford + $T $ 분해를 직접 표현할 필요가 없으며, 단일 highbit unitaries를 Clifford 및 $T $ 게이트로 컴파일하기 위한 매우 효율적인 메서드가 필요 하지 않기 때문에 훨씬 더 쉽습니다. 자세한 내용은 [여기](xref:microsoft.quantum.more-information) 를 참조 하세요.
 
 가능 하면, prelude에서 정의 된 작업을 수행 하 여 대상 컴퓨터에서 적절 한 분해를 수행 하는 등의 작업을 수행할 `Controlled` 수 있습니다.
 
@@ -101,12 +101,12 @@ Hadamard gate는 $ \ket{0}$ 및 $ \ket{1}$ states의 superposition를 만드는 
 위의 Pauli 및 Clifford 작업 외에도 Q # prelude는 회전을 표현 하는 다양 한 방법을 제공 합니다.
 [단일 기능 비트 작업](xref:microsoft.quantum.concepts.qubit#single-qubit-operations)에 설명 된 대로,이를 회전 하는 기능은 퀀텀 알고리즘에 매우 중요 합니다.
 
-먼저 $H $ 및 $T $ 게이트를 사용 하 여 단일 기능 비트 작업을 표현할 수 있습니다. 여기서 $H $은 Hadamard 연산이 고, 여기서 \begin{equation} T \mathrel{: =} \begin{bmatrix} 1 & 0 \\\\% FIXME: 현재는 쿼드 back을 사용 합니다. whack hack.
+먼저 $H $ 및 $T $ 게이트를 사용 하 여 단일 기능 비트 작업을 표현할 수 있습니다. 여기서 $H $은 Hadamard 연산이 고, 여기서 \begin{equation} T \mathrel{: =} \begin{bmatrix} 1 & 0 \\\\% FIXME: 현재는 쿼드 백 whack 해킹을 사용 합니다.
 0 & e ^ {i \pi/4} \end{bmatrix} \end{cation}이는 $T ^ 2 = S $와 같이 <xref:microsoft.quantum.intrinsic.s> 작업의 제곱근입니다.
 $T $ gate는 <xref:microsoft.quantum.intrinsic.t> 작업에 의해 구현 되 고, `(Qubit => Unit is Adj + Ctl)`시그니처를 포함 하 여 단일의 단일 작업 임을 나타냅니다.
 
 이 경우 임의의 단일 기능 비트 작업을 설명 하는 데에는 충분 하지만, prelude에는 다양 한 방법이 포함 되어 있기 때문에 다른 대상 컴퓨터에서 Pauli 연산자에 대 한 회전을 보다 효율적으로 표현할 수 있습니다. 이러한 회전을 표현 합니다.
-이러한 작업의 가장 기본적인 <xref:microsoft.quantum.intrinsic.r> 작업입니다. 지정 된 Pauli 축을 중심으로 하는 회전을 구현 하는 것입니다. \begin{equation} R (\시그마, \\as) \mathrel{: =} \exp (-i \\a\aa\시그마/2), \begin{equation} 여기서 $ \b\시그마 $은 \exp $는 행렬 지 수를 나타냅니다.
+이러한 작업의 가장 기본적인 기능은 지정 된 Pauli 축을 중심으로 회전을 구현 하는 <xref:microsoft.quantum.intrinsic.r> 작업입니다. \begin{equation} R (\시그마, \>) \mathrel{: =} \exp (-i \begin{equation}/2), \begin{equation} 여기서 $ \\bn\a\a는 Pauli, $ \\a$는 각도 이며 여기서 $ \exp $는 행렬 지 수를 나타냅니다.
 이 클래스에는 서명 `((Pauli, Double, Qubit) => Unit is Adj + Ctl)`있습니다. 여기서 입력의 처음 두 부분은 n\시그마 $ 및 $ \\\\\\\\\\\\a>를 $R 지정 하는 데 필요한 기존 인수인 $ \sigma $ 및 $ \\? $를 나타냅니다.
 $ \Sigma $ 및 $ \\s$를 부분적으로 적용 하 여 해당 형식이 단일의 단일 비트를 포함 하는 작업을 가져올 수 있습니다.
 예를 들어 `R(PauliZ, PI() / 4, _)`에는 `(Qubit => Unit is Adj + Ctl)`형식이 있습니다.
@@ -165,7 +165,7 @@ Prelude는 위의 단일 비트 작업 외에도 여러 가지 다중 기능 비
 `CCNOT(q1, q2, q3)`은 `(Controlled X)([q1, q2], q3)`와 동일 합니다.
 
 <xref:microsoft.quantum.intrinsic.swap> 작업은 두 가지 비트의 퀀텀 상태를 바꿉니다.
-즉, 단일 행렬을 구현 합니다. \begin{equation} \operatorname{SWAP} \mathrel{: =} \begin{bmatrix} 1 & 0 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \end{bmatrix}.
+즉, 단일 행렬을 구현 합니다. \begin{\operatorname{SWAP} ation} \mathrel{: =} \begin{bmatrix} 1 & 0 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \end{bmatrix}.
 \end{equation} `((Qubit, Qubit) => Unit is Adj + Ctl)`시그니처를 포함 합니다.
 `SWAP(q1,q2)`은 `CNOT(q1, q2)`와 같으며 `CNOT(q2, q1)` 다음에 `CNOT(q1, q2)`합니다.
 
@@ -176,7 +176,7 @@ Prelude는 위의 단일 비트 작업 외에도 여러 가지 다중 기능 비
 > Fredkin gate 라고도 하는 제어 교환 게이트는 모든 클래식 계산을 포함 하기에 충분히 강력한 기능입니다.
 
 마지막으로 prelude는 여러 가지 지 수 연산자를 나타내는 두 가지 작업을 제공 합니다.
-<xref:microsoft.quantum.intrinsic.exp> 작업은 여러 \operatorname{Exp} (\vec{\sigma}, \a\mathrel{): =} \a\left (i \\a\sigma_0 \otime \sigma_1 \os)로 표현 된 Pauli 행렬의 텐서 제품을 기반으로 하는 회전을 수행 합니다. cdots \otimes \sigma_n \right), \end{-ation} (여기서 $ \vec{\sigma} = (\sigma_0, \sigma_1, \도트, \sigma_n) $은 단일 = (,, \
+<xref:microsoft.quantum.intrinsic.exp> 작업은 여러 \operatorname{Exp} (\vec{\sigma}, \aa\) \mathrel{: =} \a\left (: =} \asigma_n sigma_1 sigma_0 st\sta\o\o\\o\\\o\o\o\o\o\o\o\o\o\o\o\o\o\o\o\o\o\o\st\end{station} 여기서 $ \vec{\sigma} = (\ sigma_0, \ sigma_1, \점선이, \ sigma_n) $는 단일 stbit Pauli 연산자의 시퀀스이 고, 여기서 $ \\a$는 각도입니다.
 `Exp` 회전은 $ \vec{\sigma} $를 `Pauli` 요소의 배열로 나타내며이를 통해 시그니처 `((Pauli[], Double, Qubit[]) => Unit is Adj + Ctl)`을 포함 합니다.
 
 <xref:microsoft.quantum.intrinsic.expfrac> 작업은 위에서 설명한 dyadic 분수 표기법을 사용 하 여 동일한 회전을 수행 합니다.
@@ -204,8 +204,8 @@ Pauli 배열 및 원하는 비트 배열의 길이가 다른 경우 작업이 �
 조인트 측정은 각 비트를 개별적으로 측정 하는 것과는 다릅니다.
 예를 들어 $ \ket{11} = \ket{1} \otimes \ket{1} = X\otimes X \ket{00}$ 상태를 살펴보겠습니다.
 $Z _0 $ 및 $Z _1 $를 개별적으로 측정 하 여 _0 = $1 및 $r _1 = $1 $r 결과를 가져옵니다.
-$Z _0 Z_1 $을 측정 $r _ {\textrm{joint}} = $0의 단일 결과는 $ \ket{11}$의 pairity가 양수인 것을 나타냅니다.
-다른 방법으로 $ (-1) ^ {r_0 + r_1} = (-1) ^ r_ {\textrm{joint}}) $를 입력 합니다.
+$Z _0 Z_1 $를 측정 하는 중입니다. _ {\textrm{joint}} = $0의 단일 $r 결과가 pairity $ \ket{11}$의가 긍정적 임을 나타냅니다.
+다른 방법으로 $ (-1) ^ {r_0 + r_1} = (-1) ^ r_ {\textrm{joint}}) $입니다.
 이 측정을 통해 패리티 *를 알아보는 것* 이기 때문에 superposition에서 긍정 패리티 2 2-\ket{00}$ 및 $ \ket{11}$와 같은에 표시 되는 퀀텀 정보는 그대로 유지 됩니다.
 오류 수정에 대해 설명 하는 것 처럼이 속성은 나중에 필요 합니다.
 
@@ -235,7 +235,7 @@ return rs;
 이는 로컬 시뮬레이터에 대 한 문제를 제공 하지 않지만 원격 시뮬레이터 또는 실제 하드웨어를 대상 컴퓨터로 사용 하는 경우 성능 문제가 발생할 수 있습니다.
 즉, 개별 대상 컴퓨터는 특정 시스템에 보다 효율적인 버전으로 이러한 작업을 재정의 하 여 이러한 성능 영향을 완화할 수 있습니다.
 
-### <a name="math"></a>산 ###
+### <a name="math"></a>수학 ###
 
 <xref:microsoft.quantum.extensions.math> 네임 스페이스는 .NET 기본 클래스 라이브러리의 [`System.Math` 클래스](https://docs.microsoft.com/dotnet/api/system.math?view=netframework-4.7.1)에서 많은 유용한 함수를 제공 합니다.
 이러한 함수는 다른 Q # 함수와 동일한 방식으로 사용할 수 있습니다.

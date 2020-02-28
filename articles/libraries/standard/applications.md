@@ -1,17 +1,17 @@
 ---
-title: 'Q # 표준 라이브러리-응용 프로그램 | Microsoft Docs'
-description: Q# 표준 라이브러리
+title: 'Q # 표준 라이브러리의 응용 프로그램'
+description: 퀀텀 컴퓨팅 (Hamiltonian 시뮬레이션 및 Shor의 검색 알고리즘)의 두 가지 기본 응용 프로그램에 대해 알아봅니다.
 author: QuantumWriter
 uid: microsoft.quantum.libraries.applications
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 3e629e095bd2ee492496066710ef6fd4e578a543
-ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+ms.openlocfilehash: b7c46b634c6d691c067c0dd995301395408c85ca
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868971"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907225"
 ---
 # <a name="applications"></a>애플리케이션 #
 
@@ -159,7 +159,7 @@ $U _a $의 고유 값는 $ $ U\_a \ket{x\_s} = e ^ {2 \ pi i s/r} \ket{x\_s}입�
 
 퀀텀 기간 찾기를 위한 회로 다이어그램은 다음과 같습니다.
 
-![](./../../media/QPE.svg)
+![퀀텀 기간 찾기를 위한 회로 다이어그램](./../../media/QPE.svg)
 
 여기서 $2n $ \ket는 ${0}$로 초기화 되 고 $n $ 이상 비트는 $ \ket{1}$로 초기화 됩니다.
 판독기는 eigenstates를 포함 하는 퀀텀 레지스터가 $ \ket{1}$로 초기화 되는 이유를 궁금할 수 있습니다.

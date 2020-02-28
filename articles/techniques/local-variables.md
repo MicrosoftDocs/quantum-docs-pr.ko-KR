@@ -1,22 +1,22 @@
 ---
-title: '지역 변수-Q # 기술 | Microsoft Docs'
-description: '지역 변수-Q # 기술'
+title: '지역 변수-Q # 기술'
+description: 'Q #에서 지역 변수를 정의 하 고 사용 하는 방법에 대해 알아봅니다.'
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.techniques.local-variables
-ms.openlocfilehash: 8b1de5c096210fb36a81c127a8bbbe1b39522741
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: cb6c662137c31a13c3dd6e9ca3f67879c469f788
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820184"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906868"
 ---
 # <a name="local-variables"></a>지역 변수 #
 
 `let` 키워드를 사용 하 여 작업 또는 함수 내에서 다시 사용 하기 위해 Q #의 모든 형식 값을 변수에 할당할 수 있습니다.
-예를 들면 다음과 같습니다.
+예:
 
 ```qsharp
 let measurementOperator = [PauliX, PauliZ, PauliZ, PauliX, PauliI];

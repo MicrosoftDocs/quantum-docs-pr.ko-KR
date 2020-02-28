@@ -1,17 +1,17 @@
 ---
-title: 고급 행렬 개념 | Microsoft Docs
-description: 고급 행렬 개념
+title: 고급 행렬 개념
+description: 퀀텀 알고리즘을 설명 하 고 시뮬레이트하는 데 사용 되는 기본 도구인 고유 벡터, eigenvalues 및 matrix 지 수에 대해 알아봅니다.
 author: QuantumWriter
 uid: microsoft.quantum.concepts.matrix-advanced
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: f87b3bcd19d2f98fea2a9724a280781a78c4cbb9
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: a83911e01ad758bbcb7f701000fd58b4f1c91cd2
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183763"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907582"
 ---
 # <a name="advanced-matrix-concepts"></a>고급 행렬 개념 #
 
@@ -39,7 +39,7 @@ $ $ \begin{bmatrix}1 \\\\ 0 \\\\ 0 \end{bmatrix}, \begin{bmatrix}0 \\\\ 1 \\\\ 0
 위의 예에서는 $D $의 고유 벡터가 $3 $ 차원 벡터의 기반을 형성 합니다. 기반은 벡터를 선형 조합으로 작성할 수 있도록 벡터 집합입니다. 좀 더 명시적으로, $v _1 $, $v _2 $ 및 $v _3 $ $v 형식으로 작성할 수 있습니다. $v = a_1 v_1 + a_2 v_2 + a_3 v_3 $로 작성할 수 있습니다.
 
 Hermitian 행렬 (자체 adjoint 라고도 함)은 해당 하는 복잡 한 켤레와 동일한 복잡 한 정사각형 행렬 이지만, 단일 행렬은 역행렬이 복소수와 동일한 복잡 한 사각형입니다.
-기본적으로 퀀텀 컴퓨팅에서 발생 하는 유일한 행렬 인 Hermitian 및 단일 행렬의 경우 [*spectral 정리*](https://en.wikipedia.org/wiki/Spectral_theorem)라고 하는 일반적인 결과가 있습니다. 여기에는 Hermitian 또는 단일 행렬 $M $가 있습니다. 일부 대각선 행렬 $D $의 경우 $M = U ^ \a턴 D U $와 같은 단일 $U $. 또한 $D $의 대각선 항목은 $M $의 고유 값가 됩니다.
+기본적으로 퀀텀 컴퓨팅에서 발생 하는 유일한 행렬 인 Hermitian 및 단일 매트릭스의 경우 [*spectral 정리*](https://en.wikipedia.org/wiki/Spectral_theorem)라고 하는 일반적인 결과가 있습니다. 예를 들면 다음을 어설션 합니다. Hermitian 또는 단일 행렬 $M $의 경우 일부 대각선 행렬 $D $에 대해 $M = u ^ \dagger u $와 같은 단일 $U $가 있습니다. 또한 $D $의 대각선 항목은 $M $의 고유 값가 됩니다.
 
 $D $로 된 대각선 행렬의 고유 값 및 고유 벡터를 계산 하는 방법을 이미 알고 있습니다. 이 정리를 사용 하는 경우 $v $가 eigenvalue $c $, 즉 $Dv = cv $를 사용 하는 $D의 eigenvector 경우 $U ^ \aae $는 eigenvalue $M $와 $c $의 eigenvector입니다. 그 이유는 다음과 같습니다.
 
@@ -55,7 +55,7 @@ $ $ e ^ A = \boldone + A + \frac{A ^ 2} {2!} + \frac{A ^ 3} {3!} + \ci$ $
 
 행렬의 지 수를 계산 하는 방법을 이해 하는 가장 쉬운 방법은 해당 행렬의 고유 값 및 고유 벡터를 통하는 것입니다.  특히, 위에 설명 된 spectral 정리는 모든 Hermitian 또는 $A 단일 행렬에 대해 $, $A = U ^ \dagger D U $와 같은 단일 행렬 $U $ 및 대각선 행렬 $D $가 있습니다.  단위 인자의 속성 때문에 모든 power $p $ $A ^ p = U ^ \ard ^ p U $에 대해 ^ 2 = U ^ \aad ^ 2 U $와 유사 하 게 $A 합니다.  이를 연산자 지 수의 연산자 정의로 대체 하는 경우 다음을 가져옵니다.
 
-$ $ e ^ A = U ^ \ara\left (\boldone + D + \frac{D ^ 2} {2!} + \cstst\right) U = U ^ \\begin{bmatrix}\exp (D_{11}) & 0 & \ca& 0\\\\ 0 &{22}exp (D_ &) & \cdots\\0 \\ & \vom& \cdots & \cdots\\\cdots \\ 0 & 0 & \cst& \exp (D_ {NN}) \end{bmatrix} U. $ $
+$ $ e ^ A = U ^ \ara\left (\boldone + D + \frac{D ^ 2} {2!} + \cst\right) U = U ^ \\begin{bmatrix}\exp (D_{11}) & 0 & \cdots & 0\\\\ 0 & D_ exp ({22}&) & \cdots 0\\\\ \cdots & \cdots & \cdots & \cdots\\\\ 0 & 0 & & c도트 D_ \exp ({NN}) \end{bmatrix} U입니다. $ $
 
 즉, $A 매트릭스의 eigenbasis으로 변환 하는 경우 행렬의 지 수를 계산 하는 것은 행렬의 eigenbasis의 일반 지 수를 계산 하는 것과 같습니다.  퀀텀 컴퓨팅의 많은 작업에서 행렬 지 수 수행 하는 것과 관련 하 여 연산자 지 수를 단순화 하기 위해 행렬의 eigenbasis으로 변환 하는이 트릭은 자주 나타나고 다음과 같은 다양 한 퀀텀 알고리즘의 기반이 됩니다. Trotter – Suzuki-이 가이드의 뒷부분에서 설명 하는 퀀텀 시뮬레이션 방법입니다.
 

@@ -1,17 +1,17 @@
 ---
-title: 숫자 라이브러리 사용 | Microsoft Docs
-description: 숫자 라이브러리 사용
+title: 'Microsoft Q # 숫자 라이브러리 사용'
+description: Microsoft 퀀텀 숫자 라이브러리에서 사용할 수 있는 형식 및 작업에 대해 알아봅니다.
 author: thomashaener
 ms.author: thhaner
 ms.date: 5/14/2019
 ms.topic: article
 uid: microsoft.quantum.numerics.usage
-ms.openlocfilehash: ca24ff60cd9ae5077c7f4bae0012fe1180d7e6d4
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: ad9f529efd06fdf13bab4467b091aafacf1d5b09
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821034"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907259"
 ---
 # <a name="using-the-numerics-library"></a>숫자 라이브러리 사용
 
@@ -36,7 +36,7 @@ open Microsoft.Quantum.Arithmetic;
 1. **`SignedLittleEndian`** : 2의 보수에 저장 된 부호 있는 정수를 나타내는 점을 제외 하 고 `LittleEndian`와 동일 합니다.
 1. **`FixedPoint`** : `qArr2 : Qubit[]` 하 고 이진 점 위치 `pos`으로 구성 된 실수를 나타냅니다 .이 숫자는 이진 점 왼쪽의 이진 자릿수를 계산 합니다. `qArr2`는 `SignedLittleEndian`와 동일한 방식으로 저장 됩니다.
 
-## <a name="operations"></a>운영
+## <a name="operations"></a>작업
 
 위의 세 가지 형식 각각에 대해 다양 한 작업을 사용할 수 있습니다.
 
@@ -92,7 +92,7 @@ operation TestMyAddition(xValue : Int, yValue : Int, n : Int) : Unit {
 
 퀀텀 컴퓨터에서 $ \sin (x) $와 같은 부드러운 함수를 평가 하려면 ($x $은 퀀텀 `FixedPoint` number) 퀀텀 개발 키트 숫자 라이브러리는 작업 `EvaluatePolynomialFxP` 및 `Evaluate[Even/Odd]PolynomialFxP`를 제공 합니다.
 
-첫 번째 `EvaluatePolynomialFxP`에서는 $ $ P (x) = a_0 + a_1x + a_2x ^ 2 + \c9+ a_dx ^ d, $ $ 형식의 다항식을 평가할 수 있습니다. 여기서 $d $는 *각도*를 나타냅니다. 이렇게 하려면 `[a_0,..., a_d]` 다항식 계수 (`Double[]`형식), 입력 `x : FixedPoint` 및 출력 `y : FixedPoint` (처음에는 0)만 필요 합니다.
+첫 번째 `EvaluatePolynomialFxP`에서는 $ $ P (x) = a_0 + a_1x + a_2x ^ 2 + \+ a_dx ^ d, $ $ 형식의 다항식을 평가할 수 있습니다. 여기서 $d $는 *각도*를 나타냅니다. 이렇게 하려면 `[a_0,..., a_d]` 다항식 계수 (`Double[]`형식), 입력 `x : FixedPoint` 및 출력 `y : FixedPoint` (처음에는 0)만 필요 합니다.
 ```qsharp
 EvaluatePolynomialFxP([1.0, 2.0], x, y);
 ```
@@ -109,7 +109,7 @@ EvaluateOddPolynomialFxP([1.0, 2.0], x, y);
 ```
 $P _ {홀수} (x) = x + 2x ^ 3 $를 평가 합니다.
 
-## <a name="more-samples"></a>추가 샘플
+## <a name="more-samples"></a>다른 샘플
 
 [주 샘플 리포지토리에서](https://github.com/Microsoft/Quantum)더 많은 샘플을 찾을 수 있습니다.
 

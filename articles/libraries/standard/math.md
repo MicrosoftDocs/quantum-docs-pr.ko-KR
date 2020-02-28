@@ -1,16 +1,16 @@
 ---
-title: 'Q # 표준 라이브러리-수학 | Microsoft Docs'
-description: 'Q # 표준 라이브러리-수학'
+title: 'Q # 표준 라이브러리의 수학'
+description: '기본 제공 데이터 형식과 함께 사용 되는 Q # 표준 라이브러리의 기존 수학 함수에 대해 알아봅니다.'
 author: cgranade
 uid: microsoft.quantum.libraries.math
 ms.author: chgranad@microsoft.com
 ms.topic: article
-ms.openlocfilehash: 7ac9d321f59f7cc95ad8939a4cf7c36e0c5e0491
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: bec866472abc0d4327cdc570306341375395f492
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2019
-ms.locfileid: "73184460"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906154"
 ---
 # <a name="classical-mathematical-functions"></a>기존 수학 함수 #
 

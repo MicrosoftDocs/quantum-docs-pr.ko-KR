@@ -1,17 +1,17 @@
 ---
 title: 이상 비트 작업
-description: '엔터프라이즈급 비트 작업-Q # 기술'
+description: 기능을 할당 하 고, 작업 및 함수에서 사용 하 고, 결과를 측정 하는 방법에 대해 알아봅니다.
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.techniques.qubits
-ms.openlocfilehash: dc6db93dadc37534aece9624fe516125d919f8cd
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 1aa2432996dda61d099e3b5bb4db78379ce43d97
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76819997"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907650"
 ---
 # <a name="working-with-qubits"></a>이상 비트 작업
 
@@ -72,7 +72,7 @@ operation RunExample() : Unit {
 > [!TIP]
 > 나중에이 작업을 작성 하는 보다 간단한 방법으로 수동 흐름 제어를 요구 하지 않습니다.
 
-\Ket transform{0} $를 사용 하 여 $ \ket{+} = \left (\ket{0} + \ket{1}\left)/\left{2}$ 및 $ \ket{-} = \left (\ket{1}-Hadamard{2}\left)/\left $H $와 같은 상태를 준비할 수도 있습니다.
+\Ket transform{0} $를 사용 하 여 $ \ket{+} = \left (\ket{0} + \ket{1}\left)/\left{2}$ 및 $ \ket{-} = \left (\ket{1}-Hadamard{2}\left)/\left $H $와 같은 상태를 준비할 수도 있습니다.`H : (Qubit => Unit is Adj + Ctl)`
 
 ```qsharp
 operation PreparePlusMinusState(bitstring : Bool[], register : Qubit[]) : Unit {

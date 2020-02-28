@@ -1,17 +1,17 @@
 ---
-title: Hartree-Fock 이론 | Microsoft Docs
-description: Hartree-Fock 이론 문서
+title: Hartree-Fock 이론
+description: 퀀텀 시스템의 초기 상태를 구성 하는 간단한 방법인 Hartree – Fock 이론에 대해 알아보세요.
 author: nathanwiebe2
 ms.author: nawiebe@microsoft.com
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.hartreefock
-ms.openlocfilehash: e73111ae710e11ca6730581b8be711cf32783677
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 6fa63cbe13fe98565ffb42b56f3ade86720cedb3
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73184103"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904454"
 ---
 # <a name="hartreefock-theory"></a>Hartree – Fock 이론
 
@@ -22,10 +22,10 @@ ms.locfileid: "73184103"
 예를 들어 $ \ket{\psi} $이 순수 퀀텀 상태 이면 \begin{equation} E = \bra{\psi} \hat{H} \ket{\psi} \begin{equation}는 시스템의 해당 상태에 있는 평균 에너지를 제공 합니다.
 그런 다음 해당 값을 가장 작은 값으로 제공 하는 상태입니다. 결과적으로, 진정한 접지 상태와 최대한 가까운 상태를 선택 하는 것은 에너지를 직접 (variational eigensolvers에서 수행 되는 경우) 또는 단계 예측을 통해 예측 하는 데 매우 중요 합니다.
 
-Hartree – Fock 이론은 퀀텀 시스템의 초기 상태를 구성 하는 간단한 방법을 제공 합니다. 양자는 퀀텀 시스템의 그라운드 상태에 대 한 단일 Slater 결정 근사값을 생성 합니다. 이를 위해 그라운드 상태 에너지를 최소화 하는 Fock 공간 내에서 회전을 찾습니다. 특히, $N $ 파괴 시스템의 경우이 메서드는 회전을 수행 합니다. \begin{equation} \prod_{j = 0} ^ {N-1} a ^ \dagger_j \ket{0} \maps\prod_{j = 0} ^ {N-1} e ^ {u} a ^ \dagger_j e ^ {-u} \ket{0}\defeq\prod_{j = 0} ^ {N-1} \widetilde{a} ^ \ _j \ket{0}, \end{equation} Hermitian (예: $u =-u ^ \pq $) matrix $u = \sum_{pq} u_ {\dagger_p} a ^ a_q $. 행렬 $u $는 궤도 회전을 나타내고 $ \widetilde{a} ^ \dagger_j $ 및 $ \widetilde{a}_j $는 파괴을 차지 하는 Hartree에 대 한 만들기 및 annihilation 연산자를 나타냄 Fock – 분자 spin-orbitals로 표시 해야 합니다.
+Hartree – Fock 이론은 퀀텀 시스템의 초기 상태를 구성 하는 간단한 방법을 제공 합니다. 양자는 퀀텀 시스템의 그라운드 상태에 대 한 단일 Slater 결정 근사값을 생성 합니다. 이를 위해 그라운드 상태 에너지를 최소화 하는 Fock 공간 내에서 회전을 찾습니다. 특히 $N $ 파괴 시스템의 경우이 메서드는 회전을 수행 합니다. \begin{equation} \ prod_ {j = 0} ^ {N-1} a ^ \ dagger_j \ket{0} \maps\ prod_ {j = 0} ^ {N-1} e ^ {u} a ^ \ dagger_j e ^ {-u} \ket{0}\defeq\ prod_ {j = 0} ^ {N-1} \widetilde{a} ^ \ dagger_j \ket{0}, \end{c} Hermitian (즉, $u =-u ^ \ka$) matrix $u = \ sum_ {pq} u_ {pq} a ^ \ dagger_p a_q $. 행렬 $u $는 궤도 회전을 나타내고 $ \widetilde{a} ^ \ dagger_j $ 및 $ \widetilde{a} _j $은 Hartree – Fock 분자 spin-orbitals를 차지 하는 파괴에 대 한 만들기 및 annihilation 연산자를 나타냅니다.
 
 
-행렬 $u $는 예상 되는 에너지 $ \bra{0} \prod_{j = 0} ^ {N-1} \widetilde{a}\_j H \prod\_{k = 0} ^ {N-1} \widetilde{a} ^ \dagger_k\ket{0}$를 최소화 하도록 최적화 되었습니다. 이러한 최적화 문제는 일반적으로 어려울 수 있지만 Hartree – Fock 알고리즘은 특히 평형 기 하 도형에서 폐쇄형 셸 molecules에 대해 최적화 문제에 대 한 최적 솔루션으로 신속 하 게 수렴 하는 경향이 있습니다. `FermionWavefunction` 개체의 인스턴스로 이러한 상태를 지정할 수 있습니다. 예를 들어 $a ^ \dagger_{1}^ \dagger_{2}^ \dagger_{6}\ket{0}$은 다음과 같이 화학 라이브러리에서 인스턴스화됩니다.
+행렬 $u $는 예상 되는 에너지 $ \bra{0} \ prod_ {j = 0} ^ {N-1} \widetilde{a}\_j H \prod\_{k = 0} ^ {N-1} \widetilde{a} ^ \ dagger_k \ket{0}$를 최소화 하도록 최적화 되었습니다. 이러한 최적화 문제는 일반적으로 어려울 수 있지만 Hartree – Fock 알고리즘은 특히 평형 기 하 도형에서 폐쇄형 셸 molecules에 대해 최적화 문제에 대 한 최적 솔루션으로 신속 하 게 수렴 하는 경향이 있습니다. `FermionWavefunction` 개체의 인스턴스로 이러한 상태를 지정할 수 있습니다. 예를 들어 ^ \ dagger_{2}{1}^ \ dagger_ dagger_ $a ^ \{6}{0}\ket $은 다음과 같이 화학 라이브러리에서 인스턴스화됩니다.
 ```csharp
 // Create a list of integer indices of the creation operators
 var indices = new[] { 1, 2, 6 };

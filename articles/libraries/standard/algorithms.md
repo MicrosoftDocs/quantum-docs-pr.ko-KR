@@ -1,17 +1,17 @@
 ---
-title: 'Q # 표준 라이브러리-알고리즘 | Microsoft Docs'
-description: Q# 표준 라이브러리
+title: 'Q의 퀀텀 알고리즘 #'
+description: 진폭 증폭, 푸리에 변환, Draper 및 Beauregard adders 및 단계 예측을 비롯 한 기본 퀀텀 컴퓨팅 알고리즘에 대해 알아봅니다.
 author: QuantumWriter
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.libraries.standard.algorithms
-ms.openlocfilehash: 1c45808207a2020f603448eba05900cdc40b4916
-ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
+ms.openlocfilehash: aaa9ddf47e5ea35e7e57b9828db082889d0e6adf
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "77036358"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907242"
 ---
 # <a name="quantum-algorithms"></a>퀀텀 알고리즘 #
 

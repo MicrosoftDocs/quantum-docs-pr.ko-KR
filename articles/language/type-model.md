@@ -1,17 +1,17 @@
 ---
-title: 'Q # 형식 모델 | Microsoft Docs'
-description: 'Q # 형식 모델'
+title: 'Q # 데이터 형식'
+description: '기본 제공 형식, 배열, 튜플, 작업, 함수 및 사용자 정의 형식을 포함 하 여 Q # 프로그래밍 언어에서 사용 되는 다양 한 형식에 대해 알아봅니다.'
 author: QuantumWriter
 uid: microsoft.quantum.language.type-model
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 0aabb144779da301b71ad215c8e975cc29b4dcce
-ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+ms.openlocfilehash: 1fc4c0b3fed9277c7f9f3ac421330df03c1b30e4
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76871637"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904658"
 ---
 # <a name="the-type-model"></a>형식 모델
 
@@ -108,7 +108,7 @@ Q #에서는 생성 된 튜플의 콘텐츠를 변경 하는 메커니즘을 제
 
 `(5)` 또는 `([1,2,3])`와 같이 singleton (단일 요소) 튜플 `('T1)`만들 수 있습니다.
 그러나 Q #은 singleton 튜플을 포함 된 형식의 값과 완전히 동일 하 게 처리 합니다.
-즉, `5`와 `(5)`간에 차이가 없으며 `5`와 `(((5)))`사이 또는 `(5, (6))` 간에 차이가 없습니다.
+즉, `5`와 `(5)`간에 차이가 없으며 `5`와 `(((5)))`사이 또는 `(5, (6))` 간에 차이가 없습니다.`(5, 6)`
 
 이러한 동등성은 할당 및 식을 비롯 한 모든 용도에 적용 됩니다.
 `5+3`를 작성 하는 데 `(5)+3`를 작성 하는 것은 올바르지만 두 식이 모두 `8`으로 계산 됩니다.
@@ -160,7 +160,7 @@ function PrintedMessage(value : Nested) : Unit {
 래핑 해제 연산자는 정확히 한 줄의의 래핑을 해제 합니다.
 여러 래핑 연산자를 사용 하 여 곱하기 래핑된 값에 액세스할 수 있습니다.
 
-예를 들면 다음과 같습니다.
+예:
 
 ```qsharp
 newtype WrappedInt = Int;
@@ -371,7 +371,7 @@ Q #에서 제어 되는 버전은 항상 컨트롤의 배열을 사용 하 고, 
 
 또 다른 예로 `CNOT(control, target)` `Controlled X([control], target)`로 구현할 수 있습니다. 대상이 CCNOT (2 컨트롤)로 제어 되어야 하는 경우 `Controlled X([control1, control2], target)` 문을 사용할 수 있습니다.
 
-### <a name="examples"></a>예시
+### <a name="examples"></a>예
 
 Q # 작업의이 예제는 [측정](https://github.com/microsoft/Quantum/tree/master/samples/getting-started/measurement) 샘플에서 제공 됩니다. 작업 내에서, `H` 및 `X`와 같은 해당 기능에 대 한 퀀텀 작업을 할당 하 고이를 사용할 수 있습니다.
 

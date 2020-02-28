@@ -1,17 +1,17 @@
 ---
-title: 고유 입력 검사기 | 퀀텀 컴퓨터 추적 시뮬레이터 | Microsoft Docs
-description: 양자 컴퓨터 추적 시뮬레이터 개요
+title: 고유 입력 검사기
+description: 'Microsoft QDK Distinct 입력 검사기에 대해 알아보세요 .이를 통해 Q # 코드를 확인 하 여 공유 하는 데 문제가 발생할 수 있습니다.'
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.distinct-inputs
-ms.openlocfilehash: 3c21a54f5da83bf1ea0792e79cc773be5fba71e8
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 11a0573242c8afb12f242aa3be5f9cff18290452
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820966"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907106"
 ---
 # <a name="distinct-inputs-checker"></a>고유 입력 검사기
 

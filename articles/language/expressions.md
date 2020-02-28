@@ -1,17 +1,17 @@
 ---
-title: 식 | Microsoft Docs
-description: 식
+title: 'Q # 식'
+description: 'Q #에서 상수, 변수, 연산자, 작업 및 함수를 식으로 지정, 참조 및 결합 하는 방법을 이해 합니다.'
 author: QuantumWriter
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.language.expressions
-ms.openlocfilehash: 83fe697aa07a8ab28bd64437c8f5746bc5893b27
-ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
+ms.openlocfilehash: fbde873f220d737db17f889d00be33541e3eb59b
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "77036317"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907412"
 ---
 # <a name="expressions"></a>식
 

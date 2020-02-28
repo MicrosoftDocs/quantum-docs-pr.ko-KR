@@ -1,24 +1,24 @@
 ---
-title: 평가기 퀀텀 개발 키트 리소스 | Microsoft Docs
-description: Microsoft의 퀀텀 개발 키트 리소스 개요 평가기
+title: 평가기 퀀텀 개발 키트 리소스
+description: '퀀텀 컴퓨터에서 지정 된 Q # 작업 인스턴스를 실행 하는 데 필요한 리소스를 예측 하는 평가기 리소스에 대해 알아봅니다.'
 author: anpaz-msft
 ms.author: anpaz@microsoft.com
 ms.date: 1/22/2019
 ms.topic: article
 uid: microsoft.quantum.machines.resources-estimator
-ms.openlocfilehash: 960fda3dade7648f9cd24496c3a49fd11d6f807a
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 37c901e5a861f0e8a10cdc911ad1d84ddd3e6e00
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820864"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907055"
 ---
 # <a name="the-resourcesestimator-target-machine"></a>ResourcesEstimator 대상 컴퓨터
 
 이름에서 알 수 있듯이 `ResourcesEstimator`는 퀀텀 컴퓨터에서 지정 된 Q # 작업 인스턴스를 실행 하는 데 필요한 리소스를 추정 합니다.
 퀀텀 컴퓨터의 상태를 실제로 시뮬레이션 하지 않고 퀀텀 작업을 실행 하 여이 작업을 수행 합니다. 따라서 수천 비트를 사용 하는 Q # 작업에 대 한 리소스를 예상할 수 있습니다.
 
-## <a name="usage"></a>사용량
+## <a name="usage"></a>사용
 
 `ResourcesEstimator`은 다른 유형의 대상 컴퓨터 일 뿐 이므로 모든 Q # 작업을 실행 하는 데 사용할 수 있습니다. 
 
@@ -127,7 +127,7 @@ operation Teleport(source : Qubit, target : Qubit) : Unit {
 }
 ```
 
-`ResourcesEstimator`에서 `AssertProb` 발생 하면 `source`에 대 한 `PauliZ` 측정을 기록 하 고 확률 0.5에 `q` 결과를 제공 해야 합니다. 나중에 `M` 실행 되는 경우 결과 확률의 기록 된 값을 찾아 `M` 확률 0.5에 `Zero` 또는 `One`을 반환 합니다.
+`ResourcesEstimator`에서 `AssertProb` 발생 하면 `source`에 대 한 `PauliZ` 측정을 기록 하 고 확률 0.5에 `q` 결과를 제공 해야 합니다.`Zero` 나중에 `M` 실행 되는 경우 결과 확률의 기록 된 값을 찾아 `M` 확률 0.5에 `Zero` 또는 `One`을 반환 합니다.
 
 
 ## <a name="see-also"></a>참고 항목

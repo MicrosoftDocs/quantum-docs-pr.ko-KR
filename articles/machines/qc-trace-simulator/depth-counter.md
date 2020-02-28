@@ -1,17 +1,17 @@
 ---
-title: 깊이 카운터 | 퀀텀 컴퓨터 추적 시뮬레이터 | Microsoft Docs
-description: 양자 컴퓨터 추적 시뮬레이터 개요
+title: 수준 카운터
+description: 퀀텀 프로그램에서 호출 된 모든 작업의 깊이 수를 수집 하는 Microsoft QDK Depth 카운터에 대해 알아봅니다.
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.depth-counter
-ms.openlocfilehash: 07f927c794e2c62e53e4e053b5bc683d24bbed8d
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: d532a9f512b8c87d83d62ed26e3bb67e1b6f668b
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820473"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906103"
 ---
 # <a name="depth-counter"></a>수준 카운터
 
@@ -37,7 +37,7 @@ operation ApplySampleWithCCNOT() : Unit {
 
 `CCNOT`에 `T` 깊이가 5이 고 `ApplySampleWithCCNOT` `T` 깊이 6이 있는지 확인 하려면 다음 C# 코드를 사용할 수 있습니다.
 
-```csharp 
+```csharp
 using Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators;
 using System.Diagnostics;
 var config = new QCTraceSimulatorConfiguration();

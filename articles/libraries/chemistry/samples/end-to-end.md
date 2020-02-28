@@ -1,23 +1,23 @@
 ---
-title: NWChem을 사용 하 여 종단 간 Microsoft Docs
-description: NWChem Docs를 사용 하 여 종단 간
+title: 샘플 NWChem 퀀텀 프로그램
+description: NWChem 입력 데크를 사용 하 여 퀀텀 화학 시뮬레이션에 대 한 게이트 수를 가져오는 예제를 살펴봅니다.
 author: cgranade
 ms.author: chgranad@microsoft.com
 ms.date: 10/23/2018
 uid: microsoft.quantum.chemistry.examples.endtoend
-ms.openlocfilehash: 8f727ea4599e06b41ced561c624c4e773b9887d9
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 545ade99859f2a9939477fb18604921f70a5d9aa
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73185820"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906511"
 ---
-# <a name="end-to-end-with-nwchem"></a>NWChem을 사용 하 여 종단 간 #
+# <a name="end-to-end-with-nwchem"></a>NWChem을 사용하는 엔드투엔드 #
 
 이 페이지에서는 [Nwchem](http://www.nwchem-sw.org/index.php/Main_Page) 입력 데크에서 시작 하 여 퀀텀 화학 시뮬레이션에 대 한 게이트 수를 가져오는 예를 살펴보겠습니다.
 이 예제를 진행 하기 전에 [설치 및 유효성 검사 가이드](xref:microsoft.quantum.chemistry.concepts.installation)에 따라 Docker를 설치 했는지 확인 합니다.
 
-자세한 내용:
+자세한 내용은 다음을 참조하세요.
 - [NWChem 입력 데크 구조](https://github.com/nwchemgit/nwchem/wiki/Getting-Started#input-file-structure)
     - [퀀텀 개발 키트에 사용할 입력 데크 명령](https://github.com/nwchemgit/nwchem/tree/master/contrib/quasar)
 - [화학 라이브러리 및 종속성 설치](xref:microsoft.quantum.chemistry.concepts.installation)
@@ -25,7 +25,7 @@ ms.locfileid: "73185820"
 
 > [!NOTE]
 > 이 예에서는 Windows PowerShell Core를 실행 해야 합니다.
-> https://github.com/PowerShell/PowerShell 에서 Windows, macOS 또는 Linux 용 PowerShell Core를 다운로드 합니다.
+> https://github.com/PowerShell/PowerShell에서 Windows, macOS 또는 Linux 용 PowerShell Core를 다운로드 합니다.
 
 ## <a name="importing-required-powershell-modules"></a>필수 PowerShell 모듈 가져오기 ##
 

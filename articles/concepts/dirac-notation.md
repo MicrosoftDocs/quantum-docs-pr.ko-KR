@@ -1,17 +1,17 @@
 ---
-title: Diac 표기법 | Microsoft Docs
-description: 기타 ac 표기법
+title: Dirac 표기법
+description: Diac 표기법을 사용 하 여 퀀텀 상태를 나타내고 퀀텀 작업을 시뮬레이트하는 방법에 대해 알아봅니다.
 author: QuantumWriter
 uid: microsoft.quantum.concepts.dirac
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 33d964d079c94bd947e35d2c09516b29df1bba11
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 204e56cc97fe28f9c52dcfb882aadec7e09bb2dc
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "73184766"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907565"
 ---
 # <a name="dirac-notation"></a>기타 ac 표기법
 
@@ -36,7 +36,7 @@ $$
 
 다음 표기법은 Hadamard gate를 $ \ket{0}$ 및 $ \ket{1}$에 적용 하 여 발생 하는 상태를 설명 하는 데 주로 사용 됩니다 .이는 Bloch 구에 있는 $ + x $ 및 $-x $의 단위 벡터에 해당 합니다.
 
-$ $ \frac{1}{\sqrt{2}} \begin{bmatrix} 1 \\\\ 1 \end{bmatrix} = H\ket{0} = \ket{+}, \qquad \frac{1}{\sqrt{2}} \begin{bmatrix} 1 \\\\-1 \end{bmatrix} = H\ket{1} = \ket{-}.
+$ $ \frac{1}{\sqrt{2}} \begin{bmatrix} 1 \\\\ 1 \end{bmatrix} = H\ket{0} = \ket{+}, \qquad \frac{1}{\sqrt{2}} \begin{bmatrix} 1 \\\\-1 \end{bmatrix} = H\ket{1} = \ket{-}입니다.
 $$
 
 이러한 상태를 $ \ket{0}$ 및 $ \ket{1}$의 합으로 사용 하 여 확장할 수도 있습니다.
@@ -62,7 +62,7 @@ $ $ \big | \braket{1 | \psi}\big | ^ 2 = \big | \frac{3}{5}| 1} + \frac{4}{5}\br
 ### <a name="tensor-product-notation"></a>텐서 product 표기법
 또한 내부에는 암시적인 텐서 product 구조가 포함 됩니다.  이는 퀀텀 컴퓨팅에서 두 개의 상관 관계가 없는 퀀텀 레지스터에 설명 된 상태 벡터가 두 상태 벡터의 텐서 제품 이기 때문에 중요 합니다.  퀀텀 계산을 설명 하려면 텐서 제품 구조를 간결 하 게 설명 하거나 그에 대 한 이해가 중요 합니다.  텐서 제품 구조는 두 개의 퀀텀 상태 벡터 $ \as$ 및 $ \bs$ as $ \ket{\psi} \ket{\phi} $로 $ \ccooatimes $를 작성할 수 있습니다. 그러나 경우에 따라 $ \ket{\psi} \otimes \ket{\phi} $로 명시적으로 작성 된 규칙에 따라 $ \otimes $를 작성 합니다. 는 벡터 사이에서 필요 하지 않습니다.  예를 들어 0 상태로 초기화 된 두 개의 상태를 제공 하는 상태는
 
-$ $ \begin{bmatrix} 1 \\\\ 0 \\\\ 0 \\\\ 0 \end{bmatrix} = \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} \otimes \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} = \ket{0} \ otimes \ket{0}= \ket{0} \ket{0}.
+$ $ \begin{bmatrix} 1 \\\\ 0 \\\\ 0 \\\\ 0 \end{bmatrix} = \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} \otimes \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} = \ket{0} \otimes \ket{0}= \ket{0} \ket{0}.
 $$
 
 마찬가지로 $ \ket{p} $ for integer $p $는 정수 $p $를 이진 표현으로 인코딩하는 퀀텀 상태를 나타냅니다.  예를 들어, 부호 없는 이진 인코딩을 사용 하 여 숫자 $5 $를 표현 하려는 경우에는 동일 하 게 표현할 수 있습니다.
@@ -78,7 +78,7 @@ $$
 ### <a name="example-describing-superposition-with-dirac-notation"></a>예:가 중 Ac 표기법을 사용 하 여 superposition 설명
 Diac 표기법을 사용 하 여 퀀텀 상태를 설명 하는 방법에 대 한 또 다른 예로, $n $의 가능한 모든 비트 문자열에 대해 동일한 superposition 퀀텀 상태를 작성 하는 다음과 같은 방법을 고려해 보십시오.
 
-$ $ H ^ {\otimes n} \ket{0} = \otimes{1}{2 ^ {n/2}} \sum_{j = 0} ^ {2 ^ n-1} \ket{j} = \ket{+} ^ {\otimes n}.
+$ $ H ^ {\otimes n} \ket{0} = \otimes{1}{2 ^ {n/2}} \ sum_ {j = 0} ^ {2 ^ n-1} \ket{j} = \ket{+} ^ {\otimes n}.
 $$
 
 여기서 sum이 $n $ bits에 대해 $0 $에서 $2 ^ {n}-$1로 이동 하는 이유를 궁금할 수 있습니다.  먼저 $2 ^ {n} $ $n $ bits에서 수행할 수 있는 다른 구성이 있는지 확인 합니다.  한 비트에서 $2 $ 값을 사용할 수 있지만 두 비트가 $4 $ 값을 사용할 수 있다는 것을 확인 하 여이를 확인할 수 있습니다. 일반적으로 $2 ^ n $ 가능한 다른 비트 문자열이 있지만 그 중에서 가장 큰 값은 $1 \ cdots 1 = 2 ^ n-$1로 인코딩된 것 이므로 합계의 상한입니다.
@@ -93,16 +93,16 @@ $ $ (\alpha \ket{\psi} + \beta\ket{\phi}) \otimes (\alpha \ket{\chi} + \alpha \k
 
 Bra 벡터는 비슷한 규칙에 따라 벡터를 k 합니다.  예를 들어 vector $ \bra{\psi}\bra{\phi} $는 상태 vector $ \psi ^ \aa\otimes \a^ \aatime \aa^ \aa> (\psi\otimes \psi) ^ \a와 동일 합니다. K vector $ \ket{\psi} $이 $ \alpha \ket{0} + \alpha \ket{1}$ 이면 vector의 bra vector 버전은 $ \bra{\psi} = \ket{\psi} ^ \alpha = (\bra{0}\alpha ^ * +{1}\alpha ^ *) $입니다.
 
-예를 들어, $ \ket{\psi} = \frac{3}{5} \ket{1} + \frac{4}{5} \ket{0}$ 상태를 측정 하는 확률을 계산 하려고 한다고 가정 합니다.{-}$. 그런 다음 장치에서 상태가 $ \ket{-}$로 출력 될 확률은 다음과 같습니다. 
+예를 들어, $ \ket{\psi} = \frac{3}{5} \ket{1} + \frac{4}{5} \ket{0}$ 상태를 측정 하는 확률을 계산 하려고 한다고 가정 합니다 .이 경우에는 상태를 측정 하기 위한 퀀텀 프로그램을 $ \ket{+} $ 또는 $ \ket{-}$로 사용할 수 있습니다. 그런 다음 장치에서 상태가 $ \ket{-}$로 출력 될 확률은 다음과 같습니다. 
 
-$ $ | \braket{-| \psi} | ^ 2 = \left | \frac{1}{\left{2}} (\bra{0}-\bra{1}) (\frac{3}{5} \ket{1} + \frac{4}{5} \ket{0}) \left | ^ 2 = \left |-\frac{3}{5 \ sqrt{2}} + \frac{4}{5 \ sqrt{2}} \right | ^ 2 = \frac{1}{50}. $ $
+$ $ | \braket{-| \psi} | ^ 2 = \left | \frac{1}{\left{2}} (\bra{0}-\bra{1}) (\frac{3}{5} \ket{1} + \frac{4}{5} \ket{0}) \left | ^ 2 = \left |-\frac{3}{5 \ sqrt{2}} + \frac{4}{5 \ sqrt{2}} \left | ^ 2 = \frac{1}{50}. $ $
 
 확률을 계산 하는 데 음수 기호가 표시 되는 사실은 퀀텀 간섭의 노력입니다 .이는 퀀텀 컴퓨팅이 기존 컴퓨팅 보다 이점을 얻는 메커니즘 중 하나입니다.
 
 ## <a name="ketbra-or-outer-product"></a>ketbra 또는 외부 제품
 마지막 항목은 *ketbra* 또는 외부 제품입니다.  외부 제품은는 Diac 표기법 내에서 $ \ket{\psi} \bra{\phi} $로 표시 되며 bras 및 kets가 brakets와 반대 순서로 발생 하기 때문에 ketbras 라고도 합니다.  외부 제품은 행렬 곱하기를 $ \ket{\psi} \bra{\phi} = \psi \sa^ \aa$로 정의 합니다.  이 표기법의 가장 일반적인 예는 다음과 같습니다.
 
-$ $ \ket{0} \bra{0} = \begin{bmatrix}1\\\\ 0 \end{bmatrix}\begin{bmatrix}1 & 0 \end{bmatrix} = \begin{bmatrix}1 & 0\\\\ 0 & 0 \ end {bmatrix} \qquad \ket{1} \bra{1} = \begin{bmatrix}0\\\\ 1 \end{bmatrix}\begin{bmatrix}0 & 1 \end{bmatrix} = \begin{bmatrix}0 & 0\\\\ 0 & 1 \ 끝 {bmatrix}.
+$ $ \ket{0} \bra{0} = \begin{bmatrix}1\\\\ 0 \end{bmatrix}\begin{bmatrix}1 & 0 \end{bmatrix} = \begin{bmatrix}1 & 0\\\\ 0 & 0 \ end {bmatrix} \qquad \ket{1} \bra{1} = \begin{bmatrix}0\\\\ 1 \end{bmatrix}\begin{bmatrix}0 & 1 \end{bmatrix} = \begin{bmatrix}0 & 0\\\\ 0 & 1 \ end {bmatrix}.
 $$
 
 Ketbras는 고정 값에 퀀텀 상태를 프로젝션 하기 때문에 종종 프로젝터 라고 합니다.  이러한 작업은 단일가 아니지만 벡터의 표준을 유지 하지 않으므로 퀀텀 컴퓨터에서 프로젝터를 명확 하 게 적용할 수 없다는 것이 놀라운 것은 아닙니다.  그러나 프로젝터가 퀀텀 상태에 대해 측정 하는 작업을 설명 하는 작업을 수행 합니다.  예를 들어 $ \ket{\psi} $ 상태를 $0 $로 측정 한 후에는 상태를 측정 결과로 사용할 경우의 결과 변환은
@@ -132,7 +132,7 @@ $$
 
 그러면 열 벡터 표기법을 사용 하 여 다중 기능에 대 한 측정 유사도에 대 한 논의와 일치 하는 것을 알 수 있습니다.
 
-$ $ P (\text{first stbit = 1}) = \psi ^ \text{first e\_{10}e\_{10}^ \text{first e\_{11}\_e {11}\_^ \a) \psi = | e {10}\_^ \ka\psi | ^ 2 + | e {11}^ \ 칼 표 | ^ 2, $ $
+$ $ P (\text{first stbit = 1}) = \psi ^ \text{first e\_{10}e\_{10}^ \text{first e\_{11}\_e {11}\_^ \text{first) \psi = | e {10}\_^ \aa\psi | ^ 2 + | e {11}^ \aate\psi | ^ 2, $ $
 
 이는 여러 기능을 비교 하는 데 적합 합니다.  그러나이 결과의 일반화는 다중 기능 비트 사례에 대 한 일반화는 열 벡터 표기법 보다는 Diac 표기법을 사용 하는 것이 약간 더 간단 하며 이전 처리와 완전히 동일 합니다.
 
@@ -146,4 +146,3 @@ $ $ P (\text{first stbit = 1}) = \psi ^ \text{first e\_{10}e\_{10}^ \text{first 
 
 ## <a name="q-gate-sequences-equivalent-to-quantum-states"></a>Q # 퀀텀 상태와 동일한 게이트 시퀀스
 최종 지점에서 퀀텀 표기법 및 Q # 프로그래밍 언어를 발생 시킬 수 있습니다 .이 문서의 하기 시작 하면에서 퀀텀 상태는 퀀텀 컴퓨팅에서 정보의 기본적인 개체 라고 언급 했습니다.  그러면 Q #에서 퀀텀 상태에 대 한 개념이 없습니다.  대신 모든 상태는이를 준비 하는 데 사용 되는 작업에 의해서만 설명 됩니다.  위의 예제는이에 대 한 훌륭한 그림입니다.  레지스터의 모든 퀀텀 비트 문자열에 대해 균일 한 superposition을 표현 하는 대신 ^ {\otimes n} \ket{0}$ $H로 결과를 나타낼 수 있습니다.  이에 대 한 이유를 일반적으로 수 있는 이점 뿐만 아니라이에 대 한 정보를 제공 하는 것은 매우 간단 하지만, 알고리즘을 구현 하기 위해 소프트웨어 스택을 통해 전파 해야 하는 작업도 간결 하 게 정의 합니다.  이러한 이유로 Q #은 퀀텀 상태 대신 게이트 시퀀스를 내보내도록 설계 되었습니다. 그러나 이론적 수준에서 두 큐브 뷰는 동일 합니다.
-

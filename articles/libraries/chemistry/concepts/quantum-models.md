@@ -1,17 +1,17 @@
 ---
-title: 전자 시스템용 퀀텀 모델 | Microsoft Docs
-description: Electronic Systems의 퀀텀 모델 개념 문서
+title: 전자 시스템용 퀀텀 모델
+description: 퀀텀 모델링을 사용 하 여 분자 전자적 시스템을 시뮬레이션 하는 방법에 대해 알아봅니다.
 author: nathanwiebe2
 ms.author: nawiebe@microsoft.com
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.quantummodels
-ms.openlocfilehash: 45d134333c8a3c8937d206cb0a4a9cc6101a85df
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 9f9fc37944dd76026c2641d9cdf126e71053a598
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73184154"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904420"
 ---
 # <a name="quantum-models-for-electronic-systems"></a>전자 시스템용 퀀텀 모델
 

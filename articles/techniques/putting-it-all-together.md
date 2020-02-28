@@ -1,17 +1,17 @@
 ---
-title: '모두 통합-Q # 기술 | Microsoft Docs'
-description: '모든 것을 함께 저장-Q # 기술'
+title: 'Q # 기술-모두 함께 배치'
+description: '퀀텀 teleportation을 보여 주는 기본 Q # 프로그램을 안내 합니다.'
 uid: microsoft.quantum.techniques.puttingittogether
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 3605826da159757d4b321dbf4ec6acd7f4e6be05
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 6c988f77ef6e433945dbf21dfb41204c74bdda3e
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820167"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906834"
 ---
 # <a name="putting-it-all-together-teleportation"></a>모두 함께 배치: Teleportation #
 [퀀텀 회로](xref:microsoft.quantum.concepts.circuits)에 정의 된 teleportation 회로의 예제로 돌아가 보겠습니다. 지금까지 배운 개념을 설명 하는 데이 방법을 사용할 예정입니다. 퀀텀 teleportation에 대 한 설명은 아래에 설명 되어 있으며, 그 다음에는 Q #의 코드 구현 연습이 제공 됩니다. 

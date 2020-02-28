@@ -1,17 +1,17 @@
 ---
-title: '테스트 및 디버깅-Q # 기술 | Microsoft Docs'
-description: '테스트 및 디버깅-Q # 기술'
+title: '테스트 및 디버그 Q # 프로그램'
+description: 단위 테스트, 팩트 및 어설션을 사용 하는 방법 및 덤프 함수를 사용 하 여 퀀텀 프로그램을 테스트 하 고 디버그 하는 방법을 알아봅니다.
 author: tcNickolas
 ms.author: mamykhai@microsoft.com
 uid: microsoft.quantum.techniques.testing-and-debugging
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: cfc71f08be0f190d9f5f4a48796e3d0ad06d6107
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 3df8df8defabcc9cc87d59f543f425c882b001e0
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820116"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907684"
 ---
 # <a name="testing-and-debugging"></a>테스트 및 디버깅
 
@@ -27,12 +27,12 @@ Q #은 퀀텀 프로그램에 대 한 단위 테스트 만들기를 지원 하 �
 
 ### <a name="creating-a-test-project"></a>테스트 프로젝트 만들기
 
-#### <a name="visual-studio-2019tabtabid-vs2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
+#### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
 Visual Studio 2019를 엽니다. `File` 메뉴로 이동 하 여 `New` > `Project...`를 선택 합니다.
 오른쪽 위 모서리에서 `Q#`을 검색 하 고 `Q# Test Project` 템플릿을 선택 합니다.
 
-#### <a name="command-line--visual-studio-codetabtabid-vscode"></a>[명령줄/Visual Studio Code](#tab/tabid-vscode)
+#### <a name="command-line--visual-studio-code"></a>[명령줄/Visual Studio Code](#tab/tabid-vscode)
 
 선호 하는 명령줄에서 다음 명령을 실행 합니다.
 ```bash
@@ -71,7 +71,7 @@ Q # 컴파일러는 기본 제공 대상 "QuantumSimulator", "ToffoliSimulator" 
 
 ### <a name="running-q-unit-tests"></a>Q # 단위 테스트 실행
 
-#### <a name="visual-studio-2019tabtabid-vs2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
+#### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
 솔루션 당 일회성 설치로 `Test` 메뉴로 이동 하 여 `Test Settings` > `Default Processor Architecture` > `X64`를 선택 합니다.
 
@@ -81,7 +81,7 @@ Q # 컴파일러는 기본 제공 대상 "QuantumSimulator", "ToffoliSimulator" 
 
 프로젝트를 빌드하고 `Test` 메뉴로 이동 하 여 `Windows` > `Test Explorer`를 선택 합니다. `AllocateQubit` `Not Run Tests` 그룹의 테스트 목록에 표시 됩니다. `Run All`를 선택 하거나이 개별 테스트를 실행 하 고 통과 해야 합니다.
 
-#### <a name="command-line--visual-studio-codetabtabid-vscode"></a>[명령줄/Visual Studio Code](#tab/tabid-vscode)
+#### <a name="command-line--visual-studio-code"></a>[명령줄/Visual Studio Code](#tab/tabid-vscode)
 
 테스트를 실행 하려면 프로젝트 폴더 (`Tests.csproj`포함 된 폴더)로 이동 하 고 명령을 실행 합니다.
 
@@ -123,29 +123,29 @@ $ dotnet test --filter "Name=AllocateQubit"
 
 내장 함수 <xref:microsoft.quantum.intrinsic.message>에는 `(String -> Unit)` 형식이 있으며 진단 메시지를 만들 수 있습니다.
 
-#### <a name="visual-studio-2019tabtabid-vs2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
+#### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
 테스트 탐색기에서 테스트를 실행 하 고 테스트를 클릭 하면 테스트 실행: 성공/실패 상태, 경과 시간 및 "출력" 링크에 대 한 정보가 포함 된 패널이 표시 됩니다. "출력" 링크를 클릭 하면 테스트 출력이 새 창에서 열립니다.
 
 ![테스트 출력](~/media/unit-test-output.png)
 
-#### <a name="command-line--visual-studio-codetabtabid-vscode"></a>[명령줄/Visual Studio Code](#tab/tabid-vscode)
+#### <a name="command-line--visual-studio-code"></a>[명령줄/Visual Studio Code](#tab/tabid-vscode)
 
 각 테스트에 대 한 통과/실패 상태는 `dotnet test`하 여 콘솔에 출력 됩니다.
 실패 한 테스트의 경우 출력은 오류를 진단 하는 데 도움이 되도록 콘솔에도 출력 됩니다.
 
 ***
 
-## <a name="assertions"></a>어설션을
+## <a name="facts-and-assertions"></a>팩트 및 어설션
 
 Q #의 함수에는 _논리적인_ 부작용이 없으므로 출력 형식이 빈 튜플 인 함수를 실행 하는 _다른 종류_ 의 효과는 Q # 프로그램 내에서 관찰 될 수 `()`.
 즉, 대상 컴퓨터는 이러한 누락으로 인 한 `()` 반환 하는 함수를 실행 하지 않도록 선택할 수 있습니다 .이는 다음 Q # 코드의 동작을 수정 하지 않습니다.
-이를 통해 함수는 어설션 및 디버깅 논리를 Q # 프로그램에 포함 하는 데 유용한 도구를 `()` 반환 합니다. 
+이를 통해 함수는 `()` (즉, `Unit`)을 반환 하는 유용한 도구를 Q # 프로그램에 포함 시킬 수 있습니다. 
 
-동일한 논리를 적용 하 여 어설션을 구현할 수 있습니다. 간단한 예제를 살펴보겠습니다.
+간단한 예제를 살펴보겠습니다.
 
 ```qsharp
-function AssertPositive(value : Double) : Unit 
+function PositivityFact(value : Double) : Unit 
 {
     if (value <= 0) 
     {
@@ -156,11 +156,31 @@ function AssertPositive(value : Double) : Unit
 
 여기서 키워드 `fail`는 계산이 진행 되지 않아야 함을 나타냅니다. Q # 프로그램을 실행 하는 대상 컴퓨터에서 예외가 발생 합니다.
 정의에 따라 Q # 내에서 이러한 종류의 오류를 확인할 수 없습니다. `fail` 문에 도달한 후에 추가 Q # 코드가 실행 되지 않습니다.
-따라서 `AssertPositive`에 대 한 호출을 계속 진행 하는 경우 해당 입력이 양수가 되도록 보장할 수 있습니다.
+따라서 `PositivityFact`에 대 한 호출을 계속 진행 하는 경우 해당 입력이 양수가 되도록 보장할 수 있습니다.
+
+<xref:microsoft.quantum.diagnostics> 네임 스페이스의 [`Fact`](xref:microsoft.quantum.diagnostics.fact) 함수를 사용 하 `PositivityFact`와 동일한 동작을 구현할 수 있습니다.
+
+```qsharp
+    Fact(value <= 0, "Expected a positive number.");
+```
+
+반면에 *어설션은*팩트와 유사 하 게 사용 되지만 대상 컴퓨터의 상태에 따라 달라질 수 있습니다. 이와 마찬가지로 팩트는 작업으로 정의 되는 반면 팩트는 위에 나와 있는 함수로 정의 됩니다.
+구분을 이해 하려면 어설션 내에서 다음과 같은 팩트를 사용 하는 것이 좋습니다.
+
+```qsharp
+operation AssertQubitsAreAvailable() : Unit
+{
+     Fact(GetQubitsAvailableToUse() > 0, "No qubits were actually available");
+}
+```
+
+여기서는 작업 <xref:microsoft.quantum.environment.getqubitsavailabletouse>를 사용 하 여 사용할 수 있는 해당 비트 수를 반환 합니다.
+이는 프로그램의 전역 상태와 해당 실행 환경에 따라 달라 지므로 `AssertQubitsAreAvailable`의 정의도 작업 이어야 합니다.
+그러나이 전역 상태를 사용 하 여 간단한 `Bool` 값을 `Fact` 함수의 입력으로 생성할 수 있습니다.
 
 이러한 아이디어를 기반으로 하 [는 prelude는](xref:microsoft.quantum.libraries.standard.prelude) <xref:microsoft.quantum.intrinsic.assert> <xref:microsoft.quantum.intrinsic.assertprob> `()`에 대 한 작업으로 모델링 된 두 가지 특히 유용한 어설션을 제공 합니다. 이러한 어설션은 각각 특정 측정값을 설명 하는 Pauli 연산자, 측정을 수행 해야 하는 퀀텀 레지스터 및 가상 결과를 사용 합니다.
 시뮬레이션을 통해 작동 하는 대상 컴퓨터에서는 [복제 안 함 정리](https://en.wikipedia.org/wiki/No-cloning_theorem)바인딩되지 않으며 이러한 어설션에 전달 된 레지스터를 방해 하지 않고 이러한 측정을 수행할 수 있습니다.
-그런 다음 시뮬레이터는 위의 `AssertPositive` 함수와 마찬가지로 가상 결과가 실제로 관찰 되지 않는 경우 계산을 중단 합니다.
+그런 다음 시뮬레이터는 위의 `PositivityFact` 함수와 마찬가지로 가상 결과가 실제로 관찰 되지 않는 경우 계산을 중단 합니다.
 
 ```qsharp
 using (register = Qubit()) 
@@ -183,7 +203,7 @@ using (register = Qubit())
 
 ### <a name="dumpmachine"></a>DumpMachine
 
-퀀텀 개발 키트의 일부분으로 배포 되는 전체 상태 퀀텀 시뮬레이터는 전체 퀀텀 시스템의 [wave 함수](https://en.wikipedia.org/wiki/Wave_function) 를 파일에 기록 하 고, 각 요소가 계산 기준 상태 $ \ket{n} $를 측정할 확률의 진폭을 나타냅니다. 여기서 $ \ket{n} = \ket{b_ {n-1} ... bits $\{에 대 한 b_1b_0} $ b_i\}$. 예를 들어, 두 개의 om비트만 할당 된 컴퓨터에서 및 퀀텀 상태 $ $ \begin{align} \ket{\psi} = \frac{1}{\sqrt{2}} \ket{00}-\frac{(1 + i)}{2} \ket{10}, \end{align} $ $ 호출은이 출력을 생성 합니다.
+퀀텀 개발 키트의 일부분으로 배포 되는 전체 상태 퀀텀 시뮬레이터는 전체 퀀텀 시스템의 [wave 함수](https://en.wikipedia.org/wiki/Wave_function) 를 파일에 기록 하 고, 각 요소가 계산 기준 상태 $ \ket{n} $를 측정할 확률의 진폭을 나타냅니다. 여기서 $ \ket{n} = \ket{b_ {n-1} ... bits $\{에 대 한 b_1b_0} $ b_i\}$. 예를 들어, 두 개의 om비트만 할당 된 컴퓨터에서 및 퀀텀 상태 $ $ \begin{align} \ket{\psi} = \frac{1}{\sqrt{2}} \ket{00}-\frac{(1 + i)}{2} \ket{10}, \end{align} $ $ 호출은이 출력을 생성 합니다.<xref:microsoft.quantum.diagnostics.dumpmachine>
 
 ```
 # wave function for qubits with ids (least to most significant): 0;1
@@ -265,7 +285,7 @@ using (register = Qubit())
   > 의 id는 런타임에 할당 되며,이는 해당 비트를 할당 하는 순서 또는이를 사용 하는 순서에 따라 결정 되는 것은 아닙니다.
 
 
-#### <a name="visual-studio-2019tabtabid-vs2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
+#### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
   > [!TIP]
   > 코드에 중단점을 배치 하 고 다음과 같이 다음과 같이 Visual Studio에서 사용자 비트 id를 확인할 수 있습니다.
@@ -274,7 +294,7 @@ using (register = Qubit())
   >
   > `register2`에서 index가 `0` 인 이상 비트에는 id =`3`, 인덱스 `1`의 고 비트는 id =`2`입니다.
 
-#### <a name="command-line--visual-studio-codetabtabid-vscode"></a>[명령줄/Visual Studio Code](#tab/tabid-vscode)
+#### <a name="command-line--visual-studio-code"></a>[명령줄/Visual Studio Code](#tab/tabid-vscode)
 
   > [!TIP]
   > <xref:microsoft.quantum.intrinsic.message> 함수를 사용 하 고 다음과 같이 메시지에 다음과 같은 기능을 전달 하 여이에 대 한 비트 id를 알아낼 수 있습니다.

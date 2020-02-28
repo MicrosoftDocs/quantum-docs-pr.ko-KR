@@ -1,34 +1,34 @@
 ---
-title: Q# Style Guide | Microsoft Docs
-description: Q# Style Guide
+title: 'Microsoft Q # 스타일 가이드'
+description: 'Q # 프로그램 및 라이브러리에 대 한 이름 지정, 입력, 설명서 및 서식 규칙에 대해 알아봅니다.'
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.style
-ms.openlocfilehash: 4050e2ee9e516aed7a8ba1398792562926808ee0
-ms.sourcegitcommit: c93fea5980d1d46fbda1e7c7153831b9337134bf
+ms.openlocfilehash: 3c8e432378ec563a197a5b87000c3e90cadb8e18
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73463314"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907446"
 ---
-# <a name="q-style-guide"></a>Q# Style Guide #
-## <a name="general-conventions"></a>General Conventions ##
+# <a name="q-style-guide"></a>Q # 스타일 가이드 #
+## <a name="general-conventions"></a>일반 규칙 ##
 
-The conventions suggested in this guide are intended to help make programs and libraries written in Q# easier to read and understand.
+이 가이드에서 제안 하는 규칙은 Q #으로 작성 된 프로그램 및 라이브러리를 읽고 이해할 수 있도록 하기 위한 것입니다.
 
-## <a name="guidance"></a>인도
+## <a name="guidance"></a>지침
 
 다음을 권장 합니다.
 
-- Never disregard a convention unless you’re doing so intentionally in order to provide more readable and understandable code for your users.
+- 사용자에 게 더 읽기 쉽고 이해 하기 쉬운 코드를 제공 하기 위해 의도적으로 수행 하는 경우가 아니면 규칙을 무시 하지 마십시오.
 
-## <a name="naming-conventions"></a>Naming Conventions ##
+## <a name="naming-conventions"></a>명명 규칙 ##
 
-In offering the Quantum Development Kit, we strive for function and operation names that help quantum developers write programs that are easy to read and that minimize surprise.
-An important part of that is that when we choose names for functions, operations, and types, we are establishing the *vocabulary* that programmers use to express quantum concepts; with our choices, we either help or hinder them in their effort to clearly communicate.
-This places a responsibility on us to make sure that the names we introduce offer clarity rather than obscurity.
+퀀텀 개발 키트를 제공할 때 퀀텀 개발자가 쉽게 읽을 수 있는 프로그램을 작성 하는 데 도움이 되는 함수 및 작업 이름에 대해 노력 하 고 있으며이를 최소화 합니다.
+의 중요 한 부분은 함수, 작업 및 형식에 대 한 이름을 선택할 때 프로그래머가 퀀텀 개념을 표현 하는 데 사용 하는 *어휘* 를 설정 하는 것입니다. 이 옵션을 사용 하면 명확 하 게 통신할 수 있도록 도와 드릴 수 있습니다.
+이는 도입 된 이름이 은둔 대신 명확성을 제공 하는지 확인 하는 책임을 집니다.
 이 섹션에서는 Q # 개발 커뮤니티에서 가장 잘 활용 하는 데 도움이 되는 명시적 지침을 기준으로이 의무를 어떻게 충족 하는지 자세히 설명 합니다.
 
 ### <a name="operations-and-functions"></a>작업 및 함수 ###
@@ -62,7 +62,7 @@ This places a responsibility on us to make sure that the names we introduce offe
 
 | 동사 | 예상 효과 |
 | ---- | ------ |
-| 신청 | 입력으로 제공 된 작업을 라고 합니다. |
+| 적용 | 입력으로 제공 된 작업을 라고 합니다. |
 | Assert | 가능한 퀀텀 측정의 결과에 대 한 가설은 시뮬레이터에 의해 확인 됩니다. |
 | 견적 | 하나 이상의 측정값 으로부터 그려진 추정치를 나타내는 고전 값이 반환 됩니다. |
 | 측정값 | 퀀텀 측정이 수행 되며 결과가 사용자에 게 반환 됩니다. |
@@ -80,7 +80,7 @@ This places a responsibility on us to make sure that the names we introduce offe
 이 이름에는 아래에서 설명한 대로 기본 제공 `Controlled` 함수에 대 한 의미 체계와 일치 하는 추가적인 이점도 있습니다.
 마찬가지로, `Encode`와 강력 하 게 연결 된 UDT에 대 한 `Encoder` 이름의 경우 처럼 _에이전트 명사_ 를 사용 하 여 작업 이름에서 함수와 UDT 이름을 생성할 수 있습니다.
 
-# <a name="guidancetabguidance"></a>[지침](#tab/guidance)
+# <a name="guidance"></a>[지침](#tab/guidance)
 
 다음을 권장 합니다.
 
@@ -91,9 +91,9 @@ This places a responsibility on us to make sure that the names we introduce offe
 - 모든 지역 변수에 대해 강력한 기본 설정의 `pascalCase`를 사용 하 여 `CamelCase`, `snake_case`또는 `ANGRY_CASE`합니다. 특히 지역 변수가 소문자로 시작 하는지 확인 합니다.
 - 함수 및 작업 이름에 밑줄 `_` 사용 하지 않습니다. 계층의 추가 수준이 필요한 경우 네임 스페이스 및 네임 스페이스 별칭을 사용 합니다.
 
-# <a name="examplestabexamples"></a>[예](#tab/examples)
+# <a name="examples"></a>[예](#tab/examples)
 
-|   | name | 설명 |
+|   | 속성 | Description |
 |---|------|-------------|
 | ☑ | `operation ReflectAboutStart` | 작업의 효과를 나타내려면 동사 ("반사")를 사용 하지 않습니다. |
 | ☒ | <s>`operation XRotation`</s> | 명사구를 사용 하는 것은 연산이 아니라 함수를 제안 합니다. |
@@ -132,7 +132,7 @@ is Adj + Ctl {
 }
 ```
 
-# <a name="guidancetabguidance"></a>[지침](#tab/guidance)
+# <a name="guidance"></a>[지침](#tab/guidance)
 
 다음을 권장 합니다.
 
@@ -141,9 +141,9 @@ is Adj + Ctl {
 - Short (2 자) 머리글자어 및의 두문자어 정의에 대문자를 사용 합니다.
 - 더 긴 (3 자 이상) 머리글자어 및의 두문자어 정의에 대 한 `CamelCase`를 사용 합니다.
 
-# <a name="examplestabexamples"></a>[예](#tab/examples)
+# <a name="examples"></a>[예](#tab/examples)
 
-|   | name | 설명 |
+|   | 속성 | Description |
 |---|------|-------------|
 | ☑ | `X` | "$X $ 변환 적용"의 이해 하기 쉬운 약어 |
 | ☑ | `CNOT` | "제어-없음"에 대 한 이해 하기 쉬운 약어 |
@@ -168,17 +168,17 @@ While we must maintain the history and intellectual provenance of concepts in qu
 특정 한 예로, 단일 제어 된 교환 및 이중 제어 되지 않는 작업을 교육용 자료에서 "Fredkin" 및 "Toffoli" 작업 이라고 하지만 Q #에서는 주로 `CSWAP` 및 `CCNOT`로 식별 됩니다.
 두 경우 모두 적절 한 명사와 함께 적절 한 명사를 기반으로 하는 동의어 이름을 제공 합니다.
 
-이 기본 설정은 특히 적절 한 명사를 사용 하는 경우에 특히 중요 합니다. Q #은 다양 한 기존 언어에 의해 설정 된 전통을을 따르고, 예를 들어, 부울 논리에 대 한 참조의 `Bool` 형식을 참조 하며,이는 그대로 사용 됩니다. George Boole.
+이 기본 설정은 특히 적절 한 명사를 사용 해야 하는 경우에 특히 중요 합니다. Q #은 여러 기존 언어에 의해 설정 된 전통을을 따르고, George Boole에 대 한 참조에서 부울 논리에 대 한 참조의 `Bool` 형식을 참조 합니다.
 이와 비슷한 몇 가지 퀀텀 개념은 비슷한 방식으로 이름이 지정 됩니다 (Q # 언어에 기본 제공 되는 `Pauli` 형식 포함).
 이러한 사용법이 필수적이 지 않은 적절 한 명사 사용을 최소화 하면 적절 한 명사를 피할 수 없는 영향을 줄일 수 있습니다.
 
-# <a name="guidancetabguidance"></a>[지침](#tab/guidance) 
+# <a name="guidance"></a>[지침](#tab/guidance) 
 
 다음을 권장 합니다.
 
 - 이름에 적절 한 명사를 사용 하지 마십시오.
 
-# <a name="examplestabexamples"></a>[예](#tab/examples)
+# <a name="examples"></a>[예](#tab/examples)
 
 ***
 
@@ -188,19 +188,19 @@ Q #은 강력 하 고 staticly 지정 된 언어 이기 때문에 형식 변환 
 이는 값이 암시적으로 (예: 유형 프로 모션) 형식을 변경 하거나 캐스팅을 통해 변경할 수 있는 언어와는 대조적입니다.
 따라서 형식 변환 함수는 Q # 라이브러리 개발에서 중요 한 역할을 수행 하 고 명명에 대 한 보다 일반적으로 발생 하는 사항 중 하나를 구성 합니다.
 그러나 형식 변환은 항상 _결정적_이므로 함수로 작성 될 수 있으므로 위의 권장 사항 아래에 있습니다.
-특히 형식 변환 함수에는 동사 (예: `ConvertToX`) 또는 부사 prepositional 문구 (`ToX`)로 이름을 지정 하지 않는 것이 좋지만, 원본 및 대상 유형을 나타내는 형용사 prepositional 구로 명명 되어야 합니다 (`XAsY`).
+특히 형식 변환 함수에는 동사 (예: `ConvertToX`) 또는 부사 prepositional 문구 (`ToX`)로 이름을 지정 하지 않는 것이 좋지만, 원본 및 대상 유형 (`XAsY`)을 나타내는 형용사 prepositional 구로 명명 되어야 합니다.
 형식 변환 함수 이름에 배열 형식을 나열할 때 줄임 `Arr`를 권장 합니다.
 예외적인 상황을 방지 하기 위해 `As`를 사용 하 여 모든 형식 변환 함수 이름을 지정 하 여 신속 하 게 식별할 수 있도록 하는 것이 좋습니다.
 
-# <a name="guidancetabguidance"></a>[지침](#tab/guidance)
+# <a name="guidance"></a>[지침](#tab/guidance)
 
 다음을 권장 합니다.
 
 - 함수가 `X` 형식의 값을 `Y`형식의 값으로 변환 하는 경우 이름 `AsY` 또는 `XAsY`를 사용 합니다.
 
-# <a name="examplestabexamples"></a>[예](#tab/examples)
+# <a name="examples"></a>[예](#tab/examples)
 
-|   | name | 설명 |
+|   | 속성 | Description |
 |---|------|-------------|
 | ☒ | <s>`ToDouble`</s> | 전치사 "to"는 동사가 아닌 연산을 나타내는 동사 구를 생성 합니다. |
 | ☒ | <s>`AsDouble`</s> | 입력 형식이 함수 이름에서 명확 하지 않습니다. |
@@ -215,22 +215,22 @@ Q #은 강력 하 고 staticly 지정 된 언어 이기 때문에 형식 변환 
 내부 전용 코드에 대 한 실수로 종속성이 명확 하 게 적용 되도록 함수 및 작업의 이름을 지정 하는 경우이를 명확 하 게 표시 하는 것이 좋습니다.
 작업 또는 함수가 직접 사용 하기 위한 것이 아니며, 부분 응용 프로그램에서 작동 하는 일치 하는 호출 가능에서 사용 해야 하는 경우에는 부분적으로 적용 되는 호출 가능에 대해 `_` 시작 하는 이름을 사용 하는 것이 좋습니다.
 
-# <a name="guidancetabguidance"></a>[지침](#tab/guidance)
+# <a name="guidance"></a>[지침](#tab/guidance)
 
 다음을 권장 합니다.
 
 - 함수, 작업 또는 사용자 정의 형식이 Q # 라이브러리 또는 프로그램에 대 한 공용 API의 일부가 아니면 이름이 선행 밑줄 (`_`)로 시작 하는지 확인 합니다.
 
-# <a name="examplestabexamples"></a>[예](#tab/examples)
+# <a name="examples"></a>[예](#tab/examples)
 
-|   | name | 설명 |
+|   | 속성 | Description |
 |---|------|-------------|
 | ☒ | <s>`ApplyDecomposedOperation_`</s> | 밑줄 `_` 이름의 끝에 표시 되어서는 안 됩니다. |
 | ☑ | `_ApplyDecomposedOperation` | 처음에 `_` 밑줄은이 작업이 내부용 으로만 사용 됨을 나타냅니다. |
 
 ***
 
-### <a name="variants"></a>변종 ###
+### <a name="variants"></a>변형 ###
 
 이후 버전의 Q #에서는이 제한 사항이 유지 되지 않을 수 있지만, 현재는 해당 입력을 함수 하는 것과 관련 된 작업 또는 함수의 그룹이 나 구체적으로 해당 인수의 그룹이 있는 경우가 많습니다.
 이러한 그룹은 동일한 루트 이름과 해당 변형을 나타내는 하나 또는 두 개의 문자를 사용 하 여 구분할 수 있습니다.
@@ -244,14 +244,14 @@ Q #은 강력 하 고 staticly 지정 된 언어 이기 때문에 형식 변환 
 | `D` | 입력 또는 입력은 형식 `Double` |
 | `L` | 입력 또는 입력은 형식 `BigInt` |
 
-# <a name="guidancetabguidance"></a>[지침](#tab/guidance)
+# <a name="guidance"></a>[지침](#tab/guidance)
 
 다음을 권장 합니다.
 
 - 함수 또는 작업이 해당 입력의 유형 및 함수 지원에 의해 유사한 함수 또는 작업과 관련이 없는 경우에는 접미사를 사용 하지 마십시오.
 - 함수 또는 작업이 해당 입력의 유형 및 함수 지원에 의해 유사한 함수 또는 작업과 관련 된 경우에는 위의 표에서와 같이 접미사를 사용 하 여 변형을 구분 합니다.
 
-# <a name="examplestabexamples"></a>[예](#tab/examples)
+# <a name="examples"></a>[예](#tab/examples)
 
 ***
 
@@ -261,7 +261,7 @@ Q #은 강력 하 고 staticly 지정 된 언어 이기 때문에 형식 변환 
 마찬가지로 입력 및 형식 인수의 이름은 제공 된 후 함수 또는 인수가 사용 되는 방식에 대해 통신 해야 합니다.
 
 
-# <a name="guidancetabguidance"></a>[지침](#tab/guidance)
+# <a name="guidance"></a>[지침](#tab/guidance)
 
 다음을 권장 합니다.
 
@@ -276,7 +276,7 @@ Q #은 강력 하 고 staticly 지정 된 언어 이기 때문에 형식 변환 
   특히 단일 문자 변수 이름을 인덱스로 사용 하지 않는 것이 좋습니다. 최소한 `idx`를 사용 하는 것이 좋습니다.
 - 배열의 길이를 포함 하는 데 사용 되는 변수는 `n` 시작 해야 하며 복수화 (예: `nThings`) 이어야 합니다.
 
-# <a name="examplestabexamples"></a>[예](#tab/examples)
+# <a name="examples"></a>[예](#tab/examples)
 
 ***
 
@@ -285,7 +285,7 @@ Q #은 강력 하 고 staticly 지정 된 언어 이기 때문에 형식 변환 
 사용자 정의 형식의 명명 된 항목은 UDT 생성자에 대 한 입력에도 `CamelCase`으로 이름이 지정 되어야 합니다.
 이를 통해 접근자 표기법 (예: `callable::Apply`) 또는 복사 및 업데이트 표기법 (`set arr w/= Data <- newData`)을 사용할 때 명명 된 항목을 지역 범위 변수에 대 한 참조에서 명확 하 게 구분할 수 있습니다.
 
-# <a name="guidancetabguidance"></a>[지침](#tab/guidance)
+# <a name="guidance"></a>[지침](#tab/guidance)
 
 다음을 권장 합니다.
 
@@ -294,9 +294,9 @@ Q #은 강력 하 고 staticly 지정 된 언어 이기 때문에 형식 변환 
 - 작업을 확인 하지 않는 명명 된 항목은 명사 구로 명명 되어야 합니다.
 - 작업을 래핑하는 Udt의 경우 `Apply` 라는 단일 명명 된 항목을 정의 해야 합니다.
 
-# <a name="examplestabexamples"></a>[예](#tab/examples)
+# <a name="examples"></a>[예](#tab/examples)
 
-|   | 살펴보겠습니다 | 설명 |
+|   | 살펴보겠습니다 | Description |
 |---|---------|-------------|
 | ☑ | `newtype Oracle = (Apply : Qubit[] => Unit is Adj + Ctl)` | 이름 `Apply`은 `CamelCase`형식의 동사 구로, 명명 된 항목이 작업 임을 제안 합니다. |
 | ☒ | <s>`newtype Oracle = (apply : Qubit[] => Unit is Adj + Ctl) `</s> | 명명 된 항목은 초기 대문자로 시작 해야 합니다. |
@@ -342,7 +342,7 @@ operation ApplyPhaseEstimationIteration(
 예를 들어 `ControlledOnInt<'T>`에는 `Controlled` 함수 처럼 작동 하지만 컨트롤 레지스터가 상태 $ \ket{5} = \ket{101}$를 나타내는 조건에서 `ControlledOnInt<Qubit[]>(5, _)` `(Int, ('T => Unit is Adj + Ctl)) => ((Qubit[], 'T) => Unit is Adj + Ctl)`형식이 있습니다.
 따라서 개발자는 `ControlledOnInt`에 대 한 입력이 마지막으로 변환 되는 호출을 수행 하 고, 결과 작업에서 `Controlled` 함수의 출력과 동일한 순서를---하는 입력 `(Qubit[], 'T)`으로 간주 합니다.
 
-# <a name="guidancetabguidance"></a>[지침](#tab/guidance)
+# <a name="guidance"></a>[지침](#tab/guidance)
 
 다음을 권장 합니다.
 
@@ -350,15 +350,15 @@ operation ApplyPhaseEstimationIteration(
 - 기본 제공 함수와 일치 하는 입력 순서을 사용 합니다.
 - 모든 기존 입력을 퀀텀 입력 앞에 저장 합니다.
 
-# <a name="examplestabexamples"></a>[예](#tab/examples)
+# <a name="examples"></a>[예](#tab/examples)
 
 ***
 
-## <a name="documentation-conventions"></a>설명서 규칙 ##
+## <a name="documentation-conventions"></a>문서 규칙 ##
 
 Q # 언어를 사용 하면 특수 형식의 문서 주석을 사용 하 여 작업, 함수 및 사용자 정의 형식에 대 한 설명서를 첨부할 수 있습니다.
 삼중 슬래시 (`///`)로 표시 되는 이러한 설명서 주석은 각 작업, 함수 및 사용자 정의 형식, 각 작업의 용도를 설명 하는 데 사용할 수 있는 작은 [Docfx-Flavored Markdown](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html) 문서입니다.
-퀀텀 개발 키트와 함께 제공 되는 컴파일러는 이러한 주석을 추출 하 고이를 사용 하 여 https://docs.microsoft.com/quantum 와 비슷한 설명서를 조판 합니다.
+퀀텀 개발 키트와 함께 제공 되는 컴파일러는 이러한 주석을 추출 하 고이를 사용 하 여 https://docs.microsoft.com/quantum와 비슷한 설명서를 조판 합니다.
 마찬가지로, 퀀텀 개발 키트와 함께 제공 되는 언어 서버는 이러한 주석을 사용 하 여 사용자가 Q # 코드에서 기호를 마우스로 가리킬 때 사용자에 게 도움을 제공 합니다.
 따라서 문서 주석을 사용 하면이 문서의 다른 규칙을 사용 하 여 쉽게 표현 되지 않는 세부 정보에 대 한 유용한 참조를 제공 하 여 사용자가 코드를 이해 하는 데 도움이 될 수 있습니다.
 
@@ -368,7 +368,7 @@ Q # 언어를 사용 하면 특수 형식의 문서 주석을 사용 하 여 작
 
 이 기능을 효과적으로 사용 하 여 사용자를 돕기 위해 문서 주석을 작성할 때 몇 가지 사항을 염두에 두어야 합니다.
 
-# <a name="guidancetabguidance"></a>[지침](#tab/guidance)
+# <a name="guidance"></a>[지침](#tab/guidance)
 
 다음을 권장 합니다.
 
@@ -388,7 +388,7 @@ Q # 언어를 사용 하면 특수 형식의 문서 주석을 사용 하 여 작
 - 작업 또는 함수가 함수 변형의 다른 작업 또는 함수와 관련 된 경우 `# See Also` 섹션에서 다른 변형을 글머리 기호로 나열 합니다.
 - 수준-1 (`/// #`) 섹션 사이에 빈 주석 줄을 그대로 두고 수준 2 (`/// ##`) 섹션 사이에 빈 줄을 남겨 두지 않습니다.
 
-# <a name="examplestabexamples"></a>[예](#tab/examples)
+# <a name="examples"></a>[예](#tab/examples)
 
 #### <a name=""></a>☑ ####
 
@@ -434,7 +434,7 @@ is Adj + Ctl {
 그럼에도 불구 하 고 작업자 그룹 내에 일관 된 형식 지정 규칙 집합을 유지 하는 것이 좋습니다. 특히 퀀텀 개발 키트와 같은 초대형 Q # 프로젝트의 경우에는 특히 그렇습니다.
 이러한 규칙은 Q # 컴파일러와 통합 된 서식 도구를 사용 하 여 자동으로 적용할 수 있습니다.
 
-# <a name="guidancetabguidance"></a>[지침](#tab/guidance) 
+# <a name="guidance"></a>[지침](#tab/guidance) 
 
 다음을 권장 합니다.
 
@@ -451,9 +451,9 @@ is Adj + Ctl {
 - 함수, 작업 또는 UDT 이름 뒤에 공백을 사용 하거나 특성 선언에서 `@` 뒤에 공백을 사용 하지 마십시오.
 - 각 특성 선언은 별도의 줄에 있어야 합니다.
 
-# <a name="examplestabexamples"></a>[예](#tab/examples)
+# <a name="examples"></a>[예](#tab/examples)
 
-|   | 살펴보겠습니다 | 설명 |
+|   | 살펴보겠습니다 | Description |
 |---|---------|-------------|
 | ☒ | <s>`2+3`</s> | 이항 연산자 주위의 공백을 사용 합니다. |
 | ☒ | <s>`target:Qubit`</s> | 형식 주석 콜론 앞뒤에 공백을 사용 합니다. |
