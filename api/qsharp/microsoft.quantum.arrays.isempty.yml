@@ -1,0 +1,28 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.isempty
+name: IsEmpty
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: 배열이 비어 있는 경우에만 true를 반환 합니다.
+syntax: "function IsEmpty (array : 'T[]) : Bool"
+input:
+  content: "(array : 'T[])"
+  types:
+  - name: array
+    summary: 확인할 배열입니다.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: Bool
+  types:
+  - summary: 배열이 비어 있으면 (길이가 0 인 경우에만)를 `true` 합니다.
+    isPrimitive: true
+    uid: Bool
+metadata:
+  ms.openlocfilehash: 5357baa2e8d4a1922932c087cb71e93beeda9417
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.translationtype: MT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77908092"

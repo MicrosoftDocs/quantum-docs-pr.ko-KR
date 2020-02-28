@@ -139,6 +139,8 @@ operations:
   summary: 부호 있는 정수 `xs` 부호 있는 정수 `ys` 곱하여 결과를 `result`에 저장 합니다 .이 값은 처음에 0 이어야 합니다.
 - uid: microsoft.quantum.arithmetic.preparefxp
   summary: 퀀텀 고정 소수점 수를 기존 상수로 초기화 합니다.
+- uid: microsoft.quantum.arithmetic.reflectaboutinteger
+  summary: 지정 된 기존 정수에 대 한 퀀텀 레지스터를 반영 합니다.
 - uid: microsoft.quantum.arithmetic.ripplecarryaddercdkm
   summary: 해독 가능한 내부 ripple-두 개의 정수를 추가 합니다.
 - uid: microsoft.quantum.arithmetic.ripplecarryadderd
@@ -177,9 +179,9 @@ newtypes:
 - uid: microsoft.quantum.arithmetic.signedlittleendian
   summary: Little endian에 저장 된 부호 있는 정수 형식입니다 (LittleEndian 참조).
 metadata:
-  ms.openlocfilehash: f4bdca1f7b6339079cd1e13cfafc2de4e592901a
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: 905bac104c15881be6b2e600bd090ff650d63e0e
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76870445"
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77904556"

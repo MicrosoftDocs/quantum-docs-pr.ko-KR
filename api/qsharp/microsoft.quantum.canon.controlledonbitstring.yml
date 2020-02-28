@@ -4,10 +4,10 @@ name: ControlledOnBitString
 type: function
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  컨트롤 레지스터 상태가 지정 된 비트 마스크에 해당 하는 경우 대상 레지스터에 oracle을 적용 하는 단일 연산자를 반환 합니다.
+  컨트롤 레지스터 상태가 지정 된 비트 마스크에 해당 하는 경우 대상 레지스터에 oracle을 적용 하는 단일 작업을 반환 합니다.
 
 
-  이 함수의 출력은 \begin{align} U \ket{b_0 b_1 \cdots b_ {n-1}} \ket{\psi} = \ket{b_0 b_1 \cdots b_ {n-1}} \cdots와 같은 단일 변환 $U $로 나타낼 수 있습니다. V \ket{\psi} & \t extrm{if} (b_0 b_1 \cdots b_ {n-1}) = \texttt{bits} \\\\ \ket{\psi} & \textrm{otherwise} \end{cases}, \end{align} 여기서 $V $은 `oracle` 작업의 동작을 나타내는 단일 변환입니다.
+  이 함수의 출력은 \begin{align} U \ket{b_0 b_1 \cdots b_ {n-1}} \ket{\psi} = \ket{b_0 b_1 \cs {n-1}} \cdots과 같은 단일 변환 $U $로 나타낼 수 있는 작업입니다. times \begin{cases} V \ket{\psi} & \t extrm{if} (b_0 b_1 \cdots b_ {n-1}) = \texttt{bits} \\\\ \ket{\psi} & \textrm{otherwise} \end{cases}, \end{align} 여기서 $V $은 `oracle` 작업의 동작을 나타내는 단일 변환입니다.
 remarks: >-
   `bits`와 `controlRegister`의 길이는 동일 해야 합니다.
 
@@ -64,12 +64,12 @@ input:
   content: "(bits : Bool[], oracle : ('T => Unit is Adj + Ctl))"
   types:
   - name: bits
-    summary: 지정 된 단일 연산자를 제어할 비트 문자열입니다.
+    summary: 지정 된 단일 작업을 제어 하는 비트 문자열입니다.
     isArray: true
     isPrimitive: true
     uid: Bool
   - name: oracle
-    summary: 대상 레지스터에 적용할 단일 연산자입니다.
+    summary: 대상 레지스터에 적용 될 단일 작업입니다.
     isOperation: true
     input:
       types:
@@ -85,7 +85,7 @@ input:
 output:
   content: ((Qubit[], 'T) => Unit is Adj + Ctl)
   types:
-  - summary: 컨트롤 레지스터 상태가 비트 마스크 `bits`에 해당 하는 경우 대상 레지스터에 `oracle`를 적용 하는 단일 연산자입니다.
+  - summary: 컨트롤 레지스터 상태가 비트 마스크 `bits`에 해당 하는 경우 대상 레지스터에 `oracle` 적용 되는 단일 작업입니다.
     isOperation: true
     input:
       types:
@@ -102,9 +102,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: dde246a6eb0cf5e278cd079ff52c3a0b0ff71120
-  ms.sourcegitcommit: b7e205aaa7fa1ca9f0daa163e46154945f4bc965
+  ms.openlocfilehash: e6f7f8980b2b9b8305df12da41e30fc563e54ad1
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 02/18/2020
-  ms.locfileid: "77441047"
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77906528"

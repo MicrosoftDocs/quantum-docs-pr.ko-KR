@@ -1,0 +1,32 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.machinelearning.controlledrotation
+name: ControlledRotation
+type: newtype
+namespace: Microsoft.Quantum.MachineLearning
+summary: 대상 및 컨트롤 인덱스, 회전 축 및 모델 매개 변수 벡터로의 인덱스를 기준으로 제어 되는 회전을 설명 합니다.
+remarks: >-
+  `ControlIndices`를 빈 인덱스 배열 `new Int[0]`에 설정 하 여 미제어 회전을 표현할 수 있습니다.
+
+
+  ### <a name="examples"></a>예
+
+  다음은 두 번째 비트율 비트에 의해 제어 되 고 순차 모델에서 네 번째 매개 변수로 지정 된 각도를 사용 하 여 레지스터에서 첫 번째 고 비트의 $X $ 축에 대 한 회전을 나타냅니다.
+
+
+  ```Q#
+
+  let controlledRotation = ControlledRotation(
+      (0, [1]),
+      PauliX,
+      3
+  )
+
+  ```
+syntax: newtype ControlledRotation = ((Int, Int[]), Pauli, Int);
+metadata:
+  ms.openlocfilehash: b09588e77a43be10493184d4e3b8bbe7a0025ce6
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.translationtype: MT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77909520"
