@@ -1,4 +1,4 @@
-- name: 참고 자료
+- name: API 참조
   items:
     - name: 'Q# 라이브러리'
       href: qsharp/toc.yml
