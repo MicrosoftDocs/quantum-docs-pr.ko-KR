@@ -16,3 +16,5 @@
   href: circuits.md
 - name: 양자 오라클
   href: oracles.md
+- name: 용어
+  href: glossary.md
