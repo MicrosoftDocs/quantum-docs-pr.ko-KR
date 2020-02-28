@@ -1,17 +1,17 @@
 ---
-title: 'Q # 표준 라이브러리-오류 수정 | Microsoft Docs'
-description: 'Q # 표준 라이브러리-오류 수정'
+title: 'Q # 표준 라이브러리의 오류 수정'
+description: 'Q # 프로그램에서 오류 수정 코드를 사용 하는 방법에 대해 알아봅니다.'
 author: QuantumWriter
 uid: microsoft.quantum.libraries.error-correction
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: e1b78cf94ae0a043ad275d4cb06b230eafd7fc85
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+ms.openlocfilehash: 514fe68f603b9a3a0b4607390719b08a43fe4967
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74863200"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907769"
 ---
 # <a name="error-correction"></a>오류 수정 #
 
@@ -35,10 +35,10 @@ ms.locfileid: "74863200"
 
 | 오류 $E $ | $E \ket{\overline{0}} $ | $E \ket{\overline{1}} $ |
 | --- | --- | --- |
-| $\boldone$ | $ \ket{000}$ | $ \ket{111}$ |
-| $X_0$ | $ \ket{100}$ | $ \ket{011}$ |
-| $X_1$ | $ \ket{010}$ | $ \ket{101}$ |
-| $X_2$ | $ \ket{001}$ | $ \ket{110}$ |
+| $ \boldone $ | $ \ket{000}$ | $ \ket{111}$ |
+| $X _0 $ | $ \ket{100}$ | $ \ket{011}$ |
+| $X _1 $ | $ \ket{010}$ | $ \ket{101}$ |
+| $X _2 $ | $ \ket{001}$ | $ \ket{110}$ |
 
 인코딩할 상태를 보호 하기 위해 $ \ket{\overline{0}} $ 및 $ \ket{\overline{1}} $를 구별 하지 않고 id $ \boldone $와 다른 세 개의 오류를 구별할 수 있어야 합니다.
 예를 들어 $Z _0 $을 측정 하는 경우 오류 없는 경우에서 $ \ket{\overline{0}} $ 및 $ \ket{\overline{1}} $에 대해 다른 결과를 얻게 되므로는 인코딩된 상태를 축소 합니다.
@@ -52,10 +52,10 @@ $Z _0 Z_1 \ket{000} = \ket{000}$ 이며이 측정값이 두 인코딩된 상태�
 
 | 오류 $E $ | $E \ket{\overline{0}} $ | $E \ket{\overline{1}} $ | $Z _0 Z_1 $ 결과 | $Z _1 Z_2 $의 결과 |
 | --- | --- | --- | --- | --- |
-| $\boldone$ | $ \ket{000}$ | $ \ket{111}$ | $+$ | $+$ |
-| $X_0$ | $ \ket{100}$ | $ \ket{011}$ | $-$ | $+$ |
-| $X_1$ | $ \ket{010}$ | $ \ket{101}$ | $-$ | $-$ |
-| $X_2$ | $ \ket{001}$ | $ \ket{110}$ | $+$ | $-$ |
+| $ \boldone $ | $ \ket{000}$ | $ \ket{111}$ | $+$ | $+$ |
+| $X _0 $ | $ \ket{100}$ | $ \ket{011}$ | $-$ | $+$ |
+| $X _1 $ | $ \ket{010}$ | $ \ket{101}$ | $-$ | $-$ |
+| $X _2 $ | $ \ket{001}$ | $ \ket{110}$ | $+$ | $-$ |
 
 따라서 두 측정값의 결과는 어떤 비트 대칭 오류가 발생 했는지를 고유 하 게 결정 하지만 인코딩된 상태에 대 한 정보는 노출 하지 않습니다.
 이러한 결과를 *증후군*로 호출 하 고 증후군를 *복구*로 발생 시킨 오류에 다시 매핑하는 프로세스를 참조 합니다.
@@ -79,11 +79,11 @@ Q # 라고에서는 안정기 코드에서의 인코딩 및 디코딩을 설명 
 
 오류 수정 코드를 지정 하는 데 도움이 되도록 Q # 라고은 다음과 같이 여러 가지 고유한 사용자 정의 형식을 제공 합니다.
 
-- <xref:microsoft.quantum.errorcorrection.logicalregister> `= Qubit[]`:의 레지스터를 오류 수정 코드의 코드 블록으로 해석 해야 함을 나타냅니다.
-- <xref:microsoft.quantum.errorcorrection.syndrome> `= Result[]`: 측정 결과 배열을 코드 블록에서 측정 된 증후군 해석 해야 함을 나타냅니다.
-- <xref:microsoft.quantum.errorcorrection.recoveryfn> `= (Syndrome -> Pauli[])`: *기존* 함수를 사용 하 여 증후군를 해석 하 고 적용 해야 하는 수정 사항을 반환 해야 함을 나타냅니다.
-- <xref:microsoft.quantum.errorcorrection.encodeop> `= ((Qubit[], Qubit[]) => LogicalRegister)`: 오류 수정 코드의 코드 블록을 생성 하기 위해 작업에서 새로운 ancilla 된 데이터와 함께 데이터를 나타내는 기능을 사용 함을 나타냅니다.
-- <xref:microsoft.quantum.errorcorrection.decodeop> `= (LogicalRegister => (Qubit[], Qubit[]))`: 작업에서 증후군 정보를 나타내는 데 사용 되는 데이터 요소 및 ancilla 요소에 대 한 코드를 수정 하는 오류 코드 블록을 분해 나타냅니다.
+- <xref:microsoft.quantum.errorcorrection.logicalregister> `= Qubit[]`: 는의 레지스터를 오류 수정 코드의 코드 블록으로 해석 해야 함을 나타냅니다.
+- <xref:microsoft.quantum.errorcorrection.syndrome> `= Result[]`: 측정 결과 배열이 코드 블록에서 측정 된 증후군 해석 되어야 함을 나타냅니다.
+- <xref:microsoft.quantum.errorcorrection.recoveryfn> `= (Syndrome -> Pauli[])`: 는 증후군를 해석 하 고 적용 해야 하는 수정 사항을 반환 하는 데 사용 해야 하는 *기존* 함수를 나타냅니다.
+- <xref:microsoft.quantum.errorcorrection.encodeop> `= ((Qubit[], Qubit[]) => LogicalRegister)`: 오류 수정 코드의 코드 블록을 생성 하기 위해 작업에서 새로운 ancilla 된 데이터와 함께 데이터를 표현 하는 데 필요한 작업을 수행 함을 나타냅니다.
+- <xref:microsoft.quantum.errorcorrection.decodeop> `= (LogicalRegister => (Qubit[], Qubit[]))`: 는 작업에서 코드를 수정 하 여 코드를 수정 하는 작업을 분해 하 고, 증후군 정보를 나타내는 데 사용 되는 ancilla 등의 작업을 수행 하는 것을 나타냅니다.
 - <xref:microsoft.quantum.errorcorrection.syndromemeasop> `= (LogicalRegister => Syndrome)`: 코드에 의해 보호 되는 상태를 방해 하지 않고 코드 블록에서 증후군 정보를 추출 하는 데 사용 해야 하는 작업을 나타냅니다.
 
 마지막으로 라고은 퀀텀 오류 수정 코드를 정의 하는 데 필요한 다른 형식을 수집 하기 위해 <xref:microsoft.quantum.errorcorrection.qecc> 형식을 제공 합니다. 각 안정기 퀀텀 코드와 연결 된 코드 $n 길이는 $, logical st$d bits의 숫자 $k $, ⟦ $n $, $k $, $d $ ⟧ 표기법에서 편리 하 게 그룹화 되는 것입니다. 예를 들어 <xref:microsoft.quantum.errorcorrection.bitflipcode> 함수는 ⟦ 3, 1, 1 ⟧ 비트 대칭 코드를 정의 합니다.
