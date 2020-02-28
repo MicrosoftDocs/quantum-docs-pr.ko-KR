@@ -1,0 +1,35 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.machinelearning.estimategradient
+name: EstimateGradient
+type: operation
+namespace: Microsoft.Quantum.MachineLearning
+summary: 특정 모델 및 지정 된 인코딩된 입력에 대 한 순차 분류자의 학습 그라데이션을 추정 합니다.
+remarks: 이 작업에서는 Hadamard 테스트를 사용 하 고 매개 변수를 함께 사용 하 여 그라데이션을 계산 합니다.
+syntax: 'operation EstimateGradient (model : Microsoft.Quantum.MachineLearning.SequentialModel, encodedInput : Microsoft.Quantum.MachineLearning.StateGenerator, nMeasurements : Int) : Double[]'
+input:
+  content: '(model : Microsoft.Quantum.MachineLearning.SequentialModel, encodedInput : Microsoft.Quantum.MachineLearning.StateGenerator, nMeasurements : Int)'
+  types:
+  - name: model
+    summary: 그라데이션을 예상할 순차 모델입니다.
+    uid: microsoft.quantum.machinelearning.sequentialmodel
+  - name: encodedInput
+    summary: 상태 준비 작업으로 인코딩된 순차 분류자에 대 한 입력입니다.
+    uid: microsoft.quantum.machinelearning.stategenerator
+  - name: nMeasurements
+    summary: 그라데이션을 예측 하는 데 사용할 측정 수입니다.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Double[]
+  types:
+  - summary: 지정 된 입력 및 모델 매개 변수에 대 한 예상 학습 그라데이션입니다.
+    isArray: true
+    isPrimitive: true
+    uid: Double
+metadata:
+  ms.openlocfilehash: 05f80d57bc84e937e3a2580e9941a50ec60eab56
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.translationtype: MT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77909418"

@@ -45,6 +45,8 @@ functions:
   summary: 숫자가 다른 숫자 보다 작거나 같은 경우에만 true를 반환 합니다.
 - uid: microsoft.quantum.logical.lessthanorequall
   summary: 숫자가 다른 숫자 보다 작거나 같은 경우에만 true를 반환 합니다.
+- uid: microsoft.quantum.logical.nearlyequald
+  summary: 두 입력이 거의 동일한 경우에만 true를 반환 합니다. 즉, 허용 오차의 허용 오차 범위 내에 있습니다.
 - uid: microsoft.quantum.logical.not
   summary: 값의 부울 부정을 반환 합니다.
 - uid: microsoft.quantum.logical.notequalb
@@ -61,14 +63,16 @@ functions:
   summary: 두 입력이 같지 않은 경우에만 true를 반환 합니다.
 - uid: microsoft.quantum.logical.notequalr
   summary: 두 입력이 같지 않은 경우에만 true를 반환 합니다.
+- uid: microsoft.quantum.logical.notnearlyequald
+  summary: 두 입력이 거의 같지 않은 경우에만 true를 반환 합니다. 즉,의 허용 오차 범위 내에 없는 경우에만 true를 반환 합니다.
 - uid: microsoft.quantum.logical.or
   summary: 두 값의 부울 분리를 반환 합니다.
 - uid: microsoft.quantum.logical.xor
   summary: 두 값의 부울 배타적 논리합을 반환 합니다.
 metadata:
-  ms.openlocfilehash: 12f462356dfe7ae4bf7c60110e71a9928bc8c178
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 356a31be888d7ed3a96e219f8f7b31151179d3eb
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73056289"
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77905899"

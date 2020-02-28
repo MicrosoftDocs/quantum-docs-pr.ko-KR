@@ -1,0 +1,72 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.machinelearning
+name: Microsoft.Quantum.MachineLearning
+summary: " # <a name=\"summary\"></a>요약\n 이 네임 스페이스는 퀀텀 기계 학습 응용 프로그램에서 사용 되는 함수 및 작업을 제공 합니다.\n\n # <a name=\"references\"></a>참조\n - 민 Schuld, Alex Bocharov, Krysta Sva, 네, \"회로 중심 퀀텀 분류자\", https://arxiv.org/abs/1804.00633."
+functions:
+- uid: microsoft.quantum.machinelearning.approximateinputencoder
+  summary: 계수 및 허용 오차 집합이 지정 된 경우 지정 된 허용 오차를 기준으로 각 계수를 계산 기준 상태의 해당 진폭으로 준비 하는 상태 준비 작업을 반환 합니다.
+- uid: microsoft.quantum.machinelearning.combinedstructure
+  summary: 하나 이상의 제어 되는 회전 계층이 지정 된 경우는 고유한 모델 매개 변수에 의해 고유 계층이 매개 변수화 되도록 모델 매개 변수 인덱스가 이동 된 단일 레이어를 반환 합니다.
+- uid: microsoft.quantum.machinelearning.cyclicentanglinglayer
+  summary: 지정 된 축을 따라 단일 제어 회전의 배열을 반환 하 고,이를 통해 주기적의 레지스터를 정렬 하 고, 고유 모델 매개 변수에 의해 매개 변수화 됩니다.
+- uid: microsoft.quantum.machinelearning.defaulttrainingoptions
+  summary: 학습용 분류자에 대 한 기본 옵션 집합을 반환 합니다.
+- uid: microsoft.quantum.machinelearning.featureregistersize
+  summary: 특정 기능 벡터를 인코딩하는 데 필요한 원하는 비트 수를 반환 합니다.
+- uid: microsoft.quantum.machinelearning.inferredlabel
+  summary: 분류 확률 및 바이어스가 지정 된 경우 해당 확률에서 유추 된 레이블을 반환 합니다.
+- uid: microsoft.quantum.machinelearning.inferredlabels
+  summary: 분류 확률 및 바이어스의 배열이 지정 된 경우 각 확률에서 유추 된 레이블을 반환 합니다.
+- uid: microsoft.quantum.machinelearning.inputencoder
+  summary: 계수 및 허용 오차 집합이 지정 된 경우 각 계수를 계산 기준 상태의 해당 진폭으로 준비 하는 상태 준비 작업을 반환 합니다.
+- uid: microsoft.quantum.machinelearning.localrotationslayer
+  summary: 고유 모델 매개 변수를 사용 하 여 레지스터의 각 고 비트에 대해 하나의 회전을 사용 하 여 지정 된 축을 따라 제어 되지 않는 (단일 비트) 회전의 배열을 반환 합니다.
+- uid: microsoft.quantum.machinelearning.misclassifications
+  summary: 유추 된 레이블 집합과 올바른 레이블 집합을 지정 하면 각 레이블 집합이 다른에 대 한 인덱스를 반환 합니다.
+- uid: microsoft.quantum.machinelearning.nmisclassifications
+  summary: 유추 된 레이블 집합과 올바른 레이블 집합을 지정 하면 각 레이블 집합이 다른 인덱스 수를 반환 합니다.
+- uid: microsoft.quantum.machinelearning.nqubitsrequired
+  summary: 지정 된 순차 분류자를 적용 하는 데 필요한 원하는 비트 수를 반환 합니다.
+- uid: microsoft.quantum.machinelearning.partialrotationslayer
+  summary: 고유 모델 매개 변수에 의해 매개 변수화 된 지정 된 축을 따라 단일가 비트 회전의 배열을 반환 합니다.
+- uid: microsoft.quantum.machinelearning.sampled
+  summary: 지정 된 일정을 사용 하 여 지정 된 배열을 샘플링 합니다.
+- uid: microsoft.quantum.machinelearning.schedulelength
+  summary: 지정 된 샘플링 일정의 요소 수를 반환 합니다.
+operations:
+- uid: microsoft.quantum.machinelearning.applysequentialclassifier
+  summary: 순차 분류자의 구조체 및 매개 변수화가 지정 된 경우,이 분류자는의 레지스터에 적용 됩니다.
+- uid: microsoft.quantum.machinelearning.estimateclassificationprobabilities
+  summary: 샘플 집합과 순차 분류자가 지정 된 경우 각 샘플에서 분류자의 출력을 반복적으로 측정 하 여 해당 샘플에 대 한 분류 확률을 예측 합니다.
+- uid: microsoft.quantum.machinelearning.estimateclassificationprobability
+  summary: 샘플 및 순차 분류자가 지정 된 경우 지정 된 샘플에서 분류자의 출력을 반복적으로 측정 하 여 해당 샘플에 대 한 분류 확률을 예측 합니다.
+- uid: microsoft.quantum.machinelearning.estimategradient
+  summary: 특정 모델 및 지정 된 인코딩된 입력에 대 한 순차 분류자의 학습 그라데이션을 추정 합니다.
+- uid: microsoft.quantum.machinelearning.trainsequentialclassifier
+  summary: 순차 분류자의 구조가 지정 된 경우 지정 된 레이블이 지정 된 학습 집합에 분류자를 학습 합니다.
+- uid: microsoft.quantum.machinelearning.trainsequentialclassifieratmodel
+  summary: 순차 분류자의 구조가 지정 된 경우 특정 모델에서 시작 하 여 지정 된 레이블이 지정 된 학습 집합에 분류자를 학습 합니다.
+- uid: microsoft.quantum.machinelearning.validatesequentialclassifier
+  summary: 지정 된 미리 레이블이 지정 된 샘플 집합에 대해 지정 된 순차 분류자의 유효성을 검사 합니다.
+newtypes:
+- uid: microsoft.quantum.machinelearning.controlledrotation
+  summary: 대상 및 컨트롤 인덱스, 회전 축 및 모델 매개 변수 벡터로의 인덱스를 기준으로 제어 되는 회전을 설명 합니다.
+- uid: microsoft.quantum.machinelearning.labeledsample
+  summary: 예제가 속한 클래스를 사용 하 여 레이블이 지정 된 샘플입니다.
+- uid: microsoft.quantum.machinelearning.samplingschedule
+  summary: 샘플 집합에서 일괄 처리를 그리기 위한 일정입니다.
+- uid: microsoft.quantum.machinelearning.sequentialmodel
+  summary: 매개 변수가 있는 시퀀스 및 제어 된 회전, 회전 각도 할당 및 모델에서 인식 되는 두 클래스 간의 바이어스로 구성 된 퀀텀 분류자 모델에 대해 설명 합니다.
+- uid: microsoft.quantum.machinelearning.stategenerator
+  summary: 순차적 분류자에 대해 지정 된 입력을 준비 하는 작업을 설명 합니다.
+- uid: microsoft.quantum.machinelearning.trainingoptions
+  summary: 퀀텀 분류자 학습에 사용할 옵션의 컬렉션입니다.
+- uid: microsoft.quantum.machinelearning.validationresults
+  summary: 이 결과는 샘플 집합에 대해 분류자의 유효성을 검사 한 결과입니다.
+metadata:
+  ms.openlocfilehash: be0c17b6f3e42c03bacadbf02c693980f89cbe39
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.translationtype: MT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77908313"
