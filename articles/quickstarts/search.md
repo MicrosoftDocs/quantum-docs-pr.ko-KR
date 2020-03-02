@@ -6,12 +6,12 @@ ms.author: chgranad@microsoft.com
 ms.date: 10/19/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.search
-ms.openlocfilehash: c1fd578fdb3d56a7b48972e6ccc9b1605047fe36
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 0e64fcd56929fa33397c45bf1b2e99bf687eca6f
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820354"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906953"
 ---
 # <a name="quickstart-implement-grovers-search-algorithm-in-q"></a>빠른 시작: Q#에서 Grover의 검색 알고리즘 구현
 
@@ -43,7 +43,7 @@ Grover의 알고리즘은 목록의 항목이 검색 중인 항목인지 여부�
 
 1. 다음 코드를 새 프로젝트의 `Operations.qs` 파일에 추가합니다.
 
-    :::code language="qsharp" source="~/quantum/samples/algorithms/simple-grover/SimpleGrover.qs" range="4-23" highlight="5,27":::
+    :::code language="qsharp" source="~/quantum/samples/algorithms/simple-grover/SimpleGrover.qs" range="4-40":::
 
 1. 검색하는 목록을 정의하려면 새 `Reflections.qs` 파일을 만들고, 다음 코드를 붙여넣습니다.
 
@@ -53,7 +53,7 @@ Grover의 알고리즘은 목록의 항목이 검색 중인 항목인지 여부�
 
 1. 다음으로, 새 Q# 프로그램을 실행하여 `ReflectAboutMarked`로 표시된 항목을 찾습니다.
 
-    ### <a name="python-with-visual-studio-code-or-the-command-linetabtabid-python"></a>[Visual Studio 코드 또는 명령줄을 사용하는 Python](#tab/tabid-python)
+    ### <a name="python-with-visual-studio-code-or-the-command-line"></a>[Visual Studio 코드 또는 명령줄을 사용하는 Python](#tab/tabid-python)
 
     Python에서 새 Q# 프로그램을 실행하려면 다음 코드를 `host.py`로 저장합니다.
 
@@ -71,7 +71,7 @@ Grover의 알고리즘은 목록의 항목이 검색 중인 항목인지 여부�
     [0, 1, 0, 1, 0]
     ```
 
-    ### <a name="c-with-visual-studio-code-or-the-command-linetabtabid-csharp"></a>[Visual Studio 코드 또는 명령줄을 사용하는 C#](#tab/tabid-csharp)
+    ### <a name="c-with-visual-studio-code-or-the-command-line"></a>[Visual Studio 코드 또는 명령줄을 사용하는 C#](#tab/tabid-csharp)
 
     C#에서 새 Q# 프로그램을 실행하려면 다음 C# 코드를 포함하도록 `Driver.cs`를 수정합니다.
 
@@ -90,7 +90,7 @@ Grover의 알고리즘은 목록의 항목이 검색 중인 항목인지 여부�
     Press any key to continue...
     ```
 
-    ### <a name="c-with-visual-studio-2019tabtabid-vs2019"></a>[Visual Studio 2019를 사용하는 C#](#tab/tabid-vs2019)
+    ### <a name="c-with-visual-studio-2019"></a>[Visual Studio 2019를 사용하는 C#](#tab/tabid-vs2019)
 
     Visual Studio를 사용하여 C#에서 새 Q# 프로그램을 실행하려면 다음 C# 코드를 포함하도록 `Driver.cs`를 수정합니다.
 

@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 10/07/2019
 ms.topic: tutorial
 uid: microsoft.quantum.write-program
-ms.openlocfilehash: 30135fa8a123e52a92b7187218f9980ba3cdbd2d
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: 8d3b2d7c8da39a961f4eedcc5989ad3a1e134ade
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73442203"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906732"
 ---
 # <a name="quantum-basics-with-q"></a>Q#을 사용하는 양자 기본 사항
 
@@ -19,7 +19,7 @@ ms.locfileid: "73442203"
 
 양자 얽힘을 보여주는 벨이라는 애플리케이션을 작성합니다.  벨이라는 이름은 가장 간단한 중첩과 양자 얽힘의 예를 표현하는 데 사용되는 두 큐비트의 특정 양자 상태를 의미하는 벨 상태에서 따온 것입니다. 
 
-## <a name="pre-requisites"></a>필수 조건
+## <a name="pre-requisites"></a>필수 구성 요소
 
 코딩을 시작할 준비가 되면 계속하기 전에 다음 단계를 수행합니다. 
 
@@ -30,7 +30,7 @@ QDK를 설치하지 않고 설명에 따라 Q# 프로그래밍 언어와 양자 
 
 ## <a name="demonstrating-qubit-behavior-with-q"></a>Q#에서 큐비트 동작 시연
 
-간단한 [큐비트 정의](xref:microsoft.quantum.overview.what#the-qubit)를 떠올려 보세요.  클래식 비트는 0 또는 1 같은 단일 이진 값을 보유하는 반면, 큐비트 상태는 0과 1의 동시 **중첩**일 수 있습니다.  개념적으로 큐비트는 공간의 방향(벡터라고도 함)이라고 생각할 수 있습니다.  가능한 모든 방향은 큐비트가 될 수 있습니다. 두 **클래식 상태**는 두 방향입니다. 즉, 0을 측정할 확률이 100%이고, 1을 측정할 확률이 100%입니다.  또한 이 표현은 [블로흐 구](/quantum/concepts/the-qubit?view=qsharp-preview#visualizing-qubits-and-transformations-using-the-bloch-sphere)를 통해 보다 형식적으로 시각화됩니다.
+간단한 [큐비트 정의](xref:microsoft.quantum.overview.what#the-qubit)를 떠올려 보세요.  클래식 비트는 0 또는 1 같은 단일 이진 값을 보유하는 반면, 큐비트 상태는 0과 1의 동시 **중첩**일 수 있습니다.  개념적으로 큐비트는 공간의 방향(벡터라고도 함)이라고 생각할 수 있습니다.  가능한 모든 방향은 큐비트가 될 수 있습니다. 두 **클래식 상태**는 두 방향입니다. 즉, 0을 측정할 확률이 100%이고, 1을 측정할 확률이 100%입니다.  또한 이 표현은 [블로흐 구](/quantum/concepts/the-qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere)를 통해 보다 형식적으로 시각화됩니다.
 
 
 측정 작업은 이진 결과를 생성하고 큐비트 상태를 변경합니다. 측정은 이진 값(0 또는 1)을 생성합니다.  큐비트는 중첩(모든 방향)에서 클래식 상태 중 하나로 변경됩니다.  그 후 개입 작업 없이 동일한 측정을 반복하여 동일한 이진 결과를 생성합니다.  
@@ -39,14 +39,14 @@ QDK를 설치하지 않고 설명에 따라 Q# 프로그래밍 언어와 양자 
 
 이제 Q#에서 이 동작을 어떻게 표현하는지 시연할 준비가 되었습니다.  가능한 가장 간단한 프로그램으로 시작하여 양자 중첩 및 양자 얽힘을 보여주는 프로그램을 빌드합니다.
 
-## <a name="setup"></a>설정
+## <a name="setup"></a>설치 프로그램
 
 Microsoft의 Quantum Development Kit를 사용하여 개발된 애플리케이션은 다음 두 부분으로 구성됩니다.
 
 1. 하나 이상의 양자 알고리즘 - Q# 양자 프로그래밍 언어를 사용하여 구현됩니다.
 1. 호스트 프로그램 - Python 또는 C#과 같은 프로그래밍 언어로 구현되어 주 진입점 역할을 수행하고, Q# 연산을 호출하여 양자 알고리즘을 실행합니다.
 
-#### <a name="pythontabtabid-python"></a>[Python](#tab/tabid-python)
+#### <a name="python"></a>[Python](#tab/tabid-python)
 
 1. 애플리케이션의 위치 선택
 
@@ -54,7 +54,7 @@ Microsoft의 Quantum Development Kit를 사용하여 개발된 애플리케이�
 
 1. `host.py`라는 파일을 만듭니다. 이 파일에는 Python 호스트 코드가 포함됩니다.
 
-#### <a name="c-command-linetabtabid-csharp"></a>[C# 명령줄](#tab/tabid-csharp)
+#### <a name="c-command-line"></a>[C# 명령줄](#tab/tabid-csharp)
 
 1. 새 Q# 프로젝트를 만듭니다.
 
@@ -71,7 +71,7 @@ Microsoft의 Quantum Development Kit를 사용하여 개발된 애플리케이�
     mv Operation.qs Bell.qs
     ```
 
-#### <a name="visual-studiotabtabid-vs2019"></a>[Visual Studio](#tab/tabid-vs2019)
+#### <a name="visual-studio"></a>[Visual Studio](#tab/tabid-vs2019)
 
 1. 새 프로젝트 만들기
 
@@ -177,7 +177,7 @@ Q# 연산은 양자 서브루틴입니다. 즉, 양자 연산을 포함하는 �
 
 ## <a name="create-the-host-application-code"></a>호스트 애플리케이션 코드 만들기
 
-#### <a name="pythontabtabid-python"></a>[Python](#tab/tabid-python)
+#### <a name="python"></a>[Python](#tab/tabid-python)
 
 1. `host.py` 파일을 열고 다음 코드를 추가합니다.
 
@@ -195,7 +195,7 @@ Q# 연산은 양자 서브루틴입니다. 즉, 양자 연산을 포함하는 �
       print(f'Init:{i: <4} 0s={num_zeros: <4} 1s={num_ones: <4}')
     ```
 
-#### <a name="ctabtabid-csharp"></a>[C#](#tab/tabid-csharp)
+#### <a name="c"></a>[C#](#tab/tabid-csharp)
 
 1. `Driver.cs` 파일의 내용을 다음 코드로 바꿉니다.
 
@@ -237,7 +237,7 @@ Q# 연산은 양자 서브루틴입니다. 즉, 양자 연산을 포함하는 �
 
 ### <a name="about-the-host-application-code"></a>호스트 애플리케이션 코드 정보
 
-#### <a name="pythontabtabid-python"></a>[Python](#tab/tabid-python)
+#### <a name="python"></a>[Python](#tab/tabid-python)
 
 Python 호스트 애플리케이션은 다음 세 부분으로 구성됩니다.
 
@@ -245,7 +245,7 @@ Python 호스트 애플리케이션은 다음 세 부분으로 구성됩니다.
 * 가져온 Q# 연산의 `simulate()` 메서드를 호출하여 양자 알고리즘을 실행합니다.
 * 연산의 결과를 처리합니다. 이 예제에서 `res`는 연산 결과를 받습니다. 여기서 결과는 시뮬레이터에서 측정한 0(`num_zeros`)의 수와 1(`num_ones`)의 수에 대한 튜플입니다. 튜플을 분해하여 두 개의 필드를 가져오고, 결과를 출력합니다.
 
-#### <a name="ctabtabid-csharp"></a>[C#](#tab/tabid-csharp)
+#### <a name="c"></a>[C#](#tab/tabid-csharp)
 
 C# 호스트 애플리케이션은 다음 네 부분으로 구성됩니다.
 
@@ -260,7 +260,7 @@ C# 호스트 애플리케이션은 다음 네 부분으로 구성됩니다.
 
 ## <a name="build-and-run"></a>빌드 및 실행
 
-#### <a name="pythontabtabid-python"></a>[Python](#tab/tabid-python)
+#### <a name="python"></a>[Python](#tab/tabid-python)
 
 1. 터미널에서 다음 명령을 실행합니다.
 
@@ -277,7 +277,7 @@ Init:0    0s=1000 1s=0
 Init:1    0s=0    1s=1000
 ```
 
-#### <a name="command-line--visual-studio-codetabtabid-csharp"></a>[명령줄/Visual Studio Code](#tab/tabid-csharp)
+#### <a name="command-line--visual-studio-code"></a>[명령줄/Visual Studio Code](#tab/tabid-csharp)
 
 1. 터미널에서 다음을 실행합니다.
 
@@ -299,7 +299,7 @@ Init:One  0s=0    1s=1000
 Press any key to continue...
 ```
 
-#### <a name="visual-studiotabtabid-vs2019"></a>[Visual Studio](#tab/tabid-vs2019)
+#### <a name="visual-studio"></a>[Visual Studio](#tab/tabid-vs2019)
 
 1. `F5` 키를 누르기만 하면 프로그램이 빌드되고 실행됩니다!
 
@@ -445,7 +445,7 @@ Set(Zero, q1);
 
 새 반환 값(`agree`)은 첫 번째 큐비트의 측정값이 두 번째 큐비트의 측정값과 일치할 때마다 추적합니다. 또한 호스트 애플리케이션을 다음과 같이 적절히 업데이트해야 합니다.
 
-#### <a name="pythontabtabid-python"></a>[Python](#tab/tabid-python)
+#### <a name="python"></a>[Python](#tab/tabid-python)
 
 ```python
 import qsharp
@@ -461,7 +461,7 @@ for i in initials:
     print(f'Init:{i: <4} 0s={num_zeros: <4} 1s={num_ones: <4} agree={agree: <4}')
 ```
 
-#### <a name="ctabtabid-csharp"></a>[C#](#tab/tabid-csharp)
+#### <a name="c"></a>[C#](#tab/tabid-csharp)
 
 ```csharp
             using (var qsim = new QuantumSimulator())
@@ -496,7 +496,7 @@ Init:One  0s=490  1s=510  agree=1000
 
 축하합니다. 첫 양자 프로그램을 작성했습니다!
 
-## <a name="whats-next"></a>다음 작업
+## <a name="whats-next"></a>다음 단계
 
 [Grover 검색](xref:microsoft.quantum.quickstarts.search) 빠른 시작에서는 가장 인기 있는 양자 컴퓨팅 알고리즘 중 하나인 Grover 검색을 빌드 및 실행하는 방법을 보여주고, 양자 컴퓨팅의 실제 문제를 해결하는 데 사용할 수 있는 Q# 프로그램의 좋은 예제를 제공합니다.  
 
