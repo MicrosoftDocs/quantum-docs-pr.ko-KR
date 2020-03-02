@@ -1,17 +1,17 @@
 ---
-title: Quantum Development Kit 참여 | Microsoft Docs
-description: Quantum Development Kit 참여
+title: Microsoft Quantum Development Kit 참여
+description: Microsoft Quantum Development Kit 및 양자 개발 커뮤니티에 참여하는 방법을 알아봅니다.
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing
-ms.openlocfilehash: 3f27f7502c83574e6bd8f950d7e17ee481e44a3c
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 63c6f90a511c7bd14435b2e593af0d8615c18519
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76819861"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904879"
 ---
 # <a name="contributing-to-the-quantum-development-kit"></a>Quantum Development Kit 참여 #
 
@@ -79,4 +79,3 @@ Quantum Development Kit 커뮤니티에 참여해 주셔서 감사합니다.
 
 > [!div class="nextstepaction"]
 > [끌어오기 요청을 여는 방법 알아보기](xref:microsoft.quantum.contributing.pulls)
-

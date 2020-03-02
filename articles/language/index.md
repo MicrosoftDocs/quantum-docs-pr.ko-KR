@@ -1,17 +1,17 @@
 ---
-title: Q# 프로그래밍 언어 | Microsoft Docs
-description: Q# 프로그래밍 언어
+title: Q# 프로그래밍 언어
+description: 양자 프로그램 개발에 사용되는 Q# 언어를 소개합니다.
 author: QuantumWriter
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.language.intro
-ms.openlocfilehash: 560926f6f3e05c32a935f01ca5107a614e743ee2
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: b62e6866fc3609d95c26a5eab2a6eac325dfe330
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73442474"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907378"
 ---
 # <a name="the-q-programming-language"></a>Q# 프로그래밍 언어
 
@@ -41,7 +41,7 @@ Q#의 최상위 구문은 사용자 정의 형식, 연산 및 함수입니다.
 모든 상황에서 일반적인 문장 부호를 일관되게 사용하기 위해 노력하고 있습니다.
 이러한 표시는 항상 동일한 사항을 의미하며 동일한 개념은 항상 동일한 방식으로 표시되므로 Q#을 보다 쉽게 학습하고 읽을 수 있게 됩니다.
 
-구체적으로 살펴보면 다음과 같습니다.
+특히 다음에 대한 내용을 설명합니다.
 
 - 세미콜론(`;`)은 문이나 한 줄로 된 지시문을 종료하는 데 사용됩니다.
   다른 용도로는 사용되지 않습니다.

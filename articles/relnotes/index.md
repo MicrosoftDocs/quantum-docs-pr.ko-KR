@@ -1,17 +1,17 @@
 ---
 title: Quantum Development Kit 미리 보기 릴리스 정보
-description: Quantum Development Kit 미리 보기 릴리스 정보
+description: Microsoft Quantum Development Kit 미리보기의 최신 업데이트에 대해 알아보세요.
 author: natke
 ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: be1eff8127be9fb024a1dc2de3ec82952ac2dc2b
-ms.sourcegitcommit: b7e205aaa7fa1ca9f0daa163e46154945f4bc965
+ms.openlocfilehash: f4bc69e5b14833dea0d61106a9eb368d7d7f5663
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/18/2020
-ms.locfileid: "77441044"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906936"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit 릴리스 정보
 
@@ -22,18 +22,32 @@ ms.locfileid: "77441044"
 업데이트 지침은 [업데이트 가이드](xref:microsoft.quantum.update)를 참조하세요.
 
 
+## <a name="version-01020022610"></a>버전 0.10.2002.2610
+
+*릴리스 날짜: 2020년 2월 27일*
+
+이 릴리스에는 다음이 포함됩니다.
+
+- 새로운 양자 기계 학습 라이브러리. 자세한 내용은 [QML 문서 페이지](https://docs.microsoft.com/quantum/libraries/machine-learning/?view=qsharp-preview)에서 확인하세요.
+- IQ# 버그 수정. NuGet 패키지를 로드할 때 성능이 최대 10-20배 향상되었습니다.
+
+[라이브러리](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [컴파일러](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [런타임](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [샘플](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) 및 [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed)에 대한 비공개 PR의 전체 목록을 참조하세요.  
+
 ## <a name="version-01020012831"></a>버전 0.10.2001.2831
 
 *릴리스 날짜: 2020년 1월 29일*
 
 이 릴리스에는 다음이 포함됩니다.
 
-- 새 Microsoft.Quantum.SDK NuGet 패키지
+- 새 프로젝트를 만들 때 Microsoft.Quantum.Development.Kit NuGet 패키지를 대체할 새로운 Microsoft.Quantum.SDK NuGet Microsoft.Quantum.Development.Kit NuGet 패키지는 기존 프로젝트를 계속 지원합니다. 
+- 새로운 Microsoft.Quantum.SDK NuGet 패키지에서 사용하도록 설정된 Q# 컴파일러 확장 지원. 자세한 내용은 [Github의 설명서](https://github.com/microsoft/qsharp-compiler/tree/master/src/QuantumSdk#extending-the-q-compiler), [컴파일러 확장 샘플](https://github.com/microsoft/qsharp-compiler/tree/master/examples/CompilerExtensions) 및 [Q# 개발 블로그](https://devblogs.microsoft.com/qsharp/extending-the-q-compiler/)를 참조하세요.
 - .NET Core 3.1에 대한 지원 추가. 이전 .NET Core SDK 버전으로 빌드하면 문제가 발생할 수 있으므로 버전 3.1.100을 설치하는 것이 좋습니다.
 - Microsoft.Quantum.QsCompiler.Experimental에서 사용할 수 있는 새 컴파일러 변환
 - IQ#에서 출력 상태 벡터를 HTML로 노출하는 새 기능
 - Hadamard 및 SWAP 테스트를 위한 Microsoft.Quantum.Characterization에 EstimateFrequencyA 지원 추가
 - 이제 AmplitudeAmplification 네임스페이스에서 Q# 스타일 가이드 사용
+
+[라이브러리](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [컴파일러](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [런타임](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [샘플](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) 및 [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed)에 대한 비공개 PR의 전체 목록을 참조하세요.  
 
 ## <a name="version-01019120501"></a>버전 0.10.1912.0501
 

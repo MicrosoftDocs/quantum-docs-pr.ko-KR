@@ -1,17 +1,17 @@
 ---
-title: 양자 컴퓨터 추적 시뮬레이터 | Microsoft Docs
-description: 양자 컴퓨터 추적 시뮬레이터 개요
+title: 양자 컴퓨터 추적 시뮬레이터
+description: Microsoft 양자 컴퓨터 추적 시뮬레이터를 사용하여 클래식 코드를 디버그하고 양자 프로그램의 리소스 요구 사항을 예측하는 방법을 알아봅니다.
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.intro
-ms.openlocfilehash: 929745a6da6034599e97d2f573190308fde6eb75
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 72c259933d2df8f79319e6c0c65ae181a9f9cff3
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820439"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906086"
 ---
 # <a name="quantum-trace-simulator"></a>양자 추적 시뮬레이터
 

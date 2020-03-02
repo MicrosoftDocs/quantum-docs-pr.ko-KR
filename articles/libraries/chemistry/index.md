@@ -1,17 +1,17 @@
 ---
-title: 양자 화학 패키지 소개 | Microsoft Docs
-description: 양자 화학 패키지 소개
+title: 양자 화학 라이브러리 소개
+description: Microsoft 양자 화학 라이브러리에 대한 내용 및 이 라이브러리를 사용하여 양자 컴퓨터에서 전자 구조 문제를 시뮬레이션하는 방법을 알아봅니다.
 author: QuantumWriter
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.chemistry.concepts.intro
-ms.openlocfilehash: e5a9dd70874f1ae0baf4b781346278195a980a7e
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 4268eafa5e53c0a026d179503ac6db88652a8f90
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "72960414"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907327"
 ---
 # <a name="introduction-to-the-quantum-chemistry-library"></a>양자 화학 라이브러리 소개
 

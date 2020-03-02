@@ -1,16 +1,17 @@
 ---
-title: Quantum Development Kit 라이브러리 | Microsoft Docs
+title: Quantum Development Kit 라이브러리
+description: Microsoft Quantum Development Kit에 포함된 표준, 화학 및 숫자 라이브러리의 개요입니다.
 author: cgranade
 ms.author: chgranad@microsoft.com
 ms.date: 10/17/2018
 ms.topic: article
 uid: microsoft.quantum.libraries
-ms.openlocfilehash: 7b51945a8aaf937856441cdb10e8a024bf816f88
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: 89612aaa5c11e1a5e0d418256e96366953fdd3fe
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73442431"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906409"
 ---
 # <a name="overview-of-q-libraries"></a>Q# 라이브러리 개요
 Quantum Development Kit에는 Q#에서 양자 애플리케이션을 더 쉽게 개발할 수 있도록 여러 라이브러리가 제공됩니다.
@@ -20,4 +21,4 @@ Quantum Development Kit에는 Q#에서 양자 애플리케이션을 더 쉽게 �
 - [**양자 화학 라이브러리**](xref:microsoft.quantum.chemistry.concepts.intro): 이 섹션에서는 페르미온 해밀턴의 표현 및 이러한 표현에 대해 작동하는 양자 시뮬레이션 연산과 함수를 로드하기 위한 데이터 모델을 제공하는 양자 화학 라이브러리에 대해 설명합니다.
 - [**양자 숫자 라이브러리**](xref:microsoft.quantum.numerics.intro): 이 섹션에서는 많은 수학 함수를 구현하는 양자 숫자 라이브러리에 대해 설명합니다. 정수(부호 있음 및 부호 없음) 및 고정 소수점 표현을 지원합니다.
 
-라이브러리 원본과 코드 샘플은 GitHub에서 얻을 수 있습니다. 또한 추가 정보는 [라이선스](xref:microsoft.quantum.libraries.licensing)섹션을 참조하세요. 패키지 참조("이진 파일")는 라이브러리를 프로젝트에 포함시키는 다른 방법을 제공하는 라이브러리에도 사용할 수 있습니다. [nuget](https://nuget.org)을 통해 편리하게 가져올 수 있습니다.  
+라이브러리 원본과 코드 샘플은 GitHub에서 얻을 수 있습니다. 또한 추가 정보는 [라이선스](xref:microsoft.quantum.libraries.licensing)섹션을 참조하세요. 패키지 참조("이진 파일")는 라이브러리를 프로젝트에 포함시키는 다른 방법을 제공하는 라이브러리에도 사용할 수 있습니다. [nuget](https://nuget.org)을 통해 편리하게 가져올 수 있습니다.

@@ -1,23 +1,21 @@
 - name: Microsoft Quantum 설명서
   href: index.yml
-- name: 개요
+- name: 양자 컴퓨팅 시작
   items:
-    - name: 시작하기
+    - name: 양자 컴퓨팅이란?
+      href: overview/what-is-quantum-computing.md
+    - name: 양자 컴퓨터에서 수행할 수 있는 작업은 무엇인가요?
+      href: overview/quantum-computers.md
+    - name: 양자 컴퓨팅을 학습해야 하는 이유는?
+      href: overview/why-learn-quantum-computing.md
+    - name: 'Q# 및 QDK란?'
+      href: overview/what-is-qsharp.md
+    - name: 자세히 알아보려면 어떻게 해야 하나요?
+      href: overview/how-to-learn-quantum-computing.md
+- name: Quantum Development Kit 가져오기
+  items:
+    - name: QDK 시작
       href: welcome.md
-    - name: 양자 컴퓨팅에 대한 5가지 질문
-      items:
-        - name: 양자 컴퓨팅이란?
-          href: overview/what-is-quantum-computing.md
-        - name: 양자 컴퓨터에서 수행할 수 있는 작업은 무엇인가요?
-          href: overview/quantum-computers.md
-        - name: 양자 컴퓨팅을 학습해야 하는 이유는?
-          href: overview/why-learn-quantum-computing.md
-        - name: 'Q#이란?'
-          href: overview/what-is-qsharp.md
-        - name: 양자 컴퓨팅을 학습하는 방법
-          href: overview/how-to-learn-quantum-computing.md
-- name: 설치 및 업데이트
-  items:
     - name: QDK 설치
       items:
         - name: 설치 개요
@@ -30,15 +28,23 @@
           href: install-guide/qjupyter.md
     - name: QDK 업데이트
       href: install-guide/update.md
-- name: 빠른 시작
+    - name: 'Q# 프로젝트를 만드는 방법'
+      href: how-to-guides/create-qsharp-project.md
+- name: 'Q# 학습 리소스'
   items:
-    - name: 양자 난수 생성기
-      href: quickstarts/qrng.md
-    - name: 'Q#을 사용하는 양자 기본 사항'
-      href: quickstart.md
-    - name: Grover의 검색 알고리즘 구현
-      href: quickstarts/search.md
-- name: 개념
+    - name: 빠른 시작
+      items:
+        - name: 양자 난수 생성기
+          href: quickstarts/qrng.md
+        - name: 'Q#으로 얽힘 살펴보기'
+          href: quickstart.md
+        - name: Grover의 검색 알고리즘 구현
+          href: quickstarts/search.md
+    - name: 'Quantum Katas를 사용하여 Q# 알아보기'
+      href: intro-to-katas.md
+    - name: 'Q# 코드 샘플'
+      href: 'https://docs.microsoft.com/en-us/samples/browse/?languages=qsharp'
+- name: QDK 심층 분석
   items:
     - name: 양자 개발 기술
       topicHref: techniques/index.md
@@ -46,33 +52,17 @@
     - name: 'Q# 프로그래밍 언어'
       topicHref: language/index.md
       href: language/toc.yml
-    - name: 'Q# 라이브러리'
-      href: libraries/toc.yml
     - name: 양자 시뮬레이터 및 리소스 추정
       href: machines/toc.yml
-    - name: 양자 컴퓨팅 개념
-      href: concepts/toc.yml
-- name: 방법 가이드
-  items:
-    - name: 'Q# 프로젝트 만들기'
-      href: how-to-guides/create-qsharp-project.md
-- name: 'Q# 학습 리소스'
-  items:
-    - name: Quantum Katas를 사용하여 알아보기
-      href: intro-to-katas.md
-    - name: 'Q# 샘플'
-      href: 'https://docs.microsoft.com/en-us/samples/browse/?languages=qsharp'
-- name: 리소스
-  items:
-    - name: 용어
-      href: Glossary.md
-    - name: 추가 정보
-      href: for-more-info.md
-    - name: QDK 릴리스 정보
-      topicHref: relnotes/index.md
-      href: relnotes/toc.yml
-    - name: QDK에 기여
-      href: contributing/toc.yml
-      topicHref: contributing/index.md
-    - name: License
-      href: license.md
+- name: 'Q# 라이브러리'
+  href: libraries/toc.yml
+- name: 양자 컴퓨팅 개념
+  href: concepts/toc.yml
+- name: 추가 정보
+  href: for-more-info.md
+- name: QDK에 기여
+  href: contributing/toc.yml
+  topicHref: contributing/index.md
+- name: QDK 릴리스 정보
+  topicHref: relnotes/index.md
+  href: relnotes/toc.yml
