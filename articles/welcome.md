@@ -1,17 +1,17 @@
 ---
 uid: microsoft.quantum.welcome
 title: QDK(Quantum Development Kit) 시작
-description: QDK를 시작하는 방법을 알아봅니다.
+description: Microsoft QDK(Quantum Development Kit)에서 Q#으로 양자 프로젝트 프로그래밍을 시작하는 방법을 알아봅니다.
 author: natke
 ms.author: nakersha
 ms.date: 10/23/2019
 ms.topic: overview
-ms.openlocfilehash: 066981e3e2fb468c1ff2a4cf4d3e7cff057772ab
-ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
+ms.openlocfilehash: cea39e47ec5e7e2ad97adbbb39ba586274564967
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "77036341"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907633"
 ---
 # <a name="get-started-with-the-quantum-development-kit-qdk"></a>QDK(Quantum Development Kit) 시작
 

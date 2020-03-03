@@ -1,19 +1,19 @@
 ---
-title: 양자 컴퓨팅을 배워야 하는 이유는 무엇인가요?
-description: ''
+title: 양자 컴퓨팅을 학습해야 하는 이유는?
+description: 양자 컴퓨팅의 매력적이고 보람 있는 도전 과제에 대해 알아봅니다.
 author: natke
 ms.author: nakersha
 ms.date: 10/16/2019
 ms.topic: article
 uid: microsoft.quantum.overview.why
-ms.openlocfilehash: 389b745a9f19caa6272e7d537e3ee5f884cec36b
-ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+ms.openlocfilehash: abf8804dc772a82126d432348cc6d2bc1c77f1f7
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73529920"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906970"
 ---
-# <a name="why-learn-quantum-computing"></a>양자 컴퓨팅을 배워야 하는 이유는 무엇인가요?
+# <a name="why-learn-quantum-computing"></a>양자 컴퓨팅을 학습해야 하는 이유는?
 
 양자 컴퓨터는 멋지지만 양자 컴퓨팅을 학습해야 하는 이유는 무엇인가요?
 

@@ -1,17 +1,17 @@
 ---
 title: 양자 컴퓨팅이란?
-description: 양자 컴퓨팅의 기본 사항과 양자 컴퓨터에서 수행할 수 있는 작업에 대해 알아봅니다.
+description: 양자 컴퓨팅 기능, 알고리즘 및 하드웨어, Microsoft QDK(Quantum Development Kit)를 소개합니다.
 author: natke
 ms.author: nakersha
 ms.date: 10/22/2019
 ms.topic: article
 uid: microsoft.quantum.overview.what
-ms.openlocfilehash: 2f3b64b00a0a9552e52e34cb1e3652810b266eab
-ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+ms.openlocfilehash: 668df50882272bfa56541f178e2f4d5fb35efcf5
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73529924"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906783"
 ---
 # <a name="what-is-quantum-computing"></a>양자 컴퓨팅이란?
 
