@@ -1,17 +1,17 @@
 ---
-title: 'Q # 표준 라이브러리-데이터 구조 | Microsoft Docs'
-description: 'Q # 표준 라이브러리-데이터 구조'
+title: 'Q # 표준 라이브러리의 데이터 구조'
+description: 'Microsoft Q # 표준 라이브러리의 데이터 구조, oracles 및 동적 생성기에 대해 알아봅니다.'
 author: QuantumWriter
 uid: microsoft.quantum.libraries.data-structures
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 6eb47de84fdfbb9d35fdfc2988883f8e1cffa332
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+ms.openlocfilehash: 46ac6794d1e21e111aa1d98e11a6f83194f8d54e
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74864358"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907786"
 ---
 # <a name="data-structures-and-modeling"></a>데이터 구조 및 모델링 #
 
@@ -97,7 +97,7 @@ Oracles는 이러한 공간에 $ \pm $1 단계를 적용 하 여 Pauli 연산자
 그런 다음이 두 반사를 결합 하 여 진폭 시행의 단일 단계를 구성 하는 연산자를 형성 합니다. $Q = P_0 P_1 $. 여기서 전체 빼기 기호는 제어 되는 응용 프로그램에서 고려 하는 경우에만 중요 합니다.
 그런 다음 초기 하위 공간에 있는 $ \ket{\psi} $ 초기 상태를 수행 하 고 $ \ket{\psi} \mapsq ^ m \ket{\psi} $를 수행 하 여 진폭 증폭을 진행 합니다.
 이러한 반복을 수행 하는 경우에는 표시 된 공간을 사용 하 여 $ \sin ^ 2 (\sin) $ 겹치는 초기 상태로 시작 하는 경우 $2m 다음 $m에이 겹치는 항목은 $ \sin ^ 2 ([+ 1] \sin) $가 됩니다.
-따라서 일반적 $m으로 $ [2m + 1] \theta = \ pi/2 $;를 사용 하 여 $ [ 그러나 이러한 고정 선택은 고정 소수점 진폭 증폭과 같은 일부 형태의 진폭 증폭에는 중요 하지 않습니다.
+따라서 일반적 $m으로 $ [2m + 1] \theta = \ pi/2 $;를 사용 하 여 $  그러나 이러한 고정 선택은 고정 소수점 진폭 증폭과 같은 일부 형태의 진폭 증폭에는 중요 하지 않습니다.
 이 프로세스를 통해 표시 함수에 대 한 쿼리 수를 quadratically를 사용 하 여 표시 된 하위 공간에서 상태를 준비할 수 있습니다.
 이러한 이유로, 진폭 증폭은 많은 퀀텀 컴퓨팅 응용 프로그램에 대 한 중요 한 빌딩 블록입니다.
 
