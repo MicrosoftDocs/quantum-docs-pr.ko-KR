@@ -1,9 +1,14 @@
 - name: API 참조
   items:
+    - name: API 참조
+      href: index.md
     - name: 'Q# 라이브러리'
+      topicHref: qsharp/index.md
       href: qsharp/toc.yml
     - name: .NET 라이브러리
       items:
+        - name: .NET 라이브러리
+          href: dot-net-libraries.md
         - name: 추적 시뮬레이터
           href: 'https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators'
         - name: 양자 화학
