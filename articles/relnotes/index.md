@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: f4bc69e5b14833dea0d61106a9eb368d7d7f5663
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 53b7d226f0f9b12f47460964944f1ddb6160c357
+ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77906936"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79022833"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit 릴리스 정보
 
@@ -57,7 +57,7 @@ ms.locfileid: "77906936"
 
 - Q# 단위 테스트를 위한 새 테스트 속성은 [여기에서](https://docs.microsoft.com/qsharp/api/qsharp/microsoft.quantum.diagnostics.test) 업데이트된 API 설명서 및 [여기에서](xref:microsoft.quantum.techniques.testing-and-debugging) 업데이트된 테스트 & 디버깅 가이드를 참조하세요.
 - Q# 프로그램 실행 오류 발생 시 스택 추적 추가
-- [OmniSharp C# Visual Studio Code 확장](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)의 업데이트로 인한 Visual Studio Code 중단점 지원
+- [OmniSharp C# Visual Studio Code 확장](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)의 업데이트로 인한 Visual Studio Code 중단점 지원
 
 [라이브러리](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [컴파일러](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [런타임](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [샘플](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) 및 [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed)에 대한 비공개 PR의 전체 목록을 참조하세요.  
 
