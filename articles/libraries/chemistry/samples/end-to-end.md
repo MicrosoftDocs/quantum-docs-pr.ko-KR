@@ -5,16 +5,16 @@ author: cgranade
 ms.author: chgranad@microsoft.com
 ms.date: 10/23/2018
 uid: microsoft.quantum.chemistry.examples.endtoend
-ms.openlocfilehash: 545ade99859f2a9939477fb18604921f70a5d9aa
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 7605676e05ee352e47791657eeaafceef5dbb493
+ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77906511"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79022503"
 ---
 # <a name="end-to-end-with-nwchem"></a>NWChem을 사용하는 엔드투엔드 #
 
-이 페이지에서는 [Nwchem](http://www.nwchem-sw.org/index.php/Main_Page) 입력 데크에서 시작 하 여 퀀텀 화학 시뮬레이션에 대 한 게이트 수를 가져오는 예를 살펴보겠습니다.
+이 문서에서는 [Nwchem](http://www.nwchem-sw.org/index.php/Main_Page) 입력 데크에서 시작 하 여 퀀텀 화학 시뮬레이션에 대 한 게이트 수를 가져오는 예제를 안내 합니다.
 이 예제를 진행 하기 전에 [설치 및 유효성 검사 가이드](xref:microsoft.quantum.chemistry.concepts.installation)에 따라 Docker를 설치 했는지 확인 합니다.
 
 자세한 내용은 다음을 참조하세요.
@@ -62,7 +62,7 @@ Get-Command -Module InvokeNWChem
 ```
 
 다음으로 **GetGateCount** 샘플과 함께 제공 되는 `Get-GateCount` 명령을 가져옵니다.
-자세한 내용은 [샘플에서 제공](https://github.com/Microsoft/Quantum/tree/master/Chemistry/GetGateCount)하는 지침을 참조 하세요.
+자세한 내용은 [샘플에서 제공](https://github.com/Microsoft/Quantum/tree/master/samples/chemistry/GetGateCount)하는 지침을 참조 하세요.
 다음으로, 운영 체제에 따라 `win10-x64`, `osx-x64`또는 `linux-x64`로 `<runtime>` 대체 하 여 다음을 실행 합니다.
 
 ```powershell
@@ -164,7 +164,7 @@ ElapsedMilliseconds : 721
 - `h4_sto6g_alpha.nw`에서 매개 변수 `alpha`를 변경 하 여 다양 한 미리 정의 된 입력 데크를 사용해 보세요. 
 - NWChem 데크를 직접 편집 하 여 (예: 다양 한 n 가지 선택 항목에 대 한 `STO-nG` 모델 탐색) 데크를 수정 해 보세요. 
 - `nwchem/qa/chem_library_tests`에서 사용할 수 있는 미리 정의 된 기타 NWChem 입력 데크를 사용해 보세요.
-- NWChem에서 생성 되었으며 [Microsoft/퀀텀 리포지토리의](https://github.com/Microsoft/Quantum/tree/master/Chemistry/IntegralData/YAML)일부로 사용할 수 있는 미리 정의 된 Broombridge yaml 벤치 마크를 사용해 보세요. 이러한 벤치 마크는 다음과 같습니다. 
+- NWChem에서 생성 되었으며 [Microsoft/퀀텀 리포지토리의](https://github.com/Microsoft/Quantum/tree/master/samples/chemistry/IntegralData/YAML)일부로 사용할 수 있는 미리 정의 된 Broombridge yaml 벤치 마크를 사용해 보세요. 이러한 벤치 마크는 다음과 같습니다. 
     - 분자 hydrogen (H2), molecules Yllium (be), 리튬 hydride (LiH)와 같은 small
     - ozone (O3), beta-carotene, cytosine 등의 더 큰 molecules. 
 - Microsoft Quantum Development Kit에 대 한 인터페이스 기능을 제공 하는 그래픽 프런트 엔드 [Emsl 화살표](https://arrows.emsl.pnnl.gov/api/qsharp_chem) 를 사용해 보세요. 

@@ -6,27 +6,27 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.code
-ms.openlocfilehash: 1882e640dacf3987745ed225fef18636726f70a8
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: edc52dc4434e91258bece28812fd76b66329c6f9
+ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77907480"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79022465"
 ---
-# <a name="contributing-code"></a>코드 기여 #
+# <a name="contributing-code"></a>코드 기여
 
 문제를 보고 하 고 설명서를 개선 하는 것 외에도 퀀텀 개발 키트에 대 한 코드는 퀀텀 프로그래밍 커뮤니티의 동료에 게 도움이 되는 매우 직접적인 방법일 수 있습니다.
 코드를 사용 하면 문제를 해결 하거나, 새 예제를 제공 하거나, 기존 라이브러리를 더 쉽게 사용할 수 있도록 하거나 완전히 새로운 기능을 추가할 수 있습니다.
 
 이 가이드에서는 기여를 가장 잘 하는 데 도움이 되도록 끌어오기 요청을 검토할 때 표시 되는 내용을 자세히 설명 합니다.
 
-## <a name="what-we-look-for"></a>찾는 내용 ##
+## <a name="what-we-look-for"></a>찾는 내용
 
 이상적인 코드 기여는 퀀텀 Development Kit 리포지토리의 기존 작업을 기반으로 하 여 문제를 해결 하거나 기존 기능을 확장 하거나 리포지토리의 범위 내에 있는 새 기능을 추가 합니다.
 코드 기여를 수락 하는 경우이는 퀀텀 개발 키트 자체의 일부가 되며, 나머지 퀀텀 개발 키트와 동일한 방식으로 새로운 기능이 출시, 유지 관리 및 개발 됩니다.
 따라서 기여에 의해 추가 된 기능이 잘 테스트 되 고 문서화 되는 경우 유용 합니다.
 
-### <a name="unit-tests"></a>단위 테스트 ###
+### <a name="unit-tests"></a>단위 테스트
 
 라고과 같은 라이브러리를 구성 하는 Q # 함수, 작업 및 사용자 정의 형식은 [**Microsoft/QuantumLibraries**](https://github.com/Microsoft/QuantumLibraries/) 리포지토리에서 개발의 일부로 자동으로 테스트 됩니다.
 예를 들어 새 끌어오기 요청을 열면 [Azure Pipelines](https://azure.microsoft.com/services/devops/pipelines/) 구성에서 끌어오기 요청의 변경 내용이 퀀텀 프로그래밍 커뮤니티에 의존 하는 기존 기능을 중단 하지 않았는지 확인 합니다.
@@ -56,7 +56,7 @@ function PairTest () : Unit {
 표준 라이브러리 가이드의 [테스트 섹션](xref:microsoft.quantum.libraries.diagnostics) 에 있는 기술을 사용 하 여 더 복잡 한 조건을 확인할 수 있습니다.
 예를 들어 다음 테스트는 <xref:microsoft.quantum.canon.applywith>에 의해 호출 되는 `H(q); X(q); H(q);` `Z(q)`와 동일한 지 확인 합니다.
 
-```qsharp
+```Q#
 @Test("QuantumSimulator")
 operation TestApplyWith() : Unit {
     let actual = ApplyWith(H, X, _);
@@ -79,7 +79,8 @@ operation TestApplyWith() : Unit {
 
 ### Citations and References ### -->
 
-## <a name="when-well-reject-a-pull-request"></a>끌어오기 요청을 거부 하는 경우 ##
+
+## <a name="when-well-reject-a-pull-request"></a>끌어오기 요청을 거부 하는 경우
 
 경우에 따라 끌어오기 요청이 기여를 거부 합니다.
 이러한 상황이 발생 하는 경우에는 특정 기여를 수락 하지 못할 수 있는 여러 가지 이유가 있으므로 잘못 된 것입니다.
@@ -98,10 +99,15 @@ operation TestApplyWith() : Unit {
 Microsoft는 현재 훌륭한 다양성에서 전체 퀀텀 컴퓨팅 커뮤니티를 제공 하 고 향후 더 포괄적으로 성장 하 고 있습니다.
 이러한 목표를 실현 하는 데 도움을 주셔서 감사 합니다.
 
-## <a name="next-steps"></a>다음 단계 ##
+## <a name="next-steps"></a>다음 단계
 
 퀀텀 개발 키트를 전체 퀀텀 프로그래밍 커뮤니티에서 사용할 수 있도록 하는 데 도움을 주셔서 감사 합니다.
 자세히 알아보려면 Q # 스타일에 대 한 다음 가이드를 계속 진행 하세요.
 
 > [!div class="nextstepaction"]
 > [Q # 스타일 지침에 대해 알아보기](xref:microsoft.quantum.contributing.style)
+
+기여 하는 코드의 종류에 따라 기여를 가능한 한 커뮤니티에 최대한 활용 하는 데 도움이 되는 추가 사항이 있을 수 있습니다.
+
+> [!div class="nextstepaction"]
+> [참여 샘플에 대 한 자세한 정보](xref:microsoft.quantum.contributing.samples)

@@ -6,14 +6,14 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.docs
-ms.openlocfilehash: d244a7841b4093031d6225230a6cbefb22cc6a39
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: ed5ab5df9de5d71ccd922cd430cf15779806dd6a
+ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77904896"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79022626"
 ---
-# <a name="improving-documentation"></a>설명서 개선 #
+# <a name="improving-documentation"></a>설명서 개선
 
 퀀텀 개발 키트에 대 한 설명서는 퀀텀 개발자가 정보를 쉽게 사용할 수 있도록 여러 가지 형태를 사용 합니다.
 
@@ -28,7 +28,7 @@ ms.locfileid: "77904896"
 - **API 참조** 는 https://docs.microsoft.com/qsharp/api/에 게시 된 각 Q # 함수, 작업 및 사용자 정의 형식에 대 한 페이지 집합입니다. 이러한 페이지에는 호출 가능한 각에 대 한 입력 및 작업과 추가 정보에 대 한 링크와 예제가 나와 있습니다. API 참조는 각 릴리스의 일부로 Q # 소스 코드의 small DFM 문서에서 자동으로 추출 됩니다.
 - 각 샘플 및 kata에 포함 된 **추가 정보<!---->** 파일은 해당 샘플 또는 kata를 사용 하는 방법, 포함 된 내용, 나머지 퀀텀 개발 키트와의 관계를 설명 합니다. 이러한 파일은 코드 리포지토리에 직접 문서를 연결 하는 데 널리 사용 되는 [DFM (GitHub Flavored Markdown)](https://github.github.com/gfm/)을 사용 하 여 작성 되었습니다.
 
-## <a name="contributing-to-the-conceptual-documentation"></a>개념 설명서에 기여 ##
+## <a name="contributing-to-the-conceptual-documentation"></a>개념 설명서에 기여
 
 개념 또는 추가 정보 설명서에 대 한 향상 된 기능을 제공 하기 위해은 적절 하 게 [**MicrosoftDocs/양자**](https://github.com/MicrosoftDocs/quantum-docs-pr/
 ), [**microsoft/퀀텀**](https://github.com/Microsoft/Quantum)또는 [**microsoft/QuantumKatas**](https://github.com/Microsoft/QuantumKatas)로 끌어오기 요청을 시작 합니다.
@@ -41,7 +41,18 @@ ms.locfileid: "77904896"
 - 퀀텀 프로그래밍 커뮤니티의 많은 멤버는 교육 연구원 이며 주로 커뮤니티에 대 한 기여에 대 한 인용문을 통해 인식 됩니다. 독자 들이 추가 자료를 쉽게 찾을 수 있도록 하는 것 외에도, 용지, 통신, 블로그 게시물 및 소프트웨어 도구와 같은 교육용 자료를 적절히 명시 하 여 교육 참가자가 커뮤니티를 개선 하는 데 가장 적합 한 작업을 유지할 수 있습니다.
 - 퀀텀 프로그래밍 커뮤니티는 광범위 하 고 wonderfully 다양 한 커뮤니티입니다. 세 번째 사용자 예의 gendered 대명사 (예: "사용자 ..., he ...")를 사용 하는 것은 포함이 아닌 제외 작업에 사용할 수 있습니다. 인용 및 링크에서 사람들의 이름을 cognizant, 비 ASCII 문자를 올바르게 포함 하는 경우 해당 멤버에 대 한 내용을 표시 하 여 커뮤니티의 다양성을 제공할 수 있습니다. 마찬가지로, 영어 언어의 많은 단어는 기술 설명서에서 사용 하는 경우 개별 판독기와 커뮤니티 모두에 게 피해를 일으킬 수 있습니다.
 
-## <a name="contributing-to-the-api-references"></a>API 참조에 기여 ##
+### <a name="referencing-sample-code-from-conceptual-articles"></a>개념 문서에서 샘플 코드 참조
+
+[샘플 리포지토리의](https://github.com/Microsoft/Quantum)코드를 포함 하려면 특수 Docfx-Flavored Markdown 명령을 사용 하 여이 작업을 수행할 수 있습니다.
+
+```markdown
+:::code language="qsharp" source="~/quantum/samples/algorithms/chsh-game/Game.qs" range="4-8":::
+```
+
+이 명령은 [`chsh-game` 샘플에서`Game.qs` 파일](https://github.com/microsoft/Quantum/blob/master/samples/algorithms/chsh-game/Game.qs)의 4 ~ 8 줄을 가져와 구문 강조 표시를 위해 Q # 코드로 표시 합니다.
+이 명령을 사용 하면 설명서의 샘플 코드를 항상 최대한 최신 상태로 유지 하기 위해 개념 아티클과 샘플 리포지토리 간에 코드를 복제할 수 있습니다.
+
+## <a name="contributing-to-the-api-references"></a>API 참조에 기여
 
 API 참조에 대 한 향상 된 기능을 제공 하기 위해 문서화 되는 코드에서 직접 끌어오기 요청을 여는 것이 가장 유용 합니다.
 각 함수, 작업 또는 사용자 정의 형식은 문서 주석을 지원 합니다 (`//`대신 `///`으로 표시 됨).
@@ -123,6 +134,7 @@ API 참조에 대 한 향상 된 기능을 제공 하기 위해 문서화 되는
      return ControlledOnBitStringImpl(bits, oracle, _, _);
  }
 ```
+
 [`ControlledOnBitString` 함수에 대 한 API 설명서](xref:microsoft.quantum.canon.controlledonbitstring)에서 위의 코드에 대해 렌더링 된 버전을 볼 수 있습니다.
 
 문서 작성에 대 한 일반적인 관행 외에도 API 문서 주석을 작성 하면 몇 가지 사항을 염두에 두어야 합니다.
