@@ -6,12 +6,12 @@ ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.libraries.standard.algorithms
-ms.openlocfilehash: aaa9ddf47e5ea35e7e57b9828db082889d0e6adf
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 8b8a9019e8bc419f42b0c6f7558354d19a157917
+ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77907242"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79402853"
 ---
 # <a name="quantum-algorithms"></a>퀀텀 알고리즘 #
 
@@ -77,9 +77,9 @@ $ $ \Ket{\phi\_k (a)} = \frac{1}{\sqrt{2}} \left (\ket{0} + e ^ {i2\pi a/2 ^ k} 
 $ $ Adder를 수행 하는 경로는 입력의 합계가 $ $ \ket{a + b} = \operatorname{QFT} ^{-1}\ket{\phi\_1 (a + b)} \otimes \cst\otimes \ket{\phi\_n (a + b)}으로 작성 될 수 있음을 관찰 한 후에 분명 하 게 드러납니다.
 $ $ $B $ 및 $a $ 정수는 $b $의 비트를 컨트롤로 사용 하 여 분해의 각 성능에서 제어 단계 회전을 수행 하 여 추가할 수 있습니다.
 
-이 확장은 정수 $j $ 및 실수 $x $, $e ^ {i2\pi (x + j)} = e ^ {i2\pi x} $에 대 한 것을 확인할 수 있습니다.  이는 원에서 $360 ^ {\circ} $ degrees ($ 2 \ pi $ 라디안)를 회전 하는 경우 시작 하는 위치에서 정확 하 게 종료 되기 때문입니다.  따라서 $e ^ {i2\pi x} $에 대 한 $x $의 유일한 중요 한 부분은 $ $x의 소수 부분입니다.  특히 $x = y +0\_0x\_2 \ ldots x\_n $ 다음 $e ^ {i2\pi x} = e ^ {i2\pi (0) 형식의 이진 확장을 사용할 수 있습니다. x\_0x\_2 \ ldots x\_{n-1})} $ 및 따라서 $ $ \ket{\phi\_k (a + b)} = \frac{1}{\sqrt{2}} \frac{0} + e ^ {i2\pi [a/2 ^ k +0\_k\lstb\_1]} \ket{1} \right). $ $ 즉, 각 텐서 요소는 $ \ket{a} $의 푸리에 변형 확장에서의 요소를 확장 한 후에 $k $ 감소 하는 회전 수를 축소 합니다.  이렇게 하면 adder에 필요한 퀀텀 게이트 수가 크게 줄어듭니다.  Draper adder를 $ \operatorname{QFT} ^{-1} \\\Operatorname{QFT}\\\!\operatorname{ADD}\right) $로 구성 하는 푸리에 변환, 단계 추가 및 역 푸리에 변환 단계를 나타냅니다. 이 단순화를 사용 하 여 전체 프로세스를 구현 하는 퀀텀 회로는 아래에서 볼 수 있습니다.
+이 확장은 정수 $j $ 및 실수 $x $, $e ^ {i2\pi (x + j)} = e ^ {i2\pi x} $에 대 한 것을 확인할 수 있습니다.  이는 원에서 $360 ^ {\circ} $ degrees ($ 2 \ pi $ 라디안)를 회전 하는 경우 시작 하는 위치에서 정확 하 게 종료 되기 때문입니다.  따라서 $e ^ {i2\pi x} $에 대 한 $x $의 유일한 중요 한 부분은 $ $x의 소수 부분입니다.  특히 $x = y +0\_0x\_2 \ ldots x\_n $ 다음 $e ^ {i2\pi x} = e ^ {i2\pi (0) 형식의 이진 확장을 사용할 수 있습니다. x\_0x\_2\ ldots x\_{n-1})} $ 및 $ $ \ket{\phi\_k (a + b)} = \frac{1}{\sqrt{2}} \left (\ket{0} + e ^ {i2\pi [a/2 ^ k +0\_k\ldots b\_1]} \ket{1} \right). $ $ 즉, $ \ket{a} $의 푸리에 변형 확장에서 각 텐서 요소를 증가 시켜 추가를 수행 하는 경우 $k $ 감소에 따라 축소 되는 회전 수입니다.  이렇게 하면 adder에 필요한 퀀텀 게이트 수가 크게 줄어듭니다.  Draper adder를 $ \operatorname{QFT} ^{-1} \\\Operatorname{QFT}\\\!\operatorname{ADD}\right) $로 구성 하는 푸리에 변환, 단계 추가 및 역 푸리에 변환 단계를 나타냅니다. 이 단순화를 사용 하 여 전체 프로세스를 구현 하는 퀀텀 회로는 아래에서 볼 수 있습니다.
 
-![회로 다이어그램으로 표시 된 Draper adder](~/media/draper.png)
+![회로 다이어그램으로 표시 된 Draper adder](~/media/draper.svg)
 
 회로에서 제어 되는 각 $e ^ {i2 \ pi/k} $ gate는 제어 단계 게이트를 나타냅니다.  이러한 게이트는 작동 하는 stbits 쌍에 해당 하는 속성을 갖습니다. $ \ket{00}\maps\ket{00}$ 하지만 $ \ket{11}\mapse ^ {i2 \ pi/k} \ k{11}$입니다.  이 회로를 사용 하면 입력 및 출력을 저장 하는 데 필요한 것과는 별도로 추가 기능을 사용 하 여 추가 기능을 수행할 수 있습니다.
 
@@ -92,7 +92,7 @@ $$
 
 Beauregard adder는 Draper adder 또는 보다 구체적으로 $ \phi\\\!$를 사용 하 여 단계에서 $ 및 $b $ $a를 추가 합니다.  그런 다음 동일한 작업을 사용 하 여 $a + b < N $ $N $를 뺀 다음 $a + b-N < 0 $ 인지 테스트 합니다.  회로는이 정보를 보조 비트에 저장 한 다음 $a + b < N $ 인 경우 레지스터 $N $ back 추가 합니다.  그런 다음이 보조 비트를 계산 하 여 종료 합니다. (이 단계는 adder를 호출한 후 ancilla를 할당 취소할 수 있도록 하기 위해 필요 합니다.)  Beauregard adder에 대 한 회로는 아래에 제공 됩니다.
 
-![회로 다이어그램으로 표시 된 Beauregard adder](~/media/beau.png)
+![회로 다이어그램으로 표시 된 Beauregard adder](~/media/beau.svg)
 
 여기서 $\\\\\Operatorname{ADD} \!$은 $ \a\\\!$ \\a>와 동일한 형식을 사용 합니다. 단,이 컨텍스트에서는 입력이 퀀텀이 아닌 고전입니다.  이렇게 하면 $ \A\\\!\operatorname{ADD} $의 제어 된 단계가 단계 게이트로 대체 될 수 있습니다. 그러면 adder에 필요한 수와 게이트의 수를 줄이기 위해 작업 수를 줄여 함께 컴파일할 수 있습니다.
 
@@ -111,7 +111,7 @@ $V $를 적용 하는 효과는 oracle로 $V $에만 액세스할 수 있는 경
 따라서이 문서의 나머지 부분에서는 *kickback 단계*를 사용 하 여 구현 하는 $R _1 (\\ax) $을 기준으로 단계 예측에 대해 설명 합니다.
 
 이 프로세스를 수행한 후에는 컨트롤과 대상 레지스터가 untangled 상태로 남아 있으므로 $ \ket{\phi} $를 $U ^ $2의 제어 되는 응용 프로그램의 대상으로 사용 하 여 $R _1 (2 \phi) \ket{+} $ 상태에서 두 번째 컨트롤을 준비할 수 있습니다.
-이러한 방식으로 계속 하 여 \begin{align} \ket{\psi} & = \ sum_ {j = 0} ^ n R_1 (2 ^ j \a) \ket{+} \\\\ & \propto \ bigotimes_ {j = 0} ^ {n} \phi (\ket{0} + \phi) 형식의 등록을 가져올 수 있습니다. (i 2 ^ {j} \a) \ket{1}\phi) \\\\ & \propto \ sum_ {k = 0} ^ {2 ^ n-1} \phi (i \alk) \ket{k} \end{align} 여기서 $n $은 필요한 전체 자릿수의 비트 수입니다. ${} \propto를 사용 하 여 $의 정규화 요소를 표시 하지 않았음을 나타내기 위해 $ \propto를 사용 했습니다. {}1/\sqrt{2 ^ n} $.
+이러한 방식으로 계속 하 여 \begin{align} \ket{\psi} & = \ sum_ {j = 0} ^ n R_1 (2 ^ j \a) \ket{+} \\\\ & \propto \ bigotimes_ {j = 0} ^ {n} \phi (\ket{0} + \phi) 형식의 등록을 가져올 수 있습니다. (i 2 ^ {j} \a) \ket{1}\phi) \\\\ & \propto \ sum_ {k = 0} ^ {2 ^ n-1} \phi (i \alk) \ket{k} \end{align} 여기서 $n $은 필요한 전체 자릿수의 비트 수입니다. ${} \propto를 사용 하 여 {}$를 사용 하 여 $1/\phi의 정규화 요소를 표시 하지 않았음을 나타낼 수 있습니다. {2 ^ n} $.
 
 정수 $p $에 대해 $ \phi = 2 \phi p/2 ^ k $를 사용할 경우 $ \ket{\psi} = \operatorname{QFT} \ket{p_0 p_1 \phi} $로 인식 됩니다. 여기서 $p _j $은 $j ^ {\textrm{th}} $ 비트가 $2 \phi \phi n $입니다.
 따라서 퀀텀 푸리에 변환의 adjoint를 적용 하면 퀀텀 상태로 인코딩된 단계의 이진 표현을 가져옵니다.
