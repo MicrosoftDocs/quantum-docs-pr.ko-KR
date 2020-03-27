@@ -6,12 +6,12 @@ ms.author: nawiebe@microsoft.com
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.simulationalgorithms
-ms.openlocfilehash: e3ce76f5ddcca497adb519eece959c9dd5dec92f
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 5dad4e4a77eea99e72eb2efac52eec61ebbdb21c
+ms.sourcegitcommit: a0e50c5f07841b99204c068cf5b5ec8ed087ffea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77904641"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80320705"
 ---
 # <a name="simulating-hamiltonian-dynamics"></a>Hamiltonian Dynamics 시뮬레이션
 
@@ -28,14 +28,14 @@ $E ^ {-i H t} $가 일반 지 수 인 경우이 근사값의 오류는 $O 되지
 이 오류는 $e ^ {-iHt} $이 (가) 연산자 지 수이 고 $H _j $ 용어가 commute (예 *:* $H _j H_k \ne H_k H_j $) 때문에이 수식을 사용할 때 오류가 발생 하는 경우에 발생 합니다.
 
 $T $가 큰 경우에는 Trotter – Suzuki 수식을 사용 하 여 간단한 시간 단계 시퀀스로 분리 하 여 dynamics를 정확 하 게 시뮬레이션할 수 있습니다.
-$R $를 사용 하 여 단계를 진행 하는 동안 수행 된 단계 수를 지정 합니다.
-그런 다음 $ $ e ^ {-i \ sum_ {j = 1} ^ m H_j t} = \left (\ prod_ {j = 1} ^ m e ^ {-iH_j t/r} \ right) ^ r + O (m ^ 2 t ^ 2/r)를 사용할 수 있습니다. $ $-$가 $m ^ 2 t ^ 2/\ 엡실론 $로 확장 하는 경우 $ \left > 0 $에 대해 최대 $ \left $로 오류를 만들 수 있음을 의미 합니다. $r
+$R $를 사용 하 여 진행 시간에서 수행 되는 단계 수를 지정 합니다. 따라서 각 시간 단계는 시간 $t/r $로 실행 됩니다. 그런 다음 $ $ e ^ {-i \ sum_ {j = 1} ^ m H_j t} = \left (\ prod_ {j = 1} ^ m e ^ {-iH_j t/r} \ right) ^ r + O (m ^ 2 t ^ 2/r)를 사용할 수 있습니다. $ $-$가 $m ^ 2 t ^ 2/\ 엡실론 $로 확장 하는 경우 $ \left > 0 $에 대해 최대 $ \left $로 오류를 만들 수 있음을 의미 합니다. $r
 
 오류 용어가 취소 되는 연산자 지 수 시퀀스를 구성 하 여 보다 정확한 근사치을 작성할 수 있습니다.
-가장 간단한 이러한 수식인 대칭 Trotter 수식 또는 Strang 분할은 $ $ U_1 (t) = \ prod_ {j = 1} ^ m e ^ {-iH_j t/2} \ prod_ {j = m} ^ 1 e ^ {-iH_j t} = e ^ {-iHt} + O (m ^ 3 t ^ 3) 형식으로 사용 됩니다. $ $를 선택 하 여 $ \epsilon > 0 $의 $ \epsilon $ 보다 작게 만들 수 있습니다. $r $를 선택 하 여 $m ^ {3/2} t ^ {3/2}/\sqrt {\ 엡실론} $로 크기를 조정할 수 있습니다.
+가장 간단한 이러한 수식, 두 번째 order Trotter-Suzuki formula $ $ U_2 (t) = \left (\ prod_ {j = 1} ^ {m} e ^ {-iH_j t/2r} \ prod_ {j = m} 형식으로 사용 합니다. ^ 1 e ^ {iH_j t/2r} \ right) ^ r = e ^ {-iHt} + O (m ^ 3 t ^ 3/r ^ 2), $ $ x = ^ {3/2} t ^ {3/2}/\sqrt {\ 엡실론} $로 크기를 조정 하려면 $r $를 선택 하 여 $ \left > 0 $에 대해 $ \left $ 보다 작은 값으로 만들 수 있습니다. $m
 
-Trotter $U를 사용 하 여 고차 수식을 만들 수 있습니다.
-가장 간단한 방법은 다음 네 번째 주문 수식입니다. 원래 Suzuki: $ $ U_2 (t) = U_1 ^ 2 (s_1t) U_1 ([1-4s_1] t) U_1 ^ 2 (s_1 t) = e ^ {-iHt} + O (m ^ 5t ^ 5), $ $ where $s _1 = (4-4 ^ {1/3}) ^{-1}$입니다.
+보다 고차 수식, 특히 ($ 2k $) $k > 0 $ 순서를 재귀적으로 생성할 수 있습니다. $ $ U_ {2k} (t) = [U_ {2k-2} (s_k\~ t)] ^ 2 U_ {2k-2} ([1-4s_k] t) [U_ {2k-2} (s_k\~ t)] ^ 2 = e ^ {-iHt} + O ((m t) ^ {2k + 1}/r ^ {2k}), $ $ where $s _k = (4-4 ^ {1/(2k-1)}) ^{-1}$.
+
+가장 간단한 방법은 Suzuki: $ $ U_4 (t) = [U_2 (s_2\~ t)] ^ 2 U_2 ([1-4s_2] t) [U_2 (s_2\~ t)] ^ 2 = e ^ {-iHt} + O (m ^ 5t ^ 5/r ^ 4)로 처음 도입 된 다음 네 번째 순서 ($k = $2) 수식입니다. $ $ where $s _2 = (4-4 ^ {1/3}) ^{-1}$입니다.
 일반적으로는 임의의 상위 수식이 비슷하게 생성 될 수 있습니다. 그러나 더 복잡 한 통합자를 사용 하 여 발생 하는 비용은 대부분의 실질적인 문제에 대 한 네 번째 순서의 이점 보다 더 큽니다.
 
 위의 전략이 작동 하려면 $e ^ {iH_j t} $의 광범위 한 클래스를 시뮬레이트하는 메서드가 필요 합니다.

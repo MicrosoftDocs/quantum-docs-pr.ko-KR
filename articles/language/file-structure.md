@@ -6,12 +6,12 @@ uid: microsoft.quantum.language.file-structure
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: b4bb7d4d70677dbd5d921a9f68313760499a56a1
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 96de062bc6ce4edf94520bec449e8d95259c0f5c
+ms.sourcegitcommit: a0e50c5f07841b99204c068cf5b5ec8ed087ffea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77907395"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80320757"
 ---
 # <a name="file-structure"></a>파일 구조
 
@@ -248,7 +248,7 @@ is Adj + Ctl {
 ```qsharp
 // Entangle two qubits.
 // Assumes that both qubits are in the |0> state.
-operation EPR (q1 : Qubit, q2 : Qubit) : Unit 
+operation PrepareEntangledPair (q1 : Qubit, q2 : Qubit) : Unit 
 is Adj + Ctl {
     H(q2);
     CNOT(q2, q1);
@@ -262,10 +262,10 @@ operation Teleport (source : Qubit, target : Qubit) : Unit {
     using (ancilla = Qubit())
     {
         // Create a Bell pair between the temporary and the target
-        EPR(target, ancilla);
+        PrepareEntangledPair(target, ancilla);
 
         // Do the teleportation
-        Adjoint EPR (ancilla, source);
+        Adjoint PrepareEntangledPair(ancilla, source);
 
         if (MResetZ(source) == One) {
             X(target);
@@ -304,3 +304,41 @@ function DotProduct(a : Double[], b : Double[]) : Double {
     return accum;
 }
 ```
+
+
+## <a name="internal-declarations"></a>내부 선언
+
+사용자 정의 형식, 작업 및 함수를 *내부*로 선언할 수도 있습니다.
+즉,이는 선언 된 Q # 프로젝트 내 에서만 액세스할 수 있습니다.
+프로젝트를 참조로 사용 하는 경우 모든 *공용* (비 내부) 선언을 사용할 수 있지만 다른 프로젝트에서 내부 선언을 사용 하려고 하면 오류가 발생 합니다.
+내부 선언은 프로젝트의 다른 부분에서 재사용할 수 있는 모듈식 코드를 작성 하는 데 유용 하지만, 나중에 종속 될 수 있는 다른 프로젝트를 분리 하지 않고 나중에 변경 될 수 있습니다.
+
+내부 사용자 정의 형식, 작업 또는 함수는 선언의 시작 부분에 `internal`을 추가 하 여 간단히 선언할 수 있습니다.
+예를 들면 다음과 같습니다.
+
+```qsharp
+internal newtype PairOfQubits = (Qubit, Qubit);
+
+internal operation PrepareEntangledPair(pair : PairOfQubits) : Unit 
+is Adj + Ctl {
+    let (q1, q2) = pair!;
+    H(q2);
+    CNOT(q2, q1);
+}
+
+internal function DotProduct(a : Double[], b : Double[]) : Double {
+    ...
+}
+```
+
+> [!WARNING]
+> 내부 사용자 정의 형식은 해당 하는 호출 가능 또는 사용자 정의 형식이 internal 인 경우에만 서명 또는 기본 형식에 사용할 수 있습니다.
+> 예를 들어 `internal` 키워드를 사용 하 여 선언 된 `InternalOptions` 사용자 정의 형식이 있는 경우 다음 선언에서 오류가 발생 합니다.
+>
+> ```qsharp
+> // Error: Can't use InternalOptions as an output type of a public function.
+> function DefaultInternalOptions() : InternalOptions { ... }
+>
+> // Error: Can't use InternalOptions as an item in a public user-defined type.
+> newtype ExtendedOptions = (Internal : InternalOptions);
+> ```

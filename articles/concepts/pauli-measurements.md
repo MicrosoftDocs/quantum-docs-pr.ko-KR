@@ -6,12 +6,12 @@ uid: microsoft.quantum.concepts.pauli
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: fcd30c171859f96c3f9cc74664ecba8df0a02855
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 08babbcb0d6c6c4d83622489bc4ecc811e64829a
+ms.sourcegitcommit: a0e50c5f07841b99204c068cf5b5ec8ed087ffea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77907514"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80320874"
 ---
 # <a name="pauli-measurements"></a>Pauli 측정
 
@@ -61,7 +61,7 @@ Pauli 측정의 표기법은 $X, Y, Z $ 측정값을 해당 하는 것과 같은
 $ $ \begin{align} S = \begin{bmatrix} 1 & 0 \\\\ 0 & i \end{bmatrix}.
 \end{align} $ $
 
-또한 $HS ^ \aa$를 퀀텀 상태 벡터에 적용 한 다음 $Z $를 측정 하 여 다음 작업을 `Measure([PauliY], [q]])`와 동일 하 게 하는 것과 같습니다.
+또한 $HS ^ \aa$를 퀀텀 상태 벡터에 적용 한 다음 $Z $를 측정 하 여 다음 작업을 `Measure([PauliY], [q])`와 동일 하 게 하는 것과 같습니다.
 
 ```Q#
 operation MeasureY(qubit : Qubit) : Result {

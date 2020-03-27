@@ -6,12 +6,12 @@ uid: microsoft.quantum.concepts.multiple-qubits
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 2fa227c823cd87df9c799c043c699e4ce818b8e3
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 239073b7e7edafc49bc65cb60c9f45cf0af83dbe
+ms.sourcegitcommit: a0e50c5f07841b99204c068cf5b5ec8ed087ffea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77907548"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80320881"
 ---
 # <a name="multiple-qubits"></a>여러 비트
 
@@ -27,7 +27,7 @@ ms.locfileid: "77907548"
 
 ## <a name="representing-two-qubits"></a>두 개의 비트를 나타내는
 1 ~ 2의 비트 상태 간의 주요 차이점은 두 번째 비트 상태는 2 차원이 아닌 4 차원 이라는 것입니다.
-이는 두 번째 비트 상태에 대 한 계산 기준이 한 수준 비트 상태의 텐서 products로 구성 되기 때문입니다.  예를 들어 \begin{align} 00 \equiv \begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} & = \begin{bmatrix}1 \\\\ 0\\\\ 0\\\\ 0 \end{bmatrix}, \qquad 01 \equiv \begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}0 \\\\ 1 \end{bmatrix} = \begin{bmatrix}0 \\\\ 1\\\\ 0\\\\ 0 \end{bmatrix},\\\\ 10 \equiv \begin{bmatrix}0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} & = \begin{bmatrix}0 \\\\ 0\\\\ 1\\\\ 0 \end{bmatrix}, \qquad 11 \equiv \begin{bmatrix}0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix}0 \\\\ 1 \end{bmatrix} = \begin{bmatrix}0 \\\\ 0\\\\ 0 @no__ t_40_ \\ 1 \end{bmatrix}.\\
+이는 두 번째 비트 상태에 대 한 계산 기준이 한 수준 비트 상태의 텐서 products로 구성 되기 때문입니다.  예를 들어 \begin{align} 00 \equiv \begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} & = \begin{bmatrix}1 \\\\ 0\\\\ 0\\\\ 0 \end{bmatrix}, \qquad 01 \equiv \begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}0 \\\\ 1 \end{bmatrix} = \begin{bmatrix}0 \\\\ 1\\\\ 0\\\\ 0 \end{bmatrix} ,\\\\ 10 \equiv \begin{bmatrix}0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} & = \begin{bmatrix}0 \\\\ 0\\\\ 1\\\\ 0 \end{bmatrix}, \qquad 11 \equiv \begin{bmatrix}0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix}0 \\\\ 1 \end{bmatrix} = \begin{bmatrix}0 \\\\ 0\\\\ 0\\\\ 1 \end{bmatrix}.
 \end{align}
 
 보다 일반적으로이 생성을 사용 하 여 $2 ^ n $ 차원에 대 한 단위 벡터로 나타내는 $ 이상 비트 $n의 퀀텀 상태를 확인 하는 것이 쉽습니다.  벡터입니다.
@@ -59,13 +59,16 @@ $$
 
 또한 두 번째 비트율의 퀀텀 상태를 한 번만 측정할 수 있습니다. 원하는 비트 중 하나만 측정 하는 경우 전체 상태가 계산 기준 상태로 축소 되지 않고 하나의 하위 시스템 으로만 축소 되므로 측정의 영향은 약간 다릅니다.  즉, 이러한 경우에는 하나의 요소를 측정 하는 경우에만 하위 시스템 중 하나만 축소할 수 있습니다.  
 
-이를 확인 하려면 처음에 "0" 상태로 설정 된 두 개의 Hadamard transform $H $을 적용 하 여 형성 된 다음 상태의 첫 번째 비트를 측정 합니다. $ $ H ^ {\otimes 2} \left (\begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} \right) = \otimes{1}{2}\begin{bmatrix}1 & 1 & 1 & 1 \\\\ 1 &-1 & 1 &-1 \\\\ 1 & 1 &-1 &-1 \\\\ 1 &- 1 &-1 & 1 \end{bmatrix}\begin{bmatrix}1\\\\ 0\\\\ 0\\\\ 0 \ end {bmatrix} = \frac{1}{2}\begin{bmatrix}1\\\\ 1\\\\ 1\\\\ 1 \ end {bmatrix} \maps\begin{cases}\text{outcome} = 0 & \frac{1}{\sqrt{2}} \begin{bmatrix}1\\\\ 1\\\\ 0\\\\ 0 \end{bmatrix}\\\\ \text{i} = 1 & \frac{1}{\sqrt{2}} \begin{bmatrix}0\\\\ 0\\\\ 1\\\\ 1 \end{bmatrix}\\\\ \end{cases}.
+이를 확인 하려면 처음에 "0" 상태로 설정 된 두 개의 Hadamard transform $H $을 적용 하 여 형성 된 다음 상태의 첫 번째 비트를 측정 합니다. $ $ H ^ {\otimes 2} \left (\begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} \right) = \otimes{1}{2}\begin{bmatrix}1 & 1 & 1 & 1 \\\\ 1 &-1 & 1 &-1 \\\\ 1 & 1 &-1 &-1 \\\\ 1 &-1 & end {bmatrix} \begin{bmatrix}1\\\\ 0\\\\ 0\\\\ 0 \ end {bmatrix} = \frac{1}{2}\begin{bmatrix}1\\\\ 1\\\\ 1\\\\ 1 \ 끝 {bmatrix} \frac} = 0 & \frac{1}{\sqrt{2}} \begin{bmatrix}1\\\\ 1\\\\ 0\\\\ 0 \end{bmatrix}\\\\ \text{\ca} = 1 & \frac{1}{\sqrt{2}} \begin{bmatrix}0\\\\ 0\\\\ 1\\\\ 1 \end{bmatrix}\\\\ \end{cases}.
 $ $ 두 결과의 확률은 모두 50%입니다.  50%의 확률에 대 한 결과는 첫 번째 intuited에 대 한 $0 $ with $1 $를 사용 하 여 초기 퀀텀 상태 벡터가 고정 임을 감안 했을 수 있습니다.
 
-첫 번째 또는 두 번째 비트를 측정 하는 수학적 규칙은 간단 합니다.  $E _k $를 $k ^ {\rm 번째} $ 계산 기준 vector로 설정 하 $S 고 $를 모든 $e _k $로 지정 하 여 해당 하는 값이 $k $ 값에 $1 $ 값을 사용 하도록 할 수 있습니다.  예를 들어 첫 번째 비트를 측정 하려는 경우 $S $은 $e _2 \ http-equiv $10 및 $e _3 \ http-equiv $11로 구성 됩니다.  마찬가지로 두 번째 $S에 관심이 있는 경우 $는 $e _1 \ http-equiv $1 및 $e _3 \equiv $11로 구성 됩니다.  그런 다음 선택한 비트를 $1 $로 측정할 확률은 상태 vector $ \psi $입니다.
+첫 번째 또는 두 번째 비트를 측정 하는 수학적 규칙은 간단 합니다.  $E _k $를 $k ^ {\rm 번째} $ 계산 기준 vector로 설정 하 $S 고 $를 모든 $e _k $로 지정 하 여 해당 하는 값이 $k $ 값에 $1 $ 값을 사용 하도록 할 수 있습니다.  예를 들어 첫 번째 비트를 측정 하는 데 관심이 있는 경우 $S $은 $e _1 \ http-equiv $10 및 $e _3 \ http-equiv $11으로 구성 됩니다.  마찬가지로 두 번째 $S에 관심이 있다면 $는 $e _2 \ http-equiv $1 및 $e _3 \equiv $11로 구성 됩니다.  그런 다음 선택한 비트를 $1 $로 측정할 확률은 상태 vector $ \psi $입니다.
 
 $ $ P (\text{outcome} = 1) = \ sum_ {e_k \text{set} S} \ee^ \Ks e_k e_k ^ \ka\psi.
 $$
+
+> [!NOTE]
+> 이 문서에서는 작은 endian 형식을 사용 하 여 계산 기준에 레이블을 지정 합니다. Little endian 형식에서 최하위 비트가 먼저 나옵니다. 예를 들어, 작은 endian 형식의 숫자 4는 비트 001의 문자열로 표시 됩니다.
 
 각의 비트 측정은 $0 $ 또는 $1 $만 생성할 수 있으므로 $0 $를 측정 하는 확률은 간단히 $1-P (\text{outcome} = 1) $입니다.  따라서 $1 $의 확률에 대 한 수식만 명시적으로 지정 해야 합니다.
 
@@ -79,7 +82,7 @@ $$
 
 $ \Psi $를 위에서 제공한 일관 된 상태 벡터로 사용 하 고 첫 번째 비트를 측정 하는 데 관심이 있는 경우 
 
-$ $ P (\text{measurement first stbit} = 1) = (\psi ^ \atee_2) + e_3 (e_2 ^ \aate\psi) + (e_3 ^ \ara\psi) = | e_2 ^ \aate\psi | ^ 2 + | e_3 ^ \aate\psi | ^ 2.
+$ $ P (\text{measurement first stbit} = 1) = (\psi ^ \atee_1) + e_3 (e_1 ^ \aate\psi) + (e_3 ^ \ara\psi) = | e_1 ^ \aate\psi | ^ 2 + | e_3 ^ \aate\psi | ^ 2.
 $$
 
 이는 결과를 측정 하는 데 예상 되는 두 확률 ($10 $ 및 $11 $)의 합계입니다.
@@ -90,12 +93,13 @@ $$
 
 intuition가 확률을 나타내는 것과 정확히 일치 하는 것입니다.  마찬가지로 상태를로 작성할 수 있습니다.
 
-$ $ \frac{\frac{e_2}{2}+ \frac{e_3}{2}} {\sqrt{\frac{1}{2}}} = \frac{1}{\sqrt{2}} \begin{bmatrix} 0\\\\ 0\\\\ 1\\\\ 1 \ end {bmatrix} $ $
+$ $ \frac{\frac{e_1}{2}+ \frac{e_3}{2}} {\sqrt{\frac{1}{2}}} = \frac{1}{\sqrt{2}} \begin{bmatrix} 0\\\\ 0\\\\ 1\\\\ 1 \ end {bmatrix} $ $
 
 intuition에 따라 다시 합니다.
 
 ## <a name="two-qubit-operations"></a>두 가지 비트 작업
-단일 비트의 경우 처럼 모든 단일 변환은 원하는 비트의 유효한 작업입니다. 일반적으로 $ stbits $n의 단일 변환은 $2 ^ n \times 2 ^ n $ 크기의 행렬 $U $ (크기 $2 ^ n ${-1} $U)에 해당 하는 행렬입니다. 예를 들어 CNOT (제어 되지 않음) 게이트는 일반적으로 사용 되는 두 번째 비트 게이트 이며 다음과 같은 단일 행렬로 표시 됩니다.
+단일 비트의 경우 처럼 모든 단일 변환은 원하는 비트의 유효한 작업입니다. 일반적으로 $ stbits $n의 단일 변환은 $2 ^ n \times 2 ^ n $ 크기의 행렬 $U $ (크기 $2 ^ n ${-1} $U)에 해당 하는 행렬입니다.
+예를 들어 CNOT (제어 되지 않음) 게이트는 일반적으로 사용 되는 두 번째 비트 게이트 이며 다음과 같은 단일 행렬로 표시 됩니다.
 
 $ $ \operatorname{CNOT} = \begin{bmatrix} 1 \ 0 \ 0 \ 0 \\\\ 0 \ 1 \ 0 \ 0 \\\\ 0 \ 0 \ 0 \ 1 \\\\ 0 \ 0 \ 1 \ 0 \end{bmatrix} $ $
 

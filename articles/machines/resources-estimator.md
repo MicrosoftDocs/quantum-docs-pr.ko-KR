@@ -6,17 +6,17 @@ ms.author: anpaz@microsoft.com
 ms.date: 1/22/2019
 ms.topic: article
 uid: microsoft.quantum.machines.resources-estimator
-ms.openlocfilehash: 37c901e5a861f0e8a10cdc911ad1d84ddd3e6e00
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 51186134e9279727fec212cdce84f69493aaa656
+ms.sourcegitcommit: a0e50c5f07841b99204c068cf5b5ec8ed087ffea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77907055"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80320819"
 ---
 # <a name="the-resourcesestimator-target-machine"></a>ResourcesEstimator 대상 컴퓨터
 
 이름에서 알 수 있듯이 `ResourcesEstimator`는 퀀텀 컴퓨터에서 지정 된 Q # 작업 인스턴스를 실행 하는 데 필요한 리소스를 추정 합니다.
-퀀텀 컴퓨터의 상태를 실제로 시뮬레이션 하지 않고 퀀텀 작업을 실행 하 여이 작업을 수행 합니다. 따라서 수천 비트를 사용 하는 Q # 작업에 대 한 리소스를 예상할 수 있습니다.
+퀀텀 컴퓨터의 상태를 실제로 시뮬레이션 하지 않고 퀀텀 작업을 실행 하 여이 작업을 수행 합니다. 따라서 코드의 고전적인 부분이 적절 한 시간 내에 실행 될 수 있는 경우 수천 비트를 사용 하는 Q # 작업에 대 한 리소스를 예상할 수 있습니다.
 
 ## <a name="usage"></a>사용
 
