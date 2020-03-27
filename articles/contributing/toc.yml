@@ -1,6 +1,6 @@
 - name: 버그 보고
   href: reporting-bugs.md
-- name: 설명서에 기여
+- name: 설명서 개선
   href: docs.md
 - name: 끌어오기 요청 열기
   href: pull-requests.md
