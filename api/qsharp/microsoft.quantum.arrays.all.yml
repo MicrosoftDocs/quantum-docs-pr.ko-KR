@@ -5,6 +5,24 @@ type: function
 namespace: Microsoft.Quantum.Arrays
 summary: 배열의 요소에 대해 정의 된 배열과 조건자가 지정 된 경우 및 배열의 모든 요소가 조건자를 충족 하는지 확인 합니다.
 remarks: "함수는 제네릭 형식에 대해 정의 됩니다. 즉, 배열 `'T[]` 및 함수 `predicate: 'T -> Bool` 있을 때마다 모든 요소가 `predicate`충족 하는지 여부를 나타내는 `Bool` 값을 생성할 수 있습니다."
+examples: >-
+  다음 코드는 배열의 모든 요소가 0이 아닌지 여부를 확인 합니다.
+
+
+  ```qsharp
+
+  open Microsoft.Quantum.Arrays;
+
+  open Microsoft.Quantum.Logical;
+
+
+  function AllDemo() : Unit {
+      let predicate = NotEqualI(_, 0);
+      let isNonZero = All(predicate, [2, 3, 4, 5, 6, 0]);
+      Message($"{isNonZero}");
+  }
+
+  ```
 syntax: "function All (predicate : ('T -> Bool), array : 'T[]) : Bool"
 input:
   content: "(predicate : ('T -> Bool), array : 'T[])"
@@ -35,9 +53,9 @@ typeParameters:
 - uid: "'T"
   summary: '`array` 요소의 형식입니다.'
 metadata:
-  ms.openlocfilehash: bb439ae76d0f7644625686cd89f05670051a4c9d
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: bc21229d0468adcd41f6c460f5325cad9f09ba5c
+  ms.sourcegitcommit: a0e50c5f07841b99204c068cf5b5ec8ed087ffea
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73214455"
+  ms.lasthandoff: 03/26/2020
+  ms.locfileid: "80320781"
