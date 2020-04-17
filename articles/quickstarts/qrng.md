@@ -7,10 +7,10 @@ ms.date: 10/25/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.qrng
 ms.openlocfilehash: b9c8592b1296a7de1b9ad5d0538ad1972ec25e31
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.sourcegitcommit: 7d350db4b5e766cd243633aee7d0a839b6274bd6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/16/2020
 ms.locfileid: "77906987"
 ---
 # <a name="quickstart-implement-a-quantum-random-number-generator-in-q"></a>빠른 시작: Q#에서 양자 난수 생성기 구현
