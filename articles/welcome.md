@@ -7,10 +7,10 @@ ms.author: nakersha
 ms.date: 10/23/2019
 ms.topic: overview
 ms.openlocfilehash: cea39e47ec5e7e2ad97adbbb39ba586274564967
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.sourcegitcommit: 7d350db4b5e766cd243633aee7d0a839b6274bd6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/16/2020
 ms.locfileid: "77907633"
 ---
 # <a name="get-started-with-the-quantum-development-kit-qdk"></a>QDK(Quantum Development Kit) 시작
@@ -37,7 +37,7 @@ Quantum Development Kit는 Q#을 사용하여 양자 프로그램을 개발하�
 ### <a name="learning-further"></a>자세히 알아보기
 * Q# 프로그래밍에 대해 자세히 알아 보려면 Q#의 프로그래밍 연습을 통해 양자 컴퓨팅을 소개하는 자기 주도적 프로그래밍 연습 모음인 [Quantum Katas](https://github.com/Microsoft/QuantumKatas)를 확인하세요.
     이들 katas 대부분은 Q# Notebook으로도 사용할 수 있습니다. 
-* [샘플 리포지토리](https://github.com/Microsoft/Quantum)는 Q#을 사용하여 양자 프로그램을 작성하는 방법에 대한 여러 예제를 소개합니다. 이러한 샘플의 대부분은 [표준](xref:microsoft.quantum.libraries.standard.intro) 및 [화학](xref:microsoft.quantum.chemistry.concepts.intro) 라이브러리를 포함하여 오픈 소스 [양자 라이브러리](https://github.com/Microsoft/QuantumLibraries)를 사용하여 작성되었습니다(자세한 내용은 아래 참조).
+* [샘플 리포지토리](https://github.com/Microsoft/Quantum)는 Q#을 사용하여 양자 프로그램을 작성하는 방법에 대한 여러 예제를 소개합니다. 이러한 샘플의 대부분은 [표준](https://github.com/Microsoft/QuantumLibraries) 및 [화학](xref:microsoft.quantum.libraries.standard.intro) 라이브러리를 포함하여 오픈 소스 [양자 라이브러리](xref:microsoft.quantum.chemistry.concepts.intro)를 사용하여 작성되었습니다(자세한 내용은 아래 참조).
 
 ## <a name="five-questions-about-quantum-computing"></a>양자 컴퓨팅에 대한 5가지 질문
 

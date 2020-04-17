@@ -7,10 +7,10 @@ ms.date: 10/22/2019
 ms.topic: article
 uid: microsoft.quantum.overview.qsharp
 ms.openlocfilehash: a4bf21887e34ac85f75e5e0b9a033138464fd09d
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.sourcegitcommit: 7d350db4b5e766cd243633aee7d0a839b6274bd6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/16/2020
 ms.locfileid: "77907004"
 ---
 # <a name="what-are-q-and-the-qdk"></a>Q# 및 QDK란?
@@ -42,7 +42,7 @@ Q# 언어는 수십 년간 클래식 소프트웨어 개발을 통해 습득한 
 Q#프로그래밍 언어는 양자 컴퓨터의 내부의 논리에 대해 걱정할 필요 없이 알고리즘을 개발할 수 있도록 형식, 연산 및 논리 식의 직관적인 세트를 제공합니다.
 
 Q#의 기본 구성 요소 중 하나는 `Qubit` 형식이며, 실제 큐비트처럼 복사하거나 직접 액세스할 수 없습니다.
-대신, 이를 측정하여 `Zero` 및 `One`의 두 가지 가능한 값을 사용할 수 있는 Q# 형식의 `Result` 변수에 측정 결과를 저장할 수 있습니다.
+대신, 이를 측정하여 `Result` 및 `Zero`의 두 가지 가능한 값을 사용할 수 있는 Q# 형식의 `One` 변수에 측정 결과를 저장할 수 있습니다.
 이와 같은 구문을 통해 알고리즘은 항상 양자 물리학의 법칙을 준수하며 양자 컴퓨터 또는 시뮬레이터에서 올바르게 실행될 수 있습니다.
 
 또한 Q#에는 모든 양자 규칙이 적용될 수 있도록 조건 및 루프 같은 클래식 논리 기능도 포함되어 있습니다.

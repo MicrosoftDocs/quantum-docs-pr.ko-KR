@@ -7,10 +7,10 @@ ms.date: 10/23/2019
 ms.topic: article
 uid: microsoft.quantum.overview.computers
 ms.openlocfilehash: 9d8ba90a504f298f9465ebf564c43625a4d43168
-ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+ms.sourcegitcommit: 7d350db4b5e766cd243633aee7d0a839b6274bd6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 04/16/2020
 ms.locfileid: "73529945"
 ---
 # <a name="what-can-a-quantum-computer-do"></a>양자 컴퓨터에서 수행할 수 있는 작업은 무엇인가요?
@@ -37,7 +37,7 @@ ms.locfileid: "73529945"
 
 Microsoft에는 세계 최고 수준의 양자 후 암호화 및 보안 팀이 양자 저항성 알고리즘을 개발하고 있습니다.
 
-## <a name="optimization"></a>최적화
+## <a name="optimization"></a>Optimization
 
 최적화는 특정 비용 함수를 최소화하는 솔루션을 찾기 위해 고차원 공간에서 대량 검색을 수행하는 작업입니다.   양자 컴퓨터에서는 최적화 알고리즘의 속도를 높여서 양자 컴퓨터가 아니면 불가능한 솔루션을 찾을 수 있습니다. 애플리케이션 범위는 교통부터 물류, 의료, 진단 및 재료 과학까지 매우 방대합니다. 이러한 산업의 효율성을 향상시킬 수 있는 방법에 큰 영향이 있을 수 있습니다.
 
