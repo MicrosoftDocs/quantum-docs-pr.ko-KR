@@ -1,40 +1,40 @@
 ---
-title: '테스트 및 디버그 Q # 프로그램'
-description: 단위 테스트, 팩트 및 어설션을 사용 하는 방법 및 덤프 함수를 사용 하 여 퀀텀 프로그램을 테스트 하 고 디버그 하는 방법을 알아봅니다.
+title: Q# 프로그램 테스트 및 디버깅
+description: 단위 테스트, 사실 및 어설션을 사용하고 함수를 덤프하여 양자 프로그램을 테스트하고 디버깅하는 방법을 알아봅니다.
 author: tcNickolas
 ms.author: mamykhai@microsoft.com
 uid: microsoft.quantum.techniques.testing-and-debugging
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 8131c2ec9320b5075c37370e12ad39a4df5bd3d5
-ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
+ms.openlocfilehash: caf15b7273b7efed1da87a2edd62c06cd4357593
+ms.sourcegitcommit: b6b8459eb654040f1e19f66411b29fc9e48e95c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "79022853"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82030585"
 ---
 # <a name="testing-and-debugging"></a>테스트 및 디버깅
 
-기존 프로그래밍과 마찬가지로 퀀텀 프로그램이 의도 한 대로 작동 하는지 확인 하 고 잘못 된 퀀텀 프로그램을 진단할 수 있어야 합니다.
-이 섹션에서는 퀀텀 프로그램 테스트 및 디버깅을 위해 Q #에서 제공 하는 도구를 다룹니다.
+클래식 프로그래밍과 마찬가지로 양자 프로그램이 의도한 대로 작동하도록 하고 잘못된 양자 프로그램을 진단할 수 있어야 합니다.
+이 섹션에서는 양자 프로그램을 테스트하고 디버깅하기 위해 Q#에서 제공하는 도구를 다룹니다.
 
 ## <a name="unit-tests"></a>단위 테스트
 
-클래식 프로그램을 테스트 하는 일반적인 방법 중 하나는 라이브러리에서 코드를 실행 하 고 해당 출력을 예상 출력과 비교 하는 *단위 테스트* 라는 작은 프로그램을 작성 하는 것입니다.
-예를 들어 $2 ^ 2 = $4 *apriori* 을 알고 있으므로 `Square(2)`에서 `4`를 반환 하도록 할 수 있습니다.
+클래식 프로그램을 테스트하는 한 가지 일반적인 방법은 라이브러리에서 코드를 실행하는 *단위 테스트라는* 작은 프로그램을 작성하고 출력을 일부 예상 출력과 비교하는 것입니다.
+예를 들어$ 2 ^2 `Square(2)` `4`= 4 $라는 *선험을* 알고 있기 때문에 반환을 보장할 수 있습니다.
 
-Q #은 퀀텀 프로그램에 대 한 단위 테스트 만들기를 지원 하 고 [Xunit](https://xunit.github.io/) 단위 테스트 프레임 워크 내에서 테스트로 실행 될 수 있습니다.
+Q#은 양자 프로그램에 대한 단위 테스트 생성을 지원하며 [xUnit](https://xunit.github.io/) 단위 테스트 프레임워크 내에서 테스트로 실행할 수 있습니다.
 
 ### <a name="creating-a-test-project"></a>테스트 프로젝트 만들기
 
 #### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
-Visual Studio 2019를 엽니다. `File` 메뉴로 이동 하 여 `New` > `Project...`를 선택 합니다.
-오른쪽 위 모서리에서 `Q#`을 검색 하 고 `Q# Test Project` 템플릿을 선택 합니다.
+Visual Studio 2019를 엽니다. 메뉴로 `File` 이동하여 `New`  >  `Project...`을 선택합니다.
+오른쪽 상단 모서리에서 `Q#`을 검색하고 `Q# Test Project` 템플릿을 선택합니다.
 
 #### <a name="command-line--visual-studio-code"></a>[명령줄/Visual Studio Code](#tab/tabid-vscode)
 
-선호 하는 명령줄에서 다음 명령을 실행 합니다.
+즐겨 찾는 명령줄에서 다음 명령을 실행합니다.
 ```bash
 $ dotnet new xunit -lang Q# -o Tests
 $ cd Tests
@@ -43,8 +43,8 @@ $ code . # To open in Visual Studio Code
 
 ****
 
-새 프로젝트에는 새 Q # 단위 테스트를 정의 하는 데 편리한 장소를 제공 하는 단일 파일 `Tests.qs`포함 됩니다.
-처음에이 파일에는 새로 할당 된 \ket가 ${0}$ 상태에 있는지 확인 하 고 메시지를 인쇄 하는 하나의 샘플 단위 테스트 `AllocateQubit` 포함 되어 있습니다.
+새 프로젝트에는 새 Q# 단위 테스트를 정의할 수 있는 편리한 위치를 제공하는 단일 파일이 `Tests.qs`있습니다.
+처음에이 파일에는 새로 `AllocateQubit` 할당 된 큐빗이 $\ket{0}$ 상태에 있는지 확인하고 메시지를 인쇄하는 하나의 샘플 단위 테스트가 포함되어 있습니다.
 
 ```qsharp
     @Test("QuantumSimulator")
@@ -58,32 +58,32 @@ $ code . # To open in Visual Studio Code
     }
 ```
 
-: new: `Unit` 형식의 인수를 사용 하 고 `Unit`를 반환 하는 모든 Q # 작업 또는 함수는 `@Test("...")` 특성을 통해 단위 테스트로 표시 될 수 있습니다. 위의 `"QuantumSimulator"` 해당 특성에 대 한 인수는 테스트가 실행 되는 대상을 지정 합니다. 단일 테스트를 여러 대상에서 실행할 수 있습니다. 예를 들어 `AllocateQubit`위의 `@Test("ResourcesEstimator")` 특성을 추가 합니다. 
+:new: 형식 `Unit` 및 반환인수를 `Unit` 취하는 모든 Q# 작업 또는 함수는 `@Test("...")` 특성을 통해 단위 테스트로 표시될 수 있습니다. `"QuantumSimulator"` 위의 해당 특성에 대한 인수는 테스트가 실행되는 대상을 지정합니다. 단일 테스트는 여러 대상에서 실행할 수 있습니다. 예를 들어 위의 `@Test("ResourcesEstimator")` 특성을 추가합니다. `AllocateQubit` 
 ```qsharp
     @Test("QuantumSimulator")
     @Test("ResourcesEstimator")
     operation AllocateQubit () : Unit {
         ...
 ```
-파일을 저장 하 고 모든 테스트를 실행 합니다. 이제 두 개의 단위 테스트가 있습니다. 여기에는 AllocateQuantumSimulator 비트가 실행 되 고 하나는 ResourceEstimator에서 실행 됩니다. 
+파일을 저장하고 모든 테스트를 실행합니다. 이제 두 개의 단위 테스트가 있어야 합니다. 
 
-Q # 컴파일러는 기본 제공 대상 "QuantumSimulator", "ToffoliSimulator" 및 "ResourcesEstimator"를 단위 테스트에 대 한 올바른 실행 대상으로 인식 합니다. 또한 사용자 지정 실행 대상을 정의 하는 정규화 된 이름을 지정할 수 있습니다. 
+Q# 컴파일러는 기본 제공 대상인 "QuantumSimulator", "ToffoliSimulator"및 "ResourcesEstimator"를 단위 테스트의 유효한 실행 대상으로 인식합니다. 사용자 지정 실행 대상을 정의하기 위해 정규화된 이름을 지정할 수도 있습니다. 
 
-### <a name="running-q-unit-tests"></a>Q # 단위 테스트 실행
+### <a name="running-q-unit-tests"></a>Q# 단위 테스트 실행
 
 #### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
-솔루션 당 일회성 설치로 `Test` 메뉴로 이동 하 여 `Test Settings` > `Default Processor Architecture` > `X64`를 선택 합니다.
+솔루션당 일회성 설정으로 메뉴로 이동하여 `Test` 을 `Test Settings`  >  `Default Processor Architecture`  >  `X64`선택합니다.
 
 > [!TIP]
-> Visual Studio의 기본 프로세서 아키텍처 설정은 각 솔루션에 대 한 솔루션 옵션 (`.suo`) 파일에 저장 됩니다.
-> 이 파일을 삭제 하는 경우 프로세서 아키텍처로 `X64`을 다시 선택 해야 합니다.
+> Visual Studio의 기본 프로세서 아키텍처 설정은 각`.suo`솔루션에 대한 솔루션 옵션() 파일에 저장됩니다.
+> 이 파일을 삭제하면 프로세서 아키텍처로 `X64` 다시 선택해야 합니다.
 
-프로젝트를 빌드하고 `Test` 메뉴로 이동 하 여 `Windows` > `Test Explorer`를 선택 합니다. `AllocateQubit` `Not Run Tests` 그룹의 테스트 목록에 표시 됩니다. `Run All`를 선택 하거나이 개별 테스트를 실행 하 고 통과 해야 합니다.
+프로젝트를 빌드하고 메뉴로 `Test` 이동하여 `Windows`  >  `Test Explorer`을 선택합니다. `AllocateQubit``Not Run Tests` 테스트 목록에 표시됩니다. 이 `Run All` 개별 테스트를 선택하거나 실행하면 통과해야 합니다!
 
 #### <a name="command-line--visual-studio-code"></a>[명령줄/Visual Studio Code](#tab/tabid-vscode)
 
-테스트를 실행 하려면 프로젝트 폴더 (`Tests.csproj`포함 된 폴더)로 이동 하 고 명령을 실행 합니다.
+테스트를 실행하려면 프로젝트 폴더(포함된 `Tests.csproj`폴더)로 이동하여 명령을 실행합니다.
 
 ```bash
 $ dotnet restore
@@ -111,7 +111,7 @@ Test Run Successful.
 Test execution time: 1.9607 Seconds
 ```
 
-단위 테스트는 이름 및/또는 실행 대상에 따라 필터링 할 수 있습니다.
+단위 테스트는 이름 및/또는 실행 대상에 따라 필터링할 수 있습니다.
 
 ```bash 
 $ dotnet test --filter "Target=QuantumSimulator"
@@ -121,28 +121,28 @@ $ dotnet test --filter "Name=AllocateQubit"
 
 ***
 
-내장 함수 <xref:microsoft.quantum.intrinsic.message>에는 `(String -> Unit)` 형식이 있으며 진단 메시지를 만들 수 있습니다.
+내장 함수에는 <xref:microsoft.quantum.intrinsic.message> 형식이 `(String -> Unit)` 있으며 진단 메시지를 만들 수 있습니다.
 
 #### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
-테스트 탐색기에서 테스트를 실행 하 고 테스트를 클릭 하면 테스트 실행: 성공/실패 상태, 경과 시간 및 "출력" 링크에 대 한 정보가 포함 된 패널이 표시 됩니다. "출력" 링크를 클릭 하면 테스트 출력이 새 창에서 열립니다.
+테스트 탐색기에서 테스트를 실행하고 테스트를 클릭하면 테스트 실행에 대한 정보(통과/실패 상태, 경과 시간 및 "출력" 링크)가 패널에 표시됩니다. "출력" 링크를 클릭하면 테스트 출력이 새 창에서 열립니다.
 
 ![테스트 출력](~/media/unit-test-output.png)
 
 #### <a name="command-line--visual-studio-code"></a>[명령줄/Visual Studio Code](#tab/tabid-vscode)
 
-각 테스트에 대 한 통과/실패 상태는 `dotnet test`하 여 콘솔에 출력 됩니다.
-실패 한 테스트의 경우 출력은 오류를 진단 하는 데 도움이 되도록 콘솔에도 출력 됩니다.
+각 테스트의 합격/불합격 상태는 에 `dotnet test`의해 콘솔에 인쇄됩니다.
+실패한 테스트의 경우 오류를 진단하는 데 도움이 되는 출력도 콘솔에 인쇄됩니다.
 
 ***
 
-## <a name="facts-and-assertions"></a>팩트 및 어설션
+## <a name="facts-and-assertions"></a>사실 및 어설션
 
-Q #의 함수에는 _논리적인_ 부작용이 없으므로 출력 형식이 빈 튜플 인 함수를 실행 하는 _다른 종류_ 의 효과는 Q # 프로그램 내에서 관찰 될 수 `()`.
-즉, 대상 컴퓨터는 이러한 누락으로 인 한 `()` 반환 하는 함수를 실행 하지 않도록 선택할 수 있습니다 .이는 다음 Q # 코드의 동작을 수정 하지 않습니다.
-이를 통해 함수는 `()` (즉, `Unit`)을 반환 하는 유용한 도구를 Q # 프로그램에 포함 시킬 수 있습니다. 
+Q#의 함수에는 _논리적_ 부작용이 없으므로 출력 유형이 빈 튜플인 `()` 함수를 실행하는 _다른 종류의_ 효과는 Q# 프로그램 내에서 관찰할 수 없습니다.
+즉, 대상 컴퓨터는 이 누락이 다음 `()` Q# 코드의 동작을 수정하지 않는다는 보장과 함께 반환되는 함수를 실행하지 않도록 선택할 수 있습니다.
+이렇게 하면 함수 `()` 반환(즉, `Unit`즉)은 어설션을 포함하고 논리를 Q# 프로그램에 디버깅하는 데 유용한 도구가 됩니다. 
 
-간단한 예제를 살펴보겠습니다.
+간단한 예를 살펴보겠습니다.
 
 ```qsharp
 function PositivityFact(value : Double) : Unit 
@@ -154,18 +154,18 @@ function PositivityFact(value : Double) : Unit
 }
 ```
 
-여기서 키워드 `fail`는 계산이 진행 되지 않아야 함을 나타냅니다. Q # 프로그램을 실행 하는 대상 컴퓨터에서 예외가 발생 합니다.
-정의에 따라 Q # 내에서 이러한 종류의 오류를 확인할 수 없습니다. `fail` 문에 도달한 후에 추가 Q # 코드가 실행 되지 않습니다.
-따라서 `PositivityFact`에 대 한 호출을 계속 진행 하는 경우 해당 입력이 양수가 되도록 보장할 수 있습니다.
+여기서 키워드는 `fail` 계산이 진행되지 않아야 한다는 것을 나타내며 Q# 프로그램을 실행하는 대상 컴퓨터에서 예외를 발생시킵니다.
+정의에 따르면 문에 도달한 후 더 이상 Q# 코드가 실행되지 않도록 `fail` Q#내에서 이러한 종류의 오류를 관찰할 수 없습니다.
+따라서, 우리가 에 전화를 `PositivityFact`지나 가면 , 우리는 입력이 긍정적이었다는 것을 확신 할 수 있습니다.
 
-<xref:microsoft.quantum.diagnostics> 네임 스페이스의 [`Fact`](xref:microsoft.quantum.diagnostics.fact) 함수를 사용 하 `PositivityFact`와 동일한 동작을 구현할 수 있습니다.
+네임스페이스에서 `PositivityFact` [`Fact`](xref:microsoft.quantum.diagnostics.fact) 함수를 사용하는 것과 동일한 <xref:microsoft.quantum.diagnostics> 동작을 구현할 수 있습니다.
 
 ```qsharp
-    Fact(value <= 0, "Expected a positive number.");
+    Fact(value > 0, "Expected a positive number.");
 ```
 
-반면에 *어설션은*팩트와 유사 하 게 사용 되지만 대상 컴퓨터의 상태에 따라 달라질 수 있습니다. 이와 마찬가지로 팩트는 작업으로 정의 되는 반면 팩트는 위에 나와 있는 함수로 정의 됩니다.
-구분을 이해 하려면 어설션 내에서 다음과 같은 팩트를 사용 하는 것이 좋습니다.
+반면 *어설션은*사실과 유사하게 사용되지만 대상 컴퓨터의 상태에 따라 달라질 수 있습니다. 이에 상응하여 작업으로 정의되는 반면 팩트는 함수(위와 같이)로 정의됩니다.
+이러한 차이점을 이해하려면 어설션 내에서 팩트를 다음과 같은 용도로 사용하는 것을 고려하십시오.
 
 ```qsharp
 operation AssertQubitsAreAvailable() : Unit
@@ -174,13 +174,13 @@ operation AssertQubitsAreAvailable() : Unit
 }
 ```
 
-여기서는 작업 <xref:microsoft.quantum.environment.getqubitsavailabletouse>를 사용 하 여 사용할 수 있는 해당 비트 수를 반환 합니다.
-이는 프로그램의 전역 상태와 해당 실행 환경에 따라 달라 지므로 `AssertQubitsAreAvailable`의 정의도 작업 이어야 합니다.
-그러나이 전역 상태를 사용 하 여 간단한 `Bool` 값을 `Fact` 함수의 입력으로 생성할 수 있습니다.
+여기서는 작업을 <xref:microsoft.quantum.environment.getqubitsavailabletouse> 사용하여 사용할 수 있는 큐빗 수를 반환합니다.
+이는 프로그램의 전역 상태와 실행 환경에 따라 명확히 달라지므로 당사의 `AssertQubitsAreAvailable` 정의도 작업이어야 합니다.
+그러나 해당 전역 상태를 사용하여 `Bool` `Fact` 함수에 대한 입력으로 간단한 값을 생성할 수 있습니다.
 
-이러한 아이디어를 기반으로 하 [는 prelude는](xref:microsoft.quantum.libraries.standard.prelude) <xref:microsoft.quantum.intrinsic.assert> <xref:microsoft.quantum.intrinsic.assertprob> `()`에 대 한 작업으로 모델링 된 두 가지 특히 유용한 어설션을 제공 합니다. 이러한 어설션은 각각 특정 측정값을 설명 하는 Pauli 연산자, 측정을 수행 해야 하는 퀀텀 레지스터 및 가상 결과를 사용 합니다.
-시뮬레이션을 통해 작동 하는 대상 컴퓨터에서는 [복제 안 함 정리](https://en.wikipedia.org/wiki/No-cloning_theorem)바인딩되지 않으며 이러한 어설션에 전달 된 레지스터를 방해 하지 않고 이러한 측정을 수행할 수 있습니다.
-그런 다음 시뮬레이터는 위의 `PositivityFact` 함수와 마찬가지로 가상 결과가 실제로 관찰 되지 않는 경우 계산을 중단 합니다.
+이러한 아이디어를 [기반으로, 전주곡은](xref:microsoft.quantum.libraries.standard.prelude) 두 가지 특히 <xref:microsoft.quantum.intrinsic.assert> <xref:microsoft.quantum.intrinsic.assertprob> 유용한 어설션을 `()`제공하며, 둘 다 에 대한 작업으로 모델링됩니다. 이러한 주장은 각각 관심의 특정 측정을 설명하는 Pauli 연산자, 측정이 수행될 양자 레지스터 및 가상의 결과를 취합니다.
+시뮬레이션에 의해 작동하는 대상 기계에서는 [복제 정리 없음에](https://en.wikipedia.org/wiki/No-cloning_theorem)구속되지 않으며 이러한 어설션에 전달된 레지스터를 방해하지 않고 이러한 측정을 수행할 수 있습니다.
+그런 다음 시뮬레이터는 위의 `PositivityFact` 함수와 마찬가지로 가상의 결과가 실제로 관찰되지 않는 경우 계산을 중단할 수 있습니다.
 
 ```qsharp
 using (register = Qubit()) 
@@ -193,17 +193,17 @@ using (register = Qubit())
 }
 ```
 
-복제 안 함 정리에서 퀀텀 상태를 검사 하는 것을 방지 하는 실제 퀀텀 하드웨어에서는 `Assert` 및 `AssertProb` 작업이 다른 효과 없이 `()` 반환 됩니다.
+복제 가용되지 않는 정리가 양자 상태의 검사를 방지하는 물리적 양자 `Assert` 하드웨어에서는 다른 효과없이 작업과 `AssertProb` 작업이 반환됩니다. `()`
 
-<xref:microsoft.quantum.diagnostics> 네임 스페이스는 더 많은 고급 조건을 확인할 수 있도록 하는 `Assert` 패밀리의 여러 기능을 제공 합니다. 
+네임 스페이스는 <xref:microsoft.quantum.diagnostics> 우리가 더 `Assert` 고급 조건을 확인할 수 있도록 가족의 몇 가지 더 많은 기능을 제공합니다. 
 
 ## <a name="dump-functions"></a>덤프 함수
 
-퀀텀 프로그램의 문제를 해결 하는 데 도움이 되도록 <xref:microsoft.quantum.diagnostics> 네임 스페이스는 대상 컴퓨터의 현재 상태 (<xref:microsoft.quantum.diagnostics.dumpmachine> 및 <xref:microsoft.quantum.diagnostics.dumpregister>)를 파일에 덤프할 수 있는 두 가지 함수를 제공 합니다. 각각의 생성 된 출력은 대상 컴퓨터에 따라 다릅니다.
+양자 프로그램 문제 해결을 <xref:microsoft.quantum.diagnostics> 돕기 위해 네임스페이스는 대상 컴퓨터의 <xref:microsoft.quantum.diagnostics.dumpmachine> 현재 상태를 파일에 <xref:microsoft.quantum.diagnostics.dumpregister>덤프할 수 있는 두 가지 기능을 제공합니다. 각각의 생성된 출력은 대상 컴퓨터에 따라 다릅니다.
 
 ### <a name="dumpmachine"></a>DumpMachine
 
-퀀텀 개발 키트의 일부분으로 배포 되는 전체 상태 퀀텀 시뮬레이터는 전체 퀀텀 시스템의 [wave 함수](https://en.wikipedia.org/wiki/Wave_function) 를 파일에 기록 하 고, 각 요소가 계산 기준 상태 $ \ket{n} $를 측정할 확률의 진폭을 나타냅니다. 여기서 $ \ket{n} = \ket{b_ {n-1} ... bits $\{에 대 한 b_1b_0} $ b_i\}$. 예를 들어, 두 개의 om비트만 할당 된 컴퓨터에서 및 퀀텀 상태 $ $ \begin{align} \ket{\psi} = \frac{1}{\sqrt{2}} \ket{00}-\frac{(1 + i)}{2} \ket{10}, \end{align} $ $ 호출은이 출력을 생성 합니다.<xref:microsoft.quantum.diagnostics.dumpmachine>
+양자 개발 키트의 일부로 배포 된 전체 상태 양자 시뮬레이터는 파일 전체에 전체 양자 시스템의 [웨이브 함수를](https://en.wikipedia.org/wiki/Wave_function) 기록, 복잡한 숫자의 1 차원 배열로, 각 요소는 계산 기준 상태를 측정 할 확률의 진폭을 나타내는 $\ket{n}, 여기서 $\ket{n} = {b_{b_{n-1}... b_1b_0$b_i 비트에\{대해\}$b_i. 예를 들어, 양자 상태에서 $${1}\begin{align} \ frac {\sqrt{2}} \\frac{{(1{00} + i)}{2} \ket{10}, \end{align} $$ 호출이 <xref:microsoft.quantum.diagnostics.dumpmachine> 할당된 컴퓨터에서 는 이 출력을 생성합니다.
 
 ```
 # wave function for qubits with ids (least to most significant): 0;1
@@ -213,18 +213,18 @@ using (register = Qubit())
 ∣3❭:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]                   
 ```
 
-첫 번째 행은 중요 한 순서 대로 해당 하는의 Id를 사용 하 여 주석을 제공 합니다.
-나머지 행은 데카르트 및 극좌표 형식의 기본 상태 vector $ \ket{n} $를 측정 하는 확률 진폭을 설명 합니다. 첫 번째 행에 대해 자세히 설명 합니다.
+첫 번째 행은 해당 큐빗의 해당 큐빗의 주요 순서로 주석을 제공합니다.
+나머지 행은 카르테시안 및 극성 형식 모두에서 기본 상태 벡터 $\ket{n}$를 측정하는 확률 진폭을 설명합니다. 첫 번째 행에 대한 자세한 내용은 다음과 같은
 
-* 이 행 **`∣0❭:`** `0` 계산 기준 상태에 해당 합니다.
-* **`0.707107 +  0.000000 i`** : 데카르트 형식의 확률 진폭입니다.
-* **` == `** : `equal` seperates 부호와 동일 하 게 표현 됩니다.
-* **`**********  `** : 크기의 그래픽 표현으로, `*` 수는이 상태 벡터를 측정할 확률에 비례 합니다.
-* **`[ 0.500000 ]`** : 크기의 숫자 값입니다.
-* **`    ---`** : 진폭의 단계 (아래 참조)에 대 한 그래픽 표현입니다.
-* **`[ 0.0000 rad ]`** : 단계의 숫자 값 (라디안 단위)입니다.
+* **`∣0❭:`** 이 행은 `0` 계산 기준 상태에 해당합니다.
+* **`0.707107 +  0.000000 i`**: 카르테시안 형식의 확률 진폭입니다.
+* **` == `**: `equal` 부호는 두 동등한 표현을 분리합니다.
+* **`**********  `**: 크기의 그래픽 표현, 개수는 `*` 이 상태 벡터를 측정할 확률에 비례한다.
+* **`[ 0.500000 ]`**: 크기의 숫자 값
+* **`    ---`**: 진폭의 위상에 대한 그래픽 표현입니다(아래 참조).
+* **`[ 0.0000 rad ]`**: 위상의 숫자 값(라디안)입니다.
 
-크기와 단계가 모두 그래픽 표현으로 표시 됩니다. 크기 표현은 간단 하 게 표시 됩니다 .이는 `*`막대를 표시 하 고 막대의 클수록 표시 되는 확률이 큽니다. 단계에서는 범위에 따라 각도를 나타내기 위해 다음 기호를 표시 합니다.
+크기와 위상모두 그래픽 표현으로 표시됩니다. 크기 표현은 직선입니다: 막대가 `*`표시될 확률이 클수록 막대가 커집니다. 위상에 대 한 범위에 따라 각도를 나타내는 다음 기호를 표시 합니다.
 
 ```
 [ -π/16,   π/16)       ---
@@ -246,7 +246,7 @@ using (register = Qubit())
 [31π/16,   π/16)       ---
 ```
 
-다음 예에서는 몇 가지 일반적인 상태에 대 한 `DumpMachine` 보여 줍니다.
+다음 예제는 `DumpMachine` 몇 가지 일반적인 상태에 대해 보여 준다.
 
 ### `∣0❭`
 
@@ -282,37 +282,37 @@ using (register = Qubit())
 
 
   > [!NOTE]
-  > 의 id는 런타임에 할당 되며,이는 해당 비트를 할당 하는 순서 또는이를 사용 하는 순서에 따라 결정 되는 것은 아닙니다.
+  > 큐빗의 ID는 런타임에 할당되며 큐빗이 할당된 순서 또는 큐빗 레지스터 내의 위치와 반드시 일치하지는 않습니다.
 
 
 #### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
   > [!TIP]
-  > 코드에 중단점을 배치 하 고 다음과 같이 다음과 같이 Visual Studio에서 사용자 비트 id를 확인할 수 있습니다.
+  > 예를 들어 코드에 중단점을 배치하고 qubit 변수의 값을 검사하여 Visual Studio에서 qubit ID를 파악할 수 있습니다.
   > 
-  > ![Visual Studio에서 이상 비트 id 표시](~/media/qubit_id.png)
+  > ![비주얼 스튜디오에서 큐비트 ID 표시](~/media/qubit_id.png)
   >
-  > `register2`에서 index가 `0` 인 이상 비트에는 id =`3`, 인덱스 `1`의 고 비트는 id =`2`입니다.
+  > `0` 인덱스가 `register2` 있는 큐빗에는`3`id=가 있으며 `1` 인덱스가`2`있는 큐빗에는 id=가 있습니다.
 
 #### <a name="command-line--visual-studio-code"></a>[명령줄/Visual Studio Code](#tab/tabid-vscode)
 
   > [!TIP]
-  > <xref:microsoft.quantum.intrinsic.message> 함수를 사용 하 고 다음과 같이 메시지에 다음과 같은 기능을 전달 하 여이에 대 한 비트 id를 알아낼 수 있습니다.
+  > 예를 들어 <xref:microsoft.quantum.intrinsic.message> 함수를 사용하고 메시지에서 qubit 변수를 전달하여 qubit ID를 알아낼 수 있습니다.
   >
   > ```qsharp
   > Message($"0={register2[0]}; 1={register2[1]}");
   > ```
   > 
-  > 다음 출력이 생성 될 수 있습니다.
+  > 이 출력을 생성할 수 있습니다.
   >```
   > 0=q:3; 1=q:2
   >```
-  > 즉, 인덱스를 사용 하 여 `register2`에서 `0` 하는 것이 id =`3`이며 인덱스 `1`의 이상 비트는 id =`2`입니다.
+  > 즉, 인덱스가 `0` `register2` 있는 큐비트에`3`id=, 인덱스가 `1` 있는`2`큐비트에는 id=가 있습니다.
 
 
 ***
 
-<xref:microsoft.quantum.diagnostics.dumpmachine> <xref:microsoft.quantum.diagnostics> 네임 스페이스에 포함 되어 있으므로이를 사용 하려면 `open` 문을 추가 해야 합니다.
+<xref:microsoft.quantum.diagnostics.dumpmachine><xref:microsoft.quantum.diagnostics> 네임스페이스의 일부이므로 사용하려면 `open` 문을 추가해야 합니다.
 
 ```qsharp
 namespace Samples {
@@ -331,9 +331,9 @@ namespace Samples {
 
 ### <a name="dumpregister"></a>DumpRegister
 
-<xref:microsoft.quantum.diagnostics.dumpregister>은 (는) <xref:microsoft.quantum.diagnostics.dumpmachine>와 같이 작동 합니다. 단,이는 해당 하는 것과 관련 된 정보만으로 정보의 양을 제한 하는 데 사용 됩니다.
+<xref:microsoft.quantum.diagnostics.dumpregister>정보 <xref:microsoft.quantum.diagnostics.dumpmachine>양을 해당 큐빗과 관련된 정보로만 제한하는 큐빗 배열을 제외하면 작동합니다.
 
-<xref:microsoft.quantum.diagnostics.dumpmachine>와 마찬가지로 <xref:microsoft.quantum.diagnostics.dumpregister>에 의해 생성 되는 정보는 대상 컴퓨터에 따라 다릅니다. 전체 상태 퀀텀 시뮬레이터에 대해 wave 함수를 파일에 기록 합니다 .이 함수는 <xref:microsoft.quantum.diagnostics.dumpmachine>와 동일한 형식으로 제공 된이를 통해 생성 된 퀀텀 하위 시스템의 전역 단계까지 파일에 기록 합니다.  예를 들어 두 개의 om비트만 할당 된 컴퓨터를 다시 사용 하 고 퀀텀 상태 $ $ \begin{align} \ket{\psi} = \frac{1}{\sqrt{2}} \ket{00}-\frac{(1 + i)}{2} \ket{10} =-e ^ {-i \ pi/4} ((\frac{1}{\sqrt{2}} \ket{0}-\frac{(1 + i)}{2} \ket{1}) \frac \frac{-(1 + i)} {\sqrt{2}} \ket{0}), \end{align} $ $ `qubit[0]`에 대 한 호출 <xref:microsoft.quantum.diagnostics.dumpregister>이 출력을 생성 합니다. :
+와 <xref:microsoft.quantum.diagnostics.dumpmachine>마찬가지로, 생성 <xref:microsoft.quantum.diagnostics.dumpregister> 된 정보는 대상 컴퓨터에 따라 달라집니다. 풀 스테이트 양자 시뮬레이터의 경우 제공된 양자 서브 시스템의 글로벌 단계까지 웨이브 함수를 파일에 기록하여 <xref:microsoft.quantum.diagnostics.dumpmachine>동일한 형식으로 제공된 큐빗에 의해 생성됩니다.  {1}예를 들어, 양자 상태에서 $$ \begin{align} = \frac {\sqrt{2}} \ket{00} - \frac{{(1 + i)}{2} \ket{10} = - e^{-i\pi/4에 할당된 두 개의{1}큐비트만 있는{2}기계를{0} 다시 가져가라. } (\frac{1} {\sqrt } \ket - \frac{{(1{2}+{0} i)} <xref:microsoft.quantum.diagnostics.dumpregister> {2} \otimes \frac{-(1 + i)}{\sqrt } \ket) \ end{align} $$ 이 출력을 생성하기 위해 `qubit[0]` 호출:
 
 ```
 # wave function for qubits with ids (least to most significant): 0
@@ -341,7 +341,7 @@ namespace Samples {
 ∣1❭:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]                   
 ```
 
-`qubit[1]`에 대 한 <xref:microsoft.quantum.diagnostics.dumpregister>를 호출 하면 다음 출력이 생성 됩니다.
+<xref:microsoft.quantum.diagnostics.dumpregister> 호출은 `qubit[1]` 이 출력을 생성합니다.
 
 ```
 # wave function for qubits with ids (least to most significant): 1
@@ -349,13 +349,13 @@ namespace Samples {
 ∣1❭:    -0.500000 + -0.500000 i  ==     ***********          [ 0.500000 ]  /      [ -2.35619 rad ]
 ```
 
-일반적으로 다른 레지스터와 함께 사용 되는 레지스터의 상태는 순수 상태가 아닌 혼합 된 상태입니다. 이 경우 <xref:microsoft.quantum.diagnostics.dumpregister>는 다음과 같은 메시지를 출력 합니다.
+일반적으로 다른 레지스터와 얽혀 있는 레지스터의 상태는 순수 상태가 아닌 혼합 상태입니다. 이 경우 <xref:microsoft.quantum.diagnostics.dumpregister> 다음 메시지를 출력합니다.
 
 ```
 Qubits provided (0;) are entangled with some other qubit.
 ```
 
-다음 예제에서는 Q # 코드에서 <xref:microsoft.quantum.diagnostics.dumpregister>와 <xref:microsoft.quantum.diagnostics.dumpmachine>를 모두 사용 하는 방법을 보여 줍니다.
+다음 예제에서는 Q# 코드와 <xref:microsoft.quantum.diagnostics.dumpregister> <xref:microsoft.quantum.diagnostics.dumpmachine> 둘 다 사용하는 방법을 보여 줍니다.
 
 ```qsharp
 namespace app
@@ -382,6 +382,6 @@ namespace app
 
 ## <a name="debugging"></a>디버깅
 
-`Assert` 및 `Dump` 함수 및 작업을 기반으로 하는 Q #은 표준 Visual Studio 디버깅 기능의 하위 집합을 지원 합니다. [줄 중단점 설정](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints), F10 키를 [사용 하 여 코드 단계별](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger) 실행 및 [클래식 변수의 값 검사](https://docs.microsoft.com/visualstudio/debugger/autos-and-locals-windows) 는 모두 시뮬레이터에서 코드를 실행 하는 동안 가능 합니다.
+`Dump` 기능 및 `Assert` 작업 외에도 Q#은 표준 Visual Studio 디버깅 기능의 하위 집합인 [줄 중단점 설정,](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints) [F10을 사용한 코드 단계별 단계](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger) 및 [클래식 변수의 값 검사는](https://docs.microsoft.com/visualstudio/debugger/autos-and-locals-windows) 시뮬레이터에서 코드 실행 중에 모두 가능합니다.
 
-Visual Studio Code 디버깅은 OmniSharp에서 제공 하는 C# Visual Studio Code 확장에 대해에서 제공 하는 디버깅 기능을 활용 하 고 [최신 버전](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)을 설치 해야 합니다. 
+Visual Studio 코드에서 디버깅은 OmniSharp에서 제공하는 Visual Studio 코드 확장용 C#에서 제공하는 디버깅 기능을 활용하며 [최신 버전을](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)설치해야 합니다. 
