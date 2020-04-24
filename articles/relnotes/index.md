@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: 7a080f82e586f06d40e9d793ee05932db4c3ccef
-ms.sourcegitcommit: 7d350db4b5e766cd243633aee7d0a839b6274bd6
+ms.openlocfilehash: 84e5db17ab8d963a75c72da38d3e4487b89abc9d
+ms.sourcegitcommit: b6b8459eb654040f1e19f66411b29fc9e48e95c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81481410"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82030602"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit 릴리스 정보
 
@@ -21,6 +21,11 @@ ms.locfileid: "81481410"
 
 업데이트 지침은 [업데이트 가이드](xref:microsoft.quantum.update)를 참조하세요.
 
+## <a name="version-01120033107"></a>버전 0.11.2003.3107
+
+*릴리스 날짜: 2020년 3월 31일*
+
+이 릴리스에는 버전 0.11.2003.2506에 대한 사소한 버그 수정이 포함되어 있습니다.
 
 ## <a name="version-01120032506"></a>버전 0.11.2003.2506
 
