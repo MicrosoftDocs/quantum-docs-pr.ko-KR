@@ -7,7 +7,7 @@ summary: >-
   배열의 지정 된 요소에 작업을 적용 합니다.
 
 
-  작업 `op`, 인덱스 `index`, `targets`대상의 배열을 지정 하면 `op(targets[index])`적용 됩니다.
+  작업 `op`, 인덱스 `index`및 대상 `targets`의 배열이 지정 된 경우 적용 `op(targets[index])`됩니다.
 syntax: "operation ApplyToElementC (op : ('T => Unit is Ctl), index : Int, targets : 'T[]) : Unit"
 input:
   content: "(op : ('T => Unit is Ctl), index : Int, targets : 'T[])"
@@ -48,9 +48,9 @@ seeAlso:
 - microsoft.quantum.canon.applytoelementa
 - microsoft.quantum.canon.applytoelementca
 metadata:
-  ms.openlocfilehash: d4e8520476218cd5892c98d55dea1b1543d3c58c
-  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.openlocfilehash: 40d608d8dd7def5027ade690a7602c25bb287055
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 02/28/2020
-  ms.locfileid: "77908041"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82670007"
