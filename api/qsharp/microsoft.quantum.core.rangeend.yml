@@ -5,7 +5,7 @@ type: function
 namespace: Microsoft.Quantum.Core
 summary: 시퀀스의 마지막 요소가 아닐 수 있는 지정 된 범위의 정의 된 끝 값을 반환 합니다.
 remarks: >-
-  범위 식의 첫 번째 요소는 `start`이 고, 두 번째 요소는 `start+step`, 세 번째 요소는 `end` 될 때까지 `start+step+step`됩니다.
+  범위 식의 `start`첫 번째 요소는이 전달 될 때까지 `start+step` `start+step+step` `end` , 두 번째 요소는, 세 번째 요소는 등입니다.
 
 
   범위의 정의 된 끝 값은 범위에 지정 된 시퀀스의 마지막 요소와 다를 수 있습니다. 예를 들어, 범위는 0 .입니다. 2.. 5 마지막 요소는 4 이지만 끝 값은 5입니다.
@@ -23,9 +23,9 @@ output:
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: c7436046b6be7d4d0801471ecc6c78e36421e54a
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 85e9006f73cd5f7b5a78b57148cbd7ad5b764878
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73066645"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82657632"
