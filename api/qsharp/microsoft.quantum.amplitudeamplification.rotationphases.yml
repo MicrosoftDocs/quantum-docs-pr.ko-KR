@@ -7,12 +7,12 @@ summary: 진폭 증폭에서 단일 비트 회전의 시퀀스에 대 한 단계
 remarks: >-
   첫 번째 매개 변수는 단일가 나 비트 회전의 곱으로 표현 되는 반사의 단계 배열입니다.
 
-  [ G.H. 낮음, L. L. Chuang https://arxiv.org/abs/1707.05391].
+  [ G.H. 낮음, L. L. Chuang, https://arxiv.org/abs/1707.05391].
 syntax: newtype RotationPhases = Double[];
 metadata:
-  ms.openlocfilehash: 1ad6a80a10cc3880122303a7bbd708087976f906
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: bcf8502387a5f4479730bcbb41eaf03fa7925f87
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73215458"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680086"

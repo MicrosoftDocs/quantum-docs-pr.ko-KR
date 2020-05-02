@@ -7,24 +7,24 @@ summary: >-
   이 연산은 값의 XOR를 출력의 비트에 적용 하 여, 값의 레지스터가 나타내는 정수가 다른 정수 보다 큰지 테스트 합니다.
 
 
-  `x` 두 개의 정수를 지정 하 고 동일한 크기의 이상 값에 저장 `y` 하는 경우이 작업은 `x > y`충족 하는지 확인 합니다. True 이면 1이 XORed 출력으로 변환 됩니다. 그렇지 않으면 0이 출력의 XORed 됩니다.
+  두 개의 정수가 `x` 지정 `y` 되 고 동일한 크기의 비트 레지스터에 저장 된 경우이 작업은 충족 `x > y`되는지 확인 합니다. True 이면 1이 XORed 출력으로 변환 됩니다. 그렇지 않으면 0이 출력의 XORed 됩니다.
 
-  즉,이 작업은 단일 $ $ \begin{align} U\ket {x} \ k {y} \ k {z} = \ket{x}\ket{y}\ket{z\oplus (x > y)}로 나타낼 수 있습니다.
+  즉,이 작업은 단일 $ $ \begin{align} U\ket {x} \ k {y} \ k {z} = \ket{x}\ket{y}\ket{z\oplus (x>y)}로 나타낼 수 있습니다.
 
   \end{align} $ $
 syntax: 'operation CompareUsingRippleCarry (x : Microsoft.Quantum.Arithmetic.LittleEndian, y : Microsoft.Quantum.Arithmetic.LittleEndian, output : Qubit) : Unit'
-references: '- 새 퀀텀 ripple A. Cuccaro, Thomas Draper, Samuel A. Kutin, David Petrie Moulton https://arxiv.org/abs/quant-ph/0410184'
+references: '- 새 퀀텀 ripple-A. Cuccaro, Thomas G. Draper, Samuel, David Petrie Moultonhttps://arxiv.org/abs/quant-ph/0410184'
 input:
   content: '(x : Microsoft.Quantum.Arithmetic.LittleEndian, y : Microsoft.Quantum.Arithmetic.LittleEndian, output : Qubit)'
   types:
   - name: x
-    summary: 사용할 첫 번째 숫자는 `LittleEndian` 형식으로 저장 됩니다.
+    summary: '`LittleEndian` 지정 된 형식으로 저장 되는 첫 번째 숫자는 이상 비트 레지스터입니다.'
     uid: microsoft.quantum.arithmetic.littleendian
   - name: y
-    summary: '`LittleEndian` 형식으로 저장 된 두 번째 숫자입니다.'
+    summary: 지정 된 형식에 `LittleEndian` 저장 된 두 번째 숫자입니다.
     uid: microsoft.quantum.arithmetic.littleendian
   - name: output
-    summary: 비교 결과를 저장 하 $x y $ >입니다.
+    summary: 비교 결과를 저장 하 $x y $>입니다.
     isPrimitive: true
     uid: Qubit
 output:
@@ -36,9 +36,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 1ef346a9fd33859abffe9c30b14b5ea95068169d
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: 08cff4d874060fce0b461c7eeadfdcadf6fa1453
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76871127"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82679752"

@@ -9,7 +9,7 @@ input:
   content: '(coefficients : Double[], fpx : Microsoft.Quantum.Arithmetic.FixedPoint, result : Microsoft.Quantum.Arithmetic.FixedPoint)'
   types:
   - name: coefficients
-    summary: 이중 배열인 다항식의 계수입니다. 즉, 다항식의 경우 $ [a_0, a_1, ..., a_d] $ 배열 $P (x) = a_0 + a_1 x + \cdots + a_d x ^ d $입니다.
+    summary: 이중 배열로 된 다항식의 계수입니다. 즉, 다항식 $P (x) = a_0 + a_1 x + \cdots + a_d x ^ d $의 배열 $ [a_0, a_1, ..., a_d] $입니다.
     isArray: true
     isPrimitive: true
     uid: Double
@@ -17,7 +17,7 @@ input:
     summary: 다항식을 계산할 입력 고정 소수점 숫자입니다.
     uid: microsoft.quantum.arithmetic.fixedpoint
   - name: result
-    summary: $P (x) $를 포함 하는 출력 고정 소수점 숫자입니다. 처음에는 $ \ket{0}$ 상태 여야 합니다.
+    summary: $P (x) $를 포함 하는 출력 고정 소수점 숫자입니다. 처음에는 state $ \ket{0}$ 여야 합니다.
     uid: microsoft.quantum.arithmetic.fixedpoint
 output:
   content: Unit
@@ -28,9 +28,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 8a3531860001c09fa3dadd5ba4db276f0a20d06a
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 7907702d8919060c630ce410d1cfcb995b4ed37a
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73221000"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82679635"

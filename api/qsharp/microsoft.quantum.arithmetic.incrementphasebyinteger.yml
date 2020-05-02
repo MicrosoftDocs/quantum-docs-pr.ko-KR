@@ -7,7 +7,7 @@ summary: >-
   단계 회전을 사용 하 여, 부호 없는 퀀텀 레지스터를 고전 정수로 늘립니다.
 
 
-  `target`는 작은 endian 인코딩의 경우 부호 없는 정수 $x $로 인코드 하 고 `increment`는 $a $와 동일 하다 고 가정 합니다.
+  가 $x `target` 부호 없는 정수를 작은 endian 인코딩으로 `increment` 인코딩하고 $a $와 같은 경우를 가정 합니다.
 
   그런 다음이 작업을 수행 하면 단일 $ \ket{x} \maps\ket{x + a} $이 구현 됩니다. 여기서 더하기는 모듈로 $2 ^ n $, 여기서 $n = \texttt{Length (target!)}입니다. $.
 remarks: >-
@@ -21,7 +21,7 @@ input:
   content: '(increment : Int, target : Microsoft.Quantum.Arithmetic.PhaseLittleEndian)'
   types:
   - name: increment
-    summary: '`target` 증가 하는 정수입니다.'
+    summary: 가 증가 하는 정수 `target` 입니다.
     isPrimitive: true
     uid: Int
   - name: target
@@ -39,9 +39,9 @@ seeAlso:
 - incrementbyintegerbe
 - incrementbyintegerle
 metadata:
-  ms.openlocfilehash: 379e643826ca54e123c8b855f4bba48a9d79a137
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 2893d432b4043bbacb425f3ae42cbbdd3d4dc225
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73219045"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82679528"
