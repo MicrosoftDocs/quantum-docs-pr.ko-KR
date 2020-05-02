@@ -9,21 +9,21 @@ input:
   content: '(ints : Int[])'
   types:
   - name: ints
-    summary: Pauli 연산자로 변환할 `0..3` 범위의 정수 배열입니다.
+    summary: Pauli 연산자로 변환할 범위의 `0..3` 정수 배열입니다.
     isArray: true
     isPrimitive: true
     uid: Int
 output:
   content: Pauli[]
   types:
-  - summary: '`[PauliI, PauliX, PauliY, PauliZ]`에 지정 된 `ints[idxPauli]`의 요소와 같은 `paulis[idxPauli]`를 `ints`와 동일한 길이를 `Pauli[]` Pauli 연산자의 `paulis` 배열입니다.'
+  - summary: Pauli 연산자 `paulis` `Pauli[]` 의 배열에는에 지정 된 `ints` 의 `paulis[idxPauli]` `[PauliI, PauliX, PauliY, PauliZ]` 요소와 동일한 길이가 `ints[idxPauli]`있습니다.
     isArray: true
     isPrimitive: true
     uid: Pauli
 metadata:
-  ms.openlocfilehash: 407ad1481c220f390fffb5f1b59f0968d6d6570c
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 1159e3db02663b0588d12ea9d297e055be84ac4a
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73066985"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82682607"

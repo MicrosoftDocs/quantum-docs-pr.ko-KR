@@ -14,9 +14,9 @@ output:
   - summary: '`QECC` 형식을 지정 하 여 퀀텀 오류 수정 코드의 구현을 반환 합니다.'
     uid: microsoft.quantum.errorcorrection.qecc
 metadata:
-  ms.openlocfilehash: bd9fdd54cf79610fa83ed99f4c94c89b7218c2c6
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 3fb7c03f36a75d98238bbacfd7eb2a207894bb90
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73230418"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82682384"

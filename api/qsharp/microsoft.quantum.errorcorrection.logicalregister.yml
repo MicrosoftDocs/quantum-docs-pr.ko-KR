@@ -3,12 +3,12 @@ uid: microsoft.quantum.errorcorrection.logicalregister
 name: LogicalRegister
 type: newtype
 namespace: Microsoft.Quantum.ErrorCorrection
-summary: 논리가 중 비트를 인코딩하는 `Qubit[]` 실제의 레지스터를 입력 합니다.
+summary: 논리적 및 비트를 인코딩하는 실제 `Qubit[]` 실제 비트의 레지스터를 입력 합니다.
 syntax: newtype LogicalRegister = Qubit[];
 metadata:
-  ms.openlocfilehash: f920c0052a1ec0794160b4e784806109c571cc96
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 1c2e9c159067681cbfa42f5395c6a00a0098540e
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73226712"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82682338"

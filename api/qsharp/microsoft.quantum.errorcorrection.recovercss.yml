@@ -9,13 +9,13 @@ input:
   content: '(code : Microsoft.Quantum.ErrorCorrection.CSS, fnX : Microsoft.Quantum.ErrorCorrection.RecoveryFn, fnZ : Microsoft.Quantum.ErrorCorrection.RecoveryFn, logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister)'
   types:
   - name: code
-    summary: 퀀텀 CSS 오류-`CSS` 형식으로 패키지 된 코드를 수정 하 여 퀀텀 데이터의 인코딩과 디코딩을 설명 하 고 오류 syndromes을 측정 하는 방법을 설명 합니다.
+    summary: 퀀텀 CSS 오류- `CSS` 형식으로 패키지 된 코드를 수정 하면 퀀텀 데이터의 인코딩과 디코딩을 설명 하 고 오류 syndromes을 측정 하는 방법을 설명 합니다.
     uid: microsoft.quantum.errorcorrection.css
   - name: fnX
-    summary: 각 $X $ error 증후군를 검색 된 오류를 해결 하는 `Pauli[]` 작업에 매핑하는 `RecoveryFn`입니다.
+    summary: 검색 `RecoveryFn` 된 오류를 수정 하는 `Pauli[]` 작업에 각 $X $ error 증후군를 매핑하는입니다.
     uid: microsoft.quantum.errorcorrection.recoveryfn
   - name: fnZ
-    summary: 각 $Z $ error 증후군를 검색 된 오류를 해결 하는 `Pauli[]` 작업에 매핑하는 `RecoveryFn`입니다.
+    summary: 검색 `RecoveryFn` 된 오류를 수정 하는 `Pauli[]` 작업에 각 $Z $ error 증후군를 매핑하는입니다.
     uid: microsoft.quantum.errorcorrection.recoveryfn
   - name: logicalRegister
     summary: 안정기 코드가 정의 된 요소의 배열입니다.
@@ -30,9 +30,9 @@ seeAlso:
 - microsoft.quantum.canon.recoveryfn
 - microsoft.quantum.canon.logicalregister
 metadata:
-  ms.openlocfilehash: 4e07e66816c347aa9a7e1f06ebe88f65b2d040ce
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 8c9504e985b224421d3eb66b0d7e9bc0ef8f2e96
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73220269"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82682283"
