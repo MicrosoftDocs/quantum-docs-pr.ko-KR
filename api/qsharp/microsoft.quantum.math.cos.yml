@@ -3,7 +3,7 @@ uid: microsoft.quantum.math.cos
 name: Cos
 type: function
 namespace: Microsoft.Quantum.Math
-summary: 지정 된 각도의 코사인을 반환 합니다.
+summary: 지정된 각도의 코사인을 반환합니다.
 remarks: 자세한 내용은 [system.object](https://docs.microsoft.com/dotnet/api/system.math.cos) 를 참조 하십시오.
 syntax: 'function Cos (theta : Double) : Double'
 input:
@@ -18,9 +18,9 @@ output:
   - isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: e540c467ad8768f92f4850d5ea2e091b205c47bc
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 66d95b487e1de42c68f1cb6623577c74a1f2e418
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73229823"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82685685"

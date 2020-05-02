@@ -5,7 +5,7 @@ type: function
 namespace: Microsoft.Quantum.MachineLearning
 summary: 학습용 분류자에 대 한 기본 옵션 집합을 반환 합니다.
 examples: >-
-  기본 옵션을 사용 하지만 추가 측정을 사용 하려면 `w/` 연산자를 사용 합니다.
+  기본 옵션을 사용 하지만 추가 측정을 사용 하려면 연산자를 사용 `w/` 합니다.
 
 
   ```Q#
@@ -23,9 +23,9 @@ output:
   - summary: 분류자를 학습 하는 데 사용할 적절 한 기본 교육 옵션 집합입니다.
     uid: microsoft.quantum.machinelearning.trainingoptions
 metadata:
-  ms.openlocfilehash: 6013d4f7268cfc422eedbe7d2070adbb167ad4ea
-  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.openlocfilehash: 87f056e336ca78881421e669b3d282af8e679353
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 02/28/2020
-  ms.locfileid: "77909469"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82685444"

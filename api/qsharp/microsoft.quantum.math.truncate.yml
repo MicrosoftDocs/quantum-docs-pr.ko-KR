@@ -3,7 +3,7 @@ uid: microsoft.quantum.math.truncate
 name: Truncate
 type: function
 namespace: Microsoft.Quantum.Math
-summary: 숫자의 정수 부분을 계산 합니다.
+summary: 숫자의 정수 부분을 계산합니다.
 remarks: 자세한 내용은 [system.object](https://docs.microsoft.com/dotnet/api/system.math.truncate) 를 참조 하십시오.
 syntax: 'function Truncate (a : Double) : Int'
 input:
@@ -18,9 +18,9 @@ output:
   - isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: ad3847eed4fcf7cd991f29f26015da1872404005
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: fa337a2c02d7e96de73a887f912a5267916e1aea
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73231421"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82685226"

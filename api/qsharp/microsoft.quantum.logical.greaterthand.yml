@@ -30,13 +30,13 @@ input:
 output:
   content: Bool
   types:
-  - summary: '`a`이 `b`보다 엄격 하 게 큰 경우에만 `true` 합니다.'
+  - summary: '`true`가 보다 `b`엄격 하 `a` 게 큰 경우에만입니다.'
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: 9dbb502eb6e54b93bb7cb24c2efefe5aa4906222
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 6aab2a2ef67a8d5efa8507144b65eabc35f84405
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73225709"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82685886"
