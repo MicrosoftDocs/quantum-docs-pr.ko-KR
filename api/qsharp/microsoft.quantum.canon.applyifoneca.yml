@@ -7,9 +7,9 @@ summary: >-
   기존 결과 값에 조건 화 된 단일 작업을 적용 합니다.
 
 
-  작업 `op`와 `result`결과 값이 지정 되 면 `result` `One`경우 `target` `op` 적용 됩니다. `Zero`경우 `target`가 발생 하지 않습니다.
+  작업 `op` `result`및 결과 값이 지정 된 `op` `target` 경우이 인 `result` `One`경우에 적용 됩니다. 이면 `Zero`이 발생 하지 않습니다 `target`.
 
-  `CA` 접미사는 적용 될 작업이 단일 (제어 가능 하 고 adjointable) 임을 나타냅니다.
+  접미사 `CA` 는 적용 될 작업이 단일 (제어 가능 및 adjointable) 임을 나타냅니다.
 syntax: "operation ApplyIfOneCA (result : Result, (op : ('T => Unit is Adj + Ctl), target : 'T)) : Unit"
 input:
   content: "(result : Result, (op : ('T => Unit is Adj + Ctl), target : 'T))"
@@ -52,9 +52,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifonea
 - microsoft.quantum.canon.applyifoneca
 metadata:
-  ms.openlocfilehash: 9756dcc29853d41e1d2a9fee5816254afa5e5d73
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: f8837e549ec1fc70b76e8151a211c4bf9f71168e
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73217396"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82672641"
