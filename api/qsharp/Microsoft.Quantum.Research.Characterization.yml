@@ -1,0 +1,14 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.research.characterization
+name: Microsoft.Quantum.Research.Characterization
+summary: " # <a name=\"summary\"></a>요약\n 이 네임 스페이스는 퀀텀 특성화 및 단계 예측에 대 한 고급 연구 방법을 제공 합니다."
+operations:
+- uid: microsoft.quantum.research.characterization.randomwalkphaseestimation
+  summary: 임의 워크를 사용 하 여 반복 단계 예측을 수행 하 여 지정 된 oracle 및 eigenstate에서 얻은 기존 측정 결과에 대 한 Bayesian 유추를 대략적으로 수행 합니다.
+metadata:
+  ms.openlocfilehash: 8f4ca8b0f5f16f5eae8b6db42e1da32cfc3a778f
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.translationtype: MT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82706706"
