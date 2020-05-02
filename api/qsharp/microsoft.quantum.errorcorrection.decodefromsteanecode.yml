@@ -6,7 +6,7 @@ namespace: Microsoft.Quantum.ErrorCorrection
 summary: ⟦ 7, 1, 3 ⟧ Steane 퀀텀 코드 아래의 인코딩된 퀀텀 레지스터에 인코딩되지 않은 퀀텀 레지스터를 매핑하는 역 인코딩 작업입니다.
 remarks: 선택한 디코더는 ⟦ 7, 1, 3 ⟧ Steane 코드의 CSS 코드 속성을 사용 합니다. 즉, X 오류 및 Z 오류를 별도로 수정 합니다. 코드의 속성은 각각 정수로 간주 되는 경우 z 증후군 각각 x의 3 비트 인코딩입니다 (각각 z)을 적용 해야 합니다.
 syntax: 'operation DecodeFromSteaneCode (logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister) : (Qubit[], Qubit[])'
-references: '- D. Gottesman, "안정기 코드 및 퀀텀 오류 수정", "Ph.D Thesis, Caltech, 1997; https://arxiv.org/abs/quant-ph/9705052'
+references: '- D. Gottesman, "안정기 코드 및 퀀텀 오류 수정", "Ph.D Thesis, Caltech, 1997;https://arxiv.org/abs/quant-ph/9705052'
 input:
   content: '(logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister)'
   types:
@@ -29,9 +29,9 @@ seeAlso:
 - steanecodedecoder
 - logicalregister
 metadata:
-  ms.openlocfilehash: 9aba61580f2ee13df71c3150cb3ffb89ea0793cb
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 0256c1bf847009b6ea6f712aece34219f5c5ff8d
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73234668"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82685048"

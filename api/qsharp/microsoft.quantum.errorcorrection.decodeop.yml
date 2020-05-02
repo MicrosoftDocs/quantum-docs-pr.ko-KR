@@ -10,9 +10,9 @@ summary: >-
   DecodeOp에 대 한 인수는 EncodeOp에서 반환 하는 것과 동일 하며 그 반대의 경우도 마찬가지입니다.
 syntax: newtype DecodeOp = (Microsoft.Quantum.ErrorCorrection.LogicalRegister => (Qubit[], Qubit[]));
 metadata:
-  ms.openlocfilehash: ef9ad274336b019961256a63e7e48a8c011779bf
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: d2afa788d4e443b94512b724bdb983af36f4c90e
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73234617"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82685029"
