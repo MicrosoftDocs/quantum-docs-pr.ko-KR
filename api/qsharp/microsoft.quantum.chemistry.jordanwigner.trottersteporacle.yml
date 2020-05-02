@@ -9,7 +9,7 @@ input:
   content: '(qSharpData : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerEncodingData, trotterStepSize : Double, trotterOrder : Int)'
   types:
   - name: qSharpData
-    summary: '`JordanWignerEncodingData` 형식으로 설명 되는 Hamiltonian입니다.'
+    summary: Hamiltonian은 형식 `JordanWignerEncodingData` 으로 설명 됩니다.
     uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerencodingdata
   - name: trotterStepSize
     summary: Trotter 통합자의 단계 크기입니다.
@@ -22,7 +22,7 @@ input:
 output:
   content: (Int, (Double, (Qubit[] => Unit is Adj + Ctl)))
   types:
-  - summary: '튜플: `Int`은 할당 된 값이 고 `Double` `1.0/trotterStepSize`이며 작업은 Trotter 단계입니다.'
+  - summary: '튜플: `Int` 은 할당 된 값이 고, `Double` 은 `1.0/trotterStepSize`이며, 작업은 Trotter 단계입니다.'
     types:
     - isPrimitive: true
       uid: Int
@@ -43,9 +43,9 @@ output:
         - Adjoint
         - Controlled
 metadata:
-  ms.openlocfilehash: 168203ef7e62522cf2df3c746ca75ffaf4ab3252
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: d78cac1e2f1a3b95007a3572aa7257d1938b97f4
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73227596"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82662981"
