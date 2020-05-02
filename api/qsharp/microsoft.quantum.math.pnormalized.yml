@@ -4,10 +4,10 @@ name: PNormalized
 type: function
 namespace: Microsoft.Quantum.Math
 summary: >-
-  `L(p)`에서 `Double`의 벡터를 표준화 합니다.
+  일반에서 `Double` `L(p)` 의 벡터를 정규화 합니다.
 
 
-  즉, `Double[]`형식의 $x 배열을 지정 하면 모든 요소가 $-일반 $\|x\|_p $ $p으로 나뉘는 배열을 반환 합니다.
+  즉, 형식의 `Double[]`$x $ 배열이 지정 된 경우 모든 요소가 $-일반 $\|x\|_p $ $p으로 나뉘는 배열을 반환 합니다.
 syntax: 'function PNormalized (p : Double, array : Double[]) : Double[]'
 input:
   content: '(p : Double, array : Double[])'
@@ -30,9 +30,9 @@ output:
 seeAlso:
 - pnorm
 metadata:
-  ms.openlocfilehash: 5fd219b866b14d3d6faf58cdf4f1ce2b9fbadf9d
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 68697fe159fecfeed0078f95de8d91f825125f41
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73067291"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82684021"

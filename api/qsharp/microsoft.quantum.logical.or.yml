@@ -5,7 +5,7 @@ type: function
 namespace: Microsoft.Quantum.Logical
 summary: 두 값의 부울 분리를 반환 합니다.
 remarks: >-
-  `or` 연산자와 달리이 함수는 두 입력이 모두 완전히 계산 되도록 단락을 구분 하지 않습니다.
+  `or` 연산자와 달리이 함수는 두 입력이 모두 완전히 계산 되도록 하는 짧은 회로는 아닙니다.
 
 
   단기 동작으로, 다음은 동일 합니다.
@@ -33,13 +33,13 @@ input:
 output:
   content: Bool
   types:
-  - summary: '`a` 또는 `b`를 `true`하는 경우에만 `true` 합니다.'
+  - summary: '`true``a` 또는 `b` 가 인 경우에 `true`만입니다.'
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: 7324679482e300b868902e9bf1c17cc9cc0da10d
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: fb3d62473ec3fd7c40b44bfa919b69d54c5d0218
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73235161"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82683575"
