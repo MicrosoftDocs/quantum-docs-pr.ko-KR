@@ -7,10 +7,10 @@ summary: 현재 대상 컴퓨터의 상태를 덤프 합니다.
 remarks: >-
   이 메서드를 사용 하면 대상 컴퓨터의 현재 상태에 대 한 정보를 파일 또는 다른 위치에 덤프할 수 있습니다.
 
-  생성 된 실제 정보 및 `location`의 의미 체계는 각 대상 컴퓨터에만 적용 됩니다. 그러나 빈 튜플을 위치 (`()`)로 제공 하거나 `location` 매개 변수를 생략 하는 것은 일반적으로 콘솔에 대 한 출력을 생성 하는 것을 의미 합니다.
+  의 `location` 실제 정보 및 의미 체계는 각 대상 컴퓨터에만 적용 됩니다. 그러나 빈 튜플을 위치 (`()`)로 제공 하거나 매개 변수를 `location` 생략 하는 것은 일반적으로 콘솔에 대 한 출력을 생성 하는 것을 의미 합니다.
 
 
-  퀀텀 개발 키트의 일부로 분산 된 로컬 전체 상태 시뮬레이터의 경우이 메서드는 웨이브 함수를 일련 번호의 1 차원 배열로 기록 하는 파일에 대 한 경로가 포함 된 문자열을 예상 합니다. 여기서 각 요소는 해당 상태를 측정할 확률을 amplitudes 합니다.
+  퀀텀 개발 키트의 일부로 분산 된 로컬 전체 상태 시뮬레이터의 경우이 메서드는 웨이브 함수를 복소수의 1 차원 배열로 기록 하는 파일에 대 한 경로가 포함 된 문자열을 예상 합니다. 여기서 각 요소는 해당 상태를 측정할 확률의 amplitudes을 나타냅니다.
 syntax: "function DumpMachine (location : 'T) : Unit"
 input:
   content: "(location : 'T)"
@@ -22,13 +22,13 @@ input:
 output:
   content: Unit
   types:
-  - summary: 없음.
+  - summary: 없음
     isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 7d268127c56dc5554e7c99494ae90b2bc14b336c
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 7511e0bdded689c84cb90794860dd79e48950414
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73227069"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82656567"
