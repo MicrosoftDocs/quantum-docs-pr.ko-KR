@@ -7,7 +7,7 @@ summary: >-
   클래식 결과 값에 0이 조건 화 된 작업을 적용 합니다.
 
 
-  작업 `op`와 `result`결과 값이 지정 되 면 `result` `Zero`경우 `target` `op` 적용 됩니다. `One`경우 `target`가 발생 하지 않습니다.
+  작업 `op` `result`및 결과 값이 지정 된 `op` `target` 경우이 인 `result` `Zero`경우에 적용 됩니다. 이면 `One`이 발생 하지 않습니다 `target`.
 syntax: "operation ApplyIfZero (result : Result, (op : ('T => Unit), target : 'T)) : Unit"
 input:
   content: "(result : Result, (op : ('T => Unit), target : 'T))"
@@ -44,9 +44,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifzeroa
 - microsoft.quantum.canon.applyifzeroca
 metadata:
-  ms.openlocfilehash: c9d524a4be9c3ce6179f59d59c8a83819a611966
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: def6af6461ea91bc1df4ce347a1a35c6fb31cb8a
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73213639"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82672628"

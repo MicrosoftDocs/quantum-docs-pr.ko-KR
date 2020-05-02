@@ -4,7 +4,7 @@ name: TargetStateReflectionOracle
 type: function
 namespace: Microsoft.Quantum.AmplitudeAmplification
 summary: >-
-  플래그는 기본적으로 표시 된 대상 상태에 대 한 `ReflectionOracle`를 생성 합니다.
+  플래그에 `ReflectionOracle` 따라 고유 하 게 표시 되는 대상 상태에 대 한를 생성 합니다.
 
 
   대상 상태에는 1로 설정 된 단일 비트와 다른 모든 0: $ \ket{1}_f $가 있습니다.
@@ -19,14 +19,14 @@ input:
 output:
   content: Microsoft.Quantum.Oracles.ReflectionOracle
   types:
-  - summary: $ \Ket{1}_f $로 표시 된 상태에 대해 반영 하는 `ReflectionOracle`입니다.
+  - summary: $ `ReflectionOracle` \Ket{1}_f $로 표시 된 상태에 대해 반영 하는입니다.
     uid: microsoft.quantum.oracles.reflectionoracle
 seeAlso:
 - microsoft.quantum.canon.reflectionoracle
 metadata:
-  ms.openlocfilehash: c86011664da3f59bc978641b0aefcca5a50d3b1a
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 6f398f2c9122769dd6f83fd002d311c0b55db158
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73215441"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82672915"

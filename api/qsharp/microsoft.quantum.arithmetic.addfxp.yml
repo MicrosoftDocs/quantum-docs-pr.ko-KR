@@ -7,8 +7,8 @@ summary: >-
   퀀텀 레지스터에 저장 된 두 개의 고정 소수점 숫자를 추가 합니다.
 
 
-  $ \Ket{f_1} $ 및 $ \ket{f_2} $ 상태에서 각각 두 개의 고정 소수점 레지스터가 지정 된 경우 $ \ket{f_1} \ket{f_2} \mapsto \ket{f_1 f_2 +} $ 작업을 수행 합니다.
-remarks: 현재 구현에서는 두 개의 고정 소수점 숫자가 최하위 비트에서 동일한 점 위치를 계산 해야 합니다. 즉, $n _i $ 및 $p _i $는 동일 해야 합니다.
+  각각 $ \ket{f_1} $ 및 $ \ket{f_2} $ 상태에서 두 개의 고정 소수점 레지스터가 지정 된 경우, 작업 $ \ket{f_1} \ket{f_2} \maps\ket{f_1} \ket{f_1 + f_2} $를 수행 합니다.
+remarks: 현재 구현에서는 두 개의 고정 소수점 숫자가 최하위 비트에서 동일한 점 위치를 계산 해야 합니다. 즉, $n _i $ 및 $p _i $가 동일 해야 합니다.
 syntax: 'operation AddFxP (fp1 : Microsoft.Quantum.Arithmetic.FixedPoint, fp2 : Microsoft.Quantum.Arithmetic.FixedPoint) : Unit'
 input:
   content: '(fp1 : Microsoft.Quantum.Arithmetic.FixedPoint, fp2 : Microsoft.Quantum.Arithmetic.FixedPoint)'
@@ -28,9 +28,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 142c7927519e59fb3df1661b3beadd32cda0d2c8
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 75b6e15299b6e0394af8cb530ee7bc66dc07c336
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73215424"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82672908"
