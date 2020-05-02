@@ -29,7 +29,7 @@ input:
 output:
   content: ((Qubit[], 'T) => Unit is Adj + Ctl)
   types:
-  - summary: 컨트롤 레지스터 상태가 숫자 상태 `numberState`에 해당 하는 경우 대상 레지스터에 `oracle`를 적용 하는 단일 연산자입니다.
+  - summary: 컨트롤 레지스터 상태가 숫자 상태 `oracle` `numberState`에 해당 하는 경우 대상 레지스터에 적용 되는 단일 연산자입니다.
     isOperation: true
     input:
       types:
@@ -46,9 +46,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: 2d1951df7eca0d48246ac93518594f522221d882
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 544b96c809af69ce1cc33aad2d42b012f93d4b3c
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73226185"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82675716"

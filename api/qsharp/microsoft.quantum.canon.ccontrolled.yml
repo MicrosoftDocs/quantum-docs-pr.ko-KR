@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.ccontrolled
 name: CControlled
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: 작업 op가 지정 된 경우 기존 컨트롤 비트가 true 이면 op를 적용 하는 새 작업을 반환 합니다. `false`경우 아무 일도 발생 하지 않습니다.
+summary: 작업 op가 지정 된 경우 기존 컨트롤 비트가 true 이면 op를 적용 하는 새 작업을 반환 합니다. 이면 `false`아무 작업도 수행 되지 않습니다.
 syntax: "function CControlled (op : ('T => Unit)) : ((Bool, 'T) => Unit)"
 input:
   content: "(op : ('T => Unit))"
@@ -42,9 +42,9 @@ seeAlso:
 - microsoft.quantum.canon.ccontrolleda
 - microsoft.quantum.canon.ccontrolledca
 metadata:
-  ms.openlocfilehash: 340a993f5949d3faa6e4ebf883ee0f15c219a49b
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: ed9e5a80bdb0678b21165ecc710f56cccdbbe76d
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73211990"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82675925"

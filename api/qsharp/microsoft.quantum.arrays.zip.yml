@@ -31,7 +31,7 @@ input:
 output:
   content: ('T, 'U)[]
   types:
-  - summary: 각 `idx`에 대해 `(left[idx], right[idx])` 폼의 쌍을 포함 하는 배열입니다. 두 배열의 길이가 같지 않은 경우에는 입력 중 짧은 값 만큼 출력 됩니다.
+  - summary: 각 `(left[idx], right[idx])` `idx`에 대 한 폼의 쌍을 포함 하는 배열입니다. 두 배열의 길이가 같지 않은 경우에는 입력 중 짧은 값 만큼 출력 됩니다.
     isArray: true
     types:
     - uid: "'T"
@@ -47,9 +47,9 @@ seeAlso:
 - zip3
 - zip4
 metadata:
-  ms.openlocfilehash: 9af79a617722ead8102ea4631d96934bf253beda
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: ae3a66ee226cdc0e26ec0cc0e87b1822bad45579
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73217821"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82675078"
