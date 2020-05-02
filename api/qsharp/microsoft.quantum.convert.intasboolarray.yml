@@ -5,9 +5,9 @@ type: function
 namespace: Microsoft.Quantum.Convert
 summary: 반환 된 배열에 대 한 작은 endian 표현을 사용 하 여 양의 정수의 이진 표현을 생성 합니다.
 remarks: >-
-  입력 `bits`는 0에서 63 사이 여야 합니다.
+  입력 `bits` 은 0에서 63 사이 여야 합니다.
 
-  입력 `number`는 0에서 $2 ^ {\texttt{bits}}-$1 사이 여야 합니다.
+  입력 `number` 은 0에서 $2 ^ {\texttt{bits}}-$1 사이 여야 합니다.
 syntax: 'function IntAsBoolArray (number : Int, bits : Int) : Bool[]'
 input:
   content: '(number : Int, bits : Int)'
@@ -17,20 +17,20 @@ input:
     isPrimitive: true
     uid: Int
   - name: bits
-    summary: '`number`이진 표현의 비트 수입니다.'
+    summary: 의 `number`이진 표현에서 비트 수입니다.
     isPrimitive: true
     uid: Int
 output:
   content: Bool[]
   types:
-  - summary: '`number`를 나타내는 부울 값의 배열입니다.'
+  - summary: 를 나타내는 `number`부울 값의 배열입니다.
     isArray: true
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: e75eede507f04178755e886258e7eb73a6cc3dce
-  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+  ms.openlocfilehash: f14af582713f5d08e29b54a1e1758b4efbeea094
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 12/05/2019
-  ms.locfileid: "74858992"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82659180"
