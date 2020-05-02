@@ -4,9 +4,9 @@ name: CControlledA
 type: function
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  작업 op가 지정 된 경우 기존 컨트롤 비트가 true 이면 op를 적용 하는 새 작업을 반환 합니다. `false`경우 아무 일도 발생 하지 않습니다.
+  작업 op가 지정 된 경우 기존 컨트롤 비트가 true 이면 op를 적용 하는 새 작업을 반환 합니다. 이면 `false`아무 작업도 수행 되지 않습니다.
 
-  한정자 `A` 작업이 adjointable 나타냅니다.
+  한정자 `A` 는 작업이 adjointable를 나타냅니다.
 syntax: "function CControlledA (op : ('T => Unit is Adj)) : ((Bool, 'T) => Unit is Adj)"
 input:
   content: "(op : ('T => Unit is Adj))"
@@ -47,9 +47,9 @@ typeParameters:
 seeAlso:
 - microsoft.quantum.canon.ccontrolled
 metadata:
-  ms.openlocfilehash: e02446273f93b51a228679d3eb75bf16a2526e8a
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 12349ee5fe56d0209f510900f47cf255a7adc4d9
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73068107"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82675900"

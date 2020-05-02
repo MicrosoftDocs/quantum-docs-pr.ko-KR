@@ -7,11 +7,11 @@ summary: >-
   퀀텀 레지스터의 특정 상태에 대 한 확률이 예상 값을 가지는 것을 어설션 합니다.
 
 
-  $N $-stbit 퀀텀 상태 $ \ket{\psi} = \sum ^ {2 ^ n-1} _ {j = 0} \alpha_j \ket{j} $로 지정 된 경우 $ \ket{j} $ $j 인덱싱된 상태 $ $의 확률 $ | \alpha_j | ^ 2 $가 예상 값을 포함 한다는 것을 어설션 합니다.
+  $N $-stbit 퀀텀 상태 $ \ket{\psi} = \sum ^ {2 ^ n-1} _ {j = 0} \ alpha_j \ket{j} $로 지정 된 상태 $ \ket{j} $ $j 인덱싱된 상태 $ $의 확률 $ | \ alpha_j | ^ 2 $에 필요한 값이 있음을 어설션 합니다.
 examples: >-
   `qubits` 레지스터가 3abit 퀀텀 상태 $ \ket{\psi} = \ sqrt {1/8} \ k{0}+ \ sqrt {7/8} \ k{6}$를 거의 endian 형식으로 인코드 한다고 가정 합니다.
 
-  즉, 숫자는 $ \ket{0}\equiv\ket{0}\ket{0}\ket{0}$ 및 $ \ket{6}\equiv\ket{0}\ket{1}\ket{1}$로 표시 됩니다. 그러면 다음 어설션이 성공 합니다.
+  즉, 숫자{0}는 $ \ket \equiv\ket{0}\ket{0}\ket{0}$ 및 $ \ket{6}\equiv\ket{0}\ket{1}\ket{1}$로 표시 됩니다. 그러면 다음 어설션이 성공 합니다.
 
 
   - `AssertProbInt(0,0.125,qubits,10e-10);`
@@ -26,7 +26,7 @@ input:
     isPrimitive: true
     uid: Int
   - name: expected
-    summary: 예상 값은 $ | \alpha_j | ^ 2 $입니다.
+    summary: 예상 값은 $ | \ alpha_j | ^ 2 $입니다.
     isPrimitive: true
     uid: Double
   - name: qubits
@@ -42,9 +42,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 183f1252ba555c10e7011eea98a5cc98fae4495a
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 247dcb78921bfe5df96c56b74e251d0413cfab3d
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73221442"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82675261"

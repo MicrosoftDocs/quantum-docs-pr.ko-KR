@@ -1,24 +1,24 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.amplitudeamplification
 name: Microsoft.Quantum.AmplitudeAmplification
-summary: " # <a name=\"summary\"></a>요약\n 이 네임 스페이스는 진폭 증폭을 수행 하기 위한 함수 및 작업을 포함 합니다.\n\n # <a name=\"description\"></a>Description\n 부분 반사를 포함 하는 명확한 진폭 증폭은 여기에서 구현 되는 가장 일반적인 형식의 진폭 증폭입니다.\n\n 이는 AmpAmpObliviousByReflectionPhases 작업을 통해 호출 됩니다.\n\n 여기에는 `ancillaRegister` 및 `systemRegister`레지스터가 있습니다.\n\n 이렇게 하면 `ancillaRegister` 레지스터 에서만 작동 하는 oracles `ReflectionOracle` 형식의 이러한 리플렉션에 대해 두 개의 허용 됩니다.\n\n 이는 두 레지스터 모두에 대해 공동으로 동작 하는 `ObliviousOracle` 형식의 명확한 진폭 증폭을 허용 합니다.\n\n `ancillaRegister` 입력 상태는 첫 번째 리플렉션 연산자 $I-2 \\ k {s} \\ bra {s} $의 고유한 $-$1 eigenstate로 가정 됩니다.\n\n 대상 퀀텀 상태에 대 한 반사는 계산 기준 $ \\ket{0\\cdots 0} $에서 해당 상태를 준비 하는 oracle에 대 한 액세스를 가정 하 여 구현 되는 경우가 많습니다.\n\n 이러한 oracles에 대 한 규칙에는 두 가지 레지스터가 필요 합니다. 단, 단일 `flagQubit` 기능을 등록 하 고, 다른 모든 항목에 대 한 등록은 모든 기능을 등록 합니다.\n\n `StateOracle` 형식의 oracle은 두 레지스터를 공동으로 사용 하 여 일부 실제 진폭에 등록 `flagQubit`에서 $ \\ket{1}$로 플래그가 지정 된 대상 상태를 만듭니다.\n\n 이 플래그 상태에 대 한 리플렉션 `ReflectionOracle`은 `TargetStateReflectionOracle`작업에 의해 생성 됩니다.\n\n `ancillaRegister` 입력 상태에 대 한 리플렉션 `ReflectionOracle`은 반전 StateOracle에서 생성 된 다음 ReflectionStart ()와 함께 $ \\ket{0\\cdots 0} $ 정보를 반영 하 여 생성 됩니다.\n\n 형식 `DeterministicStateOracle`의 oracle은 `qubitState` 레지스터에 대해 작동 하 여 플래그가 없는 상태에서 정확히 대상 상태를 만듭니다.\n\n `AmpAmpObliviousByOraclePhases`는 반사 대신 oracles `StateOracle` 및 `ObliviousOracle`를 허용 하는 명확한 진폭 증폭의 버전입니다.\n\n 진폭 증폭은 명확한 진폭 증폭의 특별 한 경우입니다. 여기서 `ObliviousOracle`는 identity 연산자이 고 시스템에는 `systemRegister` 비어 있는 것입니다.\n\n 작업 `AmpAmByReflectionPhases` 및 `AmpAmpByOraclePhases`를 통해 호출 됩니다.\n\n Grover 검색의 표준 사례에서 부분 반사를 위한 단계는 AmpAmpPhasesStandard 함수에서 제공 됩니다.\n\n 예를 들어 AmpAmpByOracle-> AmpAmpByOraclePhases > > AmpAmpObliviousByReflectionPhases와 같은 종속성이 있습니다."
+summary: " # <a name=\"summary\"></a>요약\n 이 네임 스페이스는 진폭 증폭을 수행 하기 위한 함수 및 작업을 포함 합니다.\n\n # <a name=\"description\"></a>설명\n 부분 반사를 포함 하는 명확한 진폭 증폭은 여기에서 구현 되는 가장 일반적인 형식의 진폭 증폭입니다.\n\n 이는 AmpAmpObliviousByReflectionPhases 작업을 통해 호출 됩니다.\n\n 여기에는 및 `ancillaRegister` `systemRegister`의 두 레지스터가 있습니다.\n\n 이는 `ancillaRegister` 레지스터에만 작동 하는 형식의 `ReflectionOracle` 이러한 리플렉션에 대해 두 개의 oracles를 허용 합니다.\n\n 이를 통해 두 레지스터 모두에 대해 공동으로 작동 `ObliviousOracle` 하는 형식의 명확한 진폭 증폭을 사용할 수 있습니다.\n\n 에 대 `ancillaRegister` 한 입력 상태는 첫 번째 리플렉션 연산자 $I-2 \\ k {s} \\ bra {s} $의 고유한 $-$1 eigenstate로 가정 됩니다.\n\n 대상 퀀텀 상태에 대 한 반사는 계산 기준 $ \\ket{0\\cdots 0} $에서 해당 상태를 준비 하는 oracle에 대 한 액세스를 가정 하 여 구현 되는 경우가 많습니다.\n\n 이러한 oracles에 대 한 규칙에는 단일 요구 비트 `flagQubit` 레지스터의 두 레지스터와 다른 모든 항목에 대 한 레지스터가 필요 합니다.\n\n 형식의 `StateOracle` oracle은 두 레지스터를 공동으로 사용 하 여 일부 실제 진폭{1} `flagQubit` 등록에서 $ \\ket $로 플래그가 지정 된 대상 상태를 만듭니다.\n\n 이 플래그 `ReflectionOracle` 상태에 대 한 리플렉션은 작업 `TargetStateReflectionOracle`에서 생성 됩니다.\n\n 에 `ancillaRegister` 대 `ReflectionOracle` 한 입력 상태에 대 한 리플렉션은 상태를 반전 시킨 다음 ReflectionStart ()와 함께 $ \\ket{0\\cdots 0} $를 반영 하 여 생성 됩니다.\n\n 형식의 `DeterministicStateOracle` oracle은 `qubitState` 레지스터에 대해 작동 하 여 플래그가 없는 상태에서 정확히 대상 상태를 만듭니다.\n\n `AmpAmpObliviousByOraclePhases`는 반사 대신 oracles `StateOracle` 및 `ObliviousOracle` 를 허용 하는 명확한 진폭 증폭의 버전입니다.\n\n 진폭 증폭은 명확한 진폭 증폭의 특별 한 사례입니다. 여기서 `ObliviousOracle` 는 identity 연산자이 고 시스템의 경우는 비어 있습니다. `systemRegister`\n\n 이 작업은 및 `AmpAmByReflectionPhases` `AmpAmpByOraclePhases`작업을 통해 호출 됩니다.\n\n Grover 검색의 표준 사례에서 부분 반사를 위한 단계는 AmpAmpPhasesStandard 함수에서 제공 됩니다.\n\n 예를 들어 AmpAmpByOracle-> AmpAmpByOraclePhases > > AmpAmpObliviousByReflectionPhases와 같은 종속성이 있습니다."
 functions:
 - uid: microsoft.quantum.amplitudeamplification.ampampbyoracle
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nAmpAmpByOracle는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.amplitudeamplification.standardamplitudeamplification\"를 사용하십시오.\n@\"microsoft.quantum.amplitudeamplification.standardamplitudeamplification\"를 사용 하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nAmpAmpByOracle는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.amplitudeamplification.standardamplitudeamplification\"를 사용하십시오.\n@\"microsoft.quantum.amplitudeamplification.standardamplitudeamplification\"를 사용하세요."
 - uid: microsoft.quantum.amplitudeamplification.ampampbyoraclephases
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nAmpAmpByOraclePhases는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.amplitudeamplification.amplitudeamplificationfromstatepreparation\"를 사용하십시오.\n@\"microsoft.quantum.amplitudeamplification.amplitudeamplificationfromstatepreparation\"를 사용 하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nAmpAmpByOraclePhases는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.amplitudeamplification.amplitudeamplificationfromstatepreparation\"를 사용하십시오.\n@\"microsoft.quantum.amplitudeamplification.amplitudeamplificationfromstatepreparation\"를 사용하세요."
 - uid: microsoft.quantum.amplitudeamplification.ampampbyreflectionphases
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nAmpAmpByReflectionPhases는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.amplitudeamplification.amplitudeamplificationfrompartialreflections\"를 사용하십시오.\n@\"microsoft.quantum.amplitudeamplification.amplitudeamplificationfrompartialreflections\"를 사용 하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nAmpAmpByReflectionPhases는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.amplitudeamplification.amplitudeamplificationfrompartialreflections\"를 사용하십시오.\n@\"microsoft.quantum.amplitudeamplification.amplitudeamplificationfrompartialreflections\"를 사용하세요."
 - uid: microsoft.quantum.amplitudeamplification.ampampobliviousbyoraclephases
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nAmpAmpObliviousByOraclePhases는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfromstatepreparation\"를 사용하십시오.\n@\"microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfromstatepreparation\"를 사용 하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nAmpAmpObliviousByOraclePhases는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfromstatepreparation\"를 사용하십시오.\n@\"microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfromstatepreparation\"를 사용하세요."
 - uid: microsoft.quantum.amplitudeamplification.ampampobliviousbyreflectionphases
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nAmpAmpObliviousByReflectionPhases는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfrompartialreflections\"를 사용하십시오.\n@\"microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfrompartialreflections\"를 사용 하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nAmpAmpObliviousByReflectionPhases는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfrompartialreflections\"를 사용하십시오.\n@\"microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfrompartialreflections\"를 사용하세요."
 - uid: microsoft.quantum.amplitudeamplification.ampampphasesfixedpoint
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nAmpAmpPhasesFixedPoint는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.amplitudeamplification.fixedpointreflectionphases\"를 사용하십시오.\n@\"microsoft.quantum.amplitudeamplification.fixedpointreflectionphases\"를 사용 하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nAmpAmpPhasesFixedPoint는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.amplitudeamplification.fixedpointreflectionphases\"를 사용하십시오.\n@\"microsoft.quantum.amplitudeamplification.fixedpointreflectionphases\"를 사용하세요."
 - uid: microsoft.quantum.amplitudeamplification.ampampphasesstandard
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nAmpAmpPhasesStandard는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.amplitudeamplification.standardreflectionphases\"를 사용하십시오.\n@\"microsoft.quantum.amplitudeamplification.standardreflectionphases\"를 사용 하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nAmpAmpPhasesStandard는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.amplitudeamplification.standardreflectionphases\"를 사용하십시오.\n@\"microsoft.quantum.amplitudeamplification.standardreflectionphases\"를 사용하세요."
 - uid: microsoft.quantum.amplitudeamplification.ampamprotationtoreflectionphases
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nAmpAmpRotationToReflectionPhases는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.amplitudeamplification.rotationphasesasreflectionphases\"를 사용하십시오.\n@\"microsoft.quantum.amplitudeamplification.rotationphasesasreflectionphases\"를 사용 하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nAmpAmpRotationToReflectionPhases는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.amplitudeamplification.rotationphasesasreflectionphases\"를 사용하십시오.\n@\"microsoft.quantum.amplitudeamplification.rotationphasesasreflectionphases\"를 사용하세요."
 - uid: microsoft.quantum.amplitudeamplification.amplitudeamplificationfrompartialreflections
   summary: 부분 반사에의 한 진폭 증폭입니다.
 - uid: microsoft.quantum.amplitudeamplification.amplitudeamplificationfromstatepreparation
@@ -39,13 +39,13 @@ functions:
   summary: 표준 진폭 증폭의 부분 반사 단계를 계산 합니다.
 - uid: microsoft.quantum.amplitudeamplification.targetstatereflectionoracle
   summary: >-
-    플래그는 기본적으로 표시 된 대상 상태에 대 한 `ReflectionOracle`를 생성 합니다.
+    플래그에 `ReflectionOracle` 따라 고유 하 게 표시 되는 대상 상태에 대 한를 생성 합니다.
 
 
     대상 상태에는 1로 설정 된 단일 비트와 다른 모든 0: $ \ket{1}_f $가 있습니다.
 operations:
 - uid: microsoft.quantum.amplitudeamplification.ampamprusbyoracle
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nAmpAmpRUSByOracle는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.amplitudeamplification.applyfixedpointamplification\"를 사용하십시오.\n@\"microsoft.quantum.amplitudeamplification.applyfixedpointamplification\"를 사용 하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nAmpAmpRUSByOracle는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.amplitudeamplification.applyfixedpointamplification\"를 사용하십시오.\n@\"microsoft.quantum.amplitudeamplification.applyfixedpointamplification\"를 사용하세요."
 - uid: microsoft.quantum.amplitudeamplification.applyamplitudeamplification
   summary: 지정 된 단계와 oracles를 사용 하 여 초기 및 최종 상태를 반영 하는 지정 된 레지스터에 진폭 증폭을 적용 합니다.
 - uid: microsoft.quantum.amplitudeamplification.applyfixedpointamplification
@@ -58,9 +58,9 @@ newtypes:
 - uid: microsoft.quantum.amplitudeamplification.rotationphases
   summary: 진폭 증폭에서 단일 비트 회전의 시퀀스에 대 한 단계입니다.
 metadata:
-  ms.openlocfilehash: 7b6aec2bd2300a84550f92740e24f33ce243ea7c
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: 7f8b98826812e842a582d7940c5dc892a056e1fa
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76870385"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82675507"
