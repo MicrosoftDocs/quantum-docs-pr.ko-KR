@@ -9,10 +9,10 @@ summary: >-
 
   이렇게 하면 기본적으로-1의 글로벌 단계를 적용 하는 동안 두 번째 비트는 모두 1이 됩니다. Orbitals의 symmetrization을 유지 합니다.
 
-  자세한 내용은을 참조 하세요.
+  자세한 내용은  항목을 참조하세요.
 
 
-  이 작업은 단일 운영자 \begin{align} f_ {swap} \mathrel{: =} \begin{bmatrix} 1 & 0 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 &-1 \\\\ \end{bmatrix}.
+  이 작업은 단일 연산자 \begin{align} f_ {swap} \mathrel{: =} \begin{bmatrix} 1 & 0 & 0 & 0 \\ \\ 0 & 0 & 1 & 0 \\ \\ 0 & 1 & \\ \\ 0 & 0 0 & 0 & 0 &-1 \\ \\ \end{bmatrix}.에 의해 표시 됩니다.
 
   \end{align}
 syntax: 'operation ApplyFermionicSWAP (qubit1 : Qubit, qubit2 : Qubit) : Unit'
@@ -39,9 +39,9 @@ functors:
 seeAlso:
 - microsoft.quantum.intrinsic.swap
 metadata:
-  ms.openlocfilehash: 4d9fd4ea879dd0df6bddddb3d4f769f4e8096657
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: c5e9a825d29bab3fa6b7a89e67f4cf5e40fec6d8
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73213826"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676371"

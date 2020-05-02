@@ -3,13 +3,13 @@ uid: microsoft.quantum.arithmetic.littleendian
 name: LittleEndian
 type: newtype
 namespace: Microsoft.Quantum.Arithmetic
-summary: 부호 없는 정수를 거의 endian 순서로 인코딩하는 레지스터입니다. 인덱스를 포함 하는 이상 비트 `0` 부호 없는 정수의 최하위 비트를 인코딩합니다.
-remarks: '`LittleEndian`는 설명서에서 `LE`으로 축약 됩니다.'
+summary: 부호 없는 정수를 거의 endian 순서로 인코딩하는 레지스터입니다. 인덱스가 `0` 있는 이상 비트는 부호 없는 정수의 최하위 비트를 인코딩합니다.
+remarks: 설명서에서 `LittleEndian` 와 `LE` 같이 축약 됩니다.
 syntax: newtype LittleEndian = Qubit[];
 metadata:
-  ms.openlocfilehash: 6431500dfe67b46cab590f0fc31953d9fb80f9af
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: de24c79091da80c2f5e9cbeecc8fe9e4bfb9cb89
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73218824"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676831"

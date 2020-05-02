@@ -5,7 +5,7 @@ type: function
 namespace: Microsoft.Quantum.Arrays
 summary: 모든 요소가 지정 된 값과 같은 지정 된 길이의 배열을 만듭니다.
 examples: >-
-  다음 코드는 각각 `true`와 같은 3 개의 부울 값 배열을 만듭니다.
+  다음 코드는 각각와 같은 3 개의 부울 값 배열을 만듭니다 `true`.
 
 
   ```qsharp
@@ -28,14 +28,14 @@ input:
 output:
   content: "'T[]"
   types:
-  - summary: 모든 요소가 `value`되는 `length`길이의 새 배열입니다.
+  - summary: 모든 요소가 인 `value`새 길이 `length`배열입니다.
     isArray: true
     uid: "'T"
     isLocal: true
 metadata:
-  ms.openlocfilehash: 3eb9380a9bf3c2229b936941d31041ef2adcce06
-  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.openlocfilehash: e989c80b27c3ce0d90a564181c0bcae2f892ada0
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 02/28/2020
-  ms.locfileid: "77905423"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676525"

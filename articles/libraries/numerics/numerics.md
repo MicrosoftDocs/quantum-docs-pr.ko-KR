@@ -6,12 +6,12 @@ ms.author: thhaner
 ms.date: 5/14/2019
 ms.topic: article
 uid: microsoft.quantum.numerics.usage
-ms.openlocfilehash: ad9f529efd06fdf13bab4467b091aafacf1d5b09
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 10d5675e0ef182211a38db4d09347b05afe109c3
+ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77907259"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82677101"
 ---
 # <a name="using-the-numerics-library"></a>숫자 라이브러리 사용
 
@@ -32,9 +32,9 @@ open Microsoft.Quantum.Arithmetic;
 
 숫자 라이브러리는 다음 형식을 지원 합니다.
 
-1. **`LittleEndian`** : `qArr[0]`에서 최하위 비트를 나타내는 정수를 나타내는 `qArr : Qubit[]`입니다.
-1. **`SignedLittleEndian`** : 2의 보수에 저장 된 부호 있는 정수를 나타내는 점을 제외 하 고 `LittleEndian`와 동일 합니다.
-1. **`FixedPoint`** : `qArr2 : Qubit[]` 하 고 이진 점 위치 `pos`으로 구성 된 실수를 나타냅니다 .이 숫자는 이진 점 왼쪽의 이진 자릿수를 계산 합니다. `qArr2`는 `SignedLittleEndian`와 동일한 방식으로 저장 됩니다.
+1. **`LittleEndian`**:가 최하위 비트를 `qArr : Qubit[]` 표시 하는 정수를 `qArr[0]` 나타내는의 정수 배열입니다.
+1. **`SignedLittleEndian`**: 2의 `LittleEndian` 보수에 저장 된 부호 있는 정수를 나타내는 점을 제외 하 고와 동일 합니다.
+1. **`FixedPoint`**:은 (는) 바이트 배열과 `qArr2 : Qubit[]` 이진 점 위치로 `pos`구성 된 실수를 나타내며,이는 이진 점 왼쪽의 이진 자릿수를 계산 합니다. `qArr2`는와 `SignedLittleEndian`같은 방식으로 저장 됩니다.
 
 ## <a name="operations"></a>작업
 
@@ -75,8 +75,8 @@ open Microsoft.Quantum.Arithmetic;
 operation TestMyAddition(xValue : Int, yValue : Int, n : Int) : Unit {
     using ((xQubits, yQubits) = (Qubit[n], Qubit[n]))
     {
-        x = LittleEndian(xQubits); // define bit order
-        y = LittleEndian(yQubits);
+        let x = LittleEndian(xQubits); // define bit order
+        let y = LittleEndian(yQubits);
         
         ApplyXorInPlace(xValue, x); // initialize values
         ApplyXorInPlace(yValue, y);
@@ -90,15 +90,15 @@ operation TestMyAddition(xValue : Int, yValue : Int, n : Int) : Unit {
 
 ## <a name="sample-evaluating-smooth-functions"></a>샘플: 부드러운 함수 계산
 
-퀀텀 컴퓨터에서 $ \sin (x) $와 같은 부드러운 함수를 평가 하려면 ($x $은 퀀텀 `FixedPoint` number) 퀀텀 개발 키트 숫자 라이브러리는 작업 `EvaluatePolynomialFxP` 및 `Evaluate[Even/Odd]PolynomialFxP`를 제공 합니다.
+퀀텀 컴퓨터에서 $ \sin (x) $와 같은 부드러운 함수를 평가 하기 위해 $x $은 퀀텀 `FixedPoint` 번호이 고, 퀀텀 개발 키트 숫자 라이브러리는 작업 `EvaluatePolynomialFxP` 및 `Evaluate[Even/Odd]PolynomialFxP`를 제공 합니다.
 
-첫 번째 `EvaluatePolynomialFxP`에서는 $ $ P (x) = a_0 + a_1x + a_2x ^ 2 + \+ a_dx ^ d, $ $ 형식의 다항식을 평가할 수 있습니다. 여기서 $d $는 *각도*를 나타냅니다. 이렇게 하려면 `[a_0,..., a_d]` 다항식 계수 (`Double[]`형식), 입력 `x : FixedPoint` 및 출력 `y : FixedPoint` (처음에는 0)만 필요 합니다.
+첫 번째 `EvaluatePolynomialFxP`에서는 $ $ P (x) = a_0 + a_1x + a_2x ^ 2 + \cdots ^ d, $ $ 형식의 다항식을 평가할 수 있습니다. 여기서 $d $는 *정도*를 나타냅니다. 이렇게 하려면 `[a_0,..., a_d]` 다항식 계수 (형식 `Double[]`), 입력 `x : FixedPoint` 및 출력 `y : FixedPoint` (처음에는 0)이 필요 합니다.
 ```qsharp
 EvaluatePolynomialFxP([1.0, 2.0], x, y);
 ```
-결과 $P (x) = 1 + 2x $는 `yFxP`에 저장 됩니다.
+결과 $P (x) = 1 + 2x $가에 `yFxP`저장 됩니다.
 
-두 번째, `EvaluateEvenPolynomialFxP`및 세 번째 `EvaluateOddPolynomialFxP`는 각각 짝수 및 홀수 함수의 사례에 대 한 특수화입니다. 즉, 짝수/홀수 함수 $f (x) $ 및 $ $ P_ {짝수} (x) = a_0 + a_1 x ^ 2 + a_2 x ^ 4 + \cs+ a_d x ^ {2d}의 경우 $ $ $f (x) $는 $P _ {짝수} (x) $ 또는 $P _ {홀수} (x): = x\cdot P_ {짝수} (x) $에서 각각 합니다.
+두 번째 `EvaluateEvenPolynomialFxP`, 및 세 `EvaluateOddPolynomialFxP`번째는 각각 짝수 및 홀수 함수의 사례에 대 한 특수화입니다. 즉, 짝수/홀수 함수 $f (x) $ 및 $ $ P_ {짝수} (x) = a_0 + a_1 x ^ 2 + a_2 x ^ 4 + \cs+ a_d x ^ {2d}의 경우 $ $ $f (x) $는 $P _ {짝수} (x) $ 또는 $P _ {홀수} (x): = x\cdot P_ {짝수} (x) $에서 각각 합니다.
 Q #에서 이러한 두 가지 사례는 다음과 같이 처리할 수 있습니다.
 ```qsharp
 EvaluateEvenPolynomialFxP([1.0, 2.0], x, y);
@@ -120,7 +120,7 @@ git clone https://github.com/Microsoft/Quantum.git
 cd Quantum/Numerics
 ```
 
-그런 다음 샘플 폴더 중 하나에 `cd` 하 고을 통해 샘플을 실행 합니다.
+그런 다음 `cd` 샘플 폴더 중 하나에을 (를) 통해 샘플을 실행 합니다.
 
 ```bash
 dotnet run

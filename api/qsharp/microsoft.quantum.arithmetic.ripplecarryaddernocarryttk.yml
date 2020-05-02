@@ -7,7 +7,7 @@ summary: >-
   해독 가능, 내부 ripple-수행 하지 않고 두 개의 정수를 추가 합니다.
 
 
-  LittleEndian에서 인코딩된 $n $ bit 정수 두 개 (`xs` 및 `ys`)가 지정 되 면 연산은 두 정수 모듈로 $2 ^ n $의 합계를 계산 합니다. 여기서 $n $은 입력 `xs` 및 `ys`의 비트 크기입니다. 이는 운반 비트를 계산 하지 않습니다.
+  LittleEndian 레지스터 `xs` 및 `ys`에서 인코딩된 두 개의 $n $ bit 정수를 지정 하면 연산은 두 정수 모듈로 $2 ^ n $의 합계를 계산 합니다. 여기서 $n $는 입력 `xs` 및 `ys`의 비트 크기입니다. 이는 운반 비트를 계산 하지 않습니다.
 remarks: 이 작업은 RippleCarryAdderTTK와 동일한 기능을 수행 하지만 운반 비트를 반환 하지 않습니다.
 syntax: 'operation RippleCarryAdderNoCarryTTK (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 references: >-
@@ -31,9 +31,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 5147d6d78582ad3f45587938f1b4cf3f8a2dd506
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: cf6855325edc354d22b0324f5949a435a11ce8bb
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76871059"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676674"

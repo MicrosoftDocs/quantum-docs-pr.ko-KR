@@ -4,7 +4,7 @@ name: Chunks
 type: function
 namespace: Microsoft.Quantum.Arrays
 summary: 배열을 같은 길이의 여러 요소로 분할 합니다.
-remarks: '`Length(arr)`를 `nElements`으로 나눌 수 없는 경우 출력의 마지막 요소는 `nElements` 보다 짧을 수 있습니다.'
+remarks: 가로 `nElements`나눌 수 없는 경우 `Length(arr)` 출력의 마지막 요소는 보다 `nElements` 짧을 수 있습니다.
 syntax: "function Chunks (nElements : Int, arr : 'T[]) : 'T[][]"
 input:
   content: "(nElements : Int, arr : 'T[])"
@@ -28,9 +28,9 @@ output:
       uid: "'T"
       isLocal: true
 metadata:
-  ms.openlocfilehash: 733a2a475ec8db8f603888259151b3dca29b5797
-  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.openlocfilehash: 283141b3d6826faff9451b122dc0d602edc34500
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 02/28/2020
-  ms.locfileid: "77908109"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676548"

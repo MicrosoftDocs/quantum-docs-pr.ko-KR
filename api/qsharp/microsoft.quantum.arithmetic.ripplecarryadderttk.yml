@@ -6,7 +6,7 @@ namespace: Microsoft.Quantum.Arithmetic
 summary: >-
   해독 가능한 내부 ripple-두 개의 정수를 추가 합니다.
 
-  LittleEndian에서 인코딩된 두 개의 $n $ bit 정수는 `xs` 및 `ys`를 등록 하 고,이 작업은 두 정수의 합계를 계산 합니다 .이 정수는 결과의 $n $ 최하위 비트를 `ys`에 보관 하 고, 운반 비트는 `carry`합니다.
+  LittleEndian 레지스터 `xs` 및 `ys`에서 인코딩된 두 개의 $n $ bit 정수를 제공 하 고,이 작업은 두 정수의 합계를 계산 하며,이는 결과의 $n $ 최하위 비트를 유지 하 `ys` 고, 운반 비트를 xored 하는 것입니다. `carry`
 remarks: 이 작업에는 RippleCarryAdderD 및, RippleCarryAdderCDKM와 동일한 기능이 있지만 ancilla any 비트는 사용 하지 않습니다.
 syntax: 'operation RippleCarryAdderTTK (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, carry : Qubit) : Unit'
 references: >-
@@ -34,9 +34,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 9c27164d8245c587b03c43606acebd0d156626bd
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 8c1d67c4ffb7d2f75d70bc02be958fd08b6c6b14
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73214489"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676672"

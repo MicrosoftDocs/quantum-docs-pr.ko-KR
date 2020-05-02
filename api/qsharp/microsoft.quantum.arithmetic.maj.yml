@@ -7,7 +7,7 @@ summary: >-
   이는 내부 과반수 작업을 3 개의 비트에 적용 합니다.
 
 
-  $ \Ket{z} $로 대상의 상태를 표시 하 고 입력 된 값 비트의 입력 상태를 $ \ket{x} $ 및 $ \ket{y} $로 표시 하는 경우이 작업은 다음 변환을 수행 합니다. $ \ket{xyz} \rightarrow \ket{x \oplus z} \ket{y \oplus z} \ket{\operatorname{MAJ} ( x, y, z)} $입니다.
+  $ \Ket{z} $로 대상의 상태를 표시 하 고 입력의 입력 상태를 $ \ket{x} $ 및 $ \ket{y} $로 표시 하는 경우이 작업은 다음 변환을 수행 합니다. $ \ket{xyz} \rightarrow \ket{x \oplus z} \ket{y \oplus z} \ket{\operatorname{MAJ} (x, y, z)} $.
 syntax: 'operation MAJ (input0 : Qubit, input1 : Qubit, target : Qubit) : Unit'
 input:
   content: '(input0 : Qubit, input1 : Qubit, target : Qubit)'
@@ -33,9 +33,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 253b6f6ee152f2aa5326a06fab120433b75a5f0b
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 946ac81b0673cb7ea65aac0bc1a6df26ba09d8eb
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73218807"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676805"
