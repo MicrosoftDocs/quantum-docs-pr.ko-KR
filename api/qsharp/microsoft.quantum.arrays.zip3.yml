@@ -26,7 +26,7 @@ input:
 output:
   content: ('T1, 'T2, 'T3)[]
   types:
-  - summary: 각 `idx`에 대해 `(first[idx], second[idx], third[idx])` 폼의 3 개 튜플을 포함 하는 배열입니다. 세 배열의 길이가 같지 않은 경우 출력은 입력 중 짧은 값 만큼 길어야 합니다.
+  - summary: 각각 `(first[idx], second[idx], third[idx])` `idx`에 대 한 폼의 3 개 튜플을 포함 하는 배열입니다. 세 배열의 길이가 같지 않은 경우 출력은 입력 중 짧은 값 만큼 길어야 합니다.
     isArray: true
     types:
     - uid: "'T1"
@@ -46,9 +46,9 @@ seeAlso:
 - zip
 - zip4
 metadata:
-  ms.openlocfilehash: 1a4f3a533178e089d975d5a510d202afe004d999
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 899066b309e41df3a1bb2bdce93382ff58de2662
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73214183"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680747"

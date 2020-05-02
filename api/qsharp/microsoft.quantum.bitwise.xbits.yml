@@ -17,15 +17,15 @@ input:
 output:
   content: Int
   types:
-  - summary: 정수 $x $ (이진 표현 포함) $ (p_{62}\,p_{61}\,\dots ..\,p_0) $, $0 여기서 $p `paulis[i]` 또는 `PauliI` 이면 `PauliZ` $p = $1 인 경우 `paulis[i]` `PauliX` 또는 `PauliY`합니다.
+  - summary: '{62}\,정수 $x $ (p_ p_{61}\,\dots ..\,p_0) $ (여기서 $p _i = $0 인 경우 `paulis[i]` `PauliI` $p _i = $1 인 경우 `PauliZ` 이 `paulis[i]` `PauliX` 고, 그렇지 않으면입니다 `PauliY`.'
     isPrimitive: true
     uid: Int
 seeAlso:
 - zbits
 metadata:
-  ms.openlocfilehash: 9319e664aaa7af3ea500bd5bee78c09a92d9573b
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 0dccf94d895984b3661790b44f10455fce35331d
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73217736"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680578"

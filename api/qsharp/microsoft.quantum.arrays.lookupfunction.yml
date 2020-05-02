@@ -4,7 +4,7 @@ name: LookupFunction
 type: function
 namespace: Microsoft.Quantum.Arrays
 summary: 배열이 지정 된 경우 해당 배열의 요소를 반환 하는 함수를 반환 합니다.
-remarks: 이 함수는 `Int -> 'T` 함수를 인수로 사용 하는 함수 및 작업과의 상호 운용을 위해 주로 유용 합니다. 예를 들어, 함수를 사용 하 여 전체 배열을 메모리에 기록할 필요가 없도록 하는 생성기 표현 라이브러리에서 일반적입니다.
+remarks: 이 함수는 함수 및 함수를 인수로 사용 `Int -> 'T` 하는 작업과의 상호 운용을 위해 주로 유용 합니다. 예를 들어, 함수를 사용 하 여 전체 배열을 메모리에 기록할 필요가 없도록 하는 생성기 표현 라이브러리에서 일반적입니다.
 syntax: "function LookupFunction (array : 'T[]) : (Int -> 'T)"
 input:
   content: "(array : 'T[])"
@@ -17,7 +17,7 @@ input:
 output:
   content: (Int -> 'T)
   types:
-  - summary: 함수 `f` `f(idx) == f[idx]`합니다.
+  - summary: 이에 `f` 해당 하 `f(idx) == f[idx]`는 함수입니다.
     isFunction: true
     input:
       types:
@@ -31,9 +31,9 @@ typeParameters:
 - uid: "'T"
   summary: 조회 함수로 표시 되는 배열의 요소 형식입니다.
 metadata:
-  ms.openlocfilehash: b4f509de7137377465f1e76e59a04abfd9a22fd1
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 4d911a3952c273e050c75e4d785e6812d54f5fa1
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73218110"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680965"

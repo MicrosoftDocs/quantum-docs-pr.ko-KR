@@ -24,19 +24,19 @@ input:
     isPrimitive: true
     uid: Int
   - name: amount
-    summary: '`value` 왼쪽으로 이동할 비트 수입니다.'
+    summary: '`value` 가 왼쪽으로 이동할 비트 수입니다.'
     isPrimitive: true
     uid: Int
 output:
   content: Int
   types:
-  - summary: '`amount` 비트로 왼쪽으로 이동한 `value`값입니다.'
+  - summary: 의 `value`값으로, 왼쪽으로 `amount` 비트를 이동 합니다.
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: d260f2d39e94d0448df739f324f9760013d9bbd3
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: e63653304eced80526b26e0ad05d1e4ed4aeb682
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73214098"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680700"

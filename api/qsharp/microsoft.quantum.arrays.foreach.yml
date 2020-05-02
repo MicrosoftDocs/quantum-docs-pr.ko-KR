@@ -4,13 +4,13 @@ name: ForEach
 type: operation
 namespace: Microsoft.Quantum.Arrays
 summary: 배열의 요소에 대해 정의 된 배열과 작업이 지정 된 경우 작업에서 원래 배열의 이미지로 구성 된 새 배열을 반환 합니다.
-remarks: "작업은 제네릭 형식에 대해 정의 됩니다. 즉, 배열 `'T[]` 및 작업 `action : 'T -> 'U` 있을 때마다 배열의 요소를 매핑하고 `'U[]`형식의 새 배열을 생성할 수 있습니다."
+remarks: "작업은 제네릭 형식에 대해 정의 됩니다. 즉, 배열 `'T[]` 및 작업이 `action : 'T -> 'U` 있을 때마다 배열의 요소를 매핑하고 형식의 `'U[]`새 배열을 생성할 수 있습니다."
 syntax: "operation ForEach (action : ('T => 'U), array : 'T[]) : 'U[]"
 input:
   content: "(action : ('T => 'U), array : 'T[])"
   types:
   - name: action
-    summary: "`'T`에서 각 요소에 적용 되는 `'U`에 대 한 작업입니다."
+    summary: 각 요소에 `'T` 적용 `'U` 되는에서로의 작업입니다.
     isOperation: true
     input:
       types:
@@ -21,14 +21,14 @@ input:
       - uid: "'U"
         isLocal: true
   - name: array
-    summary: "`'T`에 대 한 요소의 배열입니다."
+    summary: 에 있는 요소의 배열 `'T`입니다.
     isArray: true
     uid: "'T"
     isLocal: true
 output:
   content: "'U[]"
   types:
-  - summary: "`action` 작업에서 매핑되는 요소의 배열 `'U[]`입니다."
+  - summary: 작업에 `'U[]` `action` 의해 매핑되는 요소의 배열입니다.
     isArray: true
     uid: "'U"
     isLocal: true
@@ -38,9 +38,9 @@ typeParameters:
 - uid: "'U"
   summary: '`action` 작업의 결과 형식입니다.'
 metadata:
-  ms.openlocfilehash: 6f61c37fb7a62bcbcfe91768725173e9a919e987
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: af4b6b469017e4cee581a9bdd96ef6171d9b1deb
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76871025"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82681031"
