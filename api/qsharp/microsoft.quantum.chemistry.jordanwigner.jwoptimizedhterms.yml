@@ -4,14 +4,14 @@ name: JWOptimizedHTerms
 type: newtype
 namespace: Microsoft.Quantum.Chemistry.JordanWigner
 summary: >-
-  에서 C# Q #으로 전달 되는 데이터의 형식으로, Hamiltonian 용어를 나타냅니다.
+  Hamiltonian 용어를 나타내기 위해 c #에서 Q #으로 전달 되는 데이터의 형식입니다.
 
   표시 되는 데이터의 의미는 해당 데이터를 수신 하는 알고리즘에 의해 결정 됩니다.
 syntax: newtype JWOptimizedHTerms = (Microsoft.Quantum.Chemistry.HTerm[], Microsoft.Quantum.Chemistry.HTerm[], Microsoft.Quantum.Chemistry.HTerm[], Microsoft.Quantum.Chemistry.HTerm[]);
 metadata:
-  ms.openlocfilehash: 24db6a67c0450606bf43388bb460dfd4018bb580
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: ce994e1a01a4c620ef7d1e1c54bb090194e48c96
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73228497"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82666117"
