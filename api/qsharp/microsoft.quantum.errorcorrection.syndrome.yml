@@ -3,12 +3,12 @@ uid: microsoft.quantum.errorcorrection.syndrome
 name: Syndrome
 type: newtype
 namespace: Microsoft.Quantum.ErrorCorrection
-summary: 퀀텀 코드의 오류 증후군를 지정 하는 `Result[]` 측정 결과의 형식입니다.
+summary: 퀀텀 코드의 오류 `Result[]` 증후군 지정 하는 측정 결과를 입력 합니다.
 syntax: newtype Syndrome = Result[];
 metadata:
-  ms.openlocfilehash: 6d2e3658e80b1ffc7fe5ac694fb46d771c2433cb
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: a354e8c2ccbfd8741e378cef855130b57eeebfba
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73234532"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82684843"

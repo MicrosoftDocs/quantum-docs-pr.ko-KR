@@ -8,9 +8,9 @@ remarks: >-
   이 코드는 다음 두 가지 문서에 독립적으로 있습니다.
 
 
-  - C. H DiVincenzo, J. A. Smolin 및 W. K입니다. Wootters, "Mixed state 되거나 얽 히 및 퀀텀 오류 수정", "Phys, 54 (1996) pp. 3824-3851; https://arxiv.org/abs/quant-ph/9604024 및
+  - C. H. DiVincenzo, J. A. Smolin 및 W. K입니다. Wootters, "Mixed state 되거나 얽 히 및 퀀텀 오류 수정", "Phys, 54 (1996) pp. 3824-3851; https://arxiv.org/abs/quant-ph/9604024 및
 
-  - R. Laflamme, c. Miquel, J. P. 합니다. Zurek, "완전 한 퀀텀 오류 수정 코드", "Phys. Lett. 77 (1996) pp. 198-201; https://arxiv.org/abs/quant-ph/9602019
+  - 18. Laflamme, c. Miquel, J. P. 합니다. Zurek, "완전 한 퀀텀 오류 수정 코드", "Phys. Lett. 77 (1996) pp. 198-201;https://arxiv.org/abs/quant-ph/9602019
 syntax: 'function FiveQubitCode () : Microsoft.Quantum.ErrorCorrection.QECC'
 input:
   content: ()
@@ -21,9 +21,9 @@ output:
   - summary: '`QECC` 형식을 지정 하 여 퀀텀 오류 수정 코드의 구현을 반환 합니다.'
     uid: microsoft.quantum.errorcorrection.qecc
 metadata:
-  ms.openlocfilehash: 1865ededef3e3ada743a49ef81141aeffdcfed0a
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 39bd3adacd0f8e872d682d0df0bf81a3f1e1d8f0
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73220405"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82684939"
