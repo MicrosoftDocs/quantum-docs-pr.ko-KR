@@ -7,15 +7,15 @@ summary: >-
   지정 된 퀀텀 상태를 준비 하는 작업을 반환 합니다.
 
 
-  반환 된 작업 $U $는 $-\alpha_j\ge $0 $ \ket{0...0} $ $n에서 긍정 계수 $ \ket{\psi} $를 사용 하 여 $ $의 임의의 퀀텀 상태를 준비 합니다.
+  $ $U 반환 되는 작업은 $ \ket{0...0} $ $n $ \ alpha_j \ge $0 인 긍정 계수 $ \ket{\psi} $를 준비 합니다.
 
 
-  새로 할당 된 레지스터의 U 동작은 $ $ \begin{align} U \ket{0\cdots 0} = \ket{\psi} = \frac{\sum_{j = 0} ^ {2 ^ n-1} \alpha_j \ket{j}}{\sqrt{\sum_{j = 0} ^ {2 ^ n-1} | \alpha_j | ^ 2}}에 의해 제공 됩니다.
+  새로 할당 된 레지스터의 U 동작은 $ $ \begin{align} U \ket{0\cdots 0} = \ket{\psi} = \frac{\ sum_ {j = 0} ^ {2 ^ n-1} \ alpha_j \ket{j}}{\sqrt{\ sum_ {j = 0} ^ {2 ^ n-1} | \ alpha_j | ^ 2}}에 의해 제공 됩니다.
 
   \end{align} $ $
-remarks: 음수 입력 계수 $ \alpha_j < $0는 $ | \alpha_j | $ 값을 사용 하 여 긍정적인 것으로 간주 됩니다. $2 ^ n $ 보다 작은 경우 `coefficients`는 $ \alpha_j = $0.0 요소로 채워집니다.
+remarks: 음수 입력 계수 $ \ alpha_j < $0는 값 $ | \ alpha_j | $를 사용 하는 긍정으로 처리 됩니다. `coefficients`$2 ^ n $ 미만으로 지정 된 경우는 $ \ alpha_j = $0.0 요소로 채워집니다.
 examples: >-
-  다음 코드 조각은 stbit 레지스터 `qubitsLE`에서 $ \ket{\psi} = \ sqrt {1/8} \ k{0}+ \ sqrt {7/8} \ k{2}$ 퀀텀 상태를 준비 합니다.
+  다음 코드 조각은 stbit 레지스터{0}{2} `qubitsLE`에서 퀀텀 상태 $ \ket{\psi} = \ sqrt {1/8} \ k + \ sqrt {7/8} \ k $를 준비 합니다.
 
 
   ```qsharp
@@ -35,7 +35,7 @@ input:
   content: '(coefficients : Double[])'
   types:
   - name: coefficients
-    summary: 최대 $2 ^ n $ 계수의 $ \alpha_j $의 배열입니다. $J $ th 계수는 작은 endian 형식으로 인코딩된 number state $ \ket{j} $를 인덱싱합니다.
+    summary: 최대 $2 ^ n $ 계수 $ \ alpha_j $의 배열입니다. $J $ th 계수는 작은 endian 형식으로 인코딩된 number state $ \ket{j} $를 인덱싱합니다.
     isArray: true
     isPrimitive: true
     uid: Double
@@ -55,9 +55,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: 2a31449781d4b3bab1f2af40083df78bf6cc2083
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: d419fd88ed037001cc51dbd354b5c89dbe334246
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73226372"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82686453"

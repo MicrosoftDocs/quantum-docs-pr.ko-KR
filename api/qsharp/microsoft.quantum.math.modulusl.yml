@@ -3,8 +3,8 @@ uid: microsoft.quantum.math.modulusl
 name: ModulusL
 type: function
 namespace: Microsoft.Quantum.Math
-summary: '`value` 모듈로 `modulus`의 정식 residue 계산 합니다.'
-remarks: '이 함수는 연산자 `%` 동작 하는 방식과 다르게 동작 C# 하며, 결과에서 Q #은 값이 음수 이더라도 항상 0과 `modulus - 1`사이의 양의 정수입니다.'
+summary: '`value` 모듈로 `modulus`정식 residue을 계산 합니다.'
+remarks: '이 함수는 c #에서 연산자 `%` 가 작동 하는 방식과 다른 방식으로 동작 하며, 값이 음수인 경우에도 항상 0 `modulus - 1`과 사이의 양의 정수입니다.'
 syntax: 'function ModulusL (value : BigInt, modulus : BigInt) : BigInt'
 input:
   content: '(value : BigInt, modulus : BigInt)'
@@ -20,13 +20,13 @@ input:
 output:
   content: BigInt
   types:
-  - summary: 정수 $r $0과 `modulus - 1` 사이에서 `value - r`는 모듈러스로 나눌 수 있습니다.
+  - summary: 모듈러스로 나눌 수 있는 `modulus - 1` `value - r` 0에서 사이의 정수 $r $
     isPrimitive: true
     uid: BigInt
 metadata:
-  ms.openlocfilehash: 14ef3669e4c59912129c9ffac6ecbf1a2ed25534
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: c4a9403cc5c2bf62e43b5cc248fb9502f15818e8
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73232458"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82686622"

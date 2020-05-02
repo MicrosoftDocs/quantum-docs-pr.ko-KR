@@ -3,18 +3,18 @@ uid: microsoft.quantum.simulation.paulistringfromgenidx
 name: PauliStringFromGenIdx
 type: function
 namespace: Microsoft.Quantum.Simulation
-summary: '`GeneratorIndex`에서 설명 하는 Pauli 문자열 및 해당 하는 pabit 인덱스를 추출 합니다.'
+summary: 에서 설명 하는 Pauli 문자열 및 해당의 해당 비트 인덱스를 추출 `GeneratorIndex`합니다.
 syntax: 'function PauliStringFromGenIdx (generatorIndex : Microsoft.Quantum.Simulation.GeneratorIndex) : (Pauli[], Int[])'
 input:
   content: '(generatorIndex : Microsoft.Quantum.Simulation.GeneratorIndex)'
   types:
   - name: generatorIndex
-    summary: Pauli 용어를 인코딩하는 `GeneratorIndex` 형식입니다.
+    summary: '`GeneratorIndex`Pauli 용어를 인코딩하는 형식입니다.'
     uid: microsoft.quantum.simulation.generatorindex
 output:
   content: (Pauli[], Int[])
   types:
-  - summary: '`GeneratorIndex`에서 설명 하는 용어와 해당 용어에 대 한 인덱스의 Pauli 문자열은 작동 합니다.'
+  - summary: 에서 설명 `GeneratorIndex`하는 용어에 대 한 Pauli 문자열 및이를 실행 하는 것이 적용 되는 요소의 인덱스입니다.
     types:
     - isArray: true
       isPrimitive: true
@@ -23,9 +23,9 @@ output:
       isPrimitive: true
       uid: Int
 metadata:
-  ms.openlocfilehash: e94fd2ddf1b6c18890cc0e4c82cef9d648808661
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 585cac037696e370f3fc3ca4364db6f753b2c642
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73221663"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82687042"

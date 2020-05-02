@@ -4,11 +4,11 @@ name: BlockEncodingReflectionByLCU
 type: function
 namespace: Microsoft.Quantum.Simulation
 summary: >-
-  원하는 연산자를 `BlockEncodingReflection`인코딩합니다.
+  원하는 연산자를로 인코딩합니다 `BlockEncodingReflection`.
 
 
-  이는 단일 $U = P\cdot V\cdot p\cdot $를 `BlockEncodingReflection` 생성 합니다 .이는 일부 연산자 $H = \sum_{j} | \alpha_j | Unitaries의 선형 조합 인 관심의 U_j $입니다. 일반적으로 $P $는 $P \ket{0}\_a\sum_j\sqrt {\ alpha_j/\|\vec\alpha\|\_2} \ket{j}\_a $ 및 $V = \sum_{j}\ket{j}\bra{j}\_a\otimes U_ 같은 상태 준비의 단일입니다. j $.
-remarks: 이 `BlockEncoding` 구현은 `BlockEncodingReflection`의 속성을 제공 합니다.
+  이는 단일 `BlockEncodingReflection` $U = P\cdot V\cdot P ^ \kcdot $를 생성 합니다 .이 경우 일부 연산자 $H = \ sum_ {j} | \ alpha_j | Unitaries의 선형 조합 인 관심 U_j $입니다. 일반적으로 $P $은 $P \ket{0}\_a \ sum_j \sqrt{\ alpha_j/\|\vec\alpha\|\_2} \ket{j}\_a $ 및 $V = \ sum_ {j} \ket{j}\bra{j}\_a\otimes U_j $ 같은 상태 준비의 단일입니다.
+remarks: 이 `BlockEncoding` 구현에서는의 속성을 제공 `BlockEncodingReflection`합니다.
 syntax: 'function BlockEncodingReflectionByLCU (statePreparation : (Qubit[] => Unit is Adj + Ctl), selector : ((Qubit[], Qubit[]) => Unit is Adj + Ctl)) : Microsoft.Quantum.Simulation.BlockEncodingReflection'
 input:
   content: '(statePreparation : (Qubit[] => Unit is Adj + Ctl), selector : ((Qubit[], Qubit[]) => Unit is Adj + Ctl))'
@@ -49,15 +49,15 @@ input:
 output:
   content: Microsoft.Quantum.Simulation.BlockEncodingReflection
   types:
-  - summary: 단일 $U $는 레지스터 `a` 및 $H $를 차단 하 고 $U ' ^{-1} = U $를 충족 하는 `s`에 대해 공동으로 작동 합니다.
+  - summary: 단일 $U $는 레지스터 `a` 에 대해 공동으로 `s` 작동 하며 $H $를 차단 하 고 $U ' ^{-1} = U $를 충족 합니다.
     uid: microsoft.quantum.simulation.blockencodingreflection
 seeAlso:
 - microsoft.quantum.canon.blockencoding
 - microsoft.quantum.canon.blockencodingreflection
 metadata:
-  ms.openlocfilehash: a092068a61d860074ace150b0c7872eb064a63b9
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 8fe23d346a09e245d41f2a0c242462b5300561e1
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73219164"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82687105"
