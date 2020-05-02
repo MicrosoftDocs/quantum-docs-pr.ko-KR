@@ -1,147 +1,101 @@
 ---
-title: 'Q # +를 사용 하 여 개발C#'
+title: Q# + C#을 사용하여 개발
 author: natke
 ms.author: nakersha
 ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.cs
-ms.openlocfilehash: 7803846279f230f5fc0ee8424bd39be735a650ca
-ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
+ms.openlocfilehash: 5bcb036b0b32e64d43f90e9a068d9dcc237890ba
+ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "77036290"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82680174"
 ---
-# <a name="develop-with-q--c"></a>Q # +를 사용 하 여 개발C#
+# <a name="using-q-with-c-and-f"></a>C\# 및 F와 함께 Q # 사용\#
 
-Q # 작업을 호출 하 C# 는 호스트 프로그램을 개발 하려면 qdk를 설치 합니다.
+Q #은 c # 및 F #과 같은 .NET 언어에서 잘 작동 하도록 빌드됩니다.
+이 가이드에서는 .NET 언어로 작성 된 호스트 프로그램과 함께 Q #을 사용 하는 방법을 설명 합니다.
 
-Q #은 .NET 언어에서 잘 작동 하도록 빌드 되었습니다 (특히 C#). 다양 한 개발 환경 내에서이 페어링 작업을 수행할 수 있습니다.
+## <a name="prerequisites"></a>사전 요구 사항
 
-- [Q # + C# Visual Studio 사용 (Windows)](#VS)
-- [Q # + C# Visual Studio Code (Windows, Linux 및 Mac) 사용](#VSC)
-- [Q # + C# `dotnet` 명령줄 도구 사용](#command)
+- [Q # 명령줄 프로젝트와 함께 사용 하기 위해](xref:microsoft.quantum.install.standalone)퀀텀 개발 키트를 설치 합니다.
 
-## Visual Studio를 사용 하 C# 여 Q # +를 사용 하 여 개발 <a name="VS"></a>
+## <a name="creating-a-q-library-and-a-net-host"></a>Q # 라이브러리 및 .NET 호스트 만들기
 
-Visual Studio는 Q # 프로그램을 개발 하기 위한 풍부한 환경을 제공 합니다. Q # Visual Studio 확장에는 구문 강조 표시, 코드 완성 및 IntelliSense 지원 뿐만 아니라 Q # 파일 및 프로젝트에 대 한 템플릿이 포함 되어 있습니다.
+첫 번째 단계는 q # 라이브러리에 대 한 프로젝트와 Q # 라이브러리에 정의 된 작업 및 함수를 호출 하는 .NET 호스트에 대 한 프로젝트를 만드는 것입니다.
 
+### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
-1. 필수 구성 요소
+- 새 Q # 라이브러리 만들기
+  - **파일** -> **새로 만들기** -> **프로젝트** 로 이동
+  - 검색 상자에 "Q #" 입력
+  - **Q # 라이브러리** 를 선택 합니다.
+  - **다음**을 선택합니다.
+  - 라이브러리의 이름 및 위치 선택
+  - "프로젝트 및 솔루션을 동일한 디렉터리에 저장"이 **선택 취소** 되어 있는지 확인 합니다.
+  - **만들기** 선택
+- 새 c # 또는 F # 호스트 프로그램 만들기
+  - **파일** → **새로 만들기** → **프로젝트** 로 이동 합니다.
+  - C # 또는 F에 대해 "콘솔 앱 (.NET Core") "을 선택 합니다. #
+  - **다음**을 선택합니다.
+  - *솔루션*에서 "솔루션에 추가"를 선택 합니다.
+  - 호스트 프로그램의 이름 선택
+  - **만들기** 선택
 
-    - [Visual Studio](https://visualstudio.microsoft.com/downloads/) 16.3, .NET Core 플랫폼 간 개발 워크로드 설정
+### <a name="visual-studio-code-or-command-line"></a>[Visual Studio Code 또는 명령줄](#tab/tabid-cmdline)
 
-1. Q# Visual Studio 확장을 설치합니다.
+- 새 Q # 라이브러리 만들기
 
-    - [Visual Studio 확장](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit) 다운로드 및 설치
+  ```dotnetcli
+  dotnet new classlib -lang Q# -o quantum
+  ```
 
-1. `Hello World` 애플리케이션을 만들어 설치를 확인합니다.
+- 새 c # 또는 F # 콘솔 프로젝트 만들기
 
-    - 새 Q# 애플리케이션 만들기
+  ```dotnetcli
+  dotnet new console -lang C# -o host  
+  ```
 
-        - **파일** -> **새로 만들기** -> **프로젝트**로 이동
-        - 검색 상자에 `Q#` 입력
-        - **Q# 애플리케이션**을 선택합니다.
-        - **다음**을 선택합니다.
-        - 애플리케이션의 이름 및 위치를 선택합니다.
-        - **만들기**
+- 호스트 프로그램에서 참조로 Q # 라이브러리를 추가 합니다.
 
-    - 프로젝트를 검사합니다.
+  ```dotnetcli
+  cd host
+  dotnet add reference ../quantum/quantum.csproj
+  ```
 
-        C# 호스트 애플리케이션에 해당하는 `Driver.cs`와 콘솔에 메시지를 출력하는 간단한 작업을 정의하는 Q# 프로그램에 해당하는 `Operation.qs`의 두 파일이 생성된 것을 확인할 수 있습니다.
+- 필드 두 프로젝트에 대 한 솔루션을 만듭니다.
 
-    - 애플리케이션 실행
+  ```dotnetcli
+  dotnet new sln -n quantum-dotnet
+  dotnet sln quantum-dotnet.sln add ./quantum/quantum.csproj
+  dotnet sln quantum-dotnet.sln add ./host/host.csproj
+  ```
 
-        - **디버그** -> **디버깅하지 않고 시작**을 선택합니다.
-        - 콘솔 창에 `Hello quantum world!`가 출력된 것을 볼 수 있습니다.
+***
 
-> [!NOTE]
-> * 단일 Visual Studio 솔루션 내에 여러 프로젝트가 있는 경우 솔루션에 포함된 모든 프로젝트는 솔루션과 동일한 폴더 또는 해당 하위 폴더 중 하나에 포함되어야 합니다.  
+## <a name="calling-into-q-from-net"></a>.NET에서 Q #으로 호출
 
-## Visual Studio Code를 사용 하 여 C# Q # + 개발 <a name="VSC"></a>
+위의 지침에 따라 프로젝트를 설정한 후에는 .NET 콘솔 응용 프로그램에서 Q #을 호출할 수 있습니다.
+Q # 컴파일러는 시뮬레이터에서 퀀텀 프로그램을 실행할 수 있도록 하는 각 Q # 작업 및 함수에 대 한 .NET 클래스를 만듭니다.
 
-Visual Studio Code (VS Code)는 Windows, Linux 및 Mac에서 Q # 프로그램을 개발 하기 위한 풍부한 환경을 제공 합니다.  Q # VS Code 확장에는 Q # 구문 강조 표시, 코드 완성 및 Q # 코드 조각을 위한 지원이 포함 됩니다.
+예를 들어 [.net 상호 운용성 샘플](https://github.com/microsoft/Quantum/tree/master/samples/interoperability/dotnet) 에는 다음 Q # 작업 예제가 포함 됩니다.
 
-1. 필수 구성 요소
+:::code language="qsharp" source="~/quantum/samples/interoperability/dotnet/qsharp/Operations.qs" range="67-75":::
 
-   - [VS 코드](https://code.visualstudio.com/download)
-   - [.NET Core SDK 3.1 이상](https://www.microsoft.com/net/download)
+퀀텀 시뮬레이터의 .NET에서이 작업을 호출 하려면 Q # 컴파일러에 의해 `Run` 생성 된 `RunAlgorithm` .net 클래스의 메서드를 사용할 수 있습니다.
 
-1. Quantum VS Code 확장을 설치합니다.
+### <a name="c"></a>[C#](#tab/tabid-csharp)
 
-    - [VS Code 확장](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode)을 설치합니다.
+:::code language="csharp" source="~/quantum/samples/interoperability/dotnet/csharp/Host.cs" range="4-":::
 
-1. 양자 프로젝트 템플릿을 설치합니다.
+### <a name="f"></a>[F#](#tab/tabid-fsharp)
 
-   - **보기** -> **명령 팔레트**로 이동합니다.
-   - **Q #: 프로젝트 템플릿 설치를** 선택 합니다.
+:::code language="fsharp" source="~/quantum/samples/interoperability/dotnet/fsharp/Host.fs" range="4-":::
 
-    이제 Quantum Development Kit가 설치되었으며 사용자의 애플리케이션 및 라이브러리에서 사용할 준비가 되었습니다.
-
-1. `Hello World` 애플리케이션을 만들어 설치를 확인합니다.
-
-    - 새 프로젝트를 만듭니다.
-
-        - **보기** -> **명령 팔레트**로 이동합니다.
-        - **Q #: 새 프로젝트 만들기를** 선택 합니다.
-        - **독립 실행형 콘솔 응용 프로그램** 선택
-        - 애플리케이션을 만들려는 파일 시스템의 위치로 이동합니다.
-        - 프로젝트를 만든 후에 **새 프로젝트 열기...** 단추를 클릭합니다.
-
-    - VS Code에 대 한 C# 확장을 아직 설치 하지 않은 경우 팝업이 표시 됩니다. 확장을 설치 합니다. 
-
-    - 애플리케이션을 실행합니다.
-
-        - **터미널** -> **새 터미널** 로 이동 합니다.
-        - `dotnet run`을 입력합니다.
-        - 출력 창에 다음 텍스트가 표시되어야 합니다. `Hello quantum world!`
-
-
-> [!NOTE]
-> * 여러 루트 폴더가 있는 작업 영역은 현재 Visual Studio Code 확장에서 지원되지 않습니다. 단일 VS Code 작업 영역에 여러 프로젝트가 있는 경우 모든 프로젝트가 동일한 루트 폴더 내에 포함되어야 합니다.
-
-## `dotnet` 명령줄 도구를 사용 C# 하 여 Q # +를 사용 하 여 개발<a name="command"></a>
-
-물론 간단하게 .NET Core SDK 및 QDK 프로젝트 템플릿을 설치하여 명령줄에서 Q# 프로그램을 빌드하고 실행할 수도 있습니다. 
-
-1. 필수 구성 요소
-
-    - [.NET Core SDK 3.1 이상](https://www.microsoft.com/net/download)
-
-1. .NET용 양자 프로젝트 템플릿을 설치합니다.
-
-    ```dotnetcli
-    dotnet new -i Microsoft.Quantum.ProjectTemplates
-    ```
-
-    이제 Quantum Development Kit가 설치되었으며 사용자의 애플리케이션 및 라이브러리에서 사용할 준비가 되었습니다.
-
-1. `Hello World` 애플리케이션을 만들어 설치를 확인합니다.
-
-    - 새 애플리케이션 만들기
-
-       ```dotnetcli
-       dotnet new console -lang "Q#" -o runSayHello
-       ```
-
-    - 새 애플리케이션 디렉터리로 이동합니다.
-
-       ```bash
-       cd runSayHello
-       ```
-
-    애플리케이션의 프로젝트 파일과 함께 Q# 파일(`Operation.qs`) 및 C# 호스트 파일(`Driver.cs`)의 두 파일이 생성된 것을 볼 수 있습니다.
-
-    - 애플리케이션 실행
-
-        ```dotnetcli
-        dotnet run
-        ```
-
-        다음 출력이 표시됩니다. `Hello quantum world!`
-
+***
     
-## <a name="whats-next"></a>다음 단계
+## <a name="whats-next"></a>새로운 기능
 
-지금까지 기본 설정 환경에 Quantum Development Kit를 설치했으므로 [첫 번째 양자 프로그램](xref:microsoft.quantum.write-program)을 작성 및 실행할 수 있습니다.
+이제 Q # 명령줄 프로그램 모두에 대 한 퀀텀 개발 키트를 설정 하 고 .NET과의 상호 운용성을 위해 [첫 번째 퀀텀 프로그램](xref:microsoft.quantum.write-program)을 작성 하 고 실행할 수 있습니다.

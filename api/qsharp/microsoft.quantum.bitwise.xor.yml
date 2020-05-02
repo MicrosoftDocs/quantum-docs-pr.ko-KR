@@ -7,7 +7,7 @@ summary: >-
   두 정수의 배타적 비트 or (XOR)를 반환 합니다.
 
   이는 기본 제공 `^^^` 연산자와 동일한 계산을 수행 합니다.
-remarks: 자세한 내용은 [ C# ^ 연산자](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/xor-operator) 를 참조 하세요.
+remarks: '자세한 내용은 [c # ^ 연산자](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/xor-operator) 를 참조 하세요.'
 examples: >-
   ```qsharp
 
@@ -34,9 +34,9 @@ output:
   - isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 5521b9fa4838261e44554de39704c0adbb45f8ed
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 8b7da5a00592a071617d775d71fb7f07931cf299
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73213843"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680550"

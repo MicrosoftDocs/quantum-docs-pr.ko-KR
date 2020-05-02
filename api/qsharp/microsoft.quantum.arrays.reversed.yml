@@ -16,7 +16,7 @@ input:
 output:
   content: "'T[]"
   types:
-  - summary: '`array[Length(array) - 1]` 요소를 포함 하는 배열입니다. `array[0]`에 대한 답변에 설명되어 있는 단계를 성공적으로 완료하면 활성화됩니다.'
+  - summary: 요소가 `array[Length(array) - 1]` 포함 된 배열입니다. `array[0]`.
     isArray: true
     uid: "'T"
     isLocal: true
@@ -24,9 +24,9 @@ typeParameters:
 - uid: "'T"
   summary: 배열 요소의 형식입니다.
 metadata:
-  ms.openlocfilehash: 946d1f06619a4533a2c32cf58266815d7a510434
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: f7424045ae518a2ea4c91724a0811d1ce5aaabd9
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73218025"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680854"

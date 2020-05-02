@@ -1,36 +1,36 @@
 ---
-title: 'Q # + Python을 사용 하 여 개발'
+title: Q# + Python을 사용하여 개발
 author: natke
 ms.author: nakersha
 ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.python
-ms.openlocfilehash: 1e40c2dddeaf4fad41693c976493f10fffffa139
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: e1b8a0c68b3ac0c059c6de6e478593321764ff88
+ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76831004"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82680155"
 ---
-# <a name="develop-with-q--python"></a>Q # + Python을 사용 하 여 개발
+# <a name="develop-with-q--python"></a>Q# + Python을 사용하여 개발
 
 Q # 작업을 호출 하는 Python 호스트 프로그램을 개발 하려면 QDK를 설치 합니다.
 
-1. 필수 조건
+1. 필수 구성 요소
 
     - [Python](https://www.python.org/downloads/) 3.6 이상
     - [PIP](https://pip.pypa.io/en/stable/installing) Python 패키지 관리자
     - [.NET Core SDK 3.1 이상](https://www.microsoft.com/net/download)
 
 
-1. Q #과 Python 간에 interop를 사용할 수 있도록 하는 Python 패키지인 `qsharp` 패키지를 설치 합니다.
+1. Q # `qsharp` 과 python 간에 interop를 사용할 수 있도록 하는 Python 패키지인 패키지를 설치 합니다.
 
     ```bash
     pip install qsharp
     ```
 
-1. Q # 작업을 컴파일하고 실행 하기 위한 핵심 기능을 제공 하는 Jupyter 및 Python에서 사용 하는 커널로 `iqsharp`를 설치 합니다.
+1. Q # 작업을 컴파일하고 실행 하기 위한 핵심 기능을 제공 하는 Jupyter 및 Python에서 사용 하는 커널 인 IQ #을 설치 합니다.
 
     ```bash
     dotnet tool install -g Microsoft.Quantum.IQSharp
@@ -83,6 +83,6 @@ Q # 작업을 호출 하는 Python 호스트 프로그램을 개발 하려면 QD
 > [!NOTE]
 > * Python Jupyter 노트북을 사용 하 여 기존 Python 프로그램을 작성 하 고 셀에서 Q # 작업을 호출할 수도 있습니다. Python 코드는 일반적인 Python 프로그램 일 뿐입니다.
 
-## <a name="whats-next"></a>다음은 무엇일까요?
+## <a name="whats-next"></a>새로운 기능
 
 지금까지 기본 설정 환경에 Quantum Development Kit를 설치했으므로 [첫 번째 양자 프로그램](xref:microsoft.quantum.write-program)을 작성 및 실행할 수 있습니다.

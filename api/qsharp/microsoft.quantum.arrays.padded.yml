@@ -23,7 +23,7 @@ input:
   content: "(nElementsTotal : Int, defaultElement : 'T, inputArray : 'T[])"
   types:
   - name: nElementsTotal
-    summary: 패딩 된 배열의 길이입니다. 양수 이면 `inputArray` 헤드에 채워집니다. 음수 이면 `inputArray` 끝에 채워집니다.
+    summary: 패딩 된 배열의 길이입니다. 이가 양수인 경우 `inputArray` 는 헤드에 채워집니다. 이가 음수 `inputArray` 이면 꼬리에 채워집니다.
     isPrimitive: true
     uid: Int
   - name: defaultElement
@@ -38,7 +38,7 @@ input:
 output:
   content: "'T[]"
   types:
-  - summary: '`output` 길이가 될 때까지 `defaultElement`s를 사용 하 여 head로 채워진 `inputArray` 인 배열 `output` `nElementsTotal`'
+  - summary: 에 길이가 `output` 있을 때까지 `inputArray` `defaultElement` `output` s로 채워진의 배열입니다.`nElementsTotal`
     isArray: true
     uid: "'T"
     isLocal: true
@@ -46,9 +46,9 @@ typeParameters:
 - uid: "'T"
   summary: 배열 요소의 형식입니다.
 metadata:
-  ms.openlocfilehash: 3fb999af73e68de9143ddc051b8a43247f5282f0
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 6fafc015026ca9b369e23fda702af172867444ca
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73218059"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680900"

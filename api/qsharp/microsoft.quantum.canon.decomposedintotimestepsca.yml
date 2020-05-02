@@ -5,15 +5,15 @@ type: function
 namespace: Microsoft.Quantum.Canon
 summary: 지정 된 작업에 대해 Trotter – Suzuki 인티그레이터를 구현 하는 작업을 반환 합니다.
 remarks: >-
-  `1`와 같은 `order`를 사용 하 여 호출 되는 경우이 함수는 가장 낮은 order Trotter – Suzuki 인티그레이터 $ $ \begin{align} S_1 (\lambda) = \ prod_ {j = 1} ^ {m} e ^ {H_j \lambda}에서 시뮬레이션할 수 있는 작업을 반환 합니다. \end{align} $ $ where [0508139](https://arxiv.org/abs/quant-ph/0508139) 표기법을 따르고 $ \lambda $는 진화 시간 (반환 된 작업의 첫 번째 입력으로 표시 됨)이 되 고 $\{H_j\}_ {j = 1} ^ {m} $은 (는) 통합 되는 (기울기-Hermitian) 동적 생성기 집합 이어야 합니다. 이 `op(j, lambda, _)`는 단일 연산자 $e ^ {H_j \lambda} $에 의해 시뮬레이션 됩니다.
+  이 함수는 `order` 와 `1`같이 호출 될 때 가장 낮은 Trotter – Suzuki 인티그레이터 $ $ \begin{align} S_1 (\lambda) = \ prod_ {j = 1} ^ {m} e ^ {H_j \lambda}에서 시뮬레이션할 수 있는 작업을 반환 합니다. \end{align} $ $ where [0508139](https://arxiv.org/abs/quant-ph/0508139) 표기법을 따르고 $ \lambda $는 진화 시간 (반환 된 작업의 첫 번째 입력으로 표시 됨)이 될 수 있습니다. 그리고 $\{H_j\}_ {j = 1} ^ {m} $은 단일 연산자 $e ^ {H_j \lambda} $에서 시뮬레이션 되는 (Hermitian) 동적 생성기 `op(j, lambda, _)` 집합 이어야 합니다.
 
 
-  마찬가지로 `2`의 `order`는 두 번째 순서 대칭 Trotter – Suzuki 인티그레이터 $ $ \begin{align} S_2 (\lambda) = \ prod_ {j = 1} ^ {m} e ^ {H_k \emi/2} \ prod_ {j ' = m} ^{1} e ^ {H_ {j '} \lambda/2}를 반환 합니다.
+  마찬가지로의 `order` `2` 는 두 번째 순서 대칭 Trotter – Suzuki 인티그레이터 $ $ \begin{align} S_2 (\lambda) = \ prod_ {j = 1} ^ {m} e ^ {H_k \lambda} \ prod_ {j ' = m} ^{1} e ^ {H_ {j '} \lambda/2}를 반환 합니다.
 
   \end{align} $ $
 
 
-  더 높은 `order` 값은 더 높은 [값을 사용](https://arxiv.org/abs/quant-ph/0508139)하 여 구현 됩니다.
+  의 `order` 짝수 값은 보다 높은 [값을 사용](https://arxiv.org/abs/quant-ph/0508139)하 여 구현 됩니다.
 syntax: "function DecomposedIntoTimeStepsCA ((nSteps : Int, op : ((Int, Double, 'T) => Unit is Adj + Ctl)), trotterOrder : Int) : ((Double, 'T) => Unit is Adj + Ctl)"
 references: '- [*D. Berry, G. Ahokas, Cleve, b. Sanders*](https://arxiv.org/abs/quant-ph/0508139)'
 input:
@@ -24,7 +24,7 @@ input:
     isPrimitive: true
     uid: Int
   - name: op
-    summary: 분해를 위해 인덱스 입력 (형식 `Int`) 및 시간 입력 (`Double`형식)을 허용 하는 작업입니다.
+    summary: 분해를 위해 인덱스 입력 (형식 `Int`) 및 시간 입력 (형식 `Double`)을 허용 하는 작업입니다.
     isOperation: true
     input:
       types:
@@ -51,7 +51,7 @@ input:
 output:
   content: ((Double, 'T) => Unit is Adj + Ctl)
   types:
-  - summary: Trotter – Suzuki 인티그레이터를 구현 하는 단일를 반환 합니다. 여기서 첫 번째 매개 변수 `Double`는 통합 단계 크기이 고, 두 번째 매개 변수는 처리 대상인 대상입니다.
+  - summary: Trotter – Suzuki 인티그레이터를 구현 하는 단일를 반환 합니다. 여기서 `Double` 첫 번째 매개 변수는 통합 단계 크기이 고, 두 번째 매개 변수는 처리 대상인 대상입니다.
     isOperation: true
     input:
       types:
@@ -68,11 +68,11 @@ output:
     - Controlled
 typeParameters:
 - uid: "'T"
-  summary: 각 시간 단계가 작동 해야 하는 형식입니다. 일반적으로 `Qubit[]` 또는 `Qubit`중 하나입니다.
+  summary: 각 시간 단계가 작동 해야 하는 형식입니다. 일반적으로 `Qubit[]` 또는 `Qubit`입니다.
 metadata:
-  ms.openlocfilehash: 66b2d7ca6394f525e8ec0dcb3516776bf91bd0cb
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: 1fdb15e9a28c24ac58f026a89779951b982edb27
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76873025"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680247"

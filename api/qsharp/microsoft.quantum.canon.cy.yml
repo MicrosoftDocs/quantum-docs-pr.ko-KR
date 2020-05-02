@@ -7,7 +7,7 @@ summary: >-
   제어 된-Y (CY) 게이트를 한 쌍의 비트에 적용 합니다.
 
 
-  $ $ \begin{align} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 &-i \\\\ 0 & 0 & i & 0 \end{align} , $ $는 퀀텀 개념 가이드에서 행 및 열이로 구성 됩니다.
+  $ $ \begin{align} 1 & 0 & 0 & 0 \\ \\ 0 & 1 & 0 \\ \\ & 0 0 & 0 & 0 &-i \\ \\ 0 & 0 & i & 0 \end{align}, $ $ 여기서 행과 열은 퀀텀 개념 가이드에서와 같이 구성 됩니다.
 remarks: >-
   다음에 해당 합니다.
 
@@ -38,9 +38,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: d5ea0bcf4697024eeb19b12300a442fffe3d5f56
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: c7d7d0fb5413051ec7a654c04e01b6ffc02903e6
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73227341"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680279"

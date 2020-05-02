@@ -5,7 +5,7 @@ type: function
 namespace: Microsoft.Quantum.Arrays
 summary: 배열에서 지정 된 조건자를 만족 하는 첫 번째 요소의 첫 번째 인덱스를 반환 합니다. 이러한 요소가 없는 경우-1을 반환 합니다.
 examples: >-
-  `IsEven : Int -> Bool`은 입력이 짝수 인 경우에만 `true`를 반환 하는 함수 라고 가정 합니다. 그런 다음 `IndexOf`와 함께 사용 하 여 배열에서 첫 번째 짝수 요소를 찾을 수 있습니다.
+  해당 입력 `IsEven : Int -> Bool` 이 이더라도 인 경우에 `true` 만를 반환 하는 함수 라고 가정 합니다. 그런 다음와 함께 `IndexOf` 사용 하 여 배열에서 첫 번째 짝수 요소를 찾을 수 있습니다.
 
 
   ```Q#
@@ -38,13 +38,13 @@ input:
 output:
   content: Int
   types:
-  - summary: 가장 작은 인덱스 `idx` `predicate(arr[idx])` true이 고, 이러한 요소가 없는 경우-1입니다.
+  - summary: True `predicate(arr[idx])` 인 가장 작은 `idx` 인덱스 이거나, 이러한 요소가 없는 경우-1입니다.
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 6f7fee40a558e7bb17b94c9dd58656c6f34ceac8
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 6fb95357096751e53f601a9c855ff656e2dd1b34
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73218195"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680998"

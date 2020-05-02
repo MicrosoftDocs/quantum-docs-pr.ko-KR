@@ -9,9 +9,9 @@ summary: >-
 
   작업 및 해당 작업에 대 한 입력이 주어진 경우 추가 입력이 제공 되 면에서 작업을 적용 합니다.
 
-  특히 `Delay(op, arg, _)` 식은 호출 될 때 `arg`에 `op` 적용 되는 연산입니다.
+  특히 식은 `Delay(op, arg, _)` 호출 될 때에 `op` `arg` 적용 되는 연산입니다.
 
-  식 `Delay(op,arg,_)`를 사용 하 여 `op`의 응용 프로그램을 연기할 수 있습니다.
+  식을 `Delay(op,arg,_)` 사용 하면의 `op`응용 프로그램을 연기할 수 있습니다.
 syntax: "operation DelayA (op : ('T => Unit is Adj), arg : 'T, aux : Unit) : Unit"
 input:
   content: "(op : ('T => Unit is Adj), arg : 'T, aux : Unit)"
@@ -51,9 +51,9 @@ seeAlso:
 - microsoft.quantum.canon.delay
 - microsoft.quantum.canon.delayed
 metadata:
-  ms.openlocfilehash: f36930faacf0aa4a1ea87a09fc3018e06e62d7ac
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: d4119e1229ac193ab52ac56c37333560dbbedf9e
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73067801"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680213"
