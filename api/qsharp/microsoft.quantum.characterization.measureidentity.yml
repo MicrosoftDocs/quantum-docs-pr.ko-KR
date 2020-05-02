@@ -5,7 +5,7 @@ type: operation
 namespace: Microsoft.Quantum.Characterization
 summary: 은 (는) 다양 한 비트의 레지스터에서 identity 연산자를 측정 합니다.
 remarks: >-
-  $ \Boldone $에는 eigenvalue $1 $만 있고 음수 eigenvalue이 없기 때문에이 작업은 항상 eigenvalue $ + 1 = (-1) ^ 0 $에 해당 하는 `Zero`을 반환 하 고 `register`상태의 축소를 발생 시 키 지 않습니다.
+  $ \Boldone $에는 eigenvalue $1 $만 있고 음수 eigenvalue이 없기 때문에이 작업은 항상를 반환 `Zero`하며,이는 eigenvalue $ + 1 = (-1) ^ 0 $에 해당 하며, 상태를 축소 하지 않습니다. `register`
 
 
   자체적으로이 작업은 유용 하지 않지만 프로세스 tomography의 컨텍스트에서는 퀀텀 프로세스의 추적 유지에 대 한 정보를 제공 하므로 유용 합니다.
@@ -27,9 +27,9 @@ output:
     isPrimitive: true
     uid: Result
 metadata:
-  ms.openlocfilehash: fcfe08d4ae7a192074b90b7b45fffbcb5944e7ff
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 28dd3655c883c02b798e6e4cdf39c70100c6535b
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73229126"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677632"

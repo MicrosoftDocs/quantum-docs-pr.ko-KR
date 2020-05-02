@@ -6,7 +6,7 @@ namespace: Microsoft.Quantum.Canon
 summary: >-
   작업을 반환 하는 함수가 지정 된 경우 두 입력을 튜플로 받는 새 작업을 반환 합니다.
 
-  한정자 `C`는 작업을 제어할 수 있음을 나타냅니다.
+  한정자 `C` 는 작업을 제어할 수 있음을 나타냅니다.
 syntax: "function UncurriedOpC (curriedOp : ('T -> ('U => Unit is Ctl))) : (('T, 'U) => Unit is Ctl)"
 input:
   content: "(curriedOp : ('T -> ('U => Unit is Ctl)))"
@@ -34,7 +34,7 @@ input:
 output:
   content: (('T, 'U) => Unit is Ctl)
   types:
-  - summary: '`op(t, u)` `(curriedOp(t))(u)`와 동일한 새 작업이 `op`.'
+  - summary: 에 `(curriedOp(t))(u)`해당 하 `op` 는 새 `op(t, u)` 작업입니다.
     isOperation: true
     input:
       types:
@@ -56,9 +56,9 @@ typeParameters:
 seeAlso:
 - microsoft.quantum.canon.uncurryop
 metadata:
-  ms.openlocfilehash: 2808ad1be091f98185ca9b218d2df6065c15a143
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 763ea81f9a459a358d9a41e177697eb6bf2ca307
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73216954"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677966"

@@ -10,7 +10,7 @@ remarks: >-
   \end{align} $ $
 
 
-  Pauli 연산자의 배열이 `[P0, ..., Pn]`경우이 함수는 빅 endian 순서 `bits(Pn) ... bits(P0)`에서 각 Pauli 연산자의 매핑을 연결 하 여 이진 확장이 형성 된 정수를 반환 합니다.
+  Pauli 연산자 `[P0, ..., Pn]`의 배열이 지정 된 경우이 함수는 각 pauli 연산자의 매핑을 빅 endian 순서로 `bits(Pn) ... bits(P0)`연결 하 여 이진 확장이 형성 된 정수를 반환 합니다.
 syntax: 'function PauliArrayAsInt (paulis : Pauli[]) : Int'
 input:
   content: '(paulis : Pauli[])'
@@ -23,13 +23,13 @@ input:
 output:
   content: Int
   types:
-  - summary: 아래에 설명 된 대로 `paulis`고유 하 게 식별 하는 정수입니다.
+  - summary: 아래에서 설명 하 `paulis`는 고유 하 게 식별 하는 정수입니다.
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 0c211075d07147b1c1392fe3f3e4ceb110364bb3
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 170218ccf1ec4ee1183a7a69ff1e0969f595cac4
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73230758"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677421"

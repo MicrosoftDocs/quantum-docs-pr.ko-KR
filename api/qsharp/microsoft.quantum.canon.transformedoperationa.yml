@@ -5,7 +5,7 @@ type: function
 namespace: Microsoft.Quantum.Canon
 summary: 함수 및 작업이 지정 된 경우 지정 된 함수가 입력을 변환 하는 새 작업을 반환 합니다.
 examples: >-
-  다음 호출에서는 @"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian"를 사용 하 여 @"Microsoft.Quantum.Arithmetic.BigEndian" 입력 용으로 설계 된 작업을 @"Microsoft.Quantum.Arithmetic.LittleEndian"형식의 입력을 허용 하는 작업으로 변환 합니다.
+  다음 호출에서는를 @"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian" 사용 하 여 입력 용 @"Microsoft.Quantum.Arithmetic.BigEndian" 으로 설계 된 작업을 형식의 @"Microsoft.Quantum.Arithmetic.LittleEndian"입력을 허용 하는 작업으로 변환 합니다.
 
 
   ```qsharp
@@ -44,7 +44,7 @@ input:
 output:
   content: ('U => Unit is Adj)
   types:
-  - summary: 새 작업 tbat는 입력을 사용 하 여 `fn`를 호출한 다음 결과 출력을 `op`에 전달 합니다.
+  - summary: Tbat는 입력을 사용 `fn` 하 여를 호출 하 고 결과 출력을에 `op`전달 합니다.
     isOperation: true
     input:
       types:
@@ -63,9 +63,9 @@ seeAlso:
 - applywithinputtransformation
 - compose
 metadata:
-  ms.openlocfilehash: ba4c22476bb1784a42ecb049fa0470204e81fa9e
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: f4cb96f3dac9c540131f04cd1b24449f78a26ef2
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73217073"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82678052"

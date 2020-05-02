@@ -3,13 +3,13 @@ uid: microsoft.quantum.diagnostics.assertallzerowithintolerance
 name: AssertAllZeroWithinTolerance
 type: operation
 namespace: Microsoft.Quantum.Diagnostics
-summary: 지정 된 \ket는 지정 된 허용 오차까지 모두 ${0}$ 상태에 있습니다.
+summary: 지정 된 것과 같은 Assert는 지정 된 허용{0}오차까지 모두 $ \ket $ 상태에 있습니다.
 syntax: 'operation AssertAllZeroWithinTolerance (qubits : Qubit[], tolerance : Double) : Unit'
 input:
   content: '(qubits : Qubit[], tolerance : Double)'
   types:
   - name: qubits
-    summary: $ \Ket{0}$ state에 있도록 어설션된 비트입니다.
+    summary: $ \Ket{0}$ 상태에 있도록 어설션된 비트입니다.
     isArray: true
     isPrimitive: true
     uid: Qubit
@@ -28,9 +28,9 @@ functors:
 seeAlso:
 - assertqubitwithintolerance
 metadata:
-  ms.openlocfilehash: 0e3b560d08077bb353147d98a921a2c2ca3ae202
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: ae55998333d6bc3a4d8b41341842147d80dcd183
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73066543"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677290"
