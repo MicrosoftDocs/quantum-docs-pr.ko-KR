@@ -8,15 +8,15 @@ summary: >-
 
 
   예를 들어 $ \ket{x} $가 계산을 기준으로 하는 정수 $x $의 작은 endian 인코딩이 면 $ \operatorname{QFTLE} \ket{x} $는 QFT의 $x $의 인코딩입니다.
-remarks: '`PhaseLittleEndian`는 설명서에서 `PhaseLE`으로 축약 됩니다.'
+remarks: 설명서에서 `PhaseLittleEndian` 와 `PhaseLE` 같이 축약 됩니다.
 syntax: newtype PhaseLittleEndian = Qubit[];
 seeAlso:
 - qft
 - qftle
 metadata:
-  ms.openlocfilehash: 8efb8b58ff7ee5c0530abfb81792366f6990997e
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: a4c547a88ef49de180f68534f4f61fb1062a4764
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73218722"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82679443"
