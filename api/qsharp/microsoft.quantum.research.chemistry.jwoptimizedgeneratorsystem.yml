@@ -3,23 +3,23 @@ uid: microsoft.quantum.research.chemistry.jwoptimizedgeneratorsystem
 name: JWOptimizedGeneratorSystem
 type: function
 namespace: Microsoft.Quantum.Research.Chemistry
-summary: '`JWOptimizedHTerms`에 설명 된 Hamiltonian를이 파일에 정의 된 `GeneratorIndex` 규칙을 기준으로 표현 되는 `GeneratorSystem` 변환 합니다.'
+summary: 에 설명 `JWOptimizedHTerms` 된 Hamiltonian를이 파일 `GeneratorSystem` 에 정의 된 `GeneratorIndex` 규칙의 용어로 표현 된로 변환 합니다.
 syntax: 'function JWOptimizedGeneratorSystem (data : Microsoft.Quantum.Chemistry.JordanWigner.JWOptimizedHTerms) : Microsoft.Quantum.Simulation.GeneratorSystem'
 input:
   content: '(data : Microsoft.Quantum.Chemistry.JordanWigner.JWOptimizedHTerms)'
   types:
   - name: data
-    summary: '`JWOptimizedHTerms` 형식의 Hamiltonian에 대 한 설명입니다.'
+    summary: 형식의 Hamiltonian에 `JWOptimizedHTerms` 대 한 설명입니다.
     uid: microsoft.quantum.chemistry.jordanwigner.jwoptimizedhterms
 output:
   content: Microsoft.Quantum.Simulation.GeneratorSystem
   types:
-  - summary: '`GeneratorSystem`Hamiltonian 표현입니다.'
+  - summary: Hamiltonian의 표현 `GeneratorSystem`입니다.
     uid: microsoft.quantum.simulation.generatorsystem
 metadata:
-  ms.openlocfilehash: 5f5037767f9737391f3fd07d3dd0e330f8995f56
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 54b172085c66a826a571c5eb2e6dc0a2bfa303a4
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73066169"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82683083"

@@ -7,7 +7,7 @@ summary: >-
   Knill magic state 추출을 알고리즘을 구현 합니다.
 
 
-  매직 상태 $ $ \begin{align} \cos\frac{\pi}{8} \ket{0} + \sin \frac{\pi}{8} \ket{1} \end{align}의 15 개의 대략적인 복사본을 제공 합니다. $ $는 고품질의 복사본 하나를 생성 합니다.
+  매직 상태 $ $ \begin{align}{8} \cos\frac{\pi} \ket{0} + \sin \frac{\pi}{8} \ket{1} \end{align}의 15 개의 대략적인 복사본을 지정 하면, $ $는 고품질의 복사본 하나를 생성 합니다.
 remarks: >-
   Knill 알고리즘을 따릅니다.
 
@@ -20,20 +20,20 @@ input:
   content: '(roughMagic : Qubit[])'
   types:
   - name: roughMagic
-    summary: 매직 상태의 대략적인 복사본을 포함 하는 15 개의 비트 레지스터입니다. 이 추출을 절차를 적용 한 후에는 `roughMagic[0]`에 고품질 복사본이 하나 포함 되 고 나머지 레지스터는 $ \ket{00\cdots 0} $ 상태로 다시 설정 됩니다.
+    summary: 매직 상태의 대략적인 복사본을 포함 하는 15 개의 비트 레지스터입니다. 이 추출을 절차의 다음 응용 프로그램 `roughMagic[0]` 에는 고품질 복사본이 하나 포함 되 고 나머지 레지스터는 $ \ket{00\cdots 0} $ 상태로 다시 설정 됩니다.
     isArray: true
     isPrimitive: true
     uid: Qubit
 output:
   content: Bool
   types:
-  - summary: '`true`경우에는 프로시저 성공 및 고품질 복사를 수락 해야 합니다. `false`경우 프로시저가 실패 하 고 레지스터의 상태가 undefined로 간주 되어야 합니다.'
+  - summary: 이면 `true`프로시저 성공 및 고품질 복사를 수락 해야 합니다. 이면 `false`프로시저가 실패 하 고 레지스터의 상태가 undefined로 간주 되어야 합니다.
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: 81d87b3dcd6f669a63847e331865b1f2c389f3ce
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 5a8e4c43ff21491b35efedb8f60717979e44f0ed
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73226729"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82682355"

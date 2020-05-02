@@ -3,7 +3,7 @@ uid: microsoft.quantum.simulation.multiplygeneratorsystem
 name: MultiplyGeneratorSystem
 type: function
 namespace: Microsoft.Quantum.Simulation
-summary: '`GeneratorSystem`모든 용어의 계수를 곱합니다.'
+summary: 에 있는 모든 용어의 계수를 곱합니다 `GeneratorSystem`.
 syntax: 'function MultiplyGeneratorSystem (multiplier : Double, generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem) : Microsoft.Quantum.Simulation.GeneratorSystem'
 input:
   content: '(multiplier : Double, generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem)'
@@ -18,14 +18,14 @@ input:
 output:
   content: Microsoft.Quantum.Simulation.GeneratorSystem
   types:
-  - summary: 계수가 계수 `multiplier` 큰 시스템을 나타내는 `GeneratorSystem`입니다.
+  - summary: 계수 `GeneratorSystem` 가 `multiplier` 더 큰 시스템을 나타내는입니다.
     uid: microsoft.quantum.simulation.generatorsystem
 seeAlso:
 - microsoft.quantum.canon.generatorsystem
 metadata:
-  ms.openlocfilehash: e96870c4e59773542924dcd247aedc498d3f3307
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: efdc509ce877e58db1fb365795f2913ce2556563
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73065455"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82682560"

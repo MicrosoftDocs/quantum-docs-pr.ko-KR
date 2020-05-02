@@ -19,13 +19,13 @@ input:
 output:
   content: Bool
   types:
-  - summary: '`a` 및 `b` 중 정확히 하나가 `true`인 경우에만 `true` 합니다.'
+  - summary: '`true`및 `a` `b` 중 하나만 이면이 `true`고, 그렇지 않으면입니다.'
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: a876025d8b3a928e91d686b90f8ceccd65cc1e7c
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: de35d7427d3de31e27465319bf8fa96ba2fb9aed
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73235144"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82682828"

@@ -9,10 +9,10 @@ input:
   content: '(code : Microsoft.Quantum.ErrorCorrection.QECC, fn : Microsoft.Quantum.ErrorCorrection.RecoveryFn, logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister)'
   types:
   - name: code
-    summary: 퀀텀 오류-`QECC` 형식으로 패키지 된 코드를 수정 하 여 퀀텀 데이터의 인코딩과 디코딩을 설명 하 고 오류 syndromes을 측정 하는 방법을 설명 합니다.
+    summary: 퀀텀 오류- `QECC` 형식으로 패키지 된 코드를 수정 하면 퀀텀 데이터의 인코딩과 디코딩을 설명 하 고 오류 syndromes을 측정 하는 방법을 설명 합니다.
     uid: microsoft.quantum.errorcorrection.qecc
   - name: fn
-    summary: 증후군 각 오류를 검색 된 오류를 수정 하는 `Pauli[]` 작업에 매핑하는 `RecoveryFn`입니다.
+    summary: 검색 `RecoveryFn` 된 오류를 수정 하는 `Pauli[]` 작업에 증후군 각 오류를 매핑하는입니다.
     uid: microsoft.quantum.errorcorrection.recoveryfn
   - name: logicalRegister
     summary: 안정기 코드가 정의 된 요소의 배열입니다.
@@ -27,9 +27,9 @@ seeAlso:
 - microsoft.quantum.canon.recoveryfn
 - microsoft.quantum.canon.logicalregister
 metadata:
-  ms.openlocfilehash: baaa5862dd189a04667081d762900931e6b5e766
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 2a873e06c20bf62c998b1096d862d26ff89aa134
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73220354"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82682298"

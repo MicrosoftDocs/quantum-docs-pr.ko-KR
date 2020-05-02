@@ -3,7 +3,7 @@ uid: microsoft.quantum.simulation.multiplygeneratorindex
 name: MultiplyGeneratorIndex
 type: function
 namespace: Microsoft.Quantum.Simulation
-summary: '`GeneratorIndex`계수를 곱합니다.'
+summary: 에 계수를 곱합니다 `GeneratorIndex`.
 examples: >-
   ```qsharp
 
@@ -28,14 +28,14 @@ input:
 output:
   content: Microsoft.Quantum.Simulation.GeneratorIndex
   types:
-  - summary: 계수가 계수 `multiplier` 큰 항을 나타내는 `GeneratorIndex`입니다.
+  - summary: 계수가 `GeneratorIndex` 계수 `multiplier` 보다 큰 용어를 나타내는입니다.
     uid: microsoft.quantum.simulation.generatorindex
 seeAlso:
 - microsoft.quantum.canon.generatorindex
 metadata:
-  ms.openlocfilehash: a417f41110f95a82e76038680ba76502aae84bd4
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 37a7981f62881e1b8f1a6874508df87c042c6382
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73226236"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82682584"
