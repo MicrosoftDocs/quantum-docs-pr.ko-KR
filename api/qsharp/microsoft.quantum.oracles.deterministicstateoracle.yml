@@ -12,14 +12,14 @@ summary: >-
 
   - 원하는 퀀텀 상태 $ \ket{\psi}\_s $를 저장할 레지스터입니다.
 remarks: >-
-  $O \ket{0}= \ket{\psi} $에서 정의 된이 oracle은 상태 $ \ket{\psi} $을 (를) 만들기 위해 계산 기준 상태 $ \ket{0}$에 대해 작동 합니다.
+  $O \ket{0}= \ket{\psi} $에서 정의한이 oracle은 상태 $ \ket{\psi} $를 만들기 위해 계산{0}기준 상태 $ \ket $에 대해 작동 합니다.
 
   첫 번째 매개 변수는 $ \ket{\psi} $의 기본 비트 레지스터입니다.
 syntax: newtype DeterministicStateOracle = (Qubit[] => Unit is Adj + Ctl);
 metadata:
-  ms.openlocfilehash: bc10b84502866d1f5e19b28e77e54c1b10d01b28
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 35d4b0243fac954c483a81ae1cccb46b44759ca0
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73231132"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82681303"

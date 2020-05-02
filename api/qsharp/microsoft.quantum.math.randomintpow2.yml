@@ -4,7 +4,7 @@ name: RandomIntPow2
 type: operation
 namespace: Microsoft.Quantum.Math
 summary: 지정 된 비트 수로 나타낼 수 있는 모든 정수에서 균일 하 게 샘플링 된 임의의 정수를 생성 합니다.
-remarks: 이 함수는 <xref:microsoft.quantum.intrinsic.random>를 호출 하므로 해당 임의성은 `Random`의 구현에 따라 달라 집니다.
+remarks: 이 함수는 <xref:microsoft.quantum.intrinsic.random>를 호출 하므로 해당 임의성은의 `Random`구현에 따라 달라 집니다.
 syntax: 'operation RandomIntPow2 (maxBits : Int) : Int'
 input:
   content: '(maxBits : Int)'
@@ -20,9 +20,9 @@ output:
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: e690509a7dcd2b1ec51bdde85da6439a688e75e7
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: dec46f725da2f805839f7c03306853c851700027
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73219980"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82681552"
