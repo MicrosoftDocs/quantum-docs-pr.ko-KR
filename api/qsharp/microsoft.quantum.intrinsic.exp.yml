@@ -7,7 +7,7 @@ summary: >-
   다중값 비트 Pauli 연산자의 지 수를 적용 합니다.
 
 
-  \begin{align} e ^ {i \theta [P_0 \otimes P_1 \coP_ {N-1}]}, \end{align} 여기서 $P _i $은 `paulis`의 $i $ th 요소 이며 where $N = $`Length(paulis)`입니다.
+  \begin{align} e ^ {i \theta [P_0 \otime P_1 \coP_ {N-1}]}, \end{align} $P _i $은의 `paulis`$i $ th 요소 이며 where $N = $`Length(paulis)`입니다.
 syntax: 'operation Exp (paulis : Pauli[], theta : Double, qubits : Qubit[]) : Unit'
 input:
   content: '(paulis : Pauli[], theta : Double, qubits : Qubit[])'
@@ -35,9 +35,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: d301f6281d5c8a07479417fab1e25c66e2251a25
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: d66b1b03a751be2629d2c363f538d9afa0310c73
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73067325"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82683819"

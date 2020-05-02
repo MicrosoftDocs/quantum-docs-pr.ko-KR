@@ -11,14 +11,14 @@ input:
 output:
   content: Microsoft.Quantum.ErrorCorrection.RecoveryFn
   types:
-  - summary: 증후군 측정 `Result[]`를 사용 하 고 검색 된 오류를 수정 하는 `Pauli[]` 작업을 반환 하는 `RecoveryFn` 형식의 함수입니다.
+  - summary: 증후군 측정값 `RecoveryFn` `Result[]` 을 사용 하 고 검색 된 오류를 수정 `Pauli[]` 하는 작업을 반환 하는 형식의 함수입니다.
     uid: microsoft.quantum.errorcorrection.recoveryfn
 seeAlso:
 - microsoft.quantum.canon.recoveryfn
 metadata:
-  ms.openlocfilehash: 6b9446f55e47cc96fe0af194b956c51282ae0f1b
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: aeb20fcef86b26fd61f3bbe2594547f1ae212b4c
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73233597"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82683898"
