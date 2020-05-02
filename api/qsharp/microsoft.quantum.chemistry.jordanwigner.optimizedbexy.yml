@@ -3,14 +3,14 @@ uid: microsoft.quantum.chemistry.jordanwigner.optimizedbexy
 name: OptimizedBEXY
 type: operation
 namespace: Microsoft.Quantum.Chemistry.JordanWigner
-summary: $ (X ^ {z + 1}\_pY ^ {z}\_p) Z\_{p-1}에 Pauli 문자열을 적용 하는 단일 $U $ 와 동일 $ on stbits $0. p $ 조건 화 된 on\{0, 1\}$ 및 $p $의 인덱스 $z 합니다. 즉, $ $ \begin{align} U\ket {z} \ k {p} \ k {\ psi} = \ket{z}\ket{p} (X ^ {z + 1}\_pY ^ {z}\_p) Z\_{p-1} ... Z_0\ket {\ psi} \end{align} $ $
+summary: $ (X ^ {z + 1}\_pY ^ {z}\_p) z\_{p-1}에 pauli 문자열을 적용 하는 단일 $U $ 인덱스에서 $ on stbits $0 조건 화 된 p $를 Z_0 합니다 $z \in\{0, 1\}$ 및 $p $입니다. 즉, $ $ \begin{align} U\ket {z} \ k {p} \ k {\ psi} = \ket{z}\ket{p} (X ^ {z + 1}\_pY ^ {z}\_p) z\_{p-1} ... Z_0 \ket{\psi} \end{align} $ $
 syntax: 'operation OptimizedBEXY (pauliBasis : Qubit, indexRegister : Microsoft.Quantum.Arithmetic.LittleEndian, targetRegister : Qubit[]) : Unit'
-references: '- 선형 T 복잡성 Ryan Babbush, Craig Gidney, Dominic Berry, Spectra Wiebe, Jarrod McClean, Alexandru 고, 연한, 오스틴 Fowler, Hartmut Neven https://arxiv.org/abs/1805.03662를 사용 하 여 퀀텀 회로에서 전자 인코딩'
+references: '- 선형 T 복잡성 Ryan Babbush, Craig Gidney, Dominic Berry, 네, Spectra Wiebe, Jarrod McClean, Alexandru 고, 연한, 오스틴 Fowler, Hartmut Neven를 사용 하 여 퀀텀 회로에서 전자 인코딩https://arxiv.org/abs/1805.03662'
 input:
   content: '(pauliBasis : Qubit, indexRegister : Microsoft.Quantum.Arithmetic.LittleEndian, targetRegister : Qubit[])'
   types:
   - name: pauliBasis
-    summary: 이 고 비트가 $ \ket{0}$ 상태 이면 $ $X $가 적용 됩니다. $ \Ket{1}$ 상태 이면 $ $Y $가 적용 됩니다.
+    summary: 이 고가 $ \ket{0}$ 상태에 있는 경우 $X $가 적용 됩니다. 상태가 $ \ket{1}$ 인 경우 $Y $가 적용 됩니다.
     isPrimitive: true
     uid: Qubit
   - name: indexRegister
@@ -30,9 +30,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: e0ac3f2f050ed584053f7da7a310f1855e992141
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 2208efefe094c472d4f179e3a75dae721c4ff211
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73228463"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82665297"
