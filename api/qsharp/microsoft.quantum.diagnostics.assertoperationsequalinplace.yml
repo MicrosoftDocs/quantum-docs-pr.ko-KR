@@ -7,17 +7,17 @@ summary: >-
   두 작업이 지정 된 경우는 모든 입력 상태에 대해 동일 하 게 작동 한다는 것을 어설션 합니다.
 
 
-  이 어설션은 $V의 모든 상태에 대 한 작업의 동작을 확인 하 여 구현 됩니다. \otimes V_ {n-1} $, 여기서 $V _0 $는 $ \ket{0}$, $ \ket{1}$, $ \ket{+} $ 및 $ \ket{i} $ (+ 1 eigenstate Y 연산자의 경우) 중 하나입니다.
+  이 어설션은 \ket $V의 모든 상태에 대 한 작업의 동작을 확인 하 여 구현 됩니다 .이 경우에는 _0\otime ... \otimes V_ {n-1} $로 설정 합니다. 여기서 $V _k $은 ${0}$, ${1}\ket $, $ \ket{+} $ 및 $ \ket{i} $ (+ 1 eigenstate)의 상태입니다.
 
 
   이 어설션은 $ opbits $n를 사용 하 고 비교 되는 작업을 여러 번 호출 해야 합니다.
 syntax: 'operation AssertOperationsEqualInPlace (nQubits : Int, givenU : (Qubit[] => Unit), expectedU : (Qubit[] => Unit is Adj)) : Unit'
-references: 상태 $ \ket{0}$, $ \ket{1}$, $ \ket{+} $ 및 $ \ket{i} $의 기준은 Chuang [ *, Nielsen,* ](https://arxiv.org/abs/quant-ph/9610001)Chuang에 설명 된 Nielsen 기반입니다.
+references: 상태 $ \ket{0}$, $ \ket{1}$, $ \ket{+} $ 및 $ \ket{i} $의 기준은 Chuang, Nielsen [ *,* ](https://arxiv.org/abs/quant-ph/9610001)Chuang에 설명 된 Nielsen 기반입니다.
 input:
   content: '(nQubits : Int, givenU : (Qubit[] => Unit), expectedU : (Qubit[] => Unit is Adj))'
   types:
   - name: nQubits
-    summary: 작업 `givenU` 및 `expectedU` 작업을 수행할 수 있는, $ $n의 수입니다.
+    summary: 작업이 `givenU` 수행 하 고 `expectedU` 작동 하는 $n $의 수입니다.
     isPrimitive: true
     uid: Int
   - name: givenU
@@ -33,7 +33,7 @@ input:
       - isPrimitive: true
         uid: Unit
   - name: expectedU
-    summary: '`givenU` $n $의 참조 작업을 비교 합니다.'
+    summary: 비교할 $로 비트 `givenU` $n에 대 한 참조 연산입니다.
     isOperation: true
     input:
       types:
@@ -54,9 +54,9 @@ output:
 seeAlso:
 - assertoperationsequalreferenced
 metadata:
-  ms.openlocfilehash: a6c58f51bbc30f3917457d4137afb083533519fe
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 007bb4b3dedd5a95fc464608fe8160784b02341b
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73225760"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82657026"

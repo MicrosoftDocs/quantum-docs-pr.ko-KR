@@ -4,7 +4,7 @@ name: RangeReverse
 type: function
 namespace: Microsoft.Quantum.Core
 summary: 입력 범위의 역순 인 새 범위를 반환 합니다.
-remarks: 범위를 반대로 하는 것은 단순히 `end`.`-step`.`start`범위의 실제 마지막 요소가 `end`와 다를 수 있기 때문입니다.
+remarks: 범위를 반대로 하는 것은 간단 `end`합니다. `-step`.. `start`범위의 실제 마지막 요소가와 `end`같을 수 없기 때문입니다.
 syntax: 'function RangeReverse (r : Range) : Range'
 input:
   content: '(r : Range)'
@@ -20,9 +20,9 @@ output:
     isPrimitive: true
     uid: Range
 metadata:
-  ms.openlocfilehash: 978a476556d01f48533540333b5951f83da3d6dc
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: d6fbf120ecb9bff176857cf8d3c48d6f08da0bde
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73066628"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82657378"
