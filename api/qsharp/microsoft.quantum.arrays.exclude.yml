@@ -31,7 +31,7 @@ input:
 output:
   content: "'T[]"
   types:
-  - summary: '`output[0]`는 인덱스가 `remove`에 표시 되지 않는 `array`의 첫 번째 요소입니다. 이러한 요소는 두 번째 요소와 같은 방식으로 `output[1]` `output` 합니다.'
+  - summary: '인덱스를 `output` 에 `output[0]` `output[1]` `array` `remove`표시 하지 않는의 첫 번째 요소 (예: 두 번째 요소 등) 인 배열입니다.'
     isArray: true
     uid: "'T"
     isLocal: true
@@ -39,9 +39,9 @@ typeParameters:
 - uid: "'T"
   summary: 배열 요소의 형식입니다.
 metadata:
-  ms.openlocfilehash: 624021333e156a4da58509186bffa3074cf44f85
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 715610f2e8d0932a22d6dfdd0232e981a495fd6f
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73214302"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676474"

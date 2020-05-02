@@ -7,11 +7,11 @@ summary: >-
   정수 상수를 기준으로 하는 이상 비트 레지스터의 모듈식 증분을 수행 합니다.
 
 
-  `target` $에 의해 $y에서 $N $ 및 정수로 인코딩된 $a $, `modulus` `increment`를 나타냅니다.
+  $A $, `increment` `modulus` $N $ 및 $y $로 인코딩된 `target` 정수를 사용 하 여 나타냅니다.
 
   그런 다음이 작업은 다음 변환을 수행 합니다. \begin{align} \ket{y} \maps\ket{(y + a) \operatorname{mod} N} \end{align} 정수는 QFT로 거의 endian 형식으로 인코딩됩니다.
 remarks: >-
-  `target` 가장 높은 비트가 0으로 설정 된 것으로 가정 합니다.
+  에 가장 `target` 높은 비트가 0으로 설정 된 것으로 가정 합니다.
 
   또한은 대상의 값이 $ $N 미만 이라고 가정 합니다.
 
@@ -30,7 +30,7 @@ input:
     isPrimitive: true
     uid: Int
   - name: target
-    summary: '`increment` $a $가에 추가 되는, 단계에서 인코딩된 작은 endian 형식의 정수 $y $입니다.'
+    summary: $A $가에 추가 되는 `increment` 단계 인코딩된 작은 endian 형식의 정수 $y $입니다.
     uid: microsoft.quantum.arithmetic.phaselittleendian
 output:
   content: Unit
@@ -43,9 +43,9 @@ functors:
 seeAlso:
 - microsoft.quantum.arithmetic.incrementbymodularinteger
 metadata:
-  ms.openlocfilehash: 69240c9ecac0917f8f2a6d1f6a3554cc93269cbd
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: e97f88d64d9188d18b10ed7f67adc0225167c466
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76871416"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676846"

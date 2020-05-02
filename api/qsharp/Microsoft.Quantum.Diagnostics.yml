@@ -36,19 +36,19 @@ operations:
 - uid: microsoft.quantum.diagnostics.assertallzero
   summary: 지정 된 비트를 모두 $ \ket{0}$ state로 지정 하는 어설션입니다.
 - uid: microsoft.quantum.diagnostics.assertallzerowithintolerance
-  summary: 지정 된 \ket는 지정 된 허용 오차까지 모두 ${0}$ 상태에 있습니다.
+  summary: 지정 된 것과 같은 Assert는 지정 된 허용{0}오차까지 모두 $ \ket $ 상태에 있습니다.
 - uid: microsoft.quantum.diagnostics.assertoperationsequalinplace
   summary: >-
     두 작업이 지정 된 경우는 모든 입력 상태에 대해 동일 하 게 작동 한다는 것을 어설션 합니다.
 
 
-    이 어설션은 $V의 모든 상태에 대 한 작업의 동작을 확인 하 여 구현 됩니다. \otimes V_ {n-1} $, 여기서 $V _k $은 상태 $ \ket{0}$, $ \ket{1}$, $ \ket{+} $ 및 $ \ket{i} $ (+ 1 eigenstate Y 연산자의 1 eigenstate) 중 하나입니다.
+    이 어설션은 \ket $V의 모든 상태에 대 한 작업의 동작을 확인 하 여 구현 됩니다 .이 경우에는 _0\otime ... \otimes V_ {n-1} $로 설정 합니다. 여기서 $V _k $은 ${0}$, ${1}\ket $, $ \ket{+} $ 및 $ \ket{i} $ (+ 1 eigenstate)의 상태입니다.
 
 
     이 어설션은 $ opbits $n를 사용 하 고 비교 되는 작업을 여러 번 호출 해야 합니다.
 - uid: microsoft.quantum.diagnostics.assertoperationsequalinplacecompbasis
   summary: >-
-    연산에 대 한 작업의 동작을 확인 하 여 지정 된 입력 크기에 대 한 작업의 `expectedU` 작업 `givenU` 같은지 확인 합니다.
+    계산 단위의 벡터 에서만 `givenU` 작업의 동작을 확인 `expectedU` 하 여 작업이 지정 된 입력 크기에 대 한 작업과 같은지 확인 합니다.
 
     이는 두 unitaries의 같음에 대 한 필수 조건 이지만 충분 하지 않습니다.
 - uid: microsoft.quantum.diagnostics.assertoperationsequalreferenced
@@ -62,27 +62,29 @@ operations:
 
     이 어설션을 사용 하면 예를 들어, 작업의 최적화 된 버전이 naive 구현에 동일 하 게 작동 하거나, 비 퀀텀 입력 범위에서 작동 하는 작업이 알려진 사례에 동의 하는 경우를 확인할 수 있습니다.
 - uid: microsoft.quantum.diagnostics.assertqubit
-  summary: Eibit `q`가 Pauli Z 연산자의 예상 eigenstate 임을 어설션 합니다.
+  summary: Eibit `q` 가 Pauli Z 연산자의 예상 eigenstate 임을 어설션 합니다.
 - uid: microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance
   summary: >-
     예상 상태에서의 비트를 어설션 합니다.
 
 
-    `expected`는 복합 벡터, $ \ket{\psi} = \begin{bmatrix}a & b\end {bmatrix} ^ {\mathrm{T}} $를 나타냅니다.
+    `expected`복합 벡터, $ \ket{\psi} = \begin{bmatrix}a & b\end {bmatrix} ^ {\mathrm{T}} $를 나타냅니다.
 
     $A $, $b $를 나타내는 튜플의 첫 번째 요소는 복소수의 실수부 이며 두 번째 요소는 허수 부분입니다.
 
     마지막 인수는 어설션이 만들어지는 허용 오차를 정의 합니다.
 - uid: microsoft.quantum.diagnostics.assertqubitwithintolerance
-  summary: 지정 된 허용 오차까지 강화 비트 `q` Pauli Z 연산자의 예상 eigenstate 임을 어설션 합니다.
+  summary: '`q` 지정 된 허용 오차까지 해당 하는 Pauli Z 연산자의 예상 된 eigenstate를 어설션 합니다.'
 newtypes:
+- uid: microsoft.quantum.diagnostics.enabletestingvianame
+  summary: 컴파일러에서 인식할 수 있는 특성으로, 형식을 로드 하거나 테스트 목적으로 호출할 때 사용할 수 있는 대체 이름을 정의할 수 있습니다.
 - uid: microsoft.quantum.diagnostics.test
   summary: 단위 테스트를 표시 하는 데 사용 되는 컴파일러에서 인식할 수 있는 특성입니다.
 summary: " # <a name=\"summary\"></a>요약\n 이 네임 스페이스는 어설션 작업 및 클레임 함수를 비롯 하 여 진단 목적에 유용한 함수 및 작업을 포함 합니다."
 metadata:
-  ms.openlocfilehash: 353750a6714b1cdd54ff866657a39bb825e34425
-  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.openlocfilehash: 5e580bb50983d5c0e65d3284408bae04a5e92756
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 02/28/2020
-  ms.locfileid: "77905916"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676952"
