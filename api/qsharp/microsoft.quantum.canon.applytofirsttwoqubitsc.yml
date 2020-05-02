@@ -6,9 +6,9 @@ namespace: Microsoft.Quantum.Canon
 summary: >-
   레지스터의 처음 두 비트에 작업을 적용 합니다.
 
-  한정자 `C`는 작업을 제어할 수 있음을 나타냅니다.
+  한정자 `C` 는 작업을 제어할 수 있음을 나타냅니다.
 remarks: >-
-  이는 다음과 같습니다.
+  다음 코드와 동일합니다.
 
 
   ```qsharp
@@ -50,9 +50,9 @@ functors:
 seeAlso:
 - microsoft.quantum.canon.applytofirsttwoqubits
 metadata:
-  ms.openlocfilehash: def9af6b641d5f4a3301c77319dfbf55e348f142
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 2d7fd1ab6e588300f90f0f50881d2eef4680e5c8
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73225522"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82674672"

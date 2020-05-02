@@ -6,9 +6,9 @@ namespace: Microsoft.Quantum.Canon
 summary: >-
   레지스터의 처음 두 비트에 작업을 적용 합니다.
 
-  한정자 `CA` 작업을 제어 하 고 adjointable 나타냅니다.
+  한정자 `CA` 는 작업을 제어 하 고 adjointable 나타냅니다.
 remarks: >-
-  이는 다음과 같습니다.
+  다음 코드와 동일합니다.
 
 
   ```qsharp
@@ -52,9 +52,9 @@ functors:
 seeAlso:
 - microsoft.quantum.canon.applytofirsttwoqubits
 metadata:
-  ms.openlocfilehash: 2be73c142e21e24cae00db9d045f3fa3e6b504f8
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: fc1291d7fda28978ae73746310f0adf3d4935efb
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73213112"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82674650"

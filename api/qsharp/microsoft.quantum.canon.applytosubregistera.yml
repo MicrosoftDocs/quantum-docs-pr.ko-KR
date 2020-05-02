@@ -6,7 +6,7 @@ namespace: Microsoft.Quantum.Canon
 summary: >-
   인스턴스의 하위 레지스터에 작업을 적용 합니다. 여기서는 해당 인덱스의 배열에 지정 된 것과 같은 작업을 수행 합니다.
 
-  한정자 `A` 작업이 adjointable 나타냅니다.
+  한정자 `A` 는 작업이 adjointable를 나타냅니다.
 syntax: 'operation ApplyToSubregisterA (op : (Qubit[] => Unit is Adj), idxs : Int[], target : Qubit[]) : Unit'
 input:
   content: '(op : (Qubit[] => Unit is Adj), idxs : Int[], target : Qubit[])'
@@ -45,9 +45,9 @@ functors:
 seeAlso:
 - microsoft.quantum.canon.applytosubregister
 metadata:
-  ms.openlocfilehash: f1919f13315674c7842da776a1b9fdb38f496754
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: e1311150f5e7a246df8f2bb91bbdc4e1dd677de2
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73212925"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82674549"

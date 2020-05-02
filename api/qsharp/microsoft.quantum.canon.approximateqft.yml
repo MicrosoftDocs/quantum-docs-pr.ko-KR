@@ -22,7 +22,7 @@ input:
       QFT 회로에서 발생 하는 제어 된 Z 회전이 정리 되는 수준을 결정 하는 근사값 매개 변수입니다.
 
 
-      근사값 매개 변수 a는 Z 회전의 정리 수준을 결정 합니다. 즉, ∈ {0. n}과 (와) 모든 Z 회전 2π/2k를 결정 합니다. 여기서 k > a는 QFT 회로에서 제거 됩니다. K > = log ₂ (n) + log ₂ (1/ε) + 3을 바인딩할 수 있는 것으로 알려져 있습니다. | | QFT-AQFT | | ε를 < 합니다.
+      근사값 매개 변수 a는 Z 회전의 정리 수준을 결정 합니다. 즉, ∈ {0. n}과 (와) 모든 Z 회전 2π/2k를 결정 합니다. 여기서 k>a는 QFT 회로에서 제거 됩니다. K >= log ₂ (n) + log ₂ (1/ε) + 3을 바인딩할 수 있는 것으로 알려져 있습니다. | | QFT-AQFT | | Ε를<합니다.
     isPrimitive: true
     uid: Int
   - name: qs
@@ -37,9 +37,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 6d650d4c1d80e747df7560c630543189513d252a
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 44d6a5937924f13cab04137bd3d0eb81396824c9
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73212534"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82674400"

@@ -7,21 +7,21 @@ summary: >-
   Equal superposition 상태의 단계가 예상 값을 포함 한다는 것을 어설션 합니다.
 
 
-  구체적으로 말해서, 일부 임의 실수 t에 대해 $ \frac{e ^ {i t}} {\phi{2}} (e ^ {i\phi k} \ k{1}) $로 표현 될 수 있는 퀀텀 상태의 $ \eml$ 단계는 예상 값을 갖습니다.
+  특히, 일부 임의 실수 t의 경우 $ \frac{e ^ {i t}} {\phi{2}} (e ^ {i\eml} \ k{0} + e ^ {-i\eml} \ k{1}) $로 표현 될 수 있는 퀀텀 상태의 $ \eml$ 단계에 필요한 값이 있습니다.
 examples: >-
-  다음 어설션이 성공 합니다. `qubit` 상태 $ \ket{\psi} = e ^ {i 0.5} \ sqrt {1/2} \ k{0}+ e ^ {i 0.5} \ sqrt {1/2} \ k{1}$;
+  다음 어설션이 성공 합니다. `qubit` 는 상태 $ \ket{\psi} = e ^ {i 0.5} \ sqrt {1/2} \ k{0}+ e ^ {i 0.5} \ a 1/2} \ k{1}$;입니다.
 
 
   - `AssertPhase(0.0,qubit,10e-10);`
 
 
-  `qubit`은 (는) $ \ket{\psi} = e ^ {i 0.5} \ sqrt {1/2} \ k{0}+ e ^ {-i-i 0.5} \ sqrt {1/2} \ k{1}$;입니다.
+  `qubit`상태 $ \ket{\psi} = e ^ {i 0.5} \ sqrt {1/2} \ k{0}+ e ^ {-i 0.5} \ sqrt {1/2} \ k{1}$;
 
 
   - `AssertPhase(0.5,qubit,10e-10);`
 
 
-  `qubit`은 (는) $ \ket{\psi} = e ^ {-i 2.2} \ sqrt {1/2} \ k{0}+ e ^ {i 0.2} \ sqrt {1/2} \ k{1}$;입니다.
+  `qubit`상태 $ \ket{\psi} = e ^ {-i 2.2} \ sqrt {1/2} \ k{0}+ e ^ {i 0.2} \ a s t 1/2} \ k{1}$;입니다.
 
 
   - `AssertPhase(-1.2,qubit,10e-10);`
@@ -47,9 +47,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 2eaeb042f68a2a5c0cff65918653c37f26ab8d4b
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: ecfc39806fb1ffe504c76889fb36949b4fee2ed4
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73212245"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82674309"

@@ -6,7 +6,7 @@ namespace: Microsoft.Quantum.Canon
 summary: >-
   레지스터의 인덱싱된 각 요소에 단일 수준 비트 작업을 적용 합니다.
 
-  한정자 `C`는 단일 비트 작업을 제어할 수 있음을 나타냅니다.
+  한정자 `C` 는 단일 비트 작업을 제어할 수 있음을 나타냅니다.
 syntax: "operation ApplyToEachIndexC (singleElementOperation : ((Int, 'T) => Unit is Ctl), register : 'T[]) : Unit"
 input:
   content: "(singleElementOperation : ((Int, 'T) => Unit is Ctl), register : 'T[])"
@@ -44,9 +44,9 @@ functors:
 seeAlso:
 - microsoft.quantum.canon.applytoeachindex
 metadata:
-  ms.openlocfilehash: ca5ba68229968b43d28535e3bf728b2b8a8ef4fb
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 975cefaacf1e8f4fb6e80daf94ad4caecd7adb8d
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73068447"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82674826"

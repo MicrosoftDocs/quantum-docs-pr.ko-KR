@@ -6,7 +6,7 @@ namespace: Microsoft.Quantum.Canon
 summary: >-
   레지스터의 각 요소에 단일 수준 비트 작업을 적용 합니다.
 
-  한정자 `A` 단일의 비트 연산이 adjointable 나타냅니다.
+  한정자 `A` 는 단일의 비트 연산이 adjointable을 나타냅니다.
 examples: >-
   3-이상 비트 $ \ket{+} $ 상태 준비:
 
@@ -53,9 +53,9 @@ functors:
 seeAlso:
 - microsoft.quantum.canon.applytoeach
 metadata:
-  ms.openlocfilehash: d440958aac7e8cd36351d4ace7e744b02c28d7bf
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 8638734df992bc0ae76b8d19e46c65a1ffd57981
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73210311"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82674915"

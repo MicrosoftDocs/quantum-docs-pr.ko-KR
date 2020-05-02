@@ -11,7 +11,7 @@ input:
 output:
   content: (Microsoft.Quantum.ErrorCorrection.RecoveryFn, Microsoft.Quantum.ErrorCorrection.RecoveryFn)
   types:
-  - summary: 증후군 측정 `Result[]`를 사용 하 고 검색 된 오류를 수정 하는 `Pauli[]` 작업을 반환 하는 `RecoveryFn` 형식의 함수 튜플입니다.
+  - summary: 증후군 측정값 `RecoveryFn` `Result[]` 을 사용 하 고 검색 된 오류를 수정 하는 `Pauli[]` 작업을 반환 하는 형식의 함수 튜플입니다.
     types:
     - uid: microsoft.quantum.errorcorrection.recoveryfn
     - uid: microsoft.quantum.errorcorrection.recoveryfn
@@ -19,9 +19,9 @@ seeAlso:
 - steanecoderecoveryx
 - steanecoderecoveryz
 metadata:
-  ms.openlocfilehash: 9dd537688434c4729e6121b4ba230415504eb309
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 15d089219fa733582a4663f3c95aa65f9b39cf68
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73228429"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82674237"
