@@ -6,7 +6,7 @@ namespace: Microsoft.Quantum.Canon
 summary: >-
   전원에 대 한 작업을 발생 시킵니다.
 
-  한정자 `A` 작업이 adjointable 나타냅니다.
+  한정자 `A` 는 작업이 adjointable를 나타냅니다.
 
 
   즉, $ $U $를 나타내는 작업이 지정 된 경우 power $m $에 대해 ^ m $ $U 새 작업을 반환 합니다.
@@ -52,9 +52,9 @@ typeParameters:
 seeAlso:
 - microsoft.quantum.canon.operationpow
 metadata:
-  ms.openlocfilehash: 4177a3004d730ca3045ad0935c05e4e829fd44d4
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: 4cae162ca7528f8cf59a5cbd6e9102a222f2a6f8
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76871535"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82678696"

@@ -7,9 +7,9 @@ summary: >-
   정수 범위의 데카르트 제곱에 있는 각 인덱스에 대해 작업을 적용 합니다.
 
 
-  `0..(bound - 1)`범위에서 데카르트 제곱의 각 요소에 대 한 작업을 반복적으로 적용 합니다.
+  범위 `0..(bound - 1)`에서 데카르트 제곱의 각 요소에 대 한 작업을 반복적으로 적용 합니다.
 examples: >-
-  작업 `op`지정 된 다음 두 코드 조각은 동일 합니다.
+  작업 `op`을 지정 하는 경우 다음 두 코드 조각이 동일 합니다.
 
 
   ```Q#
@@ -39,7 +39,7 @@ input:
   content: '(power : Int, bound : Int, op : (Int[] => Unit))'
   types:
   - name: power
-    summary: '`0..(bound - 1)` 범위를 발생 시켜야 하는 데카르트 제곱입니다.'
+    summary: 범위가 `0..(bound - 1)` 발생 해야 하는 데카르트 제곱입니다.
     isPrimitive: true
     uid: Int
   - name: bound
@@ -66,9 +66,9 @@ output:
 seeAlso:
 - microsoft.quantum.canon.iteratethroughcartesianproduct
 metadata:
-  ms.openlocfilehash: 4679e1b569dab167eecbb22947543ab993d7fa8d
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: a6f2d0e1f99c6cf7038803271af974a1c5fca465
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76870940"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82679067"

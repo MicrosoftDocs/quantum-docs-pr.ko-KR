@@ -11,10 +11,10 @@ summary: >-
 
   이는 작업 형식의 입력이 예상 될 때마다 유용할 수 있지만 아무 동작도 수행 하지 않아야 합니다.
 
-  예를 들어 특정 오류 수정 증후군에서 오류가 발생 하지 않았음을 나타내는 경우 올바른 복구 절차를 `NoOp<Qubit[]>` 수 있습니다.
+  예를 들어 특정 오류 수정 증후군에서 오류가 발생 하지 않았음을 나타내는 경우는 올바른 `NoOp<Qubit[]>` 복구 프로시저일 수 있습니다.
 
-  마찬가지로 작업에서 상태 준비 절차를 `NoOp<Qubit[]>` 입력으로 예상 하는 경우 $ \ket{0 \cdots 0} $ 상태를 준비 하는 데 사용할 수 있습니다.
-remarks: 거의 모든 경우에 `NoOp`의 형식 매개 변수를 명시적으로 지정 해야 합니다. 예를 들어 `NoOp<Qubit>`은 <xref:microsoft.quantum.intrinsic.i>와 동일 합니다.
+  마찬가지로 작업에서 상태 준비 절차를 입력으로 예상 하는 경우 `NoOp<Qubit[]>` 에는 $ \ket{0 \cst0} $ 상태를 준비 하는 데 사용할 수 있습니다.
+remarks: 거의 모든 경우에 대 한 `NoOp` 형식 매개 변수를 명시적으로 지정 해야 합니다. 예를 들어 `NoOp<Qubit>` 은와 동일 <xref:microsoft.quantum.intrinsic.i>합니다.
 syntax: "operation NoOp (input : 'T) : Unit"
 input:
   content: "(input : 'T)"
@@ -34,9 +34,9 @@ functors:
 seeAlso:
 - microsoft.quantum.intrinsic.i
 metadata:
-  ms.openlocfilehash: 8752eb93c1fba59065518ffd4665ea6f110ce1cc
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 74c85340e065929feabb81d7e97339f80255c0f6
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73222683"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82678728"
