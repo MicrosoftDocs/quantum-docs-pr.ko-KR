@@ -4,7 +4,7 @@ name: DoubleAsString
 type: function
 namespace: Microsoft.Quantum.Convert
 summary: 지정 된 배정밀도 부동 소수점 숫자를 해당 하는 문자열 표현으로 변환 합니다.
-remarks: 자세한 내용은 [ C# Convert](https://docs.microsoft.com/dotnet/api/system.convert.tostring?view=netframework-4.7.1#System_Convert_ToString_System_Double_) 를 참조 하십시오.
+remarks: '자세한 내용은 [c # Convert](https://docs.microsoft.com/dotnet/api/system.convert.tostring?view=netframework-4.7.1#System_Convert_ToString_System_Double_) 를 참조 하십시오.'
 syntax: 'function DoubleAsString (a : Double) : String'
 input:
   content: '(a : Double)'
@@ -18,9 +18,9 @@ output:
   - isPrimitive: true
     uid: String
 metadata:
-  ms.openlocfilehash: f946d55fe15879763df03b0a281d0ec1b3dc05d2
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 23f1323f87b4a49ab314b152133a0dab6febd814
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73066849"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82660270"

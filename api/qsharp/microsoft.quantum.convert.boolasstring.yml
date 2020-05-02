@@ -4,7 +4,7 @@ name: BoolAsString
 type: function
 namespace: Microsoft.Quantum.Convert
 summary: 지정 된 부울 값을 해당 하는 문자열 표현으로 변환 합니다.
-remarks: 자세한 내용은 [ C# Convert](https://docs.microsoft.com/dotnet/api/system.convert.tostring?view=netframework-4.7.1#System_Convert_ToString_System_Boolean_) 를 참조 하십시오.
+remarks: '자세한 내용은 [c # Convert](https://docs.microsoft.com/dotnet/api/system.convert.tostring?view=netframework-4.7.1#System_Convert_ToString_System_Boolean_) 를 참조 하십시오.'
 syntax: 'function BoolAsString (a : Bool) : String'
 input:
   content: '(a : Bool)'
@@ -18,9 +18,9 @@ output:
   - isPrimitive: true
     uid: String
 metadata:
-  ms.openlocfilehash: edcc398ab30909ed7965fbb484ebd4f6917a9053
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: d315f5a20820f722afdc5a01b6a4724d355d2b55
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73232356"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82660677"
