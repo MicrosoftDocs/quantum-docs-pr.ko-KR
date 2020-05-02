@@ -6,12 +6,12 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.pulls
-ms.openlocfilehash: a4373a65688893c95e0475356c8f6fca0912f8c5
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 82af3b5123588cc06882f746ffcb0402ad3f0f2e
+ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77907463"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82686848"
 ---
 # <a name="opening-pull-requests"></a>끌어오기 요청 열기 #
 
@@ -39,7 +39,7 @@ Git 및 GitHub를 함께 사용 하면 퀀텀 개발 키트를 통해 광범위 
 Git에서 작업 하는 경우 변경 내용은 해당 변경 내용이 리포지토리의 상태와 어떻게 관련 되어 있는지를 설명 하는 _커밋_ 으로 표시 됩니다.
 이전 커밋에서 화살표가 있는 원으로 커밋을 그리는 다이어그램을 그리는 경우가 종종 있습니다.
 
-`feature`이라는 _분기_ 에서 기여를 시작 했다고 가정 합니다.
+이라는 `feature` _분기_ 에서 기여를 시작 했다고 가정 합니다.
 그러면 **Microsoft/퀀텀** 분기가 다음과 같이 표시 될 수 있습니다.
 
 ![GitHub의 작업 분기](~/media/git-workflow-step0.png)
@@ -60,9 +60,9 @@ Git에서 작업 하는 경우 변경 내용은 해당 변경 내용이 리포�
 
 ## <a name="how-to-make-a-pull-request"></a>끌어오기 요청을 만드는 방법 ##
 
-끌어오기 요청을 만드는 두 가지 주요 방법이 있습니다.
-단일 파일에만 영향을 주는 작은 변경의 경우 GitHub 웹 인터페이스를 사용 하 여 끌어오기 요청을 완전히 온라인 상태로 만들 수 있습니다.
-더 복잡 한 기여를 위해 먼저 로컬 컴퓨터를 사용 하 여 끌어오기 요청을 준비 하는 것이 더 쉽습니다.
+끌어오기 요청을 만드는 두 가지 주요 방법이 있습니다.  
+단일 파일에만 영향을 주는 작은 변경의 경우 GitHub 웹 인터페이스를 사용 하 여 끌어오기 요청을 완전히 온라인 상태로 만들 수 있습니다. 편집 하려는 파일로 이동 하 여 편집 아이콘을 사용 하면 됩니다.  
+더 복잡 한 기여를 위해 먼저 리포지토리를 로컬 컴퓨터에 복제 하 여 끌어오기 요청을 준비 하는 것이 가장 쉽습니다.
 
 <!--
 ### Using the Web Interface ###
