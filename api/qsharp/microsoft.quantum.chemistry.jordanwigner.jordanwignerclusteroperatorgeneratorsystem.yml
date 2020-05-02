@@ -3,24 +3,24 @@ uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerclusteroperatorgenerat
 name: JordanWignerClusterOperatorGeneratorSystem
 type: function
 namespace: Microsoft.Quantum.Chemistry.JordanWigner
-summary: '`JWOptimizedHTerms`에 설명 된 Hamiltonian를이 파일에 정의 된 `GeneratorIndex` 규칙을 기준으로 표현 되는 `GeneratorSystem` 변환 합니다.'
+summary: 에 설명 `JWOptimizedHTerms` 된 Hamiltonian를이 파일 `GeneratorSystem` 에 정의 된 `GeneratorIndex` 규칙의 용어로 표현 된로 변환 합니다.
 syntax: 'function JordanWignerClusterOperatorGeneratorSystem (data : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerInputState[]) : Microsoft.Quantum.Simulation.GeneratorSystem'
 input:
   content: '(data : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerInputState[])'
   types:
   - name: data
-    summary: '`JWOptimizedHTerms` 형식의 Hamiltonian에 대 한 설명입니다.'
+    summary: 형식의 Hamiltonian에 `JWOptimizedHTerms` 대 한 설명입니다.
     isArray: true
     uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerinputstate
 output:
   content: Microsoft.Quantum.Simulation.GeneratorSystem
   types:
-  - summary: '`GeneratorSystem`Hamiltonian 표현입니다.'
+  - summary: Hamiltonian의 표현 `GeneratorSystem`입니다.
     uid: microsoft.quantum.simulation.generatorsystem
 metadata:
-  ms.openlocfilehash: d1521bfa75ed2383ca13dca1bfeae78c59ebf0b9
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: f9e635e746efda5aaaacc563a645ab494df33171
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73228769"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82667511"
