@@ -4,7 +4,7 @@ name: RandomReal
 type: operation
 namespace: Microsoft.Quantum.Math
 summary: 0 보다 크거나 같고 1 보다 작은 간격의 임의의 실수를 반환 합니다.
-remarks: 이 함수는 <xref:microsoft.quantum.intrinsic.random>를 호출 하므로 해당 임의성은 `Random`의 구현에 따라 달라 집니다.
+remarks: 이 함수는 <xref:microsoft.quantum.intrinsic.random>를 호출 하므로 해당 임의성은의 `Random`구현에 따라 달라 집니다.
 syntax: 'operation RandomReal (bitsRandom : Int) : Double'
 input:
   content: '(bitsRandom : Int)'
@@ -24,9 +24,9 @@ output:
   - isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: c0780e0b8771c74a04145d5dce70d47dfefafa0e
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: b3974f5b12f8d49cc7920021caad98f6e2f3a60c
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73219963"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82681519"

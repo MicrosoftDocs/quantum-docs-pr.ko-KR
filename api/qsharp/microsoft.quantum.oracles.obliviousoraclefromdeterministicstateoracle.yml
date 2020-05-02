@@ -3,29 +3,29 @@ uid: microsoft.quantum.oracles.obliviousoraclefromdeterministicstateoracle
 name: ObliviousOracleFromDeterministicStateOracle
 type: function
 namespace: Microsoft.Quantum.Oracles
-summary: Oracles `DeterministicStateOracle`와 `ObliviousOracle`를 결합 합니다.
+summary: Oracles `DeterministicStateOracle` 와 `ObliviousOracle`를 결합 합니다.
 syntax: 'function ObliviousOracleFromDeterministicStateOracle (ancillaOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle) : Microsoft.Quantum.Oracles.ObliviousOracle'
 input:
   content: '(ancillaOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle)'
   types:
   - name: ancillaOracle
-    summary: 형식에 대 한 상태 준비 oracle $A $ $a $에서 작동 `DeterministicStateOracle`.
+    summary: 등록 $a $에서 동작 하는 형식의 `DeterministicStateOracle` 상태 준비 oracle $A $.
     uid: microsoft.quantum.oracles.deterministicstateoracle
   - name: signalOracle
-    summary: '`ObliviousOracle` 형식의 oracle $U $은 (는) register $a, s $에 공동으로 작동 합니다.'
+    summary: Register $a, s $에 `ObliviousOracle` 대해 공동으로 동작 하는 유형의 oracle $U $입니다.
     uid: microsoft.quantum.oracles.obliviousoracle
 output:
   content: Microsoft.Quantum.Oracles.ObliviousOracle
   types:
-  - summary: '`ObliviousOracle`유형의 oracle $O = UA $입니다.'
+  - summary: 유형의 `ObliviousOracle`oracle $O = UA $입니다.
     uid: microsoft.quantum.oracles.obliviousoracle
 seeAlso:
 - microsoft.quantum.canon.deterministicstateoracle
 - microsoft.quantum.canon.obliviousoracle
 metadata:
-  ms.openlocfilehash: 2fc80a583ef8990b0a9043e4847d926f37b48b77
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 036d89ed2a9b3a0db2637964e4fabec7352a67d9
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73231013"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82681236"
