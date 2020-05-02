@@ -3,7 +3,7 @@ uid: microsoft.quantum.math.tan
 name: Tan
 type: function
 namespace: Microsoft.Quantum.Math
-summary: 지정 된 각도의 탄젠트를 반환 합니다.
+summary: 지정된 각도의 탄젠트를 반환합니다.
 remarks: 자세한 내용은 [system.object](https://docs.microsoft.com/dotnet/api/system.math.tan) 를 참조 하십시오.
 syntax: 'function Tan (d : Double) : Double'
 input:
@@ -18,9 +18,9 @@ output:
   - isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: c29912fc156464205c83adcc21589bf67d093bed
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 43d55386584dac788dcc0a6bc8fac79fd9028504
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73231608"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673533"

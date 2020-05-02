@@ -25,7 +25,7 @@ functions:
 - uid: microsoft.quantum.extensions.math.divremb
   summary: "\n> [!WARNING]\n> 사용되지 않음\n\nDivRemB는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.math.divreml\"를 사용하십시오.\n@\"microsoft.quantum.math.divreml\"를 사용하세요."
 - uid: microsoft.quantum.extensions.math.e
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nE는 사용 되지 않습니다. @\"microsoft.quantum.math.e\"를 사용 하세요. 사용합니다.\n@\"microsoft.quantum.math.e\"를 사용하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nE는 사용 되지 않습니다. 다음을 사용 하세요.@\"microsoft.quantum.math.e\" 사용합니다.\n@\"microsoft.quantum.math.e\"를 사용하세요."
 - uid: microsoft.quantum.extensions.math.expd
   summary: "\n> [!WARNING]\n> 사용되지 않음\n\n더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.math.expd\"를 사용하십시오.\n@\"microsoft.quantum.math.expd\"를 사용하세요."
 - uid: microsoft.quantum.extensions.math.floor
@@ -75,9 +75,9 @@ functions:
 - uid: microsoft.quantum.extensions.math.truncate
   summary: "\n> [!WARNING]\n> 사용되지 않음\n\nTruncate는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.math.truncate\"를 사용하십시오.\n@\"microsoft.quantum.math.truncate\"를 사용하세요."
 metadata:
-  ms.openlocfilehash: 1eb20bd8834d2a34022ee503808fd26eccaf8c64
-  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+  ms.openlocfilehash: b94b4c7aa1523d9f3e8b42359e759ffa356b25ea
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 12/05/2019
-  ms.locfileid: "74858839"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673252"

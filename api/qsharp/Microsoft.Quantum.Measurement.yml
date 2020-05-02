@@ -13,15 +13,15 @@ operations:
 - uid: microsoft.quantum.measurement.mresety
   summary: Y를 기준으로 단일의 비트를 측정 하 고이를 표준 기준 상태로 다시 설정 합니다. | 0 〉 측정 다음
 - uid: microsoft.quantum.measurement.mresetz
-  summary: '`Z` 기준으로 단일 비트를 측정 하 고이를 표준 기준 상태로 다시 설정 합니다. | 0 〉 측정을 따릅니다.'
+  summary: 단일 비트를 `Z` 기준으로 측정 하 고이를 표준 기준 상태로 다시 설정 합니다. | 0 〉
 - uid: microsoft.quantum.measurement.multim
   summary: 지정 된 배열의 각 고 비트를 표준 기준으로 측정 합니다.
 - uid: microsoft.quantum.measurement.settobasisstate
   summary: 필요에 따라 비트를 측정 하 고 비트 대칭을 적용 하 여 지정 된 계산 기준 상태로 원하는 비트를 설정 합니다.
 metadata:
-  ms.openlocfilehash: dc74db43b60728bf9924c05346bae4c6b329a265
-  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.openlocfilehash: 8e0910bf53734ffe65aa12b06321ec9b3403133f
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 02/28/2020
-  ms.locfileid: "77905763"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673137"

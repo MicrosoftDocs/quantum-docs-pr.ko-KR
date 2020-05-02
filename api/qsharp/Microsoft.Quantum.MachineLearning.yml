@@ -1,7 +1,7 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.machinelearning
 name: Microsoft.Quantum.MachineLearning
-summary: " # <a name=\"summary\"></a>요약\n 이 네임 스페이스는 퀀텀 기계 학습 응용 프로그램에서 사용 되는 함수 및 작업을 제공 합니다.\n\n # <a name=\"references\"></a>참조\n - 민 Schuld, Alex Bocharov, Krysta Sva, 네, \"회로 중심 퀀텀 분류자\", https://arxiv.org/abs/1804.00633."
+summary: " # <a name=\"summary\"></a>요약\n 이 네임 스페이스는 퀀텀 기계 학습 응용 프로그램에서 사용 되는 함수 및 작업을 제공 합니다.\n\n # <a name=\"references\"></a>참조\n - 민 Schuld, Alex Bocharov, Krysta Sva, 네, \"회로 중심 퀀텀 분류자\", https://arxiv.org/abs/1804.00633"
 functions:
 - uid: microsoft.quantum.machinelearning.approximateinputencoder
   summary: 계수 및 허용 오차 집합이 지정 된 경우 지정 된 허용 오차를 기준으로 각 계수를 계산 기준 상태의 해당 진폭으로 준비 하는 상태 준비 작업을 반환 합니다.
@@ -64,9 +64,9 @@ newtypes:
 - uid: microsoft.quantum.machinelearning.validationresults
   summary: 이 결과는 샘플 집합에 대해 분류자의 유효성을 검사 한 결과입니다.
 metadata:
-  ms.openlocfilehash: be0c17b6f3e42c03bacadbf02c693980f89cbe39
-  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.openlocfilehash: 43b40489e34a2483ff9331b34b6cd289e3a7bb56
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 02/28/2020
-  ms.locfileid: "77908313"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673178"
