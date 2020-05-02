@@ -3,10 +3,10 @@ uid: microsoft.quantum.characterization.robustphaseestimation
 name: RobustPhaseEstimation
 type: operation
 namespace: Microsoft.Quantum.Characterization
-summary: 지정 된 oracle `U` 및 eigenstate에 대 한 강력한 비 반복적인 퀀텀 단계 추정 알고리즘을 수행 하 고 Heisenberg 한도에 분산 배율이 지정 된 단계의 단일 실제 값 추정치를 제공 합니다.
+summary: 지정 된 oracle `U` 및 eigenstate에 대 한 강력한 비 반복적인 퀀텀 단계 예측 알고리즘을 수행 하 고 Heisenberg 한도에 분산 배율이 지정 된 단계의 단일 실제 값을 제공 합니다.
 remarks: 많은 수의 쿼리를 제한 하는 경우 $ \\\\\ge $의 예상 값에 대 한 표준 편차에 대 한 Cramer-rao-$ \a
 syntax: 'operation RobustPhaseEstimation (bitsPrecision : Int, oracle : Microsoft.Quantum.Oracles.DiscreteOracle, targetState : Qubit[]) : Double'
-references: '- 강력한 단계 추정 Shelby Kimmel, Guang Jia-hao Low, (https://arxiv.org/abs/1502.02677 Yoder를 통해 설정 된 범용 단일 비트 게이트의 강력한 보정'
+references: '- 강력한 단계 추정 Shelby Kimmel, Guang Jia-hao Low, (J. Yoder를 통해 설정 된 범용 단일 비트 게이트의 강력한 보정https://arxiv.org/abs/1502.02677'
 input:
   content: '(bitsPrecision : Int, oracle : Microsoft.Quantum.Oracles.DiscreteOracle, targetState : Qubit[])'
   types:
@@ -28,9 +28,9 @@ output:
   - isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 169a828036fbe84f49e5d87399319d14a9584051
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 5fa87e4da621871685501d58fa4a70b172f973b7
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73229058"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677594"

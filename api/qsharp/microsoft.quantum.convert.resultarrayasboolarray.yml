@@ -3,13 +3,13 @@ uid: microsoft.quantum.convert.resultarrayasboolarray
 name: ResultArrayAsBoolArray
 type: function
 namespace: Microsoft.Quantum.Convert
-summary: '`Result[]` 형식을 `Bool[]` 형식으로 변환 합니다. 여기서 `One` `true`에 매핑되고 `Zero` `false`에 매핑됩니다.'
+summary: '`Result[]` `Bool[]` 형식을 형식 `One` 으로 변환 합니다. 여기서은로 `true` `Zero` 매핑되고는에 `false`매핑됩니다.'
 syntax: 'function ResultArrayAsBoolArray (input : Result[]) : Bool[]'
 input:
   content: '(input : Result[])'
   types:
   - name: input
-    summary: 변환할 `Result[]`입니다.
+    summary: '`Result[]`변환 될입니다.'
     isArray: true
     isPrimitive: true
     uid: Result
@@ -21,9 +21,9 @@ output:
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: d2ccd4c2b8f1b3e67050f7ebb0756def5bea3b07
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 19a9287931dddf1a302a66cb85d4e925163688ad
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73230741"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677363"

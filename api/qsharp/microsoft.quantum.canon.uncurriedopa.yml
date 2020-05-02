@@ -6,7 +6,7 @@ namespace: Microsoft.Quantum.Canon
 summary: >-
   작업을 반환 하는 함수가 지정 된 경우 두 입력을 튜플로 받는 새 작업을 반환 합니다.
 
-  한정자 `A` 작업이 adjointable 나타냅니다.
+  한정자 `A` 는 작업이 adjointable 나타냅니다.
 syntax: "function UncurriedOpA (curriedOp : ('T -> ('U => Unit is Adj))) : (('T, 'U) => Unit is Adj)"
 input:
   content: "(curriedOp : ('T -> ('U => Unit is Adj)))"
@@ -34,7 +34,7 @@ input:
 output:
   content: (('T, 'U) => Unit is Adj)
   types:
-  - summary: '`op(t, u)` `(curriedOp(t))(u)`와 동일한 새 작업이 `op`.'
+  - summary: 에 `(curriedOp(t))(u)`해당 하 `op` 는 새 `op(t, u)` 작업입니다.
     isOperation: true
     input:
       types:
@@ -56,9 +56,9 @@ typeParameters:
 seeAlso:
 - microsoft.quantum.canon.uncurryop
 metadata:
-  ms.openlocfilehash: 305f90bd71f2dc6e790e470df649e5a2a5afb9ad
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 92ec8c1ae333bcd319c7d63f89fb8614f0793d79
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73216988"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677998"

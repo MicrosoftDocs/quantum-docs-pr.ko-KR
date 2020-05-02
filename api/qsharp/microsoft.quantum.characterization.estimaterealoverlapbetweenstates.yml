@@ -4,9 +4,9 @@ name: EstimateRealOverlapBetweenStates
 type: operation
 namespace: Microsoft.Quantum.Characterization
 summary: 각각 상태의 복사본을 준비 하는 두 개의 작업이 지정 된 경우 각 작업에서 준비 된 상태 간에 겹치는 부분을 예상 합니다.
-remarks: 이 작업은 Hadamard 테스트를 사용 하 여 $ $ \begin{align} \braket{\psi |의 실제 부분을 찾습니다. V ^ {\dagger} U | \psi} \end{align} $ $ where $ \ket{\psi} $는 `commonPreparation`에서 준비한 상태이 고, $U $은 `preparation1`동작의 단일 표현 이며, $V $는 `preparation2`에 해당 합니다.
+remarks: 이 작업은 Hadamard 테스트를 사용 하 여 $ $ \begin{align} \braket{\psi |의 실제 부분을 찾습니다. V ^ {\dagger} U | \psi} \end{align} $ $ where $ \ket{\psi} $는에 의해 `commonPreparation`준비 된 상태이 고, $U $은의 `preparation1`동작에 대 한 단일 표현 이며, $V $ `preparation2`은에 해당 합니다.
 syntax: 'operation EstimateRealOverlapBetweenStates (commonPreparation : (Qubit[] => Unit is Adj), preparation1 : (Qubit[] => Unit is Adj + Ctl), preparation2 : (Qubit[] => Unit is Adj + Ctl), nQubits : Int, nMeasurements : Int) : Double'
-references: '- Aharonov  [/0511096](https://arxiv.org/abs/quant-ph/0511096)입니다.'
+references: '- Aharonov *et al.* [/0511096](https://arxiv.org/abs/quant-ph/0511096)입니다.'
 input:
   content: '(commonPreparation : (Qubit[] => Unit is Adj), preparation1 : (Qubit[] => Unit is Adj + Ctl), preparation2 : (Qubit[] => Unit is Adj + Ctl), nQubits : Int, nMeasurements : Int)'
   types:
@@ -55,7 +55,7 @@ input:
     - Adjoint
     - Controlled
   - name: nQubits
-    summary: '`commonPreparation`, `preparation1`및 `preparation2` 모든 동작을 수행 하는 데 사용할 수 있는 값입니다.'
+    summary: ', `preparation1`및 `preparation2` 가 모두 작동 하는 `commonPreparation`데 사용할 수 있는 값입니다.'
     isPrimitive: true
     uid: Int
   - name: nMeasurements
@@ -71,9 +71,9 @@ seeAlso:
 - microsoft.quantum.characterization.estimateimagoverlapbetweenstates
 - microsoft.quantum.characterization.estimateoverlapbetweenstates
 metadata:
-  ms.openlocfilehash: a491288789ceabea6a9fe47b9667eeab026724c7
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: 425a9bde577f8c52b0e4fb5f4fe1cb1ecbe1a38d
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76872838"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677675"

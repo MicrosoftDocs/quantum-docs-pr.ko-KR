@@ -4,7 +4,7 @@ name: RangeStep
 type: function
 namespace: Microsoft.Quantum.Core
 summary: 범위의 다음 값이 계산 되는 방법을 지정 하는 정수를 반환 합니다.
-remarks: 범위 식의 첫 번째 요소는 `start`이 고, 두 번째 요소는 `start+step`, 세 번째 요소는 `end` 될 때까지 `start+step+step`됩니다.
+remarks: 범위 식의 `start`첫 번째 요소는이 전달 될 때까지 `start+step` `start+step+step` `end` , 두 번째 요소는, 세 번째 요소는 등입니다.
 syntax: 'function RangeStep (range : Range) : Int'
 input:
   content: '(range : Range)'
@@ -19,9 +19,9 @@ output:
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 0195f0f2eb03c163ae08cc789867627286a44097
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 30f67fba4e263f3b01bec1c360198728087783f2
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73066611"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677322"

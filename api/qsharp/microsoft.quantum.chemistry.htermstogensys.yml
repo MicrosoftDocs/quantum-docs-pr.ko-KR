@@ -3,7 +3,7 @@ uid: microsoft.quantum.chemistry.htermstogensys
 name: HTermsToGenSys
 type: function
 namespace: Microsoft.Quantum.Chemistry
-summary: Hamiltonian의 `HTerm[]` 데이터 형식을 GeneratorSystem로 변환 합니다.
+summary: Hamiltonian `HTerm[]` 데이터 형식을 GeneratorSystem로 변환 합니다.
 syntax: 'function HTermsToGenSys (data : Microsoft.Quantum.Chemistry.HTerm[], termType : Int[]) : Microsoft.Quantum.Simulation.GeneratorSystem'
 input:
   content: '(data : Microsoft.Quantum.Chemistry.HTerm[], termType : Int[])'
@@ -20,12 +20,12 @@ input:
 output:
   content: Microsoft.Quantum.Simulation.GeneratorSystem
   types:
-  - summary: 입력 `data`나타내는 Hamiltonian를 나타내는 GeneratorSystem입니다.
+  - summary: 입력 `data`이 나타내는 Hamiltonian를 나타내는 GeneratorSystem입니다.
     uid: microsoft.quantum.simulation.generatorsystem
 metadata:
-  ms.openlocfilehash: 00ecf3fe97526621d596b4dff17e5fd937a21d7b
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: de0e035fd51537ab3e70792a8a31b64a7651a14a
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73228888"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677534"
