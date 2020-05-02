@@ -5,7 +5,7 @@ type: operation
 namespace: Microsoft.Quantum.Canon
 summary: 인스턴스의 하위 레지스터에 작업을 적용 합니다. 여기서는 해당 인덱스의 배열에 지정 된 것과 같은 작업을 수행 합니다.
 examples: >-
-  3 개의 cobit 상태 $ \frac{1}{\sqrt{2}} \ket{0}\_2 (\ket{0}\_1 \ k{0}_3 + \ket{1}\_1 \ k{1}_3) $를 만듭니다. :
+  3 개의 stbit 상태 $ \frac{1}{\sqrt{2}} \ket{0}\_2 (\ket{0}\_1 \ k{0}_3 + \ket{1}\_1 \ k{1}_3) $:
 
 
   ```qsharp
@@ -49,9 +49,9 @@ seeAlso:
 - applytosubregisterc
 - applytosubregisterca
 metadata:
-  ms.openlocfilehash: e4f6e6bb2cc0e13b1edcea07ad2af32b10b31f48
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 89c488fd593e6f81a1c811e0b507a69a9f891be9
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73213061"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82674577"
