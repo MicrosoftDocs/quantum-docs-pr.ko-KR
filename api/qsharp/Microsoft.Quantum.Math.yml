@@ -3,9 +3,9 @@ uid: microsoft.quantum.math
 name: Microsoft.Quantum.Math
 functions:
 - uid: microsoft.quantum.math.abscomplex
-  summary: '`Complex`형식 복소수의 절대값을 반환 합니다.'
+  summary: 형식의 `Complex`복소수의 절대값을 반환 합니다.
 - uid: microsoft.quantum.math.abscomplexpolar
-  summary: '`ComplexPolar`형식 복소수의 절대값을 반환 합니다.'
+  summary: 형식의 `ComplexPolar`복소수의 절대값을 반환 합니다.
 - uid: microsoft.quantum.math.absd
   summary: 배정밀도 부동 소수점 수의 절대 값을 반환합니다.
 - uid: microsoft.quantum.math.absi
@@ -13,9 +13,9 @@ functions:
 - uid: microsoft.quantum.math.absl
   summary: 큰 정수의 절대 값을 반환 합니다.
 - uid: microsoft.quantum.math.abssquaredcomplex
-  summary: '`Complex`형식 복소수의 제곱 절대값을 반환 합니다.'
+  summary: 형식의 `Complex`복소수의 제곱 절대값을 반환 합니다.
 - uid: microsoft.quantum.math.abssquaredcomplexpolar
-  summary: '`ComplexPolar`형식 복소수의 제곱 절대값을 반환 합니다.'
+  summary: 형식의 `ComplexPolar`복소수의 제곱 절대값을 반환 합니다.
 - uid: microsoft.quantum.math.arccos
   summary: 코사인을 적용했을 때 지정된 숫자가 나오는 각도를 반환합니다.
 - uid: microsoft.quantum.math.arccosh
@@ -31,35 +31,35 @@ functions:
 - uid: microsoft.quantum.math.arctanh
   summary: 숫자의 역 하이퍼볼릭 탄젠트를 계산 합니다.
 - uid: microsoft.quantum.math.argcomplex
-  summary: '`Complex`형식의 복소수 단계를 반환 합니다.'
+  summary: 복소수 형식의 `Complex`단계를 반환 합니다.
 - uid: microsoft.quantum.math.argcomplexpolar
-  summary: '`ComplexPolar`형식의 복소수 단계를 반환 합니다.'
+  summary: 복소수 형식의 `ComplexPolar`단계를 반환 합니다.
 - uid: microsoft.quantum.math.bitsizei
   summary: >-
-    음수가 아닌 정수 `a`의 경우 `a`을 나타내는 데 필요한 비트 수를 반환 합니다.
+    음수가 아닌 정수의 `a`경우를 나타내는 `a`데 필요한 비트 수를 반환 합니다.
 
 
     즉, $a < 2 ^ n $와 같은 가장 작은 $n $를 반환 합니다.
 - uid: microsoft.quantum.math.bitsizel
   summary: >-
-    음수가 아닌 정수 `a`의 경우 `a`을 나타내는 데 필요한 비트 수를 반환 합니다.
+    음수가 아닌 정수의 `a`경우를 나타내는 `a`데 필요한 비트 수를 반환 합니다.
 
 
     즉, $a < 2 ^ n $와 같은 가장 작은 $n $를 반환 합니다.
 - uid: microsoft.quantum.math.ceiling
-  summary: 지정 된 숫자 보다 크거나 같은 최소 정수를 반환 합니다.
+  summary: 지정된 수보다 크거나 같은 최소 정수를 반환합니다.
 - uid: microsoft.quantum.math.complexascomplexpolar
-  summary: 복소수 `Complex`의 복소수를 `ComplexPolar`형식으로 변환 합니다.
+  summary: 복소수 수 `Complex` 를 형식의 `ComplexPolar`복소수로 변환 합니다.
 - uid: microsoft.quantum.math.complexpolarascomplex
-  summary: 복소수 `ComplexPolar`의 복소수를 `Complex`형식으로 변환 합니다.
+  summary: 복소수 수 `ComplexPolar` 를 형식의 `Complex`복소수로 변환 합니다.
 - uid: microsoft.quantum.math.complexpolartocomplex
-  summary: "\n> [!WARNING]\n> 사용하지 않음\n\nComplexPolarToComplex는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.math.complexpolarascomplex\"를 사용 하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nComplexPolarToComplex는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.math.complexpolarascomplex\"를 사용하십시오."
 - uid: microsoft.quantum.math.complextocomplexpolar
-  summary: "\n> [!WARNING]\n> 사용하지 않음\n\nComplexToComplexPolar는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.math.complexascomplexpolar\"를 사용 하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nComplexToComplexPolar는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.math.complexascomplexpolar\"를 사용하십시오."
 - uid: microsoft.quantum.math.continuedfractionconvergenti
-  summary: '`fraction`에 가장 가까운 연속 분수 일치을 찾습니다 `denominatorBound`'
+  summary: 일치에 가장 가까운 `fraction` 연속 분수를 찾습니다.`denominatorBound`
 - uid: microsoft.quantum.math.continuedfractionconvergentl
-  summary: '`fraction`에 가장 가까운 연속 분수 일치을 찾습니다 `denominatorBound`'
+  summary: 일치에 가장 가까운 `fraction` 연속 분수를 찾습니다.`denominatorBound`
 - uid: microsoft.quantum.math.cos
   summary: 지정된 각도의 코사인을 반환합니다.
 - uid: microsoft.quantum.math.cosh
@@ -89,7 +89,7 @@ functions:
 - uid: microsoft.quantum.math.extendedgreatestcommondivisorl
   summary: $U \cdot a + v \cdot b = \operatorname{GCD} (a, b) $와 같이 튜플을 $ (u, v) $로 계산 합니다. 여기서 $ \operatorname{GCD} $은 $a $ $a $ 및 $b $의 최대 공약수입니다. GCD는 항상 양수입니다.
 - uid: microsoft.quantum.math.floor
-  summary: 지정된 숫자보다 작거나 같은 최대 정수를 반환합니다.
+  summary: 지정한 숫자보다 작거나 같은 가장 큰 정수를 반환합니다.
 - uid: microsoft.quantum.math.greatestcommondivisori
   summary: $A $ 및 $b $의 최대 공약수를 계산 합니다. GCD는 항상 양수입니다.
 - uid: microsoft.quantum.math.greatestcommondivisorl
@@ -145,9 +145,9 @@ functions:
 - uid: microsoft.quantum.math.modpowl
   summary: 다른 숫자의 승수로 거듭제곱 한 숫자에 대해 모듈식 나누기를 수행 합니다.
 - uid: microsoft.quantum.math.modulusi
-  summary: '`value` 모듈로 `modulus`의 정식 residue 계산 합니다.'
+  summary: '`value` 모듈로 `modulus`정식 residue을 계산 합니다.'
 - uid: microsoft.quantum.math.modulusl
-  summary: '`value` 모듈로 `modulus`의 정식 residue 계산 합니다.'
+  summary: '`value` 모듈로 `modulus`정식 residue을 계산 합니다.'
 - uid: microsoft.quantum.math.negationc
   summary: 입력의 단항 부정을 반환 합니다.
 - uid: microsoft.quantum.math.negationcp
@@ -174,16 +174,16 @@ functions:
   summary: 두 입력의 합을 반환 합니다.
 - uid: microsoft.quantum.math.pnorm
   summary: >-
-    `Double`의 벡터에 `L(p)` 표준을 반환 합니다.
+    `Double`S 벡터의 `L(p)` 표준을 반환 합니다.
 
 
-    즉, `Double[]`형식의 $x 배열을 지정 하면 $-ad$\|x\|\_p = (\ sum_ {j} | x_j | ^ {p}) ^ {1/p} $ $p 반환 됩니다.
+    `Double[]`즉, 형식의 $x $ 배열을 지정 하면 $-ad$\|x\|\_p = (\ sum_ {j} | x_j | ^ {p}) ^ {1/p} $ $p 반환 됩니다.
 - uid: microsoft.quantum.math.pnormalized
   summary: >-
-    `L(p)`에서 `Double`의 벡터를 표준화 합니다.
+    일반에서 `Double` `L(p)` 의 벡터를 정규화 합니다.
 
 
-    즉, `Double[]`형식의 $x 배열을 지정 하면 모든 요소가 $-일반 $\|x\|_p $ $p으로 나뉘는 배열을 반환 합니다.
+    즉, 형식의 `Double[]`$x $ 배열이 지정 된 경우 모든 요소가 $-일반 $\|x\|_p $ $p으로 나뉘는 배열을 반환 합니다.
 - uid: microsoft.quantum.math.powc
   summary: 지정 된 지 수 만큼 거듭제곱 한 숫자를 반환 합니다.
 - uid: microsoft.quantum.math.powcp
@@ -230,7 +230,7 @@ functions:
   summary: 숫자의 정수 부분을 계산합니다.
 newtypes:
 - uid: microsoft.quantum.math.bigfraction
-  summary: '`p/q`폼의 유리수를 나타냅니다. 정수 `p` 튜플의 첫 번째 요소이 고 `q`는 튜플의 두 번째 요소입니다.'
+  summary: 폼 `p/q`의 유리수를 나타냅니다. 정수 `p` 는 튜플의 첫 번째 요소이 고 `q` 는 튜플의 두 번째 요소입니다.
 - uid: microsoft.quantum.math.complex
   summary: >-
     실수 및 허수 구성 요소로 복소수를 나타냅니다.
@@ -243,7 +243,7 @@ newtypes:
 
     복소수의 극좌표 표현은 $c = r e ^ {i t} $입니다.
 - uid: microsoft.quantum.math.fraction
-  summary: '`p/q`폼의 유리수를 나타냅니다. 정수 `p` 튜플의 첫 번째 요소이 고 `q`는 튜플의 두 번째 요소입니다.'
+  summary: 폼 `p/q`의 유리수를 나타냅니다. 정수 `p` 는 튜플의 첫 번째 요소이 고 `q` 는 튜플의 두 번째 요소입니다.
 summary: " # <a name=\"summary\"></a>요약\n 이 네임 스페이스는 기존 수학 함수 및 데이터 형식을 포함 합니다."
 operations:
 - uid: microsoft.quantum.math.randomint
@@ -255,9 +255,9 @@ operations:
 - uid: microsoft.quantum.math.randomsinglequbitpauli
   summary: 단일 기능을 임의로 임의로 반환 합니다.
 metadata:
-  ms.openlocfilehash: 03a0eba2101d3a20b393b7f685ac463b1abcd727
-  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.openlocfilehash: 2ad787a0d29e98e25c733d1fdcf0a79fcc8c2803
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 02/28/2020
-  ms.locfileid: "77905831"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673150"

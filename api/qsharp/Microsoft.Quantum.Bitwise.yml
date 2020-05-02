@@ -38,9 +38,9 @@ functions:
   summary: Pauli 연산자 배열의 Z 비트를 나타내는 정수를 반환 합니다.
 summary: " # <a name=\"summary\"></a>요약\n 이 네임 스페이스는 기존 데이터 형식의 비트 표현에 대해 동작 하는 함수를 포함 합니다."
 metadata:
-  ms.openlocfilehash: c474d92e7a40f5491b21d80e00294fbdff96a62a
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: fb52d02d38d31b96b46dfc469ee07ee62e29a9d4
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73210953"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673371"

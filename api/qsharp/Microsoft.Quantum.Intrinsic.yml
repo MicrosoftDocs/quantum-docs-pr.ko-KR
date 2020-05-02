@@ -16,7 +16,7 @@ operations:
     제어 되지 않는 (CNOT) 게이트를 한 쌍의 비트에 적용 합니다.
 
 
-    \begin{align} \operatorname{CNOT} \mathrel{: =} \begin{bmatrix} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \\\\ 0 & 0 & 1 & 0 \end{bmatrix} , \end{align}
+    \begin{align} \operatorname{CNOT} \mathrel{: =} \begin{bmatrix} 1 & 0 & 0 & 0 \\ \\ 0 & 1 & 0 & \\ \\ 0 0 & 0 & 0 & 1 \\ \\ 0 & 0 & 1 & 0 \end{bmatrix}, \end{align}
 
 
     여기에서 행과 열은 퀀텀 개념 가이드에서로 정렬 됩니다.
@@ -25,19 +25,19 @@ operations:
     다중값 비트 Pauli 연산자의 지 수를 적용 합니다.
 
 
-    \begin{align} e ^ {i \theta [P_0 \otimes P_1 \coP_ {N-1}]}, \end{align} 여기서 $P _i $은 `paulis`의 $i $ th 요소 이며 where $N = $`Length(paulis)`입니다.
+    \begin{align} e ^ {i \theta [P_0 \otime P_1 \coP_ {N-1}]}, \end{align} $P _i $은의 `paulis`$i $ th 요소 이며 where $N = $`Length(paulis)`입니다.
 - uid: microsoft.quantum.intrinsic.expfrac
   summary: >-
     Dyadic 분수로 지정 된 인수를 사용 하 여 다중 기능 비트 Pauli 연산자의 지 수를 적용 합니다.
 
 
-    \begin{align} e ^ {i \pi k [P_0 S\oP_ {N-1}]/2 ^ N}, \end{align} 여기서 $P _i $은 `paulis`의 $i $ th 요소 이며 where $N = $`Length(paulis)`입니다.
+    \begin{align} e ^ {i \pi k [P_0 \otime P_1 \coP_ {N-1}]/2 ^ N}, \end{align} where $P _i $은의 `paulis`$i $ th 요소 이며 where $N = $`Length(paulis)`입니다.
 - uid: microsoft.quantum.intrinsic.h
   summary: >-
     Hadamard 변환을 단일의 비트에 적용 합니다.
 
 
-    \begin{align} H \mathrel{: =} \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\\\ 1 &-1 \end{bmatrix}.
+    \begin{align} H \mathrel{: =} \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\ \\ 1 &-1 \end{bmatrix}.
 
     \end{align}
 - uid: microsoft.quantum.intrinsic.i
@@ -55,15 +55,15 @@ operations:
     지정 된 Pauli 기반에서 하나 이상의 값에 대 한 공동 측정을 수행 합니다.
 
 
-    출력 결과는 배포: \begin{align} \Pr (\texttt{Zero} | \ket{\psi}) = \frac12 \braket{\pr \pr | \pr (\boldone + P_0 \otimes P_1 \otimes \cst\otimes P_ {N-1} \pr) \pr | \pr}, \end{align} 여기서 $P _i $은의 $i $ th 요소 @no__ t_0_ 및 where $N = \texttt{Length} (\texttt{bases}) $입니다.
+    출력 결과는 배포에 의해 제공 됩니다. \begin{align} \Pr (\texttt{Zero} | \ket{\psi}) = \frac12 \braket{\pr \pr | \pr (\boldone + P_0 \otime P_1 \ost\oatimes P_ {N-1} \pr) \pr | \pr}, \end{align} 여기서 $P _i $은의 `bases`$i $ th 요소이 고 where $N = \texttt{Length} (\texttt{bases}) $입니다.
 
-    즉, 측정값은 관찰 된 측정 효과의 eigenvalue가 $ (-1) ^ d $ 인 `Result` $d $를 반환 합니다.
+    즉, 측정값은 관찰 된 `Result` 측정 효과의 eigenvalue가 $ (-1) ^ d $ 인 $d $를 반환 합니다.
 - uid: microsoft.quantum.intrinsic.r
   summary: >-
     지정 된 Pauli 축에 대 한 회전을 적용 합니다.
 
 
-    \begin{align} R_ {\mu} (\theta) \mathrel{: =} e ^ {-i \theta \sigma_{\mu}/2}, \end{align} where $ \theta \theta \{I, X, Y, Z\}$.
+    \begin{align} R_ {\mu} (\ 테타) \mathrel{: =} e ^ {-i \theta \ sigma_ {\mu}/2}, \end{align} where $ \theta \theta \{i, X, Y, Z\}$.
 - uid: microsoft.quantum.intrinsic.r1
   summary: >-
     지정 된 각도로 $ \ket{1}$ 상태에 대 한 회전을 적용 합니다.
@@ -74,7 +74,7 @@ operations:
     \end{align}
 - uid: microsoft.quantum.intrinsic.r1frac
   summary: >-
-    Dyadic 분수로 지정 된 각도 만큼 $ \ket{1}$ 상태에 대 한 회전을 적용 합니다.
+    Dyadic 분수로 지정 된 각도로 $ \ket{1}$ 상태에 대 한 회전을 적용 합니다.
 
 
     \begin{align} R_1 (n, k) \mathrel{: =} \operatorname{diag} (1, e ^ {i \pi k/2 ^ n}).
@@ -84,10 +84,10 @@ operations:
 
     > [!WARNING]
 
-    > 이 작업은 @"microsoft.quantum.intrinsic.r"의 **반대** 부호 규칙을 사용 하 고 @"microsoft.quantum.intrinsic.r1"에 포함 된 $1/2 $의 요소를 포함 하지 않습니다.
+    > 이 작업은 @"microsoft.quantum.intrinsic.r"에서 **반대** 부호 규칙을 사용 하며에 포함 된 $1/2 $의 요소를 포함 하지 @"microsoft.quantum.intrinsic.r1"않습니다.
 - uid: microsoft.quantum.intrinsic.random
   summary: >-
-    Random 연산은 입력으로 double 배열을 사용 하 고 임의로 선택 된 인덱스를 `Int`배열로 반환 합니다.
+    Random 연산은 입력으로 double 배열을 사용 하 고 임의로 선택 된 인덱스를로 배열에 반환 합니다 `Int`.
 
     특정 인덱스를 선택할 확률은 해당 인덱스에 있는 배열 요소의 값에 비례 합니다.
 
@@ -101,34 +101,22 @@ operations:
     Dyadic 분수로 지정 된 각도 만큼 지정 된 Pauli 축에 대 한 회전을 적용 합니다.
 
 
-    \begin{align} R_ {\mu} (n, k) \mathrel{: =} e ^ {i \pi n \sigma_{\mu}/2 ^ k}, \end{align} 여기서 $ \pi \pi \{I, X, Y, Z\}$입니다.
+    \begin{align} R_ {\mu} (n, k) \mathrel{: =} e ^ {i \pi n \ sigma_ {\mu}/2 ^ k}, \end{align} where $ \pi \pi \{i, X, Y, Z\}$.
 
 
     > [!WARNING]
 
     > 이 작업에서는 @"microsoft.quantum.intrinsic.r"의 **반대** 서명 규칙을 사용 합니다.
 - uid: microsoft.quantum.intrinsic.rx
-  summary: >-
-    지정 된 각도 만큼 $x $ 축에 대 한 회전을 적용 합니다.
-
-
-    \begin{align} R_x (\theta) \mathrel{: =} e ^ {-i \theta \sigma_x/2} = \begin{bmatrix} \theta \frac{\theta}{2} &-i\sin \frac{\theta}{2}\\\\-i\sin \frac{\theta}{2} & \theta \frac{\theta}{2} \end{bmatrix}.
-
-    \end{align}
+  summary: "지정 된 각도 만큼 $x $ 축에 대 한 회전을 적용 합니다.\n\n\\begin{align} R_x (\\theta) \\mathrel{: =} e ^ {-i \\om\\ sigma_x/2} = \\begin{bmatrix} \\theta \\frac{\\theta}{2} &-i\\sin{2} \\\\ \\\\ \\frac{\\theta}-i\\sin \\frac{\\theta}{2} & \\theta \\frac{\\theta}{2} \\end{bmatrix}.  \n\\end{align}"
 - uid: microsoft.quantum.intrinsic.ry
-  summary: >-
-    지정 된 각도 만큼 $y $ 축에 대 한 회전을 적용 합니다.
-
-
-    \begin{align} R_y (\theta) \mathrel{: =} e ^ {-i \theta \sigma_y/2} = \begin{bmatrix} \theta \frac{\theta}{2} &-\theta \frac{\theta}{2}\\\\ \theta \frac{\theta}{2} & \theta \frac{\theta}{2} \end{bmatrix}.
-
-    \end{align}
+  summary: "지정 된 각도 만큼 $y $ 축에 대 한 회전을 적용 합니다.\n\n\\begin{align} R_y (\\theta) \\mathrel{: =} e ^ {-i \\om\\ sigma_y/2} = \\begin{bmatrix} \\theta \\frac{\\theta}{2} &-\\theta \\frac{\\theta}{2} \\\\ \\\\ \\theta \\frac{\\theta}{2} & \\theta \\frac{\\theta}{2} \\end{bmatrix}.  \n\\end{align}"
 - uid: microsoft.quantum.intrinsic.rz
   summary: >-
     지정 된 각도 만큼 $z $ 축에 대 한 회전을 적용 합니다.
 
 
-    \begin{align} R_z (\theta) \mathrel{: =} e ^ {-i \theta \sigma_z/2} = \begin{bmatrix} e ^ {-i \theta/2} & 0 \\\\ 0 & e ^ {i \theta/2} \end{bmatrix}.
+    \begin{align} R_z (\theta) \mathrel{: =} e ^ {-i \theta \ sigma_z/2} = \begin{bmatrix} e ^ {-i \theta/2} & 0 \\ \\ 0 & e ^ {i \theta/2} \end{bmatrix}.
 
     \end{align}
 - uid: microsoft.quantum.intrinsic.s
@@ -136,7 +124,7 @@ operations:
     Π/4 단계 게이트를 단일의 비트에 적용 합니다.
 
 
-    \begin{align} S \mathrel{: =} \begin{bmatrix} 1 & 0 \\\\ 0 & i \end{bmatrix}.
+    \begin{align} S \mathrel{: =} \begin{bmatrix} 1 & 0 \\ \\ 0 & i \end{bmatrix}.
 
     \end{align}
 - uid: microsoft.quantum.intrinsic.swap
@@ -144,7 +132,7 @@ operations:
     교환 게이트를 다양 한 쌍에 적용 합니다.
 
 
-    \begin{align} \operatorname{SWAP} \mathrel{: =} \begin{bmatrix} 1 & 0 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \end{bmatrix} , \end{align}
+    \begin{align} \operatorname{SWAP} \mathrel{: =} \begin{bmatrix} 1 & 0 & 0 & 0 \\ \\ 0 & 0 & 1 & 0 \\ \\ 0 & 1 & 0 & 0 \\ \\ 0 & 0 & 0 & 1 \end{bmatrix}, \end{align}
 
 
     여기에서 행과 열은 퀀텀 개념 가이드에서로 정렬 됩니다.
@@ -153,7 +141,7 @@ operations:
     Π/8 게이트를 단일의 비트에 적용 합니다.
 
 
-    \begin{align} T \mathrel{: =} \begin{bmatrix} 1 & 0 \\\\ 0 & e ^ {i \pi/4} \end{bmatrix}.
+    \begin{align} T \mathrel{: =} \begin{bmatrix} 1 & 0 \\ \\ 0 & e ^ {i \pi/4} \end{bmatrix}.
 
     \end{align}
 - uid: microsoft.quantum.intrinsic.x
@@ -161,7 +149,7 @@ operations:
     Pauli $X $ gate에 적용 합니다.
 
 
-    \begin{align} \sigma_x \mathrel{: =} \begin{bmatrix} 0 & 1 \\\\ 1 & 0 \end{bmatrix}.
+    \begin{align} \ sigma_x \mathrel{: =} \begin{bmatrix} 0 & 1 \\ \\ 1 & 0 \end{bmatrix}.
 
     \end{align}
 - uid: microsoft.quantum.intrinsic.y
@@ -169,7 +157,7 @@ operations:
     Pauli $Y $ gate에 적용 합니다.
 
 
-    \begin{align} \sigma_y \mathrel{: =} \begin{bmatrix} 0 &-i \\\\ i & 0 \end{bmatrix}.
+    \begin{align} \ sigma_y \mathrel{: =} \begin{bmatrix} 0 &-i \\ \\ i & 0 \end{bmatrix}.
 
     \end{align}
 - uid: microsoft.quantum.intrinsic.z
@@ -177,13 +165,13 @@ operations:
     Pauli $Z $ gate에 적용 합니다.
 
 
-    \begin{align} \sigma_z \mathrel{: =} \begin{bmatrix} 1 & 0 \\\\ 0 &-1 \end{bmatrix}.
+    \begin{align} \ sigma_z \mathrel{: =} \begin{bmatrix} 1 & 0 \\ \\ 0 &-1 \end{bmatrix}.
 
     \end{align}
 metadata:
-  ms.openlocfilehash: a2f80ca98d86e5a1457efb6dad34c60d6ef75a2e
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 303e6d0376841672b9c8dbd3d8bd47ff7b24916a
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73056356"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673220"

@@ -14,14 +14,14 @@ summary: >-
 
   - 필요한 퀀텀 상태 $ \ket{\psi}\_s $를 저장할 시스템 등록 $s $입니다.
 remarks: >-
-  이 oracle은 $ $ O\ket{0}\_{f} \ket{0}\_s = \lambda\ket{1}\_f\ket {\ psi}\_s + \sqrt{1-| \lambda | ^ 2} \ket{0}\_f\cdots로 정의 됩니다. $ $는 계산 기준 상태 $ \ket{0}\_{f} \ket{0}\_s $를 사용 하 여 $ \ket\_{1}f $로 플래그가 지정 된 기준으로 $ \ket{\psi} \_s $를 사용 하 여 대상 상태 $ s $을 만듭니다.
+  {0}\_$ $ O\ket {f} \ket{0}\_s{1}\_= \lambda\ket f\ket {\ psi}\_s + \sqrt{1-| \lambda | ^ 2} \ket{0}\_f\cdots, $ $에서 정의한이 oracle은 계산 기준 상태 $ \ket{0}\_{f} \ket{0}\_s $에 대해 작동 하 여 $ \ket{\psi}\_{1}\_f $로 플래그가 지정 된 기준으로 대상 상태 $ \ket s $를 만듭니다.
 
   첫 번째 매개 변수는 $ \ket{0}\_f $의 고 비트 레지스터에 대 한 인덱스입니다. 두 번째 매개 변수는 두 레지스터를 모두 갖습니다.
 syntax: newtype StateOracle = ((Int, Qubit[]) => Unit is Adj + Ctl);
 metadata:
-  ms.openlocfilehash: 1faa47c21e43355ed036498adf4e823ff3f8a0e4
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: fe7ced83927d709bcc6fe82d8866b221446c7d73
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73067223"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673478"

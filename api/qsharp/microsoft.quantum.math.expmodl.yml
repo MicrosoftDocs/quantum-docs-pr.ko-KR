@@ -13,7 +13,7 @@ summary: >-
 
 
   $N $, $x $는 양수가 고 전원은 음수가 아닌 것으로 가정 합니다.
-remarks: '`power` 자체가 아니라 `power`의 비트 수에 비례하여 시간을 사용 합니다.'
+remarks: 는 `power` `power` 자체가 아닌의 비트 수에 비례하여 시간을 사용 합니다.
 syntax: 'function ExpModL (expBase : BigInt, power : BigInt, modulus : BigInt) : BigInt'
 input:
   content: '(expBase : BigInt, power : BigInt, modulus : BigInt)'
@@ -33,9 +33,9 @@ output:
   - isPrimitive: true
     uid: BigInt
 metadata:
-  ms.openlocfilehash: c314b3b34a1abf253dd9af205f766fad14abea49
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: f694fa792e8aee5846ce6ec2393287eb64aca44d
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73233053"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673866"

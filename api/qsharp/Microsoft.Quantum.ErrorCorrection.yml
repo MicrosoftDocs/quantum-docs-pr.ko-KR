@@ -20,12 +20,12 @@ functions:
 - uid: microsoft.quantum.errorcorrection.steanecoderecoveryz
   summary: ⟦ 7, 1, 3 ⟧ Steane 퀀텀 코드의 안정기 그룹에서 Z 부분에 대 한 디코더
 - uid: microsoft.quantum.errorcorrection.tablelookuprecovery
-  summary: 지정 된 양의 비트 레지스터에서 지정 된 Pauli 작업 테이블의 경우이 함수는 지정 된 Pauli 작업 배열과 관련 하 여 테이블 조회 디코딩을 수행 하는 데 필요한 모든 정보를 포함 하는 `RecoveryFn` 형식의 개체를 반환 합니다.
+  summary: 지정 된 양의 비트 레지스터에서 지정 된 Pauli 작업 테이블의 경우이 함수는 지정 된 Pauli 작업 `RecoveryFn` 배열과 관련 하 여 테이블 조회 디코딩을 수행 하는 데 필요한 모든 정보를 포함 하는 형식의 개체를 반환 합니다.
 operations:
 - uid: microsoft.quantum.errorcorrection.bitflipdecoder
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nBitFlipDecoder는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.errorcorrection.decodefrombitflipcode\"를 사용하십시오.\n@\"microsoft.quantum.errorcorrection.encodeintobitflipcode\"를 사용 하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nBitFlipDecoder는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.errorcorrection.decodefrombitflipcode\"를 사용하십시오.\n@\"microsoft.quantum.errorcorrection.encodeintobitflipcode\"를 사용하세요."
 - uid: microsoft.quantum.errorcorrection.bitflipencoder
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nBitFlipEncoder는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.errorcorrection.encodeintobitflipcode\"를 사용하십시오.\n@\"microsoft.quantum.errorcorrection.encodeintobitflipcode\"를 사용 하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nBitFlipEncoder는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.errorcorrection.encodeintobitflipcode\"를 사용하십시오.\n@\"microsoft.quantum.errorcorrection.encodeintobitflipcode\"를 사용하세요."
 - uid: microsoft.quantum.errorcorrection.decodefrombitflipcode
   summary: '[3, 1, 3]/⟦ 3, 1, 1 ⟧ 비트 대칭 코드에서 디코딩합니다.'
 - uid: microsoft.quantum.errorcorrection.decodefromfivequbitcode
@@ -39,9 +39,9 @@ operations:
 - uid: microsoft.quantum.errorcorrection.encodeintosteanecode
   summary: ⟦ 7, 1, 3 ⟧ Steane 퀀텀 코드 아래의 인코딩된 퀀텀 레지스터에 인코딩되지 않은 퀀텀 레지스터를 매핑하는 인코딩 작업입니다.
 - uid: microsoft.quantum.errorcorrection.fivequbitcodedecoder
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nFiveQubitCodeDecoder 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.errorcorrection.decodefromfivequbitcode\"를 사용하십시오.\n@\"microsoft.quantum.errorcorrection.decodefromfivequbitcode\"를 사용 하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nFiveQubitCodeDecoder 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.errorcorrection.decodefromfivequbitcode\"를 사용하십시오.\n@\"microsoft.quantum.errorcorrection.decodefromfivequbitcode\"를 사용하세요."
 - uid: microsoft.quantum.errorcorrection.fivequbitcodeencoder
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nFiveQubitCodeEncoder는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.errorcorrection.encodeintofivequbitcode\"를 사용하십시오.\n@\"microsoft.quantum.errorcorrection.encodeintofivequbitcode\"를 사용 하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nFiveQubitCodeEncoder는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.errorcorrection.encodeintofivequbitcode\"를 사용하십시오.\n@\"microsoft.quantum.errorcorrection.encodeintofivequbitcode\"를 사용하세요."
 - uid: microsoft.quantum.errorcorrection.injectpi4yrotation
   summary: Y 축에 대해 π/4를 기준으로 단일의 비트를 회전 합니다.
 - uid: microsoft.quantum.errorcorrection.knilldistill
@@ -53,12 +53,12 @@ operations:
 - uid: microsoft.quantum.errorcorrection.recovercss
   summary: '`CSS` 형식으로 설명 되는 퀀텀 코드에의 한 오류 수정 사항을 한 번 수행 합니다.'
 - uid: microsoft.quantum.errorcorrection.steanecodedecoder
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nSteaneCodeDecoder는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.errorcorrection.decodefromsteanecode\"를 사용하십시오.\n@\"microsoft.quantum.errorcorrection.decodefromfivequbitcode\"를 사용 하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nSteaneCodeDecoder는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.errorcorrection.decodefromsteanecode\"를 사용하십시오.\n@\"microsoft.quantum.errorcorrection.decodefromfivequbitcode\"를 사용하세요."
 - uid: microsoft.quantum.errorcorrection.steanecodeencoder
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nSteaneCodeEncoder는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.errorcorrection.encodeintosteanecode\"를 사용하십시오.\n@\"microsoft.quantum.errorcorrection.decodefromfivequbitcode\"를 사용 하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nSteaneCodeEncoder는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.errorcorrection.encodeintosteanecode\"를 사용하십시오.\n@\"microsoft.quantum.errorcorrection.decodefromfivequbitcode\"를 사용하세요."
 newtypes:
 - uid: microsoft.quantum.errorcorrection.css
-  summary: 각각 `X` 및 `Z` 오류에 대 한 인코더, 디코더 및 해당 증후군 측정 절차에서 정의한 대로 Calderbank – Shor – Steane (CSS) 코드를 나타냅니다.
+  summary: 각각 및 `X` `Z` 오류에 대 한 인코더, 디코더 및 해당 증후군 측정 절차에서 정의한 대로 Calderbank – shor – Steane (CSS) 코드를 나타냅니다.
 - uid: microsoft.quantum.errorcorrection.decodeop
   summary: >-
     인코딩된 레지스터를 실제 레지스터로 디코딩하는 작업과 증후군을 기록 하는 데 사용 되는 스크래치 인스턴스를 나타냅니다.
@@ -72,19 +72,19 @@ newtypes:
 
     첫 번째 인수는 인코딩할 물리적 레지스터가 되 고 두 번째 인수는 사용 되는 스크래치 레지스터가 됩니다.
 - uid: microsoft.quantum.errorcorrection.logicalregister
-  summary: 논리가 중 비트를 인코딩하는 `Qubit[]` 실제의 레지스터를 입력 합니다.
+  summary: 논리적 및 비트를 인코딩하는 실제 `Qubit[]` 실제 비트의 레지스터를 입력 합니다.
 - uid: microsoft.quantum.errorcorrection.qecc
   summary: 인코더, 디코더 및 증후군 측정 프로시저에 정의 된 오류 수정 코드를 나타냅니다.
 - uid: microsoft.quantum.errorcorrection.recoveryfn
-  summary: 증후군 오류를 검색 된 오류를 수정 하는 `Pauli[]` 작업 시퀀스로 매핑하는 함수를 입력 합니다.
+  summary: 증후군 오류를 검색 된 오류를 해결 하는 일련의 `Pauli[]` 작업에 매핑하는 함수를 입력 합니다.
 - uid: microsoft.quantum.errorcorrection.syndrome
-  summary: 퀀텀 코드의 오류 증후군를 지정 하는 `Result[]` 측정 결과의 형식입니다.
+  summary: 퀀텀 코드의 오류 `Result[]` 증후군 지정 하는 측정 결과를 입력 합니다.
 - uid: microsoft.quantum.errorcorrection.syndromemeasop
   summary: 오류 수정 코드 블록의 증후군을 측정 하는 데 사용 되는 작업을 나타냅니다.
 metadata:
-  ms.openlocfilehash: 0a149810314453e816c7754dd535b2f3bb7d8e58
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: b4d7aaa55fee7e99b9c96ebf3cecb36706a66062
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76870791"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673324"

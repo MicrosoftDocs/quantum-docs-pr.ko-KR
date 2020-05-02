@@ -60,9 +60,9 @@ operations:
 - uid: microsoft.quantum.primitive.z
   summary: "\n> [!WARNING]\n> 사용되지 않음\n\nZ는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.intrinsic.z\"를 사용하십시오.\n@\"microsoft.quantum.intrinsic.z\"를 사용하세요."
 metadata:
-  ms.openlocfilehash: d3eef5b065a00cee2b31ea1a99e8814b5ca11ae0
-  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+  ms.openlocfilehash: 541a5ef9f6c87e18526a3883b6c4570666c8eb0d
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 12/05/2019
-  ms.locfileid: "74858244"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673069"
