@@ -17,15 +17,7 @@
     - name: QDK 시작
       href: welcome.md
     - name: QDK 설치
-      items:
-        - name: 설치 개요
-          href: install-guide/index.md
-        - name: 'Q# + C#'
-          href: install-guide/csinstall.md
-        - name: 'Q# + Python'
-          href: install-guide/pyinstall.md
-        - name: 'Q# Jupyter Notebook'
-          href: install-guide/qjupyter.md
+      href: install-guide/toc.yml
     - name: QDK 업데이트
       href: install-guide/update.md
     - name: 'Q# 프로젝트를 만드는 방법'
