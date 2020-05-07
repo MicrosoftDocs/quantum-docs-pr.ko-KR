@@ -20,8 +20,6 @@
       href: install-guide/toc.yml
     - name: QDK 업데이트
       href: install-guide/update.md
-    - name: 'Q# 프로젝트를 만드는 방법'
-      href: how-to-guides/create-qsharp-project.md
 - name: 자습서
   items:
     - name: 양자 난수 생성기
