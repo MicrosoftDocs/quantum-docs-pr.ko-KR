@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: 84e5db17ab8d963a75c72da38d3e4487b89abc9d
-ms.sourcegitcommit: b6b8459eb654040f1e19f66411b29fc9e48e95c9
+ms.openlocfilehash: 91f12ef6bd15e27c8920471442c66ff3b1e71122
+ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82030602"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82677083"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit 릴리스 정보
 
@@ -20,6 +20,21 @@ ms.locfileid: "82030602"
 설치 지침은[설치 가이드](xref:microsoft.quantum.install)를 참조하세요.
 
 업데이트 지침은 [업데이트 가이드](xref:microsoft.quantum.update)를 참조하세요.
+
+## <a name="version-01120042825"></a>버전 0.11.2004.2825
+
+*릴리스 날짜: 2020년 4월 30일*
+
+이 릴리스에는 다음이 포함됩니다.
+
+- C# 또는 Python 호스트 파일이 더 이상 필요하지 않은 Q# 명령줄 애플리케이션에 대한 지원이 새로 추가되었습니다. Q# 명령줄 애플리케이션을 시작하는 방법에 대한 자세한 내용은 [여기](xref:microsoft.quantum.install.standalone)를 참조하세요.
+- C# 또는 Python 호스트 파일이 더 이상 필요하지 않은 퀀텀 난수 생성기 빠른 시작이 업데이트되었습니다. 업데이트된 [빠른 시작](xref:microsoft.quantum.quickstarts.qrng)을 참조하세요.
+- IQ # Docker 이미지 성능 향상
+
+> [!NOTE]
+> 새로운 [`@EntryPoint()`](xref:microsoft.quantum.core.entrypoint) 특성을 사용하는 Q# 명령줄 애플리케이션은 현재 Python 또는 .NET 호스트 프로그램에서 호출할 수 없습니다.
+> 자세한 내용은 [Python](xref:microsoft.quantum.install.python) 및 [.NET 상호 운용성](xref:microsoft.quantum.install.cs) 가이드를 참조하세요.
+
 
 ## <a name="version-01120033107"></a>버전 0.11.2003.3107
 

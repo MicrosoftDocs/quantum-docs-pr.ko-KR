@@ -7,12 +7,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install
-ms.openlocfilehash: 5fafb736f34d27f9233370a0a8a66c0613606048
-ms.sourcegitcommit: 9d1c045cf1a2c3e19030cb38dbc7496dbd24ab58
+ms.openlocfilehash: bca700660094b91f1c0dfa03f9bce1336073ca51
+ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "77904777"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82680187"
 ---
 # <a name="install-the-microsoft-quantum-development-kit-qdk"></a>Microsoft QDK(Quantum Development Kit) 설치
 
@@ -28,6 +28,7 @@ Q# 프로그램은 종종 .NET 언어(일반적으로 C#) 또는 Python으로 �
 
 QDK는 여러 개발 환경에 사용할 수 있습니다. 아래 섹션에서 원하는 설정을 선택하세요.
 
-- [C#용 Q# 설치:](xref:microsoft.quantum.install.cs) C#과 Q#을 결합하여 Q# 작업을 호출하는 C# 호스트 프로그램을 만들려면 이 환경을 선택합니다.
-- [Python용 Q# 설치:](xref:microsoft.quantum.install.python) Python과 Q#을 결합하여 Q# 작업을 호출하는 Python 호스트 프로그램을 만들려면 이 환경을 선택합니다.
-- [Jupyter Notebook용 Q# 설치:](xref:microsoft.quantum.install.jupyter) 포함된 텍스트를 사용하여 셀에서 Q# 코드를 실행하거나 양자 컴퓨팅 대화형 자습서를 만들려면 이 환경을 선택합니다. Q#을 외부 클래식 호스트 프로그램과 결합하려는 경우에는 이 환경을 선택하지 마세요.
+- [Q# 명령줄 애플리케이션:](xref:microsoft.quantum.install.standalone) 명령줄에서 Q#을 사용하려면 이 방식을 선택합니다. 아래 옵션과 같이 드라이버나 호스트 프로그램이 필요하지 않습니다.
+- [Jupyter Notebook용 Q# 설치:](xref:microsoft.quantum.install.jupyter) 포함된 텍스트를 사용하여 셀에서 Q# 코드를 실행하거나 양자 컴퓨팅 대화형 자습서를 만들려면 이 환경을 선택합니다. 
+- [Q# 및 Python으로 개발:](xref:microsoft.quantum.install.python) Python과 Q#을 결합하여 Q# 연산을 호출하는 Python 호스트 프로그램을 만들려면 이 방식을 선택합니다.
+- [Q#과 C# 또는 F#으로 개발:](xref:microsoft.quantum.install.cs) C# 또는 F#과 Q#을 결합하여 Q# 연산을 호출하는 .NET 호스트 프로그램을 만들려면 이 방식을 선택합니다.
