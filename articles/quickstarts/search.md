@@ -6,16 +6,16 @@ ms.author: chgranad@microsoft.com
 ms.date: 10/19/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.search
-ms.openlocfilehash: 0e64fcd56929fa33397c45bf1b2e99bf687eca6f
-ms.sourcegitcommit: 7d350db4b5e766cd243633aee7d0a839b6274bd6
+ms.openlocfilehash: c67ccd16957ceef694552bdd9c073ba5a35d8aaf
+ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "77906953"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82686839"
 ---
-# <a name="quickstart-implement-grovers-search-algorithm-in-q"></a>빠른 시작: Q#에서 Grover의 검색 알고리즘 구현
+# <a name="quickstart-implement-grovers-search-algorithm-in-q"></a>빠른 시작: Q\#에서 Grover의 검색 알고리즘 구현
 
-이 빠른 시작에서는 Grover 검색을 빌드하고 실행하여 비정형 데이터의 검색 속도를 높이는 방법을 배울 수 있습니다.  Grover 검색은 가장 인기 있는 양자 컴퓨팅 알고리즘의 하나이며, 비교적 소규모의 Q# 구현을 통해 양자 알고리즘을 표현하는 고급 Q# 양자 프로그래밍 언어를 사용하여 양자 솔루션 프로그래밍의 장점을 이해할 수 있습니다.  이 가이드를 마치면 클래식 컴퓨터에서 전체 목록을 검색하는 데 소요되는 시간보다 훨씬 짧은 시간에 시뮬레이션 출력이 특정 문자열과 함께 순서대로 정렬된 항목 목록을 찾는 것을 볼 수 있습니다.
+이 빠른 시작에서는 Grover 검색을 빌드하고 실행하여 비정형 데이터의 검색 속도를 높이는 방법을 배울 수 있습니다.  Grover 검색은 가장 인기 있는 양자 컴퓨팅 알고리즘의 하나이며, 비교적 소규모의 Q# 구현을 통해 양자 알고리즘을 표현하는 고급 Q# 양자 프로그래밍 언어를 사용하여 양자 솔루션 프로그래밍의 장점을 이해할 수 있습니다.  가이드의 끝에서는 시뮬레이션 출력이 정렬되지 않은 항목 목록 중 특정 문자열을 찾는 데 걸리는 시간이 클래식 컴퓨터에서 전체 목록을 검색하는 데 걸리는 시간보다 짧다는 것을 볼 수 있습니다.
 
 Grover의 알고리즘은 특정 항목에 대한 비정형 데이터의 목록을 검색합니다. 예를 들어 다음과 같은 질문에 답할 수 있습니다. 한 벌의 카드에서 뽑은 이 카드는 하트 에이스인가요? 특정 항목의 레이블 지정은 _표시된 입력_이라고 합니다.
 
@@ -41,9 +41,9 @@ Grover의 알고리즘은 목록의 항목이 검색 중인 항목인지 여부�
 
 1. Quantum Development Kit를 사용하여 선택한 개발 환경에서 `Grover`라는 [새 Q# 프로젝트를 만듭니다](xref:microsoft.quantum.howto.createproject).
 
-1. 다음 코드를 새 프로젝트의 `Operations.qs` 파일에 추가합니다.
+1. 다음 코드를 새 프로젝트의 `Program.qs` 파일에 추가합니다.
 
-    :::code language="qsharp" source="~/quantum/samples/algorithms/simple-grover/SimpleGrover.qs" range="4-40":::
+    :::code language="qsharp" source="~/quantum/samples/algorithms/simple-grover/SimpleGrover.qs" range="4-41":::
 
 1. 검색하는 목록을 정의하려면 새 `Reflections.qs` 파일을 만들고, 다음 코드를 붙여넣습니다.
 
@@ -53,64 +53,54 @@ Grover의 알고리즘은 목록의 항목이 검색 중인 항목인지 여부�
 
 1. 다음으로, 새 Q# 프로그램을 실행하여 `ReflectAboutMarked`로 표시된 항목을 찾습니다.
 
-    ### <a name="python-with-visual-studio-code-or-the-command-line"></a>[Visual Studio 코드 또는 명령줄을 사용하는 Python](#tab/tabid-python)
+### <a name="q-command-line-applications-with-visual-studio-or-visual-studio-code"></a>Visual Studio 또는 Visual Studio Code를 사용한 Q# 명령줄 애플리케이션
 
-    Python에서 새 Q# 프로그램을 실행하려면 다음 코드를 `host.py`로 저장합니다.
+실행 파일은 프로젝트 구성 및 명령줄 옵션에 따라 시뮬레이터 또는 리소스 예측 도구에서 `@EntryPoint()` 특성으로 표시된 작업 또는 함수를 실행합니다.
 
-    :::code language="python" source="~/quantum/samples/algorithms/simple-grover/host.py" range="9-14":::
+Visual Studio에서 Ctrl + F5 키를 눌러 스크립트를 실행하기만 하면 됩니다.
 
-    그러면 명령줄에서 Python 호스트 프로그램을 실행할 수 있습니다.
+VS Code에서 터미널에 아래를 입력하여 `Program.qs`를 처음으로 빌드합니다.
 
-    ```bash
-    $ python host.py
-    Preparing Q# environment...
-    Reflecting about marked state...
-    Reflecting about marked state...
-    Reflecting about marked state...
-    Reflecting about marked state...
-    [0, 1, 0, 1, 0]
-    ```
+```Command line
+dotnet build
+```
 
-    ### <a name="c-with-visual-studio-code-or-the-command-line"></a>[Visual Studio 코드 또는 명령줄을 사용하는 C#](#tab/tabid-csharp)
+후속 실행 시, 다시 빌드할 필요가 없습니다. 실행하려면 다음 명령을 입력하고 Enter 키를 누릅니다.
 
-    C#에서 새 Q# 프로그램을 실행하려면 다음 C# 코드를 포함하도록 `Driver.cs`를 수정합니다.
+```Command line
+dotnet run --no-build
+```
 
-    :::code language="csharp" source="~/quantum/samples/algorithms/simple-grover/Host.cs" range="4-23":::
+터미널에 다음 메시지가 표시되어야 합니다.
 
-    그러면 명령줄에서 C# 호스트 프로그램을 실행할 수 있습니다.
+```
+operations.qs:
+This operation applies Grover's algorithm to search all possible inputs to an operation to find a particular marked state.
+Usage:
+operations.qs [options] [command]
 
-    ```bash
-    $ dotnet run
-    Reflecting about marked state...
-    Reflecting about marked state...
-    Reflecting about marked state...
-    Reflecting about marked state...
-    Result: [Zero,One,Zero,One,Zero]
+--n-qubits <n-qubits> (REQUIRED)
+-s, --simulator <simulator>         The name of the simulator to use.
+--version                           Show version information
+-?, -h, --help                      Show help and usage information
+Commands:
+```
 
-    Press any key to continue...
-    ```
+이는 사용할 큐비트 수를 지정하지 않았기 때문에 터미널에서 실행 파일에 사용할 수 있는 명령을 알려줍니다. 5개의 큐비트를 사용하려면 다음을 입력해야 합니다.
 
-    ### <a name="c-with-visual-studio-2019"></a>[Visual Studio 2019를 사용하는 C#](#tab/tabid-vs2019)
+```Command line
+dotnet run --n-qubits 5
+```
 
-    Visual Studio를 사용하여 C#에서 새 Q# 프로그램을 실행하려면 다음 C# 코드를 포함하도록 `Driver.cs`를 수정합니다.
+Enter를 누르면 다음 출력이 표시됩니다.
 
-    :::code language="csharp" source="~/quantum/samples/algorithms/simple-grover/Host.cs" range="4-23":::
-
-    그런 다음, F5 키를 누르면 프로그램이 실행되고 새 창에 다음 결과가 표시됩니다. 
-
-    ```bash
-    $ dotnet run
-    Reflecting about marked state...
-    Reflecting about marked state...
-    Reflecting about marked state...
-    Reflecting about marked state...
-    Result: [Zero,One,Zero,One,Zero]
-
-    Press any key to continue...
-    ```
-    ***
-
-    `ReflectAboutMarked` 연산은 4번만 호출되지만, Q# 프로그램이 2^{5} = 32$ 가능한 입력 중에서 "01010" 입력을 찾을 수 있었습니다!
+```
+Reflecting about marked state...
+Reflecting about marked state...
+Reflecting about marked state...
+Reflecting about marked state...
+[Zero,One,Zero,One,Zero]
+```
 
 ## <a name="next-steps"></a>다음 단계
 
@@ -119,10 +109,11 @@ Grover의 알고리즘은 목록의 항목이 검색 중인 항목인지 여부�
 - [QDK 시작 가이드로 돌아가기](xref:microsoft.quantum.welcome)
 - 더 일반적인 Grover의 검색 알고리즘 [샘플](https://github.com/microsoft/Quantum/tree/master/samples/algorithms/database-search)을 사용해 보기
 - [Quantum Katas에서 Grover 검색에 대해 자세히 알아보기](xref:microsoft.quantum.overview.katas)
-- Grover 검색 알고리즘의 기반이 되는 양자 컴퓨팅 기술인 [진폭 증폭](xref:microsoft.quantum.libraries.standard.algorithms#amplitude-amplification)에 대해 자세히 알아봅니다.
+- Grover 검색 알고리즘의 기반이 되는 양자 컴퓨팅 기술인 [진폭 증폭][amplitude-amplification]에 대해 자세히 알아봅니다.
 - [양자 컴퓨팅 개념](xref:microsoft.quantum.concepts.intro)
 - [Quantum Development Kit 샘플](https://docs.microsoft.com/samples/browse/?products=qdk)
 
 <!-- LINKS -->
 
 [install]: xref:microsoft.quantum.install
+[amplitude-amplification]: xref:microsoft.quantum.libraries.standard.algorithms#amplitude-amplification
