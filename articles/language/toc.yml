@@ -1,8 +1,0 @@
-- name: 'Q # 형식 모델'
-  href: type-model.md
-- name: 식
-  href: expressions.md
-- name: 문
-  href: statements.md
-- name: 파일 구조
-  href: file-structure.md
