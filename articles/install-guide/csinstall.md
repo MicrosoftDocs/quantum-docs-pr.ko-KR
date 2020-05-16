@@ -1,19 +1,19 @@
 ---
-title: Q# + C#을 사용하여 개발
+title: Q# 및 .NET을 사용하여 개발
 author: natke
 ms.author: nakersha
 ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.cs
-ms.openlocfilehash: 5bcb036b0b32e64d43f90e9a068d9dcc237890ba
-ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+ms.openlocfilehash: 155367dbb1373f00e2b0bd732a5319b32462c9f9
+ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82680174"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83426496"
 ---
-# <a name="using-q-with-c-and-f"></a>C\# 및 F와 함께 Q # 사용\#
+# <a name="develop-with-q-and-net"></a>Q# 및 .NET을 사용하여 개발
 
 Q #은 c # 및 F #과 같은 .NET 언어에서 잘 작동 하도록 빌드됩니다.
 이 가이드에서는 .NET 언어로 작성 된 호스트 프로그램과 함께 Q #을 사용 하는 방법을 설명 합니다.
@@ -29,20 +29,20 @@ Q #은 c # 및 F #과 같은 .NET 언어에서 잘 작동 하도록 빌드됩니
 ### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
 - 새 Q # 라이브러리 만들기
-  - **파일** -> **새로 만들기** -> **프로젝트** 로 이동
+  - **파일**  ->  **새로 만들기**  ->  **프로젝트** 로 이동
   - 검색 상자에 "Q #" 입력
   - **Q # 라이브러리** 를 선택 합니다.
   - **다음**을 선택합니다.
   - 라이브러리의 이름 및 위치 선택
   - "프로젝트 및 솔루션을 동일한 디렉터리에 저장"이 **선택 취소** 되어 있는지 확인 합니다.
-  - **만들기** 선택
+  - **만들기**를 선택합니다.
 - 새 c # 또는 F # 호스트 프로그램 만들기
   - **파일** → **새로 만들기** → **프로젝트** 로 이동 합니다.
   - C # 또는 F에 대해 "콘솔 앱 (.NET Core") "을 선택 합니다. #
   - **다음**을 선택합니다.
   - *솔루션*에서 "솔루션에 추가"를 선택 합니다.
   - 호스트 프로그램의 이름 선택
-  - **만들기** 선택
+  - **만들기**를 선택합니다.
 
 ### <a name="visual-studio-code-or-command-line"></a>[Visual Studio Code 또는 명령줄](#tab/tabid-cmdline)
 
@@ -84,7 +84,7 @@ Q # 컴파일러는 시뮬레이터에서 퀀텀 프로그램을 실행할 수 �
 
 :::code language="qsharp" source="~/quantum/samples/interoperability/dotnet/qsharp/Operations.qs" range="67-75":::
 
-퀀텀 시뮬레이터의 .NET에서이 작업을 호출 하려면 Q # 컴파일러에 의해 `Run` 생성 된 `RunAlgorithm` .net 클래스의 메서드를 사용할 수 있습니다.
+퀀텀 시뮬레이터의 .NET에서이 작업을 호출 하려면 `Run` `RunAlgorithm` Q # 컴파일러에 의해 생성 된 .net 클래스의 메서드를 사용할 수 있습니다.
 
 ### <a name="c"></a>[C#](#tab/tabid-csharp)
 
@@ -96,6 +96,6 @@ Q # 컴파일러는 시뮬레이터에서 퀀텀 프로그램을 실행할 수 �
 
 ***
     
-## <a name="whats-next"></a>새로운 기능
+## <a name="next-steps"></a>다음 단계
 
-이제 Q # 명령줄 프로그램 모두에 대 한 퀀텀 개발 키트를 설정 하 고 .NET과의 상호 운용성을 위해 [첫 번째 퀀텀 프로그램](xref:microsoft.quantum.write-program)을 작성 하 고 실행할 수 있습니다.
+이제 Q # 명령줄 프로그램 모두에 대 한 퀀텀 개발 키트를 설정 하 고 .NET과의 상호 운용성을 위해 [첫 번째 퀀텀 프로그램](xref:microsoft.quantum.quickstarts.qrng)을 작성 하 고 실행할 수 있습니다.

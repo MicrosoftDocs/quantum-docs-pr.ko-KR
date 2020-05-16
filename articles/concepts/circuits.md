@@ -6,25 +6,25 @@ uid: microsoft.quantum.concepts.circuits
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 80d9df00159090768ea442e519c34043a99b050c
-ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
+ms.openlocfilehash: 43f14d67db76dabda34bf881ccbfae0bfd1784ff
+ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "79022724"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83426621"
 ---
 # <a name="quantum-circuits"></a>퀀텀 회로
-그 순간에는 단일 변환 $ \text{CNOT} _{01}(H\otimes 1) $를 고려 하십시오.
+그 순간에는 단일 변환 $ \text{CNOT} _ {01} (H\otimes 1) $를 고려 하십시오.
 이 게이트 시퀀스는 최대 entangled의 2 상 비트 상태를 만들기 때문에 퀀텀 컴퓨팅에 대 한 근본적인 중요 한 사항입니다.
 
-$ $ \mathrm{CNOT}_{01}(H\otimes 1) \ket{00} = \frac{1}{\sqrt{2}} \left (\ket{00} + \ket{11} \right), $ $
+$ $ \mathrm{CNOT}_ {01} (H\otimes 1) \ket {00} = \frac {1} {\sqrt {2} } \left (\ket {00} + \ket {11} \right), $ $
 
 이러한 복잡성을 포함 하는 작업은 퀀텀 알고리즘과 퀀텀 오류 수정에서 사용할 수 있으므로 *퀀텀 회로 다이어그램*이라고 하는 시각화에 대 한 간단한 메서드가 있는 것이 좋습니다.
 이 최대 entangled 퀀텀 상태를 준비 하기 위한 회로 다이어그램은 다음과 같습니다.
 
 <!--- ![](.\media\1.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-최대 entangled 2 상 비트 상태에 대 한 ![회로 다이어그램](~/media/1.svg)
+![최대 entangled 2 상 비트 상태에 대 한 회로 다이어그램](~/media/1.svg)
 
 ## <a name="quantum-circuit-diagram-conventions"></a>퀀텀 회로 다이어그램 규칙
 퀀텀 작업의 시각적 언어는 퀀텀 회로를 표현 하는 규칙을 이해 하 고 나면 동등한 행렬을 작성 하는 것 보다 훨씬 더 쉽게 좋게 수 있습니다.
@@ -37,7 +37,7 @@ $ $ \mathrm{CNOT}_{01}(H\otimes 1) \ket{00} = \frac{1}{\sqrt{2}} \left (\ket{00}
 
 <!--- ![](.\media\2.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-단일 기능 비트 레지스터에서 작동 하는 Hadamard 작업에 대 한 ![기호](~/media/2.svg)
+![단일 기능 비트 레지스터에서 작동 하는 Hadamard 작업에 대 한 기호](~/media/2.svg)
 
 는 단일의 비트 레지스터에서 작동 하는 [Hadamard](xref:microsoft.quantum.intrinsic.h) 작업입니다.
 
@@ -47,7 +47,7 @@ $ $ \mathrm{CNOT}_{01}(H\otimes 1) \ket{00} = \frac{1}{\sqrt{2}} \left (\ket{00}
 
 <!--- ![](.\media\3.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-왼쪽에서 오른쪽](~/media/3.svg) 적용 되는 퀀텀 게이트 ![다이어그램
+![왼쪽에서 오른쪽으로 적용 되는 퀀텀 게이트 다이어그램](~/media/3.svg)
 
 는 단일 행렬 $CBA $입니다.
 행렬 곱셈은 반대 규칙을 따르는 합니다. 가장 오른쪽의 행렬이 먼저 적용 됩니다. 그러나 퀀텀 회로 다이어그램에서 가장 왼쪽의 게이트가 먼저 적용 됩니다.
@@ -65,27 +65,27 @@ $ $ \mathrm{CNOT}_{01}(H\otimes 1) \ket{00} = \frac{1}{\sqrt{2}} \left (\ket{00}
 
 <!--- ![](.\media\4.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-두 개의 단일 비트 작업의 ![회로 다이어그램](~/media/4.svg)
+![두 개의 단일 비트 작업의 회로 다이어그램](~/media/4.svg)
 
 회로를 사용 하는 컨텍스트에 따라 2 1-가 비트 레지스터가 아닌 단일 2-가 비트 레지스터에서 작업을 수행 하는 것으로 $B $를 볼 수도 있습니다. 이러한 추상 회로 다이어그램의 가장 유용한 속성은 기본 게이트로 컴파일하지 않고도 복잡 한 퀀텀 알고리즘을 높은 수준으로 설명할 수 있다는 것입니다.
 즉, 알고리즘 내의 각 서브루틴이 작동 하는 방식에 대 한 모든 세부 정보를 이해 하지 않고도 대량 퀀텀 알고리즘에 대 한 데이터 흐름에 대 한 intuition를 가져올 수 있습니다.
 
 ## <a name="controlled-gates"></a>제어 된 게이트
 Multi-factor bit 퀀텀 회로 다이어그램에 기본 제공 되는 다른 구문은 제어입니다.
-퀀텀 단일 제어 출입문의 동작입니다. $ \Lambda (G) $로 표시 된 단일의 값은 $ \Lambda (g) $G (\lambda \ket{0} + \lambda \ket{1}) \ket{\psi} = \lambda{0} \ket{\psi} + \lambda \ket{1} G\ket {\ psi} $의 다음 예제를 살펴보면 이해할 수 있습니다.
+$ \Lambda (G) $ $G로 표시 된 퀀텀 단일 제어 되는 게이트의 작업은 제품 상태 입력 $ \Lambda (G) (\lambda \ket {0} + \lambda \ket {1} ) \ket{\psi} = \lambda \ket {0} \ket{\psi} + \lambda \ket {1} G\ket {\ psi} $의 다음 예제를 살펴보면 이해할 수 있습니다.
 즉, 제어 되는 게이트는 $ \psi $를 포함 하는 레지스터에 $G $을 적용 합니다 .이 경우 컨트롤의 값이 $1 $ 인 경우에만 적용 됩니다.
 일반적으로 회로 다이어그램에서 이와 같이 제어 되는 작업을 설명 합니다.
 
 <!--- ![](.\media\5.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-단일 제어 되는 게이트의 ![회로 다이어그램](~/media/5.svg)
+![단일 제어 게이트 회로 다이어그램](~/media/5.svg)
 
 여기서 검정 원은 게이트가 제어 되는 퀀텀 비트를 나타내며, 세로는 컨트롤의 값이 $1 $ 인 경우 적용 되는 단일를 나타냅니다.
 $G = X $ 및 $G = Z $와 같은 특수 한 경우에는 제어 되는 게이트 버전을 설명 하는 다음과 같은 표기법이 제공 됩니다 (제어 된 X 게이트는 [$CNOT $ gate](xref:microsoft.quantum.intrinsic.cnot)임을 유의).
 
 <!--- ![](.\media\6.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-제어 되는 게이트의 특별 한 경우에 대 한 ![회로 다이어그램](~/media/6.svg)
+![제어 되는 게이트의 특수 사례에 대 한 회로 다이어그램](~/media/6.svg)
 
 Q #은 작업의 제어 된 버전을 자동으로 생성 하는 메서드를 제공 합니다. 그러면 프로그래머가 이러한 작업을 직접 코딩할 필요가 없습니다. 이에 대 한 예제는 다음과 같습니다.
 
@@ -104,7 +104,7 @@ is Ctl { // Auto-generate the controlled specialization of the operation
 
 <!--- ![](.\media\7.svg) ---->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-측정 연산을 나타내는 ![기호](~/media/7.svg)
+![측정 작업을 나타내는 기호](~/media/7.svg)
 
 Q #에서는이 목적을 위해 [측정값 연산자](xref:microsoft.quantum.intrinsic.measure) 를 구현 합니다.
 자세한 내용은 [측정에](xref:microsoft.quantum.libraries.standard.prelude#measurements) 대 한 섹션을 참조 하세요.
@@ -113,13 +113,13 @@ Q #에서는이 목적을 위해 [측정값 연산자](xref:microsoft.quantum.in
 
 <!--- ![](.\media\8.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-제어 된 작업을 나타내는 ![회로 다이어그램](~/media/8.svg)
+![제어 된 작업을 나타내는 회로 다이어그램](~/media/8.svg)
 
 일반적으로 제어 되는 게이트를 제공 합니다. 여기서 $G $은 클래식 컨트롤 비트에 조건 화 된 $1 $ 값이 적용 됩니다.
 
 ## <a name="teleportation-circuit-diagram"></a>Teleportation 회로 다이어그램
-[퀀텀 teleportation](xref:microsoft.quantum.techniques.puttingittogether) 는 이러한 구성 요소를 보여 주는 최상의 퀀텀 알고리즘이 될 것입니다.
-퀀텀 teleportation는 되거나 얽 히 및 측정을 사용 하 여 퀀텀 컴퓨터 (또는 퀀텀 네트워크의 먼 퀀텀 컴퓨터 사이) 내에서 데이터를 이동 하는 방법입니다.
+퀀텀 teleportation는 이러한 구성 요소를 보여 주는 최상의 퀀텀 알고리즘이 될 것입니다.
+해당 하는 [퀀텀 Kata](xref:microsoft.quantum.overview.katas) 퀀텀 teleportation은 되거나 얽 히 및 측정을 사용 하 여 퀀텀 컴퓨터 내에서 (또는 퀀텀 네트워크의 먼 퀀텀 컴퓨터 간) 데이터를 이동 하는 방법에 대해 배울 수 있습니다.
 흥미롭게도, 실제 값을 알고 있는 것이 아니라, 지정 된의 값을 한 가지 이상에서 다른 값으로 이동 하는 것은 사실입니다.
 이는 프로토콜이 퀀텀 메커니즘의 법에 따라 작동 하는 데 필요 합니다.
 퀀텀 teleportation 회로는 아래에 제공 됩니다. 또한 퀀텀 회로를 읽는 방법을 보여 주기 위해 주석이 추가 된 회로 버전을 제공 합니다.

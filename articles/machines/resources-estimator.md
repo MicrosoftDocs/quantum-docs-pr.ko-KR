@@ -6,23 +6,23 @@ ms.author: anpaz@microsoft.com
 ms.date: 1/22/2019
 ms.topic: article
 uid: microsoft.quantum.machines.resources-estimator
-ms.openlocfilehash: 51186134e9279727fec212cdce84f69493aaa656
-ms.sourcegitcommit: a0e50c5f07841b99204c068cf5b5ec8ed087ffea
+ms.openlocfilehash: 01d242ed405bdd326f65e534f82ff378a464ee7d
+ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80320819"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83426869"
 ---
-# <a name="the-resourcesestimator-target-machine"></a>ResourcesEstimator 대상 컴퓨터
+# <a name="the-resources-estimator-target-machine"></a>평가기 대상 컴퓨터의 리소스
 
-이름에서 알 수 있듯이 `ResourcesEstimator`는 퀀텀 컴퓨터에서 지정 된 Q # 작업 인스턴스를 실행 하는 데 필요한 리소스를 추정 합니다.
+이름에서 알 수 있듯이는 `ResourcesEstimator` 퀀텀 컴퓨터에서 지정 된 Q # 작업 인스턴스를 실행 하는 데 필요한 리소스를 추정 합니다.
 퀀텀 컴퓨터의 상태를 실제로 시뮬레이션 하지 않고 퀀텀 작업을 실행 하 여이 작업을 수행 합니다. 따라서 코드의 고전적인 부분이 적절 한 시간 내에 실행 될 수 있는 경우 수천 비트를 사용 하는 Q # 작업에 대 한 리소스를 예상할 수 있습니다.
 
-## <a name="usage"></a>사용
+## <a name="usage"></a>사용량
 
-`ResourcesEstimator`은 다른 유형의 대상 컴퓨터 일 뿐 이므로 모든 Q # 작업을 실행 하는 데 사용할 수 있습니다. 
+는 `ResourcesEstimator` 대상 컴퓨터의 또 다른 유형 이므로 모든 Q # 작업을 실행 하는 데 사용할 수 있습니다. 
 
-다른 대상 컴퓨터와 같이 C# 호스트 프로그램에서 사용 하려면 인스턴스를 만들고 작업의 `Run` 메서드에 대 한 첫 번째 매개 변수로 전달 합니다.
+다른 대상 컴퓨터와 같이 c # 호스트 프로그램에서 사용 하려면 인스턴스를 만들고이를 작업 메서드의 첫 번째 매개 변수로 전달 합니다 `Run` .
 
 ```csharp
 using Microsoft.Quantum.Simulation.Core;
@@ -42,7 +42,7 @@ namespace Quantum.MyProgram
 }
 ```
 
-예제에서 볼 수 있듯이 `ResourcesEstimator`은 파일에 저장 하거나 분석을 위해 콘솔에 기록할 수 있는 탭으로 구분 된 값 (TSV)이 있는 테이블을 생성 하는 `ToTSV()` 메서드를 제공 합니다. 위의 프로그램의 출력은 다음과 같습니다.
+예제에서 볼 수 있듯이은 `ResourcesEstimator` 파일에 `ToTSV()` 저장 하거나 분석을 위해 콘솔에 기록할 수 있는 탭으로 구분 된 값 (TSV)이 있는 테이블을 생성 하는 메서드를 제공 합니다. 위의 프로그램의 출력은 다음과 같습니다.
 
 ```Output
 Metric          Sum
@@ -57,15 +57,15 @@ BorrowedWidth   0
 ```
 
 > [!NOTE]
-> `ResourcesEstimator`는 모든 실행에 대해 계산을 다시 설정 하지 않습니다. 동일한 인스턴스가 다른 작업을 실행 하는 데 사용 되는 경우 기존 결과의 맨 위에 집계 수가 유지 됩니다.
+> 는 `ResourcesEstimator` 모든 실행에 대해 계산을 다시 설정 하지 않습니다. 동일한 인스턴스가 다른 작업을 실행 하는 데 사용 되는 경우 기존 결과의 맨 위에 집계 수가 유지 됩니다.
 > 실행 간에 계산을 다시 설정 해야 하는 경우 모든 실행에 대해 새 인스턴스를 만듭니다.
 
 
 ## <a name="programmatically-retrieving-the-estimated-data"></a>프로그래밍 방식으로 예상 데이터 검색
 
-TSV 테이블 외에도 `ResourcesEstimator`의 `Data` 속성을 통해 예상 리소스를 프로그래밍 방식으로 검색할 수 있습니다. `Data`는 두 개의 열이 있는 `System.DataTable` 인스턴스를 제공 합니다. `Metric` 및 `Sum`는 메트릭 이름으로 인덱싱됩니다.
+TSV 테이블 외에도의 속성을 통해 예상 리소스를 프로그래밍 방식으로 검색할 수 있습니다 `ResourcesEstimator` `Data` . `Data``System.DataTable` `Metric` 메트릭 이름으로 인덱싱된 및 두 개의 열을 포함 하는 인스턴스를 제공 합니다 `Sum` .
 
-다음 코드는 Q # 작업에서 사용 하는 `QubitClifford`, `T` 및 `CNOT` 게이트의 총 수를 검색 하 고 인쇄 하는 방법을 보여 줍니다.
+다음 코드에서는 `QubitClifford` `T` `CNOT` Q # 작업에서 사용 하는 총 및 게이트 수를 검색 하 고 인쇄 하는 방법을 보여 줍니다.
 
 ```csharp
 using Microsoft.Quantum.Simulation.Core;
@@ -91,7 +91,7 @@ namespace Quantum.MyProgram
 
 ## <a name="metrics-reported"></a>보고 된 메트릭
 
-다음은 `ResourcesEstimator`에서 예상 하는 메트릭 목록입니다.
+다음은에서 예상 하는 메트릭 목록입니다 `ResourcesEstimator` .
 
 * __Cnot__: cnot (제어 된 Pauli X 게이트 라고도 함) 게이트를 실행 했습니다.
 * __QubitClifford__: 실행 된 단일 Clifford 및 Pauli 게이트의 수입니다.
@@ -105,7 +105,7 @@ namespace Quantum.MyProgram
 
 ## <a name="providing-the-probability-of-measurement-outcomes"></a>측정 결과의 확률 제공
 
-<xref:microsoft.quantum.intrinsic> 네임 스페이스의 <xref:microsoft.quantum.intrinsic.assertprob>를 사용 하 여 Q # 프로그램의 실행을 구동 하는 데 도움이 되는 예상 측정 확률에 대 한 정보를 제공할 수 있습니다. 다음 예제에서는 이에 대해 설명합니다.
+<xref:microsoft.quantum.intrinsic.assertprob>에서 <xref:microsoft.quantum.intrinsic> 네임 스페이스를 사용 하 여 Q # 프로그램의 실행을 추진 하는 데 도움이 되는 측정 예상 확률에 대 한 정보를 제공할 수 있습니다. 다음 예제에서는 이에 대해 설명합니다.
 
 ```qsharp
 operation Teleport(source : Qubit, target : Qubit) : Unit {
@@ -127,10 +127,10 @@ operation Teleport(source : Qubit, target : Qubit) : Unit {
 }
 ```
 
-`ResourcesEstimator`에서 `AssertProb` 발생 하면 `source`에 대 한 `PauliZ` 측정을 기록 하 고 확률 0.5에 `q` 결과를 제공 해야 합니다.`Zero` 나중에 `M` 실행 되는 경우 결과 확률의 기록 된 값을 찾아 `M` 확률 0.5에 `Zero` 또는 `One`을 반환 합니다.
+에서 해당 `ResourcesEstimator` `AssertProb` 측정을 기록 하 `PauliZ` `source` 고 `q` 확률 0.5를 사용 하 여 결과를 제공 해야 `Zero` 하는 경우 나중에 실행 하는 경우 `M` 결과 확률의 기록 된 값을 찾고 `M` 확률 0.5을 반환 `Zero` 합니다 `One` .
 
 
 ## <a name="see-also"></a>참고 항목
 
-`ResourcesEstimator`은 다양 한 메트릭 집합, 전체 호출 그래프에서 메트릭을 보고 하는 기능, 질문 # 프로그램에서 버그를 찾는 데 도움이 되는 [고유한 입력 검사기](xref:microsoft.quantum.machines.qc-trace-simulator.distinct-inputs) 와 같은 기능을 제공 하는 퀀텀 컴퓨터 [추적 시뮬레이터](xref:microsoft.quantum.machines.qc-trace-simulator.intro)를 기반으로 빌드됩니다. 자세한 내용은 [추적 시뮬레이터](xref:microsoft.quantum.machines.qc-trace-simulator.intro) 설명서를 참조 하세요.
+는 `ResourcesEstimator` 퀀텀 컴퓨터 [추적 시뮬레이터](xref:microsoft.quantum.machines.qc-trace-simulator.intro)를 기반으로 구축 되었으며,이를 통해 다양 한 메트릭 집합, 전체 호출 그래프에서 메트릭을 보고 하는 기능, 질문 # 프로그램에서 버그를 찾는 데 도움이 되는 [고유한 입력 검사기](xref:microsoft.quantum.machines.qc-trace-simulator.distinct-inputs) 와 같은 기능을 제공 합니다. 자세한 내용은 [추적 시뮬레이터](xref:microsoft.quantum.machines.qc-trace-simulator.intro) 설명서를 참조 하세요.
 

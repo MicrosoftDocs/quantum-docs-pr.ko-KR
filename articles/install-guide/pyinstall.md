@@ -1,19 +1,19 @@
 ---
-title: Q# + Python을 사용하여 개발
+title: 'Q # 및 Python을 사용 하 여 개발'
 author: natke
 ms.author: nakersha
 ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.python
-ms.openlocfilehash: e1b8a0c68b3ac0c059c6de6e478593321764ff88
-ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+ms.openlocfilehash: a8c5b9c25c069f98ef8eefd6cfbc36bf3376931c
+ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82680155"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83426357"
 ---
-# <a name="develop-with-q--python"></a>Q# + Python을 사용하여 개발
+# <a name="develop-with-q-and-python"></a>Q # 및 Python을 사용 하 여 개발
 
 Q # 작업을 호출 하는 Python 호스트 프로그램을 개발 하려면 QDK를 설치 합니다.
 
@@ -24,7 +24,7 @@ Q # 작업을 호출 하는 Python 호스트 프로그램을 개발 하려면 QD
     - [.NET Core SDK 3.1 이상](https://www.microsoft.com/net/download)
 
 
-1. Q # `qsharp` 과 python 간에 interop를 사용할 수 있도록 하는 Python 패키지인 패키지를 설치 합니다.
+1. `qsharp`Q #과 python 간에 interop를 사용할 수 있도록 하는 Python 패키지인 패키지를 설치 합니다.
 
     ```bash
     pip install qsharp
@@ -83,6 +83,6 @@ Q # 작업을 호출 하는 Python 호스트 프로그램을 개발 하려면 QD
 > [!NOTE]
 > * Python Jupyter 노트북을 사용 하 여 기존 Python 프로그램을 작성 하 고 셀에서 Q # 작업을 호출할 수도 있습니다. Python 코드는 일반적인 Python 프로그램 일 뿐입니다.
 
-## <a name="whats-next"></a>새로운 기능
+## <a name="next-steps"></a>다음 단계
 
-지금까지 기본 설정 환경에 Quantum Development Kit를 설치했으므로 [첫 번째 양자 프로그램](xref:microsoft.quantum.write-program)을 작성 및 실행할 수 있습니다.
+지금까지 기본 설정 환경에 Quantum Development Kit를 설치했으므로 [첫 번째 양자 프로그램](xref:microsoft.quantum.quickstarts.qrng)을 작성 및 실행할 수 있습니다.
