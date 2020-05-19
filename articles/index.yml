@@ -9,35 +9,33 @@ metadata:
   ms.collection: collection
   author: cjgronlund
   ms.author: cgronlun
-  ms.date: 10/21/2019
-  ms.openlocfilehash: e21b191689c228fa3e7c0590ee2f79f625b3960d
-  ms.sourcegitcommit: 9d1c045cf1a2c3e19030cb38dbc7496dbd24ab58
+  ms.date: 5/10/2020
+  ms.openlocfilehash: 7c0fdf596c3409f0e1db7773b079a258d14a7d9c
+  ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 04/13/2020
-  ms.locfileid: "80320834"
+  ms.lasthandoff: 05/15/2020
+  ms.locfileid: "83426890"
 landingContent:
 - title: 양자 컴퓨팅
   linkLists:
   - linkListType: learn
     links:
-    - text: 양자 컴퓨팅이란?
-      url: overview/what-is-quantum-computing.md
-    - text: 양자 컴퓨터에서 수행할 수 있는 작업은 무엇인가요?
-      url: overview/quantum-computers.md
-    - text: 양자 컴퓨팅을 학습해야 하는 이유는?
-      url: overview/why-learn-quantum-computing.md
+    - text: 양자 컴퓨팅 이해
+      url: overview/understanding-quantum-computing.md
+    - text: 양자 컴퓨터 및 양자 시뮬레이터
+      url: overview/quantum-computers-and-simulators.md
     - text: Q# 및 QDK란?
-      url: overview/what-is-qsharp.md
-    - text: 자세히 알아보려면 어떻게 해야 하나요?
-      url: overview/how-to-learn-quantum-computing.md
+      url: overview/what-is-qsharp-and-qdk.md
+    - text: 양자 컴퓨팅을 위한 선형 대수
+      url: overview/algebra-for-quantum-computing.md
   - linkListType: concept
     links:
     - text: 양자 컴퓨팅 개념
       url: concepts/index.md
-- title: Quantum Development Kit 가져오기
+- title: Quantum Development Kit 시작
   linkLists:
-  - linkListType: overview
+  - linkListType: get-started
     links:
     - text: Quantum Development Kit
       url: welcome.md
@@ -49,19 +47,17 @@ landingContent:
       url: install-guide/update.md
 - title: Q# 프로그래밍 언어
   linkLists:
-  - linkListType: overview
+  - linkListType: how-to-guide
     links:
-    - text: Q# 언어 소개
-      url: language/index.md
-    - text: Q# 개발 기술
-      url: techniques/index.md
+    - text: Q# 사용자 가이드
+      url: user-guide/index.md
     - text: 양자 시뮬레이터 및 호스트 애플리케이션
       url: machines/index.md
-  - linkListType: quickstart
+  - linkListType: tutorial
     links:
     - text: 양자 난수 생성기 빌드
       url: quickstarts/qrng.md
-    - text: Q#으로 얽힘 살펴보기
+    - text: Q#을 사용한 얽힘 살펴보기
       url: quickstart.md
     - text: '양자 속도 향상: Grover의 검색 알고리즘'
       url: quickstarts/search.md

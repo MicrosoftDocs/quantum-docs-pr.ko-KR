@@ -5,9 +5,9 @@ items:
     href: standalone.md
   - name: 'Q# Jupyter Notebook'
     href: qjupyter.md
-  - name: '다른 언어로 Q# 사용'
+  - name: '다른 언어와 Q#'
     items:
-      - name: 'Python으로 Q# 사용'
+      - name: 'Python과 Q#'
         href: pyinstall.md
-      - name: '.NET으로 Q# 사용'
+      - name: '.NET과 Q#'
         href: csinstall.md
