@@ -1,19 +1,19 @@
 ---
-title: 'Q의 형식 #'
+title: Q#의 형식
 description: 'Q # 프로그래밍 언어에 사용 되는 다양 한 형식에 대해 알아봅니다.'
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.types
-ms.openlocfilehash: 58370193bd62e306197a9e07c28f8611f043e55c
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 4a551ee90a0abb6e42953cf04c7f5a8ca3573f26
+ms.sourcegitcommit: 682a4a5f5dd23ca58a4addf62aea4086bb308552
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431141"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83609144"
 ---
-# <a name="types-in-q"></a>Q의 형식 #
+# <a name="types-in-q"></a>Q#의 형식
 
 이 페이지에서는 Q # 형식 모델을 지정 하 고 형식을 지정 하 고 작업 하는 구문을 설명 합니다.
 다음 페이지 [형식 식](xref:microsoft.quantum.guide.expressions)에서는 이러한 형식의 식을 만들고 작동 하는 방법에 대해 자세히 설명 합니다.
@@ -35,7 +35,7 @@ Q # 언어는 다른 형식을 구성할 수 있는 몇 가지 *기본 형식을
    입력할.
 - `Double`형식은 배정밀도 부동 소수점 숫자를 나타냅니다 (예: `0.0` , `-1.3` ,). `4e-7`
 - `Bool`형식은 또는 일 수 있는 부울 값을 나타냅니다 `true` `false` .
-- `Range`형식은에 의해 표시 되는 정수 시퀀스를 나타냅니다 `start..step..stop` . 여기서은 단계를 나타내는 옵션입니다. 
+- `Range`형식은에 의해 표시 되는 정수 시퀀스를 나타냅니다 `start..step..stop` . 여기서 단계는 선택 사항입니다. 
    이는에 `start .. stop` 해당 하 `start..1..stop` 고, 예를 들어은 `1..2..7` $ \{ 1, 3, 5, 7 $ 시퀀스를 나타냅니다. \}
 - `String`형식은 사용자가 만든 후 불투명 한 유니코드 문자 시퀀스입니다.
   이 형식은 오류 또는 진단 이벤트의 경우 메시지를 기존 호스트에 보고 하는 데 사용 됩니다.
@@ -125,7 +125,7 @@ Q #에서는 생성 된 튜플의 콘텐츠를 변경 하는 메커니즘을 제
 
 사용자 정의 형식 선언은 키워드로 구성 된 `newtype` 다음 사용자 정의 형식 이름, `=` , 유효한 형식 사양 및 종료 세미콜론으로 구성 됩니다.
 
-예들 들어 다음과 같습니다.
+다음은 그 예입니다.
 
 ```qsharp
 newtype PairOfInts = (Int, Int);

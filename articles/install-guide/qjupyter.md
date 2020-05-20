@@ -1,19 +1,19 @@
 ---
-title: 'Q # Jupyter 노트북을 사용 하 여 개발'
+title: Q# Jupyter Notebook을 사용하여 개발
 author: natke
 ms.author: nakersha
 ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.jupyter
-ms.openlocfilehash: 3302a9bd0652b2dea86b844058bf8303ee7a4a7f
-ms.sourcegitcommit: c85c1b439807ac576d3a11aadca307d57b059673
+ms.openlocfilehash: 0c4dc856c94b0a694fb99607eda64cec4d5c221d
+ms.sourcegitcommit: 328f45a0b64cb6b325fa9d3b3ddb74a6a7a97ee9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "83551042"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83660762"
 ---
-# <a name="develop-with-q-jupyter-notebooks"></a>Q # Jupyter 노트북을 사용 하 여 개발
+# <a name="develop-with-q-jupyter-notebooks"></a>Q# Jupyter Notebook을 사용하여 개발
 
 Q # Jupyter 노트북에서 Q # 작업을 개발 하는 데 QDK를 설치 합니다.
 
@@ -45,9 +45,9 @@ IQ#(i-q-sharp로 발음)은 Jupyter 및 Python에서 .NET Core SDK에 주로 사
         jupyter notebook
         ```
 
-    - Jupyter 노트 복사를 열려면 명령줄에서 제공 된 URL을 브라우저에 붙여 넣습니다.
+    - Jupyter Notebook를 열려면 명령줄에서 제공 된 URL을 복사 하 여 브라우저에 붙여 넣습니다.
 
-    - Q# 커널을 사용하여 Jupyter Notebook을 만들고 첫 번째 Notebook 셀에 다음 코드를 추가합니다.
+    - Q # 커널을 사용 하 여 Jupyter Notebook를 만들고 첫 번째 노트북 셀에 다음 코드를 추가 합니다.
 
         ```qsharp
         operation SayHello () : Unit {
@@ -57,17 +57,21 @@ IQ#(i-q-sharp로 발음)은 Jupyter 및 Python에서 .NET Core SDK에 주로 사
 
     - 다음 Notebook 셀을 실행합니다.
 
-        ![Q# 코드를 사용하는 Jupyter Notebook 셀](~/media/install-guide-jupyter.png)
+        ![Q # code를 사용 하 여 셀 Jupyter Notebook](~/media/install-guide-jupyter.png)
 
-        셀의 출력에 `SayHello`가 표시됩니다. Jupyter Notebook에서 실행하는 경우 Q# 코드가 컴파일되고 Notebook은 검색된 작업의 이름을 출력합니다.
+        셀의 출력에 `SayHello`가 표시됩니다. Jupyter Notebook에서 실행 되는 경우 Q # 코드가 컴파일되고, 노트북은 검색 된 작업의 이름을 출력 합니다.
 
 
     - 새 셀에서 명령을 사용 하 여 시뮬레이터에서 방금 만든 작업을 실행 합니다 `%simulate` .
 
-        ![%simulate 매직을 사용하는 Jupyter Notebook 셀](~/media/install-guide-jupyter-simulate.png)
+        ![% 시뮬레이트 마법을 사용 하 여 셀 Jupyter Notebook](~/media/install-guide-jupyter-simulate.png)
 
         호출 된 작업의 결과와 함께 화면에 메시지가 출력 되는 것을 볼 수 있습니다 ( `()` 작업에서 단순히 형식을 반환 하기 때문에 빈 튜플이 표시 됨 `Unit` ).
 
 ## <a name="next-steps"></a>다음 단계
 
-지금까지 기본 설정 환경에 Quantum Development Kit를 설치했으므로 [첫 번째 양자 프로그램](xref:microsoft.quantum.quickstarts.qrng)을 작성 및 실행할 수 있습니다.
+Q # Jupyter 노트북용 QDK를 설치 했으므로 Jupyter Notebook 환경 내에서 직접 Q # 코드를 작성 하 여 [첫 번째 퀀텀 프로그램](xref:microsoft.quantum.quickstarts.qrng) 을 작성 하 고 실행할 수 있습니다.
+
+Q # Jupyter 노트북으로 수행할 수 있는 작업에 대 한 자세한 예제는 다음을 참조 하세요.
+- [Q # 및 Jupyter Notebook를 소개](https://docs.microsoft.com/samples/microsoft/quantum/intro-to-qsharp-jupyter/)합니다. 이 환경에서 Q #을 사용 하는 방법을 보여 주는 Q # Jupyter Notebook를 찾을 수 있습니다.
+- [Katas](xref:microsoft.quantum.overview.katas)는 자체 학습 자습서의 오픈 소스 컬렉션인 Q # Jupyter 노트북 형태의 프로그래밍 연습 집합입니다. [퀀텀 Katas tutorial 노트북](https://github.com/microsoft/QuantumKatas#tutorial-topics) 은 좋은 출발점입니다. 퀀텀 Katas는 퀀텀 컴퓨팅 및 Q # 프로그래밍의 요소를 동시에 학습 하는 것을 목표로 합니다. Q # Jupyter 노트북을 사용 하 여 만들 수 있는 콘텐츠의 종류에 대 한 좋은 예입니다.
