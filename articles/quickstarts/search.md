@@ -6,16 +6,16 @@ ms.author: chgranad@microsoft.com
 ms.date: 10/19/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.search
-ms.openlocfilehash: c67ccd16957ceef694552bdd9c073ba5a35d8aaf
-ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+ms.openlocfilehash: 9562e1937a2cac49d682cc0524d8fb29e276d95c
+ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82686839"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83426800"
 ---
-# <a name="quickstart-implement-grovers-search-algorithm-in-q"></a>빠른 시작: Q\#에서 Grover의 검색 알고리즘 구현
+# <a name="tutorial-implement-grovers-search-algorithm-in-q"></a>자습서: Q\#에서 Grover의 검색 알고리즘 구현
 
-이 빠른 시작에서는 Grover 검색을 빌드하고 실행하여 비정형 데이터의 검색 속도를 높이는 방법을 배울 수 있습니다.  Grover 검색은 가장 인기 있는 양자 컴퓨팅 알고리즘의 하나이며, 비교적 소규모의 Q# 구현을 통해 양자 알고리즘을 표현하는 고급 Q# 양자 프로그래밍 언어를 사용하여 양자 솔루션 프로그래밍의 장점을 이해할 수 있습니다.  가이드의 끝에서는 시뮬레이션 출력이 정렬되지 않은 항목 목록 중 특정 문자열을 찾는 데 걸리는 시간이 클래식 컴퓨터에서 전체 목록을 검색하는 데 걸리는 시간보다 짧다는 것을 볼 수 있습니다.
+이 자습서에서는 Grover 검색을 빌드하고 실행하여 비정형 데이터의 검색 속도를 높이는 방법을 알아볼 수 있습니다.  Grover 검색은 가장 인기 있는 양자 컴퓨팅 알고리즘의 하나이며, 비교적 소규모의 Q# 구현을 통해 양자 알고리즘을 표현하는 고급 Q# 양자 프로그래밍 언어를 사용하여 양자 솔루션 프로그래밍의 장점을 이해할 수 있습니다.  가이드의 끝에서는 시뮬레이션 출력이 정렬되지 않은 항목 목록 중 특정 문자열을 찾는 데 걸리는 시간이 클래식 컴퓨터에서 전체 목록을 검색하는 데 걸리는 시간보다 짧다는 것을 볼 수 있습니다.
 
 Grover의 알고리즘은 특정 항목에 대한 비정형 데이터의 목록을 검색합니다. 예를 들어 다음과 같은 질문에 답할 수 있습니다. 한 벌의 카드에서 뽑은 이 카드는 하트 에이스인가요? 특정 항목의 레이블 지정은 _표시된 입력_이라고 합니다.
 
@@ -104,7 +104,7 @@ Reflecting about marked state...
 
 ## <a name="next-steps"></a>다음 단계
 
-이 빠른 시작을 사용한 경우 Q#을 사용하여 사용자 고유의 양자 애플리케이션을 작성하는 방법을 자세히 알아보기 위해 아래 리소스 중 일부를 확인하세요.
+이 자습서를 사용한 경우 아래 리소스 중 일부를 확인하여 Q#에서 사용자 고유의 양자 애플리케이션을 작성하는 방법을 자세히 알아보세요.
 
 - [QDK 시작 가이드로 돌아가기](xref:microsoft.quantum.welcome)
 - 더 일반적인 Grover의 검색 알고리즘 [샘플](https://github.com/microsoft/Quantum/tree/master/samples/algorithms/database-search)을 사용해 보기

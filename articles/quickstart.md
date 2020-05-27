@@ -1,23 +1,25 @@
 ---
-title: Q#을 사용하는 양자 기본 사항
+title: Q#을 사용한 얽힘 살펴보기
 description: Q#에서 양자 프로그램을 작성하는 방법을 알아봅니다. QDK(Quantum Development Kit)를 사용하여 Bell State 애플리케이션을 개발합니다.
 author: natke
 ms.author: nakersha
 ms.date: 10/07/2019
 ms.topic: tutorial
 uid: microsoft.quantum.write-program
-ms.openlocfilehash: 8d3b2d7c8da39a961f4eedcc5989ad3a1e134ade
-ms.sourcegitcommit: 7d350db4b5e766cd243633aee7d0a839b6274bd6
+ms.openlocfilehash: 7836e39227fa2282c6e2faa039f6e625103d5403
+ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "77906732"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83426837"
 ---
-# <a name="quantum-basics-with-q"></a>Q#을 사용하는 양자 기본 사항
+# <a name="tutorial-explore-entanglement-with-q"></a>자습서: Q\#을 사용한 얽힘 살펴보기
 
-이 빠른 시작에서는 큐비트를 조작 및 측정하고 중첩과 얽힘의 효과를 시연하는 Q# 프로그램 작성 방법을 보여줍니다.  QDK를 설치하고, 프로그램을 빌드하여 양자 시뮬레이터에서 실행하는 방법을 안내합니다.  
+이 자습서에서는 큐비트를 조작 및 측정하고 중첩과 얽힘의 효과를 시연하는 Q# 프로그램을 작성하는 방법을 보여 줍니다.
+QDK를 설치하고, 프로그램을 빌드하여 양자 시뮬레이터에서 실행하는 방법을 안내합니다.  
 
-양자 얽힘을 보여주는 벨이라는 애플리케이션을 작성합니다.  벨이라는 이름은 가장 간단한 중첩과 양자 얽힘의 예를 표현하는 데 사용되는 두 큐비트의 특정 양자 상태를 의미하는 벨 상태에서 따온 것입니다. 
+양자 얽힘을 보여주는 벨이라는 애플리케이션을 작성합니다.
+벨이라는 이름은 가장 간단한 중첩과 양자 얽힘의 예를 표현하는 데 사용되는 두 큐비트의 특정 양자 상태를 의미하는 벨 상태에서 따온 것입니다.
 
 ## <a name="pre-requisites"></a>필수 구성 요소
 
@@ -30,7 +32,7 @@ QDK를 설치하지 않고 설명에 따라 Q# 프로그래밍 언어와 양자 
 
 ## <a name="demonstrating-qubit-behavior-with-q"></a>Q#에서 큐비트 동작 시연
 
-간단한 [큐비트 정의](xref:microsoft.quantum.overview.what#the-qubit)를 떠올려 보세요.  클래식 비트는 0 또는 1 같은 단일 이진 값을 보유하는 반면, 큐비트 상태는 0과 1의 동시 **중첩**일 수 있습니다.  개념적으로 큐비트는 공간의 방향(벡터라고도 함)이라고 생각할 수 있습니다.  가능한 모든 방향은 큐비트가 될 수 있습니다. 두 **클래식 상태**는 두 방향입니다. 즉, 0을 측정할 확률이 100%이고, 1을 측정할 확률이 100%입니다.  또한 이 표현은 [블로흐 구](/quantum/concepts/the-qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere)를 통해 보다 형식적으로 시각화됩니다.
+간단한 [큐비트 정의](xref:microsoft.quantum.overview.understanding)를 떠올려 보세요.  클래식 비트는 0 또는 1 같은 단일 이진 값을 보유하는 반면, 큐비트 상태는 0과 1의 동시 **중첩**일 수 있습니다.  개념적으로 큐비트는 공간의 방향(벡터라고도 함)이라고 생각할 수 있습니다.  가능한 모든 방향은 큐비트가 될 수 있습니다. 두 **클래식 상태**는 두 방향입니다. 즉, 0을 측정할 확률이 100%이고, 1을 측정할 확률이 100%입니다.  또한 이 표현은 [블로흐 구](/quantum/concepts/the-qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere)를 통해 보다 형식적으로 시각화됩니다.
 
 
 측정 작업은 이진 결과를 생성하고 큐비트 상태를 변경합니다. 측정은 이진 값(0 또는 1)을 생성합니다.  큐비트는 중첩(모든 방향)에서 클래식 상태 중 하나로 변경됩니다.  그 후 개입 작업 없이 동일한 측정을 반복하여 동일한 이진 결과를 생성합니다.  
@@ -498,7 +500,7 @@ Init:One  0s=490  1s=510  agree=1000
 
 ## <a name="whats-next"></a>다음 단계
 
-[Grover 검색](xref:microsoft.quantum.quickstarts.search) 빠른 시작에서는 가장 인기 있는 양자 컴퓨팅 알고리즘 중 하나인 Grover 검색을 빌드 및 실행하는 방법을 보여주고, 양자 컴퓨팅의 실제 문제를 해결하는 데 사용할 수 있는 Q# 프로그램의 좋은 예제를 제공합니다.  
+[Grover의 검색](xref:microsoft.quantum.quickstarts.search) 자습서에서는 가장 인기 있는 양자 컴퓨팅 알고리즘 중 하나인 Grover 검색을 빌드하고 실행하는 방법을 보여 주고, 양자 컴퓨팅과 관련된 실제 문제를 해결하는 데 사용할 수 있는 Q# 프로그램의 좋은 예제를 제공합니다.  
 
 [Quantum Development Kit 시작](xref:microsoft.quantum.welcome)에서는 Q# 및 양자 프로그래밍을 배울 수 있는 더 많은 방법을 추천해줍니다.
 
