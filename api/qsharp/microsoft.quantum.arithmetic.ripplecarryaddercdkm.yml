@@ -7,8 +7,8 @@ summary: >-
   해독 가능한 내부 ripple-두 개의 정수를 추가 합니다.
 
 
-  LittleEndian 레지스터 `xs` 및 `ys`에서 인코딩된 두 개의 $n $ bit 정수를 제공 하 고,이 작업은 두 정수의 합계를 계산 하며,이는 결과의 $n $ 최하위 비트를 유지 하 `ys` 고, 운반 비트를 xored 하는 것입니다. `carry`
-remarks: 이 작업은 RippleCarryAdderD와 동일한 기능을 수행 하지만 $n $ 대신 ancilla의 한 비트를 사용 합니다.
+  LittleEndian 레지스터 및에서 인코딩된 두 개의 $n $ bit 정수를 제공 하 `xs` `ys` 고,이 작업은 두 정수의 합계를 계산 하며,이는 결과의 $n $ 최하위 비트를 유지 하 `ys` 고, 운반 비트를 xored 하는 것입니다 `carry` .
+remarks: 이 작업은 RippleCarryAdderD와 동일한 기능을 포함 하지만 $n $ 대신 하나의 보조 비트만 사용 합니다.
 syntax: 'operation RippleCarryAdderCDKM (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, carry : Qubit) : Unit'
 references: >-
   - Thomas G. Draper, Samuel A. Kutin, David Petrie Moulton: "A new 퀀텀 ripple and A new, 2004.
@@ -35,9 +35,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: d75313cbc70643bc9cb96967c1b2eb928296f8d7
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: a72b9fe01846bbdb0b3cb6079a681104904747df
+  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82675142"
+  ms.lasthandoff: 06/03/2020
+  ms.locfileid: "84326507"

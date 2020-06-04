@@ -20,7 +20,7 @@ functions:
 - uid: microsoft.quantum.arrays.filtered
   summary: 배열의 요소에 대해 정의 된 배열과 조건자가 지정 된 경우 조건자를 충족 하는 요소로 구성 된 배열을 반환 합니다.
 - uid: microsoft.quantum.arrays.fold
-  summary: 배열을 `f` `array`통해 함수를 반복 하 여를 `f(f(f(initialState, array[0]), array[1]), ...)`반환 합니다.
+  summary: 배열을 통해 함수를 반복 `f` `array` 하 여를 반환 `f(f(f(initialState, array[0]), array[1]), ...)` 합니다.
 - uid: microsoft.quantum.arrays.head
   summary: 배열의 첫 번째 요소를 반환 합니다.
 - uid: microsoft.quantum.arrays.indexof
@@ -29,6 +29,8 @@ functions:
   summary: 배열이 지정 된 경우 for 루프에서 사용 하기에 적합 한 해당 배열의 인덱스에 대해 범위를 반환 합니다.
 - uid: microsoft.quantum.arrays.isempty
   summary: 배열이 비어 있는 경우에만 true를 반환 합니다.
+- uid: microsoft.quantum.arrays.ispermutation
+  summary: 지정 된 배열이 순열을 나타내는 경우에만 true를 출력 합니다.
 - uid: microsoft.quantum.arrays.lookupfunction
   summary: 배열이 지정 된 경우 해당 배열의 요소를 반환 하는 함수를 반환 합니다.
 - uid: microsoft.quantum.arrays.mapped
@@ -69,9 +71,9 @@ operations:
 - uid: microsoft.quantum.arrays.foreach
   summary: 배열의 요소에 대해 정의 된 배열과 작업이 지정 된 경우 작업에서 원래 배열의 이미지로 구성 된 새 배열을 반환 합니다.
 metadata:
-  ms.openlocfilehash: a9088a037953f62ab7193ea525a6e71d43fe2fb2
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 92eb956a1387a9765354f45e27eb084c6d73f51b
+  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673402"
+  ms.lasthandoff: 06/03/2020
+  ms.locfileid: "84326713"
