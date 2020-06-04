@@ -6,12 +6,12 @@ ms.author: v-edsanc@microsoft.com
 ms.date: 02/16/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.load
-ms.openlocfilehash: 15e63ced6223759a332ce22a43c133a7899f482a
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: efa4a65a489446cbef48507d0b02a932da74c71c
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77909962"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327665"
 ---
 # <a name="load-and-classify-your-own-datasets"></a>사용자 고유의 데이터 집합 로드 및 분류
 
@@ -25,7 +25,7 @@ ms.locfileid: "77909962"
 
 크기 $N = $2의 학습 데이터 집합 $ (x, y) $가 있다고 가정해 보겠습니다. $x $의 _i $ $x 각 인스턴스에는 $x _ {i1} $, $x _ {i2} $ 및 $x _ {i3} $와 같은 세 가지 기능이 있습니다.
 유효성 검사 데이터 집합의 구조가 동일 합니다.
-이러한 datsets는 다음과 유사한 `data.json` 파일로 표시 될 수 있습니다.
+이러한 datsets는 `data.json` 다음과 유사한 파일로 나타낼 수 있습니다.
 
 ```json
 {
@@ -84,7 +84,7 @@ ms.locfileid: "77909962"
 프로세스는.
 
 - 먼저 데이터 집합을 학습 및 유효성 검사로 구분 해야 합니다. 이 경우 학습을 위한 처음 3 개의 샘플 및 유효성 검사를 위한 샘플의 나머지 부분을 수행 하면 됩니다. 일반적으로 학습 데이터에 원치 않는 편향을 방지 하기 위해 무작위로 학습 및 유효성 검사 데이터 집합을 샘플링 하는 것이 좋습니다.
-- 두 번째로, 각 클래스에 숫자 레이블을 할당 해야 합니다. 지금은 QML 라이브러리는 이진 분류 문제만 인정 합니다. 따라서 클래스 `Dog`에 레이블 0을 할당 하 고 클래스 `Cat`에 숫자 1을 할당 합니다.
+- 두 번째로, 각 클래스에 숫자 레이블을 할당 해야 합니다. 지금은 QML 라이브러리는 이진 분류 문제만 인정 합니다. 따라서 클래스에 레이블 0을 할당 하 `Dog` 고 클래스에 숫자 1을 할당 합니다 `Cat` .
 - 마지막으로, 데이터 집합의 데이터를 사용 하 여 템플릿을 채웁니다. 빅 데이터 집합의 경우 특정 데이터 집합에서 템플릿을 자동으로 생성 하는 작은 스크립트를 작성 해야 합니다. 이 스크립트는 데이터 집합의 원본 형식에 따라 달라 집니다.
 
 데이터 집합의 경우 `data.json` 파일은 다음과 같습니다.
@@ -149,12 +149,12 @@ Python은 JSON 직렬화 된 데이터로 작업 하기 위한 [기본 제공 `j
 
 ### <a name="c"></a>[C#](#tab/tabid-csharp)
 
-.NET Core 플랫폼은 JSON 직렬화 된 데이터로 작업 하기 위한 [`System.Text.Json` 패키지](https://www.nuget.org/packages/System.Text.Json) 를 제공 합니다.
+.NET Core 플랫폼은 JSON 직렬화 된 데이터로 작업 하기 위한 [ `System.Text.Json` 패키지](https://www.nuget.org/packages/System.Text.Json) 를 제공 합니다.
 
 :::code language="csharp" source="~/quantum/samples/machine-learning/half-moons/Host.cs" range="10,64-82":::
 
 ***
 
-## <a name="whats-next"></a>다음 단계
+## <a name="next-steps"></a>다음 단계
 
 이제 고유한 데이터 집합을 사용 하 여 사용자 고유의 실험을 실행할 준비가 되었습니다. 다른 분류자와 데이터 집합을 시도 하 고 결과를 공유 하는 커뮤니티에 기여 하세요.

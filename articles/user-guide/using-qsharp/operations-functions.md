@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.operationsfunctions
-ms.openlocfilehash: bc9695b85b68807801225ccbc903a4622b450768
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 9e924b973c4f22a59dd862df3f4f0d70278a1b4e
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431073"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327801"
 ---
 # <a name="operations-and-functions-in-q"></a>Q의 작업 및 함수 #
 
@@ -151,7 +151,7 @@ Adjoint 함수는 자체적으로 반전 됩니다. 즉,는 `Adjoint Adjoint Op`
 
 ### <a name="implicitly-specifying-implementations"></a>암시적으로 구현 지정
 
-이 경우 작업 선언의 본문은 기본 구현 으로만 구성 됩니다. 예들 들어 다음과 같습니다.
+이 경우 작업 선언의 본문은 기본 구현 으로만 구성 됩니다. 예를 들면 다음과 같습니다.
 
 ```qsharp
 operation PrepareEntangledPair(here : Qubit, there : Qubit) : Unit 
@@ -418,7 +418,7 @@ operation ApplyWith<'T>(
 함수 이름은 네임 스페이스 내에서 고유 해야 하며 작업 또는 형식 이름과 충돌 하지 않을 수 있습니다.
 
 함수 정의는 함수에 대해 adjoint 또는 제어 된 특수화를 정의할 수 없다는 점을 제외 하 고 작업을 정의 하는 것과 유사 하 게 작동 합니다.
-예:
+예를 들면 다음과 같습니다.
 
 ```qsharp
 function Square(x : Double) : (Double) {
@@ -670,5 +670,6 @@ Q # callables은 직접 또는 간접적으로 재귀적으로 사용할 수 있
 - 실제 퀀텀 장치에서 실행 되는 경우 스택 공간이 제한 될 수 있으므로, 심층 재귀가 런타임 오류가 발생할 수 있습니다.
   특히 Q # 컴파일러 및 런타임에서는 마무리 재귀를 식별 하 고 최적화 하지 않습니다.
 
-## <a name="whats-next"></a>다음 단계
+## <a name="next-steps"></a>다음 단계
+
 Q #의 [변수](xref:microsoft.quantum.guide.variables) 에 대해 알아봅니다.

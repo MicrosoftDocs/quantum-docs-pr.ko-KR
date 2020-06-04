@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.controlflow
-ms.openlocfilehash: c534e016fcb8b50e66c11ca29c253ba0512acc6e
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 1f1b641563fe35879abeee32b4f0aeeb7001b1a0
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83430954"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84326543"
 ---
 # <a name="control-flow-in-q"></a>Q의 제어 흐름 #
 
@@ -44,7 +44,7 @@ ms.locfileid: "83430954"
 실행 되는 블록은 자체 범위에서 실행 됩니다.
 `if`, 또는 블록 내부에서 만들어진 바인딩은 `elif` `else` 끝 뒤에 표시 되지 않습니다.
 
-예를 들면 다음과 같습니다.
+예제:
 
 ```qsharp
 if (result == One) {
@@ -174,7 +174,7 @@ Return 문은 작업 또는 함수의 실행을 종료 하 고 호출자에 게 
 작업 내에는 최대 개수의 return 문이 없습니다.
 문이 블록 내의 return 문 뒤에 오는 경우 컴파일러는 경고를 생성할 수 있습니다.
 
-예를 들면 다음과 같습니다.
+예제:
 ```qsharp
 return 1;
 ```
@@ -196,7 +196,7 @@ Fail 문은 작업 실행을 종료 하 고 호출자에 게 오류 값을 반�
 작업 내의 실패 문 수에 대 한 제한은 없습니다.
 문이 블록 내의 fail 문 뒤에 오는 경우 컴파일러는 경고를 생성할 수 있습니다.
 
-예를 들면 다음과 같습니다.
+예제:
 ```qsharp
 fail $"Impossible state reached";
 ```
@@ -329,5 +329,6 @@ operation PrepareStateUsingRUS(target : Qubit) : Unit {
 및 작업에 대 한 자세한 내용은 [테스트 및 디버깅](xref:microsoft.quantum.guide.testingdebugging) 을 참조 하세요 [`Assert`](xref:microsoft.quantum.intrinsic.assert) [`AssertProb`](xref:microsoft.quantum.intrinsic.assertprob) .
 
 
-## <a name="whats-next"></a>다음 단계
+## <a name="next-steps"></a>다음 단계
+
 Q #에서 [테스트 및 디버깅](xref:microsoft.quantum.guide.testingdebugging) 에 대해 알아봅니다.

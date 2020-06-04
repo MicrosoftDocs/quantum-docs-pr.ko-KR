@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 02/28/2020
 ms.topic: article
 uid: microsoft.quantum.guide.basics
-ms.openlocfilehash: fd0ea47f00b1456ec460808ef7d451c8427677cd
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: e77b52d1a6eb7e2f62ab12dedd75d00ac8fec4be
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431158"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327325"
 ---
 # <a name="q-basics"></a>Q # 기본 사항
 
@@ -66,7 +66,7 @@ Q # 프로그램은 대상 컴퓨터에서 정의한 대로 이러한 작업을 
 언어의 구문은 구문상 올바른 프로그램을 구성 하는 기호의 여러 조합을 설명 합니다.
 Q #에서는 형식, 식 및 문과 같은 세 가지 그룹의 구문 요소를 분류할 수 있습니다.
 
-### <a name="types"></a>형식
+### <a name="types"></a>유형
 Q #은 강력한 형식의 언어 이며, 신중 하 게 형식을 사용 하면 컴파일러가 컴파일 시간에 Q # 프로그램에 대 한 강력한 보증을 제공 하는 데 도움이 될 수 있습니다.
 표준 및 퀀텀 관련 기본 제공 기본 형식 (예:,, `Int` 및) 외에 `Bool` 도 `Qubit` `Result` Q #에서는 사용자 정의 형식에 대 한 지원을 제공 합니다.
 Q #의 다양 한 기본 형식은 q # 페이지의 [형식](xref:microsoft.quantum.guide.types) , 배열 및 튜플 형식에 대 한 세부 정보 및 q # 파일 내에 새 형식을 정의 하는 방법에 설명 되어 있습니다.
@@ -91,7 +91,7 @@ let count = 5;
 ```
 
 약간 더 흥미로운 예는 반복을 `for` 지원 하 고 *문 블록*을 포함 하는 문입니다.
-이 경우에 `qubits` 는 (형식 `Qubit[]` , 즉 형식의 배열)의 레지스터에 바인딩된 기호가 있다고 가정 합니다 `Qubit` . 결과
+이 경우에 `qubits` 는 (형식 `Qubit[]` , 즉 형식의 배열)의 레지스터에 바인딩된 기호가 있다고 가정 합니다 `Qubit` . 작업
 ```qsharp
 for (qubit in qubits) {
     H(qubit);
@@ -106,8 +106,7 @@ for (qubit in qubits) {
 Q # 프로그램의 거의 모든 측면은 문을 사용 하 여 작성 되므로 단일 페이지에 관련 된 모든 정보가 포함 되지 않을 수 있습니다.
 그러나 해당 어휘 구조와 서식 지정은 q # [파일 구조](xref:microsoft.quantum.guide.filestructure) 페이지, [q #의 변수](xref:microsoft.quantum.guide.variables)에서 기호 바인딩 할당 및 범위, q `for` #의 [제어 흐름](xref:microsoft.quantum.guide.controlflow)등의 제어 흐름 루프에 설명 되어 있습니다.
 
-
-## <a name="whats-next"></a>새로운 기능
+## <a name="next-steps"></a>다음 단계
 이 가이드의 나머지 부분에서는 Q #을 사용 하 여 작업, 함수 및 형식의 기본 구성 요소를 통해 복잡 한 퀀텀 프로그램을 생성 하는 방법을 보여 줍니다.
 
 시작 하려면 [Q #에서 형식](xref:microsoft.quantum.guide.types)에 대 한 학습을 시작할 수 있습니다.

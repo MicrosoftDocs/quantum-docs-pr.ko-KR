@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.variables
-ms.openlocfilehash: 407b4ff3570816eb7bdc323a5c5b77dac2d951af
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 456c05d4ca66a747e0cc514a30c6bbb33610f481
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83430903"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327784"
 ---
 # <a name="variables-in-q"></a>Q의 변수 #
 
@@ -26,7 +26,7 @@ Q #의 모든 형식 값은 키워드를 사용 하 여 작업 또는 함수 내
 
 변경할 수 없는 바인딩은 키워드로 구성 된 `let` 다음에는 기호 또는 기호 튜플, 등호 `=` , 기호를 바인딩할 식, 종료 세미콜론으로 구성 됩니다.
 
-예:
+예를 들면 다음과 같습니다.
 
 ```qsharp
 let measurementOperator = [PauliX, PauliZ, PauliZ, PauliX, PauliI];
@@ -55,7 +55,7 @@ let measurementOperator = [PauliX, PauliZ, PauliZ, PauliX, PauliI];
 
 ### <a name="apply-and-reassign-statements"></a>적용 및 재할당 문
 
-`set` *적용 및 재할당* 문으로 제공 되는 특정 종류의 문은 오른쪽이 이항 연산자의 응용 프로그램으로 구성 되 고 결과가 연산자의 왼쪽 인수에 다시 바인딩 되는 경우 연결 하는 편리한 방법을 제공 합니다. 예를 들면 다음과 같습니다.
+`set` *적용 및 재할당* 문으로 제공 되는 특정 종류의 문은 오른쪽이 이항 연산자의 응용 프로그램으로 구성 되 고 결과가 연산자의 왼쪽 인수에 다시 바인딩 되는 경우 연결 하는 편리한 방법을 제공 합니다. 예제:
 ```qsharp
 mutable counter = 0;
 for (i in 1 .. 2 .. 10) {
@@ -161,7 +161,7 @@ function PauliEmbedding(pauli : Pauli, length : Int, location : Int) : Pauli[] {
 바인딩의 오른쪽이 튜플이 면 할당 시 해당 튜플을 분해 수 있습니다.
 이러한 분해에는 중첩 된 튜플이 포함 될 수 있으며, 모든 전체 또는 부분 분해은 오른쪽에 있는 튜플의 모양이 기호 튜플의 셰이프와 호환 되는 한 유효 합니다.
 
-예들 들어 다음과 같습니다.
+예를 들면 다음과 같습니다.
 
 ```qsharp
 let (i, f) = (5, 0.1); // i is bound to 5 and f to 0.1
@@ -196,7 +196,7 @@ let n = 8;
 ...                 // n is 8
 ```
 
-및
+and
 
 ```qsharp
 if (a == b) {
@@ -232,5 +232,6 @@ if (a == b) {
 ...
 ```
 
-## <a name="whats-next"></a>다음 단계
+## <a name="next-steps"></a>다음 단계
+
 Q #의 이상 [비트 작업](xref:microsoft.quantum.guide.qubits) 에 대해 알아봅니다.

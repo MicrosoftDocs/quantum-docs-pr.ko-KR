@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.qubits
-ms.openlocfilehash: e89b9ccfe2a0796e01eedfc99f7ce71038d85f38
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 0deb0729a88c49798f32a22a943b935d383c570b
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83430937"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327546"
 ---
 # <a name="working-with-qubits"></a>큐비트 사용
 
@@ -30,7 +30,7 @@ ms.locfileid: "83430937"
 바인딩은 문과 동일한 패턴을 따릅니다 `let` . 단일 기호 또는 기호 튜플, 등호 `=` , 단일 값 또는 *이니셜라이저의*일치 하는 튜플 중 하나를 수행 합니다.
 
 이니셜라이저는로 표시 된 단일의 비트 또는의 배열 ( `Qubit()` `Qubit[n]` 여기서 `n` 는 `Int` 식)으로 사용할 수 있습니다.
-예를 들면 다음과 같습니다.
+예제:
 
 ```qsharp
 using (qubit = Qubit()) {
@@ -59,7 +59,7 @@ Borrowing 메커니즘을 사용 하면 계산 중에 스크래치 공간으로 
 이러한 경우는 상태를 알 수 없으며 퀀텀 컴퓨터 메모리의 다른 부분과 함께 사용할 수 있기 때문에이를 "더티" 이상으로 지칭 하기도 합니다.
 
 바인딩은 문에 있는 것과 동일한 패턴 및 규칙을 따릅니다 `using` .
-예를 들면 다음과 같습니다.
+예제:
 ```qsharp
 borrowing (qubit = Qubit()) {
     // ...
@@ -221,5 +221,6 @@ is Adj + Ctl {
 
 그러나이 코드는 곱하기 제어 작업을 구현 하는 것과 동일한 목표를 달성 하는 다른 라고 함수와 비교 하는 것이 좋습니다 .이는 `MultiControlledXClean` `X` 메커니즘을 사용 하 여 여러 가지 깨끗 한 비트를 사용 합니다 `using` . 
 
-## <a name="whats-next"></a>다음 단계
+## <a name="next-steps"></a>다음 단계
+
 Q #의 [제어 흐름](xref:microsoft.quantum.guide.controlflow) 에 대해 알아봅니다.

@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.types
-ms.openlocfilehash: 4a551ee90a0abb6e42953cf04c7f5a8ca3573f26
-ms.sourcegitcommit: 682a4a5f5dd23ca58a4addf62aea4086bb308552
+ms.openlocfilehash: f7a3ac3813966c0ef695068297ce4d9949ead554
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83609144"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327291"
 ---
 # <a name="types-in-q"></a>Q#의 형식
 
@@ -63,7 +63,8 @@ Q # 언어는 다른 형식을 구성할 수 있는 몇 가지 *기본 형식을
 Q #에서는 사각형 다차원 배열에 대 한 지원을 제공 하지 않습니다.
 
 에서와 같이 배열의 요소 주위에 대괄호를 사용 하 여 Q # 소스 코드에서 배열 값을 작성할 수 있습니다 `[PauliI, PauliX, PauliY, PauliZ]` .
-배열 리터럴의 형식은 배열의 모든 항목에 대 한 공통 기본 형식에 의해 결정 됩니다. 
+배열 리터럴의 형식은 배열의 모든 항목에 대 한 공통 기본 형식에 의해 결정 됩니다. 따라서 공통 기본 형식이 없는 요소로 배열을 생성 하려고 하면 오류가 발생 합니다.  
+이에 대 한 예제는 [callables 배열](xref:microsoft.quantum.guide.expressions#arrays-of-callables) 을 참조 하세요.
 
 > [!WARNING]
 > 배열을 만든 후에는 배열의 요소를 변경할 수 없습니다.
@@ -125,7 +126,7 @@ Q #에서는 생성 된 튜플의 콘텐츠를 변경 하는 메커니즘을 제
 
 사용자 정의 형식 선언은 키워드로 구성 된 `newtype` 다음 사용자 정의 형식 이름, `=` , 유효한 형식 사양 및 종료 세미콜론으로 구성 됩니다.
 
-다음은 그 예입니다.
+예를 들면 다음과 같습니다.
 
 ```qsharp
 newtype PairOfInts = (Int, Int);
@@ -195,7 +196,7 @@ function PrintedMessage(value : Nested) : Unit {
 래핑 해제 연산자는 정확히 한 줄의의 래핑을 해제 합니다.
 여러 래핑 연산자를 사용 하 여 곱하기 래핑된 값에 액세스할 수 있습니다.
 
-예:
+예를 들면 다음과 같습니다.
 
 ```qsharp
 newtype WrappedInt = Int;
@@ -291,7 +292,8 @@ newtype TypeC = (TypeA, Range);
 
 Q #에서는 형식 매개 변수를 대체할 수 있는 가능한 형식을 제한 하는 메커니즘을 제공 하지 않습니다.
 
-## <a name="whats-next"></a>다음 단계
+## <a name="next-steps"></a>다음 단계
+
 Q # 언어를 구성 하는 모든 형식을 살펴보았으므로 이제 [q #의 형식 식](xref:microsoft.quantum.guide.expressions) 으로 이동 하 여 이러한 다양 한 형식의 식을 만들고 조작 하는 방법을 확인할 수 있습니다.
 
 

@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.filestructure
-ms.openlocfilehash: cbee92c6d7e765237a7a42532dd7012b51421708
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: b8c24dae6cc8d8f37ad4f1f74017c05cabe3a4b4
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83430971"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327461"
 ---
 # <a name="q-file-structure"></a>Q # 파일 구조
 
@@ -93,7 +93,7 @@ Q # 문은 문 블록으로 그룹화 됩니다.
 
 다른 블록 내에 어휘를 싸인 문 블록은 포함 하는 블록의 하위 블록으로 간주 됩니다. 포함 및 하위 블록은 외부 및 내부 블록이 라고도 합니다.
 
-## <a name="comments"></a>의견
+## <a name="comments"></a>주석
 
 주석은 두 개의 슬래시 ()로 시작 `//` 하 고 줄의 끝까지 계속 됩니다.
 설명은 Q # 소스 파일의 어디에 나 나타날 수 있습니다.
@@ -107,7 +107,7 @@ Q # 문은 문 블록으로 그룹화 됩니다.
 Markdown에 대 한 확장으로, Q #의 작업, 함수 및 사용자 정의 형식에 대 한 상호 참조는를 사용 하 여 포함할 수 있습니다 `@"<ref target>"` `<ref target>` . 여기서는 참조 되는 코드 개체의 정규화 된 이름으로 바뀝니다.
 선택적으로 설명서 엔진에서 추가 Markdown 확장을 지원할 수도 있습니다.
 
-예들 들어 다음과 같습니다.
+예를 들면 다음과 같습니다.
 
 ```qsharp
 /// # Summary
@@ -152,5 +152,6 @@ operation ApplyTwice<'T>(op : ('T => Unit), target : 'T) : Unit {
 - **참고**항목: 관련 된 함수, 작업 또는 사용자 정의 형식을 나타내는 정규화 된 이름 목록입니다.
 - **참조**: 문서화 되는 항목에 대 한 참조 및 인용의 목록입니다.
 
-## <a name="whats-next"></a>다음 단계
+## <a name="next-steps"></a>다음 단계
+
 Q #의 [작업 및 함수](xref:microsoft.quantum.guide.operationsfunctions) 에 대해 알아봅니다.

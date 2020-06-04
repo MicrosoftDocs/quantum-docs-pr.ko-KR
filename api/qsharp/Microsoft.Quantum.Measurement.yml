@@ -9,19 +9,19 @@ operations:
 - uid: microsoft.quantum.measurement.measurewithscratch
   summary: 측정을 수행 하기 위해 명시적인 스크래치 비트를 사용 하 여 지정 된 Pauli 연산자를 측정 합니다.
 - uid: microsoft.quantum.measurement.mresetx
-  summary: X 단위로 단일 비트를 측정 하 고이를 표준 기준 상태로 다시 설정 합니다. | 0 〉 측정 합니다.
+  summary: X 단위로 단일 계산 비트를 측정 하 고 측정값을 따라 고정 된 초기 상태로 다시 설정 합니다.
 - uid: microsoft.quantum.measurement.mresety
-  summary: Y를 기준으로 단일의 비트를 측정 하 고이를 표준 기준 상태로 다시 설정 합니다. | 0 〉 측정 다음
+  summary: Y를 기준으로 단일의 비트를 측정 하 고 측정 다음에 고정 된 초기 상태로 다시 설정 합니다.
 - uid: microsoft.quantum.measurement.mresetz
-  summary: 단일 비트를 `Z` 기준으로 측정 하 고이를 표준 기준 상태로 다시 설정 합니다. | 0 〉
+  summary: Z 단위로 단일 비트를 측정 하 고, 측정값을 따라 고정 된 초기 상태로 다시 설정 합니다.
 - uid: microsoft.quantum.measurement.multim
   summary: 지정 된 배열의 각 고 비트를 표준 기준으로 측정 합니다.
 - uid: microsoft.quantum.measurement.settobasisstate
   summary: 필요에 따라 비트를 측정 하 고 비트 대칭을 적용 하 여 지정 된 계산 기준 상태로 원하는 비트를 설정 합니다.
 metadata:
-  ms.openlocfilehash: 8e0910bf53734ffe65aa12b06321ec9b3403133f
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 894c0bb7f0b57e9fe04837b89cd57345745df6c5
+  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673137"
+  ms.lasthandoff: 06/03/2020
+  ms.locfileid: "84326628"

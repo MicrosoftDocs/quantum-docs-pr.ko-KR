@@ -7,12 +7,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.update
-ms.openlocfilehash: 53f72f1d49ae32a5a8572a1cf68a66a1d9b45e4a
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 3245f587493ce12cfec15c8f932fd092d85f688e
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83426903"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327574"
 ---
 # <a name="update-the-microsoft-quantum-development-kit-qdk"></a>Microsoft Quantum Development Kit (QDK) 업데이트
 
@@ -21,8 +21,8 @@ Microsoft Quantum Development Kit (QDK)를 최신 버전으로 업데이트 하�
 이 문서에서는 QDK가 이미 설치 되어 있다고 가정 합니다. 를 처음 설치 하는 경우 [설치 가이드](xref:microsoft.quantum.install)를 참조 하세요.
 
 최신 QDK 릴리스를 최신 상태로 유지 하는 것이 좋습니다. 최신 QDK 버전으로 업그레이드 하려면이 업데이트 가이드를 따르세요. 프로세스는 다음 두 부분으로 구성 됩니다.
-1. 기존 Q # 파일 및 프로젝트를 업데이트 하 여 코드를 업데이트 된 구문에 맞게 정렬
-2. 선택한 개발 환경에 대 한 QDK 자체 업데이트 
+1. 기존 Q # 파일 및 프로젝트를 업데이트 하 여 코드를 업데이트 된 구문에 맞게 조정 합니다.
+2. 선택한 개발 환경에 대해 QDK 자체를 업데이트 합니다.
 
 ## <a name="updating-q-projects"></a>Q # 프로젝트 업데이트 
 
@@ -38,9 +38,9 @@ C # 또는 Python을 사용 하 여 Q # 작업을 호스트 하는지 여부에 
 
 ### <a name="update-q-projects-in-visual-studio"></a>Visual Studio의 업데이트 Q # 프로젝트
  
-1. 최신 버전의 Visual Studio 2019로 업데이트 합니다. 지침은 [여기](https://docs.microsoft.com/visualstudio/install/update-visual-studio?view=vs-2019) 를 참조 하세요.
+1. 최신 버전의 Visual Studio 2019 업데이트에 대 한 지침은 [여기](https://docs.microsoft.com/visualstudio/install/update-visual-studio?view=vs-2019) 를 참조 하세요.
 2. Visual Studio에서 솔루션을 엽니다.
-3. 메뉴에서 **Build**  ->  **솔루션 정리** 빌드를 선택 합니다.
+3. 메뉴에서 **Build**  ->  **솔루션 정리**빌드를 선택 합니다.
 4. 각 .csproj 파일에서 대상 프레임 워크를 `netcoreapp3.1` (또는 `netstandard2.1` 라이브러리 프로젝트인 경우)로 업데이트 합니다.
     즉, 다음 폼의 줄을 편집 합니다.
 
@@ -49,16 +49,30 @@ C # 또는 Python을 사용 하 여 Q # 작업을 호스트 하는지 여부에 
     ```
 
     대상 프레임 워크를 지정 하는 방법에 대 한 자세한 내용은 [여기](https://docs.microsoft.com/dotnet/standard/frameworks#how-to-specify-target-frameworks)에서 찾을 수 있습니다.
-5. 솔루션의 모든 파일을 저장 하 고 닫습니다.
-6. **도구**  ->  **명령줄**  ->  **개발자 명령 프롬프트** 선택
-7. 솔루션의 각 프로젝트에 대해 다음 명령을 실행 합니다.
 
-    ```dotnetcli
-    dotnet add [project_name].csproj package Microsoft.Quantum.Development.Kit
+5. 각 .csproj 파일에서 `Microsoft.Quantum.Sdk` 아래 줄에 표시 된 것 처럼 SDK를로 설정 합니다. 버전 번호가 사용 가능한 최신 버전 인지 확인 하 고 [릴리스 정보](https://docs.microsoft.com/quantum/relnotes/)를 검토 하 여 확인할 수 있습니다.
+
+    ```xml
+    <Project Sdk="Microsoft.Quantum.Sdk/0.11.2006.207">
     ```
 
-   프로젝트에서 다른 Microsoft 양자 패키지 (예: 양자)를 사용 하는 경우에도 명령을 실행 합니다.
-8. 명령 프롬프트를 닫고 빌드 솔루션 **빌드**  ->  **Build Solution** 를 선택 합니다 (솔루션 다시 빌드를 선택 *하지* 않음).
+6. 솔루션의 모든 파일을 저장 하 고 닫습니다.
+
+7. **도구**  ->  **명령줄**  ->  **개발자 명령 프롬프트**를 선택 합니다. 또는 Visual Studio에서 패키지 관리 콘솔을 사용할 수 있습니다.
+
+8. 솔루션의 각 프로젝트에 대해 다음 명령을 실행 하 여이 패키지를 **제거** 합니다.
+
+    ```dotnetcli
+    dotnet remove [project_name].csproj package Microsoft.Quantum.Development.Kit
+    ```
+
+   프로젝트에서 다른 Microsoft 양자 또는 Microsoft. n a m a. i n i.. n a m a. n a m a 패키지를 사용 하는 경우이에 대 한 **추가** 명령을 실행 하 여 사용 되는 버전을 업데이트 합니다.
+
+    ```dotnetcli
+    dotnet add [project_name].csproj package [package_name]
+    ```
+
+9. 명령 프롬프트를 닫고 빌드 솔루션 **빌드**  ->  **Build Solution** 를 선택 합니다 (솔루션 다시 빌드를 선택 *하지* 않음).
 
 이제 [Visual Studio QDK 확장 업데이트](#update-visual-studio-qdk-extension)로 건너뛸 수 있습니다.
 
@@ -66,35 +80,65 @@ C # 또는 Python을 사용 하 여 Q # 작업을 호스트 하는지 여부에 
 ### <a name="update-q-projects-in-visual-studio-code"></a>Visual Studio Code에서 Q # 프로젝트 업데이트
 
 1. Visual Studio Code에서 업데이트할 프로젝트를 포함 하는 폴더를 엽니다.
-2. **터미널**  ->  **새 터미널** 선택
+2. **터미널**  ->  **새 터미널**을 선택 합니다.
 3. 명령줄을 사용 하 여 업데이트 하는 방법에 대 한 지침을 따르세요 (바로 아래).
 
 ### <a name="update-q-projects-using-the-command-line"></a>명령줄을 사용 하 여 업데이트 Q # 프로젝트
 
-1. 프로젝트 파일이 포함 된 폴더로 이동 합니다.
-2. 다음 명령 실행:
+1. 주 프로젝트 파일이 포함 된 폴더로 이동 합니다.
+
+2. 다음 명령을 실행합니다.
 
     ```dotnetcli
     dotnet clean [project_name].csproj
     ```
 
-3. 각 .csproj 파일에서 대상 프레임 워크를 `netcoreapp3.1` (또는 `netstandard2.1` 라이브러리 프로젝트인 경우)로 업데이트 합니다.
-    즉, 다음 폼의 줄을 편집 합니다.
+3. QDK의 현재 버전을 확인 합니다. 이를 찾으려면 [릴리스 정보](https://docs.microsoft.com/quantum/relnotes/)를 검토 하면 됩니다. 버전은와 비슷한 형식으로 되어 `0.11.2006.207` 있습니다.
 
-    ```xml
-    <TargetFramework>netcoreapp3.1</TargetFramework>
-    ```
+4. 각 `.csproj` 파일에서 다음 단계를 진행 합니다.
 
-    대상 프레임 워크를 지정 하는 방법에 대 한 자세한 내용은 [여기](https://docs.microsoft.com/dotnet/standard/frameworks#how-to-specify-target-frameworks)에서 찾을 수 있습니다.
-4. 다음 명령 실행:
+    - 대상 프레임 워크를 `netcoreapp3.1` (또는 `netstandard2.1` 라이브러리 프로젝트인 경우)로 업데이트 합니다. 즉, 다음 폼의 줄을 편집 합니다.
 
-    ```dotnetcli
-    dotnet add package Microsoft.Quantum.Development.Kit
-    ```
+        ```xml
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+        ```
 
-    프로젝트에서 다른 Microsoft 양자 패키지 (예: 양자)를 사용 하는 경우에도 명령을 실행 합니다.
-5. 모든 파일을 저장 하 고 닫습니다.
-6. 각 프로젝트 종속성에 대해 1-4을 반복한 다음 주 프로젝트가 포함 된 폴더로 다시 이동 하 고를 실행 합니다.
+        대상 프레임 워크를 지정 하는 방법에 대 한 자세한 내용은 [여기](https://docs.microsoft.com/dotnet/standard/frameworks#how-to-specify-target-frameworks)에서 찾을 수 있습니다.
+
+    - 프로젝트 정의에서 SDK에 대 한 참조를 바꿉니다. 버전 번호가 **3 단계**에서 확인 한 값과 일치 하는지 확인 합니다.
+
+        ```xml
+        <Project Sdk="Microsoft.Quantum.Sdk/0.11.2006.207">
+        ```
+
+    - 패키지에 대 한 참조를 제거 합니다 `Microsoft.Quantum.Development.Kit` .이 경우 다음 항목에 지정 됩니다.
+
+        ```xml
+        <PackageReference Include="Microsoft.Quantum.Development.Kit" Version="0.10.1910.3107" />
+        ```
+
+    - 모든 Microsoft 퀀텀 패키지의 버전을 QDK ( **3 단계**에서 확인)의 가장 최근에 릴리스된 버전으로 업데이트 합니다. 이러한 패키지는 다음과 같은 패턴으로 이름이 지정 됩니다.
+
+        ```
+        Microsoft.Quantum.*
+        Microsoft.Azure.Quantum.*
+        ```
+    
+        패키지에 대 한 참조는 다음과 같은 형식입니다.
+
+        ```xml
+        <PackageReference Include="Microsoft.Quantum.Compiler" Version="0.11.2006.207" />
+        ```
+
+    - 업데이트된 파일을 저장합니다.
+
+    - 다음을 수행 하 여 프로젝트의 종속성을 복원 합니다.
+
+        ```dotnetcli
+        dotnet restore [project_name].csproj
+        ```
+
+4. 주 프로젝트가 포함 된 폴더로 다시 이동 하 여 다음을 실행 합니다.
 
     ```dotnetcli
     dotnet build [project_name].csproj
@@ -129,7 +173,7 @@ QDK를 업데이트 하는 프로세스는 개발 언어 및 환경에 따라 �
     dotnet iqsharp --version
     ```
 
-    다음과 같은 내용이 출력됩니다.
+    다음 출력이 표시됩니다.
 
     ```bash
     iqsharp: 0.10.1912.501
@@ -150,7 +194,7 @@ QDK를 업데이트 하는 프로세스는 개발 언어 및 환경에 따라 �
     pip show qsharp
     ```
 
-    다음과 같은 내용이 출력됩니다.
+    다음 출력이 표시됩니다.
 
     ```bash
     Name: qsharp

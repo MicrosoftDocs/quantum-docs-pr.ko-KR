@@ -7,26 +7,26 @@ ms.date: 10/19/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.howto.createproject
-ms.openlocfilehash: c093284f1ea33b72d4d264992b0ba6bf6bc72782
-ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
+ms.openlocfilehash: 8019b32a3290e2d45124ebb1eb75395f6cb758db
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "77036443"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327529"
 ---
 # <a name="create-a-q-project-in-your-development-environment"></a>개발 환경에서 Q # 프로젝트 만들기
 
 QDK를 사용 하 여 Q # 프로젝트를 만드는 방법에 대해 알아봅니다.
 
-Q # 프로젝트에는 퀀텀 코드를 포함 하는 Q # 파일 뿐만 아니라 퀀텀 프로그램을 실행 하는 호스트 프로그램도 포함 됩니다. 호스트 프로그램은 또는 Python과 C#같은 .net 언어로 작성할 수 있습니다. 또한 IQ # 커널을 사용 하 여 Jupyter 노트북에서 Q # 코드를 실행할 수 있습니다.
+Q # 프로젝트에는 퀀텀 코드를 포함 하는 Q # 파일 뿐만 아니라 퀀텀 프로그램을 실행 하는 호스트 프로그램도 포함 됩니다. C #과 같은 .NET 언어 또는 Python에서 호스트 프로그램을 작성할 수 있습니다. 또한 IQ # 커널을 사용 하 여 Jupyter Notebook에서 Q # 코드를 실행할 수 있습니다.
 
 아래 섹션에서 개발 환경 및 언어를 선택 합니다.
 
 * [Python](#create-a-python-project)
-* [Q # Jupyter 노트북](#create-a-q-jupyter-notebook-project)
-* [C#Visual Studio 사용](#create-a-c-project-on-windows-using-visual-studio)
-* [C#VS Code 사용](#create-a-c-project-using-vs-code)
-* [C#명령줄 사용](#create-a-c-project-using-the-dotnet-command-line-tool)
+* [Q# Jupyter Notebook](#create-a-q-jupyter-notebook-project)
+* [Visual Studio를 사용 하는 c #](#create-a-c-project-on-windows-using-visual-studio)
+* [VS Code를 사용 하는 c #](#create-a-c-project-using-vs-code)
+* [명령줄을 사용 하는 c #](#create-a-c-project-using-the-dotnet-command-line-tool)
 
 ## <a name="create-a-python-project"></a>Python 프로젝트 만들기
 
@@ -36,7 +36,7 @@ Q # 프로젝트에는 퀀텀 코드를 포함 하는 Q # 파일 뿐만 아니�
 
 1. 프로젝트에 대 한 폴더를 만들고 해당 폴더로 이동 합니다.
 
-1. `Operation.qs`이라는 Q # 파일을 만들고 Q # 코드를 추가 합니다. 다음은 그 예입니다.
+1. 라는 Q # 파일을 만들고 `Operation.qs` 이 파일에 q # 코드를 추가 합니다. 예를 들면 다음과 같습니다.
 
     ```qsharp
     namespace HelloWorld {
@@ -50,7 +50,7 @@ Q # 프로젝트에는 퀀텀 코드를 포함 하는 Q # 파일 뿐만 아니�
     }
     ```
 
-1. Q # 작업을 호출 하는 `host.py` 라는 python 호스트 파일을 만듭니다. 다음은 그 예입니다.
+1. `host.py`Q # 작업을 호출 하기 위해 라는 python 호스트 파일을 만듭니다. 예를 들면 다음과 같습니다.
 
     ```python
     import qsharp
@@ -89,7 +89,7 @@ Q # 프로젝트에는 퀀텀 코드를 포함 하는 Q # 파일 뿐만 아니�
 
 1. 명령줄에 표시된 URL로 이동합니다. 예: [http://localhost:8888/?token=c790a52ba54f0cf77465c3c8983d776348285b0280d91b85]
 
-1. 브라우저에 Jupyter 페이지가 나타납니다. **파일** 탭에서 **새로** 만들기 > **q #** 를 선택 하 여 q # 커널을 사용 하 여 jupyter 노트북을 만듭니다. 첫 번째 노트북 셀에 다음 코드를 추가 합니다.
+1. 브라우저에 Jupyter 페이지가 나타납니다. **파일** 탭에서 **새**  >  **q #** 를 선택 하 여 q # 커널로 Jupyter Notebook를 만듭니다. 첫 번째 노트북 셀에 다음 코드를 추가 합니다.
 
     ```qsharp
     operation SayHello() : Unit {
@@ -97,21 +97,21 @@ Q # 프로젝트에는 퀀텀 코드를 포함 하는 Q # 파일 뿐만 아니�
     }
     ```
 
-1.  > **셀** 을 선택 **하 여 노트북** 을 실행 합니다. `SayHello`은 곧 셀 출력에 표시 됩니다.
+1. **셀**  >  **실행** 셀을 선택 하 여 노트북을 실행 합니다. `SayHello`곧 셀 출력에 표시 됩니다.
 
-    ![Q# 코드를 사용하는 Jupyter Notebook 셀](~/media/install-guide-jupyter.png)
+    ![Q # code를 사용 하 여 셀 Jupyter Notebook](~/media/install-guide-jupyter.png)
 
     Jupyter 노트북에서 실행 하는 경우 Q # 코드가 컴파일되고 노트북은 검색 된 작업의 이름을 출력 합니다.
 
 1. 새 셀에서 `%simulate` 매직을 사용하여 방금 만든 작업의 양자 컴퓨터에서 실행을 시뮬레이션합니다.
 
-    ![%simulate 매직을 사용하는 Jupyter Notebook 셀](~/media/install-guide-jupyter-simulate.png)
+    ![% 시뮬레이트 마법을 사용 하 여 셀 Jupyter Notebook](~/media/install-guide-jupyter-simulate.png)
 
     호출한 작업의 결과(여기서는 비어 있음)와 함께 메시지가 화면에 출력됩니다.
 
 이제 다른 Q # 작업을 추가 하 여 퀀텀 개발을 계속할 수 있습니다.
 
-## <a name="create-a-c-project-on-windows-using-visual-studio"></a>Visual Studio C# 를 사용 하 여 Windows에서 프로젝트 만들기
+## <a name="create-a-c-project-on-windows-using-visual-studio"></a>Visual Studio를 사용 하 여 Windows에서 c # 프로젝트 만들기
 
 1. 필수 구성 요소
 
@@ -119,7 +119,7 @@ Q # 프로젝트에는 퀀텀 코드를 포함 하는 Q # 파일 뿐만 아니�
 
 1. 새 Q# 애플리케이션 만들기
 
-    * **파일** -> **새로 만들기** -> **프로젝트**로 이동
+    * **파일**  ->  **새로 만들기**  ->  **프로젝트** 로 이동
     * 검색 상자에 `Q#` 입력
     * **Q# 애플리케이션**을 선택합니다.
     * **다음**을 선택합니다.
@@ -132,7 +132,7 @@ Q # 프로젝트에는 퀀텀 코드를 포함 하는 Q # 파일 뿐만 아니�
 
 1. 애플리케이션 실행
 
-    * **디버그** -> **디버깅하지 않고 시작**을 선택합니다.
+    * **Debug**  ->  **디버깅 하지 않고 시작** 을 선택 합니다.
     * 콘솔 창에 `Hello quantum world!`가 출력된 것을 볼 수 있습니다.
 
 이제 Visual Studio를 사용 하 여 퀀텀 개발을 계속할 수 있습니다.
@@ -140,7 +140,7 @@ Q # 프로젝트에는 퀀텀 코드를 포함 하는 Q # 파일 뿐만 아니�
 > [!NOTE]
 > * 단일 Visual Studio 솔루션 내에 여러 프로젝트가 있는 경우 솔루션에 포함된 모든 프로젝트는 솔루션과 동일한 폴더 또는 해당 하위 폴더 중 하나에 포함되어야 합니다.  
 
-## <a name="create-a-c-project-using-vs-code"></a>VS Code를 C# 사용 하 여 프로젝트 만들기
+## <a name="create-a-c-project-using-vs-code"></a>VS Code를 사용 하 여 c # 프로젝트 만들기
 
 1. 필수 구성 요소
 
@@ -148,7 +148,7 @@ Q # 프로젝트에는 퀀텀 코드를 포함 하는 Q # 파일 뿐만 아니�
 
 1. 새 프로젝트를 만듭니다.
 
-    * **보기** -> **명령 팔레트**로 이동합니다.
+    * **보기**  ->  **명령 팔레트** 로 이동
     * **Q #: 새 프로젝트 만들기를** 선택 합니다.
     * **독립 실행형 콘솔 응용 프로그램** 선택
     * 애플리케이션을 만들려는 파일 시스템의 위치로 이동합니다.
@@ -156,7 +156,7 @@ Q # 프로젝트에는 퀀텀 코드를 포함 하는 Q # 파일 뿐만 아니�
 
 1. 애플리케이션을 실행합니다.
 
-    * **터미널** -> **새 터미널** 로 이동 합니다.
+    * **터미널**  ->  **새 터미널** 로 이동
     * `dotnet run`을 입력합니다.
     * 출력 창에 다음 텍스트가 표시되어야 합니다. `Hello quantum world!`
 
@@ -165,11 +165,11 @@ Q # 프로젝트에는 퀀텀 코드를 포함 하는 Q # 파일 뿐만 아니�
 > [!NOTE]
 > * 여러 루트 폴더가 있는 작업 영역은 현재 Visual Studio Code 확장에서 지원되지 않습니다. 단일 VS Code 작업 영역에 여러 프로젝트가 있는 경우 모든 프로젝트가 동일한 루트 폴더 내에 포함되어야 합니다.
 
-## <a name="create-a-c-project-using-the-dotnet-command-line-tool"></a>`dotnet` 명령줄 C# 도구를 사용 하 여 프로젝트 만들기
+## <a name="create-a-c-project-using-the-dotnet-command-line-tool"></a>명령줄 도구를 사용 하 여 c # 프로젝트 만들기 `dotnet`
 
 1. 필수 구성 요소
 
-    * [명령줄에 대 한 퀀텀 개발 키트](xref:microsoft.quantum.install.cs) 설치
+    * [명령줄에 대 한 퀀텀 개발 키트](xref:microsoft.quantum.install.standalone) 설치
 
 1. 새 애플리케이션 만들기
 
@@ -195,6 +195,6 @@ Q # 프로젝트에는 퀀텀 코드를 포함 하는 Q # 파일 뿐만 아니�
 
 이제 명령줄 도구를 사용 하 여 퀀텀 개발을 계속 합니다.
 
-## <a name="whats-next"></a>다음 단계
+## <a name="next-steps"></a>다음 단계
 
 이제 기본 설정 환경에서 프로젝트를 만들었으므로 퀀텀 개발을 계속할 수 있습니다.

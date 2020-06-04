@@ -6,12 +6,12 @@ ms.author: v-edsanc@microsoft.com
 ms.date: 02/16/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.basics
-ms.openlocfilehash: f42e3e4492f934d7a8f03d4fec6fa0de765401d7
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: ddd889fdfabb505d7118c1eff551a6fbfa757309
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77909928"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327648"
 ---
 # <a name="basic-classification-classify-data-with-the-qdk"></a>기본 분류: QDK 데이터 분류
 
@@ -22,7 +22,7 @@ ms.locfileid: "77909928"
 ## <a name="prerequisites"></a>사전 요구 사항
 
 - Microsoft [Quantum Development Kit](xref:microsoft.quantum.install)
-- [Q# 프로젝트 만들기](xref:microsoft.quantum.howto.createproject)
+- [Python 호스트 프로그램](xref:microsoft.quantum.install.python) 또는 [c # 호스트 프로그램](xref:microsoft.quantum.install.cs)에 대해 Q # 프로젝트를 만듭니다.
 
 ## <a name="host-program"></a>호스트 프로그램
 
@@ -34,7 +34,7 @@ ms.locfileid: "77909928"
 
     ### <a name="python-with-visual-studio-code-or-the-command-line"></a>[Visual Studio 코드 또는 명령줄을 사용하는 Python](#tab/tabid-python)
 
-    Python의 Q # 분류자를 실행 하려면 `host.py`으로 다음 코드를 저장 합니다. 이 자습서의 뒷부분에서 설명 하는 Q # 파일 `Training.qs` 필요 합니다.
+    Python의 Q # 분류자를 실행 하려면 다음 코드를로 저장 합니다 `host.py` . `Training.qs`이 자습서의 뒷부분에서 설명 하는 Q # 파일도 필요 합니다.
 
     :::code language="python" source="~/quantum/samples/machine-learning/half-moons/host.py" range="3-42":::
 
@@ -49,7 +49,7 @@ ms.locfileid: "77909928"
 
     ### <a name="c-with-visual-studio-code-or-the-command-line"></a>[Visual Studio 코드 또는 명령줄을 사용하는 C#](#tab/tabid-csharp)
 
-    에서 C#Q # 분류자를 실행 하려면 `Host.cs`으로 다음 코드를 저장 합니다. 이 자습서의 뒷부분에서 설명 하는 Q # 파일 `Training.qs` 필요 합니다.
+    C #의 Q # 분류자를 실행 하려면 다음 코드를로 저장 합니다 `Host.cs` . `Training.qs`이 자습서의 뒷부분에서 설명 하는 Q # 파일도 필요 합니다.
 
     :::code language="csharp" source="~/quantum/samples/machine-learning/half-moons/Host.cs" range="4-86":::
 
@@ -63,7 +63,7 @@ ms.locfileid: "77909928"
 
     ### <a name="c-with-visual-studio-2019"></a>[Visual Studio 2019를 사용하는 C#](#tab/tabid-vs2019)
 
-    Visual Studio에서 새 Q # 프로그램 C# 을 실행 하려면 다음 C# 코드를 포함 하도록 `Host.cs`를 수정 합니다. 이 자습서의 뒷부분에서 설명 하는 Q # 파일 `Training.qs` 필요 합니다.
+    Visual Studio의 c #에서 새 Q # 프로그램을 실행 하려면 `Host.cs` 다음 c # 코드를 포함 하도록을 수정 합니다. `Training.qs`이 자습서의 뒷부분에서 설명 하는 Q # 파일도 필요 합니다.
 
     :::code language="csharp" source="~/quantum/samples/machine-learning/half-moons/Host.cs" range="4-86":::
 
@@ -76,17 +76,17 @@ ms.locfileid: "77909928"
     ```
     ***
 
-## <a name="q-classifier-code"></a>Q\# 분류자 코드
+## <a name="q-classifier-code"></a>Q \# 분류자 코드
 
 이제 호스트 프로그램에서 호출 하는 작업이 Q #에서 정의 되는 방식을 살펴보겠습니다.
-`Training.qs`이라는 파일에 다음 코드를 저장 합니다.
+이라는 파일에 다음 코드를 저장 `Training.qs` 합니다.
 
 :::code language="qsharp" source="~/quantum/samples/machine-learning/half-moons/Training.qs" range="4-116":::
 
 위의 코드에 정의 된 가장 중요 한 함수와 연산은 다음과 같습니다.
 
 - `ClassifierStructure() : ControlledRotation[]`:이 함수에서 고려 하는 제어 되는 게이트의 계층을 추가 하 여 회로 모델 구조를 설정 합니다. 이 단계는 순차적 심층 학습 모델에서 뉴런의 계층 선언과 유사 합니다.
-- `TrainHalfMoonModel() : TrainWineModel() : (Double[], Double)`:이 작업은 코드의 핵심 부분이 며 학습을 정의 합니다. 여기에서 라이브러리에 포함 된 데이터 집합의 샘플을 로드 하 고, 학습에 대 한 하이퍼 매개 변수 및 초기 매개 변수를 설정 하 고, 라이브러리에 포함 된 작업 `TrainSequentialClassifier`를 호출 하 여 학습을 시작 합니다. 분류자를 결정 하는 매개 변수 및 바이어스를 출력 합니다.
+- `TrainHalfMoonModel() : TrainWineModel() : (Double[], Double)`:이 작업은 코드의 핵심 부분이 며 학습을 정의 합니다. 여기에서 라이브러리에 포함 된 데이터 집합의 샘플을 로드 하 고, 학습에 대 한 하이퍼 매개 변수 및 초기 매개 변수를 설정 하 고, 라이브러리에 포함 된 작업을 호출 하 여 학습을 시작 합니다 `TrainSequentialClassifier` . 분류자를 결정 하는 매개 변수 및 바이어스를 출력 합니다.
 - `ValidateHalfMoonModel(parameters : Double[], bias : Double) : Int`:이 작업은 모델을 평가 하는 유효성 검사 프로세스를 정의 합니다. 여기서는 유효성 검사에 대 한 샘플, 샘플 당 측정 수 및 허용 오차를 로드 합니다. 유효성 검사를 위해 선택한 샘플 일괄 처리의 오 분류 수를 출력 합니다.
 
 ## <a name="next-steps"></a>다음 단계

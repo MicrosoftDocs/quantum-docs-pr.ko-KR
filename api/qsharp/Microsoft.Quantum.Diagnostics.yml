@@ -6,6 +6,8 @@ functions:
   summary: 부울 값의 두 배열이 동일한 것을 어설션 합니다.
 - uid: microsoft.quantum.diagnostics.allequalityfacti
   summary: 두 정수 값 배열이 동일한 것을 어설션 합니다.
+- uid: microsoft.quantum.diagnostics.contradiction
+  summary: 는 기존 조건이 false 임을 선언 합니다.
 - uid: microsoft.quantum.diagnostics.dumpmachine
   summary: 현재 대상 컴퓨터의 상태를 덤프 합니다.
 - uid: microsoft.quantum.diagnostics.dumpregister
@@ -34,21 +36,21 @@ functions:
   summary: 고전적인 부동 소수점 값에 필요한 값이 1e-10의 최대 허용 오차 보다 작은 것을 어설션 합니다.
 operations:
 - uid: microsoft.quantum.diagnostics.assertallzero
-  summary: 지정 된 비트를 모두 $ \ket{0}$ state로 지정 하는 어설션입니다.
+  summary: 지정 된 비트를 모두 $ \ket $ state로 지정 하는 어설션입니다 {0} .
 - uid: microsoft.quantum.diagnostics.assertallzerowithintolerance
-  summary: 지정 된 것과 같은 Assert는 지정 된 허용{0}오차까지 모두 $ \ket $ 상태에 있습니다.
+  summary: 지정 된 것과 같은 Assert는 {0} 지정 된 허용 오차까지 모두 $ \ket $ 상태에 있습니다.
 - uid: microsoft.quantum.diagnostics.assertoperationsequalinplace
   summary: >-
     두 작업이 지정 된 경우는 모든 입력 상태에 대해 동일 하 게 작동 한다는 것을 어설션 합니다.
 
 
-    이 어설션은 \ket $V의 모든 상태에 대 한 작업의 동작을 확인 하 여 구현 됩니다 .이 경우에는 _0\otime ... \otimes V_ {n-1} $로 설정 합니다. 여기서 $V _k $은 ${0}$, ${1}\ket $, $ \ket{+} $ 및 $ \ket{i} $ (+ 1 eigenstate)의 상태입니다.
+    이 어설션은 \ket $V의 모든 상태에 대 한 작업의 동작을 확인 하 여 구현 됩니다 .이 경우에는 _0\otime ... \otimes V_ {n-1} $로 설정 합니다. 여기서 $V _k $은 $ {0} $, $ \ket {1} $, $ \ket{+} $ 및 $ \ket{i} $ (+ 1 Eigenstate)의 상태입니다.
 
 
     이 어설션은 $ opbits $n를 사용 하 고 비교 되는 작업을 여러 번 호출 해야 합니다.
 - uid: microsoft.quantum.diagnostics.assertoperationsequalinplacecompbasis
   summary: >-
-    계산 단위의 벡터 에서만 `givenU` 작업의 동작을 확인 `expectedU` 하 여 작업이 지정 된 입력 크기에 대 한 작업과 같은지 확인 합니다.
+    `givenU` `expectedU` 계산 단위의 벡터 에서만 작업의 동작을 확인 하 여 작업이 지정 된 입력 크기에 대 한 작업과 같은지 확인 합니다.
 
     이는 두 unitaries의 같음에 대 한 필수 조건 이지만 충분 하지 않습니다.
 - uid: microsoft.quantum.diagnostics.assertoperationsequalreferenced
@@ -62,7 +64,7 @@ operations:
 
     이 어설션을 사용 하면 예를 들어, 작업의 최적화 된 버전이 naive 구현에 동일 하 게 작동 하거나, 비 퀀텀 입력 범위에서 작동 하는 작업이 알려진 사례에 동의 하는 경우를 확인할 수 있습니다.
 - uid: microsoft.quantum.diagnostics.assertqubit
-  summary: Eibit `q` 가 Pauli Z 연산자의 예상 eigenstate 임을 어설션 합니다.
+  summary: '`q`Eibit가 Pauli Z 연산자의 예상 eigenstate 임을 어설션 합니다.'
 - uid: microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance
   summary: >-
     예상 상태에서의 비트를 어설션 합니다.
@@ -74,7 +76,7 @@ operations:
 
     마지막 인수는 어설션이 만들어지는 허용 오차를 정의 합니다.
 - uid: microsoft.quantum.diagnostics.assertqubitwithintolerance
-  summary: '`q` 지정 된 허용 오차까지 해당 하는 Pauli Z 연산자의 예상 된 eigenstate를 어설션 합니다.'
+  summary: '`q`지정 된 허용 오차까지 해당 하는 Pauli Z 연산자의 예상 된 eigenstate를 어설션 합니다.'
 newtypes:
 - uid: microsoft.quantum.diagnostics.enabletestingvianame
   summary: 컴파일러에서 인식할 수 있는 특성으로, 형식을 로드 하거나 테스트 목적으로 호출할 때 사용할 수 있는 대체 이름을 정의할 수 있습니다.
@@ -82,9 +84,9 @@ newtypes:
   summary: 단위 테스트를 표시 하는 데 사용 되는 컴파일러에서 인식할 수 있는 특성입니다.
 summary: " # <a name=\"summary\"></a>요약\n 이 네임 스페이스는 어설션 작업 및 클레임 함수를 비롯 하 여 진단 목적에 유용한 함수 및 작업을 포함 합니다."
 metadata:
-  ms.openlocfilehash: 5e580bb50983d5c0e65d3284408bae04a5e92756
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 2c619ac283653d87f2917d7c780ed9fe6ccfa965
+  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676952"
+  ms.lasthandoff: 06/03/2020
+  ms.locfileid: "84326594"

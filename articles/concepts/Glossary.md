@@ -6,12 +6,12 @@ ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.glossary
-ms.openlocfilehash: cbc473eb14d8afd255a7072475dc054e18b98e3e
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 042e4e27ef4e42cfc0c24fbb0ae2232cf1bbfe36
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83426696"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327614"
 ---
 # <a name="quantum-computing-glossary"></a>퀀텀 컴퓨팅 용어집
 
@@ -55,7 +55,7 @@ Q # 언어의 [작업](xref:microsoft.quantum.glossary#operation) 또는 [함수
 
 지정 된 변환에서 방향이 변경 되지 않으며 해당 벡터의 [eigenvalue](xref:microsoft.quantum.glossary#eigenvalue)에 해당 하는 요소에 의해 크기가 변경 되는 벡터입니다. 사각형 행렬 $M $와 eigenvalue $c $를 지정한 다음 $Mv = cv $를 지정 합니다. 여기서 $v $은 행렬의 eigenvector이 고 임의의 인수 수를 사용할 수 있습니다. 자세한 내용은 [고급 행렬 개념](xref:microsoft.quantum.concepts.matrix-advanced)을 참조 하세요.
 
-## <a name="entanglement"></a>되거나 얽 히
+## <a name="entanglement"></a>얽힘
 
 다양 한 방식으로 개별적 [으로 설명할](xref:microsoft.quantum.glossary#qubit)수 없도록 하려는 경우에는 다양 한 것 *과 같은 퀀텀* 파티클을 연결할 수 있습니다. 측정 결과는 무한정 떨어져 있는 경우에도 상관 관계가 지정 됩니다. 되거나 얽 히는 해당 [상태](xref:microsoft.quantum.glossary#quantum-state) 를 [측정](xref:microsoft.quantum.glossary#measurement) 하는 데 필수적입니다.  자세한 내용은 [고급 행렬 개념](xref:microsoft.quantum.concepts.matrix-advanced)을 참조 하세요.
 
@@ -67,7 +67,7 @@ Q # 언어의 [작업](xref:microsoft.quantum.glossary#operation) 또는 [함수
 
 시간이 지남에 따라 [퀀텀 상태](xref:microsoft.quantum.glossary#quantum-state) 를 변경 하는 방법입니다. 자세한 내용은 [Matrix 지 수](xref:microsoft.quantum.concepts.matrix-advanced#matrix-exponentials)을 (를) 참조 하세요.
 
-## <a name="function"></a>함수
+## <a name="function"></a>기능
 순수 하 게 고전 (비 양자) 인 Q # 언어의 서브루틴 형식입니다. 퀀텀 알고리즘 내에서 함수를 사용 하는 [동안에는](xref:microsoft.quantum.glossary#qubit) 이 함수를 사용 하 여 [작업](xref:microsoft.quantum.glossary#operation)을 호출할 수 없습니다. 자세한 내용은 [작업 및 함수](xref:microsoft.quantum.guide.operationsfunctions)를 참조 하세요.
 
 ## <a name="gate"></a>라는
@@ -98,7 +98,7 @@ Hadamard 작업 (Hadamard 게이트 또는 변환이 라고도 함)은 단일의
 
 관련 이름 (예: [작업](xref:microsoft.quantum.glossary#operation), [함수](xref:microsoft.quantum.glossary#function)및 [사용자 정의 형식](xref:microsoft.quantum.glossary#user-defined-type))의 컬렉션에 대 한 레이블입니다. 예를 들어, [네임 스페이스](xref:microsoft.quantum.preparation) 는 초기 상태를 준비 하는 데 도움이 되는 표준 라이브러리에 정의 된 모든 기호에 레이블을 지정 합니다.
 
-## <a name="operation"></a>작업(Operation)
+## <a name="operation"></a>연산
 
 Q #에서 퀀텀 실행의 기본 단위입니다. C, c + + 또는 Python의 함수 또는 c # 또는 Java의 정적 메서드와 거의 동일 합니다. 자세한 내용은 [작업 및 함수](xref:microsoft.quantum.guide.operationsfunctions)를 참조 하세요.
 
@@ -120,7 +120,11 @@ Q #에서 퀀텀 실행의 기본 단위입니다. C, c + + 또는 Python의 함
 
 ## <a name="quantum-circuit-diagram"></a>퀀텀 회로 다이어그램
 
-간단한 퀀텀 프로그램 (예: 샘플 회로 다이어그램)의 [작업](xref:microsoft.quantum.glossary#operation) (또는 [게이트](xref:microsoft.quantum.glossary#gate)) 시퀀스를 그래픽으로 나타내는 메서드입니다 ![ ](~/media/qpe.png) . 자세한 내용은 [퀀텀 회로](xref:microsoft.quantum.concepts.circuits)를 참조 하세요.
+간단한 퀀텀 프로그램의 [작업](xref:microsoft.quantum.glossary#operation) 순서 (또는 [게이트](xref:microsoft.quantum.glossary#gate))를 그래픽으로 나타내는 메서드 (예:) 
+
+![샘플 회로 다이어그램](~/media/qpe.png). 
+
+자세한 내용은 [퀀텀 회로](xref:microsoft.quantum.concepts.circuits)를 참조 하세요.
 
 ## <a name="quantum-libraries"></a>퀀텀 라이브러리
 
@@ -144,7 +148,7 @@ Q # 프로그램을 만들기 위한 [작업](xref:microsoft.quantum.glossary#op
 
 ## <a name="superposition"></a>Superposition
 
-퀀텀 계산의 개념은 [측정](xref:microsoft.quantum.glossary#measurement)될 때까지 $ \ket{\0} $ 및 $ \ket{\1} $ 이라는 두 가지 상태의 선형 [조합입니다.](xref:microsoft.quantum.glossary#qubit)  자세한 내용은 [퀀텀 컴퓨팅 이해](xref:microsoft.quantum.overview.understanding)를 참조 하세요.
+퀀텀 계산의 [개념은](xref:microsoft.quantum.glossary#qubit) {0} {1} [측정](xref:microsoft.quantum.glossary#measurement)될 때까지 $ \ket $ 및 $ \ket $ 이라는 두 가지 상태의 선형 조합입니다.  자세한 내용은 [퀀텀 컴퓨팅 이해](xref:microsoft.quantum.overview.understanding)를 참조 하세요.
 
 ## <a name="target-machine"></a>대상 컴퓨터
 

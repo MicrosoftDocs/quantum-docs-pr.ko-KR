@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.expressions
-ms.openlocfilehash: 93432cef9711b6780192cd59e92b09647a264b5c
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: c4b2cc0bed44ffdfb191ba522d6526959e7c6708
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431209"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327308"
 ---
 # <a name="type-expressions-in-q"></a>Q의 형식 식 #
 
@@ -63,7 +63,7 @@ let bigOne = bigZero + 1L;
 
 정수 나누기와 정수 모듈러스는 c #과 같은 음수에 대해 동일한 동작을 수행 합니다.
 즉,는 `a % b` 항상와 동일한 기호를 가집니다 .이는 항상와 동일 `a` `b * (a / b) + a % b` `a` 합니다.
-예들 들어 다음과 같습니다.
+예를 들면 다음과 같습니다.
 
  `A` | `B` | `A / B` | `A % B`
 ---------|----------|---------|---------
@@ -117,7 +117,7 @@ Q #의 문자열은 리터럴 또는 보간된 문자열입니다.
 
 문자열 리터럴은 대부분의 언어에서 간단한 문자열 리터럴과 유사 합니다. 큰따옴표 안의 유니코드 문자 시퀀스 `"` 입니다.
 문자열 내에서 백슬래시 문자를 사용 하 여 `\` 큰따옴표 문자를 이스케이프 하 고 새 줄을로 `\n` , 캐리지 리턴을로 `\r` , 탭을로 삽입할 수 있습니다 `\t` .
-예:
+예를 들면 다음과 같습니다.
 
 ```qsharp
 "\"Hello world!\", she said.\n"
@@ -209,7 +209,7 @@ Q #에서 래핑 해제 연산자는 후행 감탄 부호 `!` 입니다.
 
 연산자의 우선 순위에는 `!` 명확 하지 않을 수 있는 영향이 하나 있습니다.
 함수 또는 작업에서 래핑 해제 되는 값을 반환 하는 경우 인수 튜플이 래핑 되지 않고 호출에 바인딩되도록 함수 또는 작업 호출을 괄호로 묶어야 합니다.
-예들 들어 다음과 같습니다.
+예를 들면 다음과 같습니다.
 
 ```qsharp
 let f = (Foo(arg))!;    // Calls Foo(arg), then unwraps the result
@@ -221,7 +221,6 @@ let g = Foo(arg)!;      // Syntax error
 배열 리터럴은 및로 묶인 하나 이상의 요소 식의 시퀀스로, 쉼표로 구분 됩니다 `[` `]` .
 모든 요소는 동일한 형식과 호환 되어야 합니다.
 
-
 동일한 형식의 두 배열이 지정 된 경우 이항 연산자를 `+` 사용 하 여 두 배열의 연결 인 새 배열을 만들 수 있습니다.
 예를 들어 `[1,2,3] + [4,5,6]` 은 `[1,2,3,4,5,6]` 입니다.
 
@@ -229,6 +228,9 @@ let g = Foo(arg)!;      // Syntax error
 
 형식 및 식이 지정 된 경우 `Int` 연산자를 `new` 사용 하 여 지정 된 크기의 새 배열을 할당할 수 있습니다.
 예를 들어는 `new Int[i + 1]` `Int` 요소로 새 배열을 할당 `i + 1` 합니다.
+
+빈 배열 리터럴는 `[]` 허용 되지 않습니다.
+대신를 사용 하는 대신를 사용 합니다 `new ★[0]` `★` . 여기서은 적절 한 형식에 대 한 자리 표시자입니다 .를 사용 하면 원하는 길이 0 배열을 만들 수 있습니다
 
 새 배열의 요소는 형식 종속 기본값으로 초기화 됩니다.
 대부분의 경우이 값은 0으로 변형 된 것입니다.
@@ -373,8 +375,7 @@ for (i in 1..N) {
 - `[Op1, Op3]`는 작업의 배열입니다 `(Qubit[] => Unit is Adj)` .
 - `[Op2, Op3]`는 작업의 배열입니다 `(Qubit[] => Unit is Ctl)` .
 
-빈 배열 리터럴는 `[]` 허용 되지 않습니다.
-대신를 사용 하는 대신를 사용 합니다 `new ★[0]` `★` . 여기서은 적절 한 형식에 대 한 자리 표시자입니다 .를 사용 하면 원하는 길이 0 배열을 만들 수 있습니다
+그러나 `(Qubit[] => Unit is Adj)` 및 `(Qubit[] => Unit is Ctl)` 작업의 공통 기본 형식은 이지만 `(Qubit[] => Unit)` 이러한 연산자 *의* 배열은 공통 기본 형식을 공유 하지 않습니다. 예를 들어는 `[[Op1], [Op2]]` 호환 되지 않는 배열 형식 및의 배열을 만들려고 하기 때문에 현재 오류를 발생 시킵니다 `(Qubit[] => Unit is Adj)[]` `(Qubit[] => Unit is Ctl)[]` .
 
 
 ## <a name="conditional-expressions"></a>조건 식
@@ -473,10 +474,10 @@ let combinedOp = Func<(Qubit[] => Unit), (Qubit[] => Unit is Adj)>(Op1, Op2, Op3
 
 우선 순위 순으로 최고에서 최저 순으로 연산자.
 
-연산자 | 숫자 | Description | 피연산자 형식
+연산자 | 숫자 | 설명 | 피연산자 형식
 ---------|----------|---------|---------------
- 붙이지`!` | 단항 | 래핑 취소 | 사용자 정의 형식
- `-`, `~~~`, `not` | 단항 | 숫자 음수, 비트 보수, 논리 부정 | `Int`,의 경우,,의 경우,의 경우 `BigInt` `Double` `-` `Int` `BigInt` `~~~` `Bool``not`
+ 붙이지`!` | 단항 연산자 | 래핑 취소 | 사용자 정의 형식
+ `-`, `~~~`, `not` | 단항 연산자 | 숫자 음수, 비트 보수, 논리 부정 | `Int`,의 경우,,의 경우,의 경우 `BigInt` `Double` `-` `Int` `BigInt` `~~~` `Bool``not`
  `^` | 이진 | 정수 거듭제곱 | `Int`또는 기준의 경우 지 수의 경우입니다. `BigInt` `Int`
  `/`, `*`, `%` | 이진 | 나누기, 곱하기, 정수 모듈러스 | `Int`,,, 또는 `BigInt` `Double` `/` `*` `Int` `BigInt` 의 경우`%`
  `+`, `-` | 이진 | 더하기 또는 문자열 및 배열 연결, 빼기 | `Int`,, `BigInt` 또는 `Double` `String` 에 대 한 배열 형식입니다.`+`
@@ -492,5 +493,6 @@ let combinedOp = Func<(Qubit[] => Unit), (Qubit[] => Unit is Adj)>(Op1, Op2, Op3
  `?` `|` | 진 | 조건부 | `Bool`왼쪽의 경우
 `w/` `<-` | 진 | 복사 및 업데이트 | [복사 및 업데이트 식](#copy-and-update-expressions) 참조
 
-## <a name="whats-next"></a>다음 단계
+## <a name="next-steps"></a>다음 단계
+
 이제 Q #에서 식 작업을 수행할 수 있으므로 [q #의 작업 및 함수](xref:microsoft.quantum.guide.operationsfunctions) 를 사용 하 여 작업 및 함수를 정의 하 고 호출 하는 방법을 배울 수 있습니다.
