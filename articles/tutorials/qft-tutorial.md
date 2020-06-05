@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 10/06/2019
 uid: microsoft.quantum.circuit-tutorial
 ms.topic: tutorial
-ms.openlocfilehash: f0b87936c9baf07555e76f295da58c0a6b9ecd17
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+ms.openlocfilehash: 05d3292e1c6e3c8c1163c460f2aaa51c591aa1d5
+ms.sourcegitcommit: 8d9d392bf5e114ae223e6f689ba80d25866ff586
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84328598"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84422243"
 ---
 # <a name="tutorial-write-and-simulate-qubit-level-programs-in-q"></a>자습서: Q:에서의 비트 수준 프로그램 작성 및 시뮬레이트\#
 
@@ -29,7 +29,7 @@ Q #의 유연성을 통해 사용자는 이러한 추상화 수준에서 퀀텀 
 <br/>
 <img src="./qft_full.PNG" alt="Three qubit quantum Fourier transform circuit diagram" width="600">
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 * 원하는 언어 및 개발 환경을 사용 하 여 퀀텀 개발 키트를 [설치](xref:microsoft.quantum.install) 합니다.
 * QDK가 이미 설치되어 있는 경우 최신 버전으로 [업데이트](xref:microsoft.quantum.update)해야 합니다.
@@ -386,7 +386,7 @@ After:
 * **`    ---`**: 진폭의 단계를 그래픽으로 표현한 것입니다.
 * **`[ 0.0000 rad ]`**: 단계의 숫자 값 (라디안 단위)입니다.
 
-크기와 단계가 모두 그래픽 표현으로 표시 됩니다. 크기 표현은 간단 합니다. 즉, 막대를 표시 하 `*` 고 확률이 높을수록 막대가 커집니다. 단계에 대 한 자세한 내용은 [여기](xref:microsoft.quantum.techniques.testing-and-debugging#dump-functions) 에 있는 공용 컴퓨터 섹션에서 각도 범위를 기준으로 가능한 기호 표현을 참조 하세요.
+크기와 단계가 모두 그래픽 표현으로 표시 됩니다. 크기 표현은 간단 합니다. 즉, 막대를 표시 하 `*` 고 확률이 높을수록 막대가 커집니다. 단계는 [테스트 및 디버깅:](xref:microsoft.quantum.guide.testingdebugging#dump-functions) 각도 범위를 기준으로 가능한 기호 표현의 덤프 함수를 참조 하세요.
 
 
 따라서 인쇄 된 출력은 프로그래밍 된 게이트가

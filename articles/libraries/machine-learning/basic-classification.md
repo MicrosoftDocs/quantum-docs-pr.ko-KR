@@ -6,12 +6,12 @@ ms.author: v-edsanc@microsoft.com
 ms.date: 02/16/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.basics
-ms.openlocfilehash: ddd889fdfabb505d7118c1eff551a6fbfa757309
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+ms.openlocfilehash: 1d2538fd164c4c61c2712978d3b5c57b0eb766e6
+ms.sourcegitcommit: 8d9d392bf5e114ae223e6f689ba80d25866ff586
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327648"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84422175"
 ---
 # <a name="basic-classification-classify-data-with-the-qdk"></a>기본 분류: QDK 데이터 분류
 
@@ -86,7 +86,7 @@ ms.locfileid: "84327648"
 위의 코드에 정의 된 가장 중요 한 함수와 연산은 다음과 같습니다.
 
 - `ClassifierStructure() : ControlledRotation[]`:이 함수에서 고려 하는 제어 되는 게이트의 계층을 추가 하 여 회로 모델 구조를 설정 합니다. 이 단계는 순차적 심층 학습 모델에서 뉴런의 계층 선언과 유사 합니다.
-- `TrainHalfMoonModel() : TrainWineModel() : (Double[], Double)`:이 작업은 코드의 핵심 부분이 며 학습을 정의 합니다. 여기에서 라이브러리에 포함 된 데이터 집합의 샘플을 로드 하 고, 학습에 대 한 하이퍼 매개 변수 및 초기 매개 변수를 설정 하 고, 라이브러리에 포함 된 작업을 호출 하 여 학습을 시작 합니다 `TrainSequentialClassifier` . 분류자를 결정 하는 매개 변수 및 바이어스를 출력 합니다.
+- `TrainHalfMoonModel() : (Double[], Double)`:이 작업은 코드의 핵심 부분이 며 학습을 정의 합니다. 여기에서 라이브러리에 포함 된 데이터 집합의 샘플을 로드 하 고, 학습에 대 한 하이퍼 매개 변수 및 초기 매개 변수를 설정 하 고, 라이브러리에 포함 된 작업을 호출 하 여 학습을 시작 합니다 `TrainSequentialClassifier` . 분류자를 결정 하는 매개 변수 및 바이어스를 출력 합니다.
 - `ValidateHalfMoonModel(parameters : Double[], bias : Double) : Int`:이 작업은 모델을 평가 하는 유효성 검사 프로세스를 정의 합니다. 여기서는 유효성 검사에 대 한 샘플, 샘플 당 측정 수 및 허용 오차를 로드 합니다. 유효성 검사를 위해 선택한 샘플 일괄 처리의 오 분류 수를 출력 합니다.
 
 ## <a name="next-steps"></a>다음 단계

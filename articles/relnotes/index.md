@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: f365d471d9af73828b78c4fab8579557310a5288
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: ec5b3b26102df6ecc19d89b41c7fd8938b34e761
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83426775"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327767"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit 릴리스 정보
 
@@ -20,6 +20,19 @@ ms.locfileid: "83426775"
 설치 지침은[설치 가이드](xref:microsoft.quantum.install)를 참조하세요.
 
 업데이트 지침은 [업데이트 가이드](xref:microsoft.quantum.update)를 참조하세요.
+
+## <a name="version-0112006207"></a>버전 0.11.2006.207
+
+*릴리스 날짜: 2020년 6월 3일*
+
+이 릴리스에는 다음이 포함됩니다.
+
+- Q# 진입점이 있으면 Q# Notebook 및 Python 호스트 프로그램이 더 이상 실패하지 않습니다.
+- 액세스 한정자를 사용하도록 [표준 라이브러리](xref:microsoft.quantum.libraries.standard.intro)로 업데이트
+- 컴파일러는 기본 제공 재작성 단계 사이에 재작성 단계의 플러그 인을 허용합니다.
+- [API 원칙](xref:microsoft.quantum.contributing.api-design)에 설명된 일정에 따라 몇 가지 사용되지 않는 함수 및 작업이 제거되었습니다. 버전 0.11.2004.2825에서 경고 없이 빌드된 Q# 프로그램 및 라이브러리는 계속 수정되지 않은 상태로 작동합니다.
+
+[라이브러리](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [컴파일러](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [런타임](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [샘플](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed), [IQ#](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed) 및 [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed)에 대한 비공개 PR의 전체 목록을 참조하세요.  
 
 ## <a name="version-01120042825"></a>버전 0.11.2004.2825
 
@@ -34,7 +47,6 @@ ms.locfileid: "83426775"
 > [!NOTE]
 > 새로운 [`@EntryPoint()`](xref:microsoft.quantum.core.entrypoint) 특성을 사용하는 Q# 명령줄 애플리케이션은 현재 Python 또는 .NET 호스트 프로그램에서 호출할 수 없습니다.
 > 자세한 내용은 [Python](xref:microsoft.quantum.install.python) 및 [.NET 상호 운용성](xref:microsoft.quantum.install.cs) 가이드를 참조하세요.
-
 
 ## <a name="version-01120033107"></a>버전 0.11.2003.3107
 

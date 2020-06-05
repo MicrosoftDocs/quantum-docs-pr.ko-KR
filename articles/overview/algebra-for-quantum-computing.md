@@ -6,12 +6,12 @@ ms.author: bradben
 ms.date: 5/5/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.algebra
-ms.openlocfilehash: 9f156a3cc092e295317061dda5e8aa29e9d5ca1e
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 4750643d16ad8af6240df42c1b93353565561429
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83430852"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327597"
 ---
 # <a name="linear-algebra-for-quantum-computing"></a>양자 컴퓨팅을 위한 선형 대수
 
@@ -67,7 +67,7 @@ $$
 
 결과는 각 요소에서 확률을 나타내는 4차원 행렬입니다. 예를 들어 $ac$는 두 큐비트가 0과 0으로 붕괴될 확률이고, $ad$는 0과 1의 확률 등입니다. 
 
-양자 상태를 나타내기 위해 $\begin{bmatrix} a \\\\  b \end{bmatrix}$ 단일 큐비트 상태에서 $|a|^2 + |b|^2 = 1$라는 요구 사항을 충족해야 하는 것처럼 $\begin{bmatrix} ac \\\\  ad \\\\  bc \\\\  bd \end{bmatrix}$ 2개 큐비트 상태는 $|a|^2 + |b|^2 + |c|^2+ |d|^2 = 1$라는 요구 사항을 충족해야 합니다.
+양자 상태를 나타내기 위해 $\begin{bmatrix} a \\\\  b \end{bmatrix}$ 단일 큐비트 상태에서 $|a|^2 + |b|^2 = 1$라는 요구 사항을 충족해야 하는 것처럼 $\begin{bmatrix} ac \\\\  ad \\\\  bc \\\\  bd \end{bmatrix}$ 2개 큐비트 상태는 $|ac|^2 + |ad|^2 + |bc|^2+ |bd|^2 = 1$라는 요구 사항을 충족해야 합니다.
 
 ## <a name="summary"></a>요약
 
@@ -75,5 +75,4 @@ $$
 
 ## <a name="next-steps"></a>다음 단계
 
-> [!div class="nextstepaction"]
-> [QDK 설치](xref:microsoft.quantum.install)
+[QDK 설치](xref:microsoft.quantum.install)

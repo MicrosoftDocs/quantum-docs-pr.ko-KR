@@ -6,12 +6,12 @@ ms.author: chgranad@microsoft.com
 ms.date: 10/19/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.search
-ms.openlocfilehash: 9562e1937a2cac49d682cc0524d8fb29e276d95c
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 9e4c53b4d5159cf07f0654603c1d477ad09eb7c6
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83426800"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327410"
 ---
 # <a name="tutorial-implement-grovers-search-algorithm-in-q"></a>자습서: Q\#에서 Grover의 검색 알고리즘 구현
 
@@ -23,7 +23,7 @@ Grover의 검색 알고리즘을 사용하면 양자 컴퓨터에서 검색 중�
 
 Grover의 검색 알고리즘은 몇 줄의 코드만으로 빌드할 수 있습니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 - Microsoft [Quantum Development Kit][install]
 
@@ -39,7 +39,7 @@ Grover의 알고리즘은 목록의 항목이 검색 중인 항목인지 여부�
 
 ## <a name="write-the-code"></a>코드 작성
 
-1. Quantum Development Kit를 사용하여 선택한 개발 환경에서 `Grover`라는 [새 Q# 프로젝트를 만듭니다](xref:microsoft.quantum.howto.createproject).
+1. Quantum Development Kit를 사용하여 [명령줄 애플리케이션에 대한 새 Q# 프로젝트를 만듭니다](xref:microsoft.quantum.install.standalone). 프로젝트 `Grover`의 제목을 지정합니다.
 
 1. 다음 코드를 새 프로젝트의 `Program.qs` 파일에 추가합니다.
 

@@ -6,12 +6,12 @@ ms.author: bradben
 ms.date: 5/5/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.simulators
-ms.openlocfilehash: 04f90e9f88cf17259f96532617ef6f092b56b859
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 2f5345504ba31211c97493e78af1563d575881e4
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83430750"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327750"
 ---
 # <a name="quantum-computers-and-quantum-simulators"></a>양자 컴퓨터 및 양자 시뮬레이터
 
@@ -70,5 +70,4 @@ Microsoft는 양자 하드웨어 제조업체인 IonQ, Honeywell 및 QCI와 협�
 
 ## <a name="next-steps"></a>다음 단계
 
-> [!div class="nextstepaction"]
-> [Q# 프로그래밍 언어 및 QDK란?](xref:microsoft.quantum.overview.q-sharp)
+[Q# 프로그래밍 언어 및 QDK란?](xref:microsoft.quantum.overview.q-sharp)

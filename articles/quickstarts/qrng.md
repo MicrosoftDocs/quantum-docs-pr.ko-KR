@@ -6,21 +6,21 @@ ms.author: megbrow@microsoft.com
 ms.date: 10/25/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.qrng
-ms.openlocfilehash: 3e109553adc4d724733834e3660bfe7789052bcf
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 8fafbccfe2a94a824353221b5e7eb8bac16c42f2
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83426828"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327359"
 ---
 # <a name="tutorial-implement-a-quantum-random-number-generator-in-q"></a>자습서: Q\#에서 양자 난수 생성기 구현
 
 Q#으로 양자 난수 생성기를 작성하는 간단한 양자 알고리즘 예제입니다. 이 알고리즘은 양자 메커니즘의 특성을 활용하여 난수를 생성합니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 - Microsoft [Quantum Development Kit](xref:microsoft.quantum.install)
-- [Q# 프로젝트 만들기](xref:microsoft.quantum.howto.createproject)
+- [명령줄에서 Q#을 사용](xref:microsoft.quantum.install.standalone)하거나 [Python 호스트 프로그램](xref:microsoft.quantum.install.python) 또는 [C# 호스트 프로그램](xref:microsoft.quantum.install.cs)을 사용하여 Q# 프로젝트를 만듭니다.
 
 ## <a name="write-a-q-operation"></a>Q# 연산 작성
 
