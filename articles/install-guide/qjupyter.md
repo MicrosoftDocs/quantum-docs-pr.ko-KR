@@ -6,12 +6,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.jupyter
-ms.openlocfilehash: 0c4dc856c94b0a694fb99607eda64cec4d5c221d
-ms.sourcegitcommit: 328f45a0b64cb6b325fa9d3b3ddb74a6a7a97ee9
+ms.openlocfilehash: 9117794d6cf6f05fa34e05c21fad8977d0e76505
+ms.sourcegitcommit: c8ebc5d7d8581444754f5d7bfaca2f25601f1b14
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83660762"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84577823"
 ---
 # <a name="develop-with-q-jupyter-notebooks"></a>Q# Jupyter Notebook을 사용하여 개발
 
@@ -32,7 +32,7 @@ IQ#(i-q-sharp로 발음)은 Jupyter 및 Python에서 .NET Core SDK에 주로 사
 
 1. `iqsharp` 패키지를 설치합니다.
 
-    ```bash
+    ```dotnetcli
     dotnet tool install -g Microsoft.Quantum.IQSharp
     dotnet iqsharp install
     ```
@@ -41,7 +41,7 @@ IQ#(i-q-sharp로 발음)은 Jupyter 및 Python에서 .NET Core SDK에 주로 사
 
     - 다음 명령을 실행하여 Notebook 서버를 시작합니다.
 
-        ```bash
+        ```
         jupyter notebook
         ```
 

@@ -6,12 +6,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.python
-ms.openlocfilehash: 35499daae0cd0ae329e39b43b0d8dd5a00183871
-ms.sourcegitcommit: 328f45a0b64cb6b325fa9d3b3ddb74a6a7a97ee9
+ms.openlocfilehash: f18d005012dc1c52aab456f1c7b194d182cab786
+ms.sourcegitcommit: c8ebc5d7d8581444754f5d7bfaca2f25601f1b14
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83660734"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84578167"
 ---
 # <a name="develop-with-q-and-python"></a>Q # 및 Python을 사용 하 여 개발
 
@@ -26,13 +26,13 @@ Q # 작업을 호출 하는 Python 호스트 프로그램을 개발 하려면 QD
 
 1. `qsharp`Q #과 python 간에 interop를 사용할 수 있도록 하는 Python 패키지인 패키지를 설치 합니다.
 
-    ```bash
+    ```
     pip install qsharp
     ```
 
 1. Q # 작업을 컴파일하고 실행 하기 위한 핵심 기능을 제공 하는 Jupyter 및 Python에서 사용 하는 커널 인 IQ #을 설치 합니다.
 
-    ```bash
+    ```dotnetcli
     dotnet tool install -g Microsoft.Quantum.IQSharp
     dotnet iqsharp install
     ```
@@ -69,15 +69,15 @@ Q # 작업을 호출 하는 Python 호스트 프로그램을 개발 하려면 QD
 
     - 다음과 같이 프로그램을 실행합니다.
 
-        ```bash
+        ```
         python hello_world.py
         ```
 
     - 출력을 확인합니다. 프로그램은 다음 줄을 출력합니다.
 
-        ```bash
+        ```
         Hello from quantum world!
-       ```
+        ```
 
 
 > [!NOTE]

@@ -7,12 +7,12 @@ ms.date: 10/19/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.howto.createproject
-ms.openlocfilehash: 8019b32a3290e2d45124ebb1eb75395f6cb758db
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+ms.openlocfilehash: 8af8e3288aab731520ede984d5f89644de292385
+ms.sourcegitcommit: c8ebc5d7d8581444754f5d7bfaca2f25601f1b14
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327529"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84578214"
 ---
 # <a name="create-a-q-project-in-your-development-environment"></a>개발 환경에서 Q # 프로젝트 만들기
 
@@ -62,13 +62,13 @@ Q # 프로젝트에는 퀀텀 코드를 포함 하는 Q # 파일 뿐만 아니�
 
 1. 다음과 같이 프로그램을 실행합니다.
 
-    ```bash
+    ```
     python host.py
     ```
 
 1. 출력을 확인합니다. 프로그램은 다음 줄을 출력합니다.
 
-    ```bash
+    ```
     Hello from quantum world!
     0
     ```
@@ -83,7 +83,7 @@ Q # 프로젝트에는 퀀텀 코드를 포함 하는 Q # 파일 뿐만 아니�
 
 1. 다음 명령을 실행하여 Notebook 서버를 시작합니다.
 
-    ```bash
+    ```
     jupyter notebook
     ```
 
@@ -179,7 +179,7 @@ Q # 프로젝트에는 퀀텀 코드를 포함 하는 Q # 파일 뿐만 아니�
 
 1. 새 애플리케이션 디렉터리로 이동합니다.
 
-    ```bash
+    ```
     cd <project name>
     ```
 
