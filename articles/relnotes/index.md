@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: 9a54c1d7a4403a98f945181fdad8ba8a7fdb1175
-ms.sourcegitcommit: 8d9d392bf5e114ae223e6f689ba80d25866ff586
+ms.openlocfilehash: 6b24ebe9f0b5fd3318e8adfe1a62bafaf9d1961e
+ms.sourcegitcommit: c8ebc5d7d8581444754f5d7bfaca2f25601f1b14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84422226"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84578137"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit 릴리스 정보
 
@@ -25,6 +25,12 @@ ms.locfileid: "84422226"
 
 *릴리스 날짜: 2020년 6월 4일*
 
+이 릴리스는 Q# 프로젝트의 컴파일에 영향을 주는 버그를 수정합니다.
+
+## <a name="version-0112006207"></a>버전 0.11.2006.207
+
+*릴리스 날짜: 2020년 6월 3일*
+
 이 릴리스에는 다음이 포함됩니다.
 
 - Q# 진입점이 있으면 Q# Notebook 및 Python 호스트 프로그램이 더 이상 실패하지 않습니다.
@@ -33,6 +39,9 @@ ms.locfileid: "84422226"
 - [API 원칙](xref:microsoft.quantum.contributing.api-design)에 설명된 일정에 따라 몇 가지 사용되지 않는 함수 및 작업이 제거되었습니다. 버전 0.11.2004.2825에서 경고 없이 빌드된 Q# 프로그램 및 라이브러리는 계속 수정되지 않은 상태로 작동합니다.
 
 [라이브러리](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [컴파일러](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [런타임](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [샘플](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed), [IQ#](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed) 및 [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed)에 대한 비공개 PR의 전체 목록을 참조하세요.  
+
+> [!NOTE]
+> 이 버전에는 Q# 프로젝트 컴파일에 영향을 주는 버그가 있습니다. 최신 릴리스로 업그레이드하는 것이 좋습니다.
 
 ## <a name="version-01120042825"></a>버전 0.11.2004.2825
 
