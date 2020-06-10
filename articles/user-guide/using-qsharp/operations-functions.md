@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.operationsfunctions
-ms.openlocfilehash: 9e924b973c4f22a59dd862df3f4f0d70278a1b4e
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+ms.openlocfilehash: 6cfc1b14d86e86a1cbf0109d5e81dfe50c3a80bf
+ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327801"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84630229"
 ---
 # <a name="operations-and-functions-in-q"></a>Q의 작업 및 함수 #
 
@@ -231,7 +231,7 @@ Q # 작업에는 다음과 같은 명시적 특수화 선언이 포함 될 수 �
 인수 목록에서 `...` 은 작업에 대해 전체적으로 선언 된 인수를 나타내는 데 사용 됩니다.
 및의 경우 `body` `adjoint` 인수 목록은 항상 이어야 합니다 `(...)` . 및의 `controlled` 경우 `adjoint controlled` 인수 목록은 컨트롤의 배열을 나타내는 기호 여야 합니다 ( `...` 예:) `(controls,...)` .
 
-### <a name="examples"></a>예
+### <a name="examples"></a>예제
 
 작업 선언은 다음과 같이 간단할 수 있습니다 .이는 기본 Pauli X 작업을 정의 합니다.
 
@@ -273,7 +273,7 @@ is Ctl + Adj {
         CNOT(here, there);
     }
 
-    controlled (cs, ...) { // user defined implementation for the controlled specialization
+    controlled (cs, ...) { // user-defined implementation for the controlled specialization
         Controlled H(cs, here);
         Controlled X(cs + [here], there);
     }

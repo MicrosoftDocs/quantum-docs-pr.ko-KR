@@ -6,12 +6,12 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.style
-ms.openlocfilehash: dfb2b1779e3ddc77fc74697bc4dc2904b1a0c70f
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 948b385948f0b362e7c12500662132883959a798
+ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83426920"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84630212"
 ---
 # <a name="q-style-guide"></a>Q # 스타일 가이드 #
 ## <a name="general-conventions"></a>일반 규칙 ##
@@ -49,7 +49,7 @@ ms.locfileid: "83426920"
 > 이러한 관점에서 사용자 정의 형식은 형식 자체와 생성자 함수에 일관 된 이름을 갖도록 명사로 이름을 지정 해야 합니다.
 
 적절 한 경우 작업 이름이 작업에서 수행한 효과를 명확 하 게 나타내는 동사로 시작 되는지 확인 합니다.
-예들 들어 다음과 같습니다.
+예를 들면 다음과 같습니다.
 
 - `MeasureInteger`
 - `EstimateEnergy`
@@ -67,7 +67,7 @@ ms.locfileid: "83426920"
 | 견적 | 하나 이상의 측정값 으로부터 그려진 추정치를 나타내는 고전 값이 반환 됩니다. |
 | 측정값 | 퀀텀 측정이 수행 되며 결과가 사용자에 게 반환 됩니다. |
 | 준비 | 지정 된 비트 레지스터가 특정 상태로 초기화 됩니다. |
-| 샘플 | 일부 분포에서 무작위로 값이 반환 됩니다. |
+| 예제 | 일부 분포에서 무작위로 값이 반환 됩니다. |
 
 함수의 경우 일반적인 명사를 선호 하는 동사를 사용 하지 않는 것이 좋습니다 (아래의 적절 한 명사에 대 한 지침 참조).
 
@@ -93,7 +93,7 @@ ms.locfileid: "83426920"
 
 # <a name="examples"></a>[예](#tab/examples)
 
-|   | 속성 | Description |
+|   | Name | 설명 |
 |---|------|-------------|
 | ☑ | `operation ReflectAboutStart` | 작업의 효과를 나타내려면 동사 ("반사")를 사용 하지 않습니다. |
 | ☒ | <s>`operation XRotation`</s> | 명사구를 사용 하는 것은 연산이 아니라 함수를 제안 합니다. |
@@ -143,7 +143,7 @@ is Adj + Ctl {
 
 # <a name="examples"></a>[예](#tab/examples)
 
-|   | 속성 | Description |
+|   | Name | 설명 |
 |---|------|-------------|
 | ☑ | `X` | "$X $ 변환 적용"의 이해 하기 쉬운 약어 |
 | ☑ | `CNOT` | "제어-없음"에 대 한 이해 하기 쉬운 약어 |
@@ -200,7 +200,7 @@ Q #은 강력 하 고 staticly 지정 된 언어 이기 때문에 형식 변환 
 
 # <a name="examples"></a>[예](#tab/examples)
 
-|   | 속성 | Description |
+|   | Name | 설명 |
 |---|------|-------------|
 | ☒ | <s>`ToDouble`</s> | 전치사 "to"는 동사가 아닌 연산을 나타내는 동사 구를 생성 합니다. |
 | ☒ | <s>`AsDouble`</s> | 입력 형식이 함수 이름에서 명확 하지 않습니다. |
@@ -223,7 +223,7 @@ Q #은 강력 하 고 staticly 지정 된 언어 이기 때문에 형식 변환 
 
 # <a name="examples"></a>[예](#tab/examples)
 
-|   | 속성 | Description |
+|   | Name | 설명 |
 |---|------|-------------|
 | ☒ | <s>`ApplyDecomposedOperation_`</s> | 밑줄은 `_` 이름의 끝에 표시 되어서는 안 됩니다. |
 | ☑ | `_ApplyDecomposedOperation` | `_`시작 부분에 있는 밑줄은이 작업이 내부용 으로만 사용 됨을 나타냅니다. |
@@ -296,7 +296,7 @@ Q #은 강력 하 고 staticly 지정 된 언어 이기 때문에 형식 변환 
 
 # <a name="examples"></a>[예](#tab/examples)
 
-|   | 코드 조각 | Description |
+|   | 코드 조각 | 설명 |
 |---|---------|-------------|
 | ☑ | `newtype Oracle = (Apply : Qubit[] => Unit is Adj + Ctl)` | 이름은 `Apply` `CamelCase` 형식이 지정 된 동사 구로, 명명 된 항목이 작업 임을 제안 합니다. |
 | ☒ | <s>`newtype Oracle = (apply : Qubit[] => Unit is Adj + Ctl) `</s> | 명명 된 항목은 초기 대문자로 시작 해야 합니다. |
@@ -453,7 +453,7 @@ is Adj + Ctl {
 
 # <a name="examples"></a>[예](#tab/examples)
 
-|   | 코드 조각 | Description |
+|   | 코드 조각 | 설명 |
 |---|---------|-------------|
 | ☒ | <s>`2+3`</s> | 이항 연산자 주위의 공백을 사용 합니다. |
 | ☒ | <s>`target:Qubit`</s> | 형식 주석 콜론 앞뒤에 공백을 사용 합니다. |

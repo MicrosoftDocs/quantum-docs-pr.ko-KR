@@ -6,18 +6,18 @@ ms.date: 4/24/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.standalone
-ms.openlocfilehash: e829862521951c50cb42eebf261c803071a95275
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 4311ebf9f72254485a20ba721ea2ce19163f4371
+ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83426428"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84630270"
 ---
 # <a name="develop-with-q-command-line-applications"></a>Q # 명령줄 응용 프로그램을 사용 하 여 개발
 
 Q # 프로그램은 c #, F #, Python 등의 호스트 언어로 드라이버를 사용 하지 않고 직접 실행할 수 있습니다.
 
-## <a name="pre-requisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>전제 조건
 
 - [.NET Core SDK 3.1 이상](https://www.microsoft.com/net/download)
 

@@ -6,18 +6,89 @@ ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.glossary
-ms.openlocfilehash: 042e4e27ef4e42cfc0c24fbb0ae2232cf1bbfe36
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+no-loc:
+- $
+- $
+- '\cdots'
+- bmatrix
+- '\ddots'
+- '\equiv'
+- '\sum'
+- '\begin'
+- '\end'
+- '\sqrt'
+- '\otimes'
+- '{'
+- '}'
+- '\text'
+- '\phi'
+- '\kappa'
+- '\psi'
+- '\alpha'
+- '\beta'
+- '\gamma'
+- '\delta'
+- '\omega'
+- '\bra'
+- '\ket'
+- '\boldone'
+- '\\\\'
+- '\\'
+- =
+- '\frac'
+- '\text'
+- '\mapsto'
+- '\dagger'
+- '\to'
+- "\begin{cases}"
+- "\end{cases}"
+- '\operatorname'
+- '\braket'
+- '\id'
+- '\expect'
+- '\defeq'
+- '\variance'
+- '\dd'
+- '&'
+- "\begin{align}"
+- "\end{align}"
+- '\Lambda'
+- '\lambda'
+- '\Omega'
+- '\mathrm'
+- '\left'
+- '\right'
+- '\qquad'
+- '\times'
+- '\big'
+- '\langle'
+- '\rangle'
+- '\bigg'
+- '\Big'
+- '|'
+- '\mathbb'
+- '\vec'
+- '\in'
+- '\texttt'
+- '\ne'
+- <
+- '>'
+- '\leq'
+- '\geq'
+- ~~
+- "~"
+ms.openlocfilehash: 2a3b1fe480b9886d0c11255bb1b1e01402dce4f7
+ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327614"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84630100"
 ---
 # <a name="quantum-computing-glossary"></a>퀀텀 컴퓨팅 용어집
 
 ## <a name="adjoint"></a>Adjoint
 
-[작업](xref:microsoft.quantum.glossary#operation)의 복소수 복소수입니다. [단일](xref:microsoft.quantum.glossary#unitary-operator) 연산자를 구현 하는 작업의 경우 adjoint는 작업의 역함수 이며 칼 기호로 표시 됩니다. 예를 들어 연산이 단일 연산자 ($U $)를 나타내는 경우은 (는) `U` `Adjoint U` $U ^ \aate$를 나타냅니다. 자세한 내용은 [Adjoint](xref:microsoft.quantum.guide.operationsfunctions#controlled-and-adjoint-operations)를 참조 하세요.
+[작업](xref:microsoft.quantum.glossary#operation)의 복소수 복소수입니다. [단일](xref:microsoft.quantum.glossary#unitary-operator) 연산자를 구현 하는 작업의 경우 adjoint는 작업의 역함수 이며 칼 기호로 표시 됩니다. 예를 들어 연산이 `U` 단일 연산자 $U를 나타내는 경우은 $ (는) `Adjoint U` $U ^ \a 를 나타냅니다 $ . 자세한 내용은 [Adjoint](xref:microsoft.quantum.guide.operationsfunctions#controlled-and-adjoint-operations)를 참조 하세요.
 
 ## <a name="ancilla"></a>Ancilla
 
@@ -25,7 +96,7 @@ ms.locfileid: "84327614"
 
 ## <a name="bell-state"></a>종 상태
 
-두 개의 최대 [entangled](xref:microsoft.quantum.glossary#entanglement) [퀀텀 상태](xref:microsoft.quantum.glossary#quantum-state) 중 하나입니다. 네 가지 상태는 $ \ket{\ beta_ {ij}} = (\mathbb{I} \otimes X ^ iZ ^ j) (\ket {00} + \ket {11} )/\sqrt {2} $로 정의 됩니다. 종 상태는 [EPR 쌍](xref:microsoft.quantum.glossary#epr-pair)이 라고도 합니다.
+두 개의 최대 [entangled](xref:microsoft.quantum.glossary#entanglement) [퀀텀 상태](xref:microsoft.quantum.glossary#quantum-state) 중 하나입니다. 네 가지 상태는 $ \ket { \ beta_ {ij } } = (\mathbb{I } \Otimes X ^ iZ ^ j) (\ket{00 } + \ket{11 } )/\sqrt{2 $ } 로 정의 됩니다. 종 상태는 [EPR 쌍](xref:microsoft.quantum.glossary#epr-pair)이 라고도 합니다.
 
 ## <a name="bloch-sphere"></a>Bloch 구
 
@@ -37,7 +108,7 @@ Q # 언어의 [작업](xref:microsoft.quantum.glossary#operation) 또는 [함수
 
 ## <a name="clifford-group"></a>Clifford 그룹
 
-[Bloch 구의](xref:microsoft.quantum.glossary#bloch-sphere) octants을 차지 하는 작업 집합과 [pauli 연산자](xref:microsoft.quantum.glossary#pauli-operators)의 효과 순열 여기에는 작업 [$X $](xref:microsoft.quantum.intrinsic.x), [$Y $](xref:microsoft.quantum.intrinsic.y), [$Z $](xref:microsoft.quantum.intrinsic.z), [$H $](xref:microsoft.quantum.intrinsic.h) 및 [$S $](xref:microsoft.quantum.intrinsic.s)가 포함 됩니다.
+[Bloch 구의](xref:microsoft.quantum.glossary#bloch-sphere) octants을 차지 하는 작업 집합과 [pauli 연산자](xref:microsoft.quantum.glossary#pauli-operators)의 효과 순열 여기에는 작업 [$X $ ](xref:microsoft.quantum.intrinsic.x), [$Y $ ](xref:microsoft.quantum.intrinsic.y), [$Z $ ](xref:microsoft.quantum.intrinsic.z), [$H $ ](xref:microsoft.quantum.intrinsic.h) 및 [$S $ ](xref:microsoft.quantum.intrinsic.s)가 포함 됩니다.
 
 ## <a name="controlled"></a>제어
 
@@ -45,15 +116,15 @@ Q # 언어의 [작업](xref:microsoft.quantum.glossary#operation) 또는 [함수
 
 ## <a name="dirac-notation"></a>기타 ac 표기법
 
-*Bra-k* 표기법이 라고도 하는 [퀀텀 상태의](xref:microsoft.quantum.glossary#quantum-state)표현을 간소화 하는 기호화 된 축약형입니다.  *Bra* 부분은 행 벡터 (예: $ \bra{A} = \begin{bmatrix} a {_1} & {_2} \end{bmatrix} $)를 나타내며, *k* 부분은 열 벡터, $ \ket{B} = \begin{bmatrix} B {_1} \\ \\ B {_2} \end{bmatrix} $를 나타냅니다. 자세한 내용은 [Diac 표기법](xref:microsoft.quantum.concepts.dirac)을 참조 하십시오.
+*Bra-k* 표기법이 라고도 하는 [퀀텀 상태의](xref:microsoft.quantum.glossary#quantum-state)표현을 간소화 하는 기호화 된 축약형입니다.  *Bra* 부분은 행 벡터를 나타냅니다. 예를 들어 $ \bra{A } = \begin{ bmatrix } a {_1 } & a {_2 } \end{ bmatrix } $ 및 *k* 부분은 열 벡터, $ \ket{B } = \begin{ bmatrix } B {_1 } \\ \\ B {_2 } \begin{ bmatrix } $를 나타냅니다. 자세한 내용은 [Diac 표기법](xref:microsoft.quantum.concepts.dirac)을 참조 하십시오.
 
 ## <a name="eigenvalue"></a>Eigenvalue
 
-변환 응용 프로그램에서 지정 된 변환의 [eigenvector](xref:microsoft.quantum.glossary#eigenvector) 크기를 변경 하는 인수입니다.  사각형 행렬 $M $ 및 eigenvector $v $를 지정한 다음 $Mv = cv $를 지정 합니다. 여기서 $c $은 eigenvalue 이며 모든 인수의 복소수 일 수 있습니다. 자세한 내용은 [고급 행렬 개념](xref:microsoft.quantum.concepts.matrix-advanced)을 참조 하세요.
+변환 응용 프로그램에서 지정 된 변환의 [eigenvector](xref:microsoft.quantum.glossary#eigenvector) 크기를 변경 하는 인수입니다.  사각형 행렬 $M $ 및 eigenvector $v를 지정 하 고 $ $Mv = cv를 지정 합니다 $ . 여기서 $c $ 은 eigenvalue 이며 임의의 인수 수 일 수 있습니다. 자세한 내용은 [고급 행렬 개념](xref:microsoft.quantum.concepts.matrix-advanced)을 참조 하세요.
 
 ## <a name="eigenvector"></a>Eigenvector
 
-지정 된 변환에서 방향이 변경 되지 않으며 해당 벡터의 [eigenvalue](xref:microsoft.quantum.glossary#eigenvalue)에 해당 하는 요소에 의해 크기가 변경 되는 벡터입니다. 사각형 행렬 $M $와 eigenvalue $c $를 지정한 다음 $Mv = cv $를 지정 합니다. 여기서 $v $은 행렬의 eigenvector이 고 임의의 인수 수를 사용할 수 있습니다. 자세한 내용은 [고급 행렬 개념](xref:microsoft.quantum.concepts.matrix-advanced)을 참조 하세요.
+지정 된 변환에서 방향이 변경 되지 않으며 해당 벡터의 [eigenvalue](xref:microsoft.quantum.glossary#eigenvalue)에 해당 하는 요소에 의해 크기가 변경 되는 벡터입니다. 사각형 행렬 $M $ 와 eigenvalue를 $c 한 $ 다음 $Mv = cv를 지정 $ $ 합니다. 여기서 $v은 행렬의 eigenvector이 고 임의의 인수 수 일 수 있습니다. 자세한 내용은 [고급 행렬 개념](xref:microsoft.quantum.concepts.matrix-advanced)을 참조 하세요.
 
 ## <a name="entanglement"></a>얽힘
 
@@ -61,13 +132,13 @@ Q # 언어의 [작업](xref:microsoft.quantum.glossary#operation) 또는 [함수
 
 ## <a name="epr-pair"></a>EPR 쌍
 
-두 개의 최대 entangled [퀀텀 상태](xref:microsoft.quantum.glossary#quantum-state) 중 [하나입니다.](xref:microsoft.quantum.glossary#qubit) 네 가지 상태는 $ \ket{\ beta_ {ij}} = (\mathbb {1} \otimes X ^ iZ ^ j) (\ket {00} + \ket {11} )/\sqrt $ {2} 로 정의 됩니다. EPR 쌍은 [종 상태](xref:microsoft.quantum.glossary#bell-state) 라고도 합니다.
+두 개의 최대 entangled [퀀텀 상태](xref:microsoft.quantum.glossary#quantum-state) 중 [하나입니다.](xref:microsoft.quantum.glossary#qubit) 네 가지 상태는 $ \ket { \ beta_ {ij } } = (\mathbb{1 } \Otimes X ^ iZ ^ j) (\ket{00 } + \ket{11 } )/\sqrt{2 $ } 로 정의 됩니다. EPR 쌍은 [종 상태](xref:microsoft.quantum.glossary#bell-state) 라고도 합니다.
 
 ## <a name="evolution"></a>진화
 
 시간이 지남에 따라 [퀀텀 상태](xref:microsoft.quantum.glossary#quantum-state) 를 변경 하는 방법입니다. 자세한 내용은 [Matrix 지 수](xref:microsoft.quantum.concepts.matrix-advanced#matrix-exponentials)을 (를) 참조 하세요.
 
-## <a name="function"></a>기능
+## <a name="function"></a>함수
 순수 하 게 고전 (비 양자) 인 Q # 언어의 서브루틴 형식입니다. 퀀텀 알고리즘 내에서 함수를 사용 하는 [동안에는](xref:microsoft.quantum.glossary#qubit) 이 함수를 사용 하 여 [작업](xref:microsoft.quantum.glossary#operation)을 호출할 수 없습니다. 자세한 내용은 [작업 및 함수](xref:microsoft.quantum.guide.operationsfunctions)를 참조 하세요.
 
 ## <a name="gate"></a>라는
@@ -76,11 +147,11 @@ Q # 언어의 [작업](xref:microsoft.quantum.glossary#operation) 또는 [함수
 
 ## <a name="global-phase"></a>글로벌 단계
 
-두 [상태가](xref:microsoft.quantum.glossary#quantum-state) $e ^ {i\a\\a} $의 복소수와 동일 하 게 일치 하는 경우 전역 단계와 다를 것으로 간주 됩니다. 로컬 단계와 달리 전역 단계는 [measurment](xref:microsoft.quantum.glossary#measurement)을 통해 관찰할 수 없습니다. 자세한 내용은 [다음을 참조 하세요.](xref:microsoft.quantum.concepts.qubit)
+두 [상태가](xref:microsoft.quantum.glossary#quantum-state) ^ {i $ $e 복소수와 동일 하 게 일치 하는 것으로 간주 되는 경우에는 \phi } 전역 단계와 차이가 있습니다. 로컬 단계와 달리 전역 단계는 [measurment](xref:microsoft.quantum.glossary#measurement)을 통해 관찰할 수 없습니다. 자세한 내용은 [다음을 참조 하세요.](xref:microsoft.quantum.concepts.qubit)
 
 ## <a name="hadamard"></a>Hadamard
 
-Hadamard 작업 (Hadamard 게이트 또는 변환이 라고도 함)은 단일의 [비트](xref:microsoft.quantum.glossary#qubit) 에서 작동 하 고, [superposition](xref:microsoft.quantum.glossary#superposition) {0} {1} 가 처음에 $ \ket $ 상태에 있는 경우 $ \ket $ 또는 $ \ket $의 짝수 superposition에 배치 합니다 {0} . Q #에서이 작업은 미리 정의 된 작업에 의해 적용 됩니다 [`H`](xref:microsoft.quantum.intrinsic.h) .
+Hadamard 작업 (Hadamard 게이트 또는 변환이 라고도 함)은 단일의 [비트](xref:microsoft.quantum.glossary#qubit) 에서 작동 하 고, [superposition](xref:microsoft.quantum.glossary#superposition) } } 가 처음에 $ \ket{1 $ 상태에 있는 경우 $ \ket{0 $ 또는 $ \ket{0 $의 짝수 superposition에 배치 합니다 } . Q #에서이 작업은 미리 정의 된 작업에 의해 적용 됩니다 [`H`](xref:microsoft.quantum.intrinsic.h) .
 
 ## <a name="immutable"></a>변경할 수 없음
 
@@ -116,7 +187,7 @@ Q #에서 퀀텀 실행의 기본 단위입니다. C, c + + 또는 Python의 함
 
 ## <a name="pauli-operators"></a>Pauli 연산자
 
-`X`, `Y` 및 퀀텀 작업으로 알려진 3 개의 2 x 2 단일 매트릭스 집합입니다 `Z` . Id 매트릭스 인 $I $가 집합에도 포함 되는 경우가 많습니다.  $I = \begin{bmatrix} 1 & 0 \\ \\ 0 & 1 \end{bmatrix} $, $X = \begin{bmatrix} 0 & 1 \\ \\ 1 & 0 \end{bmatrix} $, $Y = \begin{bmatrix} 0 &-i \\ \\ i & 0 \end{bmatrix} $, $Z = \begin{bmatrix} 1 & 0 \\ \\ 0 &-1 \end{bmatrix} $.   자세한 내용은 [단일 기능 비트 작업](xref:microsoft.quantum.concepts.qubit#single-qubit-operations)을 참조 하세요.
+`X`, `Y` 및 퀀텀 작업으로 알려진 3 개의 2 x 2 단일 매트릭스 집합입니다 `Z` . Id 매트릭스 $I는 $ 집합에도 포함 됩니다.  $I = \begin{ bmatrix } 1 & 0 \\ \\ 0 & 1 \begin{ bmatrix } $, $X = \begin{ bmatrix } 0 & 1 \\ \\ 1 & 0 \begin{ bmatrix } $, $Y = \begin{ bmatrix } 0 &-i \\ \\ & 0 \begin{ bmatrix } $, $Z = \begin{ bmatrix } 1 & 0 \\ \\ 0 &-1 \begin{ bmatrix } $.   자세한 내용은 [단일 기능 비트 작업](xref:microsoft.quantum.concepts.qubit#single-qubit-operations)을 참조 하세요.
 
 ## <a name="quantum-circuit-diagram"></a>퀀텀 회로 다이어그램
 
@@ -148,7 +219,7 @@ Q # 프로그램을 만들기 위한 [작업](xref:microsoft.quantum.glossary#op
 
 ## <a name="superposition"></a>Superposition
 
-퀀텀 계산의 [개념은](xref:microsoft.quantum.glossary#qubit) {0} {1} [측정](xref:microsoft.quantum.glossary#measurement)될 때까지 $ \ket $ 및 $ \ket $ 이라는 두 가지 상태의 선형 조합입니다.  자세한 내용은 [퀀텀 컴퓨팅 이해](xref:microsoft.quantum.overview.understanding)를 참조 하세요.
+퀀텀 계산의 [개념은](xref:microsoft.quantum.glossary#qubit) } } [측정](xref:microsoft.quantum.glossary#measurement)될 때까지 $ \ket{0 $ 및 $ \ket{1 $ 이라는 두 가지 상태의 선형 조합입니다.  자세한 내용은 [퀀텀 컴퓨팅 이해](xref:microsoft.quantum.overview.understanding)를 참조 하세요.
 
 ## <a name="target-machine"></a>대상 컴퓨터
 
@@ -164,7 +235,7 @@ Q # 프로그램을 만들기 위한 [작업](xref:microsoft.quantum.glossary#op
 
 ## <a name="unitary-operator"></a>단일 연산자
 
-역이 [adjoint](xref:microsoft.quantum.glossary#adjoint)와 같은 연산자 (예: $UU ^ {\dagger} = \id $)입니다.
+역이 [adjoint](xref:microsoft.quantum.glossary#adjoint)와 같은 연산자 (예 $UU: ^ {\aa= } \dagger)입니다. $
 
 ## <a name="user-defined-type"></a>사용자 정의 형식
 

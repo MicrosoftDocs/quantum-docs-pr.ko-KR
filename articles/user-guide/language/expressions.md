@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.expressions
-ms.openlocfilehash: c4b2cc0bed44ffdfb191ba522d6526959e7c6708
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+ms.openlocfilehash: b32644382bb88fb11da00d0d7d78bbd797a0eaaa
+ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327308"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84629990"
 ---
 # <a name="type-expressions-in-q"></a>Q의 형식 식 #
 
@@ -201,7 +201,7 @@ C # 구문에 대 한 자세한 내용은 [*보간된 문자열*](https://docs.m
 Q #에서 래핑 해제 연산자는 후행 감탄 부호 `!` 입니다.
 예를 들어, `IntPair` 가 기본 형식의 사용자 정의 형식이 `(Int, Int)` 고 `s` 값이 인 변수인 경우는 `IntPair(2, 3)` `s!` `(2, 3)` 입니다.
 
-사용자 정의 형식에 대해 정의 합니다. 래핑 해제 연산자는 반복 될 수 있습니다. 예를 들어는 `s!!` 이중 래핑 해제 된 값을 `s` 나타냅니다.
+다른 사용자 정의 형식과 관련 하 여 정의 된 사용자 정의 형식의 경우 래핑 해제 연산자가 반복 될 수 있습니다. 예를 들어는 `s!!` 이중 래핑 해제 된 값을 `s` 나타냅니다.
 따라서 `WrappedPair` 가 기본 형식의 사용자 정의 형식이 `IntPair` 고 `t` 가 값이 포함 된 변수인 경우은 `WrappedPair(IntPair(1,2))` `t!!` `(1,2)` 입니다.
 
 `!`연산자는 `[]` 배열 인덱싱 및 조각화를 위해 이외의 다른 모든 연산자 보다 우선 순위가 높습니다.

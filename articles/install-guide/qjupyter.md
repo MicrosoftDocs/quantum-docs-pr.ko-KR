@@ -6,12 +6,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.jupyter
-ms.openlocfilehash: 9117794d6cf6f05fa34e05c21fad8977d0e76505
-ms.sourcegitcommit: c8ebc5d7d8581444754f5d7bfaca2f25601f1b14
+ms.openlocfilehash: b80d95a160b5f46c1132d3428ba32ad6dcd5656e
+ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 06/09/2020
-ms.locfileid: "84577823"
+ms.locfileid: "84630342"
 ---
 # <a name="develop-with-q-jupyter-notebooks"></a>Q# Jupyter Notebook을 사용하여 개발
 
@@ -24,7 +24,7 @@ IQ#(i-q-sharp로 발음)은 Jupyter 및 Python에서 .NET Core SDK에 주로 사
 > [!NOTE]
 > * Q # Jupyter 노트북에서 Q # 코드만 실행할 수 있으며, 외부 호스트 프로그램 (예: Python 또는 c # 파일)에서 작업을 호출할 수 없습니다. 외부 클래식 호스트 프로그램과 퀀텀 프로그램을 결합 하는 것이 목표 인 경우에는이 환경이 적절 하지 않습니다.
 
-1. 필수 구성 요소
+1. 전제 조건
 
     - [Python](https://www.python.org/downloads/) 3.6 이상
     - [Jupyter Notebook](https://jupyter.readthedocs.io/en/latest/install.html)
@@ -36,6 +36,15 @@ IQ#(i-q-sharp로 발음)은 Jupyter 및 Python에서 .NET Core SDK에 주로 사
     dotnet tool install -g Microsoft.Quantum.IQSharp
     dotnet iqsharp install
     ```
+
+    > [!NOTE]
+    > 단계 중에 오류가 발생 하면 `dotnet iqsharp install` 새 터미널 창을 열고 다시 시도 합니다.
+    > 그래도 작동 하지 않으면 설치 된 `dotnet-iqsharp` 도구 (Windows)를 찾아 `dotnet-iqsharp.exe` 실행 합니다.
+    > ```
+    > /path/to/dotnet-iqsharp install --user --path-to-tool="/path/to/dotnet-iqsharp"
+    > ```
+    > 는 `/path/to/dotnet-iqsharp` 파일 시스템의 도구에 대 한 절대 경로로 바꾸어야 합니다 `dotnet-iqsharp` .
+    > 일반적으로이는 `.dotnet/tools` 사용자 프로필 폴더에 있습니다.
 
 1. `Hello World` 애플리케이션을 만들어 설치를 확인합니다.
 

@@ -6,12 +6,12 @@ ms.author: mamykhai@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.guide.testingdebugging
-ms.openlocfilehash: 374ac42255ab6b2c5eff8ab7879b3a5103181f7f
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: dd6c7ae8a016423f26c37f3eedf0ae9c1d126b78
+ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83430920"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84630023"
 ---
 # <a name="testing-and-debugging"></a>테스트 및 디버깅
 
@@ -218,7 +218,7 @@ using (register = Qubit())
 
 * **`∣0❭:`** 이 행은 `0` 계산 기준 상태에 해당 합니다.
 * **`0.707107 +  0.000000 i`**: 데카르트 형식의 확률 진폭입니다.
-* **` == `**: `equal` 부호는 두 동등한 표현을 seperates 합니다.
+* **` == `**: `equal` 부호는 두 동등한 표현을 구분 합니다.
 * **`**********  `**: 크기의 그래픽 표현으로,의 수는 `*` 이 상태 벡터를 측정할 확률에 비례 합니다.
 * **`[ 0.500000 ]`**: 크기의 숫자 값입니다.
 * **`    ---`**: 진폭의 단계를 그래픽으로 표현한 것입니다 (아래 참조).
