@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 05/29/2020
 ms.topic: tutorial
 uid: microsoft.quantum.write-program
-ms.openlocfilehash: 989080e7d9979bb87d14b2580d28732bb1092eb1
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+ms.openlocfilehash: 271eb7f496835f152573be930d0fe24e59f2d15d
+ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327376"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84630083"
 ---
 # <a name="tutorial-explore-entanglement-with-q"></a>자습서: Q\#을 사용한 얽힘 살펴보기
 
@@ -21,7 +21,7 @@ QDK를 설치하고, 프로그램을 빌드하여 양자 시뮬레이터에서 �
 양자 얽힘을 보여주는 벨이라는 애플리케이션을 작성합니다.
 벨이라는 이름은 가장 간단한 중첩과 양자 얽힘의 예를 표현하는 데 사용되는 두 큐비트의 특정 양자 상태를 의미하는 벨 상태에서 따온 것입니다.
 
-## <a name="pre-requisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>필수 구성 요소
 
 코딩을 시작할 준비가 되면 계속하기 전에 다음 단계를 수행합니다. 
 
@@ -59,7 +59,7 @@ QDK를 설치하지 않고 설명에 따라 Q# 프로그래밍 언어와 양자 
 
 1. 새 Q# 프로젝트를 만듭니다.
 
-    ```bash
+    ```
     dotnet new console -lang Q# --output Bell
     cd Bell
     ```
@@ -68,7 +68,7 @@ QDK를 설치하지 않고 설명에 따라 Q# 프로그래밍 언어와 양자 
 
 1. Q# 파일 이름 바꾸기
 
-    ```bash
+    ```
     mv Operation.qs Bell.qs
     ```
 
@@ -282,7 +282,7 @@ Init:1    0s=0    1s=1000
 
 1. 터미널에서 다음을 실행합니다.
 
-    ```bash
+    ```dotnetcli
     dotnet run
     ```
 
