@@ -1,0 +1,10 @@
+- name: 깊이 카운터
+  href: depth-counter.md
+- name: 고유 입력 검사기
+  href: distinct-inputs-checker.md
+- name: 무효화된 큐비트 사용 검사기
+  href: invalidated-qubits-use-checker.md
+- name: 기본 연산 카운터
+  href: primitive-operations-counter.md
+- name: 너비 카운터
+  href: width-counter.md
