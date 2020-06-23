@@ -1,0 +1,20 @@
+expanded: true
+items:
+  - name: QDK 시작
+    href: get-started.md
+  - name: QDK 설치
+    items:
+      - name: 설치 개요
+        href: index.md
+      - name: Q# 명령줄 애플리케이션
+        href: install-command-line.md
+      - name: Q# Jupyter Notebook
+        href: install-jupyter.md
+      - name: 다른 언어와 Q#
+        items:
+          - name: Python과 Q#
+            href: install-python.md
+          - name: .NET과 Q#
+            href: install-cs.md
+  - name: QDK 업데이트
+    href: update.md

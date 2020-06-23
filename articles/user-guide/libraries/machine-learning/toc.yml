@@ -1,0 +1,10 @@
+- name: 양자 기계 학습 소개
+  href: introduction.md
+- name: 기본 분류
+  href: basic-classification.md
+- name: 사용자 고유의 분류자 설계
+  href: design.md
+- name: 사용자 고유의 데이터세트 로드
+  href: load.md
+- name: 용어집(QML)
+  href: glossary-qml.md

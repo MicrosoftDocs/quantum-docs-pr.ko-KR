@@ -10,12 +10,12 @@ metadata:
   author: cjgronlund
   ms.author: cgronlun
   ms.date: 5/10/2020
-  ms.openlocfilehash: e36a289f17d56a4a8edae71b9a3194a144767dd4
-  ms.sourcegitcommit: 4da99168479f96f408b984279a5a7eabcda752db
+  ms.openlocfilehash: 313ee49f4e6ad25e57c47a9d95a1617326af3bec
+  ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/20/2020
-  ms.locfileid: "83708704"
+  ms.lasthandoff: 06/23/2020
+  ms.locfileid: "85269527"
 landingContent:
 - title: 양자 컴퓨팅
   linkLists:
@@ -40,13 +40,13 @@ landingContent:
   - linkListType: get-started
     links:
     - text: Quantum Development Kit
-      url: welcome.md
+      url: quickstarts/get-started.md
   - linkListType: download
     links:
     - text: QDK 설치
-      url: install-guide/index.md
+      url: quickstarts/index.md
     - text: QDK 업데이트
-      url: install-guide/update.md
+      url: quickstarts/update.md
 - title: Q# 프로그래밍 언어
   linkLists:
   - linkListType: how-to-guide
@@ -54,19 +54,19 @@ landingContent:
     - text: Q# 사용자 가이드
       url: user-guide/index.md
     - text: 양자 시뮬레이터 및 호스트 애플리케이션
-      url: machines/index.md
+      url: user-guide/machines/index.md
   - linkListType: tutorial
     links:
     - text: 양자 난수 생성기 빌드
-      url: quickstarts/qrng.md
+      url: tutorials/quantum-random-number-generator.md
     - text: Q#을 사용한 얽힘 살펴보기
-      url: quickstart.md
+      url: tutorials/explore-entanglement.md
     - text: '양자 속도 향상: Grover의 검색 알고리즘'
-      url: quickstarts/search.md
+      url: tutorials/search.md
   - linkListType: learn
     links:
     - text: Quantum Katas를 사용하여 알아보기
-      url: intro-to-katas.md
+      url: tutorials/intro-to-katas.md
     - text: 'Q # 코드 샘플 찾아보기'
       url: https://docs.microsoft.com/samples/browse/?languages=qsharp
 - title: 커뮤니티 및 기여
@@ -74,7 +74,7 @@ landingContent:
   - linkListType: how-to-guide
     links:
     - text: QDK에 기여
-      url: contributing/index.md
+      url: resources/contributing/index.md
     - text: Microsoft Quantum 블로그 참조
       url: https://cloudblogs.microsoft.com/quantum
 - title: Q# 라이브러리
@@ -82,10 +82,10 @@ landingContent:
   - linkListType: reference
     links:
     - text: 표준 라이브러리
-      url: libraries/standard/index.md
+      url: user-guide/libraries/standard/index.md
     - text: 화학 라이브러리
-      url: libraries/chemistry/index.md
+      url: user-guide/libraries/chemistry/index.md
     - text: 기계 학습 라이브러리
-      url: libraries/machine-learning/index.md
+      url: user-guide/libraries/machine-learning/index.md
     - text: 숫자 라이브러리
-      url: libraries/numerics/index.md
+      url: user-guide/libraries/numerics/index.md
