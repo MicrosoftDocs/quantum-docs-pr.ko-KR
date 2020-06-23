@@ -1,21 +1,21 @@
 ---
-title: 양자 난수 생성기 만들기
-description: 양자 난수 생성기를 만들어서 중첩 같은 기본적인 양자 개념을 보여주는 Q# 프로젝트를 빌드합니다.
+title: 퀀텀 난수 생성기 만들기
+description: 퀀텀 난수 생성기를 만들어서 중첩 같은 기본적인 퀀텀 개념을 보여주는 Q# 프로젝트를 빌드합니다.
 author: bromeg
 ms.author: megbrow@microsoft.com
 ms.date: 10/25/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.qrng
-ms.openlocfilehash: 8fafbccfe2a94a824353221b5e7eb8bac16c42f2
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+ms.openlocfilehash: 18e8975e513a87c0a67a6dbb5586cc7dab5a93fb
+ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327359"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84630122"
 ---
-# <a name="tutorial-implement-a-quantum-random-number-generator-in-q"></a>자습서: Q\#에서 양자 난수 생성기 구현
+# <a name="tutorial-implement-a-quantum-random-number-generator-in-q"></a>자습서: Q\#에서 퀀텀 난수 생성기 구현
 
-Q#으로 양자 난수 생성기를 작성하는 간단한 양자 알고리즘 예제입니다. 이 알고리즘은 양자 메커니즘의 특성을 활용하여 난수를 생성합니다.
+Q#으로 퀀텀 난수 생성기를 작성하는 간단한 퀀텀 알고리즘 예제입니다. 이 알고리즘은 퀀텀 메커니즘의 특성을 활용하여 난수를 생성합니다.
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
@@ -30,7 +30,7 @@ Q#으로 양자 난수 생성기를 작성하는 간단한 양자 알고리즘 �
 
 :::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="3-15,34":::
 
-[양자 컴퓨팅 이해](xref:microsoft.quantum.overview.understanding) 문서에서 설명한 대로 큐비트는 중첩될 수 있는 양자 정보의 단위입니다. 측정된 큐비트는 0 또는 1 중 하나만 될 수 있습니다. 하지만 실행 중인 동안 큐비트 상태는 측정값이 0 또는 1일 수 있는 확률을 나타냅니다. 이 확률적 상태를 중첩이라고 합니다. 이 확률을 사용하여 난수를 생성할 수 있습니다.
+[퀀텀 컴퓨팅 이해](xref:microsoft.quantum.overview.understanding) 문서에서 설명한 대로 큐비트는 중첩될 수 있는 퀀텀 정보의 단위입니다. 측정된 큐비트는 0 또는 1 중 하나만 될 수 있습니다. 하지만 실행 중인 동안 큐비트 상태는 측정값이 0 또는 1일 수 있는 확률을 나타냅니다. 이 확률적 상태를 중첩이라고 합니다. 이 확률을 사용하여 난수를 생성할 수 있습니다.
 
 Q# 연산에서는 Q#의 기본 형식인 `Qubit` 데이터 형식을 도입합니다. `Qubit`는 `using` 문으로만 할당할 수 있습니다. 할당되는 경우 큐비트는 항상 `Zero` 상태입니다. 
 
@@ -61,7 +61,7 @@ Bloch 구의 북극은 클래식 **0** 값을 나타내고, 남극은 클래식 
 
 ## <a name="creating-a-complete-random-number-generator"></a>완전한 난수 생성기 만들기
 
-이제 임의 비트를 생성하는 Q# 연산 기능이 있으므로 이를 사용하여 완전한 양자 난수 생성기를 빌드할 수 있습니다. Q# 명령줄 애플리케이션을 사용하거나 호스트 프로그램을 사용할 수 있습니다.
+이제 임의 비트를 생성하는 Q# 연산 기능이 있으므로 이를 사용하여 완전한 퀀텀 난수 생성기를 빌드할 수 있습니다. Q# 명령줄 애플리케이션을 사용하거나 호스트 프로그램을 사용할 수 있습니다.
 
 
 
