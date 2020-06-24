@@ -9,6 +9,13 @@ ms.topic: article
 no-loc:
 - $
 - $
+- $
+- $
+- $
+- $
+- $$
+- $$
+- $$
 - '\cdots'
 - bmatrix
 - '\ddots'
@@ -77,12 +84,15 @@ no-loc:
 - '\geq'
 - ~~
 - "~"
-ms.openlocfilehash: 8d3c646715f13c454e51b9295cbfdabf6a236ffc
-ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
+- "\begin{bmatrix}"
+- "\end{bmatrix}"
+- '\_'
+ms.openlocfilehash: 71923247121eae6a1d4e26d2664d8e547370ba3a
+ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84630143"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85269459"
 ---
 # <a name="advanced-matrix-concepts"></a>고급 행렬 개념 #
 
@@ -104,7 +114,7 @@ $$
 
 벡터입니다.
 
-$ $ \begin{ bmatrix } 1 \\ \\ 0 \\ \\ 0 \begin{ bmatrix } , \begin{ bmatrix } 0 \\ \\ 1 \\ \\ 0 \end { bmatrix } 및 \begin{ bmatrix } 0 \\ \\ 0 \\ \\ 1 \end {bmatrix}$$
+$ $ \begin{ bmatrix } 1 \\ \\ 0 0 \\ \\ \begin{ bmatrix } , \begin{ bmatrix } 0 \\ \\ 1 \\ \\ 0 \end{bmatrix} 및 \begin{ bmatrix } 0 \\ \\ 0 \\ \\ 1\end{bmatrix}$$
 
 는이 행렬을 고유 값 $d _1 $ , $d _2 $ 및 $d _3로 각각 고유 벡터 $ 합니다. $D _1 $ $d _2 $ 및 $d _3이 $ 고유한 숫자인 경우 이러한 벡터 (및 해당)는 행렬 $D의 유일한 고유 벡터입니다 $ . 일반적으로 대각선 행렬의 경우 고유 값 및 고유 벡터를 쉽게 읽을 수 있습니다. 고유 값는 대각선에 표시 되는 모든 숫자이 고 각 고유 벡터는 $1와 동일한 항목을 포함 하는 단위 벡터이 $ 고 나머지 항목은 $0와 동일 합니다 $ .
 

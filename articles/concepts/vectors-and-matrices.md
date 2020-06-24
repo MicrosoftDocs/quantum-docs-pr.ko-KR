@@ -9,6 +9,10 @@ ms.topic: article
 no-loc:
 - $
 - $
+- $
+- $
+- $
+- $
 - '\cdots'
 - bmatrix
 - '\ddots'
@@ -77,12 +81,15 @@ no-loc:
 - '\geq'
 - ~~
 - "~"
-ms.openlocfilehash: 6c09531cd8bee8f5efb472c95c575daed04d3040
-ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
+- "\begin{bmatrix}"
+- "\end{bmatrix}"
+- '\_'
+ms.openlocfilehash: f9d4e14742b7d06a6e90af0902b31fbdf17aedab
+ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84630199"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85269544"
 ---
 # <a name="vectors-and-matrices"></a>벡터 및 행렬
 
@@ -189,9 +196,9 @@ $$M = M ^ [*\dagger*](https://en.wikipedia.org/wiki/Hermitian_matrix) 인 경우
 $ $ \begin{bmatrix}
         a \\ \\ b \end{ bmatrix } \end{\end{ bmatrix } c \\ \\ d \\ \\ e \end{ bmatrix } = \end{bmatrix}
         a \begin{ bmatrix } c \\ \\ d \\ \\ e \begin{bmatrix}
-        \\\\[1.5 em] b\begin{ bmatrix } c \\ \\ d \\ \\ e \end {bmatrix}
+        \\\\[1.5 em] b \begin{ bmatrix } c \\ \\ d \\ \\ e\end{bmatrix}
     종단bmatrix}
-    = \begin{ bmatrix } a c a \\ \\ d \\ \\ a e \\ \\ b c \\ \\ b d \\ \\ \endbmatrix}
+    = \begin{ bmatrix } a c a \\ \\ d \\ \\ a e \\ \\ b c \\ \\ b d \\ \\\end{bmatrix}
 $$
 
 및
@@ -201,21 +208,21 @@ $ $ \begin{bmatrix}
     \otimes \otimesbmatrix}
         e \ f \\ \\ g \ h \end{bmatrix}
      = \begin{bmatrix}
-    a \begin {bmatrix}
+    은\begin{bmatrix}
     e \ f \\\\ g \ h \end{bmatrix}
-    b \begin {bmatrix}
+    b\begin{bmatrix}
     e \ f \\\\ g \ h \end{bmatrix}
-    \\\\[1em] c \begin {bmatrix}
+    \\\\[1em] c\begin{bmatrix}
     e \ f \\\\ g \ h \end{bmatrix}
-    d \begin {bmatrix}
+    2\begin{bmatrix}
     e \ f \\\\ g \ h \end{bmatrix}
     종단bmatrix}
     = \begin{bmatrix}
     ae \ n a m e \ n a m e \ i n \ \\ \\ bg \ bh \\ \\ w\ f\ de \ df \\ \\ cg \ ch \ bmatrix }
 $$
 
-텐서 제품에 대 한 최종 유용한 표기법 밑수 규칙은 모든 벡터 $v $ 또는 행렬 $v $M에 대해 $ ^ {\otimes n } $ 또는 $M ^ {\otimes n } $은 $n $ 접기 반복 텐서 제품에 대 한 짧은 손입니다.  예를 들면 다음과 같습니다.
+텐서 제품에 대 한 최종 유용한 표기법 밑수 규칙은 모든 벡터 $v $ 또는 행렬 $v $M에 대해 $ ^ {\otimes n } $ 또는 $M ^ {\otimes n } $은 $n $ 접기 반복 텐서 제품에 대 한 짧은 손입니다.  예를 들어:
 
 \begin{align}
-& \begin{ bmatrix } 1 \\ \\ 0 \begin{ bmatrix } ^ {\begin{1 } = \begin{1 0 \begin{, bmatrix } \\ \\ bmatrix } \qquad \begin {1 bmatrix } \\ \\ 0 \begin{ bmatrix } ^ {\begin{2 } = \begin{ bmatrix } 1 0 0 0 \\ \\ \\ \\ \\ \\ \begin{ bmatrix } , \qquad \begin { bmatrix } 1 \\ \\ -1-1 \begin{ bmatrix } ^ {\begin{2 } = \begin{ bmatrix } 1 \\ \\ -1 \\ \\ -1 \\ \\ 1 \begin{ bmatrix } \\ \\ & \begin{ bmatrix } 0 & 1 \\ \\ 1 & 0 \begin{ bmatrix } ^ {\begin{1 } = \begin{ bmatrix } 0 & 1 \\ \\ 1 & 0 \begin{ bmatrix } , \qquad \begin { bmatrix } 0 & 1 \\ \\ 1 & 0 \begin{ bmatrix } ^ {\begin{2 } = \begin{ bmatrix } 0 &0&0&1 \\ \\ 0 &0&1&0 0 &1 \\ \\ \\\\ \end bmatrix }&0&0 &0&0&0 {.
+& \begin{ bmatrix } 1 \\ \\ 0 \begin{ bmatrix } ^ {\begin{1 } = \begin{1 0 \begin{, bmatrix } \\ \\ bmatrix } \qquad \begin{bmatrix} 1 \\ \\ 0\end{ bmatrix } ^ {\begin{2 } = \begin{ bmatrix } 1 \\ \\ 0 0 \\ \\ \\ \\ 0 \begin{ bmatrix } , \qquad \begin{bmatrix} 1 \\ \\ -1 \begin{ bmatrix } ^ {\begin{2 } = \begin{ bmatrix } 1 \\ \\ -1 \\ \\ -1 \\ \\ 1 \begin{ bmatrix } , \\ \\ & \begin{ bmatrix } 0 & 1 \\ \\ 1 1 & 0 \begin{ bmatrix } ^ {\begin{1 } = \begin{ bmatrix } 0 & 1 \\ \\ 1 & 0 \begin{ bmatrix } , \qquad \begin{bmatrix} 0 & 1 \\ \\ 1 0&& end{ bmatrix } ^ {\begin{2 } = \begin{ bmatrix } 0 &0&0 &1 0 \\ \\ \\ \\ \\\\ \end{bmatrix}&0&1 &0 0&1&0 &0&0&0 0
 \end{align}

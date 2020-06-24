@@ -9,6 +9,10 @@ ms.topic: article
 no-loc:
 - $
 - $
+- $
+- $
+- $
+- $
 - '\cdots'
 - bmatrix
 - '\ddots'
@@ -77,12 +81,15 @@ no-loc:
 - '\geq'
 - ~~
 - "~"
-ms.openlocfilehash: 115c1703e433f24930e4be61b545048c95da28d1
-ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
+- "\begin{bmatrix}"
+- "\end{bmatrix}"
+- '\_'
+ms.openlocfilehash: 7f10c4ad5eb325da97552d60ff47ea89a699f08d
+ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84630295"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85269476"
 ---
 # <a name="pauli-measurements"></a>Pauli 측정
 
@@ -161,7 +168,7 @@ Q #에서 결과---즉, 상태---와 상호 작용 하 여 추출 된 일반 정
 
 다음에서 볼 수 있듯이 다중 기능 비트 Pauli 연산자의 측정은 유사 하 게 정의 됩니다.
 
-$ $ Z \otimes z = \begin{ bmatrix } 1 &0 &0&0 \\\\ 0 & -1&0&0 \\\\ 0&0-1&0 0&0&0&& \\\\ 1 \end { bmatrix } 입니다.
+$ $ Z \otimes z = \begin{ bmatrix } 1 &0 &0&0 \\\\ 0 & -1&0&0 \\\\ 0&0 & -1&0 \\\\ 0 \end{bmatrix}&0&0&1.
 $$
 
 따라서 두 개의 Pauli $Z 연산자의 텐서 제품은 $ $ + 1 $ 과 $-1 eigenvalues로 구성 된 두 개의 공백으로 구성 된 행렬을 형성 합니다 $ .

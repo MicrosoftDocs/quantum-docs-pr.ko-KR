@@ -9,6 +9,10 @@ ms.topic: article
 no-loc:
 - $
 - $
+- $
+- $
+- $
+- $
 - '\cdots'
 - bmatrix
 - '\ddots'
@@ -77,12 +81,15 @@ no-loc:
 - '\geq'
 - ~~
 - "~"
-ms.openlocfilehash: 224bd5165f508f6cd1fdb85fb5c14ba2e23e59ea
-ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
+- "\begin{bmatrix}"
+- "\end{bmatrix}"
+- '\_'
+ms.openlocfilehash: 1ac235bef473efa82b096cae4159e2c724ba7c0e
+ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84630373"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85269493"
 ---
 # <a name="multiple-qubits"></a>여러 비트
 
@@ -138,7 +145,7 @@ $$
 
 또한 두 번째 비트율의 퀀텀 상태를 한 번만 측정할 수 있습니다. 원하는 비트 중 하나만 측정 하는 경우 전체 상태가 계산 기준 상태로 축소 되지 않고 하나의 하위 시스템 으로만 축소 되므로 측정의 영향은 약간 다릅니다.  즉, 이러한 경우에는 하나의 요소를 측정 하는 경우에만 하위 시스템 중 하나만 축소할 수 있습니다.  
 
-이를 확인 하려면 처음에 "0" 상태로 설정 된 두 개의 Hadamard transform $H 적용 하 여 형성 된 다음 상태의 첫 번째 비트를 측정 합니다 $ . $ $ H ^ {\otimes 2 } \ststy\begin{ bmatrix } 1 \\ \\ 0 \otimes bmatrix } \otimes \otimes bmatrix } 1 \\ \\ 0 \otimes bmatrix } \right) = \frac{1 } {2 } \otimes bmatrix } 1 & 1 & 1 & 1 \\ \\ 1 &-1 & 1 &-1 1 & 1 &-1 & \\ \\ -1 &- \\ \\ 1 &-1 & 1 1 \otimes bmatrix } \otimes bmatrix } 1 \\\\ 0 0 \\\\ \\\\ 0 \end { bmatrix } = \frac{1 } {2 } \otimes bmatrix } 1 1 1 1 \\\\ \\\\ \\\\ \end { bmatrix } \maps\begin{case \text{n\\stccc} } = 0 & \frac{1 } {\sqrt{2 } } \otimes bmatrix } 1 \\\\ 1 \\\\ 0 \\\\ 0 \otimes bmatrix } \\ \\ \text{s} = 1 & \frac{1 } {\sqrt{2 } } \otimes bmatrix } 0 \\\\ 0 \\\\ 1 \\\\ 1 \otimes bmatrix } \\ \\ \end{case } .
+이를 확인 하려면 처음에 "0" 상태로 설정 된 두 개의 Hadamard transform $H 적용 하 여 형성 된 다음 상태의 첫 번째 비트를 측정 합니다 $ . $ $ H ^ {\otimes } 2 \ststy\begin{} bmatrix 1 0 \\ \\ \otimes bmatrix } \otimes \otimes} bmatrix 1 0 \\ \\ \otimes bmatrix } \right) = \frac{1 { } 2 } \otimes} bmatrix 1 & 1 & 1 & 1 1 &-1 & 1 &-1 1 & 1 &-1 &- \\ \\ \\ \\ 1 1 \\ \\ &-1 &-1 & 1 \otimes bmatrix } \otimes} bmatrix 1 0 \\\\ 0 0 \\\\ \\\\ = \end{bmatrix} \frac{1 { } } 2\begin{} bmatrix 1 1 \\\\ 1 1 \\\\ \\\\ \end{bmatrix} \maps\begin{case } \text{\\\frac{1 { } \sqrt{2} } \otimes { bmatrix } 1 \\\\ 1 \\\\ 0 \\\\ 0 \otimes bmatrix } \\ \\ \text{s} = 1 & \frac{1 } {\sqrt{2 } } \otimes bmatrix } 0 \\\\ 0 \\\\ 1 \\\\ 1 \otimes bmatrix } \\ \\ \end{case } .
 $ $ 두 결과의 확률은 모두 50%입니다.  50%의 확률에 대 한 결과는 첫 번째 intuited에 대 한 $0 $1를 사용 하 여 초기 퀀텀 상태 벡터가 고정 임을 감안 했을 수 있습니다 $ $ .
 
 첫 번째 또는 두 번째 비트를 측정 하는 수학적 규칙은 간단 합니다.  $E $ 하 _k $k ^ {\rm 번째 $ 계산 기준 벡터를 사용 하는 경우 $e의 } $ $ 해당 값에 $1 값을 사용 하도록 모든 _k $k 집합 $S 수 있습니다 $ $ .  예를 들어 첫 번째 비트를 측정 하는 데 관심이 있는 경우 $S $ $e _1 \equiv 10 $ 및 $e _3 11로 구성 \equiv 됩니다 $ .  마찬가지로 두 번째 $S에 관심이 있는 경우 $ $e _2 \equiv 01 $ 및 $e _3 \equiv 11로 구성 됩니다 $ .  그런 다음 선택한 비트를 $1로 측정할 확률은 $ 상태 vector $ \psi입니다.$
@@ -167,12 +174,12 @@ $$
 이는 결과 $10를 측정 하는 데 예상 되는 두 확률의 합계 이며 $ $11이 $ 모두 측정 될 모든 비트입니다.
 이 예에서는 다음으로 평가 됩니다.
 
-$ $ \frac{1 } {4 } \left | \begin{ bmatrix } 0&0&1&0 \end { bmatrix } \begin{ bmatrix } 1 \\\\ 1 1 1 \\\\ \\\\ \end { bmatrix } \left | ^ 2 + \frac{1 } {4 } \left | \begin{ bmatrix } 0&0&0&1 \end { bmatrix } \begin{ bmatrix } 1 1 1 1 \\\\ \\\\ \\\\ \end { bmatrix } \left | ^ 2 = \frac{1 } {2 } .
+$ $ \frac{1 } {4 } \left | \begin{ bmatrix } 0&0&1&0 \end{bmatrix} \begin{ bmatrix } 1 \\\\ 1 1 1 \\\\ \\\\ \end{bmatrix} \left | ^ 2 + \frac{1 } {4 } \left | \begin{ bmatrix } 0&0&0&1 \end{bmatrix} \begin{ bmatrix } 1 1 1 1 \\\\ \\\\ \\\\ \end{bmatrix} \left | ^ 2 = \frac{1 } {2 } .
 $$
 
 intuition가 확률을 나타내는 것과 정확히 일치 하는 것입니다.  마찬가지로 상태를로 작성할 수 있습니다.
 
-$ $ \frac { \frac{e_1 } {2 } + \frac{e_3 {2} } } {\sqrt { \frac{1 } {2 } }} = \frac{1 } {\sqrt{2 } } \frac bmatrix } 0 \\\\ 0 \\\\ 1 \\\\ 1 \end {bmatrix}
+$ $ \frac { \frac{e_1 } {2 } + \frac{e_3 {2} } } {\sqrt { \frac{1 } {2 } }} = \frac{1 } {\sqrt{2 } } \frac bmatrix } 0 \\\\ 0 \\\\ 1 \\\\ 1\end{bmatrix}
 $$
 
 intuition에 따라 다시 합니다.

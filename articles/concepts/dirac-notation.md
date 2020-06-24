@@ -9,6 +9,10 @@ ms.topic: article
 no-loc:
 - $
 - $
+- $
+- $
+- $
+- $
 - '\cdots'
 - bmatrix
 - '\ddots'
@@ -77,12 +81,15 @@ no-loc:
 - '\geq'
 - ~~
 - "~"
-ms.openlocfilehash: 958910452109fc722999acddd70894c458e38357
-ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
+- "\begin{bmatrix}"
+- "\end{bmatrix}"
+- '\_'
+ms.openlocfilehash: f9dddfa25e9fd1e3d8aaf92b2e3b17c96ed8b72a
+ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84630394"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85269509"
 ---
 # <a name="dirac-notation"></a>기타 ac 표기법
 
@@ -123,7 +130,7 @@ $$
 
 나머지 Ac 표기법의 예로, } $0과 $1 사이의 내부 제품인 braket $ \braket{0 | 1 $을 고려 $ $ 하세요.  다음으로 작성 될 수 있습니다. 
 
-$ $ \braket{0 | 1 } = \begin{ bmatrix } 1 & 0 \begin{ bmatrix } \begin{ bmatrix } 0 \\\\ 1 \end { bmatrix } = 0. $ $
+$ $ \braket{0 | 1 } = \begin{ bmatrix } 1 & 0 \begin{ bmatrix } \begin{ bmatrix } 0 \\\\ 1 \end{bmatrix} = 0. $ $
 
 $ \Ket{0 } $ 및 $ \ket{1 } $는 직교 벡터입니다. 즉, $ \braket{0 | 1 } = \braket{1 | 0 } = 0입니다 $ .  또한 정의 $ \braket{0 | 0 } = \braket{1 | 1 } = 1입니다 $ .이는 두 계산 기준 벡터를 *orthonormal*호출할 수도 있음을 의미 합니다.
 이러한 orthonormal 속성은 다음 예제에서 유용 합니다. $ \Ket { \psi } = {\frac{3 } {5 } } \ket{1 } + {\frac{4 } {5 } } \ket{0 $가 있는 경우 } $ \braket{1 | 0 } = 0 이므로 $ 측정 $1의 확률은 $ 입니다.  
@@ -173,7 +180,7 @@ $ $ | \braket { -| \psi } | ^ 2 = \psi | \frac{1 } {\sqrt{2 } } (\bra{0 } -\bra{
 ## <a name="ketbra-or-outer-product"></a>ketbra 또는 외부 제품
 마지막 항목은 *ketbra* 또는 외부 제품입니다.  외부 제품은 Uac 표기법 내에서 $ \ket { \psi } \bra { \\an$로 표시 되 } 고 bras 및 kets가 brakets와 반대 순서로 발생 하기 때문에 ketbras 라고도 합니다.  외부 제품은 행렬 곱셈을 $ \ket { \psi } \bra { } \a= \psi \aa^ \aa> $ 퀀텀 상태 벡터 $ \psi $ 및 $ \bl에 대해 정의 $ 합니다.  이 표기법의 가장 일반적인 예는 다음과 같습니다.
 
-$ $ \ket{0 } \bra{0 } = \begin{ bmatrix } 1 \\\\ 0 \begin{ bmatrix } \begin{ bmatrix } 1&0 \begin{ bmatrix } = \begin{} bmatrix 1 &0 \\\\ 0 &0 \end { bmatrix } \qquad \ket{1 } \bra{1 } = \begin{} 0 bmatrix \\\\ 1 \begin{ bmatrix } \begin{ bmatrix } 0&1 \begin{ bmatrix } = \begin{} 0 bmatrix &0 \\\\ 0 &1 \end { bmatrix } .
+$ $ \ket{0 } \bra{0 } = \begin{ bmatrix } 1 \\\\ 0 \begin{ bmatrix } \begin{ bmatrix } 1&0 \begin{ bmatrix } = \begin{} bmatrix 1 &0 \\\\ 0 &0 \end{bmatrix} \qquad \ket{1 } \bra{1 } = \begin{} bmatrix 0 \\\\ 1 \begin{ bmatrix } \begin{} bmatrix 0&1 \begin{ bmatrix } = \begin{} 0 bmatrix &0 \\\\ 0 &1 \end{bmatrix} .
 $$
 
 Ketbras는 고정 값에 퀀텀 상태를 프로젝션 하기 때문에 종종 프로젝터 라고 합니다.  이러한 작업은 단일가 아니지만 벡터의 표준을 유지 하지 않으므로 퀀텀 컴퓨터에서 프로젝터를 명확 하 게 적용할 수 없다는 것이 놀라운 것은 아닙니다.  그러나 프로젝터가 퀀텀 상태에 대해 측정 하는 작업을 설명 하는 작업을 수행 합니다.  예를 들어 $ \ket { \psi $ 상태를 } $0로 측정 하는 경우 $ 결과 변환은 측정 결과로 발생 하는 상태가 됩니다.
