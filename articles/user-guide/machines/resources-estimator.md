@@ -6,12 +6,12 @@ ms.author: anpaz@microsoft.com
 ms.date: 1/22/2019
 ms.topic: article
 uid: microsoft.quantum.machines.resources-estimator
-ms.openlocfilehash: b0c800c3946d2e4ba4457127fb9495dc9dcf2934
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: cbb1c274b64738cc4b47869563d7d02eb717afbc
+ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275545"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415263"
 ---
 # <a name="the-resources-estimator-target-machine"></a>평가기 대상 컴퓨터의 리소스
 
@@ -98,8 +98,8 @@ namespace Quantum.MyProgram
 * __Measure__: 실행 된 측정값의 수입니다.
 * __R__: T, Clifford 및 Pauli 게이트를 제외 하 고 실행 된 단일 비트 회전의 수입니다.
 * __T__: t 게이트, T_x = .h 및 T_y = Hy)를 포함 한 t 게이트 및 해당 변화 시키고의 수를 실행 합니다.
-* __Depth__: Q # 작업에 의해 실행 되는 퀀텀 회로의 깊이입니다. 기본적으로 T 게이트만 깊이에서 계산 됩니다. 자세한 내용은 [깊이 카운터](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter) 를 참조 하세요.
-* __Width__: Q # 작업을 실행 하는 동안 할당 된 최고 비트 수입니다.
+* __Depth__: Q # 작업에서 실행 되는 퀀텀 회로 깊이의 하 한입니다. 기본적으로 T 게이트만 깊이에서 계산 됩니다. 자세한 내용은 [깊이 카운터](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter) 를 참조 하세요.
+* __Width__: Q # 작업을 실행 하는 동안 할당 된 최대 수의 값에 대 한 하 한입니다. __깊이__ 와 __너비__ 의 하한값을 동시에 실현 하지 못할 수도 있습니다.
 * __BorrowedWidth__: Q # 작업 내에서 빌려 온 최대 수 비트 수입니다.
 
 
@@ -130,7 +130,7 @@ operation Teleport(source : Qubit, target : Qubit) : Unit {
 에서 해당 `ResourcesEstimator` `AssertProb` 측정을 기록 하 `PauliZ` `source` 고 `q` 확률 0.5를 사용 하 여 결과를 제공 해야 `Zero` 하는 경우 나중에 실행 하는 경우 `M` 결과 확률의 기록 된 값을 찾고 `M` 확률 0.5을 반환 `Zero` 합니다 `One` .
 
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>추가 정보
 
 는 `ResourcesEstimator` 퀀텀 컴퓨터 [추적 시뮬레이터](xref:microsoft.quantum.machines.qc-trace-simulator.intro)를 기반으로 구축 되었으며,이를 통해 다양 한 메트릭 집합, 전체 호출 그래프에서 메트릭을 보고 하는 기능, 질문 # 프로그램에서 버그를 찾는 데 도움이 되는 [고유한 입력 검사기](xref:microsoft.quantum.machines.qc-trace-simulator.distinct-inputs) 와 같은 기능을 제공 합니다. 자세한 내용은 [추적 시뮬레이터](xref:microsoft.quantum.machines.qc-trace-simulator.intro) 설명서를 참조 하세요.
 

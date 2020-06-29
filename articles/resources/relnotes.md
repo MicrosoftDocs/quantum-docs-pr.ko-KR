@@ -6,12 +6,12 @@ ms.author: bradben
 ms.date: 5/30/2020
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: e48f4157438fba063877b2b79fbc7629710fc9f3
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 0fcdec1a304730b593224283421539ea3ca9c913
+ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275385"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415458"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit 릴리스 정보
 
@@ -344,8 +344,6 @@ Quantum Development Kit 버전 0.5의 기존 Q# 프로젝트가 있는 경우, �
 
 이 릴리스는 일부 사용자가 Visual Studio 확장을 로드할 수 없게 만드는 버그를 수정합니다.
 
-Quantum Development Kit의 0.2 버전에서 업그레이드하는 경우, [Q# 언어 변경 내용 및 Q# 프로그램 마이그레이션](xref:microsoft.quantum.relnotes.migration-0-3)에 대해 자세히 알아보세요.
-
 ## <a name="version-031811203"></a>버전 0.3.1811.203
 
 *릴리스 날짜: 2018년 11월 2일*
@@ -356,8 +354,6 @@ Quantum Development Kit의 0.2 버전에서 업그레이드하는 경우, [Q# �
 * 2\.1.403 이전의 .NET Core 버전을 사용하여 프로젝트를 빌드할 때 표시되는 컴파일 경고를 제거했습니다.
 * 설명서를 정리했습니다. 특히 VS Code 또는 Visual Studio에서 마우스로 가리킬 때 표시되는 도구 설명을 정리했습니다.
 
-Quantum Development Kit의 0.2 버전에서 업그레이드하는 경우, [Q# 언어 변경 내용 및 Q# 프로그램 마이그레이션](xref:microsoft.quantum.relnotes.migration-0-3)에 대해 자세히 알아보세요.
-
 ## <a name="version-0318102508"></a>버전 0.3.1810.2508
 
 *릴리스 날짜: 2018년 10월 29일*
@@ -367,8 +363,6 @@ Quantum Development Kit의 0.2 버전에서 업그레이드하는 경우, [Q# �
 * 이 릴리스에는 Q#용 언어 서버뿐만 아니라 Visual Studio 및 Visual Studio Code용 클라이언트 통합도 포함되어 있습니다. 이렇게 하면 입력 시 오류 및 경고에 구불구불한 밑줄이 쳐지는 형태로 실시간 피드백을 포함하는 새 IntelliSense 기능 집합을 사용할 수 있습니다. 
 * 이 업데이트는 진단 메시지를 전반적으로 크게 개선합니다. 탐색이 쉬워지고 진단 범위가 정확해지며 가리켜서 표시된 정보에서 추가 정보를 쉽게 확인할 수 있습니다.
 * Q# 언어는 개발자가 언어 기능에 대한 일반적인 작업과 새로운 향상 작업을 통합하여 강력한 퀀텀 계산을 수행할 수 있게 하는 방식으로 확장되었습니다.  이 릴리스를 통해 Q# 언어에 몇 가지 주요 변경 사항이 적용되었습니다.   
-
-[Q# 언어 변경 내용 및 Q# 프로그램 마이그레이션](xref:microsoft.quantum.relnotes.migration-0-3)에 대해 자세히 알아보세요.
 
 이 릴리스에는 새 퀀텀 화학 라이브러리도 포함됩니다.
 
