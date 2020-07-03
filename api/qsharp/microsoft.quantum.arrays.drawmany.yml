@@ -1,0 +1,58 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.drawmany
+name: DrawMany
+type: operation
+namespace: Microsoft.Quantum.Arrays
+summary: 지정 된 수의 샘플에 대해 작업을 반복 하 여 배열에서 해당 출력을 수집 합니다.
+examples: >-
+  다음은 한 번에 단일 비트를 샘플링 하는 연산이 주어진 경우 정수를 샘플링 합니다.
+
+
+  ```Q#
+
+  let randomInteger = BoolArrayAsInt(DrawMany(SampleRandomBit, 16, ()));
+
+  ```
+syntax: "operation DrawMany (op : ('TInput => 'TOutput), nSamples : Int, input : 'TInput) : 'TOutput[]"
+input:
+  content: "(op : ('TInput => 'TOutput), nSamples : Int, input : 'TInput)"
+  types:
+  - name: op
+    summary: 반복적으로 호출 되는 작업입니다.
+    isOperation: true
+    input:
+      types:
+      - uid: "'TInput"
+        isLocal: true
+    output:
+      types:
+      - uid: "'TOutput"
+        isLocal: true
+  - name: nSamples
+    summary: '`op`을 (를) 수집 하기 위해 호출 하는 샘플의 수입니다.'
+    isPrimitive: true
+    uid: Int
+  - name: input
+    summary: 에 전달 되는 입력 `op` 입니다.
+    uid: "'TInput"
+    isLocal: true
+output:
+  content: "'TOutput[]"
+  types:
+  - isArray: true
+    uid: "'TOutput"
+    isLocal: true
+typeParameters:
+- uid: TInput
+  summary: 에 필요한 입력 형식 `op` 입니다.
+- uid: TOutput
+  summary: 에서 반환 하는 출력 형식입니다 `op` .
+seeAlso:
+- microsoft.quantum.canon.repeat
+metadata:
+  ms.openlocfilehash: 8ed96fbb8b543cf8f9f167304e45e5f4fd82ad44
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.translationtype: MT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85886772"

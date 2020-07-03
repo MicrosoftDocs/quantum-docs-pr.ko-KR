@@ -39,6 +39,10 @@ operations:
   summary: 지정 된 비트를 모두 $ \ket $ state로 지정 하는 어설션입니다 {0} .
 - uid: microsoft.quantum.diagnostics.assertallzerowithintolerance
   summary: 지정 된 것과 같은 Assert는 {0} 지정 된 허용 오차까지 모두 $ \ket $ 상태에 있습니다.
+- uid: microsoft.quantum.diagnostics.assertmeasurement
+  summary: 지정 된의 지정 된 비트를 측정 하는 어설션은 항상 지정 된 결과를 가집니다.
+- uid: microsoft.quantum.diagnostics.assertmeasurementprobability
+  summary: 지정 된 Pauli의 지정 된 비트를 측정 하는 어설션은 특정 허용 범위 내에서 지정 된 확률을 포함 하는 지정 된 결과를 갖게 됩니다.
 - uid: microsoft.quantum.diagnostics.assertoperationsequalinplace
   summary: >-
     두 작업이 지정 된 경우는 모든 입력 상태에 대해 동일 하 게 작동 한다는 것을 어설션 합니다.
@@ -81,12 +85,12 @@ newtypes:
 - uid: microsoft.quantum.diagnostics.enabletestingvianame
   summary: 컴파일러에서 인식할 수 있는 특성으로, 형식을 로드 하거나 테스트 목적으로 호출할 때 사용할 수 있는 대체 이름을 정의할 수 있습니다.
 - uid: microsoft.quantum.diagnostics.test
-  summary: 단위 테스트를 표시 하는 데 사용 되는 컴파일러에서 인식할 수 있는 특성입니다.
+  summary: 단위 테스트를 표시 하는 데 사용 되는 컴파일러 인식 특성입니다.
 summary: " # <a name=\"summary\"></a>요약\n 이 네임 스페이스는 어설션 작업 및 클레임 함수를 비롯 하 여 진단 목적에 유용한 함수 및 작업을 포함 합니다."
 metadata:
-  ms.openlocfilehash: 2c619ac283653d87f2917d7c780ed9fe6ccfa965
-  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+  ms.openlocfilehash: c8e1cd7f3458e736a47749dd057174eb4961c31d
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 06/03/2020
-  ms.locfileid: "84326594"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85884577"

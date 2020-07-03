@@ -1,0 +1,47 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.synthesis.applyxcontrolledontruthtablewithcleantarget
+name: ApplyXControlledOnTruthTableWithCleanTarget
+type: operation
+namespace: Microsoft.Quantum.Synthesis
+summary: >-
+  @"microsoft.quantum.intrinsic.x" `target` `func` 의 기존 할당에 대해 부울 함수가 true로 평가 되는 경우에 작업을 적용 합니다 `controlRegister` .
+
+
+  이 작업은 @"microsoft.quantum.synthesis.applyxcontrolledontruthtable" 대상의가 $ \ket $ 상태에 있는 것으로 알려진 특수 한 사례를 구현 {0} 합니다.
+
+
+  구현에서는 @"microsoft.quantum.intrinsic.cnot" 및 게이트를 사용 @"microsoft.quantum.intrinsic.r1" 합니다.  Adjoint 작업의 구현은 최적화 되며 측정 기반 비 계산을 사용 합니다.
+syntax: 'operation ApplyXControlledOnTruthTableWithCleanTarget (func : BigInt, controlRegister : Qubit[], target : Qubit) : Unit'
+input:
+  content: '(func : BigInt, controlRegister : Qubit[], target : Qubit)'
+  types:
+  - name: func
+    summary: 큰 정수로 표시 되는 부울 참 테이블
+    isPrimitive: true
+    uid: BigInt
+  - name: controlRegister
+    summary: 컨트롤의 등록
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+  - name: target
+    summary: 대상 비트 ($ \ket $ 상태 여야 함 {0} )
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- microsoft.quantum.synthesis.applyxcontrolledontruthtable
+metadata:
+  ms.openlocfilehash: c779acd9dfcebd3b9a71ba53c66d9e07c19f792b
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.translationtype: MT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85886562"

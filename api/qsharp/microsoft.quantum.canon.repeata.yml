@@ -1,0 +1,64 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.repeata
+name: RepeatA
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: 지정 된 횟수 만큼 작업을 반복 합니다.
+examples: >-
+  다음은 동일 합니다.
+
+
+  ```Q#
+
+  RepeatA(U, 17, target);
+
+  (BoundA(ConstantArray(17, U)))(target);
+
+  ```
+syntax: "operation RepeatA (op : ('TInput => Unit is Adj), nTimes : Int, input : 'TInput) : Unit"
+input:
+  content: "(op : ('TInput => Unit is Adj), nTimes : Int, input : 'TInput)"
+  types:
+  - name: op
+    summary: 반복적으로 호출 되는 작업입니다.
+    isOperation: true
+    input:
+      types:
+      - uid: "'TInput"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+  - name: nTimes
+    summary: 호출 하는 횟수 `op` 입니다.
+    isPrimitive: true
+    uid: Int
+  - name: input
+    summary: 에 전달 되는 입력 `op` 입니다.
+    uid: "'TInput"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: TInput
+  summary: 에 필요한 입력 형식 `op` 입니다.
+functors:
+- Adjoint
+seeAlso:
+- microsoft.quantum.arrays.drawmany
+- microsoft.quantum.canon.repeat
+- microsoft.quantum.canon.repeatc
+- microsoft.quantum.canon.repeatca
+metadata:
+  ms.openlocfilehash: 59f3dc721801ddbb0de966948ddaacc59529b833
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.translationtype: MT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85887050"

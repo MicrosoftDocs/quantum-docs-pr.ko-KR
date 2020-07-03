@@ -5,7 +5,7 @@ type: newtype
 namespace: Microsoft.Quantum.ErrorCorrection
 summary: 오류 수정 코드 블록의 증후군을 측정 하는 데 사용 되는 작업을 나타냅니다.
 remarks: >-
-  시그니처 `(LogicalRegister => Syndrome)` 는 `LogicalRegister` 및 일부 보조 비트에 대해 공동으로 작동 하는 작업을 나타내며 이러한 측정의을 `Syndrome` `Result[]` 나타내는 값을 추출 하기 위해 보조 비트의 측정을 따릅니다.
+  시그니처는 `(LogicalRegister => Syndrome)` 의 이상 값에 대해 공동으로 작동 하는 작업을 나타내며 일부 보조의 경우에는 보조 비트를 측정 하 여 `LogicalRegister` `Syndrome` 이러한 측정의을 나타내는 값을 추출 합니다 `Result[]` .
 
 
   ### <a name="examples"></a>예
@@ -24,9 +24,9 @@ seeAlso:
 - logicalregister
 - syndrome
 metadata:
-  ms.openlocfilehash: aa324e8e149ba9418082145ed982236c473c1a4d
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: e4c011bcbe4200fe894962e0432f4c5c358d0295
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82684822"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85885756"

@@ -1,0 +1,24 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.synthesis
+name: Microsoft.Quantum.Synthesis
+summary: " # <a name=\"summary\"></a>요약\n 이 네임 스페이스는 순열 및 부울 함수를 기반으로 하는 synthesizing 퀀텀 작업에 대 한 함수 및 작업을 포함 합니다."
+operations:
+- uid: microsoft.quantum.synthesis.applypermutationusingdecomposition
+  summary: 분해 기반 합성을 사용 하 여 순열 Permutes 퀀텀 상태에서 amplitudes를 지정 합니다.
+- uid: microsoft.quantum.synthesis.applypermutationusingdecompositionwithvariableorder
+  summary: 분해 기반 합성을 사용 하 여 순열 Permutes 퀀텀 상태에서 amplitudes를 지정 합니다.
+- uid: microsoft.quantum.synthesis.applypermutationusingtransformation
+  summary: 변형 기반 합성을 사용 하 여 순열 Permutes 퀀텀 상태에서 amplitudes를 지정 합니다.
+- uid: microsoft.quantum.synthesis.applytransposition
+  summary: ''
+- uid: microsoft.quantum.synthesis.applyxcontrolledontruthtable
+  summary: '@"microsoft.quantum.intrinsic.x" `target` `func` 의 기존 할당에 대해 부울 함수가 true로 평가 되는 경우에 작업을 적용 합니다 `controlRegister` .'
+- uid: microsoft.quantum.synthesis.applyxcontrolledontruthtablewithcleantarget
+  summary: '@"microsoft.quantum.intrinsic.x" `target` `func` 의 기존 할당에 대해 부울 함수가 true로 평가 되는 경우에 작업을 적용 합니다 `controlRegister` .'
+metadata:
+  ms.openlocfilehash: d12a16656826134cfe8c9fb44a1c577c267a6603
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.translationtype: MT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85886782"

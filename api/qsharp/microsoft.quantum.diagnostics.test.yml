@@ -3,12 +3,12 @@ uid: microsoft.quantum.diagnostics.test
 name: Test
 type: newtype
 namespace: Microsoft.Quantum.Diagnostics
-summary: 단위 테스트를 표시 하는 데 사용 되는 컴파일러에서 인식할 수 있는 특성입니다.
+summary: 단위 테스트를 표시 하는 데 사용 되는 컴파일러 인식 특성입니다.
 syntax: newtype Test = String;
 metadata:
-  ms.openlocfilehash: 3fc7b25d8d01ee2687ca6af33ca02c059f01d69f
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: c859042b4c27b6b11c6aab51232939bd45a9db91
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682424"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85884532"

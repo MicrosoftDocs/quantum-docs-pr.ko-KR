@@ -198,6 +198,10 @@ operations:
   summary: 내부에서의 레지스터 패리티를 계산 합니다.
 - uid: microsoft.quantum.canon.applycnotchainwithtarget
   summary: 대상 비트의 배열에 대 한 패리티를 계산 합니다.
+- uid: microsoft.quantum.canon.applycontrolledonbitstring
+  summary: 지정 된 비트 마스크로 지정 된 상태에 의해 제어 되는 단일 작업을 대상 레지스터에 적용 합니다.
+- uid: microsoft.quantum.canon.applycontrolledonint
+  summary: 컨트롤 레지스터 상태가 지정 된 양의 정수에 해당 하는 경우 대상 레지스터에 단일 작업을 적용 합니다.
 - uid: microsoft.quantum.canon.applydiagonalunitary
   summary: 일련의 복잡 한 단계 배열을 다양 한 양의 레지스터의 숫자 기반 상태에 적용 합니다.
 - uid: microsoft.quantum.canon.applyfermionicswap
@@ -565,6 +569,14 @@ operations:
 
 
     $R = \boldone-(1-e ^ {i \phi}) \ket{1\cdots 1} \bra{1\cdots 1} $.
+- uid: microsoft.quantum.canon.repeat
+  summary: 지정 된 횟수 만큼 작업을 반복 합니다.
+- uid: microsoft.quantum.canon.repeata
+  summary: 지정 된 횟수 만큼 작업을 반복 합니다.
+- uid: microsoft.quantum.canon.repeatc
+  summary: 지정 된 횟수 만큼 작업을 반복 합니다.
+- uid: microsoft.quantum.canon.repeatca
+  summary: 지정 된 횟수 만큼 작업을 반복 합니다.
 - uid: microsoft.quantum.canon.swapreverseregister
   summary: 에서는 교환 게이트를 사용 하 여 레지스터에서의 비트 순서를 반대로 바꿉니다.
 newtypes:
@@ -573,9 +585,9 @@ newtypes:
 - uid: microsoft.quantum.canon.resultstack
   summary: "\n> [!WARNING]\n> 사용되지 않음\n\nResultStack은 더 이상 사용 되지 않습니다."
 metadata:
-  ms.openlocfilehash: 97975236f3824d63c0cc75e5be847c5eef47485b
-  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+  ms.openlocfilehash: ab6e8a58dd163e4a9b2ea299e544a4e487d61e23
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 06/03/2020
-  ms.locfileid: "84326679"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85884676"

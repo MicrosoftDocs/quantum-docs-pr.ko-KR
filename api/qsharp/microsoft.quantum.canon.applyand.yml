@@ -7,17 +7,17 @@ summary: >-
   Adjoint 작업을 수행 하는 측정을 사용 하 여 두 컨트롤의가 모두 1 상태인 경우에만 지정 된 대상 값을 반전 합니다.
 
 
-  두 `target` 컨트롤이 모두 1 인 경우에만를 반전 하지만는 `target` 상태 0 이라고 가정 합니다.  작업은 T-카운트 4, T-깊이 2를 포함 하 고 도우미가 필요 하지 않습니다. 따라서가 0으로 알려진 경우 `target` 에는 ccnot 연산에 더 적합할 수 있습니다.  이 작업의 adjoint는 측정을 기반으로 하며 T 게이트가 필요 하지 않습니다.
+  `target`두 컨트롤이 모두 1 인 경우에만를 반전 하지만는 `target` 상태 0 이라고 가정 합니다.  작업은 T-카운트 4, T-깊이 2를 포함 하 고 도우미가 필요 하지 않습니다 `target` . 따라서가 0으로 알려진 경우에는 CCNOT 연산에 더 적합할 수 있습니다.  이 작업의 adjoint는 측정을 기반으로 하며 T 게이트가 필요 하지 않습니다.
 
 
-  이 작업을 제어 하는 응용 프로그램에 `2^c` `Rz` 는 도우미를 사용 하지 않아도 되며 깊이에 최적화 되지 않습니다 `c` . 여기서은 `ApplyAnd` 작업의 두 컨트롤을 포함 하는 전체 컨트롤의 수입니다.  Adjoint 제어 응용 프로그램에 `2^c - 1` `Rz` 는 게이트가 필요 하며,이는 비 adjoint 작업 크기의 각도가 두 배가 되 고, 도우미가 필요 하지 않으며, 깊이를 위해 최적화 되지 않습니다.
+  이 작업을 제어 하는 응용 프로그램에는 도우미를 사용 하지 않아도 `2^c` `Rz` 되며 깊이에 최적화 되지 않습니다 `c` . 여기서은 작업의 두 컨트롤을 포함 하는 전체 컨트롤의 수입니다 `ApplyAnd` .  Adjoint 제어 응용 프로그램에는 `2^c - 1` `Rz` 게이트가 필요 하며,이는 비 adjoint 작업 크기의 각도가 두 배가 되 고, 도우미가 필요 하지 않으며, 깊이를 위해 최적화 되지 않습니다.
 syntax: 'operation ApplyAnd (control1 : Qubit, control2 : Qubit, target : Qubit) : Unit'
 references: >-
   - Cody Jones: "내결함성 Toffoli 게이트 Novel 생성", Phys 87, 022328, 2013 [Arxiv: 1212.5069](https://arxiv.org/abs/1212.5069) doi: 10.1103/PhysRevA. 87.022328
 
   - Craig Gidney: "나누어 the 퀀텀 추가 비용", 퀀텀 2, 페이지 74, 2018 [Arxiv: 1709.06648](https://arxiv.org/abs/1709.06648) doi: 10.1103/PhysRevA. 85.044302
 
-  - Mathias Soeken: "퀀텀 Oracle 회로 및 크리스마스 트리 패턴", [의 블로그 문서, 2019](https://msoeken.github.io/blog_qac.html) (참고: 여러 제어 되는 생성에 대해 설명)
+  - Mathias Soeken: "퀀텀 Oracle 회로 및 크리스마스 트리 패턴", [2019 년 12 월 19 일의 블로그 문서](https://msoeken.github.io/blog_qac.html) (참고: 여러 제어 된 생성에 대해 설명)
 input:
   content: '(control1 : Qubit, control2 : Qubit, target : Qubit)'
   types:
@@ -30,7 +30,7 @@ input:
     isPrimitive: true
     uid: Qubit
   - name: target
-    summary: 대상 보조 비트; 상태 0 이어야 합니다.
+    summary: 대상 보조 비트 상태 0 이어야 합니다.
     isPrimitive: true
     uid: Qubit
 output:
@@ -42,9 +42,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 973f7f618154720396be0bb4a01b52d763ccdd1c
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 2f040fd932236547baecaba241d44a8b9842bbe2
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680536"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85884582"

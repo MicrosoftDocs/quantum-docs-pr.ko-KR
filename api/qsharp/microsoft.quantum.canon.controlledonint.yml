@@ -4,6 +4,7 @@ name: ControlledOnInt
 type: function
 namespace: Microsoft.Quantum.Canon
 summary: 컨트롤 레지스터 상태가 지정 된 양의 정수에 해당 하는 경우 대상 레지스터에 oracle을 적용 하는 단일 연산자를 반환 합니다.
+remarks: 의 값은 `numberState` 작은 endian 인코딩을 사용 하 여 해석 됩니다.
 syntax: "function ControlledOnInt (numberState : Int, oracle : ('T => Unit is Adj + Ctl)) : ((Qubit[], 'T) => Unit is Adj + Ctl)"
 input:
   content: "(numberState : Int, oracle : ('T => Unit is Adj + Ctl))"
@@ -29,7 +30,7 @@ input:
 output:
   content: ((Qubit[], 'T) => Unit is Adj + Ctl)
   types:
-  - summary: 컨트롤 레지스터 상태가 숫자 상태 `oracle` `numberState`에 해당 하는 경우 대상 레지스터에 적용 되는 단일 연산자입니다.
+  - summary: '`oracle`컨트롤 레지스터 상태가 숫자 상태에 해당 하는 경우 대상 레지스터에 적용 되는 단일 연산자입니다 `numberState` .'
     isOperation: true
     input:
       types:
@@ -46,9 +47,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: 544b96c809af69ce1cc33aad2d42b012f93d4b3c
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 81aeec4086549691d789e02e5a94e86cd75fdf06
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82675716"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85885479"

@@ -3,13 +3,13 @@ uid: microsoft.quantum.machinelearning.sequentialmodel
 name: SequentialModel
 type: newtype
 namespace: Microsoft.Quantum.MachineLearning
-summary: 매개 변수가 있는 시퀀스 및 제어 된 회전, 회전 각도 할당 및 모델에서 인식 되는 두 클래스 간의 바이어스로 구성 된 퀀텀 분류자 모델에 대해 설명 합니다.
+summary: 매개 변수화 되 고 제어 되는 회전, 회전 각도 할당 및 모델에서 인식 되는 두 클래스 간의 바이어스로 구성 된 퀀텀 분류자 모델에 대해 설명 합니다.
 syntax: newtype SequentialModel = (Microsoft.Quantum.MachineLearning.ControlledRotation[], Double[], Double);
 references: '- [arXiv: 1804.00633](https://arxiv.org/abs/1804.00633)'
 metadata:
-  ms.openlocfilehash: f653687ef29ac55704e6a7a8746de9e964bf5947
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 21b3dee50b6c9ce85ec796d1462d1f9ce53a0435
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82684362"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85884527"

@@ -1,0 +1,63 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.diagnostics.assertmeasurementprobability
+name: AssertMeasurementProbability
+type: operation
+namespace: Microsoft.Quantum.Diagnostics
+summary: 지정 된 Pauli의 지정 된 비트를 측정 하는 어설션은 특정 허용 범위 내에서 지정 된 확률을 포함 하는 지정 된 결과를 갖게 됩니다.
+remarks: 이 작업의 Adjoint 및 제어 된 버전은 조건을 확인 하지 않습니다.
+examples: >-
+  ```qsharp
+
+  using (register = Qubit()) {
+      H(register);
+      AssertProb([PauliZ], [register], One, 0.5,
+          "Measuring in conjugate basis did not give 50/50 results.", 1e-5);
+  }
+
+  ```
+syntax: 'operation AssertMeasurementProbability (bases : Pauli[], qubits : Qubit[], result : Result, prob : Double, msg : String, tol : Double) : Unit'
+input:
+  content: '(bases : Pauli[], qubits : Qubit[], result : Result, prob : Double, msg : String, tol : Double)'
+  types:
+  - name: bases
+    summary: Multi-factor bit Pauli 연산자로 표현 된의 확률을 어설션하는 측정 효과입니다.
+    isArray: true
+    isPrimitive: true
+    uid: Pauli
+  - name: qubits
+    summary: 어설션을 만들 레지스터입니다.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+  - name: result
+    summary: 의 예상 결과 `Measure(bases, qubits)` 입니다.
+    isPrimitive: true
+    uid: Result
+  - name: prob
+    summary: 지정 된 결과가 예상 되는 확률입니다.
+    isPrimitive: true
+    uid: Double
+  - name: msg
+    summary: 어설션이 실패 하는 경우 보고 될 메시지입니다.
+    isPrimitive: true
+    uid: String
+  - name: tol
+    isPrimitive: true
+    uid: Double
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- microsoft.quantum.diagnostics.assertmeasurement
+metadata:
+  ms.openlocfilehash: 6663722ae72cc8dd984e6422029db5a0bfad5d39
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.translationtype: MT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85887038"
