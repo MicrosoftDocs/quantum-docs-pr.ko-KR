@@ -7,22 +7,24 @@ summary: >-
   컨트롤 레지스터 상태가 지정 된 비트 마스크에 해당 하는 경우 대상 레지스터에 oracle을 적용 하는 단일 작업을 반환 합니다.
 
 
-  이 함수의 출력은 \begin{align} U \ket{b_0 b_1 \cdots b_ {n-1}} \ket{\psi} = \ket{b_0 b_1 \cdots b_ {n-1}}와 같이 단일 변환 $U $로 나타낼 수 있는 작업입니다. \cdots \begin{cases} V \ket{\psi} & \t extrm{if} (b_0 b_1 \cdots b_ {n-1}) = \texttt{bits} \\ \\ \ket{\psi} & \textrm{otherwise} \end{cases}, \end{align} where $V $은 `oracle` 작업 동작을 나타내는 단일 변환입니다.
+  이 함수의 출력은 \begin{align} U \ket{b_0 b_1 \cdots b_ {n-1}} \ket{\psi} = \ket{b_0 b_1 \cdots b_ {n-1}}와 같이 단일 변환 $U $로 나타낼 수 있는 작업입니다. \cdots \begin{cases} V \ket{\psi} & \t extrm{if} (b_0 b_1 \cdots b_ {n-1}) = \texttt{bits} \\ \\ \ket{\psi} & \textrm{otherwise} \end{cases}, \end{align} where $V $은 작업 동작을 나타내는 단일 변환입니다 `oracle` .
 remarks: >-
-  및 `bits` `controlRegister` 의 길이는 동일 해야 합니다.
+  에 지정 된 패턴은 `bits` 보다 짧을 수 있습니다 `controlRegister` .이 경우 추가 컨트롤의 비트는 무시 됩니다. 즉, $ \ket {0} $ 또는 $ \ket $에서 제어 되지 않습니다 {1} .
+
+  `bits`가 보다 길면 `controlRegister` 오류가 발생 합니다.
 
 
-  부울 배열과 `bits` 단일 연산이 `oracle`제공 되는 경우이 함수의 출력은 다음 단계를 수행 하는 작업입니다.
+  부울 배열과 `bits` 단일 연산이 제공 되는 경우 `oracle` 이 함수의 출력은 다음 단계를 수행 하는 작업입니다.
 
 
-  * 의 요소 `X` 에 `false` 해당 하는 컨트롤 레지스터의 각 요소에 작업을 적용 합니다 `bits`.
+  * `X`의 요소에 해당 하는 컨트롤 레지스터의 각 요소에 작업을 적용 `false` 합니다 `bits` .
 
-  * 컨트롤 `Controlled oracle` 및 대상 레지스터에 적용 됩니다.
+  * `Controlled oracle`컨트롤 및 대상 레지스터에 적용 됩니다.
 
-  * 의 `bits` 요소 `X` 에 `false` 해당 하는 컨트롤 레지스터의 각 요소에 작업을 적용 하 여 컨트롤을 원래 상태로 되돌립니다.
+  * `X`의 요소에 해당 하는 컨트롤 레지스터의 각 요소에 작업을 적용 하 여 `false` `bits` 컨트롤을 원래 상태로 되돌립니다.
 
 
-  함수 출력은 `bits` 가와 같은 특수 한 경우 `[true, ..., true]` `ControlledOnBitString` 입니다. `Controlled`
+  함수 출력은 `Controlled` `ControlledOnBitString` `bits` 가와 같은 특수 한 경우입니다 `[true, ..., true]` .
 examples: >-
   다음 코드 조각은 동일 합니다.
 
@@ -34,7 +36,7 @@ examples: >-
   ```
 
 
-  and
+  및
 
 
   ```qsharp
@@ -48,7 +50,7 @@ examples: >-
   ```
 
 
-  다음 코드는 $ \frac{1}{2}{00} (\ket-{01} \ket + \ket{10} + \ket{11}) $ 상태를 준비 합니다.
+  다음 코드는 $ \frac {1} {2} (\ket {00} -\ket {01} + \ket {10} + \ket {11} ) $ 상태를 준비 합니다.
 
 
   ```qsharp
@@ -85,7 +87,7 @@ input:
 output:
   content: ((Qubit[], 'T) => Unit is Adj + Ctl)
   types:
-  - summary: 컨트롤 레지스터 상태가 비트 마스크 `oracle` `bits`에 해당 하는 경우 대상 레지스터에 적용 되는 단일 작업입니다.
+  - summary: '`oracle`컨트롤 레지스터 상태가 비트 마스크에 해당 하는 경우 대상 레지스터에 적용 되는 단일 작업입니다 `bits` .'
     isOperation: true
     input:
       types:
@@ -102,9 +104,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: d5a6223c130150f42f83044aec19b1d5a875bb1d
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 98bb8a9d5770e34257cd2fbc5456bcf70139af07
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680351"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85885516"

@@ -7,7 +7,7 @@ summary: >-
   지정 된 대상 값을 반전 합니다. 두 컨트롤이 모두 1 상태에 있는 경우에만 T-수준 1을 사용 하 여 adjoint 작업을 수행 합니다.
 
 
-  두 `target` 컨트롤이 모두 1 인 경우에만를 반전 하지만는 `target` 상태 0 이라고 가정 합니다.  작업은 T-수 4, T-깊이 1을 사용 하 고 하나의 도우미를 필요로 하며, 따라서가 0으로 알려진 경우 `target` ccnot 연산에 더 적합할 수 있습니다.  이 작업의 adjoint는 측정을 기반으로 하며, T 게이트는 없으며 도우미를 사용 하지 않아도 됩니다.
+  `target`두 컨트롤이 모두 1 인 경우에만를 반전 하지만는 `target` 상태 0 이라고 가정 합니다.  작업은 T-수 4, T-깊이 1을 사용 하 고 하나의 도우미를 필요로 하며, 따라서 `target` 가 0으로 알려진 경우 CCNOT 연산에 더 적합할 수 있습니다.  이 작업의 adjoint는 측정을 기반으로 하며, T 게이트는 없으며 도우미를 사용 하지 않아도 됩니다.
 syntax: 'operation ApplyLowDepthAnd (control1 : Qubit, control2 : Qubit, target : Qubit) : Unit'
 references: >-
   - Cody Jones: "내결함성 Toffoli 게이트 Novel 생성", Phys 87, 022328, 2013 [Arxiv: 1212.5069](https://arxiv.org/abs/1212.5069) doi: 10.1103/PhysRevA. 87.022328
@@ -25,7 +25,7 @@ input:
     isPrimitive: true
     uid: Qubit
   - name: target
-    summary: 대상 보조 비트; 상태 0 이어야 합니다.
+    summary: 대상 보조 비트 상태 0 이어야 합니다.
     isPrimitive: true
     uid: Qubit
 output:
@@ -37,9 +37,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 14f70cf11cad542f137cee99d5d2a62cedeb4e72
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 7c0858443420741968865298e6179c81b8d23ef4
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82672561"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85885824"

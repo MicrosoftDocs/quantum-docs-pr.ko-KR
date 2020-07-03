@@ -1,7 +1,7 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.machinelearning
 name: Microsoft.Quantum.MachineLearning
-summary: " # <a name=\"summary\"></a>요약\n 이 네임 스페이스는 퀀텀 기계 학습 응용 프로그램에서 사용 되는 함수 및 작업을 제공 합니다.\n\n # <a name=\"references\"></a>참조\n - 민 Schuld, Alex Bocharov, Krysta Sva, 네, \"회로 중심 퀀텀 분류자\", https://arxiv.org/abs/1804.00633"
+summary: " # <a name=\"summary\"></a>요약\n 이 네임 스페이스는 퀀텀 기계 학습 응용 프로그램에서 사용 되는 함수 및 작업을 제공 합니다.\n\n # <a name=\"references\"></a>참조\n - 민 Schuld, Alex Bocharov, Krysta Sva, 네, \"회로 중심 퀀텀 분류자 https://arxiv.org/abs/1804.00633 \","
 functions:
 - uid: microsoft.quantum.machinelearning.approximateinputencoder
   summary: 계수 및 허용 오차 집합이 지정 된 경우 지정 된 허용 오차를 기준으로 각 계수를 계산 기준 상태의 해당 진폭으로 준비 하는 상태 준비 작업을 반환 합니다.
@@ -56,7 +56,7 @@ newtypes:
 - uid: microsoft.quantum.machinelearning.samplingschedule
   summary: 샘플 집합에서 일괄 처리를 그리기 위한 일정입니다.
 - uid: microsoft.quantum.machinelearning.sequentialmodel
-  summary: 매개 변수가 있는 시퀀스 및 제어 된 회전, 회전 각도 할당 및 모델에서 인식 되는 두 클래스 간의 바이어스로 구성 된 퀀텀 분류자 모델에 대해 설명 합니다.
+  summary: 매개 변수화 되 고 제어 되는 회전, 회전 각도 할당 및 모델에서 인식 되는 두 클래스 간의 바이어스로 구성 된 퀀텀 분류자 모델에 대해 설명 합니다.
 - uid: microsoft.quantum.machinelearning.stategenerator
   summary: 순차적 분류자에 대해 지정 된 입력을 준비 하는 작업을 설명 합니다.
 - uid: microsoft.quantum.machinelearning.trainingoptions
@@ -64,9 +64,9 @@ newtypes:
 - uid: microsoft.quantum.machinelearning.validationresults
   summary: 이 결과는 샘플 집합에 대해 분류자의 유효성을 검사 한 결과입니다.
 metadata:
-  ms.openlocfilehash: 43b40489e34a2483ff9331b34b6cd289e3a7bb56
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 85728552e323a640d5abd78f6a2bada5c37e6919
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673178"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85885253"
