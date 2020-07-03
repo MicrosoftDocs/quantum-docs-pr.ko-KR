@@ -6,12 +6,12 @@ ms.author: bradben
 ms.date: 5/30/2020
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: 0fcdec1a304730b593224283421539ea3ca9c913
-ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
+ms.openlocfilehash: d10f81a1e49235be8e02661dcd6d3c839485af6e
+ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85415458"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885042"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit 릴리스 정보
 
@@ -20,6 +20,27 @@ ms.locfileid: "85415458"
 설치 지침은[설치 가이드](xref:microsoft.quantum.install)를 참조하세요.
 
 업데이트 지침은 [업데이트 가이드](xref:microsoft.quantum.update)를 참조하세요.
+
+## <a name="version-01220070124"></a>버전 0.12.20070124
+
+*릴리스 날짜: 7 월 2 일, 2020*
+
+이 릴리스에는 다음이 포함됩니다.
+
+- `qdk-chem`레거시 전자적 구조 문제 serialization 형식 (예: FCIDUMP)을 [Broombridge](xref:microsoft.quantum.libraries.chemistry.schema.broombridge) 로 변환 하는 새로운 도구
+- Coherently에 대 한 [ `Microsoft.Quantum.Synthesis` 네임 스페이스](xref:microsoft.quantum.synthesis) 의 새로운 함수 및 작업에는 변환 및 분해 기반 합성 알고리즘을 사용 하 여 클래식 oracles 적용 됩니다.
+- 이제 IQ # `%simulate` 에서, `%estimate` 및 기타 매직 명령에 대 한 인수를 허용 합니다. 자세한 내용은 [ `%simulate` 매직 명령 참조](xref:microsoft.quantum.iqsharp.magic-ref.simulate) 를 참조 하세요.
+- IQ #의 새 단계 표시 옵션입니다. 자세한 내용은 [ `%config` 매직 명령 참조](xref:microsoft.quantum.iqsharp.magic-ref.config) 를 참조 하세요.
+- `qsharp`이제 conda 패키지 ([qsharp](https://anaconda.org/quantum-engineering/qsharp) 및 [IQSHARP](https://anaconda.org/quantum-engineering/iqsharp))를 통해 IQ # 및 python 패키지를 제공 하 여 Q # jupyter 및 python 기능의 로컬 설치를 conda 환경에 간소화할 수 있습니다. 자세한 내용은 [q # Jupyter 노트북](xref:microsoft.quantum.install.jupyter) 및 [q # Python](xref:microsoft.quantum.install.python) 설치 가이드를 참조 하세요.
+- 시뮬레이터를 사용 하는 경우 더 이상 릴리스에서는 더 이상 | 0 ⟩ 상태에 있을 필요가 없지만 출시 직전에 측정 된 경우 자동으로 다시 설정할 수 있습니다.
+- IQ # 사용자가 다른 QDK & 버전을 사용 하 여 라이브러리 패키지를 더 쉽게 사용할 수 있도록 업데이트
+- 사용 되지 않는 `Microsoft.Quantum.Primitive.*` 네임 스페이스 제거
+- 이동 작업:
+  - `Microsoft.Quantum.Intrinsic.Assert`는 이제 `Microsoft.Quantum.Diagnostics.AssertMeasurement`입니다.
+  - `Microsoft.Quantum.Intrinsic.AssertProb`는 이제 `Microsoft.Quantum.Diagnostics.AssertMeasurementProbability`입니다.
+- 버그 수정 
+
+[라이브러리](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [컴파일러](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [런타임](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [샘플](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed), [IQ#](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed) 및 [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed)에 대한 비공개 PR의 전체 목록을 참조하세요.  
 
 ## <a name="version-0112006403"></a>버전 0.11.2006.403
 
@@ -425,7 +446,7 @@ Quantum Development Kit 버전 0.5의 기존 Q# 프로젝트가 있는 경우, �
 
 *릴리스 날짜: 2018년 6월 22일*
 
-이 릴리스에는 향상된 디버깅 환경 및 향상된 성능뿐 아니라 다양한 커뮤니티 기여도 포함됩니다.  특히 다음에 대한 내용을 설명합니다.
+이 릴리스에는 향상된 디버깅 환경 및 향상된 성능뿐 아니라 다양한 커뮤니티 기여도 포함됩니다.  특히:
 
 * QuantumSimulator 대상 머신에 대한 작고 큰 시뮬레이션에서 모두 성능이 향상됨
 * 향상된 디버깅 기능

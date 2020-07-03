@@ -6,12 +6,12 @@ uid: microsoft.quantum.more-information
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: bcc26f66a4ba3e861800ceca122b38b8d3ef6ad5
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: d3c252c6579e1286aae71a0f18ac7b6b02a5c1ed
+ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275369"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85884145"
 ---
 # <a name="more-quantum-computing-learning-resources"></a>추가 퀀텀 컴퓨팅 학습 리소스
 
@@ -24,6 +24,14 @@ ms.locfileid: "85275369"
 + Kitaev, Shen, A., & Vyalyi, M. N. (2002). 클래식 및 퀀텀 계산 (Vol. 47) 한: 미국 수학 사회.
 + Kaye, P., Laflamme, R., & Mosca, M. (2007). 퀀텀 컴퓨팅에 대해 소개 합니다. Oxford 대학 Press를 누릅니다.
 + Rieﬀel, E. G., & Polak, W. H. (2011). 퀀텀 컴퓨팅: gentle 소개입니다. MIT Press.
++ Sarah Kaiser 및 Christopher (Manning 초기 액세스 프로그램은 2020에서 4 월 2019 게시 시작). [Python 및 Q #을 사용 하는 퀀텀 컴퓨팅에 대해 실습 방법을 알아봅니다](https://www.manning.com/books/learn-quantum-computing-with-python-and-q-sharp).
+
+## <a name="online-courses"></a>온라인 과정 ##
+
++ [MS 퀀텀 컴퓨팅 모듈에 대해 알아보세요](https://docs.microsoft.com/users/buildcollections2020-6557/collections/1o2iogrmn8x4r). 퀀텀 컴퓨팅 개념 및 방법에 대 한 단계별 자습서를 붙여넣기. 
++ [퀀텀 컴퓨팅-선명한 과정](https://brilliant.org/courses/quantum-computing/). 브라우저에서 시뮬레이션 된 퀀텀 컴퓨터를 사용 하 여 처음부터 퀀텀 알고리즘을 빌드하는 방법에 대해 알아봅니다.
++ [퀀텀 컴퓨팅 소개-LinkedIn Learning](https://www.linkedin.com/learning/introduction-to-quantum-computing). 1h25m 비디오 소개. 
++ [Comics를 통한 퀀텀 컴퓨팅](https://hackaday.io/project/168554-introduction-to-quantum-computing). 일요일 주간 실습 커뮤니티 클래스입니다. 
 
 ## <a name="elementary-techniques-for-building-controlled-gates"></a>제어 되는 게이트를 빌드하기 위한 기본 기술 ##
 
