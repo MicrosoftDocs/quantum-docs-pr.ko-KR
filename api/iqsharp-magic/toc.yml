@@ -1,3 +1,17 @@
+- href: azure.connect.md
+  name: '%azure.connect 매직 명령'
+- href: azure.execute.md
+  name: '%azure.execute 매직 명령'
+- href: azure.jobs.md
+  name: '%azure.jobs 매직 명령'
+- href: azure.output.md
+  name: '%azure.output 매직 명령'
+- href: azure.status.md
+  name: '%azure.status 매직 명령'
+- href: azure.submit.md
+  name: '%azure.submit 매직 명령'
+- href: azure.target.md
+  name: '%azure.target 매직 명령'
 - href: check_kata.md
   name: '%check_kata 매직 명령'
 - href: chemistry.broombridge.md
