@@ -6,17 +6,19 @@ ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.cs
-ms.openlocfilehash: 2b0b16bdd9fccc3b668036e6df2b20e11b32f8b6
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 714c15d9589095f0fe395fcd6941672167879dca
+ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274091"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885491"
 ---
 # <a name="develop-with-q-and-net"></a>Q# 및 .NET을 사용하여 개발
 
 Q#은 C# 및 F#과 같은 .NET 언어와 잘 작동하도록 빌드되었습니다.
 이 가이드에서는 .NET 언어로 작성된 호스트 프로그램에서 Q#을 사용하는 방법을 설명합니다.
+
+먼저 Q# 애플리케이션과 .NET 호스트를 만든 다음, 호스트에서 Q#을 호출하는 방법을 보여줍니다.
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
@@ -26,23 +28,8 @@ Q#은 C# 및 F#과 같은 .NET 언어와 잘 작동하도록 빌드되었습니�
 
 첫 번째 단계에서는 Q# 라이브러리용 프로젝트 및 Q# 라이브러리에 정의된 작업 및 함수를 호출할 .NET 호스트를 만듭니다.
 
-### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
-
-- 새 Q# 라이브러리 만들기
-  - **파일** -> **새로 만들기** -> **프로젝트**로 이동
-  - 검색 상자에 "Q#" 입력
-  - **Q# 라이브러리** 선택
-  - **다음** 선택
-  - 라이브러리의 이름 및 위치 선택
-  - "솔루션 및 프로젝트를 같은 디렉터리에 배치"를 **선택하지 않아야** 합니다.
-  - **만들기** 선택
-- 새 C# 또는 F# 호스트 프로그램 만들기
-  - **파일** → **새로 만들기** → **프로젝트**로 이동
-  - C# 또는 F#에 대한 "콘솔 앱(.NET Core)" 선택
-  - **다음**을 선택합니다.
-  - *솔루션*에서 "솔루션에 추가" 선택
-  - 호스트 프로그램의 이름 선택
-  - **만들기**를 선택합니다.
+사용하는 개발 환경에 해당하는 탭의 지침을 따릅니다.
+Visual Studio 또는 VS Code 이외의 편집기를 사용하는 경우 간단하게 명령줄 단계를 따르면 됩니다.
 
 ### <a name="visual-studio-code-or-command-line"></a>[Visual Studio Code 또는 명령줄](#tab/tabid-cmdline)
 
@@ -72,6 +59,24 @@ Q#은 C# 및 F#과 같은 .NET 언어와 잘 작동하도록 빌드되었습니�
   dotnet sln quantum-dotnet.sln add ./quantum/quantum.csproj
   dotnet sln quantum-dotnet.sln add ./host/host.csproj
   ```
+
+### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
+
+- 새 Q# 라이브러리 만들기
+  - **파일** -> **새로 만들기** -> **프로젝트**로 이동
+  - 검색 상자에 "Q#" 입력
+  - **Q# 라이브러리** 선택
+  - **다음**을 선택합니다.
+  - 라이브러리의 이름 및 위치 선택
+  - "솔루션 및 프로젝트를 같은 디렉터리에 배치"를 **선택하지 않아야** 합니다.
+  - **만들기**
+- 새 C# 또는 F# 호스트 프로그램 만들기
+  - **파일** → **새로 만들기** → **프로젝트**로 이동
+  - C# 또는 F#에 대한 "콘솔 앱(.NET Core)" 선택
+  - **다음**을 선택합니다.
+  - *솔루션*에서 "솔루션에 추가" 선택
+  - 호스트 프로그램의 이름 선택
+  - **만들기**
 
 ***
 

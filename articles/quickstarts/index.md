@@ -7,12 +7,12 @@ ms.date: 5/8/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install
-ms.openlocfilehash: 6a52eb0a9cdf699e8bb37578ffa3d73fe96a990e
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: ee8d210d67a20cfea3bdc36162efc47f021a6dc6
+ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85273749"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885462"
 ---
 # <a name="install-the-microsoft-quantum-development-kit-qdk"></a>Microsoft QDK(Quantum Development Kit) 설치
 
@@ -24,10 +24,11 @@ ms.locfileid: "85273749"
 - 개발을 용이하게 하는 도구
 
 Q# 프로그램은 Visual Studio Code 또는 Visual Studio를 사용하거나 IQ# Jupyter 커널의 Jupyter Notebook을 통해 독립 실행형 애플리케이션으로 실행할 수 있습니다.
-
 또한 .NET 언어(대개 C#) 또는 Python으로 작성된 호스트 프로그램과 쌍을 이룰 수 있으므로 기존 프로그램 내부에서 양자 연산을 호출할 수 있습니다.
 
-QDK는 여러 개발 환경에 사용할 수 있습니다. 다음 중에서 원하는 설정을 선택하세요.
+이러한 각 설치 방법에 대한 워크플로는 [Q# 프로그램을 실행하는 방법](xref:microsoft.quantum.guide.host-programs)에서 설명하고 비교합니다.
+
+QDK 설치를 진행하고 Q# 프로젝트를 만들려면 원하는 설치 방법을 선택하세요.
 
 [Q# 명령줄 애플리케이션으로 개발](xref:microsoft.quantum.install.standalone) - 명령줄에서 Q#으로 작업하려면 이 방법을 선택합니다. 아래 옵션과 같이 드라이버나 호스트 프로그램이 필요하지 않습니다.
 

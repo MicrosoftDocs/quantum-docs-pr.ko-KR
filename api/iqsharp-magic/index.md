@@ -2,6 +2,13 @@
 
 | 매직 명령 | 요약 |
 |---------------|---------|
+| [`%azure.connect`](xref:microsoft.quantum.iqsharp.magic-ref.azure.connect) | Azure Quantum 작업 영역에 연결하거나 현재 연결 상태를 표시합니다. |
+| [`%azure.execute`](xref:microsoft.quantum.iqsharp.magic-ref.azure.execute) | Azure Quantum 작업 영역에서 작업을 실행합니다. |
+| [`%azure.jobs`](xref:microsoft.quantum.iqsharp.magic-ref.azure.jobs) | 현재 Azure Quantum 작업 영역의 작업 목록을 표시합니다. |
+| [`%azure.output`](xref:microsoft.quantum.iqsharp.magic-ref.azure.output) | 현재 Azure Quantum 작업 영역의 작업 결과를 표시합니다. |
+| [`%azure.status`](xref:microsoft.quantum.iqsharp.magic-ref.azure.status) | 현재 Azure Quantum 작업 영역의 작업 상태를 표시합니다. |
+| [`%azure.submit`](xref:microsoft.quantum.iqsharp.magic-ref.azure.submit) | Azure Quantum 작업 영역에 작업을 제출합니다. |
+| [`%azure.target`](xref:microsoft.quantum.iqsharp.magic-ref.azure.target) | Azure Quantum 작업 영역의 Q# 작업 제출에 대한 활성 실행 대상을 설정하거나 표시합니다. |
 | [`%check_kata`](xref:microsoft.quantum.iqsharp.magic-ref.check_kata) | 단일 kata의 테스트에 대한 참조 구현을 확인합니다. |
 | [`%chemistry.broombridge`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.broombridge) | 지정된 .yaml 파일에서 Broombridge 전자 구조 문제 표현을 로드하고 반환합니다. |
 | [`%chemistry.encode`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.encode) | 페르미온 해밀토니언을 Q#으로 사용할 수 있는 형식으로 인코딩합니다. |
@@ -12,9 +19,9 @@
 | [`%estimate`](xref:microsoft.quantum.iqsharp.magic-ref.estimate) | ResourcesEstimator 대상 머신에서 지정된 함수나 연산을 실행합니다. |
 | [`%kata`](xref:microsoft.quantum.iqsharp.magic-ref.kata) | 단일 테스트를 실행합니다. |
 | [`%lsmagic`](xref:microsoft.quantum.iqsharp.magic-ref.lsmagic) | 현재 사용할 수 있는 모든 매직 명령 목록을 반환합니다. |
-| [`%package`](xref:microsoft.quantum.iqsharp.magic-ref.package) | Nuget 패키지를 로드하는 기능을 제공합니다. 패키지는 nuget 소스 목록에 있어야 하며 일반적으로 nuget.org가 포함됩니다. |
+| [`%package`](xref:microsoft.quantum.iqsharp.magic-ref.package) | NuGet 패키지를 로드하는 기능을 제공합니다. |
 | [`%performance`](xref:microsoft.quantum.iqsharp.magic-ref.performance) | 이 커널에 대한 현재 성능 메트릭을 보고합니다. |
-| [`%simulate`](xref:microsoft.quantum.iqsharp.magic-ref.simulate) | QuantumSimulator 대상 머신에서 지정된 함수나 연산을 실행합니다. |
-| [`%toffoli`](xref:microsoft.quantum.iqsharp.magic-ref.toffoli) | ToffoliSimulator 시뮬레이터 대상 머신에서 지정된 함수나 연산을 실행합니다. |
-| [`%who`](xref:microsoft.quantum.iqsharp.magic-ref.who) | 현재 작업 영역과 관련된 작업을 제공합니다. |
-| [`%workspace`](xref:microsoft.quantum.iqsharp.magic-ref.workspace) | 현재 세션에 정의된 모든 연산 및 함수 목록을 대화식으로 또는 현재 작업 영역에 로드하여 반환합니다. |
+| [`%simulate`](xref:microsoft.quantum.iqsharp.magic-ref.simulate) | QuantumSimulator 대상 컴퓨터에서 지정된 함수나 연산을 실행합니다. |
+| [`%toffoli`](xref:microsoft.quantum.iqsharp.magic-ref.toffoli) | ToffoliSimulator 대상 컴퓨터에서 지정된 함수나 연산을 실행합니다. |
+| [`%who`](xref:microsoft.quantum.iqsharp.magic-ref.who) | 현재 세션에서 사용할 수 있는 Q# 작업을 나열합니다. |
+| [`%workspace`](xref:microsoft.quantum.iqsharp.magic-ref.workspace) | 현재 작업 영역과 관련된 작업을 제공합니다. |

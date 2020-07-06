@@ -7,12 +7,12 @@ ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.update
-ms.openlocfilehash: 8d39716c4d4c96ad87862b4b185895aab66cd210
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 457083ea4756d64375834e5a276c2d91031138fe
+ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274080"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885151"
 ---
 # <a name="update-the-microsoft-quantum-development-kit-qdk"></a>Microsoft QDK(Quantum Development Kit) 업데이트
 
@@ -151,14 +151,32 @@ Q# 프로젝트가 업데이트되었으면 아래 지침에 따라 QDK 자체�
 QDK를 업데이트하는 프로세스는 개발 언어와 환경에 따라 달라집니다.
 아래에서 개발 환경을 선택하세요.
 
-* [Python: IQ# 확장 업데이트](#update-iq-for-python)
-* [Jupyter Notebook: IQ# 확장 업데이트](#update-iq-for-jupyter-notebooks)
+* [Python: `qsharp` 패키지 업데이트](#update-the-qsharp-python-package)
+* [Jupyter Notebook: IQ# 커널 업데이트](#update-the-iq-jupyter-kernel)
 * [Visual Studio: QDK 확장 업데이트](#update-visual-studio-qdk-extension)
 * [VS Code: QDK 확장 업데이트](#update-vs-code-qdk-extension)
 * [명령줄 및 C#: 프로젝트 템플릿 업데이트](#c-using-the-dotnet-command-line-tool)
 
 
-### <a name="update-iq-for-python"></a>Python용 IQ# 업데이트
+### <a name="update-the-qsharp-python-package"></a>`qsharp` Python 패키지 업데이트
+
+업데이트 절차는 처음에 conda를 사용하여 설치했는지 아니면 .NET CLI와 pip를 사용하여 설치했는지에 따라 달라집니다.
+
+#### <a name="update-using-conda-recommended"></a>[conda를 사용하여 업데이트(권장)](#tab/tabid-conda)
+
+1. `qsharp` 패키지를 설치한 conda 환경을 활성화하고, 다음 명령을 실행하여 환경을 업데이트합니다.
+
+    ```
+    conda update -c quantum-engineering qsharp
+    ```
+
+1. `.qs` 파일이 있는 위치에서 다음 명령을 실행합니다.
+
+    ```
+    python -c "import qsharp; qsharp.reload()"
+    ```
+
+#### <a name="update-using-net-cli-and-pip-advanced"></a>[.NET CLI 및 pip를 사용하여 업데이트(고급)](#tab/tabid-dotnetcli)
 
 1. `iqsharp` 커널을 업데이트합니다. 
 
@@ -167,7 +185,7 @@ QDK를 업데이트하는 프로세스는 개발 언어와 환경에 따라 달�
     dotnet iqsharp install
     ```
 
-2. `iqsharp` 버전을 확인합니다.
+1. `iqsharp` 버전을 확인합니다.
 
     ```dotnetcli
     dotnet iqsharp --version
@@ -176,19 +194,19 @@ QDK를 업데이트하는 프로세스는 개발 언어와 환경에 따라 달�
     다음 출력이 표시됩니다.
 
     ```
-    iqsharp: 0.10.1912.501
-    Jupyter Core: 1.2.20112.0
+    iqsharp: 0.12.20070124
+    Jupyter Core: 1.4.0.0
     ```
 
-    `iqsharp` 버전이 더 높아도 [최신 릴리스](xref:microsoft.quantum.relnotes)와 일치하면 괜찮습니다.
+    `iqsharp` 버전이 더 높은 경우에는 걱정할 필요가 없습니다. [최신 릴리스](xref:microsoft.quantum.relnotes)와 일치해야 합니다.
 
-3. `qsharp` 패키지를 업데이트합니다.
+1. 다음과 같이 `qsharp` 패키지를 업데이트합니다.
 
     ```
     pip install qsharp --upgrade
     ```
 
-4. `qsharp` 버전을 확인합니다.
+1. 다음과 같이 `qsharp` 버전을 확인합니다.
 
     ```
     pip show qsharp
@@ -198,29 +216,49 @@ QDK를 업데이트하는 프로세스는 개발 언어와 환경에 따라 달�
 
     ```
     Name: qsharp
-    Version: 0.10.1912.501
+    Version: 0.12.20070124
     Summary: Python client for Q#, a domain-specific quantum programming language
     ...
     ```
 
-5. `.qs` 파일의 위치에서 다음 명령을 실행합니다.
+1. `.qs` 파일이 있는 위치에서 다음 명령을 실행합니다.
 
     ```
     python -c "import qsharp; qsharp.reload()"
     ```
 
-6. 이제 업데이트된 QDK 버전을 사용하여 기존 퀀텀 프로그램을 실행할 수 있습니다.
+***
 
-### <a name="update-iq-for-jupyter-notebooks"></a>Jupyter Notebook용 IQ# 업데이트
+이제 업데이트된 `qsharp` Python 패키지를 사용하여 기존 퀀텀 프로그램을 실행할 수 있습니다.
 
-1. `iqsharp` 커널을 업데이트합니다.
+### <a name="update-the-iq-jupyter-kernel"></a>IQ# Jupyter 커널 업데이트
+
+업데이트 절차는 처음에 conda를 사용하여 설치했는지 아니면 .NET CLI와 pip를 사용하여 설치했는지에 따라 달라집니다.
+
+#### <a name="update-using-conda-recommended"></a>[conda를 사용하여 업데이트(권장)](#tab/tabid-conda)
+
+1. `qsharp` 패키지를 설치한 conda 환경을 활성화하고, 다음 명령을 실행하여 환경을 업데이트합니다.
+
+    ```
+    conda update -c quantum-engineering qsharp
+    ```
+
+1. 기존 Q# Jupyter Notebook의 각 셀에서 다음 명령을 실행합니다.
+
+    ```
+    %workspace reload
+    ```
+
+#### <a name="update-using-net-cli-and-pip-advanced"></a>[.NET CLI 및 pip를 사용하여 업데이트(고급)](#tab/tabid-dotnetcli)
+
+1. 다음과 같이 `Microsoft.Quantum.IQSharp` 패키지를 업데이트합니다.
 
     ```dotnetcli
     dotnet tool update -g Microsoft.Quantum.IQSharp
     dotnet iqsharp install
     ```
 
-2. `iqsharp` 버전을 확인합니다.
+1. 다음과 같이 `iqsharp` 버전을 확인합니다.
 
     ```dotnetcli
     dotnet iqsharp --version
@@ -229,19 +267,21 @@ QDK를 업데이트하는 프로세스는 개발 언어와 환경에 따라 달�
     다음과 유사하게 출력될 것입니다.
 
     ```
-    iqsharp: 0.10.1912.501
-    Jupyter Core: 1.2.20112.0
+    iqsharp: 0.12.20070124
+    Jupyter Core: 1.4.0.0
     ```
 
-    `iqsharp` 버전이 더 높아도 [최신 릴리스](xref:microsoft.quantum.relnotes)와 일치하면 괜찮습니다.
+    `iqsharp` 버전이 더 높은 경우에는 걱정할 필요가 없습니다. [최신 릴리스](xref:microsoft.quantum.relnotes)와 일치해야 합니다.
 
-3. Jupyter Notebook의 셀에서 다음 명령을 실행합니다.
+1. 기존 Q# Jupyter Notebook의 각 셀에서 다음 명령을 실행합니다.
 
     ```
     %workspace reload
     ```
 
-4. 이제 기존 Jupyter Notebook을 열고 업데이트된 QDK를 사용하여 실행할 수 있습니다.
+***
+
+이제 업데이트된 IQ# 커널을 사용하여 기존 Q# Jupyter Notebook을 실행할 수 있습니다.
 
 ### <a name="update-visual-studio-qdk-extension"></a>Visual Studio QDK 확장 업데이트
 
