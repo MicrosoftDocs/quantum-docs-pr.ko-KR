@@ -1,5 +1,5 @@
 - name: 양자 기계 학습 소개
-  href: introduction.md
+  href: intro.md
 - name: 기본 분류
   href: basic-classification.md
 - name: 사용자 고유의 분류자 설계
