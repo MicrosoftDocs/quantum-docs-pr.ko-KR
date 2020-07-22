@@ -1,21 +1,37 @@
 ---
-title: 기본 작업 카운터
-description: 퀀텀 프로그램에서 작업에 사용 되는 기본 실행 수를 추적 하는 Microsoft QDK 기본 작업 카운터에 대해 알아봅니다.
+title: 기본 작업 카운터-퀀텀 개발 키트
+description: '퀀텀 추적 시뮬레이터를 사용 하 여 Q # 프로그램에서 작업에 사용 되는 기본 실행을 추적 하는 Microsoft QDK 기본 작업 카운터에 대해 알아봅니다.'
 author: vadym-kl
 ms.author: vadym@microsoft.com
-ms.date: 12/11/2017
+ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.primitive-counter
-ms.openlocfilehash: 8bdb0aed370e72b58b23025f1685ad7ce1a77a43
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: ea022d499354f7cefd60da690466496e0ce7c336
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275558"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871028"
 ---
-# <a name="primitive-operations-counter"></a><span data-ttu-id="99285-103">기본 작업 카운터</span><span class="sxs-lookup"><span data-stu-id="99285-103">Primitive Operations Counter</span></span>  
+# <a name="quantum-trace-simulator-primitive-operations-counter"></a><span data-ttu-id="717ab-103">퀀텀 추적 시뮬레이터: 기본 작업 카운터</span><span class="sxs-lookup"><span data-stu-id="717ab-103">Quantum trace simulator: primitive operations counter</span></span>
 
-<span data-ttu-id="99285-104">는 `Primitive Operations Counter` 퀀텀 컴퓨터 [추적 시뮬레이터](xref:microsoft.quantum.machines.qc-trace-simulator.intro)의 일부입니다.</span><span class="sxs-lookup"><span data-stu-id="99285-104">The `Primitive Operations Counter` is a part of the quantum computer [Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro).</span></span> <span data-ttu-id="99285-105">퀀텀 프로그램에서 호출 된 모든 작업에서 사용 되는 기본 실행 수를 계산 합니다.</span><span class="sxs-lookup"><span data-stu-id="99285-105">It counts the number of primitive executions used by every operation invoked in a quantum program.</span></span> <span data-ttu-id="99285-106">의 모든 작업 `Microsoft.Quantum.Intrinsic` 은 단일 비트 회전, T 게이트, 단일 고 비트 Clifford 게이트, CNOT 게이트 및 여러 가지 관찰 가능 개체의 측정으로 표현 됩니다.</span><span class="sxs-lookup"><span data-stu-id="99285-106">All operations from `Microsoft.Quantum.Intrinsic` are expressed in terms of single qubit rotations, T gates, single qubit Clifford gates, CNOT gates and measurements of multi-qubit Pauli observables.</span></span> <span data-ttu-id="99285-107">수집 된 통계는 작업 호출 그래프의 가장자리에 걸쳐 집계 됩니다.</span><span class="sxs-lookup"><span data-stu-id="99285-107">Collected statistics are aggregated over the edges of the operations call graph.</span></span> <span data-ttu-id="99285-108">이제 `T` 작업을 구현 하는 데 필요한 게이트 수를 계산 `CCNOT` 합니다.</span><span class="sxs-lookup"><span data-stu-id="99285-108">Let us now count how many `T` gates are needed to implement the `CCNOT` operation.</span></span> 
+<span data-ttu-id="717ab-104">기본 작업 카운터는 퀀텀 개발 키트 [퀀텀 추적 시뮬레이터](xref:microsoft.quantum.machines.qc-trace-simulator.intro)의 일부입니다.</span><span class="sxs-lookup"><span data-stu-id="717ab-104">The primitive operation counter is a part of the Quantum Development Kit [Quantum trace simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro).</span></span> <span data-ttu-id="717ab-105">퀀텀 프로그램에서 호출 된 모든 작업에서 사용 되는 기본 실행 수를 계산 합니다.</span><span class="sxs-lookup"><span data-stu-id="717ab-105">It counts the number of primitive executions used by every operation invoked in a quantum program.</span></span> 
+
+<span data-ttu-id="717ab-106">모든 <xref:microsoft.quantum.intrinsic> 연산은 단일 비트 회전, T 작업, 단일가 Clifford 작업, CNOT 작업 및 여러 가지 관찰 가능 개체의 측정값으로 표현 됩니다.</span><span class="sxs-lookup"><span data-stu-id="717ab-106">All <xref:microsoft.quantum.intrinsic> operations are expressed in terms of single-qubit rotations, T operations, single-qubit Clifford operations, CNOT operations, and measurements of multi-qubit Pauli observables.</span></span> <span data-ttu-id="717ab-107">기본 작업 카운터는 작업 [호출 그래프](https://en.wikipedia.org/wiki/Call_graph)의 모든 가장자리에 대 한 통계를 집계 하 고 수집 합니다.</span><span class="sxs-lookup"><span data-stu-id="717ab-107">The Primitive Operations Counter aggregates and collects statistics over all the edges of the operation's [call graph](https://en.wikipedia.org/wiki/Call_graph).</span></span>
+
+## <a name="invoking-the-primitive-operation-counter"></a><span data-ttu-id="717ab-108">기본 작업 카운터 호출</span><span class="sxs-lookup"><span data-stu-id="717ab-108">Invoking the primitive operation counter</span></span>
+
+<span data-ttu-id="717ab-109">기본 작업 카운터를 사용 하 여 퀀텀 추적 시뮬레이터를 실행 하려면 인스턴스를 만들고 <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> `UsePrimitiveOperationsCounter` 속성을 **true**로 설정한 다음 <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> 를 매개 변수로 사용 하 여 새 인스턴스를 만들어야 합니다 `QCTraceSimulatorConfiguration` .</span><span class="sxs-lookup"><span data-stu-id="717ab-109">To run the quantum trace simulator with the primitive operation counter, you must create a <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> instance, set the `UsePrimitiveOperationsCounter` property to **true**, and then create a new <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> instance with the `QCTraceSimulatorConfiguration` as the parameter.</span></span>
+
+```csharp
+var config = new QCTraceSimulatorConfiguration();
+config.UsePrimitiveOperationsCounter = true;
+var sim = new QCTraceSimulator(config);
+```
+
+## <a name="using-the-primitive-operation-counter-in-a-c-host-program"></a><span data-ttu-id="717ab-110">C # 호스트 프로그램에서 기본 작업 카운터 사용</span><span class="sxs-lookup"><span data-stu-id="717ab-110">Using the primitive operation counter in a C# host program</span></span>
+
+<span data-ttu-id="717ab-111">이 단원의 뒷부분에 나오는 c # 예제에서는 <xref:microsoft.quantum.intrinsic.t> <xref:microsoft.quantum.intrinsic.ccnot> 다음 Q # 샘플 코드를 기반으로 작업을 구현 하는 데 필요한 작업 수를 계산 합니다.</span><span class="sxs-lookup"><span data-stu-id="717ab-111">The C# example that follows in this section counts how many <xref:microsoft.quantum.intrinsic.t> operations are needed to implement the <xref:microsoft.quantum.intrinsic.ccnot> operation, based on the following Q# sample code:</span></span>
 
 ```qsharp
 open Microsoft.Quantum.Intrinsic;
@@ -24,19 +40,17 @@ operation ApplySampleWithCCNOT() : Unit {
     using (qubits = Qubit[3]) {
         CCNOT(qubits[0], qubits[1], qubits[2]);
         T(qubits[0]);
-    } 
+    }
 }
 ```
 
-## <a name="using-the-primitive-operations-counter-within-a-c-program"></a><span data-ttu-id="99285-109">C # 프로그램에서 기본 작업 카운터 사용</span><span class="sxs-lookup"><span data-stu-id="99285-109">Using the Primitive Operations Counter within a C# Program</span></span>
-
-<span data-ttu-id="99285-110">실제로 7 개의 게이트가 필요 하 고 8 게이트를 실행 하는 것을 확인 하기 위해 `CCNOT` `T` `ApplySampleWithCCNOT` `T` 다음 c # 코드를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="99285-110">To check that `CCNOT` indeed requires 7 `T` gates and that `ApplySampleWithCCNOT` executes 8 `T` gates we can use the following C# code:</span></span>
+<span data-ttu-id="717ab-112">에서 일곱 개의 `CCNOT` 작업이 필요 하 `T` 고 `ApplySampleWithCCNOT` 8 개의 작업을 실행 하는지 확인 하려면 `T` 다음 c # 코드를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="717ab-112">To check that `CCNOT` requires seven `T` operations and that `ApplySampleWithCCNOT` runs eight `T` operations, use the following C# code:</span></span>
 
 ```csharp 
 // using Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators;
 // using System.Diagnostics;
 var config = new QCTraceSimulatorConfiguration();
-config.usePrimitiveOperationsCounter = true;
+config.UsePrimitiveOperationsCounter = true;
 var sim = new QCTraceSimulator(config);
 var res = ApplySampleWithCCNOT.Run(sim).Result;
 
@@ -44,25 +58,23 @@ double tCountAll = sim.GetMetric<ApplySampleWithCCNOT>(PrimitiveOperationsGroups
 double tCount = sim.GetMetric<Primitive.CCNOT, ApplySampleWithCCNOT>(PrimitiveOperationsGroupsNames.T);
 ```
 
-<span data-ttu-id="99285-111">프로그램의 첫 번째 부분이 실행 `ApplySampleWithCCNOT` 됩니다.</span><span class="sxs-lookup"><span data-stu-id="99285-111">The first part of the program executes `ApplySampleWithCCNOT`.</span></span> <span data-ttu-id="99285-112">두 번째 부분에서는 메서드를 사용 `QCTraceSimulator.GetMetric` 하 여에서 실행 하는 T 게이트 수를 가져옵니다 `ApplySampleWithCCNOT` .</span><span class="sxs-lookup"><span data-stu-id="99285-112">In the second part, we use the method `QCTraceSimulator.GetMetric` to get the number of T gates executed by `ApplySampleWithCCNOT`:</span></span> 
+<span data-ttu-id="717ab-113">프로그램의 첫 번째 부분을 실행 `ApplySampleWithCCNOT` 합니다.</span><span class="sxs-lookup"><span data-stu-id="717ab-113">The first part of the program runs `ApplySampleWithCCNOT`.</span></span> <span data-ttu-id="717ab-114">두 번째 부분에서는 메서드를 사용 하 [`QCTraceSimulator.GetMetric`](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.getmetric) `T` 여에서 실행 되는 작업 수를 검색 합니다 `ApplySampleWithCCNOT` .</span><span class="sxs-lookup"><span data-stu-id="717ab-114">The second part uses the [`QCTraceSimulator.GetMetric`](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.getmetric) method to retrieve the number of `T` operations run by `ApplySampleWithCCNOT`:</span></span> 
 
-```csharp
-double tCount = sim.GetMetric<Primitive.CCNOT, ApplySampleWithCCNOT>(PrimitiveOperationsGroupsNames.T);
-double tCountAll = sim.GetMetric<ApplySampleWithCCNOT>(PrimitiveOperationsGroupsNames.T);
-```
+<span data-ttu-id="717ab-115">`GetMetric`두 개의 형식 매개 변수를 사용 하 여를 호출 하면 지정 된 호출 그래프 가장자리와 연결 된 메트릭의 값이 반환 됩니다.</span><span class="sxs-lookup"><span data-stu-id="717ab-115">When you call `GetMetric` with two type parameters, it returns the value of the metric associated with a given call graph edge.</span></span> <span data-ttu-id="717ab-116">위의 예제에서 프로그램은 `Primitive.CCNOT` 내에서 작업을 호출 `ApplySampleWithCCNOT` 하므로 호출 그래프는에 지를 포함 합니다 `<Primitive.CCNOT, ApplySampleWithCCNOT>` .</span><span class="sxs-lookup"><span data-stu-id="717ab-116">In the preceding example, the program calls the `Primitive.CCNOT` operation  within `ApplySampleWithCCNOT` and therefore the call graph contains the edge `<Primitive.CCNOT, ApplySampleWithCCNOT>`.</span></span> 
 
-<span data-ttu-id="99285-113">`GetMetric`두 개의 형식 매개 변수를 사용 하 여를 호출 하면 지정 된 호출 그래프 가장자리와 연결 된 메트릭의 값이 반환 됩니다.</span><span class="sxs-lookup"><span data-stu-id="99285-113">When `GetMetric` is called with two type parameters it returns the value of the metric associated with a given call graph edge.</span></span> <span data-ttu-id="99285-114">이 예제에서는 `Primitive.CCNOT` 내에서 작업을 호출 `ApplySampleWithCCNOT` 하므로 호출 그래프에 가장자리가 포함 됩니다 `<Primitive.CCNOT, ApplySampleWithCCNOT>` .</span><span class="sxs-lookup"><span data-stu-id="99285-114">In our example operation `Primitive.CCNOT` is called within `ApplySampleWithCCNOT` and therefore the call graph contains the edge `<Primitive.CCNOT, ApplySampleWithCCNOT>`.</span></span> 
-
-<span data-ttu-id="99285-115">사용 되는 게이트 수를 얻기 위해 `CNOT` 다음 줄을 추가할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="99285-115">To get the number of `CNOT` gates used, we can add the following line:</span></span>
+<span data-ttu-id="717ab-117">사용 된 작업 수를 검색 하려면 `CNOT` 다음 줄을 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="717ab-117">To retrieve the number of `CNOT` operations used, add the following line:</span></span>
 ```csharp
 double cxCount = sim.GetMetric<Primitive.CCNOT, ApplySampleWithCCNOT>(PrimitiveOperationsGroupsNames.CX);
 ```
 
-<span data-ttu-id="99285-116">마지막으로 게이트 카운터에 의해 수집 된 모든 통계를 CSV 형식으로 출력 하려면 다음을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="99285-116">Finally, to output all the statistics collected by the gate counter in CSV format we can use the following:</span></span>
+<span data-ttu-id="717ab-118">마지막으로, 다음을 사용 하 여 기본 작업 카운터에 의해 수집 된 모든 통계를 CSV 형식으로 출력할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="717ab-118">Finally, you can output all the statistics collected by the Primitive Operations Counter in CSV format using the following:</span></span>
 ```csharp
 string csvSummary = sim.ToCSV()[MetricsCountersNames.primitiveOperationsCounter];
 ```
 
-## <a name="see-also"></a><span data-ttu-id="99285-117">참조</span><span class="sxs-lookup"><span data-stu-id="99285-117">See also</span></span> ##
+## <a name="see-also"></a><span data-ttu-id="717ab-119">참고 항목</span><span class="sxs-lookup"><span data-stu-id="717ab-119">See also</span></span>
 
-- <span data-ttu-id="99285-118">퀀텀 컴퓨터 [추적 시뮬레이터](xref:microsoft.quantum.machines.qc-trace-simulator.intro) 개요입니다.</span><span class="sxs-lookup"><span data-stu-id="99285-118">The quantum computer [Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) overview.</span></span>
+- <span data-ttu-id="717ab-120">퀀텀 개발 키트 [퀀텀 추적 시뮬레이터](xref:microsoft.quantum.machines.qc-trace-simulator.intro) 개요.</span><span class="sxs-lookup"><span data-stu-id="717ab-120">The Quantum Development Kit [Quantum trace simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) overview.</span></span>
+- <span data-ttu-id="717ab-121"><xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator>API 참조입니다.</span><span class="sxs-lookup"><span data-stu-id="717ab-121">The <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> API reference.</span></span>
+- <span data-ttu-id="717ab-122"><xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration>API 참조입니다.</span><span class="sxs-lookup"><span data-stu-id="717ab-122">The <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> API reference.</span></span>
+- <span data-ttu-id="717ab-123"><xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.PrimitiveOperationsGroupsNames>API 참조입니다.</span><span class="sxs-lookup"><span data-stu-id="717ab-123">The <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.PrimitiveOperationsGroupsNames> API reference.</span></span>

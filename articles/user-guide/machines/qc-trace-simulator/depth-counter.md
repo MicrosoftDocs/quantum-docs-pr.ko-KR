@@ -1,26 +1,42 @@
 ---
-title: 수준 카운터
-description: 퀀텀 프로그램에서 호출 된 모든 작업의 깊이 수를 수집 하는 Microsoft QDK Depth 카운터에 대해 알아봅니다.
+title: 깊이 카운터-퀀텀 개발 키트
+description: '퀀텀 추적 시뮬레이터를 사용 하 여 Q # 프로그램에서 호출 된 모든 작업의 깊이 수를 수집 하는 Microsoft QDK depth 카운터에 대해 알아봅니다.'
 author: vadym-kl
 ms.author: vadym@microsoft.com
-ms.date: 12/11/2017
+ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.depth-counter
-ms.openlocfilehash: 0029a00e6a3563dc542daeda2afa7cabf42441fb
-ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
+ms.openlocfilehash: 811e387fedf547d2681518ae0bb525c13dc84ff4
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85415268"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871130"
 ---
-# <a name="depth-counter"></a><span data-ttu-id="eb384-103">수준 카운터</span><span class="sxs-lookup"><span data-stu-id="eb384-103">Depth Counter</span></span>
+# <a name="quantum-trace-simulator-depth-counter"></a><span data-ttu-id="2f6e2-103">퀀텀 추적 시뮬레이터: 깊이 카운터</span><span class="sxs-lookup"><span data-stu-id="2f6e2-103">Quantum trace simulator: depth counter</span></span>
 
-<span data-ttu-id="eb384-104">는 `Depth Counter` 퀀텀 컴퓨터 [추적 시뮬레이터](xref:microsoft.quantum.machines.qc-trace-simulator.intro)의 일부입니다.</span><span class="sxs-lookup"><span data-stu-id="eb384-104">The `Depth Counter` is a part of the quantum computer [Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro).</span></span>
-<span data-ttu-id="eb384-105">이는 퀀텀 프로그램에서 호출 된 모든 작업의 깊이를 나타내는 개수를 수집 하는 데 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="eb384-105">It is used to gather counts that represent the lower bound of the depth of every operation invoked in a quantum program.</span></span> <span data-ttu-id="eb384-106">의 모든 작업 <xref:microsoft.quantum.intrinsic> 은 단일 비트 회전, T 게이트, 단일 고 비트 Clifford 게이트, CNOT 게이트 및 여러 가지 관찰 가능 개체의 측정으로 표현 됩니다.</span><span class="sxs-lookup"><span data-stu-id="eb384-106">All operations from <xref:microsoft.quantum.intrinsic> are expressed in terms of single qubit rotations, T gates, single qubit Clifford gates, CNOT gates and measurements of multi-qubit Pauli observables.</span></span> <span data-ttu-id="eb384-107">사용자는의 필드를 통해 각 기본 작업에 대 한 깊이를 설정할 수 있습니다 `gateTimes` <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> .</span><span class="sxs-lookup"><span data-stu-id="eb384-107">Users can set the depth for each of the primitive operations via the `gateTimes` field of <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration>.</span></span>
+<span data-ttu-id="2f6e2-104">Depth 카운터는 퀀텀 개발 키트 [퀀텀 추적 시뮬레이터](xref:microsoft.quantum.machines.qc-trace-simulator.intro)의 일부입니다.</span><span class="sxs-lookup"><span data-stu-id="2f6e2-104">The depth counter is a part of the Quantum Development Kit [Quantum trace simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro).</span></span>
+<span data-ttu-id="2f6e2-105">이를 사용 하 여 퀀텀 프로그램에서 호출 된 모든 작업의 깊이 상한을 나타내는 개수를 수집할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2f6e2-105">You can use it to gather counts that represent the lower bound of the depth of every operation invoked in a quantum program.</span></span> 
 
-<span data-ttu-id="eb384-108">기본적으로 모든 작업에는 깊이 1이 있는 T 게이트를 제외 하 고 깊이 0이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="eb384-108">By default, all operations have depth 0 except the T gate which has depth 1.</span></span> <span data-ttu-id="eb384-109">즉, 기본적으로 작업의 T 수준만 계산 됩니다 (종종 바람직한 경우).</span><span class="sxs-lookup"><span data-stu-id="eb384-109">This means that by default, only the T depth of operations is computed (which is often desirable).</span></span> <span data-ttu-id="eb384-110">수집 된 통계는 작업 호출 그래프의 모든 가장자리에 걸쳐 집계 됩니다.</span><span class="sxs-lookup"><span data-stu-id="eb384-110">Collected statistics are aggregated over all the edges of the operations call graph.</span></span> 
+## <a name="depth-values"></a><span data-ttu-id="2f6e2-106">깊이 값</span><span class="sxs-lookup"><span data-stu-id="2f6e2-106">Depth values</span></span>
 
-<span data-ttu-id="eb384-111">이제 <xref:microsoft.quantum.intrinsic.t> 작업의 깊이를 계산 해 보세요 <xref:microsoft.quantum.intrinsic.ccnot> .</span><span class="sxs-lookup"><span data-stu-id="eb384-111">Let us now compute the <xref:microsoft.quantum.intrinsic.t> depth of the <xref:microsoft.quantum.intrinsic.ccnot> operation.</span></span> <span data-ttu-id="eb384-112">다음 Q # 샘플 코드를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="eb384-112">We will use the following Q# sample code:</span></span>
+<span data-ttu-id="2f6e2-107">기본적으로 모든 작업은 깊이가 1 인 작업을 제외 하 고 깊이가 **0** 입니다 `T` . **1**</span><span class="sxs-lookup"><span data-stu-id="2f6e2-107">By default, all operations have a depth of **0** except the `T` operation, which has a depth of **1**.</span></span> <span data-ttu-id="2f6e2-108">즉, 기본적으로 `T` 작업 수준도 계산 됩니다 (종종 바람직한 경우).</span><span class="sxs-lookup"><span data-stu-id="2f6e2-108">This means that by default, only the `T` depth of operations is computed (which is often desirable).</span></span> <span data-ttu-id="2f6e2-109">수준 카운터는 작업 [호출 그래프](https://en.wikipedia.org/wiki/Call_graph)의 모든 가장자리에 대 한 통계를 집계 하 고 수집 합니다.</span><span class="sxs-lookup"><span data-stu-id="2f6e2-109">The depth counter aggregates and collects statistics over all the edges of the operation's [call graph](https://en.wikipedia.org/wiki/Call_graph).</span></span>
+
+<span data-ttu-id="2f6e2-110">모든 <xref:microsoft.quantum.intrinsic> 연산은 단일 비트 회전, <xref:microsoft.quantum.intrinsic.t> 작업, 단일가 Clifford 작업, <xref:microsoft.quantum.intrinsic.cnot> 작업 및 다중 기능 비트 pauli 관찰 가능 개체의 측정값으로 표현 됩니다.</span><span class="sxs-lookup"><span data-stu-id="2f6e2-110">All <xref:microsoft.quantum.intrinsic> operations are expressed in terms of single-qubit rotations, <xref:microsoft.quantum.intrinsic.t> operations, single-qubit Clifford operations, <xref:microsoft.quantum.intrinsic.cnot> operations, and measurements of multi-qubit Pauli observables.</span></span> <span data-ttu-id="2f6e2-111">사용자는의 필드를 통해 각 기본 작업에 대 한 깊이를 설정할 수 있습니다 `gateTimes` <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> .</span><span class="sxs-lookup"><span data-stu-id="2f6e2-111">Users can set the depth for each of the primitive operations via the `gateTimes` field of <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration>.</span></span>
+
+## <a name="invoking-the-depth-counter"></a><span data-ttu-id="2f6e2-112">수준 카운터 호출</span><span class="sxs-lookup"><span data-stu-id="2f6e2-112">Invoking the depth counter</span></span>
+
+<span data-ttu-id="2f6e2-113">Depth 카운터를 사용 하 여 퀀텀 추적 시뮬레이터를 실행 하려면 인스턴스를 만들고 <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> 해당 `UseDepthCounter` 속성을 **true**로 설정한 다음 <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> 를 매개 변수로 사용 하 여 새 인스턴스를 만들어야 합니다 `QCTraceSimulatorConfiguration` .</span><span class="sxs-lookup"><span data-stu-id="2f6e2-113">To run the quantum trace simulator with the depth counter, you must create a <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> instance, set its `UseDepthCounter` property to **true**, and then create a new <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> instance with `QCTraceSimulatorConfiguration` as the parameter.</span></span> 
+
+```csharp
+var config = new QCTraceSimulatorConfiguration();
+config.UseDepthCounter = true;
+var sim = new QCTraceSimulator(config);
+```
+
+## <a name="using-the-depth-counter-in-a-c-host-program"></a><span data-ttu-id="2f6e2-114">C # 호스트 프로그램에서 depth 카운터 사용</span><span class="sxs-lookup"><span data-stu-id="2f6e2-114">Using the depth counter in a C# host program</span></span>
+
+<span data-ttu-id="2f6e2-115">이 단원의 뒷부분에 나오는 c # 예제에서는 `T` `CCNOT` 다음 Q # 샘플 코드를 기반으로 작업의 깊이를 계산 합니다.</span><span class="sxs-lookup"><span data-stu-id="2f6e2-115">The C# example that follows in this section computes the `T` depth of the `CCNOT` operation, based on the following Q# sample code:</span></span>
 
 ```qsharp
 open Microsoft.Quantum.Intrinsic;
@@ -33,15 +49,13 @@ operation ApplySampleWithCCNOT() : Unit {
 }
 ```
 
-## <a name="using-depth-counter-within-a-c-program"></a><span data-ttu-id="eb384-113">C # 프로그램 내에서 Depth 카운터 사용</span><span class="sxs-lookup"><span data-stu-id="eb384-113">Using Depth Counter within a C# Program</span></span>
-
-<span data-ttu-id="eb384-114">에 `CCNOT` `T` 깊이 5가 있고 `ApplySampleWithCCNOT` 깊이 6이 있는지 확인 하려면 `T` 다음 c # 코드를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="eb384-114">To check that `CCNOT` has `T` depth 5 and `ApplySampleWithCCNOT` has `T` depth 6 we can use the following C# code:</span></span>
+<span data-ttu-id="2f6e2-116">에 `CCNOT` `T` 깊이 **5** 가 있고 `ApplySampleWithCCNOT` 깊이 6이 있는지 확인 하려면 `T` 다음 c # 코드를 사용 합니다. **6**</span><span class="sxs-lookup"><span data-stu-id="2f6e2-116">To check that `CCNOT` has `T` depth **5** and `ApplySampleWithCCNOT` has `T` depth **6**, use the following C# code:</span></span>
 
 ```csharp
 using Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators;
 using System.Diagnostics;
 var config = new QCTraceSimulatorConfiguration();
-config.useDepthCounter = true;
+config.UseDepthCounter = true;
 var sim = new QCTraceSimulator(config);
 var res = ApplySampleWithCCNOT.Run(sim).Result;
 
@@ -49,18 +63,16 @@ double tDepth = sim.GetMetric<Intrinsic.CCNOT, ApplySampleWithCCNOT>(DepthCounte
 double tDepthAll = sim.GetMetric<ApplySampleWithCCNOT>(DepthCounter.Metrics.Depth);
 ```
 
-<span data-ttu-id="eb384-115">프로그램의 첫 번째 부분이 실행 `ApplySampleWithCCNOT` 됩니다.</span><span class="sxs-lookup"><span data-stu-id="eb384-115">The first part of the program executes `ApplySampleWithCCNOT`.</span></span> <span data-ttu-id="eb384-116">두 번째 부분에서는 메서드를 사용 하 여 `QCTraceSimulator.GetMetric` `T` 및의 깊이를 가져옵니다 `CCNOT` `ApplySampleWithCCNOT` .</span><span class="sxs-lookup"><span data-stu-id="eb384-116">In the second part, we use the method `QCTraceSimulator.GetMetric` to get the `T` depth of `CCNOT` and `ApplySampleWithCCNOT`:</span></span> 
+<span data-ttu-id="2f6e2-117">프로그램의 첫 번째 부분을 실행 `ApplySampleWithCCNOT` 합니다.</span><span class="sxs-lookup"><span data-stu-id="2f6e2-117">The first part of the program runs `ApplySampleWithCCNOT`.</span></span> <span data-ttu-id="2f6e2-118">두 번째 부분에서는 메서드를 사용 하 여 [`GetMetric`](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.getmetric) `T` 및의 깊이를 검색 합니다 `CCNOT` `ApplySampleWithCCNOT` .</span><span class="sxs-lookup"><span data-stu-id="2f6e2-118">The second part uses the [`GetMetric`](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.getmetric) method to retrieve the `T` depth of `CCNOT` and `ApplySampleWithCCNOT`.</span></span> 
 
-```csharp
-double tDepth = sim.GetMetric<Intrinsic.CCNOT, ApplySampleWithCCNOT>(DepthCounter.Metrics.Depth);
-double tDepthAll = sim.GetMetric<ApplySampleWithCCNOT>(DepthCounter.Metrics.Depth);
-```
-
-<span data-ttu-id="eb384-117">마지막으로에서 수집한 모든 통계를 CSV 형식으로 출력 하려면 `Depth Counter` 다음을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="eb384-117">Finally, to output all the statistics collected by `Depth Counter` in CSV format we can use the following:</span></span>
+<span data-ttu-id="2f6e2-119">마지막으로, 다음을 사용 하 여 깊이 카운터에 의해 수집 된 모든 통계를 CSV 형식으로 출력할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2f6e2-119">Finally, you can output all the statistics collected by the depth counter in CSV format using the following:</span></span>
 ```csharp
 string csvSummary = sim.ToCSV()[MetricsCountersNames.depthCounter];
 ```
 
-## <a name="see-also"></a><span data-ttu-id="eb384-118">추가 정보</span><span class="sxs-lookup"><span data-stu-id="eb384-118">See also</span></span> ##
+## <a name="see-also"></a><span data-ttu-id="2f6e2-120">참고 항목</span><span class="sxs-lookup"><span data-stu-id="2f6e2-120">See also</span></span>
 
-- <span data-ttu-id="eb384-119">퀀텀 컴퓨터 [추적 시뮬레이터](xref:microsoft.quantum.machines.qc-trace-simulator.intro) 개요입니다.</span><span class="sxs-lookup"><span data-stu-id="eb384-119">The quantum computer [Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) overview.</span></span>
+- <span data-ttu-id="2f6e2-121">퀀텀 개발 키트 [퀀텀 추적 시뮬레이터](xref:microsoft.quantum.machines.qc-trace-simulator.intro) 개요.</span><span class="sxs-lookup"><span data-stu-id="2f6e2-121">The Quantum Development Kit [Quantum trace simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) overview.</span></span>
+- <span data-ttu-id="2f6e2-122"><xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator>API 참조입니다.</span><span class="sxs-lookup"><span data-stu-id="2f6e2-122">The <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> API reference.</span></span>
+- <span data-ttu-id="2f6e2-123"><xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration>API 참조입니다.</span><span class="sxs-lookup"><span data-stu-id="2f6e2-123">The <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> API reference.</span></span>
+- <span data-ttu-id="2f6e2-124"><xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.MetricsNames.DepthCounter>API 참조입니다.</span><span class="sxs-lookup"><span data-stu-id="2f6e2-124">The <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.MetricsNames.DepthCounter> API reference.</span></span>
