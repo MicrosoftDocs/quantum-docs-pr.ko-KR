@@ -6,14 +6,14 @@ ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.libraries.standard.intro
-ms.openlocfilehash: 820ad885e7134aa723116d4c9f853d88210a5514
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: ab069c496d89a57f979732da6ccdfbe673b79726
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85273816"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86870586"
 ---
-# <a name="introduction-to-the-q-standard-libraries"></a>Q# 표준 라이브러리 소개 #
+# <a name="introduction-to-the-q-standard-libraries"></a>Q# 표준 라이브러리 소개
 
 Q#은 Q# *표준 라이브러리*를 구성하는 다양한 유용한 연산, 함수 및 사용자 정의 형식에 의해 지원됩니다.
 [설치 및 유효성 검사](xref:microsoft.quantum.install) 중에 설치되는 [`Microsoft.Quantum.Development.Kit` NuGet 패키지](https://www.nuget.org/packages/microsoft.quantum.development.kit)는 Q# 컴파일러 및 대상 컴퓨터에서 구현되는 표준 라이브러리의 일부를 제공합니다.

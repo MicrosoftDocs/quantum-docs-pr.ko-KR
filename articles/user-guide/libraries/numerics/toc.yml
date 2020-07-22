@@ -1,4 +1,2 @@
-- name: 설치 및 유효성 검사
-  href: installation.md
 - name: 숫자 라이브러리 사용
   href: numerics.md
