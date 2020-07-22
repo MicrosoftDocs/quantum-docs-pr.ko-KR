@@ -1,28 +1,33 @@
 ---
-title: 평가기 퀀텀 개발 키트 리소스
-description: '퀀텀 컴퓨터에서 지정 된 Q # 작업 인스턴스를 실행 하는 데 필요한 리소스를 예측 하는 평가기 리소스에 대해 알아봅니다.'
+title: 퀀텀 리소스 평가기-퀀텀 개발 키트
+description: '퀀텀 컴퓨터에서 지정 된 Q # 작업 인스턴스를 실행 하는 데 필요한 리소스를 추정 하는 Microsoft QDK resources 평가기에 대해 알아봅니다.'
 author: anpaz-msft
 ms.author: anpaz@microsoft.com
-ms.date: 1/22/2019
+ms.date: 06/26/2020
 ms.topic: article
 uid: microsoft.quantum.machines.resources-estimator
-ms.openlocfilehash: cbb1c274b64738cc4b47869563d7d02eb717afbc
-ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
+ms.openlocfilehash: 0909a050e89d6295664e54ab63cfda5d407a8f12
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85415263"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86870546"
 ---
-# <a name="the-resources-estimator-target-machine"></a>평가기 대상 컴퓨터의 리소스
+# <a name="quantum-development-kit-qdk-resources-estimator"></a>QDK (퀀텀 Development Kit) 리소스 평가기
 
-이름에서 알 수 있듯이는 `ResourcesEstimator` 퀀텀 컴퓨터에서 지정 된 Q # 작업 인스턴스를 실행 하는 데 필요한 리소스를 추정 합니다.
-퀀텀 컴퓨터의 상태를 실제로 시뮬레이션 하지 않고 퀀텀 작업을 실행 하 여이 작업을 수행 합니다. 따라서 코드의 고전적인 부분이 적절 한 시간 내에 실행 될 수 있는 경우 수천 비트를 사용 하는 Q # 작업에 대 한 리소스를 예상할 수 있습니다.
+이름에서 알 수 있듯이 `ResourcesEstimator` 클래스는 퀀텀 컴퓨터에서 지정 된 Q # 작업 인스턴스를 실행 하는 데 필요한 리소스를 추정 합니다. 퀀텀 컴퓨터의 상태를 실제로 시뮬레이션 하지 않고 퀀텀 작업을 실행 하 여이 작업을 수행 합니다. 따라서 코드의 클래식 부분이 적절 한 시간 내에 실행 되는 경우 수천 비트를 사용 하는 Q # 작업에 대 한 리소스를 예측 합니다.
 
-## <a name="usage"></a>사용량
+평가기 리소스는 Q # 프로그램을 디버그 하는 데 도움이 되는 다양 한 메트릭 및 도구 집합을 제공 하는 [퀀텀 추적 시뮬레이터](xref:microsoft.quantum.machines.qc-trace-simulator.intro)를 기반으로 빌드됩니다.
 
-는 `ResourcesEstimator` 대상 컴퓨터의 또 다른 유형 이므로 모든 Q # 작업을 실행 하는 데 사용할 수 있습니다. 
+## <a name="invoking-and-running-the-resources-estimator"></a>평가기 리소스 호출 및 실행
 
-다른 대상 컴퓨터와 같이 c # 호스트 프로그램에서 사용 하려면 인스턴스를 만들고이를 작업 메서드의 첫 번째 매개 변수로 전달 합니다 `Run` .
+평가기 리소스를 사용 하 여 Q # 작업을 실행할 수 있습니다. 자세한 내용은 [Q # 프로그램을 실행 하는 방법](xref:microsoft.quantum.guide.host-programs)을 참조 하세요.
+
+### <a name="invoking-the-resources-estimator-from-c"></a>C에서 평가기 리소스 호출 # 
+
+다른 대상 컴퓨터와 마찬가지로 먼저 클래스의 인스턴스를 만든 `ResourceEstimator` 다음 작업 메서드의 첫 번째 매개 변수로 전달 `Run` 합니다.
+
+클래스와 달리 `QuantumSimulator` `ResourceEstimator` 클래스는 인터페이스를 구현 하지 않으므로 <xref:System.IDisposable> 문 내에 묶을 필요가 없습니다 `using` .
 
 ```csharp
 using Microsoft.Quantum.Simulation.Core;
@@ -42,9 +47,9 @@ namespace Quantum.MyProgram
 }
 ```
 
-예제에서 볼 수 있듯이은 `ResourcesEstimator` 파일에 `ToTSV()` 저장 하거나 분석을 위해 콘솔에 기록할 수 있는 탭으로 구분 된 값 (TSV)이 있는 테이블을 생성 하는 메서드를 제공 합니다. 위의 프로그램의 출력은 다음과 같습니다.
+예제에 나와 있는 것 처럼는 `ResourcesEstimator` `ToTSV()` 탭으로 구분 된 값 (TSV)이 있는 테이블을 생성 하는 메서드를 제공 합니다. 테이블을 파일에 저장 하거나 분석을 위해 콘솔에 표시할 수 있습니다. 다음은 이전 프로그램의 샘플 출력입니다.
 
-```Output
+```output
 Metric          Sum
 CNOT            1000
 QubitClifford   1000
@@ -57,15 +62,37 @@ BorrowedWidth   0
 ```
 
 > [!NOTE]
-> 는 `ResourcesEstimator` 모든 실행에 대해 계산을 다시 설정 하지 않습니다. 동일한 인스턴스가 다른 작업을 실행 하는 데 사용 되는 경우 기존 결과의 맨 위에 집계 수가 유지 됩니다.
-> 실행 간에 계산을 다시 설정 해야 하는 경우 모든 실행에 대해 새 인스턴스를 만듭니다.
+> `ResourcesEstimator`인스턴스는 실행 때마다 계산을 다시 설정 하지 않습니다. 동일한 인스턴스를 사용 하 여 다른 작업을 실행 하는 경우 새 결과를 기존 결과로 집계 합니다. 실행 간에 계산을 다시 설정 해야 하는 경우 모든 실행에 대해 새 인스턴스를 만듭니다.
 
+### <a name="invoking-the-resources-estimator-from-python"></a>Python에서 평가기 리소스 호출
+
+가져온 Q # 작업을 사용 하 여 Python 라이브러리의 [estimate_resources ()](https://docs.microsoft.com/python/qsharp/qsharp.loader.qsharpcallable) 메서드를 사용 합니다.
+
+```python
+qubit_result = myOperation.estimate_resources()
+```
+
+### <a name="invoking-the-resources-estimator-from-the-command-line"></a>명령줄에서 리소스 평가기 호출
+
+명령줄에서 Q # 프로그램을 실행 하는 경우 **--시뮬레이터** (또는 **-s** 바로 가기) 매개 변수를 사용 하 여 `ResourcesEstimator` 대상 컴퓨터를 지정 합니다. 다음 명령은 평가기 리소스를 사용 하 여 프로그램을 실행 합니다. 
+
+```dotnetcli
+dotnet run -s ResourcesEstimator
+```
+
+### <a name="invoking-the-resources-estimator-from-juptyer-notebooks"></a>Juptyer 노트북에서 평가기 리소스 호출
+
+Q # 작업을 실행 하려면 IQ # 매직 명령 [% 예상 값](xref:microsoft.quantum.iqsharp.magic-ref.simulate) 을 사용 합니다.
+
+```
+%estimate myOperation
+```
 
 ## <a name="programmatically-retrieving-the-estimated-data"></a>프로그래밍 방식으로 예상 데이터 검색
 
-TSV 테이블 외에도의 속성을 통해 예상 리소스를 프로그래밍 방식으로 검색할 수 있습니다 `ResourcesEstimator` `Data` . `Data``System.DataTable` `Metric` 메트릭 이름으로 인덱싱된 및 두 개의 열을 포함 하는 인스턴스를 제공 합니다 `Sum` .
+TSV 테이블 외에도 `Data` 평가기 리소스의 속성을 통해 실행 중에 예상 되는 리소스를 프로그래밍 방식으로 검색할 수 있습니다. `Data`속성은 `System.DataTable` 두 개의 열 ( `Metric` 및 `Sum` )이 메트릭의 이름으로 인덱싱되는 인스턴스를 제공 합니다.
 
-다음 코드에서는 `QubitClifford` `T` `CNOT` Q # 작업에서 사용 하는 총 및 게이트 수를 검색 하 고 인쇄 하는 방법을 보여 줍니다.
+다음 코드에서는 `QubitClifford` `T` `CNOT` Q # 작업에서 사용 되는 및 작업의 총 수를 검색 하 고 인쇄 하는 방법을 보여 줍니다.
 
 ```csharp
 using Microsoft.Quantum.Simulation.Core;
@@ -91,46 +118,25 @@ namespace Quantum.MyProgram
 
 ## <a name="metrics-reported"></a>보고 된 메트릭
 
-다음은에서 예상 하는 메트릭 목록입니다 `ResourcesEstimator` .
+평가기 리소스는 다음 메트릭을 추적 합니다.
 
-* __Cnot__: cnot (제어 된 Pauli X 게이트 라고도 함) 게이트를 실행 했습니다.
-* __QubitClifford__: 실행 된 단일 Clifford 및 Pauli 게이트의 수입니다.
-* __Measure__: 실행 된 측정값의 수입니다.
-* __R__: T, Clifford 및 Pauli 게이트를 제외 하 고 실행 된 단일 비트 회전의 수입니다.
-* __T__: t 게이트, T_x = .h 및 T_y = Hy)를 포함 한 t 게이트 및 해당 변화 시키고의 수를 실행 합니다.
-* __Depth__: Q # 작업에서 실행 되는 퀀텀 회로 깊이의 하 한입니다. 기본적으로 T 게이트만 깊이에서 계산 됩니다. 자세한 내용은 [깊이 카운터](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter) 를 참조 하세요.
-* __Width__: Q # 작업을 실행 하는 동안 할당 된 최대 수의 값에 대 한 하 한입니다. __깊이__ 와 __너비__ 의 하한값을 동시에 실현 하지 못할 수도 있습니다.
-* __BorrowedWidth__: Q # 작업 내에서 빌려 온 최대 수 비트 수입니다.
-
+|메트릭|Description|
+|----|----|
+|__CNOT__    |작업의 실행 수 `CNOT` (제어 된 Pauli X 작업이 라고도 함).|
+|__QubitClifford__ |단일 Clifford 및 Pauli 작업의 실행 수입니다.|
+|__Measure__(측정값)    |측정의 실행 횟수입니다.  |
+|__R__    |Clifford 및 Pauli 작업을 제외한 모든 단일 비트 회전의 실행 횟수입니다 `T` .  |
+|__T__    |작업의 실행 수 `T` 및 `T` 작업, T_x = .h 및 T_y = Hy. Hy를 포함 하는 변화 시키고입니다.  |
+|__Depth__|Q # 작업에 의해 실행 되는 퀀텀 회로 깊이의 하 한입니다. 기본적으로 깊이 메트릭은 게이트 수만 계산 `T` 합니다. 자세한 내용은 [깊이 카운터](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter)를 참조 하세요.   |
+|__Width__    |Q # 작업을 실행 하는 동안 할당 된 최대 수의 수에 대 한 하 한입니다. __깊이__ 와 __너비__ 의 하한값을 동시에 실현 하지 못할 수도 있습니다.  |
+|__BorrowedWidth__    |Q # 작업 내에서 빌려 온 최대 수입니다.  |
 
 ## <a name="providing-the-probability-of-measurement-outcomes"></a>측정 결과의 확률 제공
 
-<xref:microsoft.quantum.intrinsic.assertprob>에서 <xref:microsoft.quantum.intrinsic> 네임 스페이스를 사용 하 여 Q # 프로그램의 실행을 추진 하는 데 도움이 되는 측정 예상 확률에 대 한 정보를 제공할 수 있습니다. 다음 예제에서는 이에 대해 설명합니다.
+<xref:microsoft.quantum.diagnostics.assertmeasurementprobability> <xref:microsoft.quantum.diagnostics> 네임 스페이스에서를 사용 하 여 측정 작업의 예상 확률에 대 한 정보를 제공할 수 있습니다. 자세한 내용은 [퀀텀 추적 시뮬레이터](xref:microsoft.quantum.machines.qc-trace-simulator.intro) 를 참조 하세요.
 
-```qsharp
-operation Teleport(source : Qubit, target : Qubit) : Unit {
+## <a name="see-also"></a>참고 항목
 
-    using (qubit = Qubit()) {
-
-        H(q);
-        CNOT(qubit, target);
-
-        CNOT(source, qubit);
-        H(source);
-
-        AssertProb([PauliZ], [source], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
-        AssertProb([PauliZ], [qubit], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
-
-        if (M(source) == One)  { Z(target); X(source); }
-        if (M(qubit) == One) { X(target); X(qubit); }
-    }
-}
-```
-
-에서 해당 `ResourcesEstimator` `AssertProb` 측정을 기록 하 `PauliZ` `source` 고 `q` 확률 0.5를 사용 하 여 결과를 제공 해야 `Zero` 하는 경우 나중에 실행 하는 경우 `M` 결과 확률의 기록 된 값을 찾고 `M` 확률 0.5을 반환 `Zero` 합니다 `One` .
-
-
-## <a name="see-also"></a>추가 정보
-
-는 `ResourcesEstimator` 퀀텀 컴퓨터 [추적 시뮬레이터](xref:microsoft.quantum.machines.qc-trace-simulator.intro)를 기반으로 구축 되었으며,이를 통해 다양 한 메트릭 집합, 전체 호출 그래프에서 메트릭을 보고 하는 기능, 질문 # 프로그램에서 버그를 찾는 데 도움이 되는 [고유한 입력 검사기](xref:microsoft.quantum.machines.qc-trace-simulator.distinct-inputs) 와 같은 기능을 제공 합니다. 자세한 내용은 [추적 시뮬레이터](xref:microsoft.quantum.machines.qc-trace-simulator.intro) 설명서를 참조 하세요.
-
+- [퀀텀 추적 시뮬레이터](xref:microsoft.quantum.machines.qc-trace-simulator.intro)
+- [퀀텀 Toffoli 시뮬레이터](xref:microsoft.quantum.machines.toffoli-simulator)
+- [퀀텀 전체 상태 시뮬레이터](xref:microsoft.quantum.machines.full-state-simulator) 

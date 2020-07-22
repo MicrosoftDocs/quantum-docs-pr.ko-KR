@@ -6,12 +6,12 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.style
-ms.openlocfilehash: 3ddb5d67b972f69df1774b476a10e74dd16d97b7
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+ms.openlocfilehash: 26de7d5f639ea1b4df24232127b6f95cee3a041e
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85884201"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871385"
 ---
 # <a name="q-style-guide"></a>Q # 스타일 가이드 #
 ## <a name="general-conventions"></a>일반 규칙 ##
@@ -64,7 +64,7 @@ ms.locfileid: "85884201"
 | ---- | ------ |
 | 적용 | 입력으로 제공 된 작업을 라고 합니다. |
 | Assert | 가능한 퀀텀 측정의 결과에 대 한 가설은 시뮬레이터에 의해 확인 됩니다. |
-| 견적 | 하나 이상의 측정값 으로부터 그려진 추정치를 나타내는 고전 값이 반환 됩니다. |
+| 예측값 | 하나 이상의 측정값 으로부터 그려진 추정치를 나타내는 고전 값이 반환 됩니다. |
 | 측정값 | 퀀텀 측정이 수행 되며 결과가 사용자에 게 반환 됩니다. |
 | 준비 | 지정 된 비트 레지스터가 특정 상태로 초기화 됩니다. |
 | 예제 | 일부 분포에서 무작위로 값이 반환 됩니다. |
@@ -93,7 +93,7 @@ ms.locfileid: "85884201"
 
 # <a name="examples"></a>[예](#tab/examples)
 
-|   | 이름 | Description |
+|   | Name | Description |
 |---|------|-------------|
 | ☑ | `operation ReflectAboutStart` | 작업의 효과를 나타내려면 동사 ("반사")를 사용 하지 않습니다. |
 | ☒ | <s>`operation XRotation`</s> | 명사구를 사용 하는 것은 연산이 아니라 함수를 제안 합니다. |
@@ -126,7 +126,7 @@ Q # 프로그램에 대 한 진입점을 정의 하는 경우 Q # 컴파일러�
 
 # <a name="examples"></a>[예](#tab/examples)
 
-|   | 이름 | Description |
+|   | Name | Description |
 |---|------|-------------|
 | ☑ | `@EntryPoint() operation RunSimulation` | 작업 이름을 통해 진입점의 용도를 명확 하 게 전달 합니다. |
 | ☒ | <s>`@EntryPoint() operation Main`</s> | 를 사용 `Main` 하면 진입점의 목적이 명확 하 게 전달 되지 않으며 특성으로 중복 됩니다 `@EntryPoint()` . |
@@ -168,7 +168,7 @@ is Adj + Ctl {
 
 # <a name="examples"></a>[예](#tab/examples)
 
-|   | 이름 | Description |
+|   | Name | Description |
 |---|------|-------------|
 | ☑ | `X` | "$X $ 변환 적용"의 이해 하기 쉬운 약어 |
 | ☑ | `CNOT` | "제어-없음"에 대 한 이해 하기 쉬운 약어 |
@@ -225,7 +225,7 @@ Q #은 강력 하 고 staticly 지정 된 언어 이기 때문에 형식 변환 
 
 # <a name="examples"></a>[예](#tab/examples)
 
-|   | 이름 | Description |
+|   | Name | Description |
 |---|------|-------------|
 | ☒ | <s>`ToDouble`</s> | 전치사 "to"는 동사가 아닌 연산을 나타내는 동사 구를 생성 합니다. |
 | ☒ | <s>`AsDouble`</s> | 입력 형식이 함수 이름에서 명확 하지 않습니다. |
@@ -248,7 +248,7 @@ Q #은 강력 하 고 staticly 지정 된 언어 이기 때문에 형식 변환 
 
 # <a name="examples"></a>[예](#tab/examples)
 
-|   | 이름 | Description |
+|   | Name | Description |
 |---|------|-------------|
 | ☒ | <s>`operation _ApplyDecomposedOperation`</s> | `_`이 작업이 내부용 으로만 사용 됨을 나타내기 위해 밑줄을 사용 하지 않습니다. |
 | ☑ | `internal operation ApplyDecomposedOperation` | `internal`시작 부분에 있는 키워드는이 작업이 내부용 으로만 사용 됨을 나타냅니다. |
@@ -386,9 +386,8 @@ Q # 언어를 사용 하면 특수 형식의 문서 주석을 사용 하 여 작
 마찬가지로, 퀀텀 개발 키트와 함께 제공 되는 언어 서버는 이러한 주석을 사용 하 여 사용자가 Q # 코드에서 기호를 마우스로 가리킬 때 사용자에 게 도움을 제공 합니다.
 따라서 문서 주석을 사용 하면이 문서의 다른 규칙을 사용 하 여 쉽게 표현 되지 않는 세부 정보에 대 한 유용한 참조를 제공 하 여 사용자가 코드를 이해 하는 데 도움이 될 수 있습니다.
 
-<div class="nextstepaction">
-    [문서 주석 구문 참조](xref:microsoft.quantum.guide.filestructure#documentation-comments)
-</div>
+> [!div class="nextstepaction"]
+> [문서 주석 구문 참조](xref:microsoft.quantum.guide.filestructure#documentation-comments)입니다.
 
 이 기능을 효과적으로 사용 하 여 사용자를 돕기 위해 문서 주석을 작성할 때 몇 가지 사항을 염두에 두어야 합니다.
 

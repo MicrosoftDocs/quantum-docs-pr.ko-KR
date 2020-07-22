@@ -6,12 +6,12 @@ ms.author: bradben
 ms.date: 5/30/2020
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: d10f81a1e49235be8e02661dcd6d3c839485af6e
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+ms.openlocfilehash: 4b5e7b657f0e11fb4a14308c20859f4007729146
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885042"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871556"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit 릴리스 정보
 
@@ -21,6 +21,17 @@ ms.locfileid: "85885042"
 
 업데이트 지침은 [업데이트 가이드](xref:microsoft.quantum.update)를 참조하세요.
 
+
+## <a name="version-01220072031"></a>버전 0.12.20072031
+
+*릴리스 날짜: 2020 년 7 월 21 일*
+
+이 릴리스에는 다음이 포함됩니다.
+
+- Q # 노트북에서 열린 네임 스페이스는 이제 모든 이후 셀 실행에 사용할 수 있습니다. 이렇게 하면 예를 들어 각 코드 셀에서 관련 네임 스페이스를 열 필요 없이 노트북 맨 위에 있는 셀에서 한 번에 네임 스페이스를 열 수 있습니다. 새 `%lsopen` 매직 명령은 현재 열려 있는 네임 스페이스 목록을 표시 합니다.
+
+[라이브러리](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [컴파일러](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [런타임](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [샘플](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed), [IQ#](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed) 및 [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed)에 대한 비공개 PR의 전체 목록을 참조하세요.  
+
 ## <a name="version-01220070124"></a>버전 0.12.20070124
 
 *릴리스 날짜: 7 월 2 일, 2020*
@@ -28,7 +39,7 @@ ms.locfileid: "85885042"
 이 릴리스에는 다음이 포함됩니다.
 
 - `qdk-chem`레거시 전자적 구조 문제 serialization 형식 (예: FCIDUMP)을 [Broombridge](xref:microsoft.quantum.libraries.chemistry.schema.broombridge) 로 변환 하는 새로운 도구
-- Coherently에 대 한 [ `Microsoft.Quantum.Synthesis` 네임 스페이스](xref:microsoft.quantum.synthesis) 의 새로운 함수 및 작업에는 변환 및 분해 기반 합성 알고리즘을 사용 하 여 클래식 oracles 적용 됩니다.
+- [`Microsoft.Quantum.Synthesis`](xref:microsoft.quantum.synthesis)Coherently에 대 한 네임 스페이스의 새로운 함수 및 작업에는 변환 및 분해 기반 합성 알고리즘을 사용 하 여 클래식 oracles 적용 됩니다.
 - 이제 IQ # `%simulate` 에서, `%estimate` 및 기타 매직 명령에 대 한 인수를 허용 합니다. 자세한 내용은 [ `%simulate` 매직 명령 참조](xref:microsoft.quantum.iqsharp.magic-ref.simulate) 를 참조 하세요.
 - IQ #의 새 단계 표시 옵션입니다. 자세한 내용은 [ `%config` 매직 명령 참조](xref:microsoft.quantum.iqsharp.magic-ref.config) 를 참조 하세요.
 - `qsharp`이제 conda 패키지 ([qsharp](https://anaconda.org/quantum-engineering/qsharp) 및 [IQSHARP](https://anaconda.org/quantum-engineering/iqsharp))를 통해 IQ # 및 python 패키지를 제공 하 여 Q # jupyter 및 python 기능의 로컬 설치를 conda 환경에 간소화할 수 있습니다. 자세한 내용은 [q # Jupyter 노트북](xref:microsoft.quantum.install.jupyter) 및 [q # Python](xref:microsoft.quantum.install.python) 설치 가이드를 참조 하세요.
@@ -446,7 +457,7 @@ Quantum Development Kit 버전 0.5의 기존 Q# 프로젝트가 있는 경우, �
 
 *릴리스 날짜: 2018년 6월 22일*
 
-이 릴리스에는 향상된 디버깅 환경 및 향상된 성능뿐 아니라 다양한 커뮤니티 기여도 포함됩니다.  특히:
+이 릴리스에는 향상된 디버깅 환경 및 향상된 성능뿐 아니라 다양한 커뮤니티 기여도 포함됩니다.  특히 다음에 대해 주의하세요.
 
 * QuantumSimulator 대상 머신에 대한 작고 큰 시뮬레이션에서 모두 성능이 향상됨
 * 향상된 디버깅 기능

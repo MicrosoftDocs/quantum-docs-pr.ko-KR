@@ -6,12 +6,12 @@ ms.author: mamykhai@microsoft.com
 ms.date: 06/01/2020
 ms.topic: article
 uid: microsoft.quantum.guide.testingdebugging
-ms.openlocfilehash: cd619607af9e2b601f3bec1304c5729d84312f35
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+ms.openlocfilehash: db6e49e94e5ceb3b1b0b2d6ab57391618084072b
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85884077"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86870977"
 ---
 # <a name="testing-and-debugging"></a>테스트 및 디버깅
 
@@ -50,7 +50,7 @@ $ code . # To open in Visual Studio Code
     operation AllocateQubit () : Unit {
 
         using (qubit = Qubit()) {
-            Assert([PauliZ], [qubit], Zero, "Newly allocated qubit must be in the |0⟩ state.");
+            AssertMeasurement([PauliZ], [qubit], Zero, "Newly allocated qubit must be in the |0⟩ state.");
         }
         
         Message("Test passed");
@@ -177,7 +177,7 @@ operation AssertQubitsAreAvailable() : Unit
 이는 프로그램의 전역 상태와 해당 실행 환경에 따라 달라 지므로의 정의 `AssertQubitsAreAvailable` 도 작업 이어야 합니다.
 그러나이 전역 상태를 사용 하 여 간단한 `Bool` 값을 함수에 대 한 입력으로 생성할 수 있습니다 `Fact` .
 
-이러한 아이디어를 기반으로 하 [는 Prelude는](xref:microsoft.quantum.libraries.standard.prelude)두 가지 특히 유용한 어설션을 제공 <xref:microsoft.quantum.intrinsic.assert> 하며 <xref:microsoft.quantum.intrinsic.assertprob> 둘 다 작업으로 모델링 `()` 됩니다. 이러한 어설션은 각각 특정 측정값을 설명 하는 Pauli 연산자, 측정을 수행 하는 퀀텀 레지스터 및 가상 결과를 사용 합니다.
+이러한 아이디어를 기반으로 하 [는 Prelude는](xref:microsoft.quantum.libraries.standard.prelude)두 가지 특히 유용한 어설션을 제공 <xref:microsoft.quantum.diagnostics.assertmeasurement> 하며 <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> 둘 다 작업으로 모델링 `()` 됩니다. 이러한 어설션은 각각 특정 측정값을 설명 하는 Pauli 연산자, 측정을 수행 하는 퀀텀 레지스터 및 가상 결과를 사용 합니다.
 시뮬레이션에서 작업 하는 대상 컴퓨터는 [복제 안 함 정리](https://en.wikipedia.org/wiki/No-cloning_theorem)에 바인딩되지 않으며 이러한 어설션에 전달 되는 레지스터를 방해 하지 않고 이러한 측정값을 수행할 수 있습니다.
 그러면 시뮬레이터는 `PositivityFact` 앞서 설명한 함수와 비슷하며 가상 결과가 실제로 관찰 되지 않는 경우 계산을 중지 합니다.
 
@@ -185,14 +185,14 @@ operation AssertQubitsAreAvailable() : Unit
 using (register = Qubit()) 
 {
     H(register);
-    Assert([PauliX], [register], Zero);
+    AssertMeasurement([PauliX], [register], Zero);
     // Even though we do not have access to states in Q#,
     // we know by the anthropic principle that the state
     // of register at this point is |+〉.
 }
 ```
 
-복제 안 함 정리에서 퀀텀 상태를 검사 하지 못하게 하는 실제 퀀텀 하드웨어에서 `Assert` 및 작업은 `AssertProb` `()` 다른 영향 없이 반환 됩니다.
+복제 안 함 정리에서 퀀텀 상태를 검사 하지 못하게 하는 실제 퀀텀 하드웨어에서 `AssertMeasurement` 및 작업은 `AssertMeasurementProbability` `()` 다른 영향 없이 반환 됩니다.
 
 <xref:microsoft.quantum.diagnostics>네임 스페이스는 `Assert` 더 많은 고급 조건을 확인할 수 있는 패밀리의 여러 기능을 제공 합니다. 
 

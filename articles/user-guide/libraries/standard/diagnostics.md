@@ -5,12 +5,12 @@ author: cgranade
 uid: microsoft.quantum.libraries.diagnostics
 ms.author: chgranad@microsoft.com
 ms.topic: article
-ms.openlocfilehash: fa5173f710dd9e0b0b2c110e45aa0bf019111aca
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 324753cfa1b7d940bf5a0bbe7665f19cc6dda82c
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275705"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86870637"
 ---
 # <a name="diagnostics"></a>진단 #
 
@@ -61,19 +61,19 @@ Q # 표준 라이브러리는 다음과 같은 여러 가지 기능을 제공 �
 
 실제로 어설션은 퀀텀 메커니즘의 클래식 시뮬레이션이 [복제 안 함 정리](https://arxiv.org/abs/quant-ph/9607018)을 준수 하지 않아도 된다는 사실에 의존 합니다 .이를 위해 대상 컴퓨터에 시뮬레이터를 사용 하는 경우 비 물리적 측정과 어설션을 수행할 수 있습니다.
 따라서 하드웨어에를 배포 하기 전에 기존 시뮬레이터에서 개별 작업을 테스트할 수 있습니다.
-어설션을 평가할 수 없는 대상 컴퓨터에서는에 대 한 호출을 <xref:microsoft.quantum.intrinsic.assert> 안전 하 게 무시할 수 있습니다.
+어설션을 평가할 수 없는 대상 컴퓨터에서는에 대 한 호출을 <xref:microsoft.quantum.diagnostics.assertmeasurement> 안전 하 게 무시할 수 있습니다.
 
-보다 일반적으로 <xref:microsoft.quantum.intrinsic.assert> 지정 된 Pauli의 지정 된 비트를 측정 하는 작업에는 항상 지정 된 결과가 포함 됩니다.
+보다 일반적으로 <xref:microsoft.quantum.diagnostics.assertmeasurement> 지정 된 Pauli의 지정 된 비트를 측정 하는 작업에는 항상 지정 된 결과가 포함 됩니다.
 어설션이 실패 하면 지정 된 메시지와 함께를 호출 하 여 실행이 종료 `fail` 됩니다.
 기본적으로이 작업은 구현 되지 않습니다. 이를 지원할 수 있는 시뮬레이터는 런타임 검사를 수행 하는 구현을 제공 해야 합니다.
-`Assert`에 시그니처가 `((Pauli[], Qubit[], Result, String) -> ())` 있습니다.
-`Assert`는 빈 튜플을 출력 형식으로 사용 하는 함수 이므로, `Assert` Q # 프로그램 내에서를 호출 하는 것에 영향을 주지 않습니다.
+`AssertMeasurement`에 시그니처가 `((Pauli[], Qubit[], Result, String) -> ())` 있습니다.
+`AssertMeasurement`는 빈 튜플을 출력 형식으로 사용 하는 함수 이므로, `AssertMeasurement` Q # 프로그램 내에서를 호출 하는 것에 영향을 주지 않습니다.
 
-<xref:microsoft.quantum.intrinsic.assertprob>작업 함수는 지정 된 Pauli의 지정 된 비트 수를 측정 하는 assert를 사용 하 여 지정 된 결과가 특정 허용 범위 내에서 지정 된 확률로 포함 되도록 합니다.
+<xref:microsoft.quantum.diagnostics.assertmeasurementprobability>작업 함수는 지정 된 Pauli의 지정 된 비트 수를 측정 하는 assert를 사용 하 여 지정 된 결과가 특정 허용 범위 내에서 지정 된 확률로 포함 되도록 합니다.
 허용 오차는 덧셈 (예: `abs(expected-actual) < tol` )입니다.
 어설션이 실패 하면 지정 된 메시지와 함께를 호출 하 여 실행이 종료 `fail` 됩니다.
 기본적으로이 작업은 구현 되지 않습니다. 이를 지원할 수 있는 시뮬레이터는 런타임 검사를 수행 하는 구현을 제공 해야 합니다.
-`AssertProb`에 시그니처가 `((Pauli[], Qubit[], Result, Double, String, Double) -> Unit)` 있습니다. 첫 번째 `Double` 매개 변수는 결과의 원하는 확률을 제공 하 고 두 번째 매개 변수는 허용 오차를 제공 합니다.
+`AssertMeasurementProbability`에 시그니처가 `((Pauli[], Qubit[], Result, Double, String, Double) -> Unit)` 있습니다. 첫 번째 `Double` 매개 변수는 결과의 원하는 확률을 제공 하 고 두 번째 매개 변수는 허용 오차를 제공 합니다.
 
 단일 측정을 어설션하는 것 보다 더 많은 작업을 수행할 수 있습니다. 시뮬레이터에서 사용 되는 기존 정보를 복사 하는 것이 적합할,이를 통해 실제로 어설션을 테스트할 수 있습니다.
 특히,이를 통해 실제 하드웨어에서 사용할 수 없는 *호환 되지* 않는 측정에 대해 설명할 수 있습니다.
@@ -100,7 +100,7 @@ using (register = Qubit()) {
 ```
 
 그러나 일반적으로 Pauli 연산자의 eigenstates와 일치 하지 않는 상태에 대 한 어설션을 액세스할 수 없습니다.
-예를 들어 $ \ket{\psi} = (\ket {0} + e ^ {i \pi/8} \ket {1} )/\pi {2} $는 <xref:microsoft.quantum.intrinsic.assertprob> 상태 $ \ket{\psi '} $가 $ \ket{\psi} $와 같은지를 고유 하 게 확인 하는 데 사용할 수 없는 모든 pauli 연산자의 eigenstate가 아닙니다.
+예를 들어 $ \ket{\psi} = (\ket {0} + e ^ {i \pi/8} \ket {1} )/\pi {2} $는 <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> 상태 $ \ket{\psi '} $가 $ \ket{\psi} $와 같은지를 고유 하 게 확인 하는 데 사용할 수 없는 모든 pauli 연산자의 eigenstate가 아닙니다.
 대신, 시뮬레이터에서 지 원하는 기본 형식을 사용 하 여 직접 테스트할 수 있는 가정으로 assertion $ \ket{\psi '} = \ket{\psi} $를 분해 해야 합니다.
 이렇게 하려면 $ \ket{\psi} = \alpha \ket {0} + \alpha \ket {1} $ 복소수 (복소수 $ \alpha = a \_ r + a \_ i $ 및 $ \alpha $)를 사용 합니다.
 이 식에는 \{ \_ \_ \_ \_ \} 각 복소수를 실수와 허수부의 합계로 표현할 수 있으므로 지정 하려면 네 개의 실수 $ a r, a i, b r, b i $가 필요 합니다.

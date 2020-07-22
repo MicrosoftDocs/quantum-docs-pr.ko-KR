@@ -1,87 +1,35 @@
 ---
-title: 'Microsoft Q # 화학 라이브러리 설치 및 유효성 검사'
+title: 'Microsoft Q # 화학 라이브러리 설치'
 description: Microsoft 퀀텀 화학 라이브러리를 설치 하 고 NWChem 계산 화학 플랫폼과 함께 사용 하는 방법을 알아봅니다.
 author: guanghaolow
 ms.author: gulow
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.chemistry.concepts.installation
-ms.openlocfilehash: 48bf7bc980e238e622053f5c2bdd09604c572596
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 0e870bb3421dddb632375a2fc8633249954f8c8b
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85276104"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871537"
 ---
-# <a name="chemistry-library-installation-and-validation"></a>화학 라이브러리 설치 및 유효성 검사
+# <a name="chemistry-library-installation"></a>화학 라이브러리 설치
 
-퀀텀 개발 키트는 NuGet 패키지를 통해 퀀텀 화학 응용 프로그램에 대 한 지원을 제공 합니다 [`Microsoft.Quantum.Chemistry`](https://www.nuget.org/packages/Microsoft.Quantum.Chemistry) .
-다른 NuGet 패키지와 마찬가지로, 프로젝트에 화학 라이브러리를 추가 하는 것은 간단 합니다.
-
-**Visual Studio 2019:** Visual Studio 2019을 사용 하는 경우 NuGet 패키지 관리자를 사용 하 여 퀀텀 화학 패키지를 추가할 수 있습니다.
-패키지 관리자를 열려면 아래 스크린샷에서와 같이 화학 라이브러리를 추가 하려는 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 "NuGet 패키지 관리 ..."를 선택 합니다.
-
-![Visual Studio 2019에서 NuGet 패키지 관리자 사용](~/media/vs2017-nuget-manage-packages.png)
-
-찾아보기 탭에서 패키지 이름 "Microsoft. m a."를 검색 합니다.
-
-> [!NOTE]
-> "시험판 포함"을 사용 해야 합니다.
-
-![시험판 포함 확인란](~/media/vs2017-nuget-package-search.png)
-
-그러면 다운로드할 수 있는 패키지가 나열 됩니다.
-왼쪽 창에서 "Microsoft"를 클릭 하 고 오른쪽 창에서 최신 시험판 버전을 선택한 후 "설치"를 클릭 합니다.
-
-![최신 Microsoft 양자 패키지를 설치 합니다.](~/media/vs2017-nuget-select-chem.png)
-
-자세한 내용은 [패키지 관리자 UI 가이드](https://docs.microsoft.com/nuget/tools/package-manager-ui)를 참조 하세요.
-
-또는 패키지 관리자 콘솔을 사용 하 여 명령줄 인터페이스를 통해 퀀텀 화학 라이브러리를 프로젝트에 추가할 수 있습니다.
-
-![명령줄에서 패키지 관리자 콘솔 사용](~/media/vs2017-nuget-console-menu.png)
-
-패키지 관리자 콘솔에서 다음을 실행 합니다.
-
-```
-Install-Package Microsoft.Quantum.Chemistry
-```
-
-자세한 내용은 [패키지 관리자 콘솔 가이드](https://docs.microsoft.com/nuget/tools/package-manager-console)를 참조 하세요.
-
-**명령줄 또는 Visual Studio Code:** 명령줄을 사용 하거나 Visual Studio Code 내에서 명령을 사용 하 여 `dotnet` NuGet 패키지 참조를 프로젝트에 추가할 수 있습니다.
-
-```dotnetcli
-dotnet add package Microsoft.Quantum.Chemistry
-```
-
-## <a name="verifying-your-installation"></a>설치 확인 
-
-퀀텀 개발 키트의 나머지와 마찬가지로 퀀텀 화학 라이브러리에는 신속 하 게 시작 및 실행 하는 데 도움이 되는 여러 가지 문서화 된 샘플이 제공 됩니다.
-이러한 예제를 사용 하 여 설치를 테스트 하려면 [주 샘플 리포지토리](https://github.com/Microsoft/Quantum)를 복제 한 다음 샘플 중 하나를 실행 합니다.  예를 들어 예제를 실행 하려면 다음을 수행 합니다 [`MolecularHydrogen`](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/MolecularHydrogen) .
-
-```bash
-git clone https://github.com/Microsoft/Quantum.git
-cd Quantum/samples/chemistry/MolecularHydrogen
-dotnet run
-```
-
-리포지토리를 복제 한 후 Microsoft Visual Studio를 사용 하 여 퀀텀 화학 라이브러리의 설치를 확인 하려면 다음을 수행 합니다.
-    1. 화학 폴더에서 ChemistrySamples 솔루션을 엽니다.  
-    2. 샘플/1을 선택 합니다. Simple Molecules/MolecularHydrogen를 시작 프로젝트로
-    3. F5 키를 눌러 분자 Hydrogen 퀀텀 단계 예측 데모를 실행 합니다.
-
-에너지 수준 값을 예측 하는 방법에 대 한 자세한 내용은 [에너지 수준 예측 가져오기](xref:microsoft.quantum.chemistry.examples.energyestimate) 를 참조 하세요.   
-
-
-## <a name="using-the-quantum-development-kit-with-nwchem"></a>NWChem에서 퀀텀 개발 키트 사용 ##
-
-MolecularHydrogen 샘플은 수동으로 구성 된 분자 입력 데이터를 사용 합니다.  이는 작은 예제에 적합 하지만, 규모의 퀀텀 연금술에는 수백만 또는 수십억 개의 용어로 Hamiltonians 필요 합니다. 확장 가능한 계산 화학 패키지에 의해 생성 된 이러한 Hamiltonians는 너무 커서 수동으로 가져올 수 없습니다. 
+[ **MolecularHydrogen** 샘플](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/MolecularHydrogen) 은 수동으로 구성 된 분자 입력 데이터를 사용 합니다.
+이는 작은 예의 경우에는 적합 하지만, 규모의 퀀텀 연금술에는 수백만 또는 수십억 개의 용어로 Hamiltonians 필요 합니다.
+확장 가능한 계산 화학 패키지에 의해 생성 된 이러한 Hamiltonians는 너무 커서 수동으로 가져올 수 없습니다.
 
 퀀텀 개발 키트에 대 한 퀀텀 화학 라이브러리는 계산 연금술 패키지에서 잘 작동 하도록 설계 되었습니다. 특히 태평양 연안 국가의 과학에 게는 EMSL (환경적 분자 연구소)에서 개발한 [**Nwchem**](http://www.nwchem-sw.org/) 계산 화학 플랫폼이 있습니다.
-특히 `Microsoft.Quantum.Chemistry` 패키지는 [Broombridge 스키마](xref:microsoft.quantum.libraries.chemistry.schema.broombridge)에 표시 되는 퀀텀 화학 시뮬레이션 문제의 인스턴스를 로드 하기 위한 도구를 제공 하며, 최신 버전의 NWChem에서 내보내기도 지원 합니다.
+특히 [Broombridge 스키마](xref:microsoft.quantum.libraries.chemistry.schema.broombridge)에 표시 되는 퀀텀 화학 시뮬레이션 문제의 인스턴스를 로드 하기 위한 도구 [ **Microsoft.Quantum.Chemistry** 를 제공 하며](https://www.nuget.org/packages/Microsoft.Quantum.Chemistry) , 최신 버전의 nwchem에서 내보내기도 지원 합니다.
 
-퀀텀 개발 키트와 함께 NWChem을 사용 하 여 시작 하 고 실행 하려면 다음 방법 중 하나를 사용 하는 것이 좋습니다.
+또한 퀀텀 개발 키트 화학 라이브러리는 `qdk-chem` 레거시 형식 및 [Broombridge](xref:microsoft.quantum.libraries.chemistry.schema.broombridge)를 변환 하는 데 사용할 수 있는 명령줄 도구인를 제공 합니다.
+
+이 섹션에서는 NWChem 및 Broombridge 또는 레거시 형식과 함께 퀀텀 개발 키트를 사용 하는 방법에 대해 자세히 설명 합니다 `qdk-chem` .
+
+## <a name="using-the-quantum-development-kit-with-nwchem"></a>NWChem에서 퀀텀 개발 키트 사용
+
+퀀텀 개발 키트와 함께 NWChem을 사용 하 여 시작 하 고 실행 하려면 다음 방법 중 하나를 사용 합니다.
+
 - 기존 Broombridge [파일을 사용](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/IntegralData/YAML)하 여 시작 합니다.
 - 웹 기반 프런트 엔드를 사용 하는 [Microsoft Quantum Development Kit에 대 한 Emsl 화살표 작성기](https://arrows.emsl.pnnl.gov/api/qsharp_chem) 를 사용 하 여 새 Broombridge 분자 입력 파일을 생성 합니다.  
 - PNNL에서 제공 하는 [Docker 이미지](https://hub.docker.com/r/nwchemorg/nwchem-qc/) 를 사용 하 여 NWChem을 실행 하거나
@@ -171,4 +119,27 @@ PowerShell의 기본 제공 도움말 기능을 사용 하 여 자세한 정보�
 ```powershell
 Convert-NWChemToBroombridge -?
 Get-Help Convert-NWChemToBroombridge -Full
+```
+
+## <a name="using-the-quantum-development-kit-with-qdk-chem"></a>에서 퀀텀 개발 키트 사용`qdk-chem`
+
+를 설치 하려면 `qdk-chem` 명령줄에서 .NET Core SDK를 사용할 수 있습니다.
+
+```dotnetcli
+dotnet tool install --global Microsoft.Quantum.Chemistry.Tools
+```
+
+를 설치한 후에는 `qdk-chem` 옵션을 사용 `--help` 하 여 도구에서 제공 하는 기능에 대 한 자세한 정보를 얻을 수 있습니다 `qdk-chem` .
+
+Broombridge에서 변환 하려면 다음 명령을 사용할 수 있습니다 `qdk-chem convert` .
+
+```
+qdk-chem convert --from fcidump --to broombridge data.fcidump --out data.yml
+```
+
+`qdk-chem convert`이 명령은 표준 입력의 데이터를 수락 하 고 표준 출력에 쓸 수도 있습니다 .이는 특히 스크립트 내에서 사용 하 고 기존 형식으로 내보내는 도구와 통합 하는 데 유용 합니다.
+예를 들어 Bash에서는 다음과 같습니다.
+
+```bash
+cat data.fcidump | qdk-convert --from fcidump --to broombridge - > data.yml
 ```
