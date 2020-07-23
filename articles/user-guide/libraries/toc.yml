@@ -3,6 +3,8 @@
 - name: 표준 라이브러리
   topicHref: standard/index.md
   href: standard/toc.yml
+- name: 추가 Q# 라이브러리 사용
+  href: additional-libraries.md
 - name: 양자 화학 라이브러리
   topicHref: chemistry/index.md
   href: chemistry/toc.yml
