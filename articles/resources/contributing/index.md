@@ -6,12 +6,12 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing
-ms.openlocfilehash: cf913a09395f0694a51645ec8f91171e5b1555c3
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 108a50302422e5ae41e14b30ef22169370c2a35a
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85273467"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871419"
 ---
 # <a name="contributing-to-the-quantum-development-kit"></a>Quantum Development Kit 참여
 
@@ -61,10 +61,9 @@ Quantum Development Kit에는 양자 프로그램을 작성하기 위한 플랫�
 > [!NOTE]
 > 죄송하지만 지금은 [**microsoft/Quantum-NC**](https://github.com/microsoft/Quantum-NC) 리포지토리의 코드 및 설명서에 참여하실 수 없습니다. 그렇지만 보내주시는 버그 보고서를 감사히 사용하고 있습니다.
 
-다른 이벤트 또는 Quantum Development Kit와 관련된 보조 기능에 초점을 맞춘 몇 가지 기타 특수한 리포지토리가 더 있습니다.
+Quantum Development Kit와 관련된 보조 기능에 초점을 맞춘 몇 가지 기타 특수한 리포지토리가 더 있습니다.
 
 - [**msr-quarc/qsharp.sty**](https://github.com/msr-quarc/qsharp.sty): Q# 구문에 대한 LaTeX 형식 지원입니다.
-- [**msr-quarc/intern-workshop-2019**](https://github.com/msr-quarc/intern-workshop-2019): 2019년 임시 워크샵에서 제공된 Deutsch–Jozsa 자습서용 IQ# Notebook입니다.
 
 ## <a name="next-steps"></a>다음 단계
 

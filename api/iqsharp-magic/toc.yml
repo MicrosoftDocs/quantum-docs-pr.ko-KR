@@ -32,6 +32,8 @@
   name: '%kata 매직 명령'
 - href: lsmagic.md
   name: '%lsmagic 매직 명령'
+- href: lsopen.md
+  name: '%lsopen 매직 명령'
 - href: package.md
   name: '%package 매직 명령'
 - href: performance.md

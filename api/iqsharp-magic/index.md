@@ -1,5 +1,18 @@
+---
+title: IQ# 매직 명령
+author: rmshaffer
+uid: microsoft.quantum.iqsharp.magic-ref.index
+ms.author: rmshaffer
+ms.date: 07/21/2020
+ms.topic: article
+ms.openlocfilehash: 971787adae03af35d2e5b408fb88356a8b7df90a
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86870705"
+---
 # <a name="iq-magic-commands"></a>IQ# 매직 명령
-
 | 매직 명령 | 요약 |
 |---------------|---------|
 | [`%azure.connect`](xref:microsoft.quantum.iqsharp.magic-ref.azure.connect) | Azure Quantum 작업 영역에 연결하거나 현재 연결 상태를 표시합니다. |
@@ -19,6 +32,7 @@
 | [`%estimate`](xref:microsoft.quantum.iqsharp.magic-ref.estimate) | ResourcesEstimator 대상 머신에서 지정된 함수나 연산을 실행합니다. |
 | [`%kata`](xref:microsoft.quantum.iqsharp.magic-ref.kata) | 단일 테스트를 실행합니다. |
 | [`%lsmagic`](xref:microsoft.quantum.iqsharp.magic-ref.lsmagic) | 현재 사용할 수 있는 모든 매직 명령 목록을 반환합니다. |
+| [`%lsopen`](xref:microsoft.quantum.iqsharp.magic-ref.lsopen) | 현재 열려 있는 네임스페이스 및 해당 별칭을 나열합니다. |
 | [`%package`](xref:microsoft.quantum.iqsharp.magic-ref.package) | NuGet 패키지를 로드하는 기능을 제공합니다. |
 | [`%performance`](xref:microsoft.quantum.iqsharp.magic-ref.performance) | 이 커널에 대한 현재 성능 메트릭을 보고합니다. |
 | [`%simulate`](xref:microsoft.quantum.iqsharp.magic-ref.simulate) | QuantumSimulator 대상 컴퓨터에서 지정된 함수나 연산을 실행합니다. |

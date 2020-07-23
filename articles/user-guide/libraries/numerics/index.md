@@ -6,12 +6,12 @@ ms.author: thhaner
 ms.date: 5/14/2019
 ms.topic: article
 uid: microsoft.quantum.numerics.intro
-ms.openlocfilehash: efd1a712616534ac281433fc008f0983271881d7
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 9552f3683e1df8cb10d19d0b3f85223df056f83d
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85273970"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871351"
 ---
 # <a name="introduction-to-the-quantum-numerics-library"></a>양자 숫자 라이브러리 소개
 
@@ -33,9 +33,10 @@ ms.locfileid: "85273970"
 
 지금까지 언급한 정수 산술 연산 외에도, 숫자 라이브러리는 다음을 제공합니다.
 
- - 1~2개의 양자 정수를 입력으로 사용하는 부호 있는(없는) 정수 함수(곱하기, 제곱, 나머지 있는 나누기, 역함수, ...)
- - 1~2개의 양자 고정 소수점 수를 입력으로 사용하는 고정 소수점 함수(더하기/빼기, 곱하기, 제곱, 1/x, 다항식 계산)
+- 1~2개의 양자 정수를 입력으로 사용하는 부호 있는(없는) 정수 함수(곱하기, 제곱, 나머지 있는 나누기, 역함수, ...)
+- 1~2개의 양자 고정 소수점 수를 입력으로 사용하는 고정 소수점 함수(더하기/빼기, 곱하기, 제곱, 1/x, 다항식 계산)
 
 ## <a name="getting-started"></a>시작
 
-숫자 라이브러리를 시작하려면 [설치 가이드](xref:microsoft.quantum.numerics.installation)를 확인하고 [숫자 라이브러리 사용](xref:microsoft.quantum.numerics.usage)에 대한 자세한 내용을 참조하세요.
+> [!div class="nextstepaction"]
+> [숫자 라이브러리 사용에 대해 알아보기](xref:microsoft.quantum.numerics.usage)
