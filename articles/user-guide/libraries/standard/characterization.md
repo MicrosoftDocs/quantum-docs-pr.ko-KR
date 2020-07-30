@@ -6,12 +6,12 @@ uid: microsoft.quantum.libraries.characterization
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 7ed92c29020ccf389faa099f5bd80516af525578
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 9d763d11ef9c08cc0941cade217dbb2942ef4bf9
+ms.sourcegitcommit: 2f4c637e194dc2b5d18539469ed37444e2800199
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275766"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87436533"
 ---
 # <a name="quantum-characterization-and-statistics"></a>퀀텀 특성화 및 통계 #
 
@@ -96,7 +96,7 @@ Concretely, \begin{equation} \Pr(\phi | d) = \frac{\Pr(d | \phi) \Pr(\phi)}{\int
 이에 대 한 자세한 내용은 $ 비트 변수 $x $를 $n 합니다.
 이전 배포 $ \Pr (x) $는 $2 ^ n $ $x $의 가상 값을 지원 합니다.
 즉, $x를 매우 정확 하 게 예측 해야 하는 경우에는 Bayesian 단계 예측에 필요한 메모리 및 처리 시간이 너무 늘어날 수 있습니다.
-퀀텀 시뮬레이션 같은 일부 응용 프로그램의 경우에는 limitted 정확도가 Shor의 알고리즘과 같은 다른 응용 프로그램에서 해당 단계 예측 단계 내에 정확한 Bayesian 유추를 사용할 수 없습니다.  이러한 이유로 [RWPE (임의 워크 단계 예측)](xref:microsoft.quantum.research.randomwalkphaseestimation.randomwalkphaseestimation) 와 같은 대략적인 Bayesian 메서드 및 [강력한 단계 추정치](xref:microsoft.quantum.characterization.robustphaseestimation)와 같은 Bayesian 없는 방법에 대 한 구현도 제공 합니다.
+퀀텀 시뮬레이션 같은 일부 응용 프로그램의 경우에는 limitted 정확도가 Shor의 알고리즘과 같은 다른 응용 프로그램에서 해당 단계 예측 단계 내에 정확한 Bayesian 유추를 사용할 수 없습니다.  이러한 이유로 [RWPE (임의 워크 단계 예측)](xref:microsoft.quantum.research.characterization.randomwalkphaseestimation) 와 같은 대략적인 Bayesian 메서드 및 [강력한 단계 추정치](xref:microsoft.quantum.characterization.robustphaseestimation)와 같은 Bayesian 없는 방법에 대 한 구현도 제공 합니다.
 
 ### <a name="robust-phase-estimation"></a>강력한 단계 예측 ###
 

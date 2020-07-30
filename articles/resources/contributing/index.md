@@ -6,12 +6,12 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing
-ms.openlocfilehash: 108a50302422e5ae41e14b30ef22169370c2a35a
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+ms.openlocfilehash: c5acd6c2b3163488a9b4c6e52e6d34489a8f4056
+ms.sourcegitcommit: 2f4c637e194dc2b5d18539469ed37444e2800199
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871419"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87436564"
 ---
 # <a name="contributing-to-the-quantum-development-kit"></a>Quantum Development Kit 참여
 
@@ -19,7 +19,7 @@ Quantum Development Kit는 양자 프로그램을 작성하기 위한 도구 모
 양자 컴퓨팅을 검색하고, 양자 알고리즘에서 연구를 수행하고, 양자 디바이스에 대한 새 애플리케이션을 개발하고, 양자 프로그래밍을 최대한 활용하기 위해 작업하는 광범위한 사용자 커뮤니티의 일부입니다.
 이 커뮤니티의 멤버인 Quantum Development Kit는 다양한 배경을 지닌 양자 개발자들에게 필요한 기능을 제공하는 것을 목표로 합니다.
 Quantum Development Kit에 참여하면 다른 양자 개발자가 사용하는 도구, 이러한 도구를 문서화하는 방법 및 전체 양자 프로그래밍 커뮤니티를 더 나은 검색 및 생성 환경으로 만드는 데 도움이 되는 새로운 기능을 구축하여 이러한 목표를 달성하는 데 기여할 수 있습니다.
-당사는 여러분의 자발적인 참여에 매우 감사드리며 당사 커뮤니티의 발전에 참여할 수 있는 기회를 드리고자 합니다.
+당사는 여러분의 자발적인 참여에 매우 감사드리며 당사 커뮤니티의 발전에 참여할 수 있는 기회를 드리고자 합니다. 
 
 이 가이드에서는 점점 더 확장되고 있는 양자 프로그래밍 커뮤니티에 기여하는 방법을 설명합니다.
 
