@@ -6,12 +6,12 @@ ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.python
-ms.openlocfilehash: ec5e66e0c85d89888a8ff1e7d6bf18bf89ff44ac
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+ms.openlocfilehash: 4d148435f01d975e690828dd02335758fc71dfe4
+ms.sourcegitcommit: 2f4c637e194dc2b5d18539469ed37444e2800199
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871589"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87436550"
 ---
 # <a name="develop-with-q-and-python"></a>Q# 및 Python을 사용하여 개발
 
@@ -97,7 +97,7 @@ VS Code를 사용하려면 다음을 수행합니다.
     import qsharp
     from Qrng import SampleQuantumRandomNumberGenerator
 
-    SampleQuantumRandomNumberGenerator.simulate()
+    print(SampleQuantumRandomNumberGenerator.simulate())
     ```
 
 1. 설치하는 동안 만든 환경(즉, `qsharp`을 설치한 conda 또는 Python 환경)에서 다음과 같이 프로그램을 실행합니다.
@@ -106,7 +106,7 @@ VS Code를 사용하려면 다음을 수행합니다.
     python host.py
     ```
 
-1. 호출한 작업의 결과가 표시됩니다. 이 예에서는 작업에서 임의의 결과를 생성하기 때문에 화면에 `Zero` 또는 `One`이 출력됩니다. 프로그램을 반복해서 실행하면 각 결과가 약 절반의 시간 동안 표시됩니다.
+1. 호출한 작업의 결과가 표시됩니다. 이 예에서는 작업에서 임의의 결과를 생성하기 때문에 화면에 `0` 또는 `1`이 출력됩니다. 프로그램을 반복해서 실행하면 각 결과가 약 절반의 시간 동안 표시됩니다.
 
 > [!NOTE]
 > * Python 코드는 일반적인 Python 프로그램입니다. Python 기반 Jupyter Notebook을 비롯한 Python 환경을 사용하여 Python 프로그램을 작성하고 Q# 작업을 호출할 수 있습니다. Python 프로그램은 Python 코드 자체와 동일한 폴더에 있는 모든 .qs 파일에서 Q# 작업을 가져올 수 있습니다.
