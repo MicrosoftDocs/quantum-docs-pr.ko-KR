@@ -1,28 +1,31 @@
 ---
-title: 'Q의 변수 #'
+title: 변수Q#
 description: 채우기 설명
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.variables
-ms.openlocfilehash: 08301f408dcb2211ba25c582a5e5aa43310b714a
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 00af0989cd5a1f9ccc7d9f2545acd0d256bc7eb9
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885289"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867848"
 ---
-# <a name="variables-in-q"></a>Q의 변수 #
+# <a name="variables-in-no-locq"></a>변수Q#
 
-Q #은 식에 바인딩된/할당 된 변경 가능한 기호 또는 *변수*를 구분 합니다.
+Q#식에 바인딩된/할당 된 변경 가능한 기호 또는 *변수*를 구분 합니다.
 일반적으로 컴파일러에서 더 많은 최적화를 수행할 수 있기 때문에 변경할 수 없는 기호를 사용 하는 것이 좋습니다.
 
 바인딩의 왼쪽은 기호 튜플 및 식의 오른쪽으로 구성 되어 있습니다.
 
 ## <a name="immutable-variables"></a>변경할 수 없는 변수
 
-키워드를 사용 하 여 작업 또는 함수 내에서 다시 사용 하기 위해 Q #의 모든 형식 값을 변수에 할당할 수 있습니다 `let` . 
+Q#키워드를 사용 하 여 연산이 나 함수 내에서 다시 사용 하기 위해 변수에 모든 형식의 값을 할당할 수 있습니다 `let` . 
 
 변경할 수 없는 바인딩은 키워드로 구성 된 `let` 다음에는 기호 또는 기호 튜플, 등호 `=` , 기호를 바인딩할 식, 종료 세미콜론으로 구성 됩니다.
 
@@ -55,7 +58,7 @@ let measurementOperator = [PauliX, PauliZ, PauliZ, PauliX, PauliI];
 
 #### <a name="apply-and-reassign-statements"></a>적용 및 재할당 문
 
-특정 종류의 `set` -문과 *적용 및 다시 할당* 문은 오른쪽이 이항 연산자의 응용 프로그램으로 구성 되 고 결과가 연산자의 왼쪽 인수에 다시 바인딩 되는 경우 편리한 연결 방법을 제공 합니다. 예:
+특정 종류의 `set` -문과 *적용 및 다시 할당* 문은 오른쪽이 이항 연산자의 응용 프로그램으로 구성 되 고 결과가 연산자의 왼쪽 인수에 다시 바인딩 되는 경우 편리한 연결 방법을 제공 합니다. 예를 들면 다음과 같습니다.
 
 ```qsharp
 mutable counter = 0;
@@ -107,7 +110,7 @@ function ComplexSum(reals : Double[], ims : Double[]) : Complex[] {
 }
 ```
 
-배열의 경우 [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) Q # 표준 라이브러리는 일반적인 배열 초기화 및 조작 요구에 필요한 도구를 제공 하므로 첫 번째 위치의 배열 항목을 업데이트 하지 않아도 됩니다. 
+배열의 경우 [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) Q# 표준 라이브러리는 여러 일반적인 배열 초기화 및 조작 요구에 필요한 도구를 제공 하므로 첫 번째 위치의 배열 항목을 업데이트 하지 않아도 됩니다. 
 
 필요에 따라 업데이트 및 재할당 문이 대안을 제공 합니다.
 
@@ -163,7 +166,7 @@ function PauliEmbedding(pauli : Pauli, length : Int, location : Int) : Pauli[] {
 바인딩의 오른쪽이 튜플이 면 할당 시 해당 튜플을 분해할 수 있습니다.
 이러한 분해에는 중첩 된 튜플이 포함 될 수 있으며, 모든 전체 또는 부분 분해는 오른쪽에 있는 튜플의 모양이 기호 튜플의 모양과 호환 되는 한 유효 합니다.
 
-예를 들면 다음과 같습니다.
+예를 들어:
 
 ```qsharp
 let (i, f) = (5, 0.1); // i is bound to 5 and f to 0.1
@@ -198,7 +201,7 @@ let n = 8;
 ...                 // n is 8
 ```
 
-및
+and
 
 ```qsharp
 if (a == b) {
@@ -236,4 +239,4 @@ if (a == b) {
 
 ## <a name="next-steps"></a>다음 단계
 
-Q #의 이상 [비트 작업](xref:microsoft.quantum.guide.qubits) 에 대해 알아봅니다.
+에서의 이상 [비트 작업](xref:microsoft.quantum.guide.qubits) 에 대해 알아봅니다 Q# .

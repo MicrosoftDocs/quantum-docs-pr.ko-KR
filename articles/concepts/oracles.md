@@ -1,6 +1,8 @@
 ---
 제목: 퀀텀 oracles 설명: 다른 알고리즘에 대 한 입력으로 사용 되는 퀀텀 oracles 및 블랙 박스 작업을 사용 하 고 정의 하는 방법을 알아봅니다.
 작성자: cgranade uid: oracles. author: Christopher.Granade@microsoft.com ms. 날짜: 07/11/2018 밀리초. 토픽: 문서 번호:
+- "Q#"
+- "$$v"
 - "$$"
 - "$$"
 - "$"
@@ -105,7 +107,7 @@ $$
 이제 $ = 생성을 통해 o o ^ ^ ^ \dagger $ 이 (가) 이전 문제를 모두 해결 했습니다.
 
 > [!TIP]
->$O = o ^ ^ ^ 2를 확인 하려면 { \dagger } $ $ = \boldone $ $ \oplus b \oplus b \oplus = $ $ \in \[ OP. NO LOC ({)] 0, 1 \[ ! OP. NO LOC (})] $ .
+>$O = o ^ ^ ^ 2를 확인 하려면 { \dagger } $ $ = \boldone $ $ 모든 a에 대해 \oplus b \oplus a와 b a를 모두 포함 하 여 o ^ 2를 확인 = $ $ 합니다. b \in \: :: 비 loc ({)::: 0, 1 \: :: no loc (})::: $
 >결과적으로 $ O \ket { x } \ket { y \oplus f (x) } = \ket { x } \ket { y \oplus f (x) \oplus f (x) } = \ket { x } \ket { y } $ 입니다.
 
 중요 한 점은 각 계산 기준 상태에 대해 oracle을 정의 $ \ket { } \ket { } $ 하는 것은 $ $ 다른 모든 상태에 대해 O가 작동 하는 방식도 정의 합니다.

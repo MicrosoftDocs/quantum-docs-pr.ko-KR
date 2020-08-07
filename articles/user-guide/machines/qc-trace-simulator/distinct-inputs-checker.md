@@ -1,17 +1,20 @@
 ---
 title: 고유 입력 검사기-퀀텀 개발 키트
-description: '퀀텀 추적 시뮬레이터를 사용 하 여 공유 된 사용자와의 잠재적 충돌에 대해 Q # 코드를 확인 하는 Microsoft QDK 고유 입력 검사기에 대해 알아봅니다.'
+description: 퀀텀 추적 시뮬레이터를 사용 하 여 코드에서 공유 하는 경우의 잠재적 충돌을 확인 하는 Microsoft QDK 고유 입력 검사기에 대해 알아봅니다 Q# .
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.distinct-inputs
-ms.openlocfilehash: 49a1ccc5f37acfeaa1ee08bd974be45a40a76f93
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 750c94e7f861678d37f051619ff5b29bf4fd3d3e
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871147"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868273"
 ---
 # <a name="quantum-trace-simulator-distinct-inputs-checker"></a>퀀텀 추적 시뮬레이터: 고유 입력 검사기
 
@@ -19,7 +22,7 @@ ms.locfileid: "86871147"
 
 ## <a name="conflicts-with-shared-qubits"></a>공유 된 비트와 충돌
 
-고유 입력 검사기에서 검색 된 문제를 설명 하는 다음의 Q # 코드 부분을 고려 합니다.
+다음 코드를 고려 Q# 하 여 고유한 입력 검사기에서 발견 된 문제를 설명 합니다.
 
 ```qsharp
 operation ApplyBoth(
@@ -47,7 +50,7 @@ operation ApplyWithNonDistinctInputs() : Unit {
 }
 ```
 
-및는 `op1` `op2` 모두 부분 응용 프로그램을 사용 하 여 가져오고, `ApplyBoth`이 예제에서를 호출 하는 경우 작업의 결과는 `op1` 발생 하는 것 `op2` 으로 간주 되는 및의 순서에 따라 달라 집니다 `ApplyBoth` . 고유 입력 검사기를 사용 하도록 설정 하면 이러한 상황을 감지 하 고을 throw `DistinctInputsCheckerException` 합니다. 자세한 내용은 <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.DistinctInputsCheckerException> Q # API 라이브러리에서을 참조 하세요.
+및는 `op1` `op2` 모두 부분 응용 프로그램을 사용 하 여 가져오고, `ApplyBoth`이 예제에서를 호출 하는 경우 작업의 결과는 `op1` 발생 하는 것 `op2` 으로 간주 되는 및의 순서에 따라 달라 집니다 `ApplyBoth` . 고유 입력 검사기를 사용 하도록 설정 하면 이러한 상황을 감지 하 고을 throw `DistinctInputsCheckerException` 합니다. 자세한 내용은 <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.DistinctInputsCheckerException> API 라이브러리에서을 참조 하세요 Q# .
 
 ## <a name="invoking-the-distinct-inputs-checker"></a>고유 입력 검사기 호출
 

@@ -6,12 +6,15 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.code
-ms.openlocfilehash: edc52dc4434e91258bece28812fd76b66329c6f9
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 956b0957a5261b8a77bf18d776fbcc2853bfbfe7
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275481"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866912"
 ---
 # <a name="contributing-code"></a>코드 기여
 
@@ -28,10 +31,10 @@ ms.locfileid: "85275481"
 
 ### <a name="unit-tests"></a>단위 테스트
 
-라고과 같은 라이브러리를 구성 하는 Q # 함수, 작업 및 사용자 정의 형식은 [**Microsoft/QuantumLibraries**](https://github.com/Microsoft/QuantumLibraries/) 리포지토리에서 개발의 일부로 자동으로 테스트 됩니다.
+Q#라고과 같은 라이브러리를 구성 하는 함수, 작업 및 사용자 정의 형식은 [**Microsoft/QuantumLibraries**](https://github.com/Microsoft/QuantumLibraries/) 리포지토리에서 개발의 일부로 자동으로 테스트 됩니다.
 예를 들어 새 끌어오기 요청을 열면 [Azure Pipelines](https://azure.microsoft.com/services/devops/pipelines/) 구성에서 끌어오기 요청의 변경 내용이 퀀텀 프로그래밍 커뮤니티에 의존 하는 기존 기능을 중단 하지 않았는지 확인 합니다.
 
-최신 Q # 버전을 사용 하는 경우 특성을 사용 하 여 단위 테스트를 정의 `@Test("QuantumSimulator")` 합니다. 인수는 "QuantumSimulator", "ToffoliSimulator", "TraceSimulator" 또는 실행 대상을 지정 하는 정규화 된 이름일 수 있습니다. 다른 실행 대상을 정의 하는 여러 특성이 동일한 호출 가능에 연결 될 수 있습니다. 일부 테스트는 [Microsoft.Quantum.Xunit](https://www.nuget.org/packages/Microsoft.Quantum.Xunit/) `Test` [xunit](https://xunit.github.io/) 프레임 워크로 끝나는 모든 Q # 함수 및 작업을 노출 하는 더 이상 사용 되지 않는 Microsoft. n e t. n e t 장치 패키지를 계속 사용 합니다. 이 패키지는 더 이상 단위 테스트를 정의 하는 데 필요 하지 않습니다. 
+최신 버전을 사용 Q# 하는 경우 특성을 사용 하 여 단위 테스트를 정의 `@Test("QuantumSimulator")` 합니다. 인수는 "QuantumSimulator", "ToffoliSimulator", "TraceSimulator" 또는 실행 대상을 지정 하는 정규화 된 이름일 수 있습니다. 다른 실행 대상을 정의 하는 여러 특성이 동일한 호출 가능에 연결 될 수 있습니다. 일부 테스트는 [Microsoft.Quantum.Xunit](https://www.nuget.org/packages/Microsoft.Quantum.Xunit/) Q# `Test` [xunit](https://xunit.github.io/) 프레임 워크로 끝나는 모든 함수와 작업을 노출 하는 사용 되지 않는 Microsoft. n e t. n e t 장치 패키지를 계속 사용 합니다. 이 패키지는 더 이상 단위 테스트를 정의 하는 데 필요 하지 않습니다. 
 
 다음 함수를 사용 하 여 <xref:microsoft.quantum.canon.fst> 및 <xref:microsoft.quantum.canon.snd> 함수가 대표적인 예제에서 올바른 출력을 반환 하는지 확인 합니다.
 또는의 출력이 잘못 된 경우 `Fst` `Snd` `fail` 문을 사용 하 여 테스트 실패를 발생 시킵니다.
@@ -92,7 +95,7 @@ operation TestApplyWith() : Unit {
 이는 기능을 타사 라이브러리로 해제 하는 것이 좋은 경우도 있습니다.
 또는 microsoft에서 제공 하는 최상의 작업을 수행할 수 있도록 로드맵에 보다 적합 한 기능을 수정 하는 데 도움을 요청할 수 있습니다.
 
-또한 더 많은 설명서 또는 단위 테스트가 필요한 경우에도 끌어오기 요청에 대 한 변경 사항을 요청 하 여 사용자가 기능을 찾는 것이 더 어려워질 수 있도록 하는 데 도움이 됩니다.
+또한 사용자가 사용 하는 데 도움이 되는 추가 설명서 또는 단위 테스트가 필요한 경우 또는 Q# 사용자가 기능을 찾기 어렵게 만드는 라이브러리의 나머지 부분에 대 한 스타일이 충분 한 경우 끌어오기 요청에 대 한 변경 내용을 요청 합니다.
 이러한 경우 추가 하거나 변경할 수 있는 항목에 대 한 코드 검토에 몇 가지 조언을 제공 하 여 참여를 더 쉽게 포함할 수 있도록 합니다.
 
 마지막으로 [Microsoft 오픈 소스 준수](https://opensource.microsoft.com/codeofconduct/)에 설명 된 대로 퀀텀 컴퓨팅 커뮤니티를 손상 시키는 기여를 수락할 수 없습니다.
@@ -102,10 +105,10 @@ Microsoft는 현재 훌륭한 다양성에서 전체 퀀텀 컴퓨팅 커뮤니�
 ## <a name="next-steps"></a>다음 단계
 
 퀀텀 개발 키트를 전체 퀀텀 프로그래밍 커뮤니티에서 사용할 수 있도록 하는 데 도움을 주셔서 감사 합니다.
-자세히 알아보려면 Q # 스타일에 대 한 다음 가이드를 계속 진행 하세요.
+자세히 알아보려면 스타일에 대 한 다음 가이드를 계속 진행 하세요 Q# .
 
 > [!div class="nextstepaction"]
-> [Q # 스타일 지침에 대해 알아보기](xref:microsoft.quantum.contributing.style)
+> [Q#스타일 지침 알아보기](xref:microsoft.quantum.contributing.style)
 
 기여 하는 코드의 종류에 따라 기여를 가능한 한 커뮤니티에 최대한 활용 하는 데 도움이 되는 추가 사항이 있을 수 있습니다.
 

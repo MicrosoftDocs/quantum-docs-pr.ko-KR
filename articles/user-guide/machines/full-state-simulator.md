@@ -1,25 +1,28 @@
 ---
 title: 전체 상태 퀀텀 시뮬레이터-퀀텀 개발 키트
-description: 'Microsoft Quantum Development Kit 전체 상태 시뮬레이터에서 Q # 프로그램을 실행 하는 방법에 대해 알아봅니다.'
+description: Q#Microsoft Quantum Development Kit 전체 상태 시뮬레이터에서 프로그램을 실행 하는 방법에 대해 알아봅니다.
 author: anpaz-msft
 ms.author: anpaz@microsoft.com
 ms.date: 06/26/2020
 ms.topic: article
 uid: microsoft.quantum.machines.full-state-simulator
-ms.openlocfilehash: 563fdbd2a45461d112e4c46651eddd75c6fc3db2
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: b15af66123dadae09815cde1966c69b3ce2e9e64
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871181"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868341"
 ---
 # <a name="quantum-development-kit-qdk-full-state-simulator"></a>QDK (퀀텀 Development Kit) 전체 상태 시뮬레이터
 
-QDK은 로컬 컴퓨터의 퀀텀 컴퓨터를 시뮬레이트하는 전체 상태 시뮬레이터를 제공 합니다. 전체 상태 시뮬레이터를 사용 하 여 Q #으로 작성 된 퀀텀 알고리즘을 실행 하 고 디버그할 수 있습니다. 여기에는 최대 30 개의 이상 비트가 사용 됩니다. 전체 상태 시뮬레이터는 Microsoft Research의 [Liq $ Ui | \rangle $](http://stationq.github.io/Liquid/) 플랫폼에서 사용 되는 퀀텀 시뮬레이터와 비슷합니다.
+QDK은 로컬 컴퓨터의 퀀텀 컴퓨터를 시뮬레이트하는 전체 상태 시뮬레이터를 제공 합니다. 전체 상태 시뮬레이터를 사용 하 여 Q# 최대 30 개의 이상으로 작성 된 퀀텀 알고리즘을 실행 하 고 디버그할 수 있습니다. 전체 상태 시뮬레이터는 Microsoft Research의 [Liq $ Ui | \rangle $](http://stationq.github.io/Liquid/) 플랫폼에서 사용 되는 퀀텀 시뮬레이터와 비슷합니다.
 
 ## <a name="invoking-and-running-the-full-state-simulator"></a>전체 상태 시뮬레이터 호출 및 실행
 
-클래스를 통해 전체 상태 시뮬레이터를 노출 합니다 `QuantumSimulator` . 자세한 내용은 [Q # 프로그램을 실행 하는 방법](xref:microsoft.quantum.guide.host-programs)을 참조 하세요.
+클래스를 통해 전체 상태 시뮬레이터를 노출 합니다 `QuantumSimulator` . 자세한 내용은 [ Q# 프로그램을 실행 하는 방법](xref:microsoft.quantum.guide.host-programs)을 참조 하세요.
 
 ### <a name="invoking-the-simulator-from-c"></a>C에서 시뮬레이터 호출 #
 
@@ -36,7 +39,7 @@ QDK은 로컬 컴퓨터의 퀀텀 컴퓨터를 시뮬레이트하는 전체 상�
 
 ### <a name="invoking-the-simulator-from-python"></a>Python에서 시뮬레이터 호출
 
-가져온 Q # 작업으로 Q # Python 라이브러리의 [시뮬레이트 ()](https://docs.microsoft.com/python/qsharp/qsharp.loader.qsharpcallable) 메서드를 사용 합니다.
+가져온 작업과 함께 Python 라이브러리의 [시뮬레이트 ()](https://docs.microsoft.com/python/qsharp/qsharp.loader.qsharpcallable) 메서드를 사용 합니다 Q# Q# .
 
 ```python
 qubit_result = myOperation.simulate()
@@ -44,7 +47,7 @@ qubit_result = myOperation.simulate()
 
 ### <a name="invoking-the-simulator-from-the-command-line"></a>명령줄에서 시뮬레이터 호출
 
-명령줄에서 Q # 프로그램을 실행 하는 경우 전체 상태 시뮬레이터가 기본 대상 컴퓨터입니다. 필요에 따라 **--시뮬레이터** (또는 **-s** 바로 가기) 매개 변수를 사용 하 여 원하는 대상 컴퓨터를 지정할 수 있습니다. 다음 명령은 모두 전체 상태 시뮬레이터를 사용 하 여 프로그램을 실행 합니다. 
+Q#명령줄에서 프로그램을 실행 하는 경우 전체 상태 시뮬레이터가 기본 대상 컴퓨터입니다. 필요에 따라 **--시뮬레이터** (또는 **-s** 바로 가기) 매개 변수를 사용 하 여 원하는 대상 컴퓨터를 지정할 수 있습니다. 다음 명령은 모두 전체 상태 시뮬레이터를 사용 하 여 프로그램을 실행 합니다. 
 
 ```dotnetcli
 dotnet run
@@ -53,7 +56,7 @@ dotnet run -s QuantumSimulator
 
 ### <a name="invoking-the-simulator-from-juptyer-notebooks"></a>Juptyer 노트북에서 시뮬레이터 호출
 
-IQ # magic 명령 [% 시뮬레이트](xref:microsoft.quantum.iqsharp.magic-ref.simulate) 를 사용 하 여 Q # 작업을 실행 합니다.
+Q#-매직 명령 [% 시뮬레이트](xref:microsoft.quantum.iqsharp.magic-ref.simulate) 를 사용 하 여 작업을 실행 Q# 합니다.
 
 ```
 %simulate myOperation
@@ -76,6 +79,6 @@ IQ # magic 명령 [% 시뮬레이트](xref:microsoft.quantum.iqsharp.magic-ref.s
 
 ## <a name="see-also"></a>참고 항목
 
-- [평가기 퀀텀 리소스](xref:microsoft.quantum.machines.resources-estimator)
+- [퀀텀 리소스 예측 도구](xref:microsoft.quantum.machines.resources-estimator)
 - [퀀텀 Toffoli 시뮬레이터](xref:microsoft.quantum.machines.toffoli-simulator)
 - [퀀텀 추적 시뮬레이터](xref:microsoft.quantum.machines.qc-trace-simulator.intro)

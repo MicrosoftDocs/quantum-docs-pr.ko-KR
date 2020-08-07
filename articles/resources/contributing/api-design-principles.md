@@ -1,32 +1,35 @@
 ---
-title: 'Q # API 디자인 원칙'
-description: 'Q # API 디자인 원칙'
+title: Q#API 디자인 원칙
+description: Q#API 디자인 원칙
 author: cgranade
 ms.author: chgranad
 ms.date: 3/9/2020
 ms.topic: article
 uid: microsoft.quantum.contributing.api-design
-ms.openlocfilehash: def6a9f12accfa399fd4db3783b9899fc743f025
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 580fcaea575ff544ed2c5f31eba7e963bea4534b
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275494"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866896"
 ---
-# <a name="q-api-design-principles"></a>Q # API 디자인 원칙
+# <a name="no-locq-api-design-principles"></a>Q#API 디자인 원칙
 
 ## <a name="introduction"></a>소개
 
-언어 및 플랫폼으로 서, Q #은 사용자에 게 퀀텀 응용 프로그램을 작성, 실행, 이해 및 탐색 하는 데 역량을 강화 합니다.
-사용자에 게 권한을 부여 하기 위해 Q # 라이브러리를 설계할 때 API 디자인 원칙 집합을 따라 디자인을 안내 하 고, 퀀텀 개발 커뮤니티에 사용할 수 있는 라이브러리를 만드는 데 도움을 줍니다.
-이 문서에서는 이러한 원칙을 나열 하 고 Q # Api를 설계할 때이를 적용 하는 방법을 보여 주는 예제를 제공 합니다.
+언어 및 플랫폼으로 서 Q# 사용자는 퀀텀 응용 프로그램을 작성, 실행, 이해 및 탐색할 수 있습니다.
+사용자에 게 권한을 부여 하기 위해 Q# 라이브러리를 설계할 때 API 디자인 원칙 집합을 따라 디자인을 안내 하 고 퀀텀 개발 커뮤니티에 사용할 수 있는 라이브러리를 만드는 데 도움을 줍니다.
+이 문서에서는 이러한 원칙을 나열 하 고 api를 디자인할 때 적용 하는 방법을 안내 하는 예제를 제공 Q# 합니다.
 
 > [!TIP]
 > 이 문서는 라이브러리 개발 및 심층 라이브러리 기여를 돕기 위한 매우 자세한 문서입니다.
-> Q #에서 사용자 고유의 라이브러리를 작성 하는 경우 또는 [q # 라이브러리 리포지토리에](https://github.com/microsoft/QuantumLibraries)더 큰 기능을 제공 하는 경우에 가장 유용 합니다.
+> 에서 사용자 고유의 라이브러리를 작성 하 Q# 는 경우 나 [ Q# 라이브러리 리포지토리에](https://github.com/microsoft/QuantumLibraries)더 큰 기능을 제공 하는 경우에는 가장 유용 하다는 것을 알게 될 것입니다.
 >
 > 반면에, 일반적으로 퀀텀 개발 키트에 참여 하는 방법을 알아보려면 [기여 가이드](xref:microsoft.quantum.contributing)로 시작 하는 것이 좋습니다.
-> Q # 코드의 형식을 지정 하는 방법에 대 한 일반적인 정보를 원하는 경우 [스타일 가이드](xref:microsoft.quantum.contributing.style)를 확인 하는 것이 좋습니다.
+> 코드 서식을 지정 하는 방법에 대 한 일반적인 정보를 원하는 경우 Q# [스타일 가이드](xref:microsoft.quantum.contributing.style)를 확인 하는 것이 좋습니다.
 
 ## <a name="general-principles"></a>일반 원칙
 
@@ -81,7 +84,7 @@ ms.locfileid: "85275494"
 - ✅동일한 API와 이전에 존재 하는 라이브러리에서 다른 함수 및 작업과 함께 잘 구성 되도록 함수 및 작업 **을 디자인 합니다** .
 
   *예:*
-  - @"microsoft.quantum.canon.delay"작업은 해당 입력에 대 한 가정을 최소화 하므로 Q # 표준 라이브러리를 통해 또는 사용자가 정의한 대로 두 작업의 응용 프로그램을 지연 하는 데 사용할 수 있습니다.
+  - @"microsoft.quantum.canon.delay"작업은 해당 입력에 대 한 가정을 최소화 하므로 Q# 표준 라이브러리 전체에서 또는 사용자가 정의한 대로 두 작업의 응용 프로그램을 지연 하는 데 사용할 수 있습니다.
     <!-- TODO: define bad example. -->
 
 - ✅순수 하 게 결정적으로 **수행** 되는 모든 논리를 작업 대신 함수로 노출 합니다.

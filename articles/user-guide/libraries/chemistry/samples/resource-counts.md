@@ -6,12 +6,15 @@ ms.author: gulow
 ms.date: 10/23/2018
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.examples.resourcecounts
-ms.openlocfilehash: 14d0a703a20a801dcee9678a113a33404859a1a9
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 35c16e622a390b730ad7385efcc365c212e981fe
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275888"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869327"
 ---
 # <a name="obtaining-resource-counts"></a>리소스 개수 가져오기
 
@@ -83,7 +86,7 @@ operation RunQubitizationStep (qSharpData: JordanWignerEncodingData) : Double {
 }
 ```
 
-이제 원하는 리소스를 추적 하도록 추적 시뮬레이터를 구성 합니다. 이 경우 플래그를로 설정 하 여 기본 퀀텀 작업의 수를 계산 `usePrimitiveOperationsCounter` `true` 합니다. `throwOnUnconstraintMeasurement` `false` Q # 코드가 측정 결과의 확률 (있는 경우)을 올바르게 어설션 하지 않는 경우 예외를 방지 하려면 기술 세부 정보를로 설정 합니다.
+이제 원하는 리소스를 추적 하도록 추적 시뮬레이터를 구성 합니다. 이 경우 플래그를로 설정 하 여 기본 퀀텀 작업의 수를 계산 `usePrimitiveOperationsCounter` `true` 합니다. `throwOnUnconstraintMeasurement` `false` Q# 코드가 측정 결과의 확률 (있는 경우)을 올바르게 어설션 하지 않는 경우 예외를 방지 하려면 기술 세부 정보를로 설정 합니다.
 
 ```csharp
 private static QCTraceSimulator CreateAndConfigureTraceSim()

@@ -6,12 +6,15 @@ uid: microsoft.quantum.more-information
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: d3c252c6579e1286aae71a0f18ac7b6b02a5c1ed
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 7c5063fccbe73478aeb917e0cd2fe2f7fe51c070
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85884145"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866845"
 ---
 # <a name="more-quantum-computing-learning-resources"></a>추가 퀀텀 컴퓨팅 학습 리소스
 
@@ -24,7 +27,7 @@ ms.locfileid: "85884145"
 + Kitaev, Shen, A., & Vyalyi, M. N. (2002). 클래식 및 퀀텀 계산 (Vol. 47) 한: 미국 수학 사회.
 + Kaye, P., Laflamme, R., & Mosca, M. (2007). 퀀텀 컴퓨팅에 대해 소개 합니다. Oxford 대학 Press를 누릅니다.
 + Rieﬀel, E. G., & Polak, W. H. (2011). 퀀텀 컴퓨팅: gentle 소개입니다. MIT Press.
-+ Sarah Kaiser 및 Christopher (Manning 초기 액세스 프로그램은 2020에서 4 월 2019 게시 시작). [Python 및 Q #을 사용 하는 퀀텀 컴퓨팅에 대해 실습 방법을 알아봅니다](https://www.manning.com/books/learn-quantum-computing-with-python-and-q-sharp).
++ Sarah Kaiser 및 Christopher (Manning 초기 액세스 프로그램은 2020에서 4 월 2019 게시 시작). [Python을 사용 하 여 퀀텀 컴퓨팅을 배우고 Q# 실습 방법에 대해 알아봅니다](https://www.manning.com/books/learn-quantum-computing-with-python-and-q-sharp).
 
 ## <a name="online-courses"></a>온라인 과정 ##
 

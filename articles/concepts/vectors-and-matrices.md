@@ -1,6 +1,8 @@
 ---
 제목: 퀀텀 계산의 벡터 및 행렬 설명: 벡터 및 매트릭스를 사용 하는 방법에 대 한 기본 사항을 알아봅니다.
 작성자: QuantumWriter uid:: nawiebe@microsoft.com 12/11/2017: ms. 날짜:. 토픽: 문서 번호:
+- "Q#"
+- "$$v"
 - "$$"
 - "$$"
 - "$"
@@ -87,7 +89,7 @@
 
 차원 (또는 크기)의 열 벡터 (또는 단순한 [*벡터*](https://en.wikipedia.org/wiki/Vector_(mathematics_and_physics))) $ v는 $ $ $ $ $ $ $ 열로 정렬 된 n 복소수 (v_1, v_2, \ldots, v_n)의 컬렉션입니다.
 
-$$hyper-v=\begin{bmatrix}
+$$v =\begin{bmatrix}
 v_1\\\\
 v_2\\\\
 \vdots\\\\
@@ -242,7 +244,7 @@ $$
     cg \ ch \ dg \ dh \end{bmatrix} .
 $$
 
-텐서 제품에 대 한 최종 유용한 표기법 밑수 규칙은 모든 벡터 $ v $ 또는 매트릭스 M의 $ 경우 $ $ v ^ { \otimes n } $ 또는 $ M ^ { \otimes n } $ 은 $ n $ 접기 반복 텐서 제품에 대 한 짧은 손입니다.  예를 들면 다음과 같습니다.
+텐서 제품에 대 한 최종 유용한 표기법 밑수 규칙은 모든 벡터 $ v $ 또는 매트릭스 M의 $ 경우 $ $ v ^ { \otimes n } $ 또는 $ M ^ { \otimes n } $ 은 $ n $ 접기 반복 텐서 제품에 대 한 짧은 손입니다.  예를 들어:
 
 \begin{align}
 &\begin{bmatrix}1 \\\\ 0 \end{bmatrix} ^ { \otimes 1 } = \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} , \qquad \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} ^ { \otimes 2 } = \begin{bmatrix} 1 \\\\ 0 0 0 \\\\ \\\\ \end{bmatrix} , \qquad \begin{bmatrix} 1 \\\\ -1 \end{bmatrix} ^ { \otimes 2 } = \begin{bmatrix} 1 \\\\ -1 \\\\ -1 \\\\ 1 \end{bmatrix} ,\\\\

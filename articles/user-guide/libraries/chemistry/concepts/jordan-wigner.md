@@ -6,12 +6,15 @@ ms.author: nawiebe@microsoft.com
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.jordanwigner
-ms.openlocfilehash: 17cb473c6d33e3356d5da886f47985c3828d4d1f
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 9f1455ebbecf6a3500ec11a5196e7662455c9a78
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275924"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869514"
 ---
 # <a name="jordan-wigner-representation"></a>요르단-Wigner 표현
 
@@ -28,7 +31,7 @@ $ \Ket _j $ 상태는 {0} spin 궤도 $j $가 비어 있고 $ \ket {1} _j $가 �
 \Begin{align} a ^ dagger_j &= \begin{bmatrix}0 & 0 \\ \ 1 &0 \end{bmatrix} = \frac{X_j} iY_j} {2} , \nonumber \\ \\ a_j &= \begin{bmatrix}0 & 1 \\ \ 0 &0 \end{bmatrix} = \frac{X_j + iY_j} {2} , \end{align}에서 $X _j $ 및 $Y $ 연산자는 stbit _j $에서 작동 하는 $X $ 및-$Y $ 연산자를 쉽게 확인할 수 있습니다.
 
 >[!NOTE]
-> Q #에서 $ \ket {0} $ 상태는 $Z $ 연산자의 + 1 eigenstate를 나타냅니다. 물리학의 일부 영역에서 $ \ket {0} $은 낮은 에너지 접지 상태를 나타내며 따라서 $Z $ 연산자의-1 eigenstate입니다. 따라서 일부 수식은 인기 있는 자료와 다를 수 있습니다.
+> Q#$ \Ket {0} $ 상태는 $Z $ 연산자의 + 1 eigenstate를 나타냅니다. 물리학의 일부 영역에서 $ \ket {0} $은 낮은 에너지 접지 상태를 나타내며 따라서 $Z $ 연산자의-1 eigenstate입니다. 따라서 일부 수식은 인기 있는 자료와 다를 수 있습니다.
 
 화학 라이브러리에서는 $ \ket {0} $를 사용 하 여 빈 스핀 궤도를 나타냅니다.
 이는 단일 스핀 궤도의 경우 퀀텀 컴퓨터에서 인식 하는 단일 행렬을 기준으로 만들기 및 annihilation 연산자를 쉽게 나타낼 수 있음을 보여 줍니다.

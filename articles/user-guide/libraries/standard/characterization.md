@@ -6,12 +6,15 @@ uid: microsoft.quantum.libraries.characterization
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 9d763d11ef9c08cc0941cade217dbb2942ef4bf9
-ms.sourcegitcommit: 2f4c637e194dc2b5d18539469ed37444e2800199
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 0090fb2b9ac5f3c9d195a3ab02dcd21c848d8ef7
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87436533"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868630"
 ---
 # <a name="quantum-characterization-and-statistics"></a>퀀텀 특성화 및 통계 #
 
@@ -19,7 +22,7 @@ ms.locfileid: "87436533"
 이는 퀀텀 시스템의 모든 측정값이 최대 1 비트 정보를 생성 하기 때문입니다.
 사용자가 이러한 개념을 나타내는 데 필요한 많은 양의 정보를 공개할 수 있도록 eigenvalue를 학습 하 고,이를 사용 하 여 여러 측정값의 결과를 함께 연결 되어 해야 합니다.
 퀀텀 상태는 특히 상태를 복사 하는 것이 가능 하기 때문에 [정리](xref:microsoft.quantum.concepts.pauli#the-no-cloning-theorem) 의 단일 복사본에서 임의의 퀀텀 상태를 학습할 방법이 없다는 것을 vexing 때문입니다.
-사용자의 퀀텀 상태 난독 처리는 Q #에서 퀀텀 프로그램에 대 *한 상태를* 노출 하거나 정의 하지 않는다는 사실에 반영 됩니다.
+사용자의 퀀텀 상태 난독 처리는 Q# 퀀텀 프로그램의 상태 *를* 노출 하거나 정의 하지 않는 팩트에 반영 됩니다.
 따라서 작업 및 상태를 블랙 박스로 처리 하 여 퀀텀 특징을 접근 합니다. 이 접근 방식은 퀀텀, 확인 및 유효성 검사 (QCVV)의 실험적 사례와 공통적으로 많이 공유 됩니다.
 
 용어는 앞에서 설명한 대부분의 다른 라이브러리와는 다릅니다.
@@ -36,7 +39,7 @@ Kickback 단계를 사용 하 여 블랙 박스 작업의 응용 프로그램을
 아래에서 제안 하는 각 방법은 실험을 설계 하 고 다양 한 데이터 처리 방법을 사용 하 여 단계를 학습할 수 있는 다른 전략을 사용 합니다.  각 사용자에 게는 엄격한 오류 범위를 포함 하는 것부터 이전 정보를 포함 하는 기능, 오류를 허용 하거나 메모리 limitted 클래식 컴퓨터에서 실행 하는 기능에 이르기까지 고유한 이점이 있습니다.
 
 반복 단계 예측에 대해 논의 하는 경우 블랙 박스 작업으로 제공 되는 단일 $U $을 고려 합니다.
-Oracles의 [데이터 구조](xref:microsoft.quantum.libraries.data-structures)단원에 설명 된 것 처럼 Q # 라고은 <xref:microsoft.quantum.oracles.discreteoracle> 튜플 형식으로 정의 된 사용자 정의 형식에의 한 작업을 모델링 합니다 `((Int, Qubit[]) => Unit : Adjoint, Controlled)` .
+[데이터 구조](xref:microsoft.quantum.libraries.data-structures)에서 oracles에 대 한 섹션에서 설명한 것 처럼, Q# 사용자 정의 형식에의 한 작업 (예: <xref:microsoft.quantum.oracles.discreteoracle> 튜플 형식으로 정의 됨)을 모델링 합니다 `((Int, Qubit[]) => Unit : Adjoint, Controlled)` .
 구체적으로 인 경우 `U : DiscreteOracle` 에는 `U(m)` 에 대해 ^ m $ $U를 구현 `m : Int` 합니다.
 
 이 정의를 사용 하 여 반복 단계 예측의 각 단계는 초기 상태 $ \ket{\phi} $와 함께 $ \ket{+} $ 상태에서 보조 비트를 준비 하 여 진행 됩니다 .이는 $U [eigenvector](xref:microsoft.quantum.concepts.matrix-advanced) (m) $, 즉 $U (m) \ket{\phi} = e ^ {im\eml\ k {\ l o} $입니다.  
@@ -47,7 +50,7 @@ Oracles의 [데이터 구조](xref:microsoft.quantum.libraries.data-structures)�
 
 이 시점에서 반복 단계 예측을 통해 얻은 값에서 단계를 다시 생성 하는 `Result` 것은 기존 통계 유추 문제입니다.
 고정 유추 방법이 제공 되는 경우 얻은 정보를 최대화 하는 $m $ 값을 찾는 것은 단순히 통계의 문제입니다.
-이 기존 유추 문제를 해결 하기 위해 Q # 라고에서 제공 된 통계 알고리즘을 설명 하기 전에 Bayesian 매개 변수 추정 정해진 이론적 수준에서 반복적 단계 예측을 간략하게 설명 하 여이를 강조 합니다.
+이 Q# 기존 유추 문제를 해결 하기 위해 라고에서 제공 되는 통계 알고리즘을 설명 하기 전에 Bayesian 매개 변수 추정 정해진 이론적 수준에서 반복적 단계 예측을 간략하게 설명 하 여이를 강조 합니다.
 
 ### <a name="iterative-phase-estimation-without-eigenstates"></a>Eigenstates 없이 반복 단계 예측 ###
 
@@ -127,7 +130,7 @@ $ $ 또한 [Hamiltonian 시뮬레이션](xref:microsoft.quantum.libraries.applic
 
 ### <a name="random-walk-phase-estimation"></a>무작위 워크 단계 예측 ###
 
-Q #에서는 반복 단계 추정에서 얻은 데이터 레코드에 대 한 임의 워크를 조절 하 여 작동 하는 퀀텀 장치에 가까운 사용을 위해 설계 된 Bayesian 단계 추정의 유용한 근사값을 제공 합니다.
+Q#반복 단계 추정에서 얻은 데이터 레코드에 대 한 임의 워크를 조절 하 여 작동 하는 퀀텀 장치에 가까운 사용을 위해 설계 된 Bayesian 단계 추정의 유용한 근사값을 제공 합니다.
 이 메서드는 적응 및 완전히 결정적 이며, 예상 되는 단계 $ \hat{\phi} $에서 메모리 오버 헤드가 매우 낮으므로 거의 최적의 오류 확장을 허용 합니다.
 
 프로토콜이 이전 분포를 가우스로 가정 하는 대략적인 Bayesian 유추 메서드를 사용 합니다.
@@ -141,7 +144,7 @@ Q #에서는 반복 단계 추정에서 얻은 데이터 레코드에 대 한 �
 
 ## <a name="calling-phase-estimation-algorithms"></a>단계 추정 알고리즘 호출 ##
 
-Q # 라고과 함께 제공 되는 각 단계 예측 작업은 다른 입력 집합을 사용 하 여 최종 추정 $ \hat{\phi} $에서 요구 하는 품질을 매개 변수화 합니다.
+라고과 함께 제공 되는 각 단계 예측 작업은 Q# 최종 예상 $ \hat{\phi} $에서 요구 하는 품질을 매개 변수화 하는 다른 입력 집합을 사용 합니다.
 그러나 이러한 다양 한 입력은 모두 공통 된 여러 입력을 공유 합니다. 예를 들어, 품질 매개 변수를 통해 부분 응용 프로그램에서 일반적인 서명이 발생 합니다.
 예를 들어 <xref:microsoft.quantum.characterization.robustphaseestimation> 다음 섹션에서 설명 하는 작업에는 다음과 같은 시그니처가 있습니다.
 

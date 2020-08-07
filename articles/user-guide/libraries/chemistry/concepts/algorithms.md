@@ -6,18 +6,21 @@ ms.author: nawiebe@microsoft.com
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.simulationalgorithms
-ms.openlocfilehash: 5dad4e4a77eea99e72eb2efac52eec61ebbdb21c
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 40f79a66ae95e20a8b1c19af735eedca5e3c15ef
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275927"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869531"
 ---
 # <a name="simulating-hamiltonian-dynamics"></a>Hamiltonian Dynamics 시뮬레이션
 
 Hamiltonian가 기본 연산자의 합계로 표시 된 후에는 잘 알려진 기술 호스트를 사용 하 여 기본 게이트 작업으로 dynamics를 컴파일할 수 있습니다.
 Trotter – Suzuki 수식, unitaries의 선형 조합, 등 세 가지 효율적인 방법이 있습니다.
-이 세 가지 방법에 대해 설명 하 고 Hamiltonian 시뮬레이션 라이브러리를 사용 하 여 이러한 메서드를 구현 하는 방법에 대 한 구체적인 Q # 예제를 제공 합니다.
+이 세 가지 방법에 대해 설명 하 고 Q# Hamiltonian 시뮬레이션 라이브러리를 사용 하 여 이러한 메서드를 구현 하는 방법에 대 한 구체적인 예제를 제공 합니다.
 
 
 ## <a name="trottersuzuki-formulas"></a>Trotter – Suzuki 수식
@@ -49,7 +52,7 @@ Pauli 연산자는 Clifford 작업 (양자 컴퓨팅의 표준 게이트)을 사
         0 & 0 & 0 & e ^ {-it} \end{bmatrix}.
 $ $ 여기에서 $e ^ {-iHt} \ket {00} = e ^ {it} \ket {00} $ 및 $e ^ {-iht} \ket {01} = e ^ {-it} \ket {01} $를 사용할 수 있습니다 .이는 $0 $의 패리티는 $0 $이 고 비트 문자열 $1 $는 $1 $입니다.
 
-작업을 사용 하 여 Q #에서 직접 지 수의 Pauli 연산자를 구현할 수 있습니다 <xref:microsoft.quantum.intrinsic.exp> .
+Q#다음 작업을 사용 하 여 직접 지 수 Pauli 연산자를 구현할 수 있습니다 <xref:microsoft.quantum.intrinsic.exp> .
 ```qsharp
     using(qubits = Qubit[2]){
         let pauliString = [PauliX, PauliX];
@@ -86,8 +89,8 @@ Fermionic Hamiltonians의 경우 [요르단 – Wigner 분해](xref:microsoft.qu
     var qSharpData = jordanWignerEncoding.ToQSharpFormat();
 ```
 
-Q # 시뮬레이션 알고리즘에서 사용할 수 있는 요르단 – Wigner 표현의 형식은 사용자 정의 형식입니다 `JordanWignerEncodingData` .
-Q # 내에서이 형식은 `TrotterStepOracle` Trotter-Suzuki 통합자를 사용 하 여 실행에 필요한 다른 매개 변수 외에도 연산자를 사용 하 여 시간 발전을 나타내는 편리한 함수에 전달 됩니다.
+시뮬레이션 알고리즘에서 사용할 수 있는 요르단 – Wigner 표현의 형식은 Q# 사용자 정의 형식입니다 `JordanWignerEncodingData` .
+내에서 Q# 이 형식은 `TrotterStepOracle` Trotter-Suzuki 통합자를 사용 하 여 실행에 필요한 다른 매개 변수와 함께 시간 진화를 사용 하는 연산자를 반환 하는 편의 함수에 전달 됩니다.
 
 ```qsharp
 // qSharpData passed from driver
@@ -151,10 +154,10 @@ $ \Operatorname{Prepare} $ 작업은 stbitsource에서 직접 사용 되지 않�
 
 $ \Operatorname{Select} $ 및 $R $ 작업을 $ $ W = \operatorname{Select} R, $ $로 설명 하는 연습 연산자 ($W $)를 사용 하 여 $ $ W = R, $ $으로 지정할 수 있습니다. 즉, ^ {\pm i \pm ^ {-1} (H/| h | _1)} $를 $e 하는 것과 동일한 연산자 (최대 isometry)를 구현 하
 
-이러한 서브루틴은 Q #에서 쉽게 설정할 수 있습니다.
+이러한 서브루틴은에서 쉽게 설정할 수 Q# 있습니다.
 예를 들어 단순 Ising Hamiltonian $H = X_1 + X_2 + Z_1 Z_2 $를 예로 들어 보겠습니다.
-이 경우 $ \operatorname{Select} $ 작업을 구현 하는 Q # 코드는에 의해 호출 되는 <xref:microsoft.quantum.canon.multiplexoperations> 반면 $ \operatorname{Prepare} $ 작업은를 사용 하 여 구현할 수 있습니다 <xref:microsoft.quantum.preparation.preparearbitrarystate> .
-Hubbard 모델 시뮬레이션을 포함 하는 예제는 [Q # 샘플](https://github.com/microsoft/Quantum/tree/master/samples/simulation/hubbard)로 볼 수 있습니다.
+이 경우 $ Q# \operatorname{Select} $ 작업을 구현 하는 코드는에 의해 호출 되는 <xref:microsoft.quantum.canon.multiplexoperations> 반면 $ \operatorname{Prepare} $ 작업은를 사용 하 여 구현할 수 있습니다 <xref:microsoft.quantum.preparation.preparearbitrarystate> .
+Hubbard 모델 시뮬레이션을 포함 하는 예제는 [ Q# 샘플](https://github.com/microsoft/Quantum/tree/master/samples/simulation/hubbard)로 볼 수 있습니다.
 
 임의 화학 문제에 대해 이러한 단계를 수동으로 지정 하려면 화학 라이브러리를 사용 하지 않는 것이 좋습니다.
 위의 Trotter – Suzuki 시뮬레이션 알고리즘과 마찬가지로는 `JordanWignerEncodingData` `QubitizationOracle` 해당 실행에 필요한 다른 매개 변수와 함께을 반환 하는 편의 함수에 전달 됩니다.

@@ -1,17 +1,20 @@
 ---
-title: 'Q # 표준 라이브러리의 데이터 구조'
-description: 'Microsoft Q # 표준 라이브러리의 데이터 구조, oracles 및 동적 생성기에 대해 알아봅니다.'
+title: 표준 라이브러리의 데이터 구조 Q#
+description: Microsoft standard 라이브러리의 데이터 구조, oracles 및 동적 생성기에 대해 알아봅니다 Q# .
 author: QuantumWriter
 uid: microsoft.quantum.libraries.data-structures
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 46ac6794d1e21e111aa1d98e11a6f83194f8d54e
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 222fa7d0d33d4ac6c15e9ee9e6e97f380867a145
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275734"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868524"
 ---
 # <a name="data-structures-and-modeling"></a>데이터 구조 및 모델링 #
 
@@ -34,7 +37,7 @@ ApplyToEach(H, Snd(pair)); // No need to deconstruct to access the register.
 ### <a name="arrays"></a>배열 ###
 
 라고에서는 배열을 조작 하기 위한 여러 함수를 제공 합니다.
-이러한 함수는 형식 매개 변수화 되므로 모든 Q # 형식의 배열과 함께 사용할 수 있습니다.
+이러한 함수는 형식 매개 변수화 되므로 모든 형식의 배열과 함께 사용할 수 있습니다 Q# .
 예를 들어, <xref:microsoft.quantum.arrays.reversed> 함수는 요소가 입력에서 역순으로 포함 된 새 배열을 반환 합니다.
 이를 사용 하 여 작업을 호출할 때 퀀텀 레지스터가 표시 되는 방식을 변경할 수 있습니다.
 
@@ -72,7 +75,7 @@ ApplyToEach(
 여기서 oracle 이라는 용어는 다양 한 비트 집합에 적용 되는 블랙 박스 퀀텀 서브루틴을 나타내며 단계로 서 답변을 반환 합니다.
 이 서브루틴은 다른 몇 가지 매개 변수와 함께 oracle을 허용 하는 퀀텀 알고리즘에 대 한 입력으로, 일련의 퀀텀 작업을 적용 하 고이 퀀텀 서브루틴에 대 한 호출을 기본 게이트 처럼 처리 하는 것으로 간주할 수 있습니다.
 분명히 큰 알고리즘을 실제로 구현 하기 위해 oracle을 기본 게이트로 구체적으로 분해 해야 하지만 oracle을 호출 하는 알고리즘을 이해 하기 위해 이러한 분해는 필요 하지 않습니다.
-Q #에서이 추상화는 작업을 첫 번째 클래스 값으로 사용 하 여 표현 됩니다. 이러한 작업은 블랙 박스 방식으로 퀀텀 알고리즘의 구현에 전달 될 수 있습니다.
+에서 Q# 이 추상화는 작업을 첫 번째 클래스 값으로 사용 하 여 표현 됩니다. 이러한 작업은 블랙 박스 방식으로 퀀텀 알고리즘의 구현에 전달 될 수 있습니다.
 또한 사용자 정의 형식은 형식이 안전한 방식으로 다양 한 oracle 표현의 레이블을 지정 하는 데 사용 되므로 실수로 다른 종류의 블랙 박스 작업을 conflate 어렵습니다.
 
 이러한 oracles는 [Grover의 검색](https://en.wikipedia.org/wiki/Grover%27s_algorithm) 및 퀀텀 시뮬레이션 알고리즘과 같은 유명한 예를 포함 하 여 다양 한 컨텍스트에서 표시 됩니다.
@@ -189,7 +192,7 @@ $U (t) $의 고유 값는 $H $의 고유 값와 직접 관련 됩니다.
 이 컨텍스트에서는 단일 $R _z $ gate를 사용 하 여 모든 $t $에 대 한 $U (t) $를 시뮬레이션할 수 있으며,이 경우에는 불연속 쿼리로만 제한 하지 않아도 됩니다.
 이러한 연속 모델에는 또한 로그 함수의 분기 컷에 의해 마스킹 될 수 있는 단계 정보는 $t $의 비 비례하여 값에서 수행 되는 실험 결과에서 표시 될 수 있기 때문에 연속 쿼리를 사용 하는 단계 예측 프로세스에서 확인할 수 있습니다.
 따라서 단계 예측 oracle의 이러한 연속 쿼리 모델과 같은 문제의 경우에는 적합 하지 않지만 불연속 쿼리 모델에도 적합 합니다.
-이러한 이유로 Q #에는 두 가지 쿼리 형태 모두에 대 한 기능이 있으며 사용자에 게 제공 하 여 요구 사항 및 사용 가능한 oracle 유형에 맞는 단계 추정 알고리즘을 결정 합니다.
+이러한 이유로 Q# 두 쿼리 형태 모두에 대 한 기능을 제공 하 고 사용자에 게 제공 하 여 요구 사항 및 사용 가능한 oracle 유형에 맞는 단계 추정 알고리즘을 결정 합니다.
 
 ## <a name="dynamical-generator-modeling"></a>동적 생성기 모델링 ##
 

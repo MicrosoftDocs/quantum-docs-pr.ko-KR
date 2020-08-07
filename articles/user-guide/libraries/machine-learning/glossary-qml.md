@@ -5,12 +5,15 @@ ms.author: alexei.bocharov@microsoft.com
 ms.date: 2/27/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.training
-ms.openlocfilehash: f9b33a607a892179795d0700ba3080f9a24ab94a
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 52c3f69fb99384270a27e57c4f32212d18bee1a4
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85276212"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868902"
 ---
 # <a name="quantum-machine-learning-glossary"></a>퀀텀 Machine Learning 용어집
 
@@ -48,7 +51,7 @@ ms.locfileid: "85276212"
 
 ### <a name="training-threads"></a>스레드 학습
 
-분류자의 학습 유틸리티인 가능성 함수는 거의 발생 하지 않습니다. 즉, 일반적으로 품질에 따라 크게 다를 수 있는 매개 변수 공간에는 다 수의 로컬 optima 있습니다. SGD 프로세스는 하나의 특정 최적에만 수렴 될 수 있으므로 여러 개의 시작 매개 변수 벡터를 탐색 하는 것이 중요 합니다. 기계 학습에서 일반적인 방법은 이러한 시작 벡터를 임의로 초기화 하는 것입니다. Q # 학습 API는 이러한 시작 벡터의 임의 배열을 허용 하지만 기본 코드는 순차적으로 탐색 합니다. 다중 코어 컴퓨터의 경우 또는 병렬 컴퓨팅 아키텍처의 경우 호출에서 여러 매개 변수 초기화를 사용 하 여 여러 개의 Q # 학습 API 호출을 동시에 수행 하는 것이 좋습니다.
+분류자의 학습 유틸리티인 가능성 함수는 거의 발생 하지 않습니다. 즉, 일반적으로 품질에 따라 크게 다를 수 있는 매개 변수 공간에는 다 수의 로컬 optima 있습니다. SGD 프로세스는 하나의 특정 최적에만 수렴 될 수 있으므로 여러 개의 시작 매개 변수 벡터를 탐색 하는 것이 중요 합니다. 기계 학습에서 일반적인 방법은 이러한 시작 벡터를 임의로 초기화 하는 것입니다. Q#학습 API는 이러한 시작 벡터의 임의 배열을 허용 하지만 기본 코드는 순차적으로 탐색 합니다. 다중 코어 컴퓨터에서 또는 병렬 컴퓨팅 아키텍처의 경우 호출에서 여러 Q# 매개 변수 초기화를 사용 하 여 동시에 학습 API를 여러 번 호출 하는 것이 좋습니다.
 
 #### <a name="how-to-modify-the-hyperparameters"></a>하이퍼 매개 변수를 수정 하는 방법
 

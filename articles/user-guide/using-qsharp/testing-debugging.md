@@ -6,30 +6,33 @@ ms.author: mamykhai@microsoft.com
 ms.date: 06/01/2020
 ms.topic: article
 uid: microsoft.quantum.guide.testingdebugging
-ms.openlocfilehash: db6e49e94e5ceb3b1b0b2d6ab57391618084072b
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 2b5276da594ba263177d435c1153f6d96e29c4e8
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86870977"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867916"
 ---
 # <a name="testing-and-debugging"></a>테스트 및 디버깅
 
 기존 프로그래밍과 마찬가지로 퀀텀 프로그램이 의도 한 대로 작동 하는지 확인 하 고 잘못 된 동작을 진단할 수 있어야 합니다.
-이 섹션에서는 퀀텀 프로그램 테스트 및 디버깅을 위해 Q #에서 제공 하는 도구를 다룹니다.
+이 섹션에서는에서 Q# 퀀텀 프로그램을 테스트 하 고 디버그 하는 데 제공 하는 도구를 다룹니다.
 
 ## <a name="unit-tests"></a>단위 테스트
 
 클래식 프로그램을 테스트 하는 일반적인 방법 중 하나는 라이브러리에서 코드를 실행 하 고 출력을 예상 출력과 비교 하는 *단위 테스트*라는 작은 프로그램을 작성 하는 것입니다.
 예를 들어 `Square(2)` `4` $2 ^ 2 = $4 이라는 *apriori을* 알고 있으므로이 반환 되는지 확인할 수 있습니다.
 
-Q #은 퀀텀 프로그램에 대 한 단위 테스트 만들기를 지원 하 고 [Xunit](https://xunit.github.io/) 단위 테스트 프레임 워크 내에서 테스트로 실행 될 수 있습니다.
+Q#는 퀀텀 프로그램에 대 한 단위 테스트 만들기를 지원 하 고 [Xunit](https://xunit.github.io/) 단위 테스트 프레임 워크 내에서 테스트로 실행 될 수 있습니다.
 
 ### <a name="creating-a-test-project"></a>테스트 프로젝트 만들기
 
 #### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
-Visual Studio 2019를 엽니다. **파일** 메뉴로 이동 하 여 **새로 만들기 > 프로젝트**...를 선택 합니다. 오른쪽 위 모서리에서를 검색 하 `Q#` 고 **Q # 테스트 프로젝트** 템플릿을 선택 합니다.
+Visual Studio 2019를 엽니다. **파일** 메뉴로 이동 하 여 **새로 만들기 > 프로젝트**...를 선택 합니다. 오른쪽 위 모서리에서를 검색 하 `Q#` 고 ** Q# 테스트 프로젝트** 템플릿을 선택 합니다.
 
 #### <a name="command-line--visual-studio-code"></a>[명령줄/Visual Studio Code](#tab/tabid-vscode)
 
@@ -42,7 +45,7 @@ $ code . # To open in Visual Studio Code
 
 ****
 
-새 프로젝트에는 `Tests.qs` 새 Q # 단위 테스트를 정의 하는 데 편리한 장소를 제공 하는 단일 파일이 있습니다.
+새 프로젝트에는 `Tests.qs` 새 단위 테스트를 정의 하는 데 편리한 장소를 제공 하는 단일 파일이 있습니다 Q# .
 처음에이 파일에는 `AllocateQubit` 새로 할당 된가 $ \ket $ 상태에 있는지 확인 하 {0} 고 메시지를 인쇄 하는 하나의 샘플 단위 테스트가 포함 되어 있습니다.
 
 ```qsharp
@@ -57,7 +60,7 @@ $ code . # To open in Visual Studio Code
     }
 ```
 
-형식의 인수를 사용 하 고를 반환 하는 모든 Q # 작업 또는 함수는 `Unit` `Unit` 특성을 통해 단위 테스트로 표시 될 수 있습니다 `@Test("...")` . 이전 예제에서 해당 특성에 대 한 인수는 `"QuantumSimulator"` 테스트가 실행 되는 대상을 지정 합니다. 단일 테스트를 여러 대상에서 실행할 수 있습니다. 예를 들어 앞에 특성을 추가 `@Test("ResourcesEstimator")` `AllocateQubit` 합니다. 
+Q#형식의 인수를 사용 하 고를 반환 하는 모든 작업 또는 함수는 `Unit` `Unit` 특성을 통해 단위 테스트로 표시 될 수 있습니다 `@Test("...")` . 이전 예제에서 해당 특성에 대 한 인수는 `"QuantumSimulator"` 테스트가 실행 되는 대상을 지정 합니다. 단일 테스트를 여러 대상에서 실행할 수 있습니다. 예를 들어 앞에 특성을 추가 `@Test("ResourcesEstimator")` `AllocateQubit` 합니다. 
 ```qsharp
     @Test("QuantumSimulator")
     @Test("ResourcesEstimator")
@@ -66,9 +69,9 @@ $ code . # To open in Visual Studio Code
 ```
 파일을 저장 하 고 모든 테스트를 실행 합니다. 이제 두 단위 테스트가 있습니다. 하나는에서 실행 되 고 다른 하나 `AllocateQubit` `QuantumSimulator` 는에서 실행 됩니다 `ResourcesEstimator` . 
 
-Q # 컴파일러는 기본 제공 대상 `"QuantumSimulator"` , `"ToffoliSimulator"` 및를 `"ResourcesEstimator"` 단위 테스트의 유효한 실행 대상으로 인식 합니다. 또한 사용자 지정 실행 대상을 정의 하는 정규화 된 이름을 지정할 수 있습니다. 
+Q#컴파일러는 기본 제공 대상 `"QuantumSimulator"` , 및를 `"ToffoliSimulator"` `"ResourcesEstimator"` 단위 테스트의 유효한 실행 대상으로 인식 합니다. 또한 사용자 지정 실행 대상을 정의 하는 정규화 된 이름을 지정할 수 있습니다. 
 
-### <a name="running-q-unit-tests"></a>Q # 단위 테스트 실행
+### <a name="running-no-locq-unit-tests"></a>Q#단위 테스트 실행
 
 #### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
@@ -137,9 +140,9 @@ $ dotnet test --filter "Name=AllocateQubit"
 
 ## <a name="facts-and-assertions"></a>팩트 및 어설션
 
-Q #의 함수에는 _논리적인_ 부작용이 없기 때문에, q # 프로그램 내에서 출력 형식이 빈 튜플이 있는 함수를 실행 하는 다른 종류의 영향을 확인할 수 없습니다 `()` .
-즉, 대상 컴퓨터에서 반환 하는 함수를 실행 하지 않도록 선택할 수 있습니다 `()` .이를 생략 하면 다음 Q # 코드의 동작이 수정 되지 않습니다.
-이 동작은 `()` `Unit` 어설션 및 디버깅 논리를 Q # 프로그램에 포함 하는 유용한 도구인 (예:)를 반환 하는 함수를 만듭니다. 
+의 함수에는 Q# _논리적인_ 부작용이 없기 때문에 프로그램 내에서 다른 종류의 영향을 볼 수 없습니다 Q# . 출력 형식이 빈 튜플이 있는 함수를 실행 하는 것 `()` 입니다.
+즉, 대상 컴퓨터에서 반환 하는 함수를 실행 하지 않도록 선택할 수 있습니다 `()` .이를 생략 하면 다음 코드의 동작이 수정 되지 않습니다 Q# .
+이 동작은 `()` `Unit` 어설션 및 디버깅 논리를 프로그램에 포함 하는 데 유용한 도구인 (예:)를 반환 하는 함수를 만듭니다 Q# . 
 
 간단한 예제를 살펴보겠습니다.
 
@@ -153,8 +156,8 @@ function PositivityFact(value : Double) : Unit
 }
 ```
 
-여기서 키워드는 `fail` 계산이 진행 되지 않음을 나타내고 Q # 프로그램을 실행 하는 대상 컴퓨터에서 예외를 발생 시킵니다.
-정의에 따라 대상 컴퓨터는 문에 도달한 후에도 Q # 코드를 더 이상 실행 하지 않으므로 Q # 내에서 이러한 종류의 오류를 관찰할 수 없습니다 `fail` .
+여기서 키워드는 `fail` 계산이 진행 되지 않아야 함을 나타내며 프로그램을 실행 하는 대상 컴퓨터에서 예외를 발생 시킵니다 Q# .
+정의에 따라 Q# 대상 컴퓨터에서 문을 실행 한 후 더 이상 코드를 실행 하지 않으므로에서 이러한 종류의 오류를 관찰할 수 없습니다 Q# `fail` .
 따라서에 대 한 호출을 계속 진행 하는 경우 `PositivityFact` 해당 입력이 긍정적 임을 확신할 수 있습니다.
 
 `PositivityFact` [`Fact`](xref:microsoft.quantum.diagnostics.fact) 네임 스페이스에서 함수를 사용 하는 것과 동일한 동작을 구현할 수 있습니다 <xref:microsoft.quantum.diagnostics> .
@@ -354,7 +357,7 @@ namespace Samples {
 Qubits provided (0;) are entangled with some other qubit.
 ```
 
-다음 예제에서는 <xref:microsoft.quantum.diagnostics.dumpregister> <xref:microsoft.quantum.diagnostics.dumpmachine> Q # 코드에서 및를 모두 사용할 수 있는 방법을 보여 줍니다.
+다음 예제에서는 <xref:microsoft.quantum.diagnostics.dumpregister> 코드에서 및를 모두 사용할 수 있는 방법을 보여 줍니다 <xref:microsoft.quantum.diagnostics.dumpmachine> Q# .
 
 ```qsharp
 namespace app
@@ -381,6 +384,6 @@ namespace app
 
 ## <a name="debugging"></a>디버깅
 
-`Assert`및 `Dump` 함수 및 작업의 위쪽에서 Q #은 표준 Visual Studio 디버깅 기능의 하위 집합을 지원 합니다. 즉, [줄 중단점 설정](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints), F10 키를 [사용 하 여 코드 단계별](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger)실행, [기존 변수의 값 검사](https://docs.microsoft.com/visualstudio/debugger/autos-and-locals-windows) 는 시뮬레이터에서 코드를 실행할 때 모두 가능 합니다.
+`Assert`및 `Dump` 함수 및 작업을 기반으로 하는는 Q# 표준 Visual Studio 디버깅 기능의 하위 집합을 지원 합니다. [줄 중단점 설정](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints), F10 키를 [사용 하 여 코드 단계별](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger)실행 및 [클래식 변수의 값 검사](https://docs.microsoft.com/visualstudio/debugger/autos-and-locals-windows) 는 모두 시뮬레이터에서 코드를 실행 하는 동안 가능 합니다.
 
 Visual Studio Code 디버깅은 c #에서 제공 하는 c # For Visual Studio Code 확장에서 제공 하는 디버깅 기능을 활용 하 고 [최신 버전](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)을 설치 해야 합니다. 

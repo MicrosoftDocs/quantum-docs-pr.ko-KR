@@ -1,23 +1,26 @@
 ---
-title: 'Q의 퀀텀 알고리즘 #'
+title: 의 퀀텀 알고리즘Q#
 description: 진폭 증폭, 푸리에 변환, Draper 및 Beauregard adders 및 단계 예측을 비롯 한 기본 퀀텀 컴퓨팅 알고리즘에 대해 알아봅니다.
 author: QuantumWriter
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.libraries.standard.algorithms
-ms.openlocfilehash: 7f4916353c53d6459356243098281ccb16b17278
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 0b5972480061c460345057285bbfe53305acc122
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871317"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868817"
 ---
 # <a name="quantum-algorithms"></a>퀀텀 알고리즘 #
 
 ## <a name="amplitude-amplification"></a>진폭 증폭 ##
 
-*진폭 증폭* 은 퀀텀 컴퓨팅의 기본 도구 중 하나입니다. Grover의 검색, 진폭 예측 및 많은 퀀텀 기계 학습 알고리즘의 기반이 되는 기본 개념입니다.  많은 변형이 있으며, Q #에서는 응용 프로그램의 가장 넓은 영역을 허용 하는 부분 반사를 사용 하는 명확한 진폭 증폭을 기반으로 하는 일반 버전을 제공 합니다.
+*진폭 증폭* 은 퀀텀 컴퓨팅의 기본 도구 중 하나입니다. Grover의 검색, 진폭 예측 및 많은 퀀텀 기계 학습 알고리즘의 기반이 되는 기본 개념입니다.  많은 변형이 있으며, Q# 여기서는 응용 프로그램의 가장 넓은 영역을 허용 하는 부분 반사를 사용 하는 명확한 진폭 증폭을 기반으로 하는 일반 버전을 제공 합니다.
 
 진폭 증폭의 중심 개념은 리플렉션 시퀀스를 수행 하 여 원하는 결과가 발생 하는 확률을 강화 하는 것입니다.  이러한 반사는 주로 표시 된 상태 라고 하는 원하는 대상 상태에 가까운 초기 상태를 회전 합니다.  특히 초기 상태를 표시 된 상태에 있는 것으로 측정할 확률이 $ \sin ^ 2 (\sin) $ 인 경우 진폭 $m 증폭을 적용 한 후 $ \sin ^ 2 ((2m + 1) \sin) $가 됩니다.  즉, $ \theta = \ pi/[2 (2n + 1)] $의 일부 값 $n $ then 경우 진폭 증폭은 \\ 진폭 증폭의 $ 반복 $n 후 성공 확률을 $100% $로 상승 시킬 수 있습니다.  $ \Theta = \theta ^ {-1} (\Sqrt{\pr (success)}) $이는 성공 여부를 확인 하는 데 필요한 반복 횟수가 무작위 샘플링을 사용 하 여 명확 하지 않은 상태로 표시 되는 상태를 확인 하는 데 필요한 예상 수보다 quadratically 것을 의미 합니다.
 
@@ -27,7 +30,7 @@ ms.locfileid: "86871317"
 
 이에서 제공 하는 또 다른 유용한 속성은 eigenvalue $ \theta $가 초기 상태가 표시 될 확률과 직접적으로 관련 된다는 것입니다 ($P _0 $이 초기 상태에만 프로젝터 인 경우).  $Q $의 eigenphases $2 \ 테타 = 2 \ sin ^ {-1} (\Sqrt{\pr (success)}) $ 이기 때문에, $Q $에 단계 예측을 적용 하면 단일 퀀텀 프로시저에 대 한 성공 확률을 알 수 있습니다.  이는 필요한 경우 보다 성공 확률을 quadratically 퀀텀 절차의 응용 프로그램을 더 덜 필요로 하기 때문에 유용 합니다.
 
-Q #에서는 진폭 증폭을 명확한 진폭 증폭의 특수화로 도입 했습니다.  명확한 진폭 증폭은 프로젝터를 초기 eigenspace가 초기 상태로 만들지 않아도 되므로이 모니커를 획득 합니다.  이러한 점에서 프로토콜은 초기 상태로 명확한 됩니다.  명확한 진폭 증폭의 주요 응용 프로그램은 단일 Hamiltonian 시뮬레이션 방법의 특정 *선형 조합* 으로, 초기 상태를 알 수 없지만 시뮬레이션 프로토콜에서 ancilla 레지스터를 사용 하 여 레지스터를 사용 합니다.  이 ancilla 레지스터가 고정 값으로 측정 되어야 하는 경우 (예: $0 $) 이러한 시뮬레이션 메서드는 원하는 단일 변환을 나머지의 나머지 비트 (시스템 레지스터 라고 함)에 적용 합니다.  그러나 다른 모든 측정 결과는 실패를 야기 합니다.  명확한 진폭 증폭은 \\ 위의 이유를 사용 하 여이 측정의 성공 확률을 $100% $로 높일 수 있습니다.  또한 일반 진폭 증폭은 시스템 레지스터가 비어 있는 경우에 해당 합니다.  그 이유는 Q #에서 명확한 진폭 증폭을 기본 진폭 증폭 서브루틴으로 사용 하는 이유입니다.
+Q#명확한 진폭 증폭의 특수화로 진폭 증폭을 소개 합니다.  명확한 진폭 증폭은 프로젝터를 초기 eigenspace가 초기 상태로 만들지 않아도 되므로이 모니커를 획득 합니다.  이러한 점에서 프로토콜은 초기 상태로 명확한 됩니다.  명확한 진폭 증폭의 주요 응용 프로그램은 단일 Hamiltonian 시뮬레이션 방법의 특정 *선형 조합* 으로, 초기 상태를 알 수 없지만 시뮬레이션 프로토콜에서 ancilla 레지스터를 사용 하 여 레지스터를 사용 합니다.  이 ancilla 레지스터가 고정 값으로 측정 되어야 하는 경우 (예: $0 $) 이러한 시뮬레이션 메서드는 원하는 단일 변환을 나머지의 나머지 비트 (시스템 레지스터 라고 함)에 적용 합니다.  그러나 다른 모든 측정 결과는 실패를 야기 합니다.  명확한 진폭 증폭은 \\ 위의 이유를 사용 하 여이 측정의 성공 확률을 $100% $로 높일 수 있습니다.  또한 일반 진폭 증폭은 시스템 레지스터가 비어 있는 경우에 해당 합니다.  이러한 이유로 Q# 명확한 진폭 증폭을 기본적인 진폭 증폭 서브루틴으로 사용 합니다.
 
 일반 루틴 ( `AmpAmpObliviousByReflectionPhases` )에는 및를 호출 하는 레지스터가 두 개 있습니다 `ancillaRegister` `systemRegister` . 또한 필요한 반사에 대해 두 개의 oracles를 허용 합니다. 는 `ReflectionOracle` 두 레지스터를 공동으로 수행 하는 동안에만 작동 합니다 `ancillaRegister` `ObliviousOracle` . 에 대 한 입력은 `ancillaRegister` 첫 번째 리플렉션 operator $ \boldone-2P_1 $의-1 eigenstate로 초기화 되어야 합니다.
 
@@ -116,4 +119,4 @@ $V $를 적용 하는 효과는 oracle로 $V $에만 액세스할 수 있는 경
 정수 $p $에 대해 $ \phi = 2 \phi p/2 ^ k $를 사용할 경우 $ \ket{\psi} = \operatorname{QFT} \ket{p_0 p_1 \phi} $로 인식 됩니다. 여기서 $p _j $은 $j ^ {\textrm{th}} $ 비트가 $2 \phi \phi n $입니다.
 따라서 퀀텀 푸리에 변환의 adjoint를 적용 하면 퀀텀 상태로 인코딩된 단계의 이진 표현을 가져옵니다.
 
-Q #에서이 <xref:microsoft.quantum.characterization.quantumphaseestimation> 작업은 <xref:microsoft.quantum.oracles.discreteoracle> $U ^ m $을 구현 하는 응용 프로그램을 양의 정수의 함수로 사용 하는 작업에 의해 구현 됩니다 $m $.
+에서 Q# 이 <xref:microsoft.quantum.characterization.quantumphaseestimation> 작업은 <xref:microsoft.quantum.oracles.discreteoracle> $U ^ m $을 구현 하는 응용 프로그램을 양의 정수 $m $의 함수로 사용 하는 작업에 의해 구현 됩니다.

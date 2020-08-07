@@ -1,20 +1,23 @@
 ---
-title: 'Q # 표준 라이브러리의 수학'
-description: '기본 제공 데이터 형식과 함께 사용 되는 Q # 표준 라이브러리의 기존 수학 함수에 대해 알아봅니다.'
+title: Q#표준 라이브러리의 수학
+description: Q#기본 제공 데이터 형식과 함께 사용 되는 표준 라이브러리의 기존 수학 함수에 대해 알아봅니다.
 author: cgranade
 uid: microsoft.quantum.libraries.math
 ms.author: chgranad@microsoft.com
 ms.topic: article
-ms.openlocfilehash: bec866472abc0d4327cdc570306341375395f492
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 4a3747eaa2c91e482ded3af1279a0e40d922bfb3
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275657"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868426"
 ---
 # <a name="classical-mathematical-functions"></a>기존 수학 함수 #
 
-이러한 함수는 주로 Q # 기본 제공 데이터 형식, 및를 사용 하는 데 사용 됩니다 `Int` `Double` `Range` .
+이러한 함수는 Q# 기본 제공 데이터 형식, 및 작업에 주로 사용 됩니다 `Int` `Double` `Range` .
 
 <xref:microsoft.quantum.intrinsic.random>작업에 시그니처가 `(Double[] => Int)` 있습니다.
 입력으로 double의 배열을 사용 하 고 임의로 선택 된 인덱스를로 배열에 반환 합니다 `Int` .

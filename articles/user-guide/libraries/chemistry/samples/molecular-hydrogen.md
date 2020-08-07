@@ -1,17 +1,20 @@
 ---
 title: 에너지 수준 추정치 얻기
-description: '분자 hydrogen의 에너지 수준 값을 예측 하는 샘플 Q # 프로그램을 안내 합니다.'
+description: Q#분자 hydrogen의 에너지 수준 값을 예측 하는 샘플 프로그램을 안내 합니다.
 author: guanghaolow
 ms.author: gulow
 ms.date: 07/02/2020
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.examples.energyestimate
-ms.openlocfilehash: b26538980366cf4cbe01fc2ef59580ae182f1e8a
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: a2df4b829a3f4946c6de6e6b80ad72a5bc192b2c
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871571"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869208"
 ---
 # <a name="obtaining-energy-level-estimates"></a>에너지 수준 추정치 얻기
 에너지 수준의 값을 예측 하는 것은 퀀텀 화학의 주요 응용 프로그램 중 하나입니다. 이 문서에서는 분자 hydrogen의 정식 예제에 대해이를 수행 하는 방법을 간략하게 설명 합니다. 이 섹션에서 참조 하는 샘플은 [`MolecularHydrogen`](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/MolecularHydrogen) 화학 샘플 리포지토리에 있습니다. 출력을 그리는 시각적 예제는 [`MolecularHydrogenGUI`](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/MolecularHydrogenGUI) 데모입니다.
@@ -121,7 +124,7 @@ operation GetEnergyByTrotterization (
 }
 ```
 
-이제 호스트 프로그램에서 Q # 코드를 호출할 수 있습니다. 다음 c # 코드는 전체 상태 시뮬레이터를 만들고를 실행 `GetEnergyByTrotterization` 하 여 그라운드 상태 에너지를 가져옵니다.
+이제 Q# 호스트 프로그램에서 코드를 호출할 수 있습니다. 다음 c # 코드는 전체 상태 시뮬레이터를 만들고를 실행 `GetEnergyByTrotterization` 하 여 그라운드 상태 에너지를 가져옵니다.
 
 ```csharp
 using (var qsim = new QuantumSimulator())

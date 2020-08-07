@@ -6,12 +6,15 @@ ms.author: chgranad@microsoft.com
 ms.date: 10/17/2018
 ms.topic: article
 uid: microsoft.quantum.libraries.chemistry.schema.spec_v_0_1
-ms.openlocfilehash: 618892b6cb01855d17522b06e47f72f68595ab38
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: abbc63b8801c774e6ba06cff99b7382d64424b2c
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85276050"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869140"
 ---
 # <a name="broombridge-specification-v01"></a>Broombridge 사양 v 0.1 #
 
@@ -322,7 +325,7 @@ initial_state_suggestions: # optional. If not provided, spin-orbitals will be fi
 - {"units": "ev", "value": 27.2113831301723}
 ```
 
-### <a name="table-2-allowed-index-conventions"></a>테이블 2. 허용 되는 인덱스 규칙 ###
+### <a name="table-2-allowed-index-conventions"></a>표 2. 허용 되는 인덱스 규칙 ###
 
 이 섹션은 규범입니다.
 

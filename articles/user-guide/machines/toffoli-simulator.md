@@ -6,12 +6,15 @@ ms.author: ageller@microsoft.com
 ms.date: 6/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.toffoli-simulator
-ms.openlocfilehash: a6ceee592e628215511ec83475d9e25bf54674f7
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 8a981645703423856e667be7c3dccf5270a5885f
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86870620"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868103"
 ---
 # <a name="quantum-development-kit-qdk-toffoli-simulator"></a>QDK (퀀텀 Development Kit) Toffoli 시뮬레이터
 
@@ -21,13 +24,13 @@ Toffoli 시뮬레이터는 [전체 상태 시뮬레이터](xref:microsoft.quantu
 
 ## <a name="invoking-the-toffoli-simulator"></a>Toffoli 시뮬레이터 호출
 
-클래스를 통해 Toffoli 시뮬레이터를 노출 합니다 `ToffoliSimulator` . 자세한 내용은 [Q # 프로그램을 실행 하는 방법](xref:microsoft.quantum.guide.host-programs)을 참조 하세요.
+클래스를 통해 Toffoli 시뮬레이터를 노출 합니다 `ToffoliSimulator` . 자세한 내용은 [ Q# 프로그램을 실행 하는 방법](xref:microsoft.quantum.guide.host-programs)을 참조 하세요.
 
 ### <a name="invoking-the-toffoli-simulator-from-c"></a>C에서 Toffoli 시뮬레이터 호출 #
 
-다른 대상 컴퓨터와 마찬가지로 먼저 클래스의 인스턴스를 만든 `ToffoliSimulator` 다음 작업 메서드의 첫 번째 매개 변수로 전달 `Run` 합니다.
+다른 대상 컴퓨터와 마찬가지로 먼저 `ToffoliSimulator` 클래스의 인스턴스를 만든 다음, 이를 작업의 `Run` 메서드의 첫 번째 매개 변수로 전달합니다.
 
-클래스와 달리 `QuantumSimulator` `ToffoliSimulator` 클래스는 인터페이스를 구현 하지 않으므로 <xref:System.IDisposable> 문 내에 묶을 필요가 없습니다 `using` .
+`QuantumSimulator` 클래스와 달리 `ToffoliSimulator` 클래스는 <xref:System.IDisposable> 인터페이스를 구현하지 않으므로 `using` 문 내에 묶을 필요가 없습니다.
 
 ```csharp
     var sim = new ToffoliSimulator();
@@ -37,7 +40,7 @@ Toffoli 시뮬레이터는 [전체 상태 시뮬레이터](xref:microsoft.quantu
 
 ### <a name="invoking-the-toffoli-simulator-from-python"></a>Python에서 Toffoli 시뮬레이터 호출
 
-가져온 Q # 작업을 사용 하 여 Python 라이브러리의 [toffoli_simulate ()](https://docs.microsoft.com/python/qsharp/qsharp.loader.qsharpcallable) 메서드를 사용 합니다.
+가져온 작업과 함께 Python 라이브러리의 [toffoli_simulate ()](https://docs.microsoft.com/python/qsharp/qsharp.loader.qsharpcallable) 메서드를 사용 합니다 Q# .
 
 ```python
 qubit_result = myOperation.toffoli_simulate()
@@ -45,7 +48,7 @@ qubit_result = myOperation.toffoli_simulate()
 
 ### <a name="invoking-the-toffoli-simulator-from-the-command-line"></a>명령줄에서 Toffoli 시뮬레이터 호출
 
-명령줄에서 Q # 프로그램을 실행 하는 경우 **--시뮬레이터** (또는 **-s** 바로 가기) 매개 변수를 사용 하 여 Toffoli 시뮬레이터 대상 컴퓨터를 지정 합니다. 다음 명령은 평가기 리소스를 사용 하 여 프로그램을 실행 합니다. 
+명령줄에서 프로그램을 실행 하는 경우 Q# **--시뮬레이터** (또는 **-s** 바로 가기) 매개 변수를 사용 하 여 Toffoli 시뮬레이터 대상 컴퓨터를 지정 합니다. 다음 명령은 평가기 리소스를 사용 하 여 프로그램을 실행 합니다. 
 
 ```dotnetcli
 dotnet run -s ToffoliSimulator
@@ -53,7 +56,7 @@ dotnet run -s ToffoliSimulator
 
 ### <a name="invoking-the-toffoli-simulator-from-juptyer-notebooks"></a>Juptyer 노트북에서 Toffoli 시뮬레이터 호출
 
-IQ # magic 명령 [% toffoli을 (](xref:microsoft.quantum.iqsharp.magic-ref.toffoli) 를) 사용 하 여 Q # 작업을 실행 합니다.
+Q#-매직 명령 [% toffoli을 (](xref:microsoft.quantum.iqsharp.magic-ref.toffoli) 를) 사용 하 여 작업을 실행 Q# 합니다.
 
 ```
 %toffoli myOperation
@@ -74,7 +77,7 @@ Toffoli 시뮬레이터는 다음을 지원 합니다.
 알고리즘이이 보다 더 많은 비트를 필요로 하는 경우 매개 변수의 값을 생성자에 제공 하 여 원하는 비트 수를 지정할 수 있습니다 `qubitCount` .
 각 추가 비트에는 1 바이트의 메모리만 필요 하므로 필요한 overestimating의 수를 크게 줄일 수 있는 비용은 없습니다.
 
-예를 들면 다음과 같습니다.
+예를 들어:
 
 ```csharp
     var sim = new ToffoliSimulator(qubitCount: 1000000);

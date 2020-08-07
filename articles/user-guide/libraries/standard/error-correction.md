@@ -1,17 +1,20 @@
 ---
-title: 'Q # 표준 라이브러리의 오류 수정'
-description: 'Q # 프로그램에서 오류 수정 코드를 사용 하는 방법에 대해 알아봅니다.'
+title: 표준 라이브러리의 오류 수정 Q#
+description: 프로그램에서 오류 수정 코드를 사용 하는 방법에 대해 알아봅니다 Q# .
 author: QuantumWriter
 uid: microsoft.quantum.libraries.error-correction
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 514fe68f603b9a3a0b4607390719b08a43fe4967
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 8b1f008793281121bc547d1a6ac3b960feb082ab
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275721"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868494"
 ---
 # <a name="error-correction"></a>오류 수정 #
 
@@ -48,7 +51,7 @@ $Z _0 Z_1 \ket {000} = \ket {000} $ 이며 {111} {111} 이 측정값이 두 인�
 반면에 _0 Z_1 \ket {100} =-\ket {100} $ 및 $Z _0 Z_1 \ket {011} =-\ket $를 $Z 합니다 {011} . 따라서 $Z _0 Z_1 $를 측정 하면 발생 한 오류에 대 한 유용한 정보가 표시 됩니다.
 
 이를 강조 하기 위해 위의 표를 반복 하지만 각 행에 $Z _0 Z_1 $ 및 $Z _1 Z_2 $의 측정 결과를 추가 합니다.
-각 측정 결과는 `Result` 각각 및의 Q # 값에 해당 하는 $ + $ 또는 $-$ 중에서 관찰 된 eigenvalue의 부호를 기준으로 합니다 `Zero` `One` .
+각 측정 결과는 Q# `Result` 각각 및의 값에 해당 하는 $ + $ 또는 $-$ 중에서 관찰 된 eigenvalue의 부호를 기준으로 합니다 `Zero` `One` .
 
 | 오류 $E $ | $E \ket{\overline {0} } $ | $E \ket{\overline {1} } $ | $Z _0 Z_1 $ 결과 | $Z _1 Z_2 $의 결과 |
 | --- | --- | --- | --- | --- |
@@ -68,16 +71,16 @@ $Z _0 Z_1 \ket {000} = \ket {000} $ 이며 {111} {111} 이 측정값이 두 인�
 > 보다 일반적으로 더 많은 오류를 처리 하 고 $Z $ errors 및 $X $ errors를 처리 하는 코드를 만들 수 있습니다.
 
 모든 코드 상태에서 동일한 방식으로 작동 하는 퀀텀 오류 수정의 측정을 설명할 수 있는 정보는 *안정기 정해진*의 핵심입니다.
-Q # 라고에서는 안정기 코드에서의 인코딩 및 디코딩을 설명 하 고, 오류에서 복구 하는 방법을 설명 하는 프레임 워크를 제공 합니다.
+Q#라고은 안정기 코드에서의 인코딩 및 디코딩을 설명 하 고, 오류에서 복구 하는 방법을 설명 하기 위한 프레임 워크를 제공 합니다.
 이 섹션에서는 몇 가지 간단한 퀀텀 오류 수정 코드에이 프레임 워크 및 해당 응용 프로그램을 설명 합니다.
 
 > [!TIP]
 > 안정기 정해진에 대 한 전체 소개는이 섹션의 범위를 벗어나는 것입니다.
 > [Gottesman 2009](https://arxiv.org/abs/0904.2557)에 대 한 자세한 내용은 독자를 대상으로 합니다.
 
-## <a name="representing-error-correcting-codes-in-q"></a>Q에서 오류 수정 코드 표시 # ##
+## <a name="representing-error-correcting-codes-in-no-locq"></a>오류 수정 코드 표시Q# ##
 
-오류 수정 코드를 지정 하는 데 도움이 되도록 Q # 라고은 다음과 같이 여러 가지 고유한 사용자 정의 형식을 제공 합니다.
+오류 수정 코드를 지정 하는 데 도움이 되도록 Q# 라고은 다음과 같이 여러 가지 고유한 사용자 정의 형식을 제공 합니다.
 
 - <xref:microsoft.quantum.errorcorrection.logicalregister>`= Qubit[]`: 비트 레지스터는 오류 수정 코드의 코드 블록으로 해석 되어야 함을 나타냅니다.
 - <xref:microsoft.quantum.errorcorrection.syndrome>`= Result[]`: 측정 결과 배열을 코드 블록에서 측정 된 증후군 해석 해야 함을 나타냅니다.
@@ -119,4 +122,4 @@ using (scratch = Qubit[nScratch]) {
 
 이에 대 한 자세한 내용은 [비트 대칭 코드 샘플](https://github.com/microsoft/Quantum/tree/master/samples/error-correction/bit-flip-code)을 살펴보세요.
 
-비트 대칭 코드를 제외 하 고 Q # 라고은 [5 ~ 5 ~ 5](https://arxiv.org/abs/quant-ph/9602019)비트 코드의 구현과 함께 제공 되며, 두 가지 모두 [seven-qubit code](https://arxiv.org/abs/quant-ph/9705052)임의의 단일 비트 오류를 수정할 수 있습니다.
+비트 대칭 코드 외에도 Q# 라고은 [5 ~ 5 비트 코드](https://arxiv.org/abs/quant-ph/9602019)및 [일곱 번째 비트 코드](https://arxiv.org/abs/quant-ph/9705052)의 구현과 함께 제공 되며, 둘 다 임의의 단일 기능 비트 오류를 수정할 수 있습니다.

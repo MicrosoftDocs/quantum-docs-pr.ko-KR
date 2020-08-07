@@ -1,21 +1,24 @@
 ---
 title: Width 카운터-퀀텀 개발 키트
-description: '퀀텀 추적 시뮬레이터를 사용 하 여 Q # 프로그램의 작업에 의해 할당 되 고 사용 되는 작업의 수를 계산 하는 Microsoft QDK width 카운터에 대해 알아봅니다.'
+description: 퀀텀 추적 시뮬레이터를 사용 하 여 프로그램의 작업에 의해 할당 되 고 사용 되는 수를 계산 하는 Microsoft QDK width 카운터에 대해 알아봅니다 Q# .
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.width-counter
-ms.openlocfilehash: af8609dc5c05f7a19b8d21755281427feb29b84c
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 02f4937aaccf7bf49d6450355c6b42b273071b2e
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871522"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868205"
 ---
 # <a name="quantum-trace-simulator-width-counter"></a>퀀텀 추적 시뮬레이터: width 카운터
 
-Width 카운터는 퀀텀 개발 키트 [퀀텀 추적 시뮬레이터](xref:microsoft.quantum.machines.qc-trace-simulator.intro)의 일부입니다. 이를 사용 하 여 Q # 프로그램에서 각 작업에 의해 할당 되 고 사용 되는 것과 같은 수를 계산할 수 있습니다. 일부 기본 작업에서는 제어 되는 작업 또는 제어 된 작업을 곱하는 등의 추가 기능을 할당할 수 있습니다 `X` `T` .
+Width 카운터는 퀀텀 개발 키트 [퀀텀 추적 시뮬레이터](xref:microsoft.quantum.machines.qc-trace-simulator.intro)의 일부입니다. 이를 사용 하 여 프로그램의 각 작업에서 할당 되 고 사용 되는 것과 같은 수를 계산할 수 있습니다 Q# . 일부 기본 작업에서는 제어 되는 작업 또는 제어 된 작업을 곱하는 등의 추가 기능을 할당할 수 있습니다 `X` `T` .
 
 ## <a name="invoking-the-width-counter"></a>Width 카운터 호출
 
@@ -29,7 +32,7 @@ var sim = new QCTraceSimulator(config);
 
 ## <a name="using-the-width-counter-in-a-c-host-program"></a>C # 호스트 프로그램에서 width 카운터 사용
 
-이 단원의 뒷부분에 나오는 c # 예제에서는 <xref:microsoft.quantum.intrinsic.x> 다음 Q # 샘플 코드를 기반으로 곱하기 제어 작업의 구현에 의해 할당 된 추가 작업의 수를 계산 합니다.
+이 단원의 뒷부분에 나오는 c # 예제에서는 <xref:microsoft.quantum.intrinsic.x> 다음 샘플 코드에 따라 곱하기 제어 작업의 구현에 의해 할당 된 추가 작업의 수를 계산 합니다 Q# .
 
 ```qsharp
 open Microsoft.Quantum.Intrinsic;

@@ -6,16 +6,19 @@ ms.author: bradben
 ms.date: 06/02/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.katas
-ms.openlocfilehash: 1c4dfa5c47aa38935cd5936cd256e357b6605371
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: b2a3b25bf90109468f02c98c6c687befb83648bc
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85276215"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869684"
 ---
 # <a name="learn-quantum-computing-with-the-quantum-katas"></a>Quantum Katas에서 퀀텀 컴퓨팅 알아보기
 
-[Quantum Kata](https://github.com/Microsoft/QuantumKatas/)는 퀀텀 컴퓨팅과 Q# 프로그래밍의 요소를 동시에 가르치기 위한 자가 오픈 소스, 학습 자습서 및 프로그래밍 연습입니다.
+[퀀텀 Katas](https://github.com/Microsoft/QuantumKatas/) 는 동시에 퀀텀 컴퓨팅 및 프로그래밍의 요소를 교육 하기 위한 오픈 소스, 자체 학습 자습서 및 프로그래밍 연습 Q# 입니다.
 
 ## <a name="learning-by-doing"></a>작업을 통한 학습
 
@@ -42,15 +45,15 @@ ms.locfileid: "85276215"
 |[선형 대수](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/LinearAlgebra)|선형 대수학은 퀀텀 컴퓨팅에서 퀀텀 상태와 연산을 나타내기 위해 사용됩니다. 이 자습서는 행렬과 벡터를 포함한 기본 내용을 다룹니다.|
 |[큐비트의 개념](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/Qubit)|퀀텀 컴퓨팅의 핵심 개념 중 하나인 큐비트에 대해 알아보세요. |
 |[단일 큐비트 퀀텀 게이트](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/SingleQubitGates)|이 자습서에서는 퀀텀 알고리즘의 기본 구성 요소 역할을 하고 퀀텀 큐비트 상태를 다양한 방식으로 변환하는 단일 큐비트 퀀텀 게이트를 소개합니다.|
-|[다중 큐비트 시스템](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/MultiQubitSystems)|이 자습서에서는 다중 큐비트 시스템, 이것의 수학적 표기법과 Q# 코드로의 표현 그리고 얽힘 개념을 소개합니다.|
+|[다중 큐비트 시스템](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/MultiQubitSystems)|이 자습서에서는 다중 기능 비트 시스템, 수학 표기법 및 코드에서의 표현, Q# 되거나 얽 히의 개념을 소개 합니다.|
 |[다중 큐비트 퀀텀 게이트](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/MultiQubitGates)|이 자습서는 [단일 퀀텀 게이트](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/SingleQubitGates) 자습서를 따르며 다중 큐비트 시스템에 다중 퀀텀 게이트를 적용하는 데 초점을 두고 있습니다.|
 
 ### <a name="quantum-computing-fundamentals"></a>퀀텀 컴퓨팅 기본 사항
 
 | Kata | 설명 |
 |:-----|-------------|
-|[퀀텀 게이트 인식](https://github.com/microsoft/QuantumKatas/tree/master/BasicGates)|Q#의 기본 퀀텀 게이트에 익숙해지도록 고안된 일련의 연습입니다. 기본 단일 큐비트 및 다중 큐비트 게이트, 수반 및 제어된 게이트, 게이트를 사용하여 큐비트 상태를 수정하는 방법을 포함합니다.|
-|[퀀텀 중첩 만들기](https://github.com/microsoft/QuantumKatas/tree/master/Superposition)|Q#에서 중첩과 프로그래밍의 개념을 숙지하기 위해 이 연습을 활용합니다. Q#에서 기본 단일 큐비트 및 멀티 큐비트 게이트, 중첩 및 흐름 제어 및 재귀 연습을 포함합니다.|
+|[퀀텀 게이트 인식](https://github.com/microsoft/QuantumKatas/tree/master/BasicGates)|의 기본 퀀텀 게이트에 익숙해질 수 있도록 설계 된 일련의 연습 Q# 입니다. 기본 단일 큐비트 및 다중 큐비트 게이트, 수반 및 제어된 게이트, 게이트를 사용하여 큐비트 상태를 수정하는 방법을 포함합니다.|
+|[퀀텀 중첩 만들기](https://github.com/microsoft/QuantumKatas/tree/master/Superposition)|이러한 연습을 사용 하 여의 superposition 및 프로그래밍 개념을 익힐 수 Q# 있습니다. 기본 단일 기능을 위한 연습과의 superposition 및 흐름 제어와 재귀를 포함 Q# 합니다.|
 |[측정값을 사용하여 퀀텀 상태 구별](https://github.com/microsoft/QuantumKatas/tree/master/Measurements)|퀀텀 측정과 직교 및 비직교 상태에 대해 배우면서 이들 연습 과제를 해결합니다. |
 |[공동 측정값](https://github.com/microsoft/QuantumKatas/tree/master/JointMeasurements)|조인트 패리티 측정 및 [Measure](xref:microsoft.quantum.intrinsic.measure) 연산을 사용하여 퀀텀 상태를 구분하는 방법에 대해 알아봅니다.|
 
@@ -72,7 +75,7 @@ ms.locfileid: "85276215"
 |:-----|-------------|
 |[퀀텀 키 배포용 BB84 프로토콜](https://github.com/microsoft/QuantumKatas/tree/master/KeyDistribution_BB84)|큐비트를 사용하여 암호 키를 교환하는 퀀텀 키 배포 프로토콜 [BB84](https://en.wikipedia.org/wiki/BB84)에 대해 알아보고 구현합니다. |
 |[비트 대칭 이동 오류 수정 코드](https://github.com/microsoft/QuantumKatas/tree/master/QEC_BitFlipCode)|가장 간단한 QEC(퀀텀 오류 수정) 코드인 3큐비트 대칭 이동 코드를 사용하여 퀀텀 오류 수정에 대해 살펴봅니다.|
-|[단계 예측](https://github.com/microsoft/QuantumKatas/blob/master/PhaseEstimation)|위상 추정 알고리즘은 퀀텀 컴퓨팅의 가장 기본적인 구성 요소의 일부입니다. 퀀텀 위상 추정을 다루는 이러한 연습을 통한 위상 추적과 Q#에서 위상 추정 루틴을 준비하고 실행하는 방법에 대해 알아봅니다.|
+|[단계 예측](https://github.com/microsoft/QuantumKatas/blob/master/PhaseEstimation)|위상 추정 알고리즘은 퀀텀 컴퓨팅의 가장 기본적인 구성 요소의 일부입니다. 퀀텀 단계 예측 및에서 단계 예측 루틴을 준비 하 고 실행 하는 방법을 다루는 이러한 연습과 관련 된 단계를 알아봅니다 Q# .|
 |[퀀텀 산술: 리플 캐리 가산기 만들기](https://github.com/microsoft/QuantumKatas/blob/master/RippleCarryAdder)|퀀텀 컴퓨터에서 [리플 캐리](https://en.wikipedia.org/wiki/Adder_(electronics)#Ripple-carry_adder) 추가에 대해 살펴보는 일련의 심층 연습입니다. 인플레이스 퀀텀 가산기를 만들고 다른 알고리즘으로 확장한 다음, 마지막으로 인플레이스 퀀텀 감산기를 만듭니다.   |
 
 ### <a name="entanglement-games"></a>얽힘 게임

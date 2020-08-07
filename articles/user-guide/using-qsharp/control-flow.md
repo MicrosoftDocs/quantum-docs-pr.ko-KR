@@ -1,19 +1,22 @@
 ---
-title: 'Q의 제어 흐름 #'
+title: 제어 흐름Q#
 description: 루프, 조건 등
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.controlflow
-ms.openlocfilehash: b652736168a71b905deaf7c4fdb29a8751b3dfaf
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: fc619d64bfebfc27d7feac6dafb2dd4cf22825d6
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86870994"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867950"
 ---
-# <a name="control-flow-in-q"></a>Q의 제어 흐름 #
+# <a name="control-flow-in-no-locq"></a>제어 흐름Q#
 
 작업 또는 함수 내에서 각 문은 다른 일반적인 명령적 언어와 비슷하게 순서 대로 실행 됩니다.
 그러나 다음과 같은 세 가지 방법으로 제어 흐름을 수정할 수 있습니다.
@@ -104,12 +107,12 @@ for ((index, measured) in results) { // iterates over the tuple values in result
 
 ## <a name="repeat-until-success-loop"></a>반복-성공 루프
 
-Q # 언어를 사용 하면 기존 제어 흐름을 사용 하 여 다양 한 비트 측정 결과에 따라 달라 집니다.
+이 Q# 언어를 사용 하면 기존 제어 흐름을 사용 하 여 다양 한 비트를 측정 한 결과에 따라 달라 집니다.
 이 기능을 사용 하면 unitaries를 구현 하기 위한 계산 비용을 줄일 수 있는 강력한 확률 가젯을 구현할 수 있습니다.
-이에 대 한 예는 Q #의 *반복-성공* (RUS) 패턴입니다.
+이에 대 한 예는의 RUS ( *-성공-성공* ) 패턴입니다 Q# .
 이러한 RUS 패턴은 기본 게이트 측면에서 저렴 한 비용으로 *예상* 되는 확률 프로그램입니다. 발생 한 비용은 실제 실행 및 가능한 여러 branchings의 인터리빙에 따라 다릅니다.
 
-반복-성공 (RUS) 패턴을 용이 하 게 하기 위해 Q #에서 구문을 지원 합니다.
+성공-성공 (RUS) 패턴을 용이 하 게 하기 위해에서 Q# 구문을 지원 합니다.
 
 ```qsharp
 repeat {
@@ -147,9 +150,9 @@ until (expression);
 
 ## <a name="while-loop"></a>While 루프
 
-반복-성공 패턴에는 퀀텀 별 connotation가 있을 수 있습니다. 이러한 클래스는 특정 퀀텀 알고리즘 클래스에서 널리 사용 되므로 Q #의 전용 언어 구문입니다. 그러나 조건에 따라 중단 되 고 해당 실행 길이는 컴파일 시간에 알 수 없는 루프는 퀀텀 런타임에서 특히 주의 해 서 처리 됩니다. 그러나 이러한 루프는 기존 (비 퀀텀) 하드웨어에서 실행 되는 코드만 포함 하므로 함수 내에서 사용 하는 것은 문제가 되지 않습니다. 
+반복-성공 패턴에는 퀀텀 별 connotation가 있을 수 있습니다. 이러한 클래스는 특정 퀀텀 알고리즘 클래스에서 널리 사용 되므로의 전용 언어 구문 Q# 입니다. 그러나 조건에 따라 중단 되 고 해당 실행 길이는 컴파일 시간에 알 수 없는 루프는 퀀텀 런타임에서 특히 주의 해 서 처리 됩니다. 그러나 이러한 루프는 기존 (비 퀀텀) 하드웨어에서 실행 되는 코드만 포함 하므로 함수 내에서 사용 하는 것은 문제가 되지 않습니다. 
 
-따라서 Q #은 함수 내 에서만 루프를 사용할 수 있도록 지원 합니다. `while`문은 키워드 `while` , 괄호 안의 부울 식 및 문 블록으로 구성 됩니다.
+Q#따라서는 함수 내 에서만 루프를 사용할 수 있도록 지원 합니다. `while`문은 키워드 `while` , 괄호 안의 부울 식 및 문 블록으로 구성 됩니다.
 문 블록 (루프의 본문)은 조건이로 확인 되 면 실행 됩니다 `true` .
 
 ```qsharp
@@ -205,7 +208,7 @@ fail $"Syndrome {syn} is incorrect";
 
 ### <a name="rus-pattern-for-single-qubit-rotation-about-an-irrational-axis"></a>무리 축에 대 한 단일 비트 회전에 대 한 RUS 패턴 
 
-일반적인 사용 사례에서 다음 Q # 연산은 Bloch 구의 $ (I + 2i Z)/\sqrt $의 무리 축을 중심으로 회전을 구현 {5} 합니다. 구현에서는 알려진 RUS 패턴을 사용 합니다.
+일반적인 사용 사례에서 다음 Q# 작업은 Bloch 구의 $ (I + 2i Z)/\sqrt $의 무리 축을 중심으로 회전을 구현 {5} 합니다. 구현에서는 알려진 RUS 패턴을 사용 합니다.
 
 ```qsharp
 operation ApplyVRotationUsingRUS(qubit : Qubit) : Unit {
@@ -331,4 +334,4 @@ operation PrepareStateUsingRUS(target : Qubit) : Unit {
 
 ## <a name="next-steps"></a>다음 단계
 
-Q #에서 [테스트 및 디버깅](xref:microsoft.quantum.guide.testingdebugging) 에 대해 알아봅니다.
+에서 [테스트 및 디버깅](xref:microsoft.quantum.guide.testingdebugging) 에 대해 알아봅니다 Q# .

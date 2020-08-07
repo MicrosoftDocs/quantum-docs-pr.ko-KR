@@ -6,12 +6,15 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.docs
-ms.openlocfilehash: ed5ab5df9de5d71ccd922cd430cf15779806dd6a
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 1110f32a6486de1a346b115fa928a098749b6690
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275497"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866879"
 ---
 # <a name="improving-documentation"></a>설명서 개선
 
@@ -25,7 +28,7 @@ ms.locfileid: "85275497"
 즉, 각 설명서 형태는 세부 정보에서 약간 다릅니다.
 
 - **개념 설명서** 는에 게시 되는 일련의 문서를 구성 https://docs.microsoft.com/quantum 하며,이를 통해 퀀텀 컴퓨팅의 기본 사항에서 교환 형식에 대 한 기술 사양을 설명 하는 모든 것을 설명 합니다. 이러한 문서는 풍부한 설명서 집합을 만드는 데 사용 되는 Markdown variant 인 [Flavored Markdown (DFM)](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html)로 작성 되었습니다.
-- **API 참조** 는에 게시 된 각 Q # 함수, 작업 및 사용자 정의 형식에 대 한 페이지 집합입니다 https://docs.microsoft.com/qsharp/api/ . 이러한 페이지에는 호출 가능한 각에 대 한 입력 및 작업과 추가 정보에 대 한 링크와 예제가 나와 있습니다. API 참조는 각 릴리스의 일부로 Q # 소스 코드의 small DFM 문서에서 자동으로 추출 됩니다.
+- **API 참조** 는 Q# 에 게시 된 각 함수, 작업 및 사용자 정의 형식에 대 한 페이지 집합입니다 https://docs.microsoft.com/qsharp/api/ . 이러한 페이지에는 호출 가능한 각에 대 한 입력 및 작업과 추가 정보에 대 한 링크와 예제가 나와 있습니다. API 참조는 Q# 각 릴리스의 일부로 소스 코드의 small DFM 문서에서 자동으로 추출 됩니다.
 - 각 샘플 및 kata에 포함 된 **추가 정보 <!----> ** 파일은 해당 샘플 또는 kata를 사용 하는 방법, 포함 된 내용, 나머지 퀀텀 개발 키트와의 관계를 설명 합니다. 이러한 파일은 코드 리포지토리에 직접 문서를 연결 하는 데 널리 사용 되는 [DFM (GitHub Flavored Markdown)](https://github.github.com/gfm/)을 사용 하 여 작성 되었습니다.
 
 ## <a name="contributing-to-the-conceptual-documentation"></a>개념 설명서에 기여
@@ -49,7 +52,7 @@ ms.locfileid: "85275497"
 :::code language="qsharp" source="~/quantum/samples/algorithms/chsh-game/Game.qs" range="4-8":::
 ```
 
-이 명령은 [ `Game.qs` `chsh-game` 샘플에서 파일](https://github.com/microsoft/Quantum/blob/master/samples/algorithms/chsh-game/Game.qs)의 4 ~ 8 줄을 가져와 구문 강조 표시를 위해 Q # 코드로 표시 합니다.
+이 명령은 [ `Game.qs` `chsh-game` 샘플에서 파일](https://github.com/microsoft/Quantum/blob/master/samples/algorithms/chsh-game/Game.qs)의 4 ~ 8 줄을 가져와 Q# 구문 강조 표시의 용도에 대 한 코드로 표시 합니다.
 이 명령을 사용 하면 설명서의 샘플 코드를 항상 최대한 최신 상태로 유지 하기 위해 개념 아티클과 샘플 리포지토리 간에 코드를 복제할 수 있습니다.
 
 ## <a name="contributing-to-the-api-references"></a>API 참조에 기여
@@ -64,7 +67,7 @@ API 참조에 대 한 향상 된 기능을 제공 하기 위해 문서화 되는
 
 예를 들어 함수를 살펴보겠습니다 `ControlledOnBitString<'T> (bits : Bool[], oracle : ('T => Unit is Adj + Ctl)) : ((Qubit[], 'T) => Unit is Adj + Ctl)` .
 설명서 주석은 사용자가 및 함수를 해석 하는 방법을 이해 하는 데 도움이 됩니다 `bits` `oracle` .
-이러한 각 정보는 설명서 주석에서 특수 하 게 명명 된 Markdown 섹션에 의해 Q # 컴파일러에 제공 될 수 있습니다.
+이러한 각 정보는 Q# 설명서 주석에서 특수 하 게 명명 된 Markdown 섹션을 통해 컴파일러에 제공 될 수 있습니다.
 예를 들어 `ControlledOnBitString` 다음과 같은 항목을 작성할 수 있습니다.
 
 ```qsharp
@@ -139,7 +142,7 @@ API 참조에 대 한 향상 된 기능을 제공 하기 위해 문서화 되는
 
 문서 작성에 대 한 일반적인 관행 외에도 API 문서 주석을 작성 하면 몇 가지 사항을 염두에 두어야 합니다.
 
-- 각 문서 주석의 형식은 Q # 컴파일러에서 설명서가 올바르게 표시 될 것으로 예상 하는 내용과 일치 해야 합니다. 예를 들어, 일부 섹션 `/// # Remarks` 은 자유형 콘텐츠를 허용 하지만 섹션과 같은 섹션 `/// # See Also` 은 더 제한적입니다.
+- 각 문서 주석의 형식은 Q# 컴파일러가 제대로 표시 될 수 있도록 컴파일러가 기대 하는 내용과 일치 해야 합니다. 예를 들어, 일부 섹션 `/// # Remarks` 은 자유형 콘텐츠를 허용 하지만 섹션과 같은 섹션 `/// # See Also` 은 더 제한적입니다.
 - 판독기는 주 API 참조 사이트, 각 네임 스페이스에 대 한 요약 또는 가리키기 정보를 사용 하 여 IDE 내 에서도 API 설명서를 읽을 수 있습니다. `/// # Summary`문장에 대 한 보다 길지 않으면 판독기가 더 많은 부분을 읽고 있는지 확인 하 고 네임 스페이스 요약을 통해 신속 하 게 검색 하는 데 도움이 될 수 있습니다.
 - 설명서가 코드 자체 보다 훨씬 더 오래 걸릴 수 있지만이는 정상입니다. 코드가 존재 하는 컨텍스트를 모르는 사용자에 게 예기치 않은 결과가 발생할 수 있습니다. 구체적인 예제와 명확한 설명을 제공 하 여 사용자가 사용할 수 있는 코드를 최대한 활용할 수 있도록 도와 줍니다.
 

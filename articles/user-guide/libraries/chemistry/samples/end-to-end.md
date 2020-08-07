@@ -5,19 +5,22 @@ author: cgranade
 ms.author: chgranad@microsoft.com
 ms.date: 10/23/2018
 uid: microsoft.quantum.chemistry.examples.endtoend
-ms.openlocfilehash: 7605676e05ee352e47791657eeaafceef5dbb493
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 78d6488ed5e3972f85f1e6cf1ba2d197596c4cc3
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275257"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869310"
 ---
 # <a name="end-to-end-with-nwchem"></a>NWChem을 사용하는 엔드투엔드 #
 
 이 문서에서는 [Nwchem](http://www.nwchem-sw.org/index.php/Main_Page) 입력 데크에서 시작 하 여 퀀텀 화학 시뮬레이션에 대 한 게이트 수를 가져오는 예제를 안내 합니다.
 이 예제를 진행 하기 전에 [설치 및 유효성 검사 가이드](xref:microsoft.quantum.chemistry.concepts.installation)에 따라 Docker를 설치 했는지 확인 합니다.
 
-자세한 내용은 다음을 참조하세요.
+추가 정보
 - [NWChem 입력 데크 구조](https://github.com/nwchemgit/nwchem/wiki/Getting-Started#input-file-structure)
     - [퀀텀 개발 키트에 사용할 입력 데크 명령](https://github.com/nwchemgit/nwchem/tree/master/contrib/quasar)
 - [화학 라이브러리 및 종속성 설치](xref:microsoft.quantum.chemistry.concepts.installation)

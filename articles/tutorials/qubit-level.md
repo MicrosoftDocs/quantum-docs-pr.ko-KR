@@ -1,70 +1,73 @@
 ---
-title: 'Q에서 해당 하는 비트 수준 프로그램 작성 및 시뮬레이트 #'
+title: 에서의 비트 수준 프로그램 작성 및 시뮬레이트Q#
 description: 개별 기능 비트 수준에서 작동 하는 퀀텀 프로그램 작성 및 시뮬레이션에 대 한 단계별 자습서
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 10/06/2019
 uid: microsoft.quantum.circuit-tutorial
 ms.topic: tutorial
-ms.openlocfilehash: e7ebdec4cd1aa201030d82759a3aa56473b26417
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 22c79e4e01db1a0d0c291d0dcff81dbfa8df5cd3
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275350"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869718"
 ---
 # <a name="tutorial-write-and-simulate-qubit-level-programs-in-q"></a>자습서: Q:에서의 비트 수준 프로그램 작성 및 시뮬레이트\#
 
 개별 ombits에서 작동 하는 기본 퀀텀 프로그램 작성 및 시뮬레이션에 대 한 퀀텀 Development Kit 자습서를 시작 합니다. 
 
-Q #은 대규모 퀀텀 프로그램에 대 한 높은 수준의 프로그래밍 언어로 작성 되었지만, 더 낮은 수준의 퀀텀 프로그램을 탐색 하는 데 쉽게 사용할 수 있습니다.
-Q #의 유연성을 통해 사용자는 이러한 추상화 수준에서 퀀텀 시스템에 접근 하는 데 사용할 수 있으며,이 자습서에서는 원하는 비트 단위를 자세히 살펴봅니다.
+Q#는 주로 대규모 퀀텀 프로그램을 위한 상위 수준 프로그래밍 언어로 만들어졌지만, 더 낮은 수준의 퀀텀 프로그램을 탐색 하는 데 쉽게 사용할 수 있습니다. 즉, 특정 비트를 직접 지정 합니다.
+의 유연성을 Q# 통해 사용자는 이러한 추상화 수준에서 퀀텀 시스템에 접근 하는 데 사용할 수 있으며,이 자습서에서는 다양 한 기능을 제공 합니다.
 특히, 많은 수의 큰 퀀텀 알고리즘에 필수적인 서브루틴 인 [퀀텀 푸리에 변환](https://en.wikipedia.org/wiki/Quantum_Fourier_transform)의 후드를 살펴보겠습니다.
 
 퀀텀 정보 처리에 대 한이 하위 수준 보기는 시스템의 특정 비트에 대 한 게이트의 순차적 적용을 나타내는 "[퀀텀 회로](xref:microsoft.quantum.concepts.circuits)" 측면에서 설명 하는 경우가 많습니다.
 
 따라서 순차적으로 적용 한 단일 및 다중 작업 비트 작업을 "회로 다이어그램"으로 쉽게 나타낼 수 있습니다.
-여기서는 회로로 표시 되는 다음 표현이 포함 된 전체 3-비트 퀀텀 푸리에 변환을 수행 하는 Q # 작업을 정의 합니다.
+이 경우 Q# 회로로 표시 되는 다음 표현을 포함 하는 전체 3 일 비트 퀀텀 푸리에 변환을 수행 하는 작업을 정의 합니다.
 
 <br/>
 <img src="../media/qft_full.PNG" alt="Three qubit quantum Fourier transform circuit diagram" width="600">
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 * 원하는 언어 및 개발 환경을 사용 하 여 퀀텀 개발 키트를 [설치](xref:microsoft.quantum.install) 합니다.
 * QDK가 이미 설치되어 있는 경우 최신 버전으로 [업데이트](xref:microsoft.quantum.update)해야 합니다.
 
 
-## <a name="in-this-tutorial-youll-learn-how-to"></a>이 자습서에서 학습할 방법은 다음과 같습니다.
+## <a name="in-this-tutorial-youll-learn-how-to"></a>이 자습서에서는 다음 작업을 수행하는 방법을 알아봅니다.
 
 > [!div class="checklist"]
-> * Q에서 퀀텀 작업 정의 #
-> * 명령줄에서 또는 기존 호스트 프로그램을 사용 하 여 Q # 작업을 직접 호출 합니다.
+> * 퀀텀 작업 정의Q#
+> * Q#명령줄에서 또는 기존 호스트 프로그램을 사용 하 여 작업을 직접 호출 합니다.
 > * 측정 출력에 대 한 정량 비트 할당에서 퀀텀 작업 시뮬레이트
 > * 작업 전체에서 퀀텀 시스템의 시뮬레이션 된 wavefunction 진화 하는 방식 관찰
 
 Microsoft의 퀀텀 개발 키트를 사용 하 여 퀀텀 프로그램을 실행 하는 작업은 일반적으로
-1. 프로그램 자체는 Q # 퀀텀 프로그래밍 언어를 사용 하 여 구현 된 다음 퀀텀 컴퓨터 또는 퀀텀 시뮬레이터에서 실행 되도록 호출 됩니다. 다음으로 구성 됩니다. 
-    - Q # 작업: 퀀텀 레지스터에서 동작 하는 서브루틴 
-    - Q # 함수: 퀀텀 알고리즘 내에서 사용 되는 기존 서브루틴입니다.
+1. 프로그램 자체는 퀀텀 프로그래밍 언어를 사용 하 여 구현 된 Q# 다음 퀀텀 컴퓨터 또는 퀀텀 시뮬레이터에서 실행 되도록 호출 됩니다. 다음으로 구성 됩니다. 
+    - Q#작업: 퀀텀 레지스터에 대해 작동 하는 서브루틴 
+    - Q#함수: 퀀텀 알고리즘 내에서 사용 되는 기존 서브루틴입니다.
 2. 퀀텀 프로그램을 호출 하 고 실행 해야 하는 대상 컴퓨터를 지정 하는 데 사용 되는 진입점입니다.
     이 작업은 명령줄에서 직접 수행 하거나 Python 또는 c #과 같은 클래식 프로그래밍 언어로 작성 된 호스트 프로그램을 통해 수행할 수 있습니다.
     이 자습서에는 원하는 방법에 대 한 지침이 포함 되어 있습니다.
 
 ## <a name="allocate-qubits-and-define-quantum-operations"></a>이상 비트 할당 및 퀀텀 작업 정의
 
-이 자습서의 첫 번째 부분은 `Perform3qubitQFT` 3 개의 성능에서 퀀텀 푸리에 변환을 수행 하는 Q # 작업을 정의 하는 것으로 구성 됩니다. 
+이 자습서의 첫 번째 부분에서는 작업을 정의 하 여 Q# `Perform3qubitQFT` 세 개의 성능에서 퀀텀 푸리에 변환을 수행 하는 작업을 정의 합니다. 
 
 또한 함수를 사용 [`DumpMachine`](xref:microsoft.quantum.diagnostics.dumpmachine) 하 여 세 가지 wavefunction의 시뮬레이션 된 작업이 작업 전체에서 어떻게 진화 하는지 관찰 합니다.
 
-첫 번째 단계는 Q # 프로젝트 및 파일을 만드는 것입니다.
+첫 번째 단계에서는 Q# 프로젝트 및 파일을 만듭니다.
 이에 대 한 단계는 프로그램을 호출 하는 데 사용 하는 환경에 따라 다르며, 각 [설치 가이드](xref:microsoft.quantum.install)에서 세부 정보를 찾을 수 있습니다.
 
 파일의 구성 요소를 단계별로 안내 하지만 아래의 전체 블록으로도 코드를 사용할 수 있습니다.
 
-### <a name="namespaces-to-access-other-q-operations"></a>다른 Q # 작업에 액세스 하기 위한 네임 스페이스
+### <a name="namespaces-to-access-other-no-locq-operations"></a>다른 작업에 액세스 하기 위한 네임 스페이스 Q#
 이 파일 내에서 먼저 컴파일러에서 액세스할 네임 스페이스를 정의 합니다 `NamespaceQFT` .
-기존 Q # 작업을 사용 하기 위해 작업을 수행 하려면 관련 `Microsoft.Quantum.<>` 네임 스페이스를 엽니다.
+기존 작업을 사용 하기 위해 작업을 수행 하기 위해 Q# 관련 `Microsoft.Quantum.<>` 네임 스페이스를 엽니다.
 
 ```qsharp
 namespace NamespaceQFT {
@@ -90,7 +93,7 @@ namespace NamespaceQFT {
 나중에이를 수정 하 여 측정 결과의 배열을 반환 하도록 지정 합니다. 여기서 point는 `Unit` 로 대체 됩니다 `Result[]` . 
 
 ### <a name="allocate-qubits-with-using"></a>에서의 비트 할당`using`
-Q # 작업 내에서 먼저 다음 문을 사용 하 여 세 가지의 레지스터를 할당 합니다 `using` .
+Q#이 작업 내에서 먼저 다음 문을 사용 하 여 세 가지의 레지스터를 할당 합니다 `using` .
 
 ```qsharp
         using (qs = Qubit[3]) {
@@ -104,16 +107,16 @@ Q # 작업 내에서 먼저 다음 문을 사용 하 여 세 가지의 레지스
 을 사용 하는 경우에는 `using` $ \ket $ 상태에서 해당 비트가 자동으로 할당 됩니다 {0} . 및를 사용 하 여이를 확인할 수 있습니다 [`Message(<string>)`](xref:microsoft.quantum.intrinsic.message) [`DumpMachine()`](xref:microsoft.quantum.diagnostics.dumpmachine) .이는 문자열과 시스템의 현재 상태를 콘솔에 출력 합니다.
 
 > [!NOTE]
-> 및 `Message(<string>)` `DumpMachine()` 함수 ( [`Microsoft.Quantum.Intrinsic`](xref:microsoft.quantum.intrinsic) [`Microsoft.Quantum.Diagnostics`](xref:microsoft.quantum.diagnostics) 각각 및)는 콘솔에 직접 인쇄 합니다. 실제 퀀텀 계산과 마찬가지로 Q #은이에 대 한 직접 액세스를 허용 하지 않습니다.
+> 및 `Message(<string>)` `DumpMachine()` 함수 ( [`Microsoft.Quantum.Intrinsic`](xref:microsoft.quantum.intrinsic) [`Microsoft.Quantum.Diagnostics`](xref:microsoft.quantum.diagnostics) 각각 및)는 콘솔에 직접 인쇄 합니다. 실제 퀀텀 계산과 마찬가지로에서는이를 Q# 통해 원하는 비트 상태에 직접 액세스할 수 없습니다.
 > 그러나는 `DumpMachine` 대상 컴퓨터의 현재 상태를 인쇄 하므로 전체 상태 시뮬레이터와 함께 사용 될 때 디버깅 및 학습에 대 한 중요 한 정보를 제공할 수 있습니다.
 
 
 ### <a name="applying-single-qubit-and-controlled-gates"></a>단일 및 제어 되는 게이트 적용
 
 다음으로 작업 자체를 구성 하는 게이트를 적용 합니다.
-Q #에는 네임 스페이스의 작업으로 이미 많은 기본 퀀텀 문이 포함 되어 [`Microsoft.Quantum.Intrinsic`](xref:microsoft.quantum.intrinsic) 있으며, 이러한 작업은 예외가 아닙니다. 
+Q#에는 네임 스페이스의 작업으로 기본 퀀텀 게이트가 이미 많이 포함 되어 [`Microsoft.Quantum.Intrinsic`](xref:microsoft.quantum.intrinsic) 있으며, 이러한 작업은 예외는 아닙니다. 
 
-Q # 작업 내에서 callables을 호출 하는 문은 물론 순차적으로 실행 됩니다.
+작업 내에서 Q# callables을 호출 하는 문은 물론 순차적으로 실행 됩니다.
 따라서 첫 번째는 적용 되는 첫 번째 게이트가 [`H`](xref:microsoft.quantum.intrinsic.h) (Hadamard)입니다.
 
 <br/>
@@ -131,7 +134,7 @@ Q # 작업 내에서 callables을 호출 하는 문은 물론 순차적으로 �
 
 #### <a name="controlled-operations"></a>제어 된 작업
 
-Q #을 사용 하면 하나 또는 여러 컨트롤의 작업을 매우 쉽게 실행할 수 있습니다.
+Q#를 사용 하면 하나 또는 여러 컨트롤의 작업을 매우 쉽게 실행할 수 있습니다.
 일반적으로 호출을로 호출 하 `Controlled` 고 작업 인수가 다음과 같이 변경 됩니다.
 
  `Op(<normal args>)`$ \to $ `Controlled Op([<control qubits>], (<normal args>))` .
@@ -176,12 +179,12 @@ Q #을 사용 하면 하나 또는 여러 컨트롤의 작업을 매우 쉽게 �
 
 이는 양자를 사용 하는 경우에 필요 합니다. 즉, 양자를 사용 하 여 서브루틴을 더 큰 알고리즘으로 원활 하 게 통합할 수 있습니다.
 
-따라서 Q # 작업에 퀀텀 푸리에 변환의 엔터프라이즈급 비트 작업을 작성 했습니다.
+따라서 작업에 퀀텀 푸리에 변환의 엔터프라이즈급 비트 작업을 작성 했습니다 Q# .
 
 <img src="../media/qft_full.PNG" alt="Three qubit quantum Fourier transform circuit diagram" width="600">
 
 그러나 아직 하루에는 호출할 수 없습니다.
-Microsoft는이 기능을 {0} 할당 했을 때 $ \ket $ 상태 였습니다. Q #에서는이를 검색 하는 것과 같은 방식으로 그대로 두어야 합니다.
+Microsoft는이 기능을 할당 했을 때 $ \ket $ 상태에 있었지만, {0} 대부분의 경우에는이를 발견 한 것 Q# 과 같은 방식으로 유지 해야 합니다.
 
 ### <a name="deallocate-qubits"></a>비트 할당 취소
 
@@ -194,11 +197,11 @@ Microsoft는이 기능을 {0} 할당 했을 때 $ \ket $ 상태 였습니다. Q 
             ResetAll(qs);
 ```
 
-할당 되지 않은 모든 작업을 명시적으로 $ \ket $로 설정 해야 하는 것 {0} 은 다른 작업에서 동일한 기능을 사용 하기 시작할 때 해당 상태를 정확 하 게 알 수 있기 때문에 Q #의 기본 기능입니다.
+할당 되지 않은 모든 작업을 명시적으로 $ \ket $로 설정 해야 하는 것 {0} 은 다른 작업에서 동일한 기능을 사용 하기 시작할 때 해당 상태를 정확 하 게 알 수 있기 때문에의 기본 기능입니다 Q# (리소스 부족).
 또한 시스템의 다른 모든 비트를 사용 하는 것은 아닙니다.
 할당 블록의 끝에서 reset을 수행 하지 않으면 `using` 런타임 오류가 발생 합니다.
 
-이제 전체 Q # 파일이 다음과 같이 표시 됩니다.
+이제 전체 Q# 파일이 다음과 같이 표시 됩니다.
 
 ```qsharp
 namespace NamespaceQFT {
@@ -239,18 +242,18 @@ namespace NamespaceQFT {
 ```
 
 
-Q # 파일 및 작업이 완료 되 면 퀀텀 프로그램을 호출 하 고 시뮬레이션할 준비가 된 것입니다.
+Q#파일 및 작업이 완료 되 면 퀀텀 프로그램을 호출 하 고 시뮬레이션할 준비가 된 것입니다.
 
 ## <a name="execute-the-program"></a>프로그램 실행
 
-파일에 Q # 작업을 정의 했으므로 `.qs` 이제 해당 작업을 호출 하 고 반환 된 모든 기존 데이터를 관찰 해야 합니다.
-지금은 반환 된 내용이 없지만 (위에서 정의한 작업이 반환 됨 `Unit` ) 나중에 Q # 작업을 수정 하 여 측정 결과 ()의 배열을 반환 하는 경우에는 `Result[]` 이를 해결 합니다.
+Q#작업을 파일에 정의 했으므로 `.qs` 이제 해당 작업을 호출 하 고 반환 된 모든 기존 데이터를 관찰 해야 합니다.
+지금은 반환 된 내용이 없습니다 (위에서 정의한 작업이 반환 됨 `Unit` ). 하지만 나중에 Q# 측정 결과 ()의 배열을 반환 하도록 작업을 수정 하는 경우이를 `Result[]` 해결 합니다.
 
-Q # 프로그램은이를 호출 하는 데 사용 되는 환경에서의 작업을 수행 하는 반면,이 작업을 수행 하는 방법은 다양 합니다. 따라서 설정에 해당 하는 탭의 지침을 따르면 됩니다. Q # 명령줄 응용 프로그램에서 작업 하거나 Python 또는 c #에서 호스트 프로그램을 사용 합니다.
+프로그램을 호출 하는 데 사용 되는 환경에서 프로그램을 실행 하는 동안에는이 작업을 수행 하는 Q# 방식이 다릅니다. 따라서 Q# 명령줄 응용 프로그램에서 작업 하거나 Python 또는 c #에서 호스트 프로그램을 사용 하 여 설정에 해당 하는 탭의 지침을 따르세요.
 
-#### <a name="command-line"></a>[명령 줄](#tab/tabid-cmdline)
+#### <a name="command-line"></a>[명령줄](#tab/tabid-cmdline)
 
-명령줄에서 Q # 프로그램을 실행 하려면 Q # 파일을 약간만 변경 하면 됩니다.
+Q#명령줄에서 프로그램을 실행 하려면 파일을 약간만 변경 해야 Q# 합니다.
 
 `@EntryPoint()`작업 정의 앞의 줄에를 추가 하기만 하면 됩니다.
 
@@ -274,17 +277,17 @@ dotnet run
 Python 호스트 파일을 만듭니다 `host.py` .
 
 호스트 파일은 다음과 같이 구성 됩니다. 
-1. 먼저, `qsharp` Q # 상호 운용성에 대 한 모듈 로더를 등록 하는 모듈을 가져옵니다. 
-    이를 통해 q # 작업을 가져올 수 있는 Python 모듈로 표시 되는 Q # 네임 스페이스 (예: `NamespaceQFT` q # 파일에 정의 된)를 사용할 수 있습니다.
-2. 그런 다음이 경우---직접 호출 하는 Q # 작업을 가져옵니다 `Perform3qubitQFT` .
-    진입점을 Q # 프로그램 으로만 가져와야 합니다. 즉 _not_ `H` `R1` , 다른 q # 작업에서 호출 하지만 기존 호스트에서는 호출 하지 않는와 같은 작업은 수행 하지 않아야 합니다.
-3. Q # 작업 또는 함수를 시뮬레이션 하는 경우 폼을 사용 `<Q#callable>.simulate(<args>)` 하 여 `QuantumSimulator()` 대상 컴퓨터에서 실행 합니다. 
+1. 먼저 모듈 `qsharp` 을 가져오고,이 모듈은 상호 운용성을 위해 모듈 로더를 등록 합니다 Q# . 
+    이렇게 하면 Q# 네임 스페이스 (예: `NamespaceQFT` 파일에 정의 된 Q# )를 Python 모듈로 표시 하 여 작업을 가져올 수 있습니다. Q#
+2. 그런 다음 Q# 이 경우---직접 호출 하는 작업 (이 경우)을 가져옵니다 `Perform3qubitQFT` .
+    진입점을 프로그램 으로만 가져와야 Q# 합니다. _not_ 즉 `H` `R1` , 다른 작업에 의해 호출 Q# 되지만 기존 호스트에서 호출 하지 않는 및와 같은 작업은 아닙니다.
+3. Q#작업 또는 함수를 시뮬레이션 하는 경우 폼을 사용 `<Q#callable>.simulate(<args>)` 하 여 `QuantumSimulator()` 대상 컴퓨터에서 실행 합니다. 
 
 > [!NOTE]
 > 예를 들어와 같이 다른 컴퓨터에서 작업을 호출 하려는 경우를 `ResourceEstimator()` 사용 `<Q#callable>.estimate_resources(<args>)` 합니다.
-> 일반적으로 Q # 작업은 실행 되는 컴퓨터와는 독립적 이지만와 같은 일부 기능은 `DumpMachine` 다르게 동작할 수 있습니다.
+> 일반적으로 Q# 작업은 실행 되는 컴퓨터와는 독립적 이지만와 같은 일부 기능은 `DumpMachine` 다르게 동작할 수 있습니다.
 
-4. 시뮬레이션을 수행할 때 작업 호출은 Q # 파일에 정의 된 대로 값을 반환 합니다.
+4. 시뮬레이션을 수행할 때 작업 호출은 파일에 정의 된 대로 값을 반환 합니다 Q# .
     지금은 아무 것도 반환 되지 않지만 나중에 이러한 값을 할당 하 고 처리 하는 예제를 볼 수 있습니다.
     실습 및 완전히 고전의 결과 데이터를 사용 하 여 원하는 작업을 수행할 수 있습니다.
 
@@ -310,7 +313,7 @@ C # 호스트는 네 부분으로 구성 됩니다.
 2. 양자 알고리즘에 필요한 인수를 계산합니다.
     이 예제에는 없음이 있습니다.
 3. 양자 알고리즘을 실행합니다. 
-    각 Q# 연산은 동일한 이름의 C# 클래스를 생성합니다. 
+    각 Q# 작업은 동일한 이름의 c # 클래스를 생성 합니다. 
     이 클래스에는 **비동기적으로** 연산을 실행하는 `Run` 메서드가 있습니다.
     실제 하드웨어에서 비동기적으로 실행되므로 실행이 비동기적입니다. 
     메서드가 비동기 이기 때문에 `Run` 메서드를 호출 합니다 `Wait()` .이 메서드는 작업이 완료 될 때까지 실행을 차단 하 고 결과를 동기적으로 반환 합니다. 
@@ -393,7 +396,7 @@ After:
 
 $ $ \ket{\psi} \_ {초기} = \ket {000} $ $
 
-to 
+다음으로 변경: 
 
 $ $ \begin{align} \ket{\psi} \_ {final} &= \frac {1} {\sqrt {8} } \left (\ket {000} + \ket {001} + \ket {010} + \ket {011} + \ket {100} + \ket {101} + \ket {110} + \ket {111} \right) \\ \\ &= \frac {1} {\sqrt{2 ^ n}} \sum \_ {j = 0} ^ {2 ^ n-1} \ket{j}, \end{align} $ $
 
@@ -407,7 +410,7 @@ $ $ \begin{align} \ket{\psi} \_ {final} &= \frac {1} {\sqrt {8} } \left (\ket {0
 다양 한 종류의 퀀텀 측정이 있지만 가장 기본적인: projective 측정에 중점을 두고 있습니다.
 지정 된 기준 (예: 계산 기준 $ \{ \ket {0} , \ket $)을 기준으로 하는 경우에는 {1} \} 두 값 사이에 있는 모든 superposition를 소멸---측정 된 기준에 따른 비트 상태를 예측 합니다.
 
-Q # 프로그램 내에서 측정값을 구현 하기 위해 `M` 형식을 반환 하는 작업 (의 경우)을 사용 합니다 `Microsoft.Quantum.Intrinsic` `Result` .
+프로그램 내에서 측정을 구현 하기 위해 Q# `M` 형식을 반환 하는 작업 (의 경우)을 사용 합니다 `Microsoft.Quantum.Intrinsic` `Result` .
 
 첫째, `Perform3QubitQFT` 대신 측정 결과 배열을 반환 하도록 작업을 수정 `Result[]` `Unit` 합니다.
 
@@ -438,7 +441,7 @@ Q # 프로그램 내에서 측정값을 구현 하기 위해 `M` 형식을 반�
 그러면 각 측정 된 `Result` 형식 ( `Zero` 또는 `One` )이 `resultArray` 업데이트 및 재할당 문으로의 해당 인덱스 위치에 추가 됩니다.
 
 > [!NOTE]
-> 이 문의 구문은 Q #에서 고유 하지만 `resultArray[i] <- M(qs[i])` F # 및 R과 같은 다른 언어에서 보이는 유사한 변수 재할당에 해당 합니다.
+> 이 문의 구문은에 고유 Q# 하지만 `resultArray[i] <- M(qs[i])` F # 및 R과 같은 다른 언어에서 보이는 유사한 변수 재할당에 해당 합니다.
 
 키워드는를 `set` 사용 하 여 바인딩된 변수를 다시 할당 하는 데 항상 사용 됩니다 `mutable` .
 
@@ -499,9 +502,9 @@ Q # 프로그램 내에서 측정값을 구현 하기 위해 `M` 형식을 반�
 명령줄에서 작업 하는 경우 반환 된 배열은 단순히 실행이 끝날 때 콘솔에 직접 출력 됩니다.
 그렇지 않으면 반환 된 배열을 처리 하도록 호스트 프로그램을 업데이트 합니다.
 
-#### <a name="command-line"></a>[명령 줄](#tab/tabid-cmdline)
+#### <a name="command-line"></a>[명령줄](#tab/tabid-cmdline)
 
-콘솔에 출력 되는 반환 된 배열을 보다 잘 이해 하기 위해 `Message` 문 바로 앞에 있는 Q # 파일에 다른 배열을 추가할 수 있습니다 `return` .
+콘솔에 출력 되는 반환 된 배열을 보다 잘 이해 하기 위해 `Message` 문 바로 앞에 다른 파일을 추가할 수 있습니다 Q# `return` .
 
 ```qsharp
         Message("Post-QFT measurement results [qubit0, qubit1, qubit2]: ");
@@ -694,12 +697,12 @@ _그러나_비효율적이 고 여전히 아직까지 완벽 하는 것 외에�
 결과 출력에서 각 고가 측정 될 때 하위 공간에 대 한 점진적 프로젝션을 볼 수 있습니다.
 
 
-## <a name="use-the-q-libraries"></a>Q # 라이브러리 사용
-소개 부분에서 언급 했 듯이, Q #의 많은 힘은 개별 신경 쓰지를 처리 하는 것이 가능 하다는 사실에 있습니다.
+## <a name="use-the-no-locq-libraries"></a>라이브러리 사용 Q#
+소개 부분에서 언급 했 듯이, 대부분의 Q# 능력은 개별 신경 쓰지를 처리 하는 것이 가능 하다는 사실에 있습니다.
 실제로, 적용 가능한 모든 퀀텀 프로그램을 개발 하려는 경우 특정 순환의 전후에 작업이 발생 하는지 걱정 해도 `H` 속도가 저하 될 수 있습니다. 
 
-Q # 라이브러리에는 [Qft](xref:microsoft.quantum.canon.qft) 연산이 포함 되어 있으며,이 작업은 원하는 수의 다양 한 비트에 대해 간단 하 게 적용 하 고 적용할 수 있습니다.
-이 작업을 수행 하려면의 내용이 동일한 Q # 파일에 새 작업을 정의 합니다 .이 작업은 `Perform3QubitQFT` 첫 번째에서로 대체 되는 모든 항목을 `H` `SWAP` 두 개의 간단한 줄로 바꿉니다.
+라이브러리에는 Q# [qft](xref:microsoft.quantum.canon.qft) 연산이 포함 되어 있으며,이 작업은 원하는 수의 다양 한 비트에 대해 간단 하 게 적용 및 적용할 수 있습니다.
+이 작업을 수행 하려면의 내용이 동일한 파일에 새 작업을 정의 합니다 .이 작업은 첫 번째에서 Q# `Perform3QubitQFT` 로 대체 되는 모든 항목을 `H` `SWAP` 두 개의 간단한 줄로 바꿉니다.
 ```qsharp
             let register = BigEndian(qs);    //from Microsoft.Quantum.Arithmetic
             QFT(register);                   //from Microsoft.Quantum.Canon
@@ -707,7 +710,7 @@ Q # 라이브러리에는 [Qft](xref:microsoft.quantum.canon.qft) 연산이 포�
 첫 번째 줄에서는 [`BigEndian`](xref:microsoft.quantum.arithmetic.bigendian) `qs` [qft](xref:microsoft.quantum.canon.qft) 작업에서 인수로 사용 되는,의 할당 된 배열의 식을 만듭니다.
 이는 레지스터의 고 비트의 인덱스 순서에 해당 합니다.
 
-이러한 작업에 액세스 하려면 `open` Q # 파일의 시작 부분에 해당 네임 스페이스에 대 한 문을 추가 합니다.
+이러한 작업에 액세스 하려면 `open` 파일의 시작 부분에 해당 네임 스페이스에 대 한 문을 추가 합니다 Q# .
 ```qsharp
     open Microsoft.Quantum.Canon;
     open Microsoft.Quantum.Arithmetic;
@@ -715,7 +718,7 @@ Q # 라이브러리에는 [Qft](xref:microsoft.quantum.canon.qft) 연산이 포�
 
 이제 호스트 프로그램을 조정 하 여 새 작업의 이름 (예:)을 호출 하 `PerformIntrinsicQFT` 고 그럼를 제공 합니다.
 
-Q # 라이브러리 작업을 사용 하는 실제 혜택을 확인 하려면 다음과 같은 방법으로 값을 변경 합니다 `3` .
+라이브러리 작업 사용에 대 한 실제 혜택을 확인 하려면 Q# 다음과 같은 값을 변경 하는 것이 좋습니다 `3` .
 ```qsharp
         mutable resultArray = new Result[4]; 
 

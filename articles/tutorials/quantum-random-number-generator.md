@@ -1,30 +1,33 @@
 ---
 title: 퀀텀 난수 생성기 만들기
-description: 퀀텀 난수 생성기를 만들어서 중첩 같은 기본적인 퀀텀 개념을 보여주는 Q# 프로젝트를 빌드합니다.
+description: Q#퀀텀 난수 생성기를 만들어 superposition와 같은 기본적인 퀀텀 개념을 보여 주는 프로젝트를 빌드합니다.
 author: bromeg
 ms.author: megbrow@microsoft.com
 ms.date: 10/25/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.qrng
-ms.openlocfilehash: 18e8975e513a87c0a67a6dbb5586cc7dab5a93fb
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 8db892091794cb1166e41744572d8938d975abf2
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275286"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869769"
 ---
 # <a name="tutorial-implement-a-quantum-random-number-generator-in-q"></a>자습서: Q\#에서 퀀텀 난수 생성기 구현
 
-Q#으로 퀀텀 난수 생성기를 작성하는 간단한 퀀텀 알고리즘 예제입니다. 이 알고리즘은 퀀텀 메커니즘의 특성을 활용하여 난수를 생성합니다.
+에서 작성 된 퀀텀 알고리즘의 간단한 예는 Q# 퀀텀 난수 생성기입니다. 이 알고리즘은 퀀텀 메커니즘의 특성을 활용하여 난수를 생성합니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 - Microsoft [Quantum Development Kit](xref:microsoft.quantum.install)
-- [명령줄에서 Q#을 사용](xref:microsoft.quantum.install.standalone)하거나 [Python 호스트 프로그램](xref:microsoft.quantum.install.python) 또는 [C# 호스트 프로그램](xref:microsoft.quantum.install.cs)을 사용하여 Q# 프로젝트를 만듭니다.
+- Q# [ Q# 명령줄에서를 사용](xref:microsoft.quantum.install.standalone)하거나 [Python 호스트 프로그램](xref:microsoft.quantum.install.python) 또는 [c # 호스트 프로그램](xref:microsoft.quantum.install.cs)을 사용 하 여에 대 한 프로젝트를 만듭니다.
 
-## <a name="write-a-q-operation"></a>Q# 연산 작성
+## <a name="write-a-no-locq-operation"></a>작업 쓰기 Q#
 
-### <a name="q-operation-code"></a>Q# 연산 코드
+### <a name="no-locq-operation-code"></a>Q#작업 코드
 
 1. Program.qs 파일의 내용을 다음 코드로 바꿉니다.
 
@@ -32,7 +35,7 @@ Q#으로 퀀텀 난수 생성기를 작성하는 간단한 퀀텀 알고리즘 �
 
 [퀀텀 컴퓨팅 이해](xref:microsoft.quantum.overview.understanding) 문서에서 설명한 대로 큐비트는 중첩될 수 있는 퀀텀 정보의 단위입니다. 측정된 큐비트는 0 또는 1 중 하나만 될 수 있습니다. 하지만 실행 중인 동안 큐비트 상태는 측정값이 0 또는 1일 수 있는 확률을 나타냅니다. 이 확률적 상태를 중첩이라고 합니다. 이 확률을 사용하여 난수를 생성할 수 있습니다.
 
-Q# 연산에서는 Q#의 기본 형식인 `Qubit` 데이터 형식을 도입합니다. `Qubit`는 `using` 문으로만 할당할 수 있습니다. 할당되는 경우 큐비트는 항상 `Zero` 상태입니다. 
+이 Q# 작업에서는 `Qubit` 데이터 형식을 네이티브로 도입 합니다 Q# . `Qubit`는 `using` 문으로만 할당할 수 있습니다. 할당되는 경우 큐비트는 항상 `Zero` 상태입니다. 
 
 `H` 연산을 사용하여 `Qubit`를 중첩 상태로 전환할 수 있습니다. 큐비트를 측정하고 값을 읽으려면 `M` 내장 연산을 사용합니다.
 
@@ -61,13 +64,13 @@ Bloch 구의 북극은 클래식 **0** 값을 나타내고, 남극은 클래식 
 
 ## <a name="creating-a-complete-random-number-generator"></a>완전한 난수 생성기 만들기
 
-이제 임의 비트를 생성하는 Q# 연산 기능이 있으므로 이를 사용하여 완전한 퀀텀 난수 생성기를 빌드할 수 있습니다. Q# 명령줄 애플리케이션을 사용하거나 호스트 프로그램을 사용할 수 있습니다.
+이제 Q# 임의 비트를 생성 하는 작업이 있으므로 전체 퀀텀 난수 생성기를 작성 하는 데 사용할 수 있습니다. Q#명령줄 응용 프로그램을 사용 하거나 호스트 프로그램을 사용할 수 있습니다.
 
 
 
-### <a name="q-command-line-applications-with-visual-studio-or-visual-studio-code"></a>[Visual Studio 또는 Visual Studio Code를 사용한 Q# 명령줄 애플리케이션](#tab/tabid-qsharp)
+### <a name="no-locq-command-line-applications-with-visual-studio-or-visual-studio-code"></a>[Q#Visual Studio 또는 Visual Studio Code를 사용 하는 명령줄 응용 프로그램](#tab/tabid-qsharp)
 
-전체 Q# 명령줄 애플리케이션을 만들려면 다음 진입점을 Q# 프로그램에 추가합니다. 
+전체 Q# 명령줄 응용 프로그램을 만들려면 프로그램에 다음 진입점을 추가 합니다 Q# . 
 
 :::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="17-33":::
 
@@ -91,7 +94,7 @@ dotnet run --no-build
 
 ### <a name="python-with-visual-studio-code-or-the-command-line"></a>[Visual Studio 코드 또는 명령줄을 사용하는 Python](#tab/tabid-python)
 
-Python에서 새 Q# 프로그램을 실행하려면 다음 코드를 `host.py`로 저장합니다.
+Python에서 새 프로그램을 실행 하려면 Q# 다음 코드를로 저장 합니다 `host.py` .
 
 :::code language="python" source="~/quantum/samples/interoperability/qrng/host.py" range="11-30":::
 
@@ -105,7 +108,7 @@ Preparing Q# environment...
 
 ### <a name="c-with-visual-studio-code-or-visual-studio"></a>[Visual Studio Code 또는 Visual Studio를 사용한 C#](#tab/tabid-csharp)
 
-C#에서 새 Q# 프로그램을 실행하려면 다음 C# 코드를 포함하도록 `Driver.cs`를 수정합니다.
+Q#C #에서 새 프로그램을 실행 하려면 `Driver.cs` 다음 c # 코드를 포함 하도록을 수정 합니다.
 
 :::code language="csharp" source="~/quantum/samples/interoperability/qrng/Host.cs" range="4-39":::
 

@@ -1,29 +1,32 @@
 ---
-title: 'Q의 형식 식 #'
-description: 'Q #에서 상수, 변수, 연산자, 작업 및 함수를 식으로 지정, 참조 및 결합 하는 방법을 이해 합니다.'
+title: 식의Q#
+description: 에서 상수, 변수, 연산자, 작업 및 함수를 식으로 지정, 참조 및 결합 하는 방법을 이해 Q# 합니다.
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.expressions
-ms.openlocfilehash: 1821df6a3a51a62b44f3ccd96b127577c5db990a
-ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: b6cc97dfee05dc843e213e84f17043714a8a9656
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85415391"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869616"
 ---
-# <a name="type-expressions-in-q"></a>Q의 형식 식 #
+# <a name="expressions-in-no-locq"></a>식의Q#
 
 ## <a name="numeric-expressions"></a>숫자 식
 
 숫자 식은, 또는 형식의 식 `Int` 입니다 `BigInt` `Double` .
 즉, 정수 또는 부동 소수점 숫자 중 하나입니다.
 
-`Int`Q #의 리터럴은 숫자 시퀀스로 기록 됩니다.
+`Int`의 리터럴은 Q# 숫자 시퀀스로 작성 됩니다.
 16 진수 및 이진 정수는 `0x` 각각 및 접두사를 사용 하 여 지원 되 고 작성 됩니다 `0b` .
 
-`BigInt`Q #의 리터럴은 뒤에 `l` 또는 `L` 접미사가 있습니다.
+`BigInt`의 리터럴에 Q# 는 후행 `l` 또는 `L` 접미사가 있습니다.
 16 진수 큰 정수는 "0x" 접두사를 사용 하 여 지원 되 고 작성 됩니다.
 따라서 다음은 리터럴의 모든 유효한 사용입니다 `BigInt` .
 
@@ -33,7 +36,7 @@ let bigHex = 0x123456789abcdef123456789abcdefL;
 let bigOne = bigZero + 1L;
 ```
 
-`Double`Q #의 리터럴은 10 진수를 사용 하 여 작성 된 부동 소수점 숫자입니다.
+`Double`의 리터럴은 Q# 10 진수를 사용 하 여 작성 된 부동 소수점 숫자입니다.
 소수점 또는 ' `.` e ' 또는 ' e '로 표시 된 지 수 부분 (음수 부호와 소수 자릿수가 유효 함)을 사용 하거나 사용 하지 않고 쓸 수 있습니다.
 유효한 `Double` 리터럴은 `0.0` , `1.2e5` , `1e-5` 입니다.
 
@@ -63,7 +66,7 @@ let bigOne = bigZero + 1L;
 
 정수 나누기와 정수 모듈러스는 c #과 같은 음수에 대해 동일한 동작을 수행 합니다.
 즉,는 `a % b` 항상와 동일한 부호를 가지 `a` 며 `b * (a / b) + a % b` 항상와 동일 `a` 합니다.
-예를 들면 다음과 같습니다.
+예를 들어:
 
  `A` | `B` | `A / B` | `A % B`
 ---------|----------|---------|---------
@@ -86,7 +89,7 @@ let bigOne = bigZero + 1L;
 동일한 기본 형식의 두 식이 지정 된 경우 `==` 및 `!=` 이항 연산자를 사용 하 여 식을 생성할 수 있습니다 `Bool` .
 식은 두 식이 같으면 true이 고, 그렇지 않으면 false입니다.
 
-사용자 정의 형식의 값을 비교할 수 없습니다. 래핑 해제 된 값만 비교할 수 있습니다. 예를 들어 "래핑 해제" 연산자 `!` ( [Q #의 형식](xref:microsoft.quantum.guide.types#access-anonymous-items-with-the-unwrap-operator)에 자세히 설명 되어 있음)를 사용 합니다.
+사용자 정의 형식의 값을 비교할 수 없습니다. 래핑 해제 된 값만 비교할 수 있습니다. 예를 들어 "래핑 해제" 연산자 `!` ( [의 Q# 형식 ](xref:microsoft.quantum.guide.types#access-anonymous-items-with-the-unwrap-operator)에 자세히 설명 되어 있음)를 사용 합니다.
 
 ```qsharp
 newtype WrappedInt = Int;     // Yes, this is a contrived example
@@ -110,24 +113,24 @@ let t = x == y;               // This will cause a compiler error.
 
 ## <a name="string-expressions"></a>문자열 식
 
-Q #에서는 `fail` 문 ( [제어 흐름](xref:microsoft.quantum.guide.controlflow#fail-statement)에 설명) 및 표준 함수에서 문자열을 사용할 수 있습니다 [`Message`](xref:microsoft.quantum.intrinsic.message) . 후자의 특정 동작은 사용 된 시뮬레이터에 따라 다르지만 일반적으로 Q # 프로그램을 실행 하는 동안 호출 될 때 호스트 콘솔에 메시지를 기록 합니다.
+Q#`fail`문 ( [제어 흐름](xref:microsoft.quantum.guide.controlflow#fail-statement)에 설명) 및 표준 함수에 문자열을 사용할 수 있습니다 [`Message`](xref:microsoft.quantum.intrinsic.message) . 후자의 특정 동작은 사용 된 시뮬레이터에 따라 다르며 일반적으로 프로그램 중 호출 될 때 호스트 콘솔에 메시지를 기록 합니다 Q# .
 
-Q #의 문자열은 리터럴 또는 보간된 문자열입니다.
+의 문자열 Q# 은 리터럴 또는 보간된 문자열입니다.
 
 문자열 리터럴은 대부분의 언어에서 간단한 문자열 리터럴과 유사 합니다. 큰따옴표 안의 유니코드 문자 시퀀스 `" "` 입니다.
 문자열 내에서 백슬래시 문자를 사용 하 여 `\` 큰따옴표 문자 ()를 이스케이프 하거나, 줄 바꿈 문자 () `\"` `\n` , 캐리지 리턴 ( `\r` ) 또는 탭 ()을 삽입 `\t` 합니다.
-예를 들면 다음과 같습니다.
+예를 들어:
 
 ```qsharp
 "\"Hello world!\", she said.\n"
 ```
 ### <a name="interpolated-strings"></a>보간된 문자열
 
-문자열 보간에 대 한 Q # 구문은 c # 구문의 하위 집합입니다. 다음은 Q #와 관련 된 주요 사항입니다.
+Q#문자열 보간 구문은 c # 구문의 하위 집합입니다. 다음은 관련 된 주요 사항입니다 Q# .
 
 * 문자열 리터럴을 보간된 문자열로 식별하려면 `$` 기호를 사용하여 추가합니다. `$` `"` 문자열 리터럴을 시작 하는와 사이에 공백이 없을 수 있습니다.
 
-* 다음은 함수를 사용 하 여 [`Message`](xref:microsoft.quantum.intrinsic.message) 다른 Q # 식과 함께 측정 결과를 콘솔에 쓰는 기본적인 예입니다.
+* 다음은 함수를 사용 하 여 [`Message`](xref:microsoft.quantum.intrinsic.message) 다른 식과 함께 측정 결과를 콘솔에 쓰는 기본적인 예입니다 Q# .
 
 ```qsharp
     let num = 8;       // some Q# expression
@@ -135,9 +138,9 @@ Q #의 문자열은 리터럴 또는 보간된 문자열입니다.
     Message($"Number: {num}, Result: {res}");
 ```
 
-* 유효한 Q # 식은 보간된 문자열에 나타날 수 있습니다.
+* 모든 유효한 Q# 식은 보간된 문자열에 나타날 수 있습니다.
 
-* 보간된 문자열 내부의 식은 c # 구문이 아니라 Q # 구문을 따릅니다. 가장 주목할 만한 차이점은 Q #은 축 자 (여러 줄) 보간된 문자열을 지원 하지 않는다는 것입니다.
+* 보간된 문자열 내부의 식은 Q# c # 구문이 아니라 구문을 따릅니다. 가장 주목할 만한 차이점은 Q# 가 축 자 (여러 줄) 보간된 문자열을 지원 하지 않는다는 것입니다.
 
 C # 구문에 대 한 자세한 내용은 [*보간된 문자열*](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/interpolated-strings)을 참조 하세요.
 
@@ -197,7 +200,7 @@ C # 구문에 대 한 자세한 내용은 [*보간된 문자열*](https://docs.m
 
 ## <a name="unwrap-expressions"></a>래핑 해제 식
 
-Q #에서 래핑 해제 연산자는 후행 감탄 부호 `!` 입니다.
+에서 Q# 래핑 해제 연산자는 후행 느낌표 `!` 입니다.
 예를 들어 `IntPair` 이 기본 형식의 사용자 정의 형식이 `(Int, Int)` 고 `s` 값이 인 변수인 경우는 `IntPair(2, 3)` `s!` `(2, 3)` 입니다.
 
 다른 사용자 정의 형식과 관련 하 여 정의 된 사용자 정의 형식의 경우 래핑 해제 연산자를 반복할 수 있습니다. 예를 들어는 `s!!` 이중 래핑 해제 된 값을 `s` 나타냅니다.
@@ -208,7 +211,7 @@ Q #에서 래핑 해제 연산자는 후행 감탄 부호 `!` 입니다.
 
 연산자의 우선 순위에는 `!` 명확 하지 않을 수 있는 영향이 하나 있습니다.
 함수 또는 작업에서 래핑 해제 되는 값을 반환 하는 경우 인수 튜플이 래핑 되지 않고 호출에 바인딩되도록 함수 또는 작업 호출을 괄호로 묶어야 합니다.
-예를 들면 다음과 같습니다.
+예를 들어:
 
 ```qsharp
 let f = (Foo(arg))!;    // Calls Foo(arg), then unwraps the result
@@ -270,7 +273,7 @@ Type | 기본값
 (a + b)[13]
 ```
 
-Q #의 모든 배열은 0부터 시작 합니다.
+의 모든 배열은 Q# 0부터 시작 합니다.
 즉, 배열의 첫 번째 요소는 `a` 항상 `a[0]` 입니다.
 
 
@@ -318,7 +321,7 @@ let slice10 = arr[...];       // slice10 is [1,2,3,4,5,6];
 
 ### <a name="copy-and-update-expressions"></a>복사 및 업데이트 식
 
-모든 Q # 형식은 값 형식이 기 때문에 (특정 역할을 수행 하는 경우), 값이 기호에 바인딩되거나 기호가 바인딩 되었을 때 공식적으로 "copy"가 생성 됩니다. 즉, Q #의 동작은 할당 연산자를 사용 하 여 복사본을 만든 경우와 동일 합니다. 
+모든 형식이 값 형식이 기 때문에 (예를 Q# 들어, 모든 형식이 특별 한 역할을 수행 하는 경우) 값이 기호에 바인딩되거나 기호가 바인딩 되었을 때 공식적으로 "copy"가 생성 됩니다. 즉,의 동작은 Q# 할당 연산자를 사용 하 여 복사본을 만든 경우와 동일 합니다. 
 
 물론 실제로는 관련 된 부분만 필요에 따라 다시 생성 됩니다. 이는 배열 항목을 업데이트할 수 없기 때문에 배열을 복사 하는 방법에 영향을 줍니다. 기존 배열을 수정 하려면 *복사 및 업데이트* 메커니즘을 활용 해야 합니다.
 
@@ -381,7 +384,7 @@ Callables 배열을 만들 수도 있습니다.
 
 예를 들어는 `[[Op1], [Op2]]` 호환 되지 않는 두 배열 형식 및의 배열을 만들려고 하기 때문에 현재 오류를 발생 `(Qubit[] => Unit is Adj)[]` 시킵니다 `(Qubit[] => Unit is Ctl)[]` .
 
-Callables에 대 한 자세한 내용은이 페이지의 [호출 가능 식](#callable-expressions) 또는 [Q #의 작업 및 함수](xref:microsoft.quantum.guide.operationsfunctions)를 참조 하세요.
+Callables에 대 한 자세한 내용은이 페이지의 [호출 가능 식](#callable-expressions) 또는 [의 Q# 작업 및 함수 ](xref:microsoft.quantum.guide.operationsfunctions)를 참조 하세요.
 
 ## <a name="conditional-expressions"></a>조건 식
 
@@ -446,7 +449,7 @@ SomeOtherFun(Fun);           // This also causes a compilation error.
 ```
 
 [형식 매개 변수가 있는](xref:microsoft.quantum.guide.operationsfunctions#generic-type-parameterized-callables) 호출 가능 식을 호출 하는 경우 `< >` 호출 가능 식 뒤에 꺾쇠 괄호 내에서 실제 형식 매개 변수를 지정할 수 있습니다.
-Q # 컴파일러가 실제 형식을 유추 하므로 일반적으로이 작업은 필요 하지 않습니다.
+컴파일러가 실제 형식을 유추 하므로 일반적으로이 작업은 필요 하지 않습니다 Q# .
 그러나 형식 매개 변수가 있는 인수를 지정 하지 *않은 상태로 두면* [부분 응용 프로그램](xref:microsoft.quantum.guide.operationsfunctions#partial-application) 에 필요 합니다.
 또한 다른 함수를 사용 하는 작업을 호출할 수 있도록 지 원하는 경우에도 유용 합니다.
 
@@ -469,12 +472,12 @@ let combinedOp = Func<(Qubit[] => Unit), (Qubit[] => Unit is Adj)>(Op1, Op2, Op3
 
 * 연산 및 함수 호출에 대 한 괄호는 모든 연산자 앞에, 배열 인덱싱 및 함수 후에도 바인딩됩니다.
 
-Q # 연산자의 우선 순위는 최고에서 최저 순입니다.
+Q#우선 순위 순으로 최고에서 최저 순으로 연산자.
 
 연산자 | 숫자 | 설명 | 피연산자 형식
 ---------|----------|---------|---------------
- 붙이지`!` | 단항 연산자 | 래핑 취소 | 사용자 정의 형식
- `-`, `~~~`, `not` | 단항 연산자 | 숫자 음수, 비트 보수, 논리 부정 | `Int`,의 경우,,의 경우,의 경우 `BigInt` `Double` `-` `Int` `BigInt` `~~~` `Bool``not`
+ 붙이지`!` | 단항 | 래핑 취소 | 사용자 정의 형식
+ `-`, `~~~`, `not` | 단항 | 숫자 음수, 비트 보수, 논리 부정 | `Int`,의 경우,,의 경우,의 경우 `BigInt` `Double` `-` `Int` `BigInt` `~~~` `Bool``not`
  `^` | 이진 | 정수 거듭제곱 | `Int`또는 기준의 경우 지 수의 경우입니다. `BigInt` `Int`
  `/`, `*`, `%` | 이진 | 나누기, 곱하기, 정수 모듈러스 | `Int`,,, 또는 `BigInt` `Double` `/` `*` `Int` `BigInt` 의 경우`%`
  `+`, `-` | 이진 | 더하기 또는 문자열 및 배열 연결, 빼기 | `Int`,, `BigInt` 또는 `Double` `String` 에 대 한 배열 형식입니다.`+`
@@ -492,4 +495,4 @@ Q # 연산자의 우선 순위는 최고에서 최저 순입니다.
 
 ## <a name="next-steps"></a>다음 단계
 
-이제 Q #에서 식 작업을 수행할 수 있으므로, [q #의 작업 및 함수로](xref:microsoft.quantum.guide.operationsfunctions) 이동 하 여 작업 및 함수를 정의 하 고 호출 하는 방법을 알아보세요.
+이제에서 식 작업을 수행할 수 있으므로의 Q# [작업 및 Q# 함수로](xref:microsoft.quantum.guide.operationsfunctions) 이동 하 여 작업 및 함수를 정의 하 고 호출 하는 방법을 알아보세요.

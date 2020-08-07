@@ -6,12 +6,15 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.samples
-ms.openlocfilehash: 3bd0de04a448c74eea6c3e8e3a15dcbb19f9d705
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 20da0e1765a242c172cc595f03d7791a0e8b8d2d
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275398"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867516"
 ---
 # <a name="contributing-samples-to-the-quantum-development-kit"></a>퀀텀 개발 키트에 대 한 샘플 기여
 
@@ -47,8 +50,8 @@ microsoft/Quantum
 
 | 파일              | 설명                                                |
 |-------------------|------------------------------------------------------------|
-| `CHSHGame.csproj` | Q # 프로젝트 .NET Core SDK를 사용 하 여 샘플을 빌드하는 데 사용 |
-| `Game.qs`         | Q # 샘플의 작업 및 함수                 |
+| `CHSHGame.csproj` | Q#.NET Core SDK를 사용 하 여 샘플을 빌드하는 데 사용 되는 프로젝트입니다. |
+| `Game.qs`         | Q#샘플에 대 한 작업 및 함수                 |
 | `Host.cs`         | 샘플을 실행 하는 데 사용 되는 c # 호스트 프로그램                     |
 | `host.py`         | 샘플을 실행 하는 데 사용 되는 Python 호스트 프로그램                 |
 | `README.md`       | 샘플에서 수행 하는 작업 및 사용 방법에 대 한 설명서    |

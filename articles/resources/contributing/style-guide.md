@@ -1,22 +1,25 @@
 ---
-title: 'Microsoft Q # 스타일 가이드'
-description: 'Q # 프로그램 및 라이브러리에 대 한 이름 지정, 입력, 설명서 및 서식 규칙에 대해 알아봅니다.'
+title: Microsoft Q# 스타일 가이드
+description: 프로그램 및 라이브러리에 대 한 이름 지정, 입력, 설명서 및 서식 규칙에 대해 알아봅니다 Q# .
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.style
-ms.openlocfilehash: 26de7d5f639ea1b4df24232127b6f95cee3a041e
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 27a2ae5ae9d00329fc369268edae24228a9a9d0d
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871385"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867592"
 ---
-# <a name="q-style-guide"></a>Q # 스타일 가이드 #
+# <a name="no-locq-style-guide"></a>Q#스타일 안내선 #
 ## <a name="general-conventions"></a>일반 규칙 ##
 
-이 가이드에서 제안 하는 규칙은 Q #으로 작성 된 프로그램 및 라이브러리를 읽고 이해할 수 있도록 하기 위한 것입니다.
+이 가이드에서 제안 하는 규칙은 쉽게 읽고 이해할 수 있도록 작성 된 프로그램 및 라이브러리를 만드는 데 도움을 주기 위한 것 Q# 입니다.
 
 ## <a name="guidance"></a>지침
 
@@ -29,13 +32,13 @@ ms.locfileid: "86871385"
 퀀텀 개발 키트를 제공할 때 퀀텀 개발자가 쉽게 읽을 수 있는 프로그램을 작성 하는 데 도움이 되는 함수 및 작업 이름에 대해 노력 하 고 있으며이를 최소화 합니다.
 의 중요 한 부분은 함수, 작업 및 형식에 대 한 이름을 선택할 때 프로그래머가 퀀텀 개념을 표현 하는 데 사용 하는 *어휘* 를 설정 하는 것입니다. 이 옵션을 사용 하면 명확 하 게 통신할 수 있도록 도와 드릴 수 있습니다.
 이는 도입 된 이름이 은둔 대신 명확성을 제공 하는지 확인 하는 책임을 집니다.
-이 섹션에서는 Q # 개발 커뮤니티에서 가장 잘 활용 하는 데 도움이 되는 명시적 지침을 기준으로이 의무를 어떻게 충족 하는지 자세히 설명 합니다.
+이 섹션에서는 개발 커뮤니티에서 가장 잘 활용 하는 데 도움이 되는 명시적 지침을 기준으로이 의무를 어떻게 충족 하는지 자세히 설명 Q# 합니다.
 
 ### <a name="operations-and-functions"></a>작업 및 함수 ###
 
 이름을 설정 해야 하는 첫 번째 작업 중 하나는 지정 된 기호가 함수 또는 작업을 나타내는지 여부입니다.
 함수 및 작업 간의 차이점은 코드 블록이 동작 하는 방식을 이해 하는 데 중요 합니다.
-함수와 작업을 사용자에 게 구분 하기 위해이 질문에는 의도 하지 않은 결과를 사용 하 여 퀀텀 작업을 모델링 하는 데 사용 됩니다.
+함수와 작업을 사용자에 게 구분 하기 위해 의도 하지 않은 Q# 결과를 사용 하 여 퀀텀 작업을 모델링 하는 데 사용 합니다.
 즉, 작업은 어떤 작업을 *수행* 합니다.
 
 이와 대조적으로 함수는 데이터 간의 수학적 관계를 설명 합니다.
@@ -49,7 +52,7 @@ ms.locfileid: "86871385"
 > 이러한 관점에서 사용자 정의 형식은 형식 자체와 생성자 함수에 일관 된 이름을 갖도록 명사로 이름을 지정 해야 합니다.
 
 적절 한 경우 작업 이름이 작업에서 수행한 효과를 명확 하 게 나타내는 동사로 시작 되는지 확인 합니다.
-예를 들면 다음과 같습니다.
+예를 들어:
 
 - `MeasureInteger`
 - `EstimateEnergy`
@@ -67,7 +70,7 @@ ms.locfileid: "86871385"
 | 예측값 | 하나 이상의 측정값 으로부터 그려진 추정치를 나타내는 고전 값이 반환 됩니다. |
 | 측정값 | 퀀텀 측정이 수행 되며 결과가 사용자에 게 반환 됩니다. |
 | 준비 | 지정 된 비트 레지스터가 특정 상태로 초기화 됩니다. |
-| 예제 | 일부 분포에서 무작위로 값이 반환 됩니다. |
+| 샘플 | 일부 분포에서 무작위로 값이 반환 됩니다. |
 
 함수의 경우 일반적인 명사를 선호 하는 동사를 사용 하지 않는 것이 좋습니다 (아래의 적절 한 명사에 대 한 지침 참조).
 
@@ -93,12 +96,12 @@ ms.locfileid: "86871385"
 
 # <a name="examples"></a>[예](#tab/examples)
 
-|   | Name | Description |
+|   | 이름 | 설명 |
 |---|------|-------------|
 | ☑ | `operation ReflectAboutStart` | 작업의 효과를 나타내려면 동사 ("반사")를 사용 하지 않습니다. |
 | ☒ | <s>`operation XRotation`</s> | 명사구를 사용 하는 것은 연산이 아니라 함수를 제안 합니다. |
-| ☒ | <s>`operation search_oracle`</s> | `snake_case`Contravenes Q # 표기법을 사용 합니다. |
-| ☒ | <s>`operation Search_Oracle`</s> | 작업 이름 contravenes Q # notation 내부에 밑줄을 사용 합니다. |
+| ☒ | <s>`operation search_oracle`</s> | `snake_case`Contravenes 표기법을 사용 Q# 합니다. |
+| ☒ | <s>`operation Search_Oracle`</s> | 작업 이름 contravenes 표기법 내부에서 밑줄을 사용 Q# 합니다. |
 | ☑ | `function StatePreparationOracle` | 명사구를 사용 하면 함수가 연산을 반환 하는 것을 의미 합니다. |
 | ☑ | `function EqualityFact` | 명사 ("fact")를 명확 하 게 사용 하 여 함수가 함수 임을 나타내야 합니다. |
 | ☒ | <s>`function GetRotationAngles`</s> | 동사 ("get")를 사용 하는 것은 이것이 작업 임을 나타냅니다. |
@@ -110,9 +113,9 @@ ms.locfileid: "86871385"
 
 ### <a name="entry-points"></a>진입점
 
-Q # 프로그램에 대 한 진입점을 정의 하는 경우 Q # 컴파일러는 진입점 [ `@EntryPoint()` ](xref:microsoft.quantum.core.entrypoint) 에 특정 이름 (예: `main` , `Main` 또는 `__main__` )을 지정 하도록 요구 하는 대신 특성을 인식 합니다.
-즉, Q # 개발자의 관점에서 진입점은로 주석이 지정 된 일반 작업입니다 `@EntryPoint()` .
-또한 q # 진입점은 전체 응용 프로그램 (예: Q # 독립 실행형 실행 파일)에 대 한 진입점 이거나, q # 프로그램과 응용 프로그램에 대 한 호스트 프로그램 (예: Python 또는 .NET과 함께 q #을 사용 하는 경우) 간의 인터페이스 일 수 있습니다 .이는 q # 진입점에 적용 될 때 "main" 이름이 잘못 될 수 있습니다.
+프로그램에 대 한 진입점을 정의 하는 경우 Q# Q# 컴파일러는 진입점이 특정 이름 (예: [ `@EntryPoint()` ](xref:microsoft.quantum.core.entrypoint) `main` , `Main` 또는 `__main__` )을 요구 하는 대신 특성을 인식 합니다.
+즉, 개발자의 관점에서 Q# 진입점은로 주석이 지정 된 일반 작업입니다 `@EntryPoint()` .
+또한 Q# 진입점은 전체 응용 프로그램 (예: Q# 독립 실행형 실행 파일)에 대 한 진입점 이거나 Q# 응용 프로그램의 호스트 프로그램 (예: Python 또는 .net과 함께 사용 하는 경우)에 대 한 진입점 일 수 있습니다. Q# 이는 진입점에 적용 될 때 "main" 이름이 잘못 될 수 있다는 점 Q# 입니다.
 
 `@EntryPoint()`위에 나열 된 이름 지정 작업에 대 한 일반적인 조언을 사용 하 여 특성 사용을 반영 하기 위해 명명 진입점을 사용 하는 것이 좋습니다.
 
@@ -126,7 +129,7 @@ Q # 프로그램에 대 한 진입점을 정의 하는 경우 Q # 컴파일러�
 
 # <a name="examples"></a>[예](#tab/examples)
 
-|   | Name | Description |
+|   | 이름 | 설명 |
 |---|------|-------------|
 | ☑ | `@EntryPoint() operation RunSimulation` | 작업 이름을 통해 진입점의 용도를 명확 하 게 전달 합니다. |
 | ☒ | <s>`@EntryPoint() operation Main`</s> | 를 사용 `Main` 하면 진입점의 목적이 명확 하 게 전달 되지 않으며 특성으로 중복 됩니다 `@EntryPoint()` . |
@@ -168,7 +171,7 @@ is Adj + Ctl {
 
 # <a name="examples"></a>[예](#tab/examples)
 
-|   | Name | Description |
+|   | 이름 | 설명 |
 |---|------|-------------|
 | ☑ | `X` | "$X $ 변환 적용"의 이해 하기 쉬운 약어 |
 | ☑ | `CNOT` | "제어-없음"에 대 한 이해 하기 쉬운 약어 |
@@ -190,11 +193,11 @@ Especially in a field such as quantum computing that is rich with domain experti
 In naming code symbols, one way that this cognizance expresses itself is as an awareness of the convention from physics of adopting as the names of algorithms and operations the names of their original publishers.
 While we must maintain the history and intellectual provenance of concepts in quantum computing, demanding that all users be versed in this history to use even the most basic of functions and operations places a barrier to entry that is in most cases severe enough to even present an ethical compromise. -->
 따라서 개념을 설명 하는 적절 한 일반적인 명사를 개념의 게시 기록을 설명 하는 적절 한 명사에 적용 하는 것이 좋습니다.
-특정 한 예로, 단일 제어 교환 및 이중 제어 되지 않는 작업을 교육용 자료에서 "Fredkin" 및 "Toffoli" 작업 이라고 하지만 Q #에서는 주로 및로 식별 됩니다 `CSWAP` `CCNOT` .
+특정 한 예로, 단일 제어 된 교환 및 이중 제어 되지 않는 작업을 교육용 자료의 "Fredkin" 및 "Toffoli" 작업 이라고 Q# 하며 주로 및로 식별 됩니다 `CSWAP` `CCNOT` .
 두 경우 모두 적절 한 명사와 함께 적절 한 명사를 기반으로 하는 동의어 이름을 제공 합니다.
 
-이 기본 설정은 특히 적절 한 명사를 사용 하는 경우에 특히 중요 합니다. Q #은 다양 한 기존 언어에 의해 설정 된 전통을을 따르고, 예를 들어, `Bool` 부울 논리에 대 한 참조의 형식을 참조 하며,이는 George Boole의 준수에서 이름이 지정 됩니다.
-이와 비슷한 몇 가지 퀀텀 개념은 비슷한 방식으로 명명 되며 `Pauli` Q # 언어에 대 한 기본 제공 형식을 포함 합니다.
+이러한 기본 설정은 특히 적절 한 명사를 사용 하는 것이 항상 필요한 경우에 특히 중요 합니다 Q# . 예를 들어, 여러 기존 언어에서 설정 된 전통을을 따르고, `Bool` 부울 논리에 대 한 참조의 형식을 참조 하며,이는 George Boole의 준수에 명명 됩니다.
+이와 비슷한 몇 가지 퀀텀 개념은 `Pauli` 언어에 기본 제공 되는 형식을 포함 하 여 비슷한 방식으로 이름이 지정 됩니다 Q# .
 이러한 사용법이 필수적이 지 않은 적절 한 명사 사용을 최소화 하면 적절 한 명사를 피할 수 없는 영향을 줄일 수 있습니다.
 
 # <a name="guidance"></a>[지침](#tab/guidance) 
@@ -209,9 +212,9 @@ While we must maintain the history and intellectual provenance of concepts in qu
 
 ### <a name="type-conversions"></a>형식 변환 ###
 
-Q #은 강력 하 고 staticly 지정 된 언어 이기 때문에 형식 변환 함수에 대 한 명시적 호출을 사용 하 여 한 형식의 값을 다른 형식의 값 으로만 사용할 수 있습니다.
+Q#는 강력 하 고 staticly 지정 된 언어 이므로 한 형식의 값은 형식 변환 함수에 대 한 명시적 호출을 사용 하 여 다른 형식의 값 으로만 사용할 수 있습니다.
 이는 값이 암시적으로 (예: 유형 프로 모션) 형식을 변경 하거나 캐스팅을 통해 변경할 수 있는 언어와는 대조적입니다.
-따라서 형식 변환 함수는 Q # 라이브러리 개발에서 중요 한 역할을 수행 하 고 명명에 대 한 보다 일반적으로 발생 하는 사항 중 하나를 구성 합니다.
+결과적으로 형식 변환 함수는 라이브러리 개발 시 중요 한 역할을 Q# 하며 명명에 대 한 보다 일반적으로 발생 하는 사항 중 하나를 구성 합니다.
 그러나 형식 변환은 항상 _결정적_이므로 함수로 작성 될 수 있으므로 위의 권장 사항 아래에 있습니다.
 특히 형식 변환 함수에는 동사 (예:) 또는 부사 prepositional 구 ()로 이름을 지정 하지 않는 것이 좋지만,이 경우에 `ConvertToX` `ToX` 는 소스 및 대상 형식 ()을 나타내는 형용사 prepositional 구로 명명 되어야 합니다 `XAsY` .
 형식 변환 함수 이름에 배열 형식을 나열할 때 줄임을 권장 `Arr` 합니다.
@@ -225,7 +228,7 @@ Q #은 강력 하 고 staticly 지정 된 언어 이기 때문에 형식 변환 
 
 # <a name="examples"></a>[예](#tab/examples)
 
-|   | Name | Description |
+|   | 이름 | 설명 |
 |---|------|-------------|
 | ☒ | <s>`ToDouble`</s> | 전치사 "to"는 동사가 아닌 연산을 나타내는 동사 구를 생성 합니다. |
 | ☒ | <s>`AsDouble`</s> | 입력 형식이 함수 이름에서 명확 하지 않습니다. |
@@ -244,11 +247,11 @@ Q #은 강력 하 고 staticly 지정 된 언어 이기 때문에 형식 변환 
 
 다음을 권장 합니다.
 
-- 함수, 작업 또는 사용자 정의 형식이 Q # 라이브러리 또는 프로그램에 대 한 공용 API의 일부가 아닌 경우, 또는 선언 앞에 키워드를 배치 하 여 내부로 표시 되었는지 확인 `internal` `function` `operation` `newtype` 합니다.
+- 함수, 작업 또는 사용자 정의 형식이 라이브러리 또는 프로그램에 대 한 공용 API의 일부가 아닌 경우 Q# `internal` , 또는 선언 앞에 키워드를 배치 하 여 내부로 표시 되었는지 확인 `function` `operation` `newtype` 합니다.
 
 # <a name="examples"></a>[예](#tab/examples)
 
-|   | Name | Description |
+|   | 이름 | 설명 |
 |---|------|-------------|
 | ☒ | <s>`operation _ApplyDecomposedOperation`</s> | `_`이 작업이 내부용 으로만 사용 됨을 나타내기 위해 밑줄을 사용 하지 않습니다. |
 | ☑ | `internal operation ApplyDecomposedOperation` | `internal`시작 부분에 있는 키워드는이 작업이 내부용 으로만 사용 됨을 나타냅니다. |
@@ -256,7 +259,7 @@ Q #은 강력 하 고 staticly 지정 된 언어 이기 때문에 형식 변환 
 ***
 ### <a name="variants"></a>변형 ###
 
-이후 버전의 Q #에서는이 제한 사항이 유지 되지 않을 수 있지만, 현재는 해당 입력을 함수 하는 것과 관련 된 작업 또는 함수의 그룹이 나 구체적으로 해당 인수의 그룹이 있는 경우가 많습니다.
+이후 버전의에서는 이러한 제한 사항이 유지 되지 않을 수 있지만 Q# , 현재는 해당 입력을 함수 하는 것과 관련 된 작업 또는 함수의 그룹이 나 구체적으로 인수를 사용할 수 있는 경우가 많습니다.
 이러한 그룹은 동일한 루트 이름과 해당 변형을 나타내는 하나 또는 두 개의 문자를 사용 하 여 구분할 수 있습니다.
 
 | 접미사 | 의미 |
@@ -281,7 +284,7 @@ Q #은 강력 하 고 staticly 지정 된 언어 이기 때문에 형식 변환 
 
 ### <a name="arguments-and-variables"></a>인수 및 변수 ###
 
-함수 또는 작업에 대 한 Q # 코드의 핵심 목표는 쉽게 읽고 이해할 수 있도록 하는 것입니다.
+Q#함수 또는 작업에 대 한 코드의 핵심 목표는 쉽게 읽고 이해할 수 있도록 하는 것입니다.
 마찬가지로 입력 및 형식 인수의 이름은 제공 된 후 함수 또는 인수가 사용 되는 방식에 대해 통신 해야 합니다.
 
 
@@ -320,7 +323,7 @@ Q #은 강력 하 고 staticly 지정 된 언어 이기 때문에 형식 변환 
 
 # <a name="examples"></a>[예](#tab/examples)
 
-|   | 코드 조각 | Description |
+|   | 코드 조각 | 설명 |
 |---|---------|-------------|
 | ☑ | `newtype Oracle = (Apply : Qubit[] => Unit is Adj + Ctl)` | 이름은 `Apply` `CamelCase` 형식이 지정 된 동사 구로, 명명 된 항목이 작업 임을 제안 합니다. |
 | ☒ | <s>`newtype Oracle = (apply : Qubit[] => Unit is Adj + Ctl) `</s> | 명명 된 항목은 초기 대문자로 시작 해야 합니다. |
@@ -380,10 +383,10 @@ operation ApplyPhaseEstimationIteration(
 
 ## <a name="documentation-conventions"></a>설명서 표기 규칙 ##
 
-Q # 언어를 사용 하면 특수 형식의 문서 주석을 사용 하 여 작업, 함수 및 사용자 정의 형식에 대 한 설명서를 첨부할 수 있습니다.
+Q#이 언어를 사용 하면 특수 형식의 문서 주석을 사용 하 여 작업, 함수 및 사용자 정의 형식에 대 한 설명서를 첨부할 수 있습니다.
 삼중 슬래시 ()로 표시 되는 `///` 이러한 설명서 주석은 각 작업, 함수 및 사용자 정의 형식, 각 작업의 용도를 설명 하는 데 사용할 수 있는 작은 [docfx-flavored Markdown](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html) 문서입니다.
 퀀텀 개발 키트와 함께 제공 되는 컴파일러는 이러한 주석을 추출 하 고이를 사용 하 여와 비슷한 조판 설명서를 제공 https://docs.microsoft.com/quantum 합니다.
-마찬가지로, 퀀텀 개발 키트와 함께 제공 되는 언어 서버는 이러한 주석을 사용 하 여 사용자가 Q # 코드에서 기호를 마우스로 가리킬 때 사용자에 게 도움을 제공 합니다.
+마찬가지로 퀀텀 개발 키트와 함께 제공 되는 언어 서버는 이러한 주석을 사용 하 여 코드에서 기호를 마우스로 가리킬 때 사용자에 게 도움을 제공 합니다 Q# .
 따라서 문서 주석을 사용 하면이 문서의 다른 규칙을 사용 하 여 쉽게 표현 되지 않는 세부 정보에 대 한 유용한 참조를 제공 하 여 사용자가 코드를 이해 하는 데 도움이 될 수 있습니다.
 
 > [!div class="nextstepaction"]
@@ -454,8 +457,8 @@ is Adj + Ctl {
 
 앞의 제안 사항 외에도 일관 된 서식 지정 규칙을 사용 하는 코드를 가능한 한 이해 하기 쉽게 만드는 데 도움이 됩니다.
 이러한 서식 지정 규칙은 본질적으로 임의로 임의적 이며 개인용 미관에 게 매우 강력 합니다.
-그럼에도 불구 하 고 작업자 그룹 내에 일관 된 형식 지정 규칙 집합을 유지 하는 것이 좋습니다. 특히 퀀텀 개발 키트와 같은 초대형 Q # 프로젝트의 경우에는 특히 그렇습니다.
-이러한 규칙은 Q # 컴파일러와 통합 된 서식 도구를 사용 하 여 자동으로 적용할 수 있습니다.
+그럼에도 불구 하 고 작업자 그룹 내에 일관 된 서식 규칙 집합을 유지 하는 것이 좋습니다 Q# . 특히 퀀텀 개발 키트 자체와 같은 규모가 많은 프로젝트의 경우에는 특히 그렇습니다.
+이러한 규칙은 컴파일러와 통합 된 서식 지정 도구를 사용 하 여 자동으로 적용할 수 있습니다 Q# .
 
 # <a name="guidance"></a>[지침](#tab/guidance) 
 
@@ -476,7 +479,7 @@ is Adj + Ctl {
 
 # <a name="examples"></a>[예](#tab/examples)
 
-|   | 코드 조각 | Description |
+|   | 코드 조각 | 설명 |
 |---|---------|-------------|
 | ☒ | <s>`2+3`</s> | 이항 연산자 주위의 공백을 사용 합니다. |
 | ☒ | <s>`target:Qubit`</s> | 형식 주석 콜론 앞뒤에 공백을 사용 합니다. |

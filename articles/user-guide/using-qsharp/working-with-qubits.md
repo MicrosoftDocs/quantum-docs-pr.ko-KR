@@ -6,18 +6,21 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.qubits
-ms.openlocfilehash: 1655d18ab9d8638ad356e6fb90994b5c1fd76a25
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 6808a852ee0de7d3a38ea44e9637eeaa6bea382a
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885310"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867865"
 ---
 # <a name="working-with-qubits"></a>큐비트 사용
 
 이는 퀀텀 컴퓨팅에서 정보의 기본적인 개체입니다. 표준에 대 한 일반적인 소개는 [퀀텀 컴퓨팅 이해](xref:microsoft.quantum.overview.understanding)및 수학적 표현에 대 한 자세한 내용은 [이 항목을 참조 하세요.](xref:microsoft.quantum.concepts.qubit) 
 
-이 문서에서는 Q # 프로그램에서을 사용 하 고이를 사용 하는 방법을 살펴봅니다. 
+이 문서에서는 프로그램에서을 사용 하 고이를 사용 하는 방법을 살펴봅니다 Q# . 
 
 > [!IMPORTANT]
 >이 문서에서 설명 하는 문은 함수 본문 내에서 유효 하지 않습니다. 작업 내 에서만 유효 합니다.
@@ -25,7 +28,7 @@ ms.locfileid: "85885310"
 ## <a name="allocating-qubits"></a>비트 할당
 
 실제 리소스는 퀀텀 컴퓨터의 귀중 한 리소스 이기 때문에 컴파일러의 작업 중 일부는 최대한 효율적으로 사용 되 고 있는지 확인 하는 것입니다.
-따라서 특정 문 블록 내에서 사용할 비트를 *할당* 하려면 Q #에 지시 해야 합니다.
+따라서 Q# 특정 문 블록 내에서 사용할 수 있도록이를 *할당* 해야 합니다.
 이를 단일의 비트 또는 *레지스터*라고 하는 원하는 비트 배열로 할당할 수 있습니다. 
 
 ### <a name="clean-qubits"></a>정리 비트
@@ -36,7 +39,7 @@ ms.locfileid: "85885310"
 바인딩은 문과 동일한 패턴을 따릅니다 `let` . 단일 기호 또는 기호 튜플, 등호 `=` , 단일 값 또는 *이니셜라이저의*일치 하는 튜플 중 하나를 수행 합니다.
 
 이니셜라이저는로 표시 된 단일의 비트 또는의 배열 ( `Qubit()` `Qubit[n]` 여기서 `n` 는 `Int` 식)으로 사용할 수 있습니다.
-예:
+예를 들면 다음과 같습니다.
 
 ```qsharp
 using (qubit = Qubit()) {
@@ -65,7 +68,7 @@ using ((auxiliary, register) = (Qubit(), Qubit[5])) {
 이러한 경우는 상태를 알 수 없으며 퀀텀 컴퓨터 메모리의 다른 부분과 함께 사용할 수 있기 때문에이를 "더티" 이상으로 지칭 하기도 합니다.
 
 바인딩은 문과 동일한 패턴 및 규칙을 따릅니다 `using` .
-예:
+예를 들면 다음과 같습니다.
 ```qsharp
 borrowing (qubit = Qubit()) {
     // ...
@@ -82,17 +85,17 @@ Borrowing를 사용 하는 경우 시스템은 먼저 사용 중이지만 문의
 이러한 것이 충분 하지 않은 경우 요청을 완료 하기 위해 새 비트를 할당 합니다.
 
 더티 비트의 알려진 사용 사례 중에는 incrementers의 구현이 매우 거의 필요 하지 않은 다중 제어 CNOT 게이트의 구현입니다.
-Q #에서의 용도에 대 한 예는이 문서의 [Borrowing Sbits 예제](#borrowing-qubits-example) 를 참조 하거나, [*2n + 2를 사용 하 여 Toffoli 기반 모듈식 곱하기*](https://arxiv.org/abs/1611.07995) (Haner, Roet er 및 svs2017)를 사용 하는 백서를 참조 하십시오.
+에서 사용 하는 예제는 Q# 이 문서의 [Borrowing robits 예제](#borrowing-qubits-example) 또는 Toffoli 기반 모듈식 곱하기 (Haner, Roet2n er 및 [*svore 2017)를 사용 하는 + 2를 사용 하*](https://arxiv.org/abs/1611.07995) 는 백서를 참조 하십시오.
 
 ## <a name="intrinsic-operations"></a>내장 작업
 
 할당 된 후에는 함수 및 작업에 원하는 비트를 전달할 수 있습니다.
-어떤 경우에는이 작업을 수행할 수 있는 작업은 모두 작업으로 정의 되므로 Q # 프로그램은이 작업을 수행할 수 있습니다.
+어떤 경우에는 수행할 수 있는 작업은 Q# 모두 작업으로 정의 되므로 프로그램은 모든 작업을 수행할 수 있습니다.
 
-이 문서에서는 사용자가 사용할 수 있는 몇 가지 유용한 Q # 작업을 설명 합니다.
+이 문서에서는 사용자가 사용할 수 있는 몇 가지 유용한 작업을 설명 Q# 합니다.
 이러한 항목 및 기타에 대 한 자세한 내용은 [내장 작업 및 함수](xref:microsoft.quantum.libraries.standard.prelude)를 참조 하세요. 
 
-첫째, 단일 기능 비트 Pauli 연산자 $X $, $Y $ 및 $Z $는 Q #에서 [`X`](xref:microsoft.quantum.intrinsic.x) [`Y`](xref:microsoft.quantum.intrinsic.y) [`Z`](xref:microsoft.quantum.intrinsic.z) 각각 형식이 있는 내장 작업, 및로 표시 됩니다 `(Qubit => Unit is Adj + Ctl)` .
+첫째, 단일 기능 비트 Pauli 연산자 $X $, $Y $ 및 $Z $는 내장 작업, 및로 표시 되며, Q# [`X`](xref:microsoft.quantum.intrinsic.x) [`Y`](xref:microsoft.quantum.intrinsic.y) [`Z`](xref:microsoft.quantum.intrinsic.z) 각각 형식이 `(Qubit => Unit is Adj + Ctl)` 있습니다.
 
 [내장 작업 및 함수](xref:microsoft.quantum.libraries.standard.prelude)에 설명 된 것 처럼, $X $ 등의 `X` 작업을 수행 하거나 게이트를 수행 하지 않는 것으로 간주 합니다.
 작업을 사용 하 여 `X` $ \ket{s_0 s_1 \dots .. s_n} $s $ 형식의 상태를 준비할 수 있습니다.
@@ -124,7 +127,7 @@ operation RunExample() : Unit {
 > [!TIP]
 > 나중에이 작업을 작성 하는 보다 간단한 방법으로 수동 제어 흐름이 필요 하지 않습니다.
 
-\Ket transform $H $를 사용 하 여 $ \ket{+} = \left (\ket {0} + \ket {1} \left)/\left $ {2} 및 $ \ket {-} = \left (\ket Hadamard \left)/\left $와 같은 상태를 준비할 수도 있습니다 {0} {1} {2} .이는 내장 작업으로 Q #에 표시 됩니다 ( [`H`](xref:microsoft.quantum.intrinsic.h) => Unit is Adj + Ctl).
+\Ket transform $H $를 사용 하 여 $ \ket{+} = \left (\ket {0} + \ket {1} \left)/\left $ {2} 및 $ \ket {-} = \left (\ket Hadamard \left)/\left $와 같은 상태를 준비할 수도 있습니다 {0} {1} {2} .이는 Q# 내장 작업 ( [`H`](xref:microsoft.quantum.intrinsic.h) => Unit is Adj + Ctl)에 의해 표현 됩니다.
 
 ```qsharp
 operation PreparePlusMinusState(bitstring : Bool[], register : Qubit[]) : Unit {
@@ -242,4 +245,4 @@ is Adj + Ctl {
 
 ## <a name="next-steps"></a>다음 단계
 
-Q #의 [제어 흐름](xref:microsoft.quantum.guide.controlflow) 에 대해 알아봅니다.
+의 [제어 흐름](xref:microsoft.quantum.guide.controlflow) 에 대해 알아봅니다 Q# .

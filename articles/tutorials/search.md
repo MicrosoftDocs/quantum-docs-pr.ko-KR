@@ -1,21 +1,24 @@
 ---
-title: Q#에서 Grover의 검색 알고리즘 실행 - Quantum Development Kit
-description: 정식 양자 알고리즘 중 하나인 Grover의 알고리즘을 보여 주는 Q# 프로젝트를 빌드합니다.
+title: Grover의 검색 알고리즘을 실행 하는 Q# 퀀텀 개발 키트
+description: Q#정식 퀀텀 알고리즘 중 하나인 Grover의 알고리즘을 보여 주는 프로젝트를 빌드합니다.
 author: cgranade
 ms.author: chgranad@microsoft.com
 ms.date: 10/19/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.search
-ms.openlocfilehash: 9e4c53b4d5159cf07f0654603c1d477ad09eb7c6
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 5c23d71209eb484a510f102e8b581ba4ec21829a
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275270"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869667"
 ---
 # <a name="tutorial-implement-grovers-search-algorithm-in-q"></a>자습서: Q\#에서 Grover의 검색 알고리즘 구현
 
-이 자습서에서는 Grover 검색을 빌드하고 실행하여 비정형 데이터의 검색 속도를 높이는 방법을 알아볼 수 있습니다.  Grover 검색은 가장 인기 있는 양자 컴퓨팅 알고리즘의 하나이며, 비교적 소규모의 Q# 구현을 통해 양자 알고리즘을 표현하는 고급 Q# 양자 프로그래밍 언어를 사용하여 양자 솔루션 프로그래밍의 장점을 이해할 수 있습니다.  가이드의 끝에서는 시뮬레이션 출력이 정렬되지 않은 항목 목록 중 특정 문자열을 찾는 데 걸리는 시간이 클래식 컴퓨터에서 전체 목록을 검색하는 데 걸리는 시간보다 짧다는 것을 볼 수 있습니다.
+이 자습서에서는 Grover 검색을 빌드하고 실행하여 비정형 데이터의 검색 속도를 높이는 방법을 알아볼 수 있습니다.  Grover의 검색은 가장 인기 있는 퀀텀 컴퓨팅 알고리즘 중 하나 이며, 비교적 작은 Q# 구현은 퀀텀 Q# 알고리즘을 표현할 수 있는 고급 퀀텀 프로그래밍 언어를 사용 하 여 퀀텀 솔루션을 프로그래밍 하는 경우의 장점 중 일부를 제공 합니다.  가이드의 끝에서는 시뮬레이션 출력이 정렬되지 않은 항목 목록 중 특정 문자열을 찾는 데 걸리는 시간이 클래식 컴퓨터에서 전체 목록을 검색하는 데 걸리는 시간보다 짧다는 것을 볼 수 있습니다.
 
 Grover의 알고리즘은 특정 항목에 대한 비정형 데이터의 목록을 검색합니다. 예를 들어 다음과 같은 질문에 답할 수 있습니다. 한 벌의 카드에서 뽑은 이 카드는 하트 에이스인가요? 특정 항목의 레이블 지정은 _표시된 입력_이라고 합니다.
 
@@ -23,7 +26,7 @@ Grover의 검색 알고리즘을 사용하면 양자 컴퓨터에서 검색 중�
 
 Grover의 검색 알고리즘은 몇 줄의 코드만으로 빌드할 수 있습니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 - Microsoft [Quantum Development Kit][install]
 
@@ -39,7 +42,7 @@ Grover의 알고리즘은 목록의 항목이 검색 중인 항목인지 여부�
 
 ## <a name="write-the-code"></a>코드 작성
 
-1. Quantum Development Kit를 사용하여 [명령줄 애플리케이션에 대한 새 Q# 프로젝트를 만듭니다](xref:microsoft.quantum.install.standalone). 프로젝트 `Grover`의 제목을 지정합니다.
+1. 퀀텀 개발 키트를 사용 하 여 [ Q# 명령줄 응용 프로그램에 대 한 새 프로젝트를 만듭니다](xref:microsoft.quantum.install.standalone). 프로젝트 `Grover`의 제목을 지정합니다.
 
 1. 다음 코드를 새 프로젝트의 `Program.qs` 파일에 추가합니다.
 
@@ -51,9 +54,9 @@ Grover의 알고리즘은 목록의 항목이 검색 중인 항목인지 여부�
 
     `ReflectAboutMarked` 연산은 검색 중인 표시된 입력, 즉 0과 1이 교대로 반복되는 문자열을 정의합니다. 이 샘플은 표시된 입력을 하드 코딩하며, 다른 입력을 검색하도록 확장하거나 모든 입력에 대해 일반화할 수 있습니다.
 
-1. 다음으로, 새 Q# 프로그램을 실행하여 `ReflectAboutMarked`로 표시된 항목을 찾습니다.
+1. 다음으로 새 프로그램을 실행 Q# 하 여로 표시 된 항목을 찾습니다 `ReflectAboutMarked` .
 
-### <a name="q-command-line-applications-with-visual-studio-or-visual-studio-code"></a>Visual Studio 또는 Visual Studio Code를 사용한 Q# 명령줄 애플리케이션
+### <a name="no-locq-command-line-applications-with-visual-studio-or-visual-studio-code"></a>Q#Visual Studio 또는 Visual Studio Code를 사용 하는 명령줄 응용 프로그램
 
 실행 파일은 프로젝트 구성 및 명령줄 옵션에 따라 시뮬레이터 또는 리소스 예측 도구에서 `@EntryPoint()` 특성으로 표시된 작업 또는 함수를 실행합니다.
 
@@ -104,7 +107,7 @@ Reflecting about marked state...
 
 ## <a name="next-steps"></a>다음 단계
 
-이 자습서를 사용한 경우 아래 리소스 중 일부를 확인하여 Q#에서 사용자 고유의 양자 애플리케이션을 작성하는 방법을 자세히 알아보세요.
+이 자습서를 만든 경우를 사용 하 여 Q# 사용자 고유의 퀀텀 응용 프로그램을 작성 하는 방법에 대 한 자세한 내용을 보려면 아래 리소스 중 일부를 확인 하세요.
 
 - [QDK 시작 가이드로 돌아가기](xref:microsoft.quantum.welcome)
 - 더 일반적인 Grover의 검색 알고리즘 [샘플](https://github.com/microsoft/Quantum/tree/master/samples/algorithms/database-search)을 사용해 보기

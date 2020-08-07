@@ -1,22 +1,25 @@
 ---
-title: 'Q # standard libararies의 흐름 제어'
-description: 'Microsoft Q # 표준 라이브러리의 흐름 제어 작업 및 함수에 대해 알아봅니다.'
+title: 표준 libararies 흐름 제어 Q#
+description: Microsoft 표준 라이브러리의 흐름 제어 작업 및 함수에 대해 알아봅니다 Q# .
 author: QuantumWriter
 uid: microsoft.quantum.concepts.control-flow
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: b41b3edd7a3e3ac13dbda106a869f4cba8183600
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: a440f1ef2b901b18593816ca27aeadf7ab827104
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275753"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868579"
 ---
 # <a name="higher-order-control-flow"></a>고차 제어 흐름 #
 
 표준 라이브러리의 기본 역할 중 하나는 고급 알고리즘 아이디어를 [퀀텀 프로그램](https://en.wikipedia.org/wiki/Quantum_programming)으로 보다 쉽게 표현할 수 있도록 하는 것입니다.
-따라서 Q # 라고은 함수 및 작업의 부분 응용 프로그램을 사용 하 여 구현 되는 다양 한 흐름 제어 구문을 제공 합니다.
+따라서 Q# 라고은 함수 및 작업의 부분 응용 프로그램을 사용 하 여 구현 되는 다양 한 흐름 제어 구문을 제공 합니다.
 한 예로 바로 이동 하 고, 등록에서 "CNOT 사다리"를 구성 하려는 경우를 고려해 보세요.
 
 ```qsharp
@@ -47,7 +50,7 @@ ApplyToEachCA(CNOT, Zip(register[0..nQubits - 2], register[1..nQubits - 1]));
 
 라고에서 제공 하는 기본 추상화 중 하나가 반복입니다.
 예를 들어 단일의 단일 기능 $U $에 대해 \otimes U \otimes \cst\otimes U $ $U 형태의 단일 형식을 고려 합니다.
-Q #에서를 사용 하 여 <xref:microsoft.quantum.arrays.indexrange> 이를 레지스터에 대 한 루프로로 나타낼 수 있습니다 `for` .
+에서는를 Q# 사용 하 여 <xref:microsoft.quantum.arrays.indexrange> 이를 레지스터에 대 한 루프로 나타낼 수 있습니다 `for` .
 
 ```qsharp
 /// # Summary
@@ -88,7 +91,7 @@ ApplyToEachCA(Adjoint U, register);
 > 그런 다음 `ApplyToEach(Recover(code, recoveryFn, _), codeBlocks)` 는 `code` `recoveryFn` 각 블록에 독립적으로 오류 수정 코드 및 복구 기능을 적용 합니다.
 > 이는 기존 입력에 대해서도 유지 `ApplyToEach(R(_, _, qubit), [(PauliX, PI() / 2.0); (PauliY(), PI() / 3.0]))` 됩니다 .는 $ \pi/$2에 $Y $3 $pi $X 대 한 회전을 적용 합니다.
 
-또한 Q # 라고은 함수형 프로그래밍에 익숙한 클래식 열거형 패턴에 대 한 지원을 제공 합니다.
+Q#또한 라고은 함수형 프로그래밍에 익숙한 클래식 열거형 패턴에 대 한 지원을 제공 합니다.
 예를 들어은 <xref:microsoft.quantum.arrays.fold> 목록에 대 한 함수를 줄이기 위해 (f (f (s \_ {\text{initial}}, x \_ 0), x \_ 1), \도트) $ 패턴 $f을 구현 합니다.
 이 패턴은 합계, 제품, 최소, 최대 및 기타 해당 함수를 구현 하는 데 사용할 수 있습니다.
 
@@ -100,7 +103,7 @@ function Sum(xs : Int[]) {
 }
 ```
 
-마찬가지로 및와 같은 함수를 <xref:microsoft.quantum.arrays.mapped> <xref:microsoft.quantum.arrays.mappedbyindex> 사용 하 여 Q #에서 함수형 프로그래밍 개념을 표현할 수 있습니다.
+마찬가지로 및와 같은 함수를 <xref:microsoft.quantum.arrays.mapped> <xref:microsoft.quantum.arrays.mappedbyindex> 사용 하 여의 함수형 프로그래밍 개념을 표현할 수 있습니다 Q# .
 
 ## <a name="composing-operations-and-functions"></a>작업 및 함수 작성 ##
 
@@ -170,7 +173,7 @@ U(1, time / Float(nSteps), target);
 DecomposeIntoTimeStepsCA((2, U), 1);
 ```
 
-의 시그니처는 `DecomposeIntoTimeStepsCA` Q #에서 일반적인 패턴을 따릅니다 .이 패턴은 배열 또는 즉석에서 요소를 계산 하는 컬렉션에서 첫 번째 요소가 `Int` 해당 길이를 나타내는 값인 튜플로 나타냅니다.
+의 시그니처는 `DecomposeIntoTimeStepsCA` 의 일반적인 패턴을 따릅니다 Q# .이 패턴은 배열 또는 즉석에서 요소를 계산 하는 요소에 의해 지원 될 수 있는 컬렉션이 첫 번째 요소가 `Int` 해당 길이를 나타내는 값인 튜플로 나타냅니다.
 
 ## <a name="putting-it-together-controlling-operations"></a>함께 배치: 작업 제어 ##
 
@@ -215,7 +218,7 @@ $X ^ {\dagger} = X $ 이므로 $ \ket{0\dots 0} = X ^ {s \_ 0} \otimes x ^ {s \_
 
 이 시점에서이 작업을 수행할 수는 있지만 새 작업에서 함수를 적용 하는 것 처럼 "느낌" 하지 않습니다 `Controlled` .
 따라서 oracle을 제어 하 고 새 작업을 반환 하는 함수를 작성 하 여 새로운 제어 흐름 개념의 정의를 완료 합니다.
-이러한 방식으로 새 함수는와 매우 비슷합니다 `Controlled` . Q #을 사용 하 여 강력한 새 제어 흐름 구문을 쉽게 정의 하 고이를 함께 사용할 수 있다는 것을 보여 주는 것입니다.
+이러한 방식으로 새 함수는와 매우 유사 `Controlled` 합니다 .를 사용 하 여 강력한 새 제어 흐름 구문을 쉽게 정의 하 고 라고을 함께 사용할 수 있다는 것을 보여 주는 것입니다 Q# .
 
 ```qsharp
 function ControlledOnBitString(

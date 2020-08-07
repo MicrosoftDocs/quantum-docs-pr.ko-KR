@@ -1,21 +1,24 @@
 ---
-title: 'Q # 파일 구조'
-description: 'Q # 파일의 구조 및 구문에 대해 설명 합니다.'
+title: Q#파일 구조
+description: 파일의 구조 및 구문에 대해 설명 합니다 Q# .
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.filestructure
-ms.openlocfilehash: 54efc2b9d6b7f1956cdf9a335c88620b29f7729d
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: ac73962b1a718cd04aa87ee3476c66781fe3ac2b
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85884174"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867933"
 ---
-# <a name="q-file-structure"></a>Q # 파일 구조
+# <a name="no-locq-file-structure"></a>Q#파일 구조
 
-Q # 파일은 *네임 스페이스 선언*시퀀스로 구성 됩니다.
+Q#파일은 *네임 스페이스 선언*시퀀스로 구성 됩니다.
 각 네임 스페이스 선언에는 사용자 정의 형식, 작업 및 함수에 대 한 선언이 포함 되며, 각 선언 형식 및 순서에 관계 없이 임의 개수의 형식을 포함할 수 있습니다.
 네임 스페이스의 선언에 대 한 자세한 내용은 [사용자 정의 형식](xref:microsoft.quantum.guide.types#user-defined-types), [작업](xref:microsoft.quantum.guide.operationsfunctions#defining-new-operations)및 [함수](xref:microsoft.quantum.guide.operationsfunctions#defining-new-functions)를 참조 하세요.
 
@@ -24,10 +27,10 @@ Q # 파일은 *네임 스페이스 선언*시퀀스로 구성 됩니다.
 
 ## <a name="namespace-declarations"></a>네임스페이스 선언
 
-Q # 파일에는 일반적으로 네임 스페이스 선언이 하나만 포함 될 수 있지만, 빈 상태로 있거나 주석을 포함 하거나, 여러 네임 스페이스를 포함할 수 있습니다.
+Q#일반적으로 파일에는 네임 스페이스 선언이 하나만 포함 될 수 있지만, 빈 상태로 있거나 주석을 포함 하거나, 여러 네임 스페이스를 포함할 수 있습니다.
 네임 스페이스 선언은 중첩할 수 없습니다.
 
-동일한 이름을 가진 형식, 작업 또는 함수 선언이 없으면 함께 컴파일되는 여러 Q # 파일에서 동일한 네임 스페이스를 선언할 수 있습니다.
+Q#동일한 이름을 가진 형식, 작업 또는 함수 선언이 없으면 함께 컴파일되는 여러 파일에 동일한 네임 스페이스를 선언할 수 있습니다.
 특히 선언이 동일한 경우에도 여러 파일에서 동일한 네임 스페이스에 동일한 형식을 정의 하는 것은 유효 하지 않습니다.
 
 네임 스페이스 선언은 키워드로 구성 된 `namespace` 다음 네임 스페이스의 이름 및 중괄호로 묶인 네임 스페이스에 포함 된 선언으로 구성 됩니다 `{ }` .
@@ -61,7 +64,7 @@ namespace NS {
 그러나에서 특정 함수를 호출 하려면 `Fn` 를 `Microsoft.Quantum.Math` 사용 하 여 호출 해야 합니다 `Math.Fn` .
 
 `open`지시문은 파일 내의 전체 네임 스페이스 블록에 적용 됩니다.
-따라서 앞에서와 같은 Q # 파일에 추가 네임 스페이스를 정의 하는 경우, `NS` 두 번째 네임 스페이스에 정의 된 모든 작업/함수/형식은 `Microsoft.Quantum.Intrinsic` 열린 지시문을 반복 하지 않는 한 또는의 모든 항목에 액세스할 수 없습니다 `Microsoft.Quantum.Math` . 
+따라서 앞에서와 동일한 파일에 추가 네임 스페이스를 정의 하는 경우에는 Q# `NS` 두 번째 네임 스페이스에 정의 된 모든 작업/함수/형식이 열려 있는 지시문을 `Microsoft.Quantum.Intrinsic` 반복 하지 않는 한 또는에서 어떠한 항목에도 액세스할 수 없습니다 `Microsoft.Quantum.Math` . 
 
 현재 네임 스페이스 *에서 열리지 않는* 다른 네임 스페이스에 정의 된 형식 또는 호출 가능를 참조 하려면 정규화 된 이름으로 참조 해야 합니다.
 예를 들어 `Op` 네임 스페이스에서 라는 작업이 지정 된 경우 `X.Y` :
@@ -73,13 +76,13 @@ namespace NS {
 일반적으로 지시문을 사용 하 여 네임 스페이스를 포함 하는 것이 좋습니다 `open` .
 두 네임 스페이스가 같은 이름을 사용 하 여 구문을 정의 하 고 현재 소스가 양쪽에서 구문을 사용 하는 경우 정규화 된 이름을 사용 해야 합니다.
 
-Q #은 다른 .NET 언어로 이름을 지정 하는 것과 동일한 규칙을 따릅니다.
-그러나 Q #에서는 네임 스페이스에 대 한 상대 참조를 지원 하지 않습니다.
+Q#는 다른 .NET 언어로 이름을 지정 하는 것과 동일한 규칙을 따릅니다.
+그러나에서는 Q# 네임 스페이스에 대 한 상대 참조를 지원 하지 않습니다.
 예를 들어 네임 스페이스가 `a.b` 열려 있으면 이라는 작업에 대 한 참조는 `c.d` 전체 이름이 있는 작업으로 확인 *되지* 않습니다 `a.b.c.d` .
 
 ## <a name="formatting"></a>서식
 
-대부분의 Q # 문과 지시문은 종료 세미콜론 ()으로 끝납니다 `;` .
+대부분의 Q# 문과 지시문은 종료 세미콜론 ()으로 끝납니다 `;` .
 문 및 선언 (예 `for` : `operation` 다음 섹션 참조)으로 끝나는 문과 선언에는 종료 세미콜론이 필요 하지 않습니다.
 각 문 설명에는 종료 세미콜론이 필요한 지 여부에 대 한 설명이 나와 있습니다.
 
@@ -88,14 +91,14 @@ Q #은 다른 .NET 언어로 이름을 지정 하는 것과 동일한 규칙을 
 
 ## <a name="statement-blocks"></a>문 블록
 
-Q # 문은 중괄호에 포함 된 문 블록으로 그룹화 됩니다 `{ }` . 문 블록은 여는 것으로 시작 하 `{` 고 닫는로 끝납니다 `}` .
+Q#문은 중괄호에 포함 된 문 블록으로 그룹화 됩니다 `{ }` . 문 블록은 여는 것으로 시작 하 `{` 고 닫는로 끝납니다 `}` .
 
 다른 블록 내에 어휘를 싸인 문 블록은 포함 하는 블록의 하위 블록으로 간주 됩니다. 포함 및 하위 블록은 외부 및 내부 블록이 라고도 합니다.
 
-## <a name="comments"></a>의견
+## <a name="comments"></a>주석
 
 주석은 두 개의 슬래시 ()로 시작 `//` 하 고 줄의 끝까지 계속 됩니다.
-설명은 Q # 소스 파일의 어디에 나 나타날 수 있습니다.
+주석은 소스 파일의 어디에 나 나타날 수 있습니다 Q# .
 
 ## <a name="documentation-comments"></a>설명서 주석
 
@@ -103,10 +106,10 @@ Q # 문은 중괄호에 포함 된 문 블록으로 그룹화 됩니다 `{ }` . 
 이 경우 컴파일러는 다른 .NET 언어와 동일한 정의 된 호출 가능 또는 사용자 정의 형식에 대 한 설명서로 처리 합니다.
 
 주석 내에서 `///` API 설명서의 일부로 표시 되는 텍스트는 특수 하 게 명명 된 헤더로 표시 되는 설명서의 여러 부분을 사용 하 여 [Markdown](https://daringfireball.net/projects/markdown/syntax)로 형식이 지정 됩니다.
-Markdown에서는 `@"<ref target>"` Q #에서 확장을 사용 하 여 상호 참조 작업, 함수 및 사용자 정의 형식을 사용 합니다. `<ref target>`참조 된 코드 개체의 정규화 된 이름으로 대체 합니다.
+Markdown에서 확장을 사용 `@"<ref target>"` 하 여의 상호 참조 작업, 함수 및 사용자 정의 형식을 사용 Q# 합니다. `<ref target>`참조 된 코드 개체의 정규화 된 이름으로 대체 합니다.
 다른 설명서 엔진은 추가 Markdown 확장을 지원할 수도 있습니다.
 
-예를 들면 다음과 같습니다.
+예를 들어:
 
 ```qsharp
 /// # Summary
@@ -153,4 +156,4 @@ operation ApplyTwice<'T>(op : ('T => Unit), target : 'T) : Unit {
 
 ## <a name="next-steps"></a>다음 단계
 
-Q #의 [작업 및 함수](xref:microsoft.quantum.guide.operationsfunctions) 에 대해 알아봅니다.
+의 [작업 및 함수](xref:microsoft.quantum.guide.operationsfunctions) 에 대해 알아봅니다 Q# .

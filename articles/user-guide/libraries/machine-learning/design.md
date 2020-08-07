@@ -6,12 +6,15 @@ ms.author: v-edsanc@microsoft.com
 ms.date: 02/17/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.design
-ms.openlocfilehash: b304b9d1a15f164f4dfe758aaed31b7b2369b18c
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 60e694e9f7c2f01a6679ef960f5a7774c8bd6a62
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85276035"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868946"
 ---
 # <a name="design-your-own-classifier"></a>사용자 고유의 분류자 설계
 
@@ -47,6 +50,8 @@ ms.locfileid: "85276035"
 여기에서 정의 하는 것은 요소 배열을 반환 하는 함수입니다 .이 함수는 `ControlledRotation` 매개 변수의 배열과 함께 사용 되며 바이어스가를 정의 [`SequentialModel`](xref:microsoft.quantum.machinelearning.sequentialmodel) 합니다. 이 형식은 퀀텀 Machine Learning 라이브러리에서 기본 이며 분류자를 정의 합니다. 위의 함수에서 정의 된 회로는 데이터 집합의 각 샘플에 두 가지 기능이 포함 된 분류자의 일부입니다. 따라서 두 개의 비트 비트만 필요 합니다. 회로의 그래픽 표현은 다음과 같습니다.
 
  ![회로 모델 예](~/media/circuit_model_1.PNG)
+
+기본적으로 퀀텀 Machine Learning 라이브러리의 작업은 분류 확률을 예측 하기 위해 레지스터의 마지막 계산을 측정 합니다. 회로를 설계할 때이 사실을 염두에 두어야 합니다.
 
 ## <a name="use-the-library-functions-to-write-layers-of-gates"></a>라이브러리 함수를 사용 하 여 게이트 계층 작성
 

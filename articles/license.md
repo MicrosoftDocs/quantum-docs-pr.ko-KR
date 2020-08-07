@@ -4,12 +4,15 @@ description: Microsoft Quantum Development Kit에 대 한 사용 조건, 부인 
 author: QuantumWriter
 ms.author: cpalmer
 ms.date: 11/04/2019
-ms.openlocfilehash: 0d3aa9ae9e4f232ba2403512ff6e2394ecedeb22
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 33b36e5619c62c9e2306441f55b244caa3214e98
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77907123"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866726"
 ---
 # <a name="microsoft-software-license-terms"></a>Microsoft 소프트웨어 사용 조건 
 ## <a name="microsoft-quantum-development-kit-preview"></a>MICROSOFT 퀀텀 개발 키트 (미리 보기)
@@ -21,7 +24,7 @@ ms.locfileid: "77907123"
 
 * * *
 
-본 사용 조건은 Microsoft Corporation(또는 그 계열사 중 하나)과 귀하 간에 체결되는 계약입니다. 이러한 소프트웨어는 위에 명시 된 시험판 소프트웨어 및 Microsoft 서비스 또는 소프트웨어 업데이트에 적용 됩니다 (이러한 서비스 또는 업데이트의 범위는 신규 또는 추가 약관에 따라 달라 지 며,이 경우 다른 약관이 prospectively 적용 되 고 변경 되지 않습니다. 또는 미리 업데이트 된 소프트웨어 또는 서비스와 관련 된 Microsoft의 권한입니다.
+본 사용 조건은 Microsoft Corporation(또는 그 계열사 중 하나)과 귀하 간에 체결되는 계약입니다. 이러한 기능은 위에 명시 된 시험판 소프트웨어 및 모든 Microsoft 서비스 또는 소프트웨어 업데이트에 적용 됩니다. 이러한 서비스 또는 업데이트의 범위는 신규 또는 추가 약관에 따라 적용 됩니다 .이 경우 다른 용어는 prospectively 적용 되며 이전에 업데이트 된 소프트웨어 또는 서비스와 관련 하 여 또는 Microsoft의 권한을 변경 하지 않습니다.
 
 본 사용 조건을 준수하는 경우 귀하는 다음과 같은 영구적 권리를 갖습니다. 이 소프트웨어를 사용하면 이러한 조건에 동의하는 것으로 간주됩니다.
 
@@ -31,7 +34,7 @@ ms.locfileid: "77907123"
 
      b. **Third Party Software**. 본 소프트웨어는 본 계약이나 해당 사용 약관에 따라 귀하에게 사용이 허가된 타사 애플리케이션을 포함할 수 있습니다. 타사 응용 프로그램에 대 한 사용 조건, 통지 및 [승인은 타사 응용](https://3rdpartysource.microsoft.com/) 프로그램에 대해 온라인으로 액세스할 수 있습니다 (있는 경우). 이러한 애플리케이션이 다른 계약에 의해 규제되는 경우에도 아래의 부인, 제한 사항 및 손해 배제 조항은 해당 법률에서 허용되는 범위까지 적용됩니다. ETH 취리히 (스위스), 수익성의 Troyer 그룹에서 개발한 커널입니다.
  
-2. **시간이 중요 한 소프트웨어.**
+2. **시간이 중요한 소프트웨어.**
 
      a. **기간**. 소프트웨어는 시간이 중요 하며 소프트웨어에 정의 된 날짜에 실행이 중지 될 수 있습니다.
 
@@ -42,9 +45,9 @@ ms.locfileid: "77907123"
 1. **시험판 소프트웨어**. 소프트웨어가 시험판 버전입니다. 올바르게 작동하지 않을 수 있습니다. 정식으로 출시되는 버전과 다를 수 있습니다.
 
 
-1. **사용자 의견**. Microsoft에 소프트웨어에 대한 피드백을 제공하는 경우 귀하는 피드백을 어떠한 방식과 목적으로든 체험으로 사용, 공유 및 상품화할 수 있는 권리를 Microsoft에 제공하는 것입니다. Microsoft가 귀하의 피드백을 포함함으로써 제3자에게 소프트웨어 또는 문서의 사용을 허가해야 하는 라이선스가 적용되는 피드백을 제공하지 않습니다. 이러한 권리는 이 계약에서 효력을 유지합니다.
+1. **사용자 의견** Microsoft에 소프트웨어에 대한 피드백을 제공하는 경우 귀하는 피드백을 어떠한 방식과 목적으로든 체험으로 사용, 공유 및 상품화할 수 있는 권리를 Microsoft에 제공하는 것입니다. Microsoft가 귀하의 피드백을 포함함으로써 제3자에게 소프트웨어 또는 문서의 사용을 허가해야 하는 라이선스가 적용되는 피드백을 제공하지 않습니다. 이러한 권리는 이 계약에서 효력을 유지합니다.
 
-1. **데이터 수집**. 소프트웨어에서는 귀하와 귀하의 소프트웨어 사용에 대한 정보를 수집하여 Microsoft로 보낼 수 있습니다. Microsoft는 서비스를 제공하고 Microsoft의 제품 및 서비스를 개선하기 위해 이 정보를 사용할 수 있습니다. 귀하의 옵트아웃(opt out) 권한(있는 경우)은 제품 설명서에 설명되어 있습니다. 소프트웨어의 일부 기능은 소프트웨어를 사용 또는 액세스하는 귀하 애플리케이션의 사용자에 대한 데이터 수집을 사용하도록 설정할 수 있습니다. 귀하 애플리케이션에서 이러한 기능을 사용하여 데이터 수집을 사용하도록 설정하는 경우 필요한 사용자 동의받기 및 귀하의 사용자 데이터 사용, 수집 및 공유 방식에 대해 사용자에게 정확히 알리는 강화된 개인 정보 취급 방침 유지를 포함한 관련 법률을 준수해야 합니다. Microsoft의 데이터 수집 및 사용에 대해서는 제품 설명서와 Microsoft 개인정보처리방침(https://go.microsoft.com/fwlink/?LinkId=521839)에서 자세히 알아볼 수 있습니다. Microsoft 개인정보처리방침의 모든 적용 가능한 조항을 준수하는 것에 동의합니다.
+1. **데이터 수집**. 소프트웨어에서는 귀하와 귀하의 소프트웨어 사용에 대한 정보를 수집하여 Microsoft로 보낼 수 있습니다. Microsoft는 서비스를 제공하고 Microsoft의 제품 및 서비스를 개선하기 위해 이 정보를 사용할 수 있습니다. 귀하의 옵트아웃(opt out) 권한(있는 경우)은 제품 설명서에 설명되어 있습니다. 소프트웨어의 일부 기능은 소프트웨어를 사용 또는 액세스하는 귀하 애플리케이션의 사용자에 대한 데이터 수집을 사용하도록 설정할 수 있습니다. 귀하 애플리케이션에서 이러한 기능을 사용하여 데이터 수집을 사용하도록 설정하는 경우 필요한 사용자 동의받기 및 귀하의 사용자 데이터 사용, 수집 및 공유 방식에 대해 사용자에게 정확히 알리는 강화된 개인 정보 취급 방침 유지를 포함한 관련 법률을 준수해야 합니다. Microsoft의 데이터 수집 및 사용에 대해서는 제품 설명서와 Microsoft 개인정보처리방침(https://go.microsoft.com/fwlink/?LinkId=521839)에서 자세히 알아볼 수 있습니다. 귀하는 Microsoft 개인정보처리방침의 모든 규정을 준수한다는 데 동의합니다.
 
 1. **라이선스의 범위** 소프트웨어는 사용이 허가 되 고 판매 되지 않습니다. 기타 모든 권한은 Microsoft가 보유합니다. 이러한 제한과 관계없이 관련 법률에서 귀하에게 더 많은 권한을 부여하지 않는 한 다음을 할 수 없습니다(권리가 없음).
 
@@ -100,7 +103,7 @@ ms.locfileid: "77907123"
 **제한 DES DOMMAGES-INTÉRÊTS ET 제외 DE RESPONSABILITÉ는 Vous pouvez obtenir de Microsoft et de fournisseurs une indemnisation en ca de dommages는 uniquement à hauteur de 5, 00 $ US를 전달 합니다. Vous ne pouvez prétendre à aucune indemnisation에 콘크리트 autres dommages, y compris les dommages spéciaux, indirects ou accessoires et pertes**.
 
 **Cette 제한 concerne**:
-- **tout ce ai est relié au logiciel, aux services ou au (y compris le code) figurant 성 des 사이트 인터넷 계층 ou dans des 프로그램 계층; et**
+- **tout ce qui est relié au logiciel, aux services ou au contenu (y compris le code) figurant sur des sites Internet tiers ou dans des programmes tiers; et**
 - **les réclamations au titre de 위반 de contrat ou de garantie, ou au titre de responsabilité stricte, de négligence ou d'une autre faute dans la limite autorisée pla loi en**
 
 **Elle s'applique également, même Si Microsoft connaissait ou devrait connaître l'éventualité d'un tel dommage. Si votre는 n'autorise pas l'exclusion ou la 제한 de responsabilité에 콘크리트 dommages indirects, accessoires ou de quelque, 쿼리 ce soit, il se peut 쿼리 la 제한 ou l'exclusion ci-dessus ne s'appliquera pas à votre égard**.

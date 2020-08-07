@@ -1,17 +1,20 @@
 ---
 title: 무효화 되는 ombits 사용 검사기-퀀텀 개발 키트
-description: '퀀텀 추적 시뮬레이터를 사용 하 여 Q # 코드에서 잠재적으로 잘못 된 기능이 있는지 확인 하는 Microsoft QDK 무효화 된 사용 검사기에 대해 알아봅니다.'
+description: 퀀텀 추적 시뮬레이터를 사용 하 여 코드에서 잠재적으로 잘못 된 수를 확인 하는 Microsoft QDK 무효화 된 사용 검사기에 대해 알아봅니다 Q# .
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.invalidated-qubits
-ms.openlocfilehash: fccf6d5784b587f4ad9b659e23027619acd06ffa
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: c451747badba03801bd4ecd419420f131ac502d6
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871096"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868290"
 ---
 # <a name="quantum-trace-simulator-invalidated-qubits-use-checker"></a>퀀텀 추적 시뮬레이터: 무효화 되는 사용 검사기
 
@@ -19,7 +22,7 @@ ms.locfileid: "86871096"
 
 ## <a name="invalid-qubits"></a>잘못 된 비트
 
-무효화 된 작업에서 검색 된 문제를 설명 하는 Q # 코드의 다음 부분을 고려 합니다.
+Q#무효화 된 작업에서 발견 된 문제를 설명 하는 다음 코드를 고려 합니다.
 
 ```qsharp
 operation UseReleasedQubit() : Unit {

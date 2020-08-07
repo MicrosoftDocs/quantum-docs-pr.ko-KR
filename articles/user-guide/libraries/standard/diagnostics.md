@@ -1,21 +1,24 @@
 ---
-title: 'Q # 표준 라이브러리의 진단'
-description: '퀀텀 프로그램의 실수 또는 오류를 catch 하는 데 사용 되는 Q # 표준 라이브러리의 진단 기능 및 작업에 대해 알아봅니다.'
+title: Q#표준 라이브러리의 진단
+description: Q#퀀텀 프로그램의 실수 또는 오류를 catch 하는 데 사용 되는 표준 라이브러리의 진단 기능 및 작업에 대해 알아봅니다.
 author: cgranade
 uid: microsoft.quantum.libraries.diagnostics
 ms.author: chgranad@microsoft.com
 ms.topic: article
-ms.openlocfilehash: 324753cfa1b7d940bf5a0bbe7665f19cc6dda82c
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 4a98795b2459adaa4e47c888751121fffdc70971
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86870637"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868545"
 ---
 # <a name="diagnostics"></a>진단 #
 
 기존 개발과 마찬가지로 퀀텀 프로그램에서 실수 및 오류를 진단할 수 있는 것이 중요 합니다.
-Q # 표준 라이브러리는에 설명 된 대로 퀀텀 프로그램의 정확성을 보장 하는 다양 한 방법을 제공 합니다 <xref:microsoft.quantum.guide.testingdebugging> .
+Q#표준 라이브러리는에 설명 된 대로 퀀텀 프로그램의 정확성을 보장 하는 다양 한 방법을 제공 <xref:microsoft.quantum.guide.testingdebugging> 합니다.
 이러한 지원은 대부분 호스트 프로그램 또는 개발자에 게 추가 진단 정보를 제공 하도록 대상 컴퓨터에 지시 하거나 함수 또는 작업 호출에 의해 표현 되는 조건 및 invariant의 정확성을 보장 하는 함수 및 작업 형식으로 제공 됩니다.
 
 ## <a name="machine-diagnostics"></a>컴퓨터 진단 ##
@@ -30,7 +33,7 @@ Message($"About to rotate by an angle of {angle}...");
 ```
 
 > [!NOTE]
-> `Message`에 시그니처가 있으며 `(String -> Unit)` ,이는 디버그 로그 메시지를 내보내는 것을 Q # 내에서 관찰할 수 없음을 나타냅니다.
+> `Message`에 시그니처가 있으므로에서 `(String -> Unit)` 디버그 로그 메시지를 내보낼 수 없다는 것을 나타냅니다 Q# .
 
 <xref:microsoft.quantum.diagnostics.dumpmachine>및 <xref:microsoft.quantum.diagnostics.dumpregister> callables은 대상 컴퓨터에 현재 할당 된 모든 수에 대 한 진단 정보를 제공 하거나 각각의 특정 기능에 대 한 진단 정보를 제공 하도록 지시 합니다.
 각 대상 컴퓨터는 덤프 명령에 대 한 응답으로 제공 되는 진단 정보에 따라 달라 집니다.
@@ -49,7 +52,7 @@ Message($"About to rotate by an angle of {angle}...");
 예를 들어,는 `EqualityFactI(1 + 1, 2, "1 + 1 != 2")` $1 + 1 = $2 이라는 수학적 팩트를 나타내며,는 `AssertQubit(One, qubit)` 측정에서 확신을 `qubit` 가진을 반환 하는 조건을 나타냅니다 `One` .
 이전 경우에는 해당 값만 제공 된 조건의 정확성을 확인할 수 있습니다. 후자의 경우에는 어설션을 평가 하기 위해 해당 값에 대 한 정보를 알고 있어야 합니다.
 
-Q # 표준 라이브러리는 다음과 같은 여러 가지 기능을 제공 합니다.
+Q#표준 라이브러리는 다음과 같은 여러 가지 기능을 제공 합니다.
 
 - <xref:microsoft.quantum.diagnostics.fact>
 - <xref:microsoft.quantum.diagnostics.equalitywithintolerancefact>
@@ -67,7 +70,7 @@ Q # 표준 라이브러리는 다음과 같은 여러 가지 기능을 제공 �
 어설션이 실패 하면 지정 된 메시지와 함께를 호출 하 여 실행이 종료 `fail` 됩니다.
 기본적으로이 작업은 구현 되지 않습니다. 이를 지원할 수 있는 시뮬레이터는 런타임 검사를 수행 하는 구현을 제공 해야 합니다.
 `AssertMeasurement`에 시그니처가 `((Pauli[], Qubit[], Result, String) -> ())` 있습니다.
-`AssertMeasurement`는 빈 튜플을 출력 형식으로 사용 하는 함수 이므로, `AssertMeasurement` Q # 프로그램 내에서를 호출 하는 것에 영향을 주지 않습니다.
+`AssertMeasurement`는 빈 튜플을 출력 형식으로 사용 하는 함수 이므로 호출 된의 효과 `AssertMeasurement` 는 프로그램 내에서 관찰 가능 하지 않습니다 Q# .
 
 <xref:microsoft.quantum.diagnostics.assertmeasurementprobability>작업 함수는 지정 된 Pauli의 지정 된 비트 수를 측정 하는 assert를 사용 하 여 지정 된 결과가 특정 허용 범위 내에서 지정 된 확률로 포함 되도록 합니다.
 허용 오차는 덧셈 (예: `abs(expected-actual) < tol` )입니다.

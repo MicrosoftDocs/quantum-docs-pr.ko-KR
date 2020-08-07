@@ -1,28 +1,31 @@
 ---
 title: 퀀텀 Machine Learning 라이브러리를 사용 하는 기본 분류
-description: 'Microsoft QDK 퀀텀 Machine Learning 라이브러리를 사용 하 여 Q #으로 작성 된 퀀텀 순차 분류자를 실행 하는 방법에 대해 알아봅니다.'
+description: Q#Microsoft QDK의 퀀텀 Machine Learning 라이브러리를 사용 하 여로 작성 된 퀀텀 순차 분류자를 실행 하는 방법에 대해 알아봅니다.
 author: geduardo
 ms.author: v-edsanc@microsoft.com
 ms.date: 02/16/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.basics
-ms.openlocfilehash: 1d2538fd164c4c61c2712978d3b5c57b0eb766e6
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: f9c3e7ab85c0f0d1a6063e593607d35c5cb76936
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275785"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868970"
 ---
 # <a name="basic-classification-classify-data-with-the-qdk"></a>기본 분류: QDK 데이터 분류
 
-이 빠른 시작에서는 QDK의 퀀텀 Machine Learning 라이브러리를 사용 하 여 Q #으로 작성 된 퀀텀 순차 분류자를 실행 하는 방법에 대해 설명 합니다. 
+이 빠른 시작에서는 Q# QDK의 퀀텀 Machine Learning 라이브러리를 사용 하 여로 작성 된 퀀텀 순차 분류자를 실행 하는 방법에 대해 설명 합니다. 
 
-이 가이드에서는 Q #에 정의 된 분류자 구조를 사용 하 여 초승달 데이터 집합을 사용 합니다.
+이 가이드에서는에 정의 된 분류자 구조를 사용 하 여 초승달 데이터 집합을 사용 합니다 Q# .
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 - Microsoft [Quantum Development Kit](xref:microsoft.quantum.install)
-- [Python 호스트 프로그램](xref:microsoft.quantum.install.python) 또는 [c # 호스트 프로그램](xref:microsoft.quantum.install.cs)에 대해 Q # 프로젝트를 만듭니다.
+- Q# [Python 호스트 프로그램](xref:microsoft.quantum.install.python) 또는 [c # 호스트 프로그램](xref:microsoft.quantum.install.cs)에 대 한 프로젝트를 만듭니다.
 
 ## <a name="host-program"></a>호스트 프로그램
 
@@ -34,7 +37,7 @@ ms.locfileid: "85275785"
 
     ### <a name="python-with-visual-studio-code-or-the-command-line"></a>[Visual Studio 코드 또는 명령줄을 사용하는 Python](#tab/tabid-python)
 
-    Python의 Q # 분류자를 실행 하려면 다음 코드를로 저장 합니다 `host.py` . `Training.qs`이 자습서의 뒷부분에서 설명 하는 Q # 파일도 필요 합니다.
+    Q#Python의 분류자를 실행 하려면 다음 코드를로 저장 `host.py` 합니다. Q# `Training.qs` 이 자습서의 뒷부분에서 설명 하는 파일도 필요 합니다.
 
     :::code language="python" source="~/quantum/samples/machine-learning/half-moons/host.py" range="3-42":::
 
@@ -49,7 +52,7 @@ ms.locfileid: "85275785"
 
     ### <a name="c-with-visual-studio-code-or-the-command-line"></a>[Visual Studio 코드 또는 명령줄을 사용하는 C#](#tab/tabid-csharp)
 
-    C #의 Q # 분류자를 실행 하려면 다음 코드를로 저장 합니다 `Host.cs` . `Training.qs`이 자습서의 뒷부분에서 설명 하는 Q # 파일도 필요 합니다.
+    Q#C #의 분류자를 실행 하려면 다음 코드를로 저장 `Host.cs` 합니다. Q# `Training.qs` 이 자습서의 뒷부분에서 설명 하는 파일도 필요 합니다.
 
     :::code language="csharp" source="~/quantum/samples/machine-learning/half-moons/Host.cs" range="4-86":::
 
@@ -63,7 +66,7 @@ ms.locfileid: "85275785"
 
     ### <a name="c-with-visual-studio-2019"></a>[Visual Studio 2019를 사용하는 C#](#tab/tabid-vs2019)
 
-    Visual Studio의 c #에서 새 Q # 프로그램을 실행 하려면 `Host.cs` 다음 c # 코드를 포함 하도록을 수정 합니다. `Training.qs`이 자습서의 뒷부분에서 설명 하는 Q # 파일도 필요 합니다.
+    Q#Visual Studio의 c #에서 새 프로그램을 실행 하려면 `Host.cs` 다음 c # 코드를 포함 하도록을 수정 합니다. Q# `Training.qs` 이 자습서의 뒷부분에서 설명 하는 파일도 필요 합니다.
 
     :::code language="csharp" source="~/quantum/samples/machine-learning/half-moons/Host.cs" range="4-86":::
 
@@ -78,7 +81,7 @@ ms.locfileid: "85275785"
 
 ## <a name="q-classifier-code"></a>Q \# 분류자 코드
 
-이제 호스트 프로그램에서 호출 하는 작업이 Q #에서 정의 되는 방식을 살펴보겠습니다.
+이제 호스트 프로그램에서 호출 하는 작업이에서 정의 되는 방식을 살펴보겠습니다 Q# .
 이라는 파일에 다음 코드를 저장 `Training.qs` 합니다.
 
 :::code language="qsharp" source="~/quantum/samples/machine-learning/half-moons/Training.qs" range="4-116":::

@@ -6,16 +6,19 @@ uid: microsoft.quantum.libraries.standard.prelude
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 19674620475e68b41c855023807a5fd1f7945ec9
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 283504a5f5635a4996c804e514a6f52eb4966d22
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275670"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868443"
 ---
 # <a name="the-prelude"></a>Prelude #
 
-Q # 컴파일러 및 퀀텀 개발 키트에 포함 된 대상 컴퓨터는 Q #에서 퀀텀 프로그램을 작성할 때 사용할 수 있는 내장 함수 및 작업 집합을 제공 합니다.
+Q#퀀텀 개발 키트에 포함 된 컴파일러 및 대상 컴퓨터는에서 퀀텀 프로그램을 작성할 때 사용할 수 있는 내장 함수 및 작업 집합을 제공 합니다 Q# .
 
 ## <a name="intrinsic-operations-and-functions"></a>내장 작업 및 함수 ##
 
@@ -27,11 +30,11 @@ Q # 컴파일러 및 퀀텀 개발 키트에 포함 된 대상 컴퓨터는 Q #�
 - 측정을 구현 하는 작업입니다.
 
 Clifford + $T $ gate 집합은 퀀텀 컴퓨팅을 위한 [유니버설](xref:microsoft.quantum.concepts.multiple-qubits) 이므로 negligibly 작은 오류 내에서 임의 퀀텀 알고리즘을 구현 하는 데에는 충분 합니다.
-Q #은 회전도 제공 하 여 프로그래머는 단일의 단일 기능 및 CNOT gate 라이브러리 내에서 작업을 수행할 수 있습니다. 이 라이브러리는 프로그래머가 Clifford + $T $ 분해를 직접 표현할 필요가 없으며, 단일 highbit unitaries를 Clifford 및 $T $ 게이트로 컴파일하기 위한 매우 효율적인 메서드가 필요 하지 않기 때문에 훨씬 더 쉽습니다. 자세한 내용은 [여기](xref:microsoft.quantum.more-information) 를 참조 하세요.
+또한 회전을 제공 하 여 Q# 프로그래머는 단일의 단일 기능 및 CNOT gate 라이브러리 내에서 작업할 수 있습니다. 이 라이브러리는 프로그래머가 Clifford + $T $ 분해를 직접 표현할 필요가 없으며, 단일 highbit unitaries를 Clifford 및 $T $ 게이트로 컴파일하기 위한 매우 효율적인 메서드가 필요 하지 않기 때문에 훨씬 더 쉽습니다. 자세한 내용은 [여기](xref:microsoft.quantum.more-information) 를 참조 하세요.
 
 가능 하면, prelude에서 정의 된 작업은 `Controlled` 대상 컴퓨터에서 적절 한 분해를 수행 하는 등의 작업을 수행 하 여 variant를 적용할 수 있습니다.
 
-Prelude의이 부분에 정의 된 대부분의 함수 및 작업은 @"microsoft.quantum.intrinsic" 네임 스페이스에 있습니다. 즉, 대부분의 Q # 소스 파일은 `open Microsoft.Quantum.Intrinsic;` 초기 네임 스페이스 선언 바로 뒤에 지시문을 포함 합니다.
+Prelude의이 부분에 정의 된 대부분의 함수 및 작업은 @"microsoft.quantum.intrinsic" 네임 스페이스에 있습니다. 즉, 대부분의 Q# 소스 파일에는 `open Microsoft.Quantum.Intrinsic;` 초기 네임 스페이스 선언 바로 뒤에 지시문이 있습니다.
 <xref:microsoft.quantum.core>네임 스페이스는 자동으로 열리므로와 같은 함수를 <xref:microsoft.quantum.core.length> 문 없이 사용할 수 있습니다 `open` .
 
 ### <a name="common-single-qubit-unitary-operations"></a>일반적인 단일 기능 비트 단일 작업 ###
@@ -96,9 +99,9 @@ Hadamard gate는 $ \ket {0} $ 및 $ \ket $ 상태의 superposition을 만드는 
 \begin{equation} \begin{bmatrix} 1 & 0 \\ \\ % fixme: 현재 quadwhack hack를 사용 합니다.
 0 & i \end{bmatrix} \end{ation}
 
-#### <a name="rotations"></a>회전 ####
+#### <a name="rotations"></a>교대 ####
 
-위의 Pauli 및 Clifford 작업 외에도 Q # prelude는 회전을 표현 하는 다양 한 방법을 제공 합니다.
+위의 Pauli 및 Clifford 작업 외에도 prelude는 회전을 표현 하는 Q# 다양 한 방법을 제공 합니다.
 [단일 기능 비트 작업](xref:microsoft.quantum.concepts.qubit#single-qubit-operations)에 설명 된 대로,이를 회전 하는 기능은 퀀텀 알고리즘에 매우 중요 합니다.
 
 먼저 $H $ 및 $T $ 게이트를 사용 하 여 단일 기능 비트 작업을 표현할 수 있습니다. 여기서 $H $은 Hadamard 연산이 고, 여기서 \begin{equation} T \mathrel{: =} \begin{bmatrix} 1 & 0 \\ \\ % fixme: 현재는 쿼드 백 whack hack를 사용 합니다.
@@ -229,7 +232,7 @@ return rs;
 
 ## <a name="extension-functions-and-operations"></a>확장 함수 및 작업 ##
 
-또한 prelude는 Q # 코드 내에서 사용 하기 위해 .NET 수준에서 다양 한 수학적 및 형식 변환 함수 집합을 정의 합니다.
+또한 prelude는 코드 내에서 사용 하기 위해 .NET 수준에서 다양 한 수학적 및 형식 변환 함수 집합을 정의 합니다 Q# .
 예를 들어, <xref:microsoft.quantum.math> 네임 스페이스는 및와 같은 유용한 작업을 정의 합니다 <xref:microsoft.quantum.math.sin> <xref:microsoft.quantum.math.log> .
 퀀텀 개발 키트에서 제공 하는 구현에서는 기존 .NET 기본 클래스 라이브러리를 사용 하므로 퀀텀 프로그램 및 해당 클래식 드라이버 사이에 추가 통신 왕복이 포함 될 수 있습니다.
 이는 로컬 시뮬레이터에 대 한 문제를 제공 하지 않지만 원격 시뮬레이터 또는 실제 하드웨어를 대상 컴퓨터로 사용 하는 경우 성능 문제가 발생할 수 있습니다.
@@ -238,7 +241,7 @@ return rs;
 ### <a name="math"></a>수식 ###
 
 <xref:microsoft.quantum.math>네임 스페이스는 .net 기본 클래스 라이브러리의 [ `System.Math` 클래스](https://docs.microsoft.com/dotnet/api/system.math?view=netframework-4.7.1)에서 많은 유용한 함수를 제공 합니다.
-이러한 함수는 다른 Q # 함수와 동일한 방식으로 사용할 수 있습니다.
+이러한 함수는 다른 함수와 동일한 방식으로 사용할 수 있습니다 Q# .
 
 ```qsharp
 open Microsoft.Quantum.Math;
@@ -246,7 +249,7 @@ open Microsoft.Quantum.Math;
 let y = Sin(theta);
 ```
 
-.NET 정적 메서드가 인수의 형식에 따라 오버 로드 된 경우 해당 하는 Q # 함수는 해당 입력의 형식을 나타내는 접미사로 주석을 답니다.
+해당 인수의 형식에 따라 .NET 정적 메서드가 오버 로드 된 경우 해당 함수에는 해당 Q# 입력의 형식을 나타내는 접미사로 주석이 추가 됩니다.
 
 ```qsharp
 let x = AbsI(-3); // x : Int = 3

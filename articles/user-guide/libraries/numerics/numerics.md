@@ -1,17 +1,20 @@
 ---
-title: 'Microsoft Q # 숫자 라이브러리 사용'
+title: Microsoft Q# 숫자 라이브러리 사용
 description: Microsoft 퀀텀 숫자 라이브러리에서 사용할 수 있는 형식 및 작업에 대해 알아봅니다.
 author: thomashaener
 ms.author: thhaner
 ms.date: 5/14/2019
 ms.topic: article
 uid: microsoft.quantum.numerics.usage
-ms.openlocfilehash: 10d5675e0ef182211a38db4d09347b05afe109c3
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 474fc74b9c92fbf28c0618a3090905d025699d32
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85276122"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868800"
 ---
 # <a name="using-the-numerics-library"></a>숫자 라이브러리 사용
 
@@ -64,7 +67,7 @@ open Microsoft.Quantum.Arithmetic;
     - 역 (1/x)
     - 측정 (고전적인 Double)
 
-이러한 각 작업에 대 한 자세한 내용 및 자세한 설명서는 [docs.microsoft.com](https://docs.microsoft.com/quantum) 에서 Q # 라이브러리 참조 문서를 참조 하세요.
+이러한 각 작업에 대 한 자세한 내용 및 자세한 설명서는 Q# [docs.microsoft.com](https://docs.microsoft.com/quantum) 에서 라이브러리 참조 문서를 참조 하세요.
 
 ## <a name="sample-integer-addition"></a>샘플: 정수 더하기
 
@@ -99,7 +102,7 @@ EvaluatePolynomialFxP([1.0, 2.0], x, y);
 결과 $P (x) = 1 + 2x $가에 저장 됩니다 `yFxP` .
 
 두 번째, `EvaluateEvenPolynomialFxP` 및 세 번째는 `EvaluateOddPolynomialFxP` 각각 짝수 및 홀수 함수의 사례에 대 한 특수화입니다. 즉, 짝수/홀수 함수 $f (x) $ 및 $ $ P_ {짝수} (x) = a_0 + a_1 x ^ 2 + a_2 x ^ 4 + \cs+ a_d x ^ {2d}의 경우 $ $ $f (x) $는 $P _ {짝수} (x) $ 또는 $P _ {홀수} (x): = x\cdot P_ {짝수} (x) $에서 각각 합니다.
-Q #에서 이러한 두 가지 사례는 다음과 같이 처리할 수 있습니다.
+에서 Q# 이러한 두 가지 사례는 다음과 같이 처리할 수 있습니다.
 ```qsharp
 EvaluateEvenPolynomialFxP([1.0, 2.0], x, y);
 ```
