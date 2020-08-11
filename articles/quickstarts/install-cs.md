@@ -6,14 +6,17 @@ ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.cs
-ms.openlocfilehash: 714c15d9589095f0fe395fcd6941672167879dca
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 13d73bdf0287941c89e03ba63869095e5fca4e70
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885491"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867559"
 ---
-# <a name="develop-with-q-and-net"></a>Q# 및 .NET을 사용하여 개발
+# <a name="develop-with-no-locq-and-net"></a>Q# 및 .NET을 사용하여 개발
 
 Q#은 C# 및 F#과 같은 .NET 언어와 잘 작동하도록 빌드되었습니다.
 이 가이드에서는 .NET 언어로 작성된 호스트 프로그램에서 Q#을 사용하는 방법을 설명합니다.
@@ -24,7 +27,7 @@ Q#은 C# 및 F#과 같은 .NET 언어와 잘 작동하도록 빌드되었습니�
 
 - [Q# 명령줄 프로젝트에서 사용할](xref:microsoft.quantum.install.standalone) Quantum Development Kit를 설치합니다.
 
-## <a name="creating-a-q-library-and-a-net-host"></a>Q# 라이브러리 및 .NET 호스트 만들기
+## <a name="creating-a-no-locq-library-and-a-net-host"></a>Q# 라이브러리 및 .NET 호스트 만들기
 
 첫 번째 단계에서는 Q# 라이브러리용 프로젝트 및 Q# 라이브러리에 정의된 작업 및 함수를 호출할 .NET 호스트를 만듭니다.
 
@@ -64,7 +67,7 @@ Visual Studio 또는 VS Code 이외의 편집기를 사용하는 경우 간단�
 
 - 새 Q# 라이브러리 만들기
   - **파일** -> **새로 만들기** -> **프로젝트**로 이동
-  - 검색 상자에 "Q#" 입력
+  - 검색 상자에 “Q#” 입력
   - **Q# 라이브러리** 선택
   - **다음**을 선택합니다.
   - 라이브러리의 이름 및 위치 선택
@@ -80,7 +83,7 @@ Visual Studio 또는 VS Code 이외의 편집기를 사용하는 경우 간단�
 
 ***
 
-## <a name="calling-into-q-from-net"></a>.NET에서 Q# 호출
+## <a name="calling-into-no-locq-from-net"></a>.NET에서 Q# 호출
 
 위의 지침에 따라 프로젝트를 설정한 후에는 .NET 콘솔 애플리케이션에서 Q#을 호출할 수 있습니다.
 Q# 컴파일러는 시뮬레이터에서 퀀텀 프로그램을 실행할 수 있도록 각 Q# 작업 및 함수에 대해 .NET 클래스를 생성합니다.

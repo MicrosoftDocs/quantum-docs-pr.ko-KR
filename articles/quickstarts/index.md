@@ -7,12 +7,15 @@ ms.date: 5/8/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install
-ms.openlocfilehash: ee8d210d67a20cfea3bdc36162efc47f021a6dc6
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 378970dc911ea5a794590f8336ffc6d3f9673285
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885462"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867576"
 ---
 # <a name="install-the-microsoft-quantum-development-kit-qdk"></a>Microsoft QDK(Quantum Development Kit) 설치
 
@@ -20,7 +23,7 @@ ms.locfileid: "85885462"
 
 - Q# 프로그래밍 언어
 - Q#의 복합 기능을 추상화하는 라이브러리 세트
-- Q#으로 작성된 양자 프로그램을 실행하기 위한 Python 및 .NET 언어(C#, F# 및 VB.NET)용 API
+- Q#으로 작성된 퀀텀 프로그램을 실행하기 위한 Python 및 .NET 언어(C#, F# 및 VB.NET)용 API
 - 개발을 용이하게 하는 도구
 
 Q# 프로그램은 Visual Studio Code 또는 Visual Studio를 사용하거나 IQ# Jupyter 커널의 Jupyter Notebook을 통해 독립 실행형 애플리케이션으로 실행할 수 있습니다.

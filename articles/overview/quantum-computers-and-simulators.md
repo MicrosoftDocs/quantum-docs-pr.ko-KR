@@ -6,12 +6,15 @@ ms.author: bradben
 ms.date: 5/5/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.simulators
-ms.openlocfilehash: 2f5345504ba31211c97493e78af1563d575881e4
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 299baea75865a4f0ece6b490cef3301dd2a672ac
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327750"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867712"
 ---
 # <a name="quantum-computers-and-quantum-simulators"></a>양자 컴퓨터 및 양자 시뮬레이터
 
@@ -40,7 +43,7 @@ Microsoft는 위상 큐비트를 기반으로 하는 양자 컴퓨터를 개발�
 
 ## <a name="microsoft-and-quantum-hardware-partnerships"></a>Microsoft 및 양자 하드웨어의 파트너 관계
 
-Microsoft는 양자 하드웨어 제조업체인 IonQ, Honeywell 및 QCI와 협력하여 나중에 개발자가 양자 컴퓨터에 액세스할 수 있도록 하고 있습니다. 개발자는 Azure Quantum 플랫폼을 활용하여 Microsoft의 QDK(Quality Development Kit) 및 Q#에서 양자 프로그램을 작성하고 원격으로 실행할 수 있습니다.
+Microsoft는 양자 하드웨어 제조업체인 IonQ, Honeywell 및 QCI와 협력하여 나중에 개발자가 양자 컴퓨터에 액세스할 수 있도록 하고 있습니다. 개발자는 Azure Quantum 플랫폼을 활용하여 Microsoft의 QDK(Quality Development Kit) 및 Q#에서 퀀텀 프로그램을 작성하고 원격으로 실행할 수 있습니다.
 
 ## <a name="quantum-computations"></a>양자 계산
 
@@ -54,7 +57,7 @@ Microsoft는 양자 하드웨어 제조업체인 IonQ, Honeywell 및 QCI와 협�
 큐비트 초기화 및 변환은 **양자 연산**(때로는 양자 게이트라고도 함)을 사용하여 수행됩니다. 양자 연산은 AND, OR, NOT 및 XOR과 같은 클래식 컴퓨팅의 논리 연산과 비슷합니다. 연산은 1에서 0으로 큐비트의 상태를 대칭 이동하거나 한 쌍의 큐비트를 얽는 것처럼 기본적으로 여러 개의 연산을 직렬로 사용하여 중첩된 큐비트가 한 방향 또는 다른 방향으로 붕괴될 확률에 영향을 줄 수 있습니다.
 
 > [!NOTE] 
-> [Q# 라이브러리](xref:microsoft.quantum.libraries)는 하위 수준 양자 연산의 복잡한 조합을 정의하는 기본 제공 연산을 제공합니다. 라이브러리 연산을 사용하여 큐비트를 변환하고 더 복잡한 사용자 정의 연산을 만들 수 있습니다.  
+> [Q# 라이브러리](xref:microsoft.quantum.libraries)는 하위 수준 퀀텀 연산의 복잡한 조합을 정의하는 기본 제공 연산을 제공합니다. 라이브러리 연산을 사용하여 큐비트를 변환하고 더 복잡한 사용자 정의 연산을 만들 수 있습니다.  
 
 계산 결과를 측정하면 답이 나오지만, 일부 양자 알고리즘의 경우 정답이 반드시 맞는 것은 아닙니다. 일부 양자 알고리즘의 결과는 양자 연산으로 구성된 확률을 기반으로 하므로 이러한 계산은 여러 번 실행되어 확률 분포를 얻고 결과의 정확도를 향상시킵니다.  연산에서 정답을 반환했는지 확인하는 작업은 양자 확인이라고 하며 양자 컴퓨팅에서 중요한 과제입니다.
 
@@ -70,4 +73,4 @@ Microsoft는 양자 하드웨어 제조업체인 IonQ, Honeywell 및 QCI와 협�
 
 ## <a name="next-steps"></a>다음 단계
 
-[Q# 프로그래밍 언어 및 QDK란?](xref:microsoft.quantum.overview.q-sharp)
+[ Q# 프로그래밍 언어 및 QDK란?](xref:microsoft.quantum.overview.q-sharp)

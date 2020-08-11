@@ -6,14 +6,17 @@ ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.python
-ms.openlocfilehash: 4d148435f01d975e690828dd02335758fc71dfe4
-ms.sourcegitcommit: 2f4c637e194dc2b5d18539469ed37444e2800199
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 01a5c31a7a920a69f4f90701d370f3a772d2c4d2
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87436550"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866743"
 ---
-# <a name="develop-with-q-and-python"></a>Q# 및 Python을 사용하여 개발
+# <a name="develop-with-no-locq-and-python"></a>Q# 및 Python을 사용하여 개발
 
 QDK를 설치하여 Q# 작업을 호출하는 Python 호스트 프로그램을 개발합니다.
 
@@ -52,7 +55,7 @@ QDK를 설치하여 Q# 작업을 호출하는 Python 호스트 프로그램을 �
     pip install qsharp
     ```
 
-1. IQ#을 설치합니다. IQ#은 Jupyter 및 Python에서 주로 사용되는 커널이며, Q# 작업을 컴파일하고 실행하는 핵심 기능을 제공합니다.
+1. IQ#를 설치합니다. Jupyter 및 Python에서 주로 사용되는 커널이며, Q# 작업을 컴파일하고 실행하는 핵심 기능을 제공합니다.
 
     ```dotnetcli
     dotnet tool install -g Microsoft.Quantum.IQSharp
@@ -83,7 +86,7 @@ VS Code를 사용하려면 다음을 수행합니다.
 
 그 외의 편집기는 위의 지침을 수행하면서 이미 설정이 완료되었습니다.
 
-## <a name="write-your-first-q-program"></a>첫 번째 Q# 프로그램 작성
+## <a name="write-your-first-no-locq-program"></a>첫 번째 Q# 프로그램 작성
 
 이제 간단한 Q# 프로그램을 작성하고 실행하여 `qsharp` Python 패키지 설치를 확인할 준비가 되었습니다.
 

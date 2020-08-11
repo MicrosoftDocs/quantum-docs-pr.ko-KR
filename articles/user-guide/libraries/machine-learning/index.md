@@ -6,16 +6,19 @@ ms.author: alexeib@microsoft.com
 ms.date: 12/5/2019
 ms.topic: article
 uid: microsoft.quantum.machine-learning.concepts.intro
-ms.openlocfilehash: 7f22d5d3212890abc764f88693937b534466170f
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 2f8884fafd6370e4f70ec93e6fc8617c34c29431
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274001"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868851"
 ---
 # <a name="introduction-to-the-quantum-machine-learning-library"></a>양자 기계 학습 라이브러리 소개
 
-양자 기계 학습 라이브러리는 Q#으로 작성된 API로, 하이브리드 양자/클래식 기계 학습 실험을 실행하는 기능을 제공합니다. 이 라이브러리는 다음을 수행할 수 있는 기능을 제공합니다.
+Quantum Machine Learning 라이브러리는 Q#으로 작성된 API로, 하이브리드 퀀텀/클래식 기계 학습 실험을 실행하는 기능을 제공합니다. 이 라이브러리는 다음을 수행할 수 있는 기능을 제공합니다.
 
 - 사용자 고유의 데이터를 로드하여 양자 시뮬레이터 분류
 

@@ -6,16 +6,19 @@ ms.author: Alan.Geller@microsoft.com
 ms.date: 6/17/2020
 ms.topic: article
 uid: microsoft.quantum.machines
-ms.openlocfilehash: c81226ba3e50b65cb1012e885866bd6fcc3764d7
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 77401ca3642b89d708f338f852dc60bf7346b87b
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871164"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868307"
 ---
 # <a name="quantum-simulators"></a>퀀텀 시뮬레이터
 
-퀀텀 시뮬레이터는 클래식 컴퓨터에서 실행되고 Q# 프로그램을 위한 *대상 컴퓨터* 역할을 하는 소프트웨어 프로그램으로, 큐비트가 다른 작업에 반응하는 방식을 예측하는 환경에서 양자 프로그램을 실행하고 테스트할 수 있습니다. 이 문서에서는 QDK(Quantum Development Kit)에 포함된 퀀텀 시뮬레이터와 명령줄을 통하거나 기존 언어로 작성된 드라이버 코드를 사용하여 Q# 프로그램을 퀀텀 시뮬레이터에 전달할 수 있는 다양한 방법에 대해 설명합니다.  
+퀀텀 시뮬레이터는 클래식 컴퓨터에서 실행되고 Q# 프로그램을 위한 *대상 컴퓨터* 역할을 하는 소프트웨어 프로그램으로, 큐비트가 다른 작업에 반응하는 방식을 예측하는 환경에서 퀀텀 프로그램을 실행하고 테스트할 수 있습니다. 이 문서에서는 QDK(Quantum Development Kit)에 포함된 퀀텀 시뮬레이터와 명령줄을 통하거나 기존 언어로 작성된 드라이버 코드를 사용하여 Q# 프로그램을 퀀텀 시뮬레이터에 전달할 수 있는 다양한 방법에 대해 설명합니다.  
 
 
 

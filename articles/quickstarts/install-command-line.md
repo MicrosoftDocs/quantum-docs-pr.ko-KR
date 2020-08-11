@@ -6,14 +6,17 @@ ms.date: 4/24/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.standalone
-ms.openlocfilehash: 3d70838289e72afdd0a48bbdff0bec407428d125
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 630dc7b8acf2dd8f258eb27dfbc367b812cd1c19
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871436"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867610"
 ---
-# <a name="develop-with-q-command-line-applications"></a>Q# 명령줄 애플리케이션을 사용하여 개발
+# <a name="develop-with-no-locq-command-line-applications"></a>Q# 명령줄 애플리케이션을 사용하여 개발
 
 Q# 프로그램은 C#, F# 또는 Python과 같은 호스트 언어로 된 드라이버 없이 단독 실행이 가능합니다.
 
@@ -48,7 +51,7 @@ Visual Studio Codespaces를 구성하려면 다음을 수행합니다.
 dotnet new -i Microsoft.Quantum.ProjectTemplates
 ```
 
-## <a name="develop-with-q"></a>Q#으로 개발
+## <a name="develop-with-no-locq"></a>Q#으로 개발
 
 사용하는 환경에 해당하는 탭의 지침을 따릅니다.
 

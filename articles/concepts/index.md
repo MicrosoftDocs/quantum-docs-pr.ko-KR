@@ -6,12 +6,15 @@ ms.author: nawiebe
 uid: microsoft.quantum.concepts.intro
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: fb1df9e3460c18d0cdc0ff430fa236192b3aa2fa
-ms.sourcegitcommit: 9d1c045cf1a2c3e19030cb38dbc7496dbd24ab58
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: f62317cd32068319f15c15ae1fa0775ea3fb00b2
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73442314"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866828"
 ---
 # <a name="quantum-computing-history-and-background"></a>양자 컴퓨팅의 역사 및 배경
 
@@ -27,4 +30,4 @@ ms.locfileid: "73442314"
 
 간섭을 이용하는 양자 프로그램을 설계하는 것은 어려운 과제처럼 들릴 수 있습니다. 실제로 어렵다고 해도 양자 프로그래밍 및 알고리즘 개발에 보다 쉽게 접근할 수 있도록 하기 위해 Microsoft Quantum Development Kit를 비롯한 많은 기술과 도구가 도입되었습니다. 복잡한 양자 확률 속에서도 솔루션을 잃지 않으면서, 컴퓨팅에 유용한 방식으로 양자 간섭을 조작하는 데 사용할 수 있는 몇 가지 기본 전략이 있습니다. 양자 프로그래밍은 양자 알고리즘을 이해하고 표현하기 위한 다양한 도구를 요구하는 기존 프로그래밍과는 구분되는 기술입니다. 사실 양자 개발자가 양자 프로그래밍 기술을 익히는 데 도움이 되는 일반적인 도구가 없으면 양자 알고리즘을 개발하기란 쉽지 않습니다.
 
-당사는 태스크, 문제 및 솔루션의 양자 혁신을 이끄는 도구를 통해 점점 더 늘어나고 있는 양자 개발 기반을 강화하기 위한 Microsoft Quantum Development Kit를 제공하고 있습니다. 고급 프로그래밍 언어인 Q#은 양자 정보 처리 난제를 해결하도록 고안되었습니다. 즉 소프트웨어 스택에 통합되어 양자 알고리즘을 양자 컴퓨터의 기본 연산으로 컴파일할 수 있습니다.  프로그래밍 언어에 접근하기 전에 양자 컴퓨팅의 기반이 되는 기본 원칙을 검토하는 것이 좋습니다. 여기서는 양자 메커니즘의 기초를 자세히 설명하기 보다는 양자 컴퓨팅의 기본 규칙을 살펴봅니다. 또한 선형 대수(벡터, 행렬 등)에 대한 기본 지식이 있다고 가정합니다. 양자 컴퓨팅 기록 및 원리를 보다 심도 깊게 알아보려면 [참조 섹션](xref:microsoft.quantum.more-information)을 살펴보세요.
+당사는 태스크, 문제 및 솔루션의 양자 혁신을 이끄는 도구를 통해 점점 더 늘어나고 있는 양자 개발 기반을 강화하기 위한 Microsoft Quantum Development Kit를 제공하고 있습니다. 고급 프로그래밍 언어인 Q#은 퀀텀 정보 처리 난제를 해결하도록 고안되었습니다. 즉, 소프트웨어 스택에 통합되어 퀀텀 알고리즘을 양자 컴퓨터의 기본 연산으로 컴파일할 수 있습니다.  프로그래밍 언어에 접근하기 전에 양자 컴퓨팅의 기반이 되는 기본 원칙을 검토하는 것이 좋습니다. 여기서는 양자 메커니즘의 기초를 자세히 설명하기 보다는 양자 컴퓨팅의 기본 규칙을 살펴봅니다. 또한 선형 대수(벡터, 행렬 등)에 대한 기본 지식이 있다고 가정합니다. 양자 컴퓨팅 기록 및 원리를 보다 심도 깊게 알아보려면 [참조 섹션](xref:microsoft.quantum.more-information)을 살펴보세요.

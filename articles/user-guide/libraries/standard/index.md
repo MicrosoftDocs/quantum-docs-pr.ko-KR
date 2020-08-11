@@ -1,19 +1,22 @@
 ---
 title: Microsoft Q# 표준 라이브러리 소개
-description: 양자 프로그램에서 사용되는 작업, 함수 및 데이터 형식을 정의하는 Microsoft Q# 표준 라이브러리에 대해 알아봅니다.
+description: 퀀텀 프로그램에서 사용되는 작업, 함수 및 데이터 형식을 정의하는 Microsoft Q# 표준 라이브러리에 대해 알아봅니다.
 author: QuantumWriter
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.libraries.standard.intro
-ms.openlocfilehash: ab069c496d89a57f979732da6ccdfbe673b79726
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 4db227fcf159331f9f8456c474ce6d64111c21df
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86870586"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868477"
 ---
-# <a name="introduction-to-the-q-standard-libraries"></a>Q# 표준 라이브러리 소개
+# <a name="introduction-to-the-no-locq-standard-libraries"></a>Q# 표준 라이브러리 소개
 
 Q#은 Q# *표준 라이브러리*를 구성하는 다양한 유용한 연산, 함수 및 사용자 정의 형식에 의해 지원됩니다.
 [설치 및 유효성 검사](xref:microsoft.quantum.install) 중에 설치되는 [`Microsoft.Quantum.Development.Kit` NuGet 패키지](https://www.nuget.org/packages/microsoft.quantum.development.kit)는 Q# 컴파일러 및 대상 컴퓨터에서 구현되는 표준 라이브러리의 일부를 제공합니다.

@@ -6,12 +6,15 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing
-ms.openlocfilehash: c5acd6c2b3163488a9b4c6e52e6d34489a8f4056
-ms.sourcegitcommit: 2f4c637e194dc2b5d18539469ed37444e2800199
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 0fbbe127b9f4c6b98bdc2cf0e46098bf40a816e3
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87436564"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866862"
 ---
 # <a name="contributing-to-the-quantum-development-kit"></a>Quantum Development Kit 참여
 
@@ -55,7 +58,7 @@ Quantum Development Kit에는 양자 프로그램을 작성하기 위한 플랫�
 - [**microsoft/QuantumKatas**](https://github.com/Microsoft/QuantumKatas): 양자 컴퓨팅 및 Q# 프로그래밍 언어를 학습하기 위한 자기 주도적 프로그래밍 연습 과정입니다.
 - [**microsoft/qsharp-compiler**](https://github.com/microsoft/qsharp-compiler): Q# 컴파일러, Visual Studio 확장 및 Visual Studio Code 확장입니다.
 - [**microsoft/qsharp-runtime**](https://github.com/microsoft/qsharp-runtime): Quantum Development Kit용 시뮬레이션 프레임워크, 코드 생성 및 시뮬레이션 대상 컴퓨터입니다.
-- [**microsoft/iqsharp**](https://github.com/microsoft/iqsharp): 클라우드 환경에서 IQ#을 사용하기 위한 Docker 이미지와 Q#용 jupyter 커널 및 Python 호스트 기능입니다.
+- [**microsoft/iqsharp**](https://github.com/microsoft/iqsharp): 클라우드 환경에서 IQ#를 사용하기 위한 Docker 이미지와 Q#용 Jupyter 커널 및 Python 호스트 기능입니다.
 - [**MicrosoftDocs/quantum-docs-pr**](https://github.com/MicrosoftDocs/quantum-docs-pr): https://docs.microsoft.com/quantum 에서 게시된 설명서의 소스 코드입니다.
 
 > [!NOTE]

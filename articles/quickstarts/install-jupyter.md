@@ -6,14 +6,17 @@ ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.jupyter
-ms.openlocfilehash: bbd1f58ba7de205e452be7bac72b5fd78e7acd56
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 10b1faafa70c87a99ea09916e2c386b32f9a570f
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871453"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866811"
 ---
-# <a name="develop-with-q-jupyter-notebooks"></a>Q# Jupyter Notebook을 사용하여 개발
+# <a name="develop-with-no-locq-jupyter-notebooks"></a>Q# Jupyter Notebook을 사용하여 개발
 
 Q# Jupyter Notebook에서 Q# 작업을 개발하기 위해 QDK를 설치합니다.
 
@@ -22,9 +25,9 @@ Jupyter Notebook을 사용하면 지침, 메모 및 기타 콘텐츠와 함께 �
 > [!NOTE]
 > * Q# Jupyter Notebook에서는 Q# 코드만 실행할 수 있고 외부 호스트 프로그램(예: Python 또는 C# 파일)에서 작업을 호출할 수는 없습니다. 외부 클래식 호스트 프로그램과 퀀텀 프로그램을 결합하는 것이 목표라면 이 환경은 적합하지 않습니다.
 
-## <a name="install-the-iq-jupyter-kernel"></a>IQ# Jupyter 커널 설치
+## <a name="install-the-ino-locq-jupyter-kernel"></a>IQ# Jupyter 커널 설치
 
-IQ#(i-q-sharp로 발음)은 Jupyter 및 Python에서 .NET Core SDK에 주로 사용되며, Q# 작업을 컴파일하고 시뮬레이션하는 핵심 기능을 제공합니다.
+IQ#(i-q-sharp로 발음)는 Jupyter 및 Python에서 .NET Core SDK에 주로 사용되며, Q# 작업을 컴파일하고 시뮬레이션하는 핵심 기능을 제공합니다.
 
 ### <a name="install-using-conda-recommended"></a>[conda를 사용하여 설치(권장)](#tab/tabid-conda)
 
@@ -72,7 +75,7 @@ IQ#(i-q-sharp로 발음)은 Jupyter 및 Python에서 .NET Core SDK에 주로 사
 
 이것으로 끝입니다. 이제 Q# Jupyter Notebook에서 Q# 작업을 컴파일 및 실행하기 위한 핵심 기능을 제공하는 Jupyter용 IQ# 커널이 있습니다.
 
-## <a name="create-your-first-q-notebook"></a>첫 번째 Q# Notebook 만들기
+## <a name="create-your-first-no-locq-notebook"></a>첫 번째 Q# Notebook 만들기
 
 이제 간단한 Q# 작업을 작성하고 실행하여 Q# Jupyter Notebook 설치를 확인할 준비가 되었습니다.
 

@@ -6,12 +6,15 @@ ms.author: bradben
 ms.date: 05/05/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.introduction
-ms.openlocfilehash: 7c55420bd35f9b6e0e7ec80ddffe8a861cb7df39
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 59cb595ac207d6e84358fc6ba742e0e0019c76f9
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83430784"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866981"
 ---
 # <a name="introduction-to-quantum-computing-and-the-quantum-development-kit"></a>양자 컴퓨팅 및 Quantum Development Kit 소개
 
@@ -62,9 +65,9 @@ Microsoft QDK(Quantum Development Kit)는 개발자가 양자 알고리즘을 �
 
 Quantum Development Kit는 하이브리드 양자/클래식 기계 학습 실험을 실행할 수 있는 [양자 기계 학습 라이브러리](xref:microsoft.quantum.machine-learning.concepts.intro)와 함께 제공됩니다. 이 라이브러리는 샘플과 자습서를 포함하고 있으며, 감독된 분류 문제를 해결하기 위해 새 하이브리드 양자 클래식 알고리즘인 회로 중심 양자 분류자를 구현하는 데 필요한 도구를 제공합니다.
 
-## <a name="q-and-the-microsoft-quantum-development-kit-qdk"></a>Q# 및 Microsoft QDK(Quantum Development Kit)
+## <a name="no-locq-and-the-microsoft-quantum-development-kit-qdk"></a>Q# 및 Microsoft QDK(Quantum Development Kit)
 
-Q#은 양자 알고리즘을 개발하고 실행하기 위한 Microsoft의 오픈 소스 프로그래밍 언어입니다. 완전한 기능을 갖춘 Q#용 개발 키트인 [QDK](https://docs.microsoft.com/quantum/)의 일부로서, 표준 도구 및 언어와 함께 사용하여 다양한 환경에서 실행할 수 있는 양자 애플리케이션(기본 제공되는 전체 상태 양자 시뮬레이터 포함)을 개발할 수 있습니다.
+Q#은 퀀텀 알고리즘을 개발하고 실행하기 위한 Microsoft의 오픈 소스 프로그래밍 언어입니다. 완전한 기능을 갖춘 Q#용 개발 키트인 [QDK](https://docs.microsoft.com/quantum/)의 일부로서, 표준 도구 및 언어와 함께 사용하여 다양한 환경에서 실행할 수 있는 퀀텀 애플리케이션(기본 제공되는 전체 상태 퀀텀 시뮬레이터 포함)을 개발할 수 있습니다.
 
 Visual Studio 및 VS Code용 확장과 Python 및 Jupyter Notebook에서 사용할 수 있는 패키지가 있습니다.
 
@@ -74,7 +77,7 @@ QDK에는 전문적인 화학, 기계 학습 및 숫자 라이브러리와 함�
 
 ## <a name="microsoft-quantum-hardware-partners"></a>Microsoft 양자 하드웨어 파트너
 
-Microsoft는 개발자에게 양자 하드웨어에 대한 클라우드 액세스를 제공하기 위해 양자 하드웨어 회사와 파트너 관계를 맺고 있습니다. 개발자는 [Azure Quantum](https://azure.microsoft.com/services/quantum/) 플랫폼과 Q# 언어를 활용하여 양자 알고리즘을 검색하고 다양한 유형의 양자 하드웨어에서 양자 프로그램을 실행할 수 있습니다.
+Microsoft는 개발자에게 양자 하드웨어에 대한 클라우드 액세스를 제공하기 위해 양자 하드웨어 회사와 파트너 관계를 맺고 있습니다. 개발자는 [Azure Quantum](https://azure.microsoft.com/services/quantum/) 플랫폼과 Q# 언어를 활용하여 퀀텀 알고리즘을 검색하고 다양한 유형의 퀀텀 하드웨어에서 퀀텀 프로그램을 실행할 수 있습니다.
 
 [IonQ](https://ionq.com/news/november-4-2019-microsoft-partnership) 및 [Honeywell](https://www.honeywell.com/en-us/newsroom/news/2019/11/the-future-of-quantum-computing)은 모두 **포획 이온(trapped ion) 기반** 프로세서를 사용하여 전자장에서 포획된 개별 이온을 활용하는 반면, [QCI](https://quantumcircuits.com/news-and-publications/quantum-circuits-partners-with-microsoft-on-azure-quantum)는 초전도 회로를 사용합니다.
 

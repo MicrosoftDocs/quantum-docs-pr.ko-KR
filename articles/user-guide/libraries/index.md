@@ -6,15 +6,18 @@ ms.author: chgranad@microsoft.com
 ms.date: 10/17/2018
 ms.topic: article
 uid: microsoft.quantum.libraries
-ms.openlocfilehash: 09fc723d27f2e026430b358c62b817c106c135c2
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: d61fe459362fdb5f3550768a26b34656a8a538a7
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871504"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869106"
 ---
-# <a name="overview-of-q-libraries"></a>Q# 라이브러리 개요
-Quantum Development Kit에는 Q#에서 양자 애플리케이션을 더 쉽게 개발할 수 있도록 여러 라이브러리가 제공됩니다.
+# <a name="overview-of-no-locq-libraries"></a>Q# 라이브러리 개요
+Quantum Development Kit에는 Q#에서 퀀텀 애플리케이션을 더 쉽게 개발할 수 있도록 여러 라이브러리가 제공됩니다.
 설명서의 다음 섹션에서는 이러한 라이브러리와 프로그램에서 해당 라이브러리를 사용하는 방법에 대해 설명합니다.
 
 - [**표준 라이브러리**](xref:microsoft.quantum.libraries.standard.intro): 이 섹션에서는 Q# 프로그램과 대상 머신 간의 인터페이스를 정의하는 도입부(prelude) 및 Q# 프로그램 작성에 사용할 범용 연산과 함수를 제공하는 Q# 라이브러리인 Canon에 대해 설명합니다.
