@@ -3,19 +3,12 @@ uid: microsoft.quantum.math.randomreal
 name: RandomReal
 type: operation
 namespace: Microsoft.Quantum.Math
-summary: 0 보다 크거나 같고 1 보다 작은 간격의 임의의 실수를 반환 합니다.
-remarks: 이 함수는 <xref:microsoft.quantum.intrinsic.random>를 호출 하므로 해당 임의성은의 `Random`구현에 따라 달라 집니다.
+summary: RandomReal는 더 이상 사용 되지 않습니다. 대신 @"microsoft.quantum.random.drawrandomdouble"를 사용하십시오.
 syntax: 'operation RandomReal (bitsRandom : Int) : Double'
 input:
   content: '(bitsRandom : Int)'
   types:
   - name: bitsRandom
-    summary: >-
-      난수를 샘플링 해야 하는 전체 자릿수의 비트 수입니다.
-
-          # Output
-
-      \Texttt{bitsRandom}} $ [0, 2 ^ {\texttt{bitsRandom}}) $에서 확률값 $ \Pr (k) = 1/2 ^ {\texttt{bitsRandom}} $로 샘플링 된 $k 정수에 대 한 실수 $x = k/2 ^ {$입니다.
     isPrimitive: true
     uid: Int
 output:
@@ -24,9 +17,9 @@ output:
   - isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: b3974f5b12f8d49cc7920021caad98f6e2f3a60c
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 2cb70e92b47d9233d241eee730337c5fcf709ca8
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681519"
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88863567"

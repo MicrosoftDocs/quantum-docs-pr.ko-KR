@@ -450,11 +450,7 @@ operations:
 - uid: microsoft.quantum.canon.assertlessthanphasele
   summary: "\n> [!WARNING]\n> 사용되지 않음\n\nAssertLessThanPhaseLE는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.arithmetic.assertphaselessthan\"를 사용하십시오.\n@\"Microsoft.Quantum.Arithmetic.AssertPhaseLessThan\"을 사용하세요."
 - uid: microsoft.quantum.canon.assertphase
-  summary: >-
-    Equal superposition 상태의 단계가 예상 값을 포함 한다는 것을 어설션 합니다.
-
-
-    특히, 일부 임의 실수 t의 경우 $ \frac{e ^ {i t}} {\phi {2} } (e ^ {i\eml} \ k {0} + e ^ {-i\eml} \ k) $로 표현 될 수 있는 퀀텀 상태의 $ \eml$ 단계에 {1} 필요한 값이 있습니다.
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nAssertPhase는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.diagnostics.assertphase\"를 사용하십시오."
 - uid: microsoft.quantum.canon.cascadeccnot
   summary: "\n> [!WARNING]\n> 사용되지 않음\n\nCascadeCCNOT는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.canon.applyccnotchain\"를 사용하십시오."
 - uid: microsoft.quantum.canon.cascadecnot
@@ -585,9 +581,9 @@ newtypes:
 - uid: microsoft.quantum.canon.resultstack
   summary: "\n> [!WARNING]\n> 사용되지 않음\n\nResultStack은 더 이상 사용 되지 않습니다."
 metadata:
-  ms.openlocfilehash: ab6e8a58dd163e4a9b2ea299e544a4e487d61e23
-  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.openlocfilehash: 72e806d0a44fdcc372ab0d10edcaceb501713180
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 07/02/2020
-  ms.locfileid: "85884676"
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88862940"

@@ -1,0 +1,50 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.random.transformedcontinuousdistribution
+name: TransformedContinuousDistribution
+type: function
+namespace: Microsoft.Quantum.Random
+summary: 연속 분포가 지정 된 경우 지정 된 함수를 통해 원래를 변환 하는 새 분포를 반환 합니다.
+examples: >-
+  다음 두 배포는 동일 합니다.
+
+
+  ```Q#
+
+  let dist1 = ContinuousUniformDistribution(1.0, 2.0);
+
+  let dist2 = TransformedContinuousDistribution(
+      PlusD(1.0, _),
+      ContinuousUniformDistribution(0.0, 1.0)
+  );
+
+  ```
+syntax: 'function TransformedContinuousDistribution (transform : (Double -> Double), distribution : Microsoft.Quantum.Random.ContinuousDistribution) : Microsoft.Quantum.Random.ContinuousDistribution'
+input:
+  content: '(transform : (Double -> Double), distribution : Microsoft.Quantum.Random.ContinuousDistribution)'
+  types:
+  - name: transform
+    summary: 원래 분포의 변형 된 분포를 변환 하는 함수입니다.
+    isFunction: true
+    input:
+      types:
+      - isPrimitive: true
+        uid: Double
+    output:
+      types:
+      - isPrimitive: true
+        uid: Double
+  - name: distribution
+    summary: 변환할 원래 분포입니다.
+    uid: microsoft.quantum.random.continuousdistribution
+output:
+  content: Microsoft.Quantum.Random.ContinuousDistribution
+  types:
+  - summary: 에서 제공 하는 변환과 관련 된 새 분포 `distribution` `transform` 입니다.
+    uid: microsoft.quantum.random.continuousdistribution
+metadata:
+  ms.openlocfilehash: 033e852fa0c536d51a62b93c9cf71d03d2fcb959
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+  ms.translationtype: MT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88864295"
