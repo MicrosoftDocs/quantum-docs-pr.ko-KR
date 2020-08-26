@@ -1,0 +1,43 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.random.drawrandomdouble
+name: DrawRandomDouble
+type: operation
+namespace: Microsoft.Quantum.Random
+summary: 지정 된 포함 간격으로 임의의 실수를 그립니다.
+remarks: 인 경우 실패 `max <= min` 합니다.
+examples: >-
+  다음 Q # 코드 조각은 임의로 $0 $과 $2 \pi $ 사이의 각도를 그립니다.
+
+
+  ```Q#
+
+  let angle = DrawRandomDouble(0.0, 2.0 * PI());
+
+  ```
+syntax: 'operation DrawRandomDouble (min : Double, max : Double) : Double'
+input:
+  content: '(min : Double, max : Double)'
+  types:
+  - name: min
+    summary: 그릴 최소 실수입니다.
+    isPrimitive: true
+    uid: Double
+  - name: max
+    summary: 그릴 최대 실수입니다.
+    isPrimitive: true
+    uid: Double
+output:
+  content: Double
+  types:
+  - summary: 에서로의 포괄 간격의 임의의 실수 `min` `max` 입니다.
+    isPrimitive: true
+    uid: Double
+seeAlso:
+- microsoft.quantum.continuousuniformdistribution
+metadata:
+  ms.openlocfilehash: 8c029f8bf351b99900db8032012dc05ad7bda6ce
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+  ms.translationtype: MT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88864271"

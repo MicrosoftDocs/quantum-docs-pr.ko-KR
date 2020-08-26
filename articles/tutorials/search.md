@@ -9,12 +9,12 @@ uid: microsoft.quantum.quickstarts.search
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 5c23d71209eb484a510f102e8b581ba4ec21829a
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: f2ae56bdca893e8a317c16d0a993da15b9f021b5
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869667"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863114"
 ---
 # <a name="tutorial-implement-grovers-search-algorithm-in-q"></a>자습서: Q\#에서 Grover의 검색 알고리즘 구현
 
@@ -42,7 +42,7 @@ Grover의 알고리즘은 목록의 항목이 검색 중인 항목인지 여부�
 
 ## <a name="write-the-code"></a>코드 작성
 
-1. 퀀텀 개발 키트를 사용 하 여 [ Q# 명령줄 응용 프로그램에 대 한 새 프로젝트를 만듭니다](xref:microsoft.quantum.install.standalone). 프로젝트 `Grover`의 제목을 지정합니다.
+1. 퀀텀 개발 키트를 사용 하 여 [ Q# 응용 프로그램에 대 한 새 프로젝트를 만듭니다](xref:microsoft.quantum.install.standalone). 프로젝트 `Grover`의 제목을 지정합니다.
 
 1. 다음 코드를 새 프로젝트의 `Program.qs` 파일에 추가합니다.
 
@@ -56,7 +56,7 @@ Grover의 알고리즘은 목록의 항목이 검색 중인 항목인지 여부�
 
 1. 다음으로 새 프로그램을 실행 Q# 하 여로 표시 된 항목을 찾습니다 `ReflectAboutMarked` .
 
-### <a name="no-locq-command-line-applications-with-visual-studio-or-visual-studio-code"></a>Q#Visual Studio 또는 Visual Studio Code를 사용 하는 명령줄 응용 프로그램
+### <a name="no-locq-applications-with-visual-studio-or-visual-studio-code"></a>Q# Visual Studio 또는 Visual Studio Code를 사용 하는 응용 프로그램
 
 실행 파일은 프로젝트 구성 및 명령줄 옵션에 따라 시뮬레이터 또는 리소스 예측 도구에서 `@EntryPoint()` 특성으로 표시된 작업 또는 함수를 실행합니다.
 

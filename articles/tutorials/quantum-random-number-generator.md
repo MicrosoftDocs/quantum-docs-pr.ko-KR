@@ -9,12 +9,12 @@ uid: microsoft.quantum.quickstarts.qrng
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8db892091794cb1166e41744572d8938d975abf2
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: d80f1c640ac7ddb0104ccbbb6de6d0e26ba05fd6
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869769"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863619"
 ---
 # <a name="tutorial-implement-a-quantum-random-number-generator-in-q"></a>자습서: Q\#에서 퀀텀 난수 생성기 구현
 
@@ -23,11 +23,11 @@ ms.locfileid: "87869769"
 ## <a name="prerequisites"></a>필수 구성 요소
 
 - Microsoft [Quantum Development Kit](xref:microsoft.quantum.install)
-- Q# [ Q# 명령줄에서를 사용](xref:microsoft.quantum.install.standalone)하거나 [Python 호스트 프로그램](xref:microsoft.quantum.install.python) 또는 [c # 호스트 프로그램](xref:microsoft.quantum.install.cs)을 사용 하 여에 대 한 프로젝트를 만듭니다.
+- Q# [Python 호스트 프로그램](xref:microsoft.quantum.install.python)또는 [c # 호스트 프로그램](xref:microsoft.quantum.install.cs)을 사용 하 여 [ Q# 응용 프로그램](xref:microsoft.quantum.install.standalone)에 대 한 프로젝트를 만듭니다.
 
 ## <a name="write-a-no-locq-operation"></a>작업 쓰기 Q#
 
-### <a name="no-locq-operation-code"></a>Q#작업 코드
+### <a name="no-locq-operation-code"></a>Q# 작업 코드
 
 1. Program.qs 파일의 내용을 다음 코드로 바꿉니다.
 
@@ -64,13 +64,13 @@ Bloch 구의 북극은 클래식 **0** 값을 나타내고, 남극은 클래식 
 
 ## <a name="creating-a-complete-random-number-generator"></a>완전한 난수 생성기 만들기
 
-이제 Q# 임의 비트를 생성 하는 작업이 있으므로 전체 퀀텀 난수 생성기를 작성 하는 데 사용할 수 있습니다. Q#명령줄 응용 프로그램을 사용 하거나 호스트 프로그램을 사용할 수 있습니다.
+이제 Q# 임의 비트를 생성 하는 작업이 있으므로 전체 퀀텀 난수 생성기를 작성 하는 데 사용할 수 있습니다. 응용 프로그램을 사용 Q# 하거나 호스트 프로그램을 사용할 수 있습니다.
 
 
 
-### <a name="no-locq-command-line-applications-with-visual-studio-or-visual-studio-code"></a>[Q#Visual Studio 또는 Visual Studio Code를 사용 하는 명령줄 응용 프로그램](#tab/tabid-qsharp)
+### <a name="no-locq-applications-with-visual-studio-or-visual-studio-code"></a>[Q# Visual Studio 또는 Visual Studio Code를 사용 하는 응용 프로그램](#tab/tabid-qsharp)
 
-전체 Q# 명령줄 응용 프로그램을 만들려면 프로그램에 다음 진입점을 추가 합니다 Q# . 
+전체 Q# 응용 프로그램을 만들려면 프로그램에 다음 진입점을 추가 합니다 Q# . 
 
 :::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="17-33":::
 
@@ -92,13 +92,13 @@ dotnet build
 dotnet run --no-build
 ```
 
-### <a name="python-with-visual-studio-code-or-the-command-line"></a>[Visual Studio 코드 또는 명령줄을 사용하는 Python](#tab/tabid-python)
+### <a name="python-with-visual-studio-code-or-the-command-prompt"></a>[Visual Studio Code 또는 명령 프롬프트를 사용 하는 Python](#tab/tabid-python)
 
 Python에서 새 프로그램을 실행 하려면 Q# 다음 코드를로 저장 합니다 `host.py` .
 
 :::code language="python" source="~/quantum/samples/interoperability/qrng/host.py" range="11-30":::
 
-그러면 명령줄에서 Python 호스트 프로그램을 실행할 수 있습니다.
+그런 다음 명령 프롬프트에서 Python 호스트 프로그램을 실행할 수 있습니다.
 
 ```bash
 $ python host.py
@@ -112,7 +112,7 @@ Q#C #에서 새 프로그램을 실행 하려면 `Driver.cs` 다음 c # 코드�
 
 :::code language="csharp" source="~/quantum/samples/interoperability/qrng/Host.cs" range="4-39":::
 
-그러면 명령줄에서 C# 호스트 프로그램을 실행할 수 있습니다(Visual Studio에서는 F5를 눌러야 함).
+그런 다음 명령 프롬프트에서 c # 호스트 프로그램을 실행할 수 있습니다 (Visual Studio에서 F5 키를 눌러야 함).
 
 ```bash
 $ dotnet run

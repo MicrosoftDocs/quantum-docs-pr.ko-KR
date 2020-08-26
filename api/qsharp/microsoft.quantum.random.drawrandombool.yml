@@ -1,0 +1,36 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.random.drawrandombool
+name: DrawRandomBool
+type: operation
+namespace: Microsoft.Quantum.Random
+summary: 성공 확률이 지정 된 경우 지정 된 확률을 사용 하 여 true 인 단일 베르누이 평가판을 반환 합니다.
+examples: >-
+  다음 Q # 코드 조각 샘플은 편향 동전에서 대칭 이동 합니다.
+
+
+  ```Q#
+
+  let flips = DrawMany(DrawRandomBool, 10, 0.6);
+
+  ```
+syntax: 'operation DrawRandomBool (successProbability : Double) : Bool'
+input:
+  content: '(successProbability : Double)'
+  types:
+  - name: successProbability
+    summary: 이 반환 되어야 하는 확률 `true` 입니다.
+    isPrimitive: true
+    uid: Double
+output:
+  content: Bool
+  types:
+  - summary: '`true` 확률 `successProbability` 및 확률을 포함 `false` `1.0 - successProbability` 합니다.'
+    isPrimitive: true
+    uid: Bool
+metadata:
+  ms.openlocfilehash: 950a636d91d82ebf3ccb663a65cd3a958a70dc19
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+  ms.translationtype: MT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88864199"

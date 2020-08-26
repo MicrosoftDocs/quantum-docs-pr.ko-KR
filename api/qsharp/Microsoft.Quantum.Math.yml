@@ -243,17 +243,17 @@ newtypes:
 summary: " # <a name=\"summary\"></a>요약\n 이 네임 스페이스는 기존 수학 함수 및 데이터 형식을 포함 합니다."
 operations:
 - uid: microsoft.quantum.math.randomint
-  summary: 0 보다 크거나 같고 제공 된 상한 보다 작은 일관 되 게 샘플링 된 임의의 정수를 생성 합니다.
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nRandomInt는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.random.drawrandomint\"를 사용하십시오."
 - uid: microsoft.quantum.math.randomintpow2
-  summary: 지정 된 비트 수로 나타낼 수 있는 모든 정수에서 균일 하 게 샘플링 된 임의의 정수를 생성 합니다.
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nRandomIntPow2는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.random.drawrandomint\"를 사용하십시오."
 - uid: microsoft.quantum.math.randomreal
-  summary: 0 보다 크거나 같고 1 보다 작은 간격의 임의의 실수를 반환 합니다.
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nRandomReal는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.random.drawrandomdouble\"를 사용하십시오."
 - uid: microsoft.quantum.math.randomsinglequbitpauli
-  summary: 단일 기능을 임의로 임의로 반환 합니다.
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nRandomSingleQubitPauli는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.random.drawrandompauli\"를 사용하십시오."
 metadata:
-  ms.openlocfilehash: 03b75e3dbaa8be699e58fcbcd13db4fbf1c82f12
-  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+  ms.openlocfilehash: 9df4513399d0b2d1ac534c7ba106189483ef49cc
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 06/03/2020
-  ms.locfileid: "84326498"
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88863057"

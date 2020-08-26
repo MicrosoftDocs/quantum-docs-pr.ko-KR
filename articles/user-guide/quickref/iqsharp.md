@@ -8,12 +8,12 @@ uid: microsoft.quantum.guide.quickref.iqsharp
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: fb7b5543ef9222e6bab2b1cbbc7e3ebb54863438
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 1d2d092588e1a5c69d12e5d50377e3e26412c094
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867984"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863687"
 ---
 # <a name="ino-locq-magic-commands"></a>- Q# 매직 명령
 
@@ -22,8 +22,10 @@ ms.locfileid: "87867984"
 - [`%config`](xref:microsoft.quantum.iqsharp.magic-ref.config): 구성 옵션을 설정 하거나 쿼리할 수 있습니다.
 - [`%estimate`](xref:microsoft.quantum.iqsharp.magic-ref.estimate): ResourcesEstimator 대상 컴퓨터에서 지정 된 함수 또는 작업을 실행 합니다.
 - [`%lsmagic`](xref:microsoft.quantum.iqsharp.magic-ref.lsmagic): 현재 사용할 수 있는 모든 매직 명령의 목록을 반환 합니다.
+- [`%lsopen`](xref:microsoft.quantum.iqsharp.magic-ref.lsopen): 현재 열린 네임 스페이스 및 해당 별칭을 나열 합니다.
 - [`%package`](xref:microsoft.quantum.iqsharp.magic-ref.package): NuGet 패키지를 로드 하는 기능을 제공 합니다.
 - [`%performance`](xref:microsoft.quantum.iqsharp.magic-ref.performance):이 커널에 대 한 현재 성능 메트릭을 보고 합니다.
+- [`%project`](xref:microsoft.quantum.iqsharp.magic-ref.project): 프로젝트 참조를 보거나 추가 하는 기능을 제공 합니다 Q# . 
 - [`%simulate`](xref:microsoft.quantum.iqsharp.magic-ref.simulate): QuantumSimulator 대상 컴퓨터에서 지정 된 함수 또는 작업을 실행 합니다.
 - [`%toffoli`](xref:microsoft.quantum.iqsharp.magic-ref.toffoli): ToffoliSimulator 대상 컴퓨터에서 지정 된 함수 또는 작업을 실행 합니다.
 - [`%who`](xref:microsoft.quantum.iqsharp.magic-ref.who): Q# 현재 세션에서 사용할 수 있는 작업을 나열 합니다.

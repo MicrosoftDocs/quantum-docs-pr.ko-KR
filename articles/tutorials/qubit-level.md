@@ -1,5 +1,5 @@
 ---
-title: 에서의 비트 수준 프로그램 작성 및 시뮬레이트Q#
+title: 에서의 비트 수준 프로그램 작성 및 시뮬레이트 Q#
 description: 개별 기능 비트 수준에서 작동 하는 퀀텀 프로그램 작성 및 시뮬레이션에 대 한 단계별 자습서
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
@@ -9,12 +9,12 @@ ms.topic: tutorial
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 22c79e4e01db1a0d0c291d0dcff81dbfa8df5cd3
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 39b2d762c0efbfa4bb3a60a1dcee6bcbe2bd91a9
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869718"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863344"
 ---
 # <a name="tutorial-write-and-simulate-qubit-level-programs-in-q"></a>자습서: Q:에서의 비트 수준 프로그램 작성 및 시뮬레이트\#
 
@@ -32,26 +32,26 @@ Q#는 주로 대규모 퀀텀 프로그램을 위한 상위 수준 프로그래�
 <br/>
 <img src="../media/qft_full.PNG" alt="Three qubit quantum Fourier transform circuit diagram" width="600">
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 준비 사항
 
 * 원하는 언어 및 개발 환경을 사용 하 여 퀀텀 개발 키트를 [설치](xref:microsoft.quantum.install) 합니다.
 * QDK가 이미 설치되어 있는 경우 최신 버전으로 [업데이트](xref:microsoft.quantum.update)해야 합니다.
 
 
-## <a name="in-this-tutorial-youll-learn-how-to"></a>이 자습서에서는 다음 작업을 수행하는 방법을 알아봅니다.
+## <a name="in-this-tutorial-youll-learn-how-to"></a>이 자습서에서 학습할 방법은 다음과 같습니다.
 
 > [!div class="checklist"]
-> * 퀀텀 작업 정의Q#
-> * Q#명령줄에서 또는 기존 호스트 프로그램을 사용 하 여 작업을 직접 호출 합니다.
+> * 퀀텀 작업 정의 Q#
+> * Q#명령 프롬프트에서 또는 기존 호스트 프로그램을 사용 하 여 작업을 직접 호출 합니다.
 > * 측정 출력에 대 한 정량 비트 할당에서 퀀텀 작업 시뮬레이트
 > * 작업 전체에서 퀀텀 시스템의 시뮬레이션 된 wavefunction 진화 하는 방식 관찰
 
 Microsoft의 퀀텀 개발 키트를 사용 하 여 퀀텀 프로그램을 실행 하는 작업은 일반적으로
 1. 프로그램 자체는 퀀텀 프로그래밍 언어를 사용 하 여 구현 된 Q# 다음 퀀텀 컴퓨터 또는 퀀텀 시뮬레이터에서 실행 되도록 호출 됩니다. 다음으로 구성 됩니다. 
-    - Q#작업: 퀀텀 레지스터에 대해 작동 하는 서브루틴 
-    - Q#함수: 퀀텀 알고리즘 내에서 사용 되는 기존 서브루틴입니다.
+    - Q# 작업: 퀀텀 레지스터에 대해 작동 하는 서브루틴 
+    - Q# 함수: 퀀텀 알고리즘 내에서 사용 되는 기존 서브루틴입니다.
 2. 퀀텀 프로그램을 호출 하 고 실행 해야 하는 대상 컴퓨터를 지정 하는 데 사용 되는 진입점입니다.
-    이 작업은 명령줄에서 직접 수행 하거나 Python 또는 c #과 같은 클래식 프로그래밍 언어로 작성 된 호스트 프로그램을 통해 수행할 수 있습니다.
+    이 작업은 명령 프롬프트에서 직접 수행 하거나 Python 또는 c #과 같은 클래식 프로그래밍 언어로 작성 된 호스트 프로그램을 통해 수행할 수 있습니다.
     이 자습서에는 원하는 방법에 대 한 지침이 포함 되어 있습니다.
 
 ## <a name="allocate-qubits-and-define-quantum-operations"></a>이상 비트 할당 및 퀀텀 작업 정의
@@ -92,7 +92,7 @@ namespace NamespaceQFT {
 지금은 작업에서 인수를 사용 하지 않고 아무 것---도 반환 하지 않습니다 .이 경우 `Unit` c #에서와 같은 개체를 반환 하 고 `void` Python에서 빈 튜플을 반환 한다는 것을 작성 합니다 `Tuple[()]` .
 나중에이를 수정 하 여 측정 결과의 배열을 반환 하도록 지정 합니다. 여기서 point는 `Unit` 로 대체 됩니다 `Result[]` . 
 
-### <a name="allocate-qubits-with-using"></a>에서의 비트 할당`using`
+### <a name="allocate-qubits-with-using"></a>에서의 비트 할당 `using`
 Q#이 작업 내에서 먼저 다음 문을 사용 하 여 세 가지의 레지스터를 할당 합니다 `using` .
 
 ```qsharp
@@ -114,7 +114,7 @@ Q#이 작업 내에서 먼저 다음 문을 사용 하 여 세 가지의 레지�
 ### <a name="applying-single-qubit-and-controlled-gates"></a>단일 및 제어 되는 게이트 적용
 
 다음으로 작업 자체를 구성 하는 게이트를 적용 합니다.
-Q#에는 네임 스페이스의 작업으로 기본 퀀텀 게이트가 이미 많이 포함 되어 [`Microsoft.Quantum.Intrinsic`](xref:microsoft.quantum.intrinsic) 있으며, 이러한 작업은 예외는 아닙니다. 
+Q# 에는 네임 스페이스의 작업으로 기본 퀀텀 게이트가 이미 많이 포함 되어 [`Microsoft.Quantum.Intrinsic`](xref:microsoft.quantum.intrinsic) 있으며, 이러한 작업은 예외는 아닙니다. 
 
 작업 내에서 Q# callables을 호출 하는 문은 물론 순차적으로 실행 됩니다.
 따라서 첫 번째는 적용 되는 첫 번째 게이트가 [`H`](xref:microsoft.quantum.intrinsic.h) (Hadamard)입니다.
@@ -134,10 +134,10 @@ Q#에는 네임 스페이스의 작업으로 기본 퀀텀 게이트가 이미 �
 
 #### <a name="controlled-operations"></a>제어 된 작업
 
-Q#를 사용 하면 하나 또는 여러 컨트롤의 작업을 매우 쉽게 실행할 수 있습니다.
+Q# 를 사용 하면 하나 또는 여러 컨트롤의 작업을 매우 쉽게 실행할 수 있습니다.
 일반적으로 호출을로 호출 하 `Controlled` 고 작업 인수가 다음과 같이 변경 됩니다.
 
- `Op(<normal args>)`$ \to $ `Controlled Op([<control qubits>], (<normal args>))` .
+ `Op(<normal args>)` $ \to $ `Controlled Op([<control qubits>], (<normal args>))` .
 
 컨트롤은 단일 비트 인 경우에도 배열로 제공 되어야 합니다.
 
@@ -157,7 +157,7 @@ Q#를 사용 하면 하나 또는 여러 컨트롤의 작업을 매우 쉽게 �
 또한 정수로 나누기는 `Double` `2.0` `2` 형식 오류를 throw 하기 때문에 (예:)로 나눕니다. 
 
 > [!TIP]
-> `R1(π/2)`및 `R1(π/4)` 는 `S` 및 `T` 작업과 동일 합니다 (에도 해당 `Microsoft.Quantum.Intrinsic` ).
+> `R1(π/2)` 및 `R1(π/4)` 는 `S` 및 `T` 작업과 동일 합니다 (에도 해당 `Microsoft.Quantum.Intrinsic` ).
 
 
 관련 `H` 작업 및 제어 된 회전을 두 번째 및 세 번째 비트에 적용 한 후:
@@ -249,11 +249,11 @@ Q#파일 및 작업이 완료 되 면 퀀텀 프로그램을 호출 하 고 시�
 Q#작업을 파일에 정의 했으므로 `.qs` 이제 해당 작업을 호출 하 고 반환 된 모든 기존 데이터를 관찰 해야 합니다.
 지금은 반환 된 내용이 없습니다 (위에서 정의한 작업이 반환 됨 `Unit` ). 하지만 나중에 Q# 측정 결과 ()의 배열을 반환 하도록 작업을 수정 하는 경우이를 `Result[]` 해결 합니다.
 
-프로그램을 호출 하는 데 사용 되는 환경에서 프로그램을 실행 하는 동안에는이 작업을 수행 하는 Q# 방식이 다릅니다. 따라서 Q# 명령줄 응용 프로그램에서 작업 하거나 Python 또는 c #에서 호스트 프로그램을 사용 하 여 설정에 해당 하는 탭의 지침을 따르세요.
+프로그램을 호출 하는 데 사용 되는 환경에서 프로그램을 실행 하는 동안에는이 작업을 수행 하는 Q# 방식이 다릅니다. 따라서 Q# 응용 프로그램에서 작업 하거나 Python 또는 c #에서 호스트 프로그램을 사용 하 여 설정에 해당 하는 탭의 지침을 따르세요.
 
-#### <a name="command-line"></a>[명령줄](#tab/tabid-cmdline)
+#### <a name="command-prompt"></a>[명령 프롬프트](#tab/tabid-cmdline)
 
-Q#명령줄에서 프로그램을 실행 하려면 파일을 약간만 변경 해야 Q# 합니다.
+Q#명령 프롬프트에서 프로그램을 실행 하려면 파일을 약간만 변경 해야 Q# 합니다.
 
 `@EntryPoint()`작업 정의 앞의 줄에를 추가 하기만 하면 됩니다.
 
@@ -396,7 +396,7 @@ After:
 
 $ $ \ket{\psi} \_ {초기} = \ket {000} $ $
 
-다음으로 변경: 
+을 
 
 $ $ \begin{align} \ket{\psi} \_ {final} &= \frac {1} {\sqrt {8} } \left (\ket {000} + \ket {001} + \ket {010} + \ket {011} + \ket {100} + \ket {101} + \ket {110} + \ket {111} \right) \\ \\ &= \frac {1} {\sqrt{2 ^ n}} \sum \_ {j = 0} ^ {2 ^ n-1} \ket{j}, \end{align} $ $
 
@@ -445,7 +445,7 @@ $ $ \begin{align} \ket{\psi} \_ {final} &= \frac {1} {\sqrt {8} } \left (\ket {0
 
 키워드는를 `set` 사용 하 여 바인딩된 변수를 다시 할당 하는 데 항상 사용 됩니다 `mutable` .
 
-#### <a name="return-resultarray"></a>돌려`resultArray`
+#### <a name="return-resultarray"></a>돌려 `resultArray`
 
 3 개의 모든 비트를 측정 하 고 결과를에 추가 하 여 `resultArray` 이전 처럼 이제는이를 다시 설정 하 고 할당을 취소 해도 됩니다.
 `using`블록을 닫은 후 삽입 합니다.
@@ -499,10 +499,10 @@ $ $ \begin{align} \ket{\psi} \_ {final} &= \frac {1} {\sqrt {8} } \left (\ket {0
 }
 ```
 
-명령줄에서 작업 하는 경우 반환 된 배열은 단순히 실행이 끝날 때 콘솔에 직접 출력 됩니다.
+명령 프롬프트에서 작업 하는 경우 반환 된 배열은 단순히 실행이 끝날 때 콘솔에 직접 출력 됩니다.
 그렇지 않으면 반환 된 배열을 처리 하도록 호스트 프로그램을 업데이트 합니다.
 
-#### <a name="command-line"></a>[명령줄](#tab/tabid-cmdline)
+#### <a name="command-prompt"></a>[명령 프롬프트](#tab/tabid-cmdline)
 
 콘솔에 출력 되는 반환 된 배열을 보다 잘 이해 하기 위해 `Message` 문 바로 앞에 다른 파일을 추가할 수 있습니다 Q# `return` .
 

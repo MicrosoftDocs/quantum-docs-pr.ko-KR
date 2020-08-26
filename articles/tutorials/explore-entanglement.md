@@ -1,5 +1,5 @@
 ---
-title: 되거나 얽 히를 사용 하 여 탐색Q#
+title: 되거나 얽 히를 사용 하 여 탐색 Q#
 description: 에서 퀀텀 프로그램을 작성 하는 방법에 대해 알아봅니다 Q# . QDK(Quantum Development Kit)를 사용하여 Bell State 애플리케이션을 개발합니다.
 author: geduardo
 ms.author: v-edsanc@microsoft.com
@@ -9,12 +9,12 @@ uid: microsoft.quantum.write-program
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: c66d26b5ea253d6fc2633fbe52fa35ba703d185d
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: d815a9a25b8ba5e9489b6d3d27fb0d64ab4aaa1d
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869701"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863433"
 ---
 # <a name="tutorial-explore-entanglement-with-q"></a>자습서: Q\#을 사용한 얽힘 살펴보기
 
@@ -32,7 +32,7 @@ ms.locfileid: "87869701"
 
 QDK를 설치 하지 않고도 설명을 따라 수행 하 고, Q# 프로그래밍 언어의 개요와 퀀텀 컴퓨팅의 첫 번째 개념을 검토할 수도 있습니다.
 
-## <a name="in-this-tutorial-youll-learn-how-to"></a>이 자습서에서는 다음 작업을 수행하는 방법을 알아봅니다.
+## <a name="in-this-tutorial-youll-learn-how-to"></a>이 자습서에서 학습할 방법은 다음과 같습니다.
 
 > [!div class="checklist"]
 > * Q에서 작업 만들기 및 결합\#
@@ -52,11 +52,11 @@ QDK를 설치 하지 않고도 설명을 따라 수행 하 고, Q# 프로그래�
 
 ## <a name="creating-a-no-locq-project"></a>프로젝트 만들기 Q#
 
-가장 먼저 해야 할 일은 새 프로젝트를 만드는 것입니다 Q# . 이 자습서에서는 [VS Code를 사용 하 여 명령줄 응용 프로그램](xref:microsoft.quantum.install.standalone)을 기반으로 환경을 사용할 예정입니다.
+가장 먼저 해야 할 일은 새 프로젝트를 만드는 것입니다 Q# . 이 자습서에서는 VS Code를 사용 하는 [ Q# 응용 프로그램](xref:microsoft.quantum.install.standalone)을 기반으로 환경을 사용 합니다.
 
 새 프로젝트를 만들려면 VS Code에서 다음을 수행 합니다. 
 
-1. **보기**  ->  **명령 팔레트** 를 클릭 하 고 다음을 선택 하 여 ** Q# 새 프로젝트 만들기**를 선택 합니다.
+1. **보기** -> **명령 팔레트**를 클릭하고 **Q#: 새 프로젝트 만들기**를 선택합니다.
 2. **Standalone console application**(독립 실행형 콘솔 애플리케이션)을 클릭합니다.
 3. 프로젝트를 저장할 위치로 이동하여 **프로젝트 만들기**를 클릭합니다.
 4. 프로젝트가 만들어지면 오른쪽 아래에서 **Open new project...** (새 프로젝트 열기)를 클릭합니다.
@@ -125,7 +125,7 @@ Q#작업은 퀀텀 서브루틴입니다. 즉, 다른 퀀텀 작업에 대 한 �
 
 `SetQubitState` 연산의 효과를 보여주기 위해 `TestBellState` 연산이 추가됩니다. 이 연산은 `Zero` 또는 `One`을 입력으로 취하며, 이 입력을 사용하여 `SetQubitState` 연산을 몇 차례 호출하고, 큐비트 측정에서 `Zero`가 반환된 횟수와 `One`이 반환된 횟수를 집계합니다. 물론 `TestBellState` 연산의 첫 번째 시뮬레이션 출력에서는 `Zero`를 사용하여 매개 변수 입력으로 설정된 모든 큐비트 측정에서 `Zero`를 반환하고, `One`을 사용하여 매개 변수 입력으로 설정된 모든 큐비트 측정에서 `One`을 반환할 것으로 예상됩니다. 또한에 코드를 추가 하 여 `TestBellState` superposition 및 되거나 얽 히를 보여 줍니다.
 
-`SetQubitState` 연산이 끝난 후 다음 연산을 네임스페이스 내의 `Bell.qs` 파일에 추가합니다.
+`SetQubitState` 연산이 끝난 후 다음 연산을 네임스페이스 내의 `Program.qs` 파일에 추가합니다.
 
 ```qsharp
    operation TestBellState(count : Int, initial : Result) : (Int, Int) {
@@ -161,13 +161,13 @@ Q#작업은 퀀텀 서브루틴입니다. 즉, 다른 퀀텀 작업에 대 한 �
 
 예제의 `numOnes`와 같이 값이 변경될 수 있는 변수가 필요한 경우 `mutable` 키워드를 사용하여 해당 변수를 선언할 수 있습니다. 변경할 수 있는 변수의 값은 `setQubitState` 문을 사용하여 변경할 수 있습니다.
 
-두 경우 모두에서 변수 형식은 컴파일러를 통해 유추됩니다. Q#변수에는 형식 주석이 필요 하지 않습니다.
+두 경우 모두에서 변수 형식은 컴파일러를 통해 유추됩니다. Q# 변수에는 형식 주석이 필요 하지 않습니다.
 
 #### <a name="about-using-statements-in-q"></a>`using`Q의 문 정보\#
 
 `using`문은에도 특수 Q# 합니다. 코드 블록에서 사용할 큐비트를 할당하는 데 사용됩니다. 에서는 Q# 복잡 한 알고리즘의 전체 수명 동안 유지 되는 고정 리소스 대신 모든 모든 비트를 동적으로 할당 하 고 해제 합니다. `using` 문은 시작 부분에서 큐비트 세트를 할당하고, 블록의 끝에서 해당 큐비트를 해제합니다.
 
-## <a name="execute-the-code-from-the-command-line"></a>명령줄에서 코드를 실행 합니다.
+## <a name="run-the-code-from-the-command-prompt"></a>명령 프롬프트에서 코드를 실행 합니다.
 
 코드를 실행 하기 위해 명령을 제공할 때 실행할 수 *있는* 컴파일러를 지정 해야 합니다 `dotnet run` . 이 Q# 작업은 호출 가능한 바로 앞에를 사용 하 여 줄을 추가 하 여 파일을 간단히 변경 하는 방식으로 수행 됩니다 `@EntryPoint()` `TestBellState` .이 경우에는 작업을 수행 합니다. 전체 코드는 다음과 같아야 합니다.
 
@@ -208,7 +208,7 @@ namespace Bell {
 }
 ```
 
-프로그램을 실행 하려면 `count` 명령줄에서 및 인수를 지정 해야 `initial` 합니다. 예를 들어 및을 선택 하겠습니다 `count = 1000` `initial = One` . 다음 명령을 입력합니다.
+프로그램을 실행 하려면 `count` `initial` 명령 프롬프트에서 및 인수를 지정 해야 합니다. 예를 들어 및을 선택 하겠습니다 `count = 1000` `initial = One` . 다음 명령을 입력합니다.
 
 ```dotnetcli
 dotnet run --count 1000 --initial One
@@ -235,7 +235,7 @@ Test results (# of 0s, # of 1s):
 
 이제를 사용 하 Q# 여 superposition에를 배치 하는 방법을 살펴보겠습니다.  앞에서 큐비트의 상태는 0과 1의 중첩일 수 있다고 했습니다.  `Hadamard` 연산을 사용하여 큐비트를 중첩하겠습니다. 큐비트가 두 클래식 상태 중 하나인 경우(즉, 측정에서 항상 `Zero`를 반환하거나 항상 `One`을 반환) `Hadamard` 또는 `H` 연산은 큐비트 측정 시 시간 중 50%는 `Zero`를 반환하고 시간 중 50%는 `One`을 반환하는 상태로 큐비트 상태를 전환합니다.  개념적으로 큐비트는 `Zero`와 `One`의 중간으로 생각할 수 있습니다.  이제 `TestBellState` 연산을 시뮬레이션하면 측정 후 반환된 `Zero` 및 `One`의 수가 거의 동일한 것을 볼 수 있습니다.  
 
-### <a name="x-flips-qubit-state"></a>`X`가는 비트 상태를 대칭 이동 합니다.
+### <a name="x-flips-qubit-state"></a>`X` 가는 비트 상태를 대칭 이동 합니다.
 
 먼저 큐비트를 전환하겠습니다(큐비트가 `Zero` 상태이면 `One` 상태로 전환하고 그 반대의 경우도 마찬가지). 이 작업은 `X` 연산을 수행한 후 `TestBellState`에서 측정하는 순서로 진행됩니다.
 
@@ -265,7 +265,7 @@ Test results (# of 0s, # of 1s):
 
 이제는 이상 비트의 퀀텀 속성을 살펴보겠습니다.
 
-### <a name="h-prepares-superposition"></a>`H`superposition 준비
+### <a name="h-prepares-superposition"></a>`H` superposition 준비
 
 이전 실행의 `X` 연산을 `H` 또는 Hadamard 연산으로 바꾸기만 하면 됩니다. 큐비트를 0에서 1까지 완전히 대칭 이동하는 대신, 절반만 대칭 이동합니다. 이제 `TestBellState`에서 대체된 줄은 다음과 같습니다.
 

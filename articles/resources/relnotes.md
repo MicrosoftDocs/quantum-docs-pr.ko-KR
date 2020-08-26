@@ -9,12 +9,12 @@ uid: microsoft.quantum.relnotes
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 869d13acd5cb82fac73be514d6622a616ddceb54
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: f94c20281c5a242aac6a731a5091264dc2847712
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866675"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863761"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit 릴리스 정보
 
@@ -24,6 +24,23 @@ ms.locfileid: "87866675"
 
 업데이트 지침은 [업데이트 가이드](xref:microsoft.quantum.update)를 참조하세요.
 
+## <a name="version-01220082513"></a>버전 0.12.20082513
+
+*릴리스 날짜: 2020 년 8 월 25 일*
+
+이 릴리스에는 다음이 포함됩니다.
+
+- 프로그램 내에서 임의 값을 보다 편리 하 게 샘플링 하는 방법을 제공 하는 새로운 [Microsoft 양자 네임 스페이스](xref:microsoft.quantum.random)입니다. Q# ([QuantumLibraries # 311](https://github.com/microsoft/QuantumLibraries/pull/311), [qsharp-runtime # 328](https://github.com/microsoft/qsharp-runtime/pull/328))
+- 새 [ `DumpOperation` 작업](xref:microsoft.quantum.diagnostics.dumpoperation)을 사용 하 여 [Microsoft의 Microsoft 양자와 진단 네임 스페이스](xref:microsoft.quantum.diagnostics) 를 개선 하 고, 새 작업을 사용 하 여 성능 및 oracle 호출을 제한 합니다. ([QuantumLibraries # 302](https://github.com/microsoft/QuantumLibraries/pull/302))
+- [ `%project` ](xref:microsoft.quantum.iqsharp.magic-ref.project) Q# 현재 작업 영역 폴더 외부의 프로젝트에 대 한 참조를 지 원하는 Python의 I 및 [ `qsharp.projects` API](https://docs.microsoft.com/python/qsharp/qsharp.projects.projects) 에 대 한 새로운 매직 명령 Q# 입니다. 이 기능의 현재 제한 사항은 [iqsharp # 277](https://github.com/microsoft/iqsharp/issues/277) 를 참조 하세요. 
+- `.csproj`I/Python 호스트의 파일을 자동으로 로드 하는 기능을 지원 하 Q# 여 초기화 시 외부 프로젝트 또는 패키지 참조를 로드할 수 있도록 합니다. 자세한 내용은 [ Q# Python 및 Jupyter 노트북에서](xref:microsoft.quantum.guide.host-programs) 사용 하기 위한 가이드를 참조 하세요.
+- 증후군 샘플이 추가 되었습니다.
+- SimpleIsing에 튜닝할 수 있는 결합을 추가 했습니다.
+- HiddenShift 샘플을 업데이트 했습니다.
+- Grover 알고리즘을 사용 하 여 Sudoku를 해결 하기 위한 샘플 추가 (외부 기여)
+- 일반적인 버그 수정
+
+[라이브러리](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [컴파일러](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [런타임](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [샘플](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed), [I Q# ](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed) 및 [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed)에 대 한 폐쇄형 pr의 전체 목록을 참조 하세요.  
 
 ## <a name="version-01220072031"></a>버전 0.12.20072031
 
@@ -71,7 +88,7 @@ ms.locfileid: "87866675"
 - Q#진입점이 있으면 노트북 및 Python 호스트 프로그램이 더 이상 실패 하지 않습니다. Q#
 - 액세스 한정자를 사용하도록 [표준 라이브러리](xref:microsoft.quantum.libraries.standard.intro)로 업데이트
 - 컴파일러는 기본 제공 재작성 단계 사이에 재작성 단계의 플러그 인을 허용합니다.
-- [API 원칙](xref:microsoft.quantum.contributing.api-design)에 설명된 일정에 따라 몇 가지 사용되지 않는 함수 및 작업이 제거되었습니다. Q#버전 0.11.2004.2825에서 경고를 발생 시 키 지 않고 빌드하는 프로그램 및 라이브러리는 수정 되지 않고 계속 작동 합니다.
+- [API 원칙](xref:microsoft.quantum.contributing.api-design)에 설명된 일정에 따라 몇 가지 사용되지 않는 함수 및 작업이 제거되었습니다. Q# 버전 0.11.2004.2825에서 경고를 발생 시 키 지 않고 빌드하는 프로그램 및 라이브러리는 수정 되지 않고 계속 작동 합니다.
 
 [라이브러리](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [컴파일러](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [런타임](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [샘플](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed), [I Q# ](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed) 및 [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed)에 대 한 폐쇄형 pr의 전체 목록을 참조 하세요.  
 
@@ -84,12 +101,12 @@ ms.locfileid: "87866675"
 
 이 릴리스에는 다음이 포함됩니다.
 
-- Q#C # 또는 Python 호스트 파일이 더 이상 필요 하지 않은 명령줄 응용 프로그램에 대 한 새로운 지원. 명령줄 응용 프로그램을 시작 하는 방법에 대 한 자세한 내용은 Q# [여기](xref:microsoft.quantum.install.standalone)를 참조 하세요.
+- Q#C # 또는 Python 호스트 파일이 더 이상 필요 하지 않은 응용 프로그램에 대 한 새로운 지원. 응용 프로그램을 시작 하는 방법에 대 한 자세한 내용은 Q# [여기](xref:microsoft.quantum.install.standalone)를 참조 하세요.
 - C# 또는 Python 호스트 파일이 더 이상 필요하지 않은 퀀텀 난수 생성기 빠른 시작이 업데이트되었습니다. 업데이트된 [빠른 시작](xref:microsoft.quantum.quickstarts.qrng)을 참조하세요.
 - I Docker 이미지에 대 한 성능 향상 Q#
 
 > [!NOTE]
-> Q#새 특성을 사용 하는 명령줄 응용 프로그램은 [`@EntryPoint()`](xref:microsoft.quantum.core.entrypoint) 현재 Python 또는 .net 호스트 프로그램에서 호출할 수 없습니다.
+> Q# 새 특성을 사용 하는 응용 프로그램은 [`@EntryPoint()`](xref:microsoft.quantum.core.entrypoint) 현재 Python 또는 .net 호스트 프로그램에서 호출할 수 없습니다.
 > 자세한 내용은 [Python](xref:microsoft.quantum.install.python) 및 [.NET 상호 운용성](xref:microsoft.quantum.install.cs) 가이드를 참조하세요.
 
 ## <a name="version-01120033107"></a>버전 0.11.2003.3107
@@ -189,7 +206,7 @@ ms.locfileid: "87866675"
 
 이 릴리스에는 다음이 포함됩니다.
 
-- 에서 [활용 문에](xref:microsoft.quantum.guide.operationsfunctions#conjugations) 대 한 새로운 지원Q#
+- 에서 [활용 문에](xref:microsoft.quantum.guide.operationsfunctions#conjugations) 대 한 새로운 지원 Q#
 - 컴파일러의 새 코드 작업(예: "바꿀 내용", "설명서 추가" 및 단순 배열 항목 업데이트)
 - 설치 템플릿 및 새 프로젝트 명령이 Visual Studio Code 확장에 추가됨
 - ApplyIf 조합기의 새 변형(예: [Microsoft.Quantum.Canon.ApplyIfOne](xref:microsoft.quantum.canon.applyifone))이 추가됨
@@ -225,7 +242,7 @@ ms.locfileid: "87866675"
 
 여기에는 변경 내용이 요약되어 있으며, 기존 프로그램을 업그레이드하는 방법에 대한 지침도 있습니다.  이러한 변경 내용에 대 한 자세한 내용은 [ Q# 개발자 블로그](https://devblogs.microsoft.com/qsharp)를 참조 하세요.
 
-### <a name="no-locq-language-syntax"></a>Q#언어 구문
+### <a name="no-locq-language-syntax"></a>Q# 언어 구문
 이 릴리스는 새 Q# 언어 구문을 추가 합니다.
 * [사용자 정의 형식](xref:microsoft.quantum.guide.types#user-defined-types)에 대해 명명된 항목이 추가되었습니다.  
 * 이제 사용자 정의 형식 생성자를 함수로 사용할 수 있습니다.
@@ -256,7 +273,7 @@ ms.locfileid: "87866675"
 
 여기에는 변경 내용이 요약되어 있으며, 기존 프로그램을 업그레이드하는 방법에 대한 지침도 있습니다.  이러한 변경 내용은 devblogs.microsoft.com/qsharp에서 자세히 참조할 수 있습니다.
 
-### <a name="no-locq-language-syntax"></a>Q#언어 구문
+### <a name="no-locq-language-syntax"></a>Q# 언어 구문
 이 릴리스는 새 Q# 언어 구문을 추가 합니다.
 * `+` 연산자를 사용하여 [양자 연산 특수화(제어 및 수반(adjoint))를 표현하는 간단한 방법](xref:microsoft.quantum.guide.operationsfunctions#controlled-and-adjoint-operations)이 추가되었습니다.  이전 구문은 더 이상 사용되지 않습니다.  이전 구문(예: `: adjoint`)을 사용하는 프로그램은 계속 작동하지만 컴파일 시간 경고가 생성됩니다.  
 * 새로운 [복사 및 업데이트](xref:microsoft.quantum.guide.expressions#copy-and-update-expressions) 연산자인 `w/`가 추가되었습니다. 이는 배열 만들기를 기존 배열의 수정으로 표현하는 데 사용할 수 있습니다.
@@ -297,19 +314,19 @@ QDK를 업데이트하려면 [설치 가이드](xref:microsoft.quantum.install)�
   
 Q#퀀텀 개발 키트 버전 0.5의 기존 프로젝트가 있는 경우 해당 프로젝트를 최신 버전으로 마이그레이션하는 단계는 다음과 같습니다.
 
-    1. 프로젝트는 순서대로 업그레이드해야 합니다.  솔루션의 프로젝트가 여러 개인 경우, 각 프로젝트를 참조 순서대로 업데이트합니다.
-    2. 명령줄에서 `dotnet clean`을 실행하여 기존의 모든 이진 파일과 중간 파일을 제거합니다.
-    3. 텍스트 편집기에서 .csproj 파일을 편집하여 모든 "Microsoft.Quantum" `PackageReference`의 버전을 0.6.1904 버전으로 변경하고 "Microsoft.Quantum.Canon" 패키지 이름을 "Microsoft.Quantum.Standard"로 변경합니다. 예:
+1. 프로젝트는 순서대로 업그레이드해야 합니다.  솔루션의 프로젝트가 여러 개인 경우, 각 프로젝트를 참조 순서대로 업데이트합니다.
+2. 명령 프롬프트에서를 실행 `dotnet clean` 하 여 기존의 모든 이진 파일과 중간 파일을 제거 합니다.
+3. 텍스트 편집기에서 .csproj 파일을 편집하여 모든 "Microsoft.Quantum" `PackageReference`의 버전을 0.6.1904 버전으로 변경하고 "Microsoft.Quantum.Canon" 패키지 이름을 "Microsoft.Quantum.Standard"로 변경합니다. 예:
 
-         ```xml
-        <PackageReference Include="Microsoft.Quantum.Standard" Version="0.6.1905.301" />
-        <PackageReference Include="Microsoft.Quantum.Development.Kit" Version="0.6.1905.301" />
-        ```
-    4. 명령줄에서 다음 명령을 실행합니다. `dotnet msbuild`  
-    5. 이를 실행한 후에도 여전히 위에 나열한 변경 내용으로 인해 수동으로 오류를 해결해야 할 수 있습니다.  대부분의 경우 Visual Studio 또는 Visual Studio Code의 IntelliSense가 이러한 오류를 보고합니다.
-        - Visual Studio 2019 또는 Visual Studio Code에서 프로젝트의 루트 폴더 또는 포함 솔루션을 엽니다.
-        - 편집기에서 qs 파일을 연 후에 Q# 출력 창에 언어 확장의 출력이 표시 됩니다.
-        - 프로젝트를 로드한 후(출력 창에 표시됨), 각 파일을 열어 남은 모든 문제를 수동으로 해결합니다.
+    ```xml
+    <PackageReference Include="Microsoft.Quantum.Standard" Version="0.6.1905.301" />
+    <PackageReference Include="Microsoft.Quantum.Development.Kit" Version="0.6.1905.301" />
+    ```
+4. 명령 프롬프트에서 다음 명령을 실행 합니다. `dotnet msbuild`  
+5. 이를 실행한 후에도 여전히 위에 나열한 변경 내용으로 인해 수동으로 오류를 해결해야 할 수 있습니다.  대부분의 경우 Visual Studio 또는 Visual Studio Code의 IntelliSense가 이러한 오류를 보고합니다.
+    - Visual Studio 2019 또는 Visual Studio Code에서 프로젝트의 루트 폴더 또는 포함 솔루션을 엽니다.
+    - 편집기에서 qs 파일을 연 후에 Q# 출력 창에 언어 확장의 출력이 표시 됩니다.
+    - 프로젝트를 로드한 후(출력 창에 표시됨), 각 파일을 열어 남은 모든 문제를 수동으로 해결합니다.
 
 > [!NOTE]
 > * 0\.6 릴리스의 경우, Quantum Development Kit에 포함된 언어 서버는 여러 작업 영역을 지원하지 않습니다.
@@ -571,7 +588,7 @@ Microsoft.Quantum.Canon 네임스페이스의 RandomWalkPhaseEstimation 작업�
 ### <a name="known-issues"></a>알려진 문제
 
 - `--filter`옵션은 `dotnet test` 에서 작성 된 테스트에 대해서는 제대로 작동 하지 않습니다 Q# .
-  따라서 Visual Studio Code에서 개별 단위 테스트를 실행할 수 없습니다. 명령줄에서 `dotnet test`를 사용하여 모든 테스트를 다시 실행하는 것이 좋습니다.
+  따라서 Visual Studio Code에서 개별 단위 테스트를 실행할 수 없습니다. `dotnet test` 명령 프롬프트에서를 사용 하 여 모든 테스트를 다시 실행 하는 것이 좋습니다.
 
 ## <a name="version-0118011707"></a>버전 0.1.1801.1707
 

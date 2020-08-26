@@ -2,19 +2,19 @@
 title: QDK의 내장 작업 및 함수
 description: 클래식 함수 및 단일 함수, 회전 및 측정 작업을 포함 하 여 QDK의 내장 작업 및 함수에 대해 알아봅니다.
 author: QuantumWriter
-uid: microsoft.quantum.libraries.standard.prelude
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
+uid: microsoft.quantum.libraries.standard.prelude
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 283504a5f5635a4996c804e514a6f52eb4966d22
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 4eb10e82a64381c503703be440be90e60f3a8622
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868443"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863736"
 ---
 # <a name="the-prelude"></a>Prelude #
 
@@ -128,7 +128,7 @@ $ \Sigma $ 및 $ \\s$를 부분적으로 적용 하 여 해당 형식이 단일�
 <xref:microsoft.quantum.intrinsic.r>회전 각도는 형식의 두 입력으로 지정 되 `Int` 고 dyadic 분수로 해석 된다는 점에서와는 다릅니다.
 따라서에 `RFrac` 는 시그니처가 `((Pauli, Int, Int, Qubit) => Unit is Adj + Ctl)` 있습니다.
 단일 기능을 구현 합니다. 여기서 $ \b\시그마 $는 첫 번째 인수에 해당 하는 Pauli 매트릭스이 고 $k $은 두 번째 인수 이며 $n $는 세 번째 인수입니다.
-`RFrac(_,k,n,_)`는와 동일 합니다. `R(_,-πk/2^n,_)` 각도는 분수의 *음수* 입니다.
+`RFrac(_,k,n,_)` 는와 동일 합니다. `R(_,-πk/2^n,_)` 각도는 분수의 *음수* 입니다.
 
 <xref:microsoft.quantum.intrinsic.rx>작업은 Pauli $X $ axis를 중심으로 회전을 구현 합니다.
 시그니처가 `((Double, Qubit) => Unit is Adj + Ctl)` 있습니다.
@@ -144,11 +144,11 @@ $ \Sigma $ 및 $ \\s$를 부분적으로 적용 하 여 해당 형식이 단일�
 
 작업은 $ <xref:microsoft.quantum.intrinsic.r1> \ket $ 주위의 지정 된 양만큼 회전을 구현 합니다 {1} . $-$1 eigenstate $Z $입니다.
 시그니처가 `((Double, Qubit) => Unit is Adj + Ctl)` 있습니다.
-`R1(phi,_)`는 뒤에와 동일 합니다 `R(PauliZ,phi,_)` `R(PauliI,-phi,_)` .
+`R1(phi,_)` 는 뒤에와 동일 합니다 `R(PauliZ,phi,_)` `R(PauliI,-phi,_)` .
 
 <xref:microsoft.quantum.intrinsic.r1frac>연산은 Z = 1 eigenstate를 기준으로 지정 된 양만큼 소수 순환을 구현 합니다.
 시그니처가 `((Int,Int, Qubit) => Unit is Adj + Ctl)` 있습니다.
-`R1Frac(k,n,_)`는 뒤에와 동일 합니다 `RFrac(PauliZ,-k.n+1,_)` `RFrac(PauliI,k,n+1,_)` .
+`R1Frac(k,n,_)` 는 뒤에와 동일 합니다 `RFrac(PauliZ,-k.n+1,_)` `RFrac(PauliI,k,n+1,_)` .
 
 Bloch 구에 매핑된이 인스턴스에서 Pauli $Z $ 축에 대 한 회전 작업의 예는 다음과 같습니다.
 
@@ -170,7 +170,7 @@ Prelude는 위의 단일 비트 작업 외에도 여러 가지 다중 기능 비
 <xref:microsoft.quantum.intrinsic.swap>작업은 두 가지 비트의 퀀텀 상태를 바꿉니다.
 즉, 단일 행렬을 구현 합니다. \begin{\operatorname{SWAP} ation} \mathrel{: =} \begin{bmatrix} 1 & 0 & 0 & 0 \\ \\ 0 & 0 & 1 & 0 0 & 1 & 0 & 0 0 & 0 & 0 & \\ \\ \\ \\ 1 \end{bmatrix}.
 \end{equation}에 시그니처가 `((Qubit, Qubit) => Unit is Adj + Ctl)` 있습니다.
-`SWAP(q1,q2)`는와 동일 `CNOT(q1, q2)` `CNOT(q2, q1)` `CNOT(q1, q2)` 합니다.
+`SWAP(q1,q2)` 는와 동일 `CNOT(q1, q2)` `CNOT(q2, q1)` `CNOT(q1, q2)` 합니다.
 
 > [!NOTE]
 > 스왑 게이트는 형식의 변수 요소를 다시 정렬 하는 것 *과는 다릅니다* `Qubit[]` .
@@ -202,7 +202,7 @@ Prelude는 위의 단일 비트 작업 외에도 여러 가지 다중 기능 비
 
 <xref:microsoft.quantum.intrinsic.measure>작업은 지정 된 Pauli 연산자 제품에서 하나 이상의에 대 한 공동 측정을 수행 합니다.
 Pauli 배열 및 원하는 비트 배열의 길이가 다른 경우 작업이 실패 합니다.
-`Measure`에 시그니처가 `((Pauli[], Qubit[]) => Result)` 있습니다.
+`Measure` 에 시그니처가 `((Pauli[], Qubit[]) => Result)` 있습니다.
 
 조인트 측정은 각 비트를 개별적으로 측정 하는 것과는 다릅니다.
 예를 들어 $ \ket {11} = \ket {1} \otimes \Ket {1} = X\otimes X \ket $ 상태를 고려해 보세요 {00} .
@@ -219,7 +219,7 @@ $Z _0 Z_1 $를 측정 하는 중입니다. _ {\textrm{joint}} = $0의 단일 $r 
 
 는 <xref:microsoft.quantum.measurement.multim> 각 고 비트에 대해 얻은 값의 *배열을* 반환 하 여 각 값의 배열에 대해 *별도로* pauli $Z $ 연산자를 측정 합니다 `Result` .
 일부 경우에는이를 최적화할 수 있습니다. 서명 ()이 있습니다 `Qubit[] => Result[])` .
-`MultiM(qs)`는 다음과 같습니다.
+`MultiM(qs)` 는 다음과 같습니다.
 
 ```qsharp
 mutable rs = new Result[Length(qs)];

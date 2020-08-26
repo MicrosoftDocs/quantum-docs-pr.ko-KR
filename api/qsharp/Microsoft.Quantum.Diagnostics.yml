@@ -1,6 +1,7 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.diagnostics
 name: Microsoft.Quantum.Diagnostics
+summary: " # <a name=\"summary\"></a>요약\n 이 네임 스페이스는 어설션 작업 및 클레임 함수를 비롯 하 여 진단 목적에 유용한 함수 및 작업을 포함 합니다."
 functions:
 - uid: microsoft.quantum.diagnostics.allequalityfactb
   summary: 부울 값의 두 배열이 동일한 것을 어설션 합니다.
@@ -35,6 +36,10 @@ functions:
 - uid: microsoft.quantum.diagnostics.nearequalityfactd
   summary: 고전적인 부동 소수점 값에 필요한 값이 1e-10의 최대 허용 오차 보다 작은 것을 어설션 합니다.
 operations:
+- uid: microsoft.quantum.diagnostics.allowatmostncallsca
+  summary: 이 작업 및 해당 adjoint 호출 사이에는 지정 된 작업이 지정 된 횟수 만큼만 호출 됨을 어설션 합니다.
+- uid: microsoft.quantum.diagnostics.allowatmostnqubits
+  summary: 이 작업과 adjoint 호출 사이에는 지정 된 수의 추가 비트 수를 사용 하 여 문을 사용 하 여 할당 합니다.
 - uid: microsoft.quantum.diagnostics.assertallzero
   summary: 지정 된 비트를 모두 $ \ket $ state로 지정 하는 어설션입니다 {0} .
 - uid: microsoft.quantum.diagnostics.assertallzerowithintolerance
@@ -67,6 +72,8 @@ operations:
     따라서이 작업은 테스트 되는 각 작업에 대 한 단일 호출만 필요 하지만 할당 해야 하는 것은 두 배입니다.
 
     이 어설션을 사용 하면 예를 들어, 작업의 최적화 된 버전이 naive 구현에 동일 하 게 작동 하거나, 비 퀀텀 입력 범위에서 작동 하는 작업이 알려진 사례에 동의 하는 경우를 확인할 수 있습니다.
+- uid: microsoft.quantum.diagnostics.assertphase
+  summary: Equal superposition 상태의 단계가 예상 값을 포함 한다는 것을 어설션 합니다.
 - uid: microsoft.quantum.diagnostics.assertqubit
   summary: '`q`Eibit가 Pauli Z 연산자의 예상 eigenstate 임을 어설션 합니다.'
 - uid: microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance
@@ -74,23 +81,24 @@ operations:
     예상 상태에서의 비트를 어설션 합니다.
 
 
-    `expected`복합 벡터, $ \ket{\psi} = \begin{bmatrix}a & b\end {bmatrix} ^ {\mathrm{T}} $를 나타냅니다.
+    `expected` 복합 벡터, $ \ket{\psi} = \begin{bmatrix}a & b\end {bmatrix} ^ {\mathrm{T}} $를 나타냅니다.
 
     $A $, $b $를 나타내는 튜플의 첫 번째 요소는 복소수의 실수부 이며 두 번째 요소는 허수 부분입니다.
 
     마지막 인수는 어설션이 만들어지는 허용 오차를 정의 합니다.
 - uid: microsoft.quantum.diagnostics.assertqubitwithintolerance
   summary: '`q`지정 된 허용 오차까지 해당 하는 Pauli Z 연산자의 예상 된 eigenstate를 어설션 합니다.'
+- uid: microsoft.quantum.diagnostics.dumpoperation
+  summary: 작업을 수행 하는 경우 현재 실행 대상에서 사용할 수 있는 작업에 대 한 진단을 표시 합니다.
 newtypes:
 - uid: microsoft.quantum.diagnostics.enabletestingvianame
   summary: 컴파일러에서 인식할 수 있는 특성으로, 형식을 로드 하거나 테스트 목적으로 호출할 때 사용할 수 있는 대체 이름을 정의할 수 있습니다.
 - uid: microsoft.quantum.diagnostics.test
   summary: 단위 테스트를 표시 하는 데 사용 되는 컴파일러 인식 특성입니다.
-summary: " # <a name=\"summary\"></a>요약\n 이 네임 스페이스는 어설션 작업 및 클레임 함수를 비롯 하 여 진단 목적에 유용한 함수 및 작업을 포함 합니다."
 metadata:
-  ms.openlocfilehash: c8e1cd7f3458e736a47749dd057174eb4961c31d
-  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.openlocfilehash: 16c457188160a3e0d2b4d04b40af0dabbbdc0f0a
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 07/02/2020
-  ms.locfileid: "85884577"
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88863040"

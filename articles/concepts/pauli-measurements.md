@@ -91,8 +91,8 @@
 이 경우 일반적으로 $ x, Y, z $ 또는 $ z \otimes z, x \otimes x, x \otimes Y $ 등의 연산자를 통해 pauli 연산자를 측정 하는 방법을 설명 하는 것이 일반적입니다.
 
 > [!TIP]
->에서 Q# 다기능 비트 Pauli 연산자는 일반적으로 형식의 배열로 표시 됩니다 `Pauli[]` .
->예를 들어 $ X \otimes Z Y를 \otimes 나타내려면 $ 배열을 사용할 수 있습니다 `[PauliX, PauliZ, PauliY]` .
+> 에서 Q# 다기능 비트 Pauli 연산자는 일반적으로 형식의 배열로 표시 됩니다 `Pauli[]` .
+> 예를 들어 $ X \otimes Z Y를 \otimes 나타내려면 $ 배열을 사용할 수 있습니다 `[PauliX, PauliZ, PauliY]` .
 
 Pauli 연산자를 기준으로 측정값을 논의 하는 것은 퀀텀 오류 수정의 하위 필드에서 특히 일반적입니다.
 에서는 Q# 비슷한 규칙을 따르고 있습니다. 이제 이러한 대체 측정값에 대해 설명 합니다.
@@ -122,7 +122,7 @@ Pauli 측정의 표기법은 $ X, Y, Z $ 측정을 동일한 측정으로 식별
 이러한 측정은 편의를 위해 아래에 제공 됩니다.
 
 
-|Pauli 측정 | 단일 변환|
+|Pauli 측정  | 단일 변환  |
 |-------------------|------------------------|
 |$ $ Z |               $\boldone$             |
 |$ $ X | $H               $                    |
@@ -174,9 +174,9 @@ $$
 \begin{align}
     \otimes \boldone Z =\begin{bmatrix}
         1 & 0 & 0 0 &\\\\
-        0 & 1 & 0 & 0\\\\
-        0 & 0 & -1 & 0\\\\
-        0 & 0 & & -1 \end{bmatrix} .
+        0 &  1 &  0 &  0 \\\\
+        0 &  0 & -1 &  0 \\\\
+        0 &  0 & & -1 \end{bmatrix} .
 \end{align}
 $$
 
@@ -190,15 +190,14 @@ $$
 >     \operatorname{교환 } &=
 >     \left( \begin { 행렬}
 >1 & 0 & 0 0 &\\\\
->0 & 0 & 1 & 0\\\\
->0 & 1 & 0 & 0\\\\
+>         0 & 0 & 1 & 0 \\\\
+>         0 & 1 & 0 & 0 \\\\
 >0 0 0 & & & 1 > \end { 행렬 } \right ) >     \end{align}
 > $$
->내장 작업을 시뮬레이션 하는 데 사용 [`SWAP`](xref:microsoft.quantum.intrinsic) 됩니다.
+> 내장 작업을 시뮬레이션 하는 데 사용 [`SWAP`](xref:microsoft.quantum.intrinsic) 됩니다.
 
-|Pauli 측정 | 단일 변환|
+|Pauli 측정     | 단일 변환  |
 |----------------------|------------------------|
-|$ \otimes \boldone Z $ | $\boldone \otimes \boldone$|
 |$ \otimes \boldone Z $ | $\boldone\otimes \boldone$|
 |$ \otimes \boldone X $ | $ \otimes \boldone H $|
 |$ \otimes \boldone Y $ | $ HS \dagger \otimes \boldone ^ $|
@@ -240,7 +239,7 @@ X Y Z와 같은 임의 pauli 연산자를 $ \otimes \otimes \otimes \boldone $ �
 에서 Q# $ $ 측정이 기호 $ (-1) ^ j의 결과를 생성 하는 경우 이러한 측정값은 j를 반환 합니다 $ .
 의 기본 제공 기능으로 Pauli를 측정 하 Q# 는 것은 이러한 연산자를 측정 하는 데 시간이 오래 걸릴 수 $ $ $ $ $ \id $ 있습니다 .이는 Z 및의 텐서 곱으로 작업을 표현 하는 데 필요한 diagonalizing U 게이트를 설명 하기 위해 이러한 연산자를 측정 하는 데 필요 합니다.
 이러한 미리 정의 된 측정값 중 하나를 수행 하도록 지정할 수 있으므로 계산 기준 측정이 필요한 정보를 제공 하도록를 변환 하는 방법을 걱정 하지 않아도 됩니다.
-Q#자동으로 필요한 모든 기본 변환을 처리 합니다.
+Q# 자동으로 필요한 모든 기본 변환을 처리 합니다.
 자세한 내용은 및 작업을 참조 [`Measure`](xref:microsoft.quantum.intrinsic.measure) 하세요 [`MeasurePaulis`](xref:microsoft.quantum.measurement.measurepaulis) .
 
 ## <a name="the-no-cloning-theorem"></a>복제 안 함 정리
@@ -257,7 +256,7 @@ Q#자동으로 필요한 모든 기본 변환을 처리 합니다.
 
 이러한 퀀텀 컴퓨터의 경우 단일 행렬에서 복제 작업을 설명 해야 합니다.
 복제 하려고 하는 퀀텀 상태를 손상 시킬 수 있으므로 측정이 허용 되지 않습니다.
-복제 작업을 시뮬레이션 하기 위해 속성을 사용 하는 데 사용 되는 단일 행렬을 원합니다.$$
+복제 작업을 시뮬레이션 하기 위해 속성을 사용 하는 데 사용 되는 단일 행렬을 원합니다. $$
   U \ket { \psi } \ket { 0 } = \ket { \psi }\ket{\psi}
 $$
 모든 상태에 대해 $ \ket { \psi } $ 입니다.

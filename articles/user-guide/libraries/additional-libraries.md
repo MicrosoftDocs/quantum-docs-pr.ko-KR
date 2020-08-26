@@ -9,20 +9,20 @@ uid: microsoft.quantum.libraries.using
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: ef88ca765a394a7092eb0a60bf6f3615c082ef6a
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: c558e25bf0d906ba6480cd7c41d3ece4ea97c2d1
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869582"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863079"
 ---
 # <a name="using-additional-no-locq-libraries"></a>추가 Q# 라이브러리 사용
 
 퀀텀 개발 키트는 프로젝트에 추가할 수 있는 _NuGet 패키지_ 를 통해 추가 도메인별 기능을 제공 합니다 Q# .
 
-| Q#라이브러리  | NuGet 패키지 | 참고 |
+| Q# 라이브러리  | NuGet 패키지 | 참고 |
 |---------|---------|--------|
-| [Q#표준 라이브러리](xref:microsoft.quantum.libraries.standard.intro) | [**Microsoft 양자 표준**](https://www.nuget.org/packages/Microsoft.Quantum.Standard) | 기본적으로 포함됨 |
+| [Q# 표준 라이브러리](xref:microsoft.quantum.libraries.standard.intro) | [**Microsoft 양자 표준**](https://www.nuget.org/packages/Microsoft.Quantum.Standard) | 기본적으로 포함됨 |
 | [양자 화학 라이브러리](xref:microsoft.quantum.chemistry.concepts.intro) | [**Microsoft.Quantum.Chemistry**](https://www.nuget.org/packages/Microsoft.Quantum.Chemistry) | |
 | [양자 숫자 라이브러리](xref:microsoft.quantum.numerics.intro) | [**Microsoft 양자**](https://www.nuget.org/packages/Microsoft.Quantum.Numerics) | |
 | [양자 기계 학습 라이브러리](xref:microsoft.quantum.libraries.machine-learning.intro) | [**Microsoft.Quantum.MachineLearning**](https://www.nuget.org/packages/Microsoft.Quantum.MachineLearning) | |
@@ -33,9 +33,9 @@ ms.locfileid: "87869582"
 > 일부 Q# 라이브러리는 프로그램과 함께 작동 Q# 하거나 호스트 응용 프로그램과 통합 되는 추가 도구에서 제대로 작동할 수 있습니다.
 > 예를 들어, [화학 라이브러리 설치 지침](xref:microsoft.quantum.chemistry.concepts.installation) 에서는 NWChem 계산 화학 플랫폼과 함께 [ **Microsoft 양자** 패키지](https://www.nuget.org/packages/Microsoft.Quantum.Chemistry) 를 사용 하는 방법과 `qdk-chem` 퀀텀 화학 데이터를 사용 하기 위한 명령줄 도구를 설치 하는 방법에 대해 설명 합니다.
 
-## <a name="no-locq-command-line-applications-or-net-interopability"></a>[Q#명령줄 응용 프로그램 또는 .NET interopability](#tab/tabid-csproj)
+## <a name="no-locq-applications-or-net-interopability"></a>[Q# 응용 프로그램 또는 .NET interopability](#tab/tabid-csproj)
 
-**명령줄 또는 Visual Studio Code:** 명령줄을 사용 하거나 Visual Studio Code 내에서 명령을 사용 하 여 `dotnet` NuGet 패키지 참조를 프로젝트에 추가할 수 있습니다.
+**명령 프롬프트 또는 Visual Studio Code:** 명령 프롬프트를 사용 하거나 Visual Studio Code 내에서 명령을 사용 하 여 `dotnet` NuGet 패키지 참조를 프로젝트에 추가할 수 있습니다.
 예를 들어, [**Microsoft 양자**](https://www.nuget.org/packages/Microsoft.Quantum.Numerics) 패키지를 추가 하려면 다음 명령을 실행 합니다.
 
 ```dotnetcli
@@ -54,7 +54,7 @@ dotnet add package Microsoft.Quantum.Numerics
 
 또는 패키지 관리자 콘솔을 사용 하 여 명령줄 인터페이스를 통해 숫자 라이브러리를 프로젝트에 추가할 수 있습니다.
 
-![명령줄에서 패키지 관리자 콘솔 사용](~/media/vs2017-nuget-console-menu.png)
+![명령 프롬프트에서 패키지 관리자 콘솔 사용](~/media/vs2017-nuget-console-menu.png)
 
 패키지 관리자 콘솔에서 다음을 실행 합니다.
 
