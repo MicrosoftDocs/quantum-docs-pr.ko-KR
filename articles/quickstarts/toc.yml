@@ -6,7 +6,7 @@ items:
     items:
       - name: 설치 개요
         href: index.md
-      - name: Q# 명령줄 애플리케이션
+      - name: Q# 애플리케이션
         href: install-command-line.md
       - name: Q# Jupyter Notebook
         href: install-jupyter.md

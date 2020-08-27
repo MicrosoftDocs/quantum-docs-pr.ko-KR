@@ -3,14 +3,14 @@ title: IQ# 매직 명령
 author: rmshaffer
 uid: microsoft.quantum.iqsharp.magic-ref.index
 ms.author: rmshaffer
-ms.date: 07/21/2020
+ms.date: 08/25/2020
 ms.topic: article
-ms.openlocfilehash: 971787adae03af35d2e5b408fb88356a8b7df90a
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+ms.openlocfilehash: d6bf8407e40be092689b38cf90514c88f798cc2f
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86870705"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862957"
 ---
 # <a name="iq-magic-commands"></a>IQ# 매직 명령
 | 매직 명령 | 요약 |
@@ -35,7 +35,9 @@ ms.locfileid: "86870705"
 | [`%lsopen`](xref:microsoft.quantum.iqsharp.magic-ref.lsopen) | 현재 열려 있는 네임스페이스 및 해당 별칭을 나열합니다. |
 | [`%package`](xref:microsoft.quantum.iqsharp.magic-ref.package) | NuGet 패키지를 로드하는 기능을 제공합니다. |
 | [`%performance`](xref:microsoft.quantum.iqsharp.magic-ref.performance) | 이 커널에 대한 현재 성능 메트릭을 보고합니다. |
+| [`%project`](xref:microsoft.quantum.iqsharp.magic-ref.project) | Q# 프로젝트 참조를 보거나 추가하는 기능을 제공합니다. |
 | [`%simulate`](xref:microsoft.quantum.iqsharp.magic-ref.simulate) | QuantumSimulator 대상 컴퓨터에서 지정된 함수나 연산을 실행합니다. |
 | [`%toffoli`](xref:microsoft.quantum.iqsharp.magic-ref.toffoli) | ToffoliSimulator 대상 컴퓨터에서 지정된 함수나 연산을 실행합니다. |
+| [`%trace`](xref:microsoft.quantum.iqsharp.magic-ref.trace) | 지정된 작업의 실행 경로를 시각화합니다. |
 | [`%who`](xref:microsoft.quantum.iqsharp.magic-ref.who) | 현재 세션에서 사용할 수 있는 Q# 작업을 나열합니다. |
 | [`%workspace`](xref:microsoft.quantum.iqsharp.magic-ref.workspace) | 현재 작업 영역과 관련된 작업을 제공합니다. |

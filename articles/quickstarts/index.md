@@ -10,12 +10,12 @@ uid: microsoft.quantum.install
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 378970dc911ea5a794590f8336ffc6d3f9673285
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 3aafe78d5910027e2836f7dce72c064e75fc4436
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867576"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863703"
 ---
 # <a name="install-the-microsoft-quantum-development-kit-qdk"></a>Microsoft QDK(Quantum Development Kit) 설치
 
@@ -33,7 +33,7 @@ Q# 프로그램은 Visual Studio Code 또는 Visual Studio를 사용하거나 IQ
 
 QDK 설치를 진행하고 Q# 프로젝트를 만들려면 원하는 설치 방법을 선택하세요.
 
-[Q# 명령줄 애플리케이션으로 개발](xref:microsoft.quantum.install.standalone) - 명령줄에서 Q#으로 작업하려면 이 방법을 선택합니다. 아래 옵션과 같이 드라이버나 호스트 프로그램이 필요하지 않습니다.
+[Q#애플리케이션](xref:microsoft.quantum.install.standalone)으로 개발 - 명령줄에서 Q#으로 작업하려면 이 방법을 선택합니다. 아래 옵션과 같이 드라이버나 호스트 프로그램이 필요하지 않습니다.
 
 [Q# Jupyter Notebook으로 개발](xref:microsoft.quantum.install.jupyter) - 포함된 텍스트를 사용하여 셀에서 Q# 코드를 실행하거나 양자 컴퓨팅 대화형 자습서를 만들려면 이 환경을 선택합니다. 
 
