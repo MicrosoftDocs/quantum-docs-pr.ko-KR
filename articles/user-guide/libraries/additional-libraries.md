@@ -9,18 +9,18 @@ uid: microsoft.quantum.libraries.using
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: c558e25bf0d906ba6480cd7c41d3ece4ea97c2d1
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: 39bf7dc52f4670a6e4536efc437d001c96f9584a
+ms.sourcegitcommit: 11bd357baeb6ab53a402882979e75964d0869b57
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863079"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992142"
 ---
 # <a name="using-additional-no-locq-libraries"></a>추가 Q# 라이브러리 사용
 
 퀀텀 개발 키트는 프로젝트에 추가할 수 있는 _NuGet 패키지_ 를 통해 추가 도메인별 기능을 제공 합니다 Q# .
 
-| Q# 라이브러리  | NuGet 패키지 | 참고 |
+| Q# 라이브러리  | NuGet 패키지 | 메모 |
 |---------|---------|--------|
 | [Q# 표준 라이브러리](xref:microsoft.quantum.libraries.standard.intro) | [**Microsoft 양자 표준**](https://www.nuget.org/packages/Microsoft.Quantum.Standard) | 기본적으로 포함됨 |
 | [양자 화학 라이브러리](xref:microsoft.quantum.chemistry.concepts.intro) | [**Microsoft.Quantum.Chemistry**](https://www.nuget.org/packages/Microsoft.Quantum.Chemistry) | |
@@ -83,7 +83,7 @@ Q# [ `%package` 매직 명령을](xref:microsoft.quantum.iqsharp.magic-ref.packa
 ## <a name="python-interoperability"></a>[Python 상호 운용성](#tab/tabid-python)
 
 
-메서드를 사용 하 여 Python 호스트 프로그램에서 추가 패키지를 사용할 수 있도록 만들 수 있습니다 [`qsharp.packages.add`](https://docs.microsoft.com/python/qsharp/qsharp.packages.packages) .
+메서드를 사용 하 여 Python 호스트 프로그램에서 추가 패키지를 사용할 수 있도록 만들 수 있습니다 [`qsharp.packages.add`](https://docs.microsoft.com/python/qsharp-core/qsharp.packages.packages) .
 예를 들어 I 노트북에서 사용할 [**Microsoft 양자**](https://www.nuget.org/packages/Microsoft.Quantum.Numerics) 패키지를 추가 하려면 Q# 다음 Python 코드를 실행 합니다.
 
 ```python

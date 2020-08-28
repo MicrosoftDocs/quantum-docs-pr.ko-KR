@@ -9,16 +9,16 @@ uid: microsoft.quantum.machines.full-state-simulator
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: b15af66123dadae09815cde1966c69b3ce2e9e64
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: a27cece9858d62814b9d80c47e61c5d7d3b8c885
+ms.sourcegitcommit: 11bd357baeb6ab53a402882979e75964d0869b57
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868341"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992226"
 ---
 # <a name="quantum-development-kit-qdk-full-state-simulator"></a>QDK (퀀텀 Development Kit) 전체 상태 시뮬레이터
 
-QDK은 로컬 컴퓨터의 퀀텀 컴퓨터를 시뮬레이트하는 전체 상태 시뮬레이터를 제공 합니다. 전체 상태 시뮬레이터를 사용 하 여 Q# 최대 30 개의 이상으로 작성 된 퀀텀 알고리즘을 실행 하 고 디버그할 수 있습니다. 전체 상태 시뮬레이터는 Microsoft Research의 [Liq $ Ui | \rangle $](http://stationq.github.io/Liquid/) 플랫폼에서 사용 되는 퀀텀 시뮬레이터와 비슷합니다.
+QDK은 로컬 컴퓨터의 퀀텀 컴퓨터를 시뮬레이트하는 전체 상태 시뮬레이터를 제공 합니다. 전체 상태 시뮬레이터를 사용 하 여 Q# 최대 30 개의 이상으로 작성 된 퀀텀 알고리즘을 실행 하 고 디버그할 수 있습니다. 전체 상태 시뮬레이터는 Microsoft Research의  [Liq $ Ui | \rangle $](http://stationq.github.io/Liquid/) 플랫폼에서 사용 되는 퀀텀 시뮬레이터와 비슷합니다.
 
 ## <a name="invoking-and-running-the-full-state-simulator"></a>전체 상태 시뮬레이터 호출 및 실행
 
@@ -39,7 +39,7 @@ QDK은 로컬 컴퓨터의 퀀텀 컴퓨터를 시뮬레이트하는 전체 상�
 
 ### <a name="invoking-the-simulator-from-python"></a>Python에서 시뮬레이터 호출
 
-가져온 작업과 함께 Python 라이브러리의 [시뮬레이트 ()](https://docs.microsoft.com/python/qsharp/qsharp.loader.qsharpcallable) 메서드를 사용 합니다 Q# Q# .
+가져온 작업과 함께 Python 라이브러리의 [시뮬레이트 ()](https://docs.microsoft.com/python/qsharp-core/qsharp.loader.qsharpcallable) 메서드를 사용 합니다 Q# Q# .
 
 ```python
 qubit_result = myOperation.simulate()

@@ -9,12 +9,12 @@ uid: microsoft.quantum.relnotes
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: f94c20281c5a242aac6a731a5091264dc2847712
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: 70d0c9b61e49d4ee6142edbe2767310403885f01
+ms.sourcegitcommit: 11bd357baeb6ab53a402882979e75964d0869b57
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863761"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992261"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit 릴리스 정보
 
@@ -32,7 +32,7 @@ ms.locfileid: "88863761"
 
 - 프로그램 내에서 임의 값을 보다 편리 하 게 샘플링 하는 방법을 제공 하는 새로운 [Microsoft 양자 네임 스페이스](xref:microsoft.quantum.random)입니다. Q# ([QuantumLibraries # 311](https://github.com/microsoft/QuantumLibraries/pull/311), [qsharp-runtime # 328](https://github.com/microsoft/qsharp-runtime/pull/328))
 - 새 [ `DumpOperation` 작업](xref:microsoft.quantum.diagnostics.dumpoperation)을 사용 하 여 [Microsoft의 Microsoft 양자와 진단 네임 스페이스](xref:microsoft.quantum.diagnostics) 를 개선 하 고, 새 작업을 사용 하 여 성능 및 oracle 호출을 제한 합니다. ([QuantumLibraries # 302](https://github.com/microsoft/QuantumLibraries/pull/302))
-- [ `%project` ](xref:microsoft.quantum.iqsharp.magic-ref.project) Q# 현재 작업 영역 폴더 외부의 프로젝트에 대 한 참조를 지 원하는 Python의 I 및 [ `qsharp.projects` API](https://docs.microsoft.com/python/qsharp/qsharp.projects.projects) 에 대 한 새로운 매직 명령 Q# 입니다. 이 기능의 현재 제한 사항은 [iqsharp # 277](https://github.com/microsoft/iqsharp/issues/277) 를 참조 하세요. 
+- [ `%project` ](xref:microsoft.quantum.iqsharp.magic-ref.project) Q# 현재 작업 영역 폴더 외부의 프로젝트에 대 한 참조를 지 원하는 Python의 I 및 [ `qsharp.projects` API](https://docs.microsoft.com/python/qsharp-core/qsharp.projects.projects) 에 대 한 새로운 매직 명령 Q# 입니다. 이 기능의 현재 제한 사항은 [iqsharp # 277](https://github.com/microsoft/iqsharp/issues/277) 를 참조 하세요. 
 - `.csproj`I/Python 호스트의 파일을 자동으로 로드 하는 기능을 지원 하 Q# 여 초기화 시 외부 프로젝트 또는 패키지 참조를 로드할 수 있도록 합니다. 자세한 내용은 [ Q# Python 및 Jupyter 노트북에서](xref:microsoft.quantum.guide.host-programs) 사용 하기 위한 가이드를 참조 하세요.
 - 증후군 샘플이 추가 되었습니다.
 - SimpleIsing에 튜닝할 수 있는 결합을 추가 했습니다.

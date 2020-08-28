@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines.toffoli-simulator
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8a981645703423856e667be7c3dccf5270a5885f
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 6a0885035c12a99ae43533f04cdc95c5c529380a
+ms.sourcegitcommit: 11bd357baeb6ab53a402882979e75964d0869b57
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868103"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992213"
 ---
 # <a name="quantum-development-kit-qdk-toffoli-simulator"></a>QDK (퀀텀 Development Kit) Toffoli 시뮬레이터
 
@@ -40,7 +40,7 @@ Toffoli 시뮬레이터는 [전체 상태 시뮬레이터](xref:microsoft.quantu
 
 ### <a name="invoking-the-toffoli-simulator-from-python"></a>Python에서 Toffoli 시뮬레이터 호출
 
-가져온 작업과 함께 Python 라이브러리의 [toffoli_simulate ()](https://docs.microsoft.com/python/qsharp/qsharp.loader.qsharpcallable) 메서드를 사용 합니다 Q# .
+가져온 작업과 함께 Python 라이브러리의 [toffoli_simulate ()](https://docs.microsoft.com/python/qsharp-core/qsharp.loader.qsharpcallable) 메서드를 사용 합니다 Q# .
 
 ```python
 qubit_result = myOperation.toffoli_simulate()
@@ -68,7 +68,7 @@ Toffoli 시뮬레이터는 다음을 지원 합니다.
 
 * 회전 및 지수화 Paulis는 `R` `Exp` 결과 작업이 같거나 항등 매트릭스가 될 때 및 등입니다 `X` .
 * 측정 및 [어설션](xref:microsoft.quantum.diagnostics.assertmeasurement) 작업 뿐만 아니라 Pauli에만 해당 `Z` 됩니다. 측정 연산의 확률은 항상 **0** 또는 **1**입니다. Toffoli 시뮬레이터에는 임의성이 없습니다.
-* `DumpMachine`및 `DumpRegister` 함수
+* `DumpMachine` 및 `DumpRegister` 함수
 두 함수는 `Z` 각 비트의 현재 기본 상태를 한 줄에 하나씩 출력 합니다.
 
 ## <a name="specifying-the-number-of-qubits"></a>비트 수 지정
