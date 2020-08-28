@@ -2,7 +2,7 @@
   items:
     - name: API 참조
       href: index.md
-    - name: 'Q# 라이브러리'
+    - name: Q# 라이브러리
       topicHref: qsharp/index.md
       href: qsharp/toc.yml
     - name: .NET 라이브러리
@@ -14,6 +14,6 @@
         - name: 양자 화학
           href: 'https://docs.microsoft.com/dotnet/api/microsoft.quantum.chemistry'
     - name: Python 라이브러리
-      href: 'https://docs.microsoft.com/python/qsharp'
-    - name: 'IQ# 매직 명령'
+      href: 'https://docs.microsoft.com/python/qsharp-core/qsharp'
+    - name: IQ# 매직 명령
       href: iqsharp-magic/toc.yml
