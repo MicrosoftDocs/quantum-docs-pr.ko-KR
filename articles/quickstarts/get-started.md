@@ -9,12 +9,12 @@ ms.topic: overview
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: ff5eb9984da0b22a65f3919599ee18605a206fa0
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 06198f3b5b806bab49abf9fca38b5d2f15cfb65f
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867521"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863750"
 ---
 # <a name="get-started-with-the-quantum-development-kit-qdk"></a>QDK(Quantum Development Kit) 시작
 
@@ -36,7 +36,7 @@ Quantum Development Kit는 Q#을 사용하여 퀀텀 프로그램을 개발하�
 * [Q#을 사용한 얽힘 살펴보기Q#](xref:microsoft.quantum.write-program) - 이 자습서에서는 퀀텀 프로그래밍의 기본 개념 중 일부를 보여 주는 Q# 프로그램을 작성하는 방법을 안내합니다.
     코딩을 시작할 준비가 되지 않은 경우에도 QDK를 설치하지 않고 자습서를 계속 따라 하면서 Q# 프로그래밍 언어와 양자 컴퓨팅의 첫 번째 개념에 대한 개요를 확인할 수 있습니다.
 * [Grover 검색 알고리즘](xref:microsoft.quantum.quickstarts.search) - Q# 프로그램의 예제를 살펴보면서 퀀텀 알고리즘을 낮은 수준의 퀀텀 연산을 추상화하는 방식으로 표현하는 Q#의 기능을 파악할 수 있습니다.
-    이 자습서에서는 Visual Studio 또는 Visual Studio Code를 사용하여 프로그램을 Q# 명령줄 애플리케이션으로 개발하는 과정을 안내합니다.
+    이 자습서에서는 Visual Studio 또는 Visual Studio Code를 사용하여 프로그램을 Q# 애플리케이션으로 개발하는 과정을 안내합니다.
 
 ### <a name="learning-further"></a>자세히 알아보기
 * [양자 컴퓨팅에 대한 Microsoft Learn 모듈](https://docs.microsoft.com/learn/browse/?term=quantum)을 사용하면 속도와 일정에 맞춰 핵심 개념을 습득할 수 있습니다. [첫 번째 모듈](https://docs.microsoft.com/learn/modules/qsharp-create-first-quantum-development-kit/)을 사용하여 QDK에서 양자 프로그램을 만드는 방법에 대한 기본 사항을 알아볼 수 있습니다.

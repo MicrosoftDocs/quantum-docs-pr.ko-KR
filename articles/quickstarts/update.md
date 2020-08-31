@@ -10,12 +10,12 @@ uid: microsoft.quantum.update
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: dd7360961aa728a6aa63b8d8c4e4840f5bf2afe8
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 84782d1628dd100c0939b2b12aa0a9aa8ab2b80e
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866760"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863635"
 ---
 # <a name="update-the-microsoft-quantum-development-kit-qdk"></a>Microsoft QDK(Quantum Development Kit) 업데이트
 
@@ -37,7 +37,7 @@ Q# 작업을 호스트하는 데 C#과 Python 중 무엇을 사용하든, 다음
     dotnet --version
     ```
 
-    출력이 `3.1.100` 이상인지 확인합니다. 그렇지 않으면, [최신 버전](https://dotnet.microsoft.com/download)을 설치하고 다시 확인합니다. 그런 다음, 설정(Visual Studio, Visual Studio Code 또는 명령줄에서 직접)에 따라 아래 지침을 따릅니다.
+    출력이 `3.1.100` 이상인지 확인합니다. 그렇지 않으면, [최신 버전](https://dotnet.microsoft.com/download)을 설치하고 다시 확인합니다. 그런 다음, 설정(Visual Studio, Visual Studio Code 또는 명령 프롬프트에서 직접)에 따라 아래 지침을 따릅니다.
 
 ### <a name="update-no-locq-projects-in-visual-studio"></a>Visual Studio에서 Q# 프로젝트 업데이트
  
@@ -84,9 +84,9 @@ Q# 작업을 호스트하는 데 C#과 Python 중 무엇을 사용하든, 다음
 
 1. Visual Studio Code에서 업데이트할 프로젝트가 포함된 폴더를 엽니다.
 2. **터미널** -> **새 터미널**을 선택합니다.
-3. 명령줄을 사용하여 업데이트하는 지침을 따릅니다(바로 아래).
+3. 명령 프롬프트를 사용하여 업데이트하는 지침을 따릅니다(바로 아래).
 
-### <a name="update-no-locq-projects-using-the-command-line"></a>명령줄을 사용하여 Q# 프로젝트 업데이트
+### <a name="update-no-locq-projects-using-the-command-prompt"></a>명령 프롬프트를 사용하여 Q# 프로젝트 업데이트
 
 1. 주 프로젝트 파일이 포함된 폴더로 이동합니다.
 
@@ -309,7 +309,7 @@ QDK를 업데이트하는 프로세스는 개발 언어와 환경에 따라 달�
 
 1. .NET용 Quantum 프로젝트 템플릿을 업데이트합니다.
 
-    명령줄에서:
+    명령 프롬프트에서:
 
     ```dotnetcli
     dotnet new -i Microsoft.Quantum.ProjectTemplates

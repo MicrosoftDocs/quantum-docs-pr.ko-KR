@@ -9,12 +9,12 @@ uid: microsoft.quantum.overview.q-sharp
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 3ee9e897eb142bbc9503a617cc3e25c1a665ff35
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 5db574b0380ffa1616cb3959d84925854df4e321
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866947"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863785"
 ---
 # <a name="what-are-the-no-locq-programming-language-and-qdk"></a>Q# 프로그래밍 언어 및 QDK란?
 
@@ -24,7 +24,7 @@ Q#은 퀀텀 알고리즘을 개발하고 실행하기 위한 Microsoft의 오�
 
 ## <a name="what-can-i-do-with-the-qdk"></a>QDK에서 수행할 수 있는 작업은 무엇인가요?
 
-완전한 기능을 갖춘 Q#용 개발 키트인 QDK는 일반적인 도구 및 언어와 함께 사용하여 다양한 환경에서 실행할 수 있는 퀀텀 애플리케이션을 개발할 수 있습니다. Q# 프로그램은 Jupyter Notebook을 통해 명령줄 앱으로 실행하거나 Python 또는 .NET 호스트 프로그램을 사용할 수 있습니다.
+완전한 기능을 갖춘 Q#용 개발 키트인 QDK는 일반적인 도구 및 언어와 함께 사용하여 다양한 환경에서 실행할 수 있는 퀀텀 애플리케이션을 개발할 수 있습니다. Q# 프로그램은 Jupyter Notebook을 통해 콘솔 애플리케이션으로 실행하거나 Python 또는 .NET 호스트 프로그램을 사용할 수 있습니다.
 
 ### <a name="develop-in-common-tools-and-environments"></a>일반적인 도구 및 환경에서 개발
 
@@ -48,7 +48,7 @@ Q#은 퀀텀 알고리즘을 개발하고 실행하기 위한 Microsoft의 오�
 
 ## <a name="how-does-no-locq-work"></a>Q# 작동 방식
 
-Q# 프로그램은 독립 실행형 명령줄 애플리케이션으로 컴파일하거나 Python 또는 .NET 언어로 작성된 호스트 프로그램에서 호출할 수 있습니다.
+Q# 프로그램은 독립 실행형 애플리케이션으로 컴파일하거나 Python 또는 .NET 언어로 작성된 호스트 프로그램에서 호출할 수 있습니다.
 
 프로그램을 컴파일하고 실행하면 퀀텀 시뮬레이터의 인스턴스가 만들어지고 Q# 코드가 전달됩니다. 시뮬레이터는 Q# 코드를 사용하여 큐비트를 만들고(퀀텀 입자 시뮬레이션), 변환을 적용하여 해당 상태를 수정합니다. 그런 다음, 시뮬레이터의 양자 연산 결과가 프로그램에 반환됩니다.  
 
@@ -60,7 +60,7 @@ Q# 프로그램은 독립 실행형 명령줄 애플리케이션으로 컴파일
 
 Q# 컴파일러, Q# 라이브러리 및 퀀텀 시뮬레이터를 포함하여 Q# 프로그램을 작성하고 실행하는 데 필요한 모든 항목을 로컬 컴퓨터에서 설치하고 실행할 수 있습니다. 결국에는 실제 양자 컴퓨터에서 Q# 프로그램을 원격으로 실행할 수 있지만, 그 후에는 QDK에서 제공되는 퀀텀 시뮬레이터에서 정확하고 신뢰할 수 있는 결과를 제공합니다.
 
-- [Q#명령줄에서 Q#을 실행](xref:microsoft.quantum.install.standalone)하는 것이 가장 빠른 시작 방법입니다.
+- [Q# 애플리케이션](xref:microsoft.quantum.install.standalone) 개발을 개발하는 것이 가장 빨리 시작하는 방법입니다.
 
 - Q# 프로그램을 컴파일, 시뮬레이션 및 시각화하는 Jupyter 확장인 [IQ#를 사용하여 독립 실행형 Jupyter Notebook을 실행](xref:microsoft.quantum.install.jupyter)합니다.
 

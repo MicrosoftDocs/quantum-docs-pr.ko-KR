@@ -9,12 +9,12 @@ uid: microsoft.quantum.install.cs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 13d73bdf0287941c89e03ba63869095e5fca4e70
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 24318380e0e63957a51961762a33446fe0121b21
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867559"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863684"
 ---
 # <a name="develop-with-no-locq-and-net"></a>Q# 및 .NET을 사용하여 개발
 
@@ -25,16 +25,16 @@ Q#은 C# 및 F#과 같은 .NET 언어와 잘 작동하도록 빌드되었습니�
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
-- [Q# 명령줄 프로젝트에서 사용할](xref:microsoft.quantum.install.standalone) Quantum Development Kit를 설치합니다.
+- [Q# 프로젝트에서 사용할](xref:microsoft.quantum.install.standalone) Quantum Development Kit를 설치합니다.
 
 ## <a name="creating-a-no-locq-library-and-a-net-host"></a>Q# 라이브러리 및 .NET 호스트 만들기
 
 첫 번째 단계에서는 Q# 라이브러리용 프로젝트 및 Q# 라이브러리에 정의된 작업 및 함수를 호출할 .NET 호스트를 만듭니다.
 
 사용하는 개발 환경에 해당하는 탭의 지침을 따릅니다.
-Visual Studio 또는 VS Code 이외의 편집기를 사용하는 경우 간단하게 명령줄 단계를 따르면 됩니다.
+Visual Studio 또는 VS Code 이외의 편집기를 사용하는 경우 간단하게 명령 프로그램 단계를 따르면 됩니다.
 
-### <a name="visual-studio-code-or-command-line"></a>[Visual Studio Code 또는 명령줄](#tab/tabid-cmdline)
+### <a name="visual-studio-code-or-command-prompt"></a>[Visual Studio Code 또는 명령 프롬프트](#tab/tabid-cmdline)
 
 - 새 Q# 라이브러리 만들기
 
@@ -106,4 +106,4 @@ Q# 컴파일러는 시뮬레이터에서 퀀텀 프로그램을 실행할 수 �
     
 ## <a name="next-steps"></a>다음 단계
 
-Q# 명령줄 프로그램 및 .NET과의 상호 운용성을 위한 Quantum Development Kit가 설정되었으면 [첫 번째 퀀텀 프로그램](xref:microsoft.quantum.quickstarts.qrng)을 작성하고 실행할 수 있습니다.
+Q# 애플리케이션 및 .NET과의 상호 운용성을 위한 Quantum Development Kit가 설정되었으면 [첫 번째 퀀텀 프로그램](xref:microsoft.quantum.quickstarts.qrng)을 작성하고 실행할 수 있습니다.
