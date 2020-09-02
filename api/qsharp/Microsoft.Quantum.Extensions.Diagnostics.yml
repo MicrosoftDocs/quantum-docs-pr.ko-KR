@@ -3,13 +3,13 @@ uid: microsoft.quantum.extensions.diagnostics
 name: Microsoft.Quantum.Extensions.Diagnostics
 functions:
 - uid: microsoft.quantum.extensions.diagnostics.dumpmachine
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\n컴퓨터 \\ 컴퓨터는 사용 되지 않습니다. 대신 @\"microsoft.quantum.diagnostics.dumpmachine\"를 사용하십시오.\n@\"microsoft.quantum.diagnostics.dumpmachine\"를 사용하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\n컴퓨터 \\ 컴퓨터는 사용 되지 않습니다. 대신 @\"microsoft.quantum.diagnostics.dumpmachine\"를 사용하십시오.\n@\"microsoft.quantum.diagnostics.dumpmachine\"을 사용하세요."
 - uid: microsoft.quantum.extensions.diagnostics.dumpregister
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nDumpRegister는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.diagnostics.dumpregister\"를 사용하십시오.\n@\"microsoft.quantum.diagnostics.dumpregister\"를 사용하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nDumpRegister는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.diagnostics.dumpregister\"를 사용하십시오.\n@\"microsoft.quantum.diagnostics.dumpregister\"을 사용하세요."
 metadata:
-  ms.openlocfilehash: dcd10bf143cd50e937cb6ad0d81f15247401c2b8
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 6c810a74938b7280a81b57c6cf7707f505303122
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673280"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89340989"

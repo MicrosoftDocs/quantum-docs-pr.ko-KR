@@ -4,29 +4,29 @@ name: Microsoft.Quantum.Extensions.Convert
 summary: " # <a name=\"summary\"></a>요약\n 이러한 함수 중 일부는 Q # 형식 시스템 내에서 관련 된 .NET CLR의 Convert 네임 스페이스의 함수 중 일부입니다.\n\n # <a name=\"remarks\"></a>설명\n Bool, Int 및 Double 형식에 대 한 함수의 버전이 여러 개 있는 경우 해당 함수에는 접미사 B, I 및 D가 있습니다."
 functions:
 - uid: microsoft.quantum.extensions.convert.biginttobools
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nBigIntToBools는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.convert.bigintasboolarray\"를 사용하십시오.\n@\"microsoft.quantum.convert.bigintasboolarray\"를 사용하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nBigIntToBools는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.convert.bigintasboolarray\"를 사용하십시오.\n@\"microsoft.quantum.convert.bigintasboolarray\"을 사용하세요."
 - uid: microsoft.quantum.extensions.convert.boolstobigint
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nBoolsToBigInt는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.convert.boolarrayasbigint\"를 사용하십시오.\n@\"microsoft.quantum.convert.boolarrayasbigint\"를 사용하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nBoolsToBigInt는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.convert.boolarrayasbigint\"를 사용하십시오.\n@\"microsoft.quantum.convert.boolarrayasbigint\"을 사용하세요."
 - uid: microsoft.quantum.extensions.convert.pauliarraytoint
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nPauliArrayToInt는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.convert.pauliarrayasint\"를 사용하십시오.\n@\"microsoft.quantum.convert.pauliarrayasint\"를 사용하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nPauliArrayToInt는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.convert.pauliarrayasint\"를 사용하십시오.\n@\"microsoft.quantum.convert.pauliarrayasint\"을 사용하세요."
 - uid: microsoft.quantum.extensions.convert.tobigint
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nToBigInt는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.convert.intasbigint\"를 사용하십시오.\n@\"microsoft.quantum.convert.intasbigint\"를 사용하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nToBigInt는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.convert.intasbigint\"를 사용하십시오.\n@\"microsoft.quantum.convert.intasbigint\"을 사용하세요."
 - uid: microsoft.quantum.extensions.convert.todouble
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nToDouble는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.convert.intasdouble\"를 사용하십시오.\n@\"microsoft.quantum.convert.intasdouble\"를 사용하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nToDouble는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.convert.intasdouble\"를 사용하십시오.\n@\"microsoft.quantum.convert.intasdouble\"을 사용하세요."
 - uid: microsoft.quantum.extensions.convert.tostringb
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nToStringB는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.convert.boolasstring\"를 사용하십시오.\n@\"microsoft.quantum.convert.boolasstring\"를 사용하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nToStringB는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.convert.boolasstring\"를 사용하십시오.\n@\"microsoft.quantum.convert.boolasstring\"을 사용하세요."
 - uid: microsoft.quantum.extensions.convert.tostringd
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nToStringD는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.convert.doubleasstring\"를 사용하십시오.\n@\"microsoft.quantum.convert.doubleasstring\"를 사용하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nToStringD는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.convert.doubleasstring\"를 사용하십시오.\n@\"microsoft.quantum.convert.doubleasstring\"을 사용하세요."
 - uid: microsoft.quantum.extensions.convert.tostringdformat
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nToStringDFormat은 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.convert.doubleasstringwithformat\"를 사용하십시오.\n@\"microsoft.quantum.convert.doubleasstringwithformat\"를 사용하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nToStringDFormat은 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.convert.doubleasstringwithformat\"를 사용하십시오.\n@\"microsoft.quantum.convert.doubleasstringwithformat\"을 사용하세요."
 - uid: microsoft.quantum.extensions.convert.tostringi
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nToStringI는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.convert.intasstring\"를 사용하십시오.\n@\"microsoft.quantum.convert.intasstring\"를 사용하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nToStringI는 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.convert.intasstring\"를 사용하십시오.\n@\"microsoft.quantum.convert.intasstring\"을 사용하세요."
 - uid: microsoft.quantum.extensions.convert.tostringiformat
-  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nToStringIFormat은 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.convert.intasstringwithformat\"를 사용하십시오.\n@\"microsoft.quantum.convert.intasstringwithformat\"를 사용하세요."
+  summary: "\n> [!WARNING]\n> 사용되지 않음\n\nToStringIFormat은 더 이상 사용 되지 않습니다. 대신 @\"microsoft.quantum.convert.intasstringwithformat\"를 사용하십시오.\n@\"microsoft.quantum.convert.intasstringwithformat\"을 사용하세요."
 metadata:
-  ms.openlocfilehash: 8196882d8f7edf417f65bcd1651ecb770c4286f4
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 6f307cfeabec132c2b3b3953f30a2b0ad208f57a
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673301"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89341023"

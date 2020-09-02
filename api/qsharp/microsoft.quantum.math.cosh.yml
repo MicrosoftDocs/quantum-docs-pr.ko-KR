@@ -2,7 +2,7 @@
 uid: microsoft.quantum.math.cosh
 name: Cosh
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: 지정된 각도의 하이퍼볼릭 코사인을 반환합니다.
 remarks: 자세한 내용은 [system.object](https://docs.microsoft.com/dotnet/api/system.math.cosh) 를 참조 하십시오.
 syntax: 'function Cosh (d : Double) : Double'
@@ -18,9 +18,9 @@ output:
   - isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 7108679e7afa00728baeb362099bc8b7298d32b0
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: eb9eef682f71bf0973e441bac9bf060c4b1cdc37
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82685678"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89334835"

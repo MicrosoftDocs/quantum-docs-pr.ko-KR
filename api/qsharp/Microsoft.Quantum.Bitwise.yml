@@ -6,7 +6,7 @@ functions:
   summary: >-
     두 정수의 비트 AND를 반환 합니다.
 
-    이는 기본 제공 `&&&` 연산자와 동일한 계산을 수행 합니다.
+    이는 기본 제공 연산자와 동일한 계산을 수행 합니다 `&&&` .
 - uid: microsoft.quantum.bitwise.leftshiftedi
   summary: 지정 된 비트 수 만큼 왼쪽에 있는 숫자의 비트 표현을 이동 합니다.
 - uid: microsoft.quantum.bitwise.leftshiftedl
@@ -15,12 +15,12 @@ functions:
   summary: >-
     정수의 비트 NOT을 반환 합니다.
 
-    이는 기본 제공 `~~~` 연산자와 동일한 계산을 수행 합니다.
+    이는 기본 제공 연산자와 동일한 계산을 수행 합니다 `~~~` .
 - uid: microsoft.quantum.bitwise.or
   summary: >-
     두 정수의 비트 OR을 반환 합니다.
 
-    이는 기본 제공 `|||` 연산자와 동일한 계산을 수행 합니다.
+    이는 기본 제공 연산자와 동일한 계산을 수행 합니다 `|||` .
 - uid: microsoft.quantum.bitwise.parity
   summary: 정수의 비트 패리티를 반환 합니다 (이진 표현에 홀수 개의 숫자가 포함 된 경우 1, 그렇지 않은 경우 0).
 - uid: microsoft.quantum.bitwise.rightshiftedi
@@ -33,14 +33,14 @@ functions:
   summary: >-
     두 정수의 배타적 비트 or (XOR)를 반환 합니다.
 
-    이는 기본 제공 `^^^` 연산자와 동일한 계산을 수행 합니다.
+    이는 기본 제공 연산자와 동일한 계산을 수행 합니다 `^^^` .
 - uid: microsoft.quantum.bitwise.zbits
   summary: Pauli 연산자 배열의 Z 비트를 나타내는 정수를 반환 합니다.
 summary: " # <a name=\"summary\"></a>요약\n 이 네임 스페이스는 기존 데이터 형식의 비트 표현에 대해 동작 하는 함수를 포함 합니다."
 metadata:
-  ms.openlocfilehash: fb52d02d38d31b96b46dfc469ee07ee62e29a9d4
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 02fa75fd66a8f6dfeda42bc7e9e8832b34ecba40
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673371"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89341584"
