@@ -2,22 +2,22 @@
 uid: microsoft.quantum.canon.applyifelsera
 name: ApplyIfElseRA
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   클래식 결과의 값에 따라 두 adjointable 작업 중 하나를 적용 합니다.
 
 
-  결과 `result`를 제공 하면가와 같은 `zeroOp` `zeroInput` `result` `Zero`경우에는를 사용 하 여 작업을 적용 하 `oneOp(oneInput)` 고 `result == One`가 적용 됩니다.
+  결과를 제공 하면 `result` 가와 같은 경우에는를 사용 하 여 작업을 적용 하 `zeroOp` `zeroInput` `result` `Zero` 고가 적용 됩니다 `oneOp(oneInput)` `result == One` .
 syntax: "operation ApplyIfElseRA (result : Result, (zeroOp : ('T => Unit is Adj), zeroInput : 'T), (oneOp : ('U => Unit is Adj), oneInput : 'U)) : Unit"
 input:
   content: "(result : Result, (zeroOp : ('T => Unit is Adj), zeroInput : 'T), (oneOp : ('U => Unit is Adj), oneInput : 'U))"
   types:
   - name: result
-    summary: '`zeroOp` 또는 `oneOp` 이 적용 되었는지 확인 하는 데 사용 되는 측정 결과입니다.'
+    summary: 또는이 적용 되었는지 확인 하는 데 사용 되는 측정 결과 `zeroOp` `oneOp` 입니다.
     isPrimitive: true
     uid: Result
   - name: zeroOp
-    summary: 일 때 `result == Zero`적용할 adjointable 작업입니다.
+    summary: 일 때 적용할 adjointable 작업 `result == Zero` 입니다.
     isOperation: true
     input:
       types:
@@ -30,11 +30,11 @@ input:
     functors:
     - Adjoint
   - name: zeroInput
-    summary: '`zeroOp` 때 `result == Zero`제공 되는 입력입니다.'
+    summary: 때 제공 되는 입력입니다 `zeroOp` `result == Zero` .
     uid: "'T"
     isLocal: true
   - name: oneOp
-    summary: 일 때 `result == One`적용할 adjointable 작업입니다.
+    summary: 일 때 적용할 adjointable 작업 `result == One` 입니다.
     isOperation: true
     input:
       types:
@@ -47,7 +47,7 @@ input:
     functors:
     - Adjoint
   - name: oneInput
-    summary: '`oneOp` 때 `result == One`제공 되는 입력입니다.'
+    summary: 때 제공 되는 입력입니다 `oneOp` `result == One` .
     uid: "'U"
     isLocal: true
 output:
@@ -57,9 +57,9 @@ output:
     uid: Unit
 typeParameters:
 - uid: "'T"
-  summary: 조건부로 적용할 작업 `zeroOp` 의 입력 형식입니다.
+  summary: 조건부로 적용할 작업의 입력 형식 `zeroOp` 입니다.
 - uid: "'U"
-  summary: 조건부로 적용할 작업 `oneOp` 의 입력 형식입니다.
+  summary: 조건부로 적용할 작업의 입력 형식 `oneOp` 입니다.
 functors:
 - Adjoint
 seeAlso:
@@ -69,9 +69,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifelsera
 - microsoft.quantum.canon.applyifelserca
 metadata:
-  ms.openlocfilehash: 6168a991766f07ec5d0fd0a7685f17d02510e038
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 53de104adbb9a77d082369b244448b3a84849b97
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676327"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89350203"

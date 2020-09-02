@@ -2,9 +2,9 @@
 uid: microsoft.quantum.oracles.oracletodiscrete
 name: OracleToDiscrete
 type: function
-namespace: Microsoft.Quantum.Oracles
+namespace: microsoft.quantum.oracles
 summary: "\"블랙 박스\" oracle을 나타내는 작업을 수행 하는 경우 \"블랙 박스\" oracle을 여러 번 반복 하는 불연속 시간 oracle이 반환 됩니다."
-examples: '`OracleToDiscrete(U)(3, target)`는 세 번 `U(target)` 반복 되는 것과 같습니다.'
+examples: '`OracleToDiscrete(U)(3, target)` 는 세 번 반복 되는 것과 같습니다 `U(target)` .'
 syntax: 'function OracleToDiscrete (blackBoxOracle : (Qubit[] => Unit is Adj + Ctl)) : Microsoft.Quantum.Oracles.DiscreteOracle'
 input:
   content: '(blackBoxOracle : (Qubit[] => Unit is Adj + Ctl))'
@@ -30,9 +30,9 @@ output:
   - summary: 불연속 시간 oracle을 나타내는 "블랙 박스" oracle에 부분적으로 적용 된 작업입니다.
     uid: microsoft.quantum.oracles.discreteoracle
 metadata:
-  ms.openlocfilehash: b7361693d14245fcb99be5fa36d20d2f332ded0a
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 3b9cd2ae2554f070e79701c409ad24bc9314e002
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681224"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89331928"

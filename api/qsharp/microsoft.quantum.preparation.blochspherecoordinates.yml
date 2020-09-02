@@ -2,26 +2,26 @@
 uid: microsoft.quantum.preparation.blochspherecoordinates
 name: BlochSphereCoordinates
 type: function
-namespace: Microsoft.Quantum.Preparation
+namespace: microsoft.quantum.preparation
 summary: >-
   단일가 나 비트 상태에 대 한 Bloch 구 좌표를 계산 합니다.
 
 
-  지정 된 두 복소수 $a 0, a1 $는 Bloch 구의 좌표를 계산 하는 구의 좌표를 계산 하는 구의 좌표{0} 를 계산 합니다{1} . 예를 들어, $a 0 \ket + a1 \ket = r e ^ {it} (e ^ {-i \emlb{0}= r e ^ {(\ 테타/2)} \ket + e ^ {i \emlc\sin{(\ 테타{1}
+  지정 된 두 복소수 $a 0, a1 $는 Bloch 구의 좌표를 계산 하는 구의 좌표를 계산 하는 구의 좌표를 계산 합니다. 예를 들어, $a 0 \ket {0} + a1 \ket {1} = r e ^ {it} (e ^ {-i \emlb = r e ^ {(\ 테타/2)} \ket {0} + e ^ {i \emlc\sin{(\ 테타 {1}
 syntax: 'function BlochSphereCoordinates (a0 : Microsoft.Quantum.Math.ComplexPolar, a1 : Microsoft.Quantum.Math.ComplexPolar) : (Microsoft.Quantum.Math.ComplexPolar, Double, Double)'
 input:
   content: '(a0 : Microsoft.Quantum.Math.ComplexPolar, a1 : Microsoft.Quantum.Math.ComplexPolar)'
   types:
   - name: a0
-    summary: 상태 $ \ket{0}$의 복합 계수입니다.
+    summary: 상태 $ \ket $의 복합 계수입니다 {0} .
     uid: microsoft.quantum.math.complexpolar
   - name: a1
-    summary: 상태 $ \ket{1}$의 복합 계수입니다.
+    summary: 상태 $ \ket $의 복합 계수입니다 {1} .
     uid: microsoft.quantum.math.complexpolar
 output:
   content: (Microsoft.Quantum.Math.ComplexPolar, Double, Double)
   types:
-  - summary: 을 포함 하 `(ComplexPolar(r, t), phi, theta)`는 튜플입니다.
+  - summary: 을 포함 하는 튜플입니다 `(ComplexPolar(r, t), phi, theta)` .
     types:
     - uid: microsoft.quantum.math.complexpolar
     - isPrimitive: true
@@ -29,9 +29,9 @@ output:
     - isPrimitive: true
       uid: Double
 metadata:
-  ms.openlocfilehash: 98d543849be177941a0c346c1de6b5b6930e783e
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: a1bf578d2dc6c45d553bff503385f7760a08458d
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82683234"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89331707"

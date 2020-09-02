@@ -2,22 +2,22 @@
 uid: microsoft.quantum.canon.applyifelsebc
 name: ApplyIfElseBC
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   클래식 비트의 값에 따라 제어 가능한 두 작업 중 하나를 적용 합니다.
 
 
-  비트가 `bit` `trueOp` 지정 된 경우 `trueInput` `bit` 가 `true`인 경우 해당 입력으로 작업을 적용 하 고가 `falseOp(falseInput)` `bit` `false`인 경우 적용 됩니다.
+  비트가 지정 된 경우 `bit` 가 인 경우 `trueOp` 해당 입력으로 작업을 적용 `trueInput` `bit` `true` 하 고가 인 경우 적용 됩니다 `falseOp(falseInput)` `bit` `false` .
 syntax: "operation ApplyIfElseBC (bit : Bool, (trueOp : ('T => Unit is Ctl), trueInput : 'T), (falseOp : ('U => Unit is Ctl), falseInput : 'U)) : Unit"
 input:
   content: "(bit : Bool, (trueOp : ('T => Unit is Ctl), trueInput : 'T), (falseOp : ('U => Unit is Ctl), falseInput : 'U))"
   types:
   - name: bit
-    summary: 또는 `trueOp` `falseOp` 를 적용할지 여부를 결정 하는 데 사용 되는 부울 값입니다.
+    summary: 또는를 적용할지 여부를 결정 하는 데 사용 되는 부울 값 `trueOp` `falseOp` 입니다.
     isPrimitive: true
     uid: Bool
   - name: trueOp
-    summary: 가 일 `bit` `true`때 적용 되는 제어 가능한 작업입니다.
+    summary: 가 일 때 적용 되는 제어 가능한 작업입니다 `bit` `true` .
     isOperation: true
     input:
       types:
@@ -30,11 +30,11 @@ input:
     functors:
     - Controlled
   - name: trueInput
-    summary: 가 인 `trueOp` `bit` `true`경우에 제공 되는 입력입니다.
+    summary: 가 인 경우에 제공 되는 입력입니다 `trueOp` `bit` `true` .
     uid: "'T"
     isLocal: true
   - name: falseOp
-    summary: 가 일 `bit` `false`때 적용 되는 제어 가능한 작업입니다.
+    summary: 가 일 때 적용 되는 제어 가능한 작업입니다 `bit` `false` .
     isOperation: true
     input:
       types:
@@ -47,7 +47,7 @@ input:
     functors:
     - Controlled
   - name: falseInput
-    summary: 가 인 `falseOp` `bit` `false`경우에 제공 되는 입력입니다.
+    summary: 가 인 경우에 제공 되는 입력입니다 `falseOp` `bit` `false` .
     uid: "'U"
     isLocal: true
 output:
@@ -57,9 +57,9 @@ output:
     uid: Unit
 typeParameters:
 - uid: "'T"
-  summary: 조건부로 적용할 작업 `trueOp` 의 입력 형식입니다.
+  summary: 조건부로 적용할 작업의 입력 형식 `trueOp` 입니다.
 - uid: "'U"
-  summary: 조건부로 적용할 작업 `falseOp` 의 입력 형식입니다.
+  summary: 조건부로 적용할 작업의 입력 형식 `falseOp` 입니다.
 functors:
 - Controlled
 seeAlso:
@@ -69,9 +69,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifelsera
 - microsoft.quantum.canon.applyifelserca
 metadata:
-  ms.openlocfilehash: c1d7c1fdf83b5ec87b8d5e8b22c45bb00072f69a
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 1cd8df26dabaaa13d39fc194ae958f71e3b618ac
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82674999"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89350390"
