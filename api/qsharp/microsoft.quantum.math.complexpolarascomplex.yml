@@ -2,8 +2,8 @@
 uid: microsoft.quantum.math.complexpolarascomplex
 name: ComplexPolarAsComplex
 type: function
-namespace: Microsoft.Quantum.Math
-summary: 복소수 수 `ComplexPolar` 를 형식의 `Complex`복소수로 변환 합니다.
+namespace: microsoft.quantum.math
+summary: 복소수 수를 형식의 복소수로 변환 `ComplexPolar` `Complex` 합니다.
 syntax: 'function ComplexPolarAsComplex (input : Microsoft.Quantum.Math.ComplexPolar) : Microsoft.Quantum.Math.Complex'
 input:
   content: '(input : Microsoft.Quantum.Math.ComplexPolar)'
@@ -17,9 +17,9 @@ output:
   - summary: 복소수 $c = x + i y $입니다.
     uid: microsoft.quantum.math.complex
 metadata:
-  ms.openlocfilehash: 93eb6e745c9d5fe65fd6960fe398eae3b7deb71c
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: fd1e6577b482b4bd9e1c9f287558c3633c1eac18
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82685780"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89335005"

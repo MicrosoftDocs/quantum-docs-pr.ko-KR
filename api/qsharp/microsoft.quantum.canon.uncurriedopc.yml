@@ -2,11 +2,11 @@
 uid: microsoft.quantum.canon.uncurriedopc
 name: UncurriedOpC
 type: function
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   작업을 반환 하는 함수가 지정 된 경우 두 입력을 튜플로 받는 새 작업을 반환 합니다.
 
-  한정자 `C` 는 작업을 제어할 수 있음을 나타냅니다.
+  한정자는 `C` 작업을 제어할 수 있음을 나타냅니다.
 syntax: "function UncurriedOpC (curriedOp : ('T -> ('U => Unit is Ctl))) : (('T, 'U) => Unit is Ctl)"
 input:
   content: "(curriedOp : ('T -> ('U => Unit is Ctl)))"
@@ -34,7 +34,7 @@ input:
 output:
   content: (('T, 'U) => Unit is Ctl)
   types:
-  - summary: 에 `(curriedOp(t))(u)`해당 하 `op` 는 새 `op(t, u)` 작업입니다.
+  - summary: 에 해당 하는 새 작업입니다 `op` `op(t, u)` `(curriedOp(t))(u)` .
     isOperation: true
     input:
       types:
@@ -56,9 +56,9 @@ typeParameters:
 seeAlso:
 - microsoft.quantum.canon.uncurryop
 metadata:
-  ms.openlocfilehash: 763ea81f9a459a358d9a41e177697eb6bf2ca307
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 75f104b22d6d7ec642ff9ce00f9fc3dbea776431
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677966"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89354827"

@@ -2,14 +2,14 @@
 uid: microsoft.quantum.simulation.identitygeneratorindex
 name: IdentityGeneratorIndex
 type: function
-namespace: Microsoft.Quantum.Simulation
-summary: Id 진화 작업에 해당 하는 0 Hamiltonian `H = 0`와 일치 하는 생성기 인덱스를 반환 합니다.
+namespace: microsoft.quantum.simulation
+summary: Id 진화 작업에 해당 하는 0 Hamiltonian와 일치 하는 생성기 인덱스를 반환 합니다 `H = 0` .
 syntax: 'function IdentityGeneratorIndex (idxTerm : Int) : Microsoft.Quantum.Simulation.GeneratorIndex'
 input:
   content: '(idxTerm : Int)'
   types:
   - name: idxTerm
-    summary: 이 입력은 무시 되며 <xref:microsoft.quantum.simulation.generatorsystem> 사용자 정의 형식과의 일관성을 위해 정의 됩니다.
+    summary: 이 입력은 무시 되며 사용자 정의 형식과의 일관성을 위해 정의 됩니다 <xref:microsoft.quantum.simulation.generatorsystem> .
     isPrimitive: true
     uid: Int
 output:
@@ -18,9 +18,9 @@ output:
   - summary: Hamiltonian $H = $0의 진화를 나타내는 생성기 인덱스입니다.
     uid: microsoft.quantum.simulation.generatorindex
 metadata:
-  ms.openlocfilehash: b498cc055bed2fcc69ac28548fc08b2bbaa74430
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 680788feec5703ff6a9f23c5367070e7694f524a
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82683049"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89330041"
