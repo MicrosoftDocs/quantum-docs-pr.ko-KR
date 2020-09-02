@@ -2,7 +2,7 @@
 uid: microsoft.quantum.arrays.enumerated
 name: Enumerated
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: 배열이 지정 된 경우 각 요소의 인덱스와 함께 원래 배열의 요소를 포함 하는 새 배열을 반환 합니다.
 examples: >-
   다음 `for` 루프는 동일 합니다.
@@ -41,9 +41,9 @@ typeParameters:
 - uid: "'TElement"
   summary: 배열의 요소 형식입니다.
 metadata:
-  ms.openlocfilehash: a8b0a9abeb378c863d228268315950f32c5247c0
-  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.openlocfilehash: aecfb5c9f6a7d3f6b14717a7068a0596ae867c9f
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 07/02/2020
-  ms.locfileid: "85884645"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352413"

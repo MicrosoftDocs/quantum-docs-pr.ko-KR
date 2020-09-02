@@ -2,13 +2,13 @@
 uid: microsoft.quantum.arrays.filtered
 name: Filtered
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: 배열의 요소에 대해 정의 된 배열과 조건자가 지정 된 경우 조건자를 충족 하는 요소로 구성 된 배열을 반환 합니다.
-remarks: 함수는 제네릭 형식에 대해 정의 됩니다. 즉, 배열과 `'T[]` 조건자 `'T -> Bool` 가 있을 때마다 요소를 필터링 할 수 있습니다.
+remarks: 함수는 제네릭 형식에 대해 정의 됩니다. 즉, 배열과 조건자가 있을 때마다 `'T[]` `'T -> Bool` 요소를 필터링 할 수 있습니다.
 examples: >-
   다음 코드에서는 "필터링 된" 함수를 보여 줍니다.
 
-  조건자는 @"microsoft.quantum.logical.greaterthani" 함수를 사용 하 여 정의 됩니다.
+  조건자는 함수를 사용 하 여 정의 됩니다 @"microsoft.quantum.logical.greaterthani" .
 
 
   ```qsharp
@@ -44,24 +44,24 @@ input:
       - isPrimitive: true
         uid: Bool
   - name: array
-    summary: 에 있는 요소의 배열 `'T`입니다.
+    summary: 에 있는 요소의 배열 `'T` 입니다.
     isArray: true
     uid: "'T"
     isLocal: true
 output:
   content: "'T[]"
   types:
-  - summary: 조건자를 `'T[]` 만족 하는 요소의 배열입니다.
+  - summary: "`'T[]`조건자를 만족 하는 요소의 배열입니다."
     isArray: true
     uid: "'T"
     isLocal: true
 typeParameters:
 - uid: "'T"
-  summary: '`array` 요소의 형식입니다.'
+  summary: '`array`요소의 형식입니다.'
 metadata:
-  ms.openlocfilehash: 6aa19a279425672675182f3c8098e7c47fb5cce6
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 3b586b356e18c71f1721fbce0ec26e2ea37bfd73
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676459"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352294"

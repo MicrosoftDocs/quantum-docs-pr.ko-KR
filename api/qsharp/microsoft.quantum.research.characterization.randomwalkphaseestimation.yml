@@ -2,13 +2,13 @@
 uid: microsoft.quantum.research.characterization.randomwalkphaseestimation
 name: RandomWalkPhaseEstimation
 type: operation
-namespace: Microsoft.Quantum.Research.Characterization
+namespace: microsoft.quantum.research.characterization
 summary: 임의 워크를 사용 하 여 반복 단계 예측을 수행 하 여 지정 된 oracle 및 eigenstate에서 얻은 기존 측정 결과에 대 한 Bayesian 유추를 대략적으로 수행 합니다.
 remarks: >-
   ### <a name="iterative-phase-estimation-and-eigenstates"></a>반복 단계 예측 및 Eigenstates
 
 
-  일반적으로 입력 레지스터 `eigenstate` 는 $U $의 eigenstate $ \ket{\phi} $ 일 필요가 없지만 eigenstate에 superposition 수 있습니다. 입력 상태가 \begin{align} \ket{\psi} & = \sum\_{j} \sum\_j \ket{\phi\_j}에서 제공 된다고 가정 합니다. 여기서 $\{\sum\_j\}$는 $ \sum\_j | \sum\_j | ^ 2 = $1 및 where $U \ket{\phi\_j} =\_\aj\ket {\ l\_j} $와 같이 복잡 한 계수입니다.
+  일반적으로 입력 레지스터는 `eigenstate` $U $의 eigenstate $ \ket{\phi} $ 일 필요가 없지만 eigenstate에 superposition 수 있습니다. 입력 상태가 \begin{align} \ket{\psi} & = \sum \_ {j} \sum \_ j \ket{\phi j}에서 제공 된다고 가정 합니다 \_ . 여기서 $ \{ \sum \_ j \} $는 $ \sum \_ j | \sum \_ j | ^ 2 = $1 및 where $U \ket{\phi \_ j} = \aj\ket \_ {\ l \_ j} $와 같이 복잡 한 계수입니다.
 
 
   그런 다음 [개발 가이드](xref:microsoft.quantum.libraries.characterization#iterative-phase-estimation-without-eigenstates)에 설명 된 대로 반복적인 단계 예측을 수행 하면 궁극적으로 단일 eigenstate로 수렴 됩니다.
@@ -17,7 +17,7 @@ remarks: >-
   ### <a name="experiment-design"></a>실험 디자인
 
 
-  에 `oracle` 전달 되는 $t $ 및 역 각도 $ \theta $의 측정 시간은 *파티클 추측 추론*, \begin{align} \stc\\\ac\\\\variance{\phi}}., \aa\ca\a\a\ca\ca\{1}
+  에 전달 되는 $t $ 및 역 각도 $ \theta $의 측정 시간은 `oracle` *파티클 추측 추론*, \begin{align} \stc\\\ac\\\\variance{\phi}}., \aa\ca\a\a\ca\ca\ {1}
 
   \end{align}이 추론은 이전의 표준에 대 한 가정 하에 반복 단계 추정에서 예상 되는 사후 분산을 줄이는 데 가장 적합 합니다.
 
@@ -74,9 +74,9 @@ output:
     isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 719c8583cb0fe7f0c9c0f7fa617fa469080a9588
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 27841784ec8961f7a5a78c425411fcf0ae8e8f15
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82706740"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89330585"

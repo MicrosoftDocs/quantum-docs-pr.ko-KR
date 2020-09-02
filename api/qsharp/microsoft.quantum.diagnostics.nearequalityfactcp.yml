@@ -2,7 +2,7 @@
 uid: microsoft.quantum.diagnostics.nearequalityfactcp
 name: NearEqualityFactCP
 type: function
-namespace: Microsoft.Quantum.Diagnostics
+namespace: microsoft.quantum.diagnostics
 summary: 기존 복소수에 필요한 값이 1e-10의 작은 허용 오차 보다 많은 것을 어설션 합니다.
 syntax: 'function NearEqualityFactCP (actual : Microsoft.Quantum.Math.ComplexPolar, expected : Microsoft.Quantum.Math.ComplexPolar) : Unit'
 input:
@@ -20,9 +20,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 658a61364ee3843288cc96aaf0e12d7b515ee9e1
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 6d09926d43652d69db2f466f5a0bed7e106a0fa7
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682991"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89336926"

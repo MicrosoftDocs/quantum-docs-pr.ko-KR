@@ -2,13 +2,13 @@
 uid: microsoft.quantum.math.bigfraction
 name: BigFraction
 type: newtype
-namespace: Microsoft.Quantum.Math
-summary: 폼 `p/q`의 유리수를 나타냅니다. 정수 `p` 는 튜플의 첫 번째 요소이 고 `q` 는 튜플의 두 번째 요소입니다.
+namespace: microsoft.quantum.math
+summary: 폼의 유리수를 나타냅니다 `p/q` . 정수 `p` 는 튜플의 첫 번째 요소이 고 `q` 는 튜플의 두 번째 요소입니다.
 syntax: newtype BigFraction = (BigInt, BigInt);
 metadata:
-  ms.openlocfilehash: d9da825f0317e9c51dd78f90ec7ee5b087d5dd43
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 3ae7d6cf0f9bd200c0620caf8bce93403e18f9cf
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82684229"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89344423"
