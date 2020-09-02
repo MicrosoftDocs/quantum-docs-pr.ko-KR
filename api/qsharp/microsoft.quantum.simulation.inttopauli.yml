@@ -2,26 +2,26 @@
 uid: microsoft.quantum.simulation.inttopauli
 name: IntToPauli
 type: function
-namespace: Microsoft.Quantum.Simulation
+namespace: microsoft.quantum.simulation
 summary: 정수를 단일 값 비트 Pauli 연산자로 변환 합니다.
 syntax: 'function IntToPauli (idx : Int) : Pauli'
 input:
   content: '(idx : Int)'
   types:
   - name: idx
-    summary: Pauli 연산자로 `0..3` 변환할 범위의 정수입니다.
+    summary: '`0..3`Pauli 연산자로 변환할 범위의 정수입니다.'
     isPrimitive: true
     uid: Int
 output:
   content: Pauli
   types:
-  - summary: 에서 `Pauli` 제공 하 `[PauliI, PauliX, PauliY, PauliZ][idx]`는 연산자입니다.
+  - summary: '`Pauli`에서 제공 하는 연산자 `[PauliI, PauliX, PauliY, PauliZ][idx]` 입니다.'
     isPrimitive: true
     uid: Pauli
 metadata:
-  ms.openlocfilehash: 92d9d1e29d85c57d22cb0d7b9867986bf0768bc5
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 8970c7ca707f714aabd8353366bd186260a7eac7
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682606"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89329787"

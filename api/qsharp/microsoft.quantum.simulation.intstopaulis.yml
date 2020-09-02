@@ -2,28 +2,28 @@
 uid: microsoft.quantum.simulation.intstopaulis
 name: IntsToPaulis
 type: function
-namespace: Microsoft.Quantum.Simulation
+namespace: microsoft.quantum.simulation
 summary: 정수 배열을 단일가 나 비트 Pauli 연산자의 배열로 변환 합니다.
 syntax: 'function IntsToPaulis (ints : Int[]) : Pauli[]'
 input:
   content: '(ints : Int[])'
   types:
   - name: ints
-    summary: Pauli 연산자로 변환할 범위의 `0..3` 정수 배열입니다.
+    summary: '`0..3`Pauli 연산자로 변환할 범위의 정수 배열입니다.'
     isArray: true
     isPrimitive: true
     uid: Int
 output:
   content: Pauli[]
   types:
-  - summary: Pauli 연산자 `paulis` `Pauli[]` 의 배열에는에 지정 된 `ints` 의 `paulis[idxPauli]` `[PauliI, PauliX, PauliY, PauliZ]` 요소와 동일한 길이가 `ints[idxPauli]`있습니다.
+  - summary: '`paulis`Pauli 연산자의 배열에는에 `Pauli[]` 지정 된 `ints` 의 요소와 동일한 길이가 `paulis[idxPauli]` `[PauliI, PauliX, PauliY, PauliZ]` `ints[idxPauli]` 있습니다.'
     isArray: true
     isPrimitive: true
     uid: Pauli
 metadata:
-  ms.openlocfilehash: 1159e3db02663b0588d12ea9d297e055be84ac4a
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: f4d7e34cc7555fab89c6fd4d8371837da2296015
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682607"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89329818"

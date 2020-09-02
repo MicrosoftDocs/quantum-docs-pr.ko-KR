@@ -2,12 +2,12 @@
 uid: microsoft.quantum.arithmetic.dividei
 name: DivideI
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: >-
   두 퀀텀 정수를 나눕니다.
 
 
-  `xs`는 나머지 `xs - floor(xs/ys) * ys` 를 보유 하 `result` 고는 `floor(xs/ys)`를 보유 합니다.
+  `xs` 는 나머지를 보유 `xs - floor(xs/ys) * ys` 하 고는를 `result` 보유 `floor(xs/ys)` 합니다.
 remarks: >-
   는 표준 시프트 및 빼기 방법을 사용 하 여 나누기를 구현 합니다.
 
@@ -23,7 +23,7 @@ input:
     summary: $n $ 비트 제 들
     uid: microsoft.quantum.arithmetic.littleendian
   - name: result
-    summary: $ 비트 결과 $n $ \ket{0}$ 상태 여야 하며 정수 나누기의 결과로 대체 됩니다.
+    summary: $ 비트 결과 $n $ \ket $ 상태 여야 하며 {0} 정수 나누기의 결과로 대체 됩니다.
     uid: microsoft.quantum.arithmetic.littleendian
 output:
   content: Unit
@@ -34,9 +34,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 05f4b6766910af24a956bfa14bca615633ed1031
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 1a426cc92da9db4c1155d2653451031ca37e3965
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679688"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89342162"

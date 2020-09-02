@@ -2,25 +2,25 @@
 uid: microsoft.quantum.simulation.paulicoefficientfromgenidx
 name: PauliCoefficientFromGenIdx
 type: function
-namespace: Microsoft.Quantum.Simulation
-summary: 에서 설명 하는 Pauli 용어의 계수를 추출 `GeneratorIndex`합니다.
+namespace: microsoft.quantum.simulation
+summary: 에서 설명 하는 Pauli 용어의 계수를 추출 `GeneratorIndex` 합니다.
 syntax: 'function PauliCoefficientFromGenIdx (generatorIndex : Microsoft.Quantum.Simulation.GeneratorIndex) : Double'
 input:
   content: '(generatorIndex : Microsoft.Quantum.Simulation.GeneratorIndex)'
   types:
   - name: generatorIndex
-    summary: '`GeneratorIndex`Pauli 용어를 인코딩하는 형식입니다.'
+    summary: '`GeneratorIndex` Pauli 용어를 인코딩하는 형식입니다.'
     uid: microsoft.quantum.simulation.generatorindex
 output:
   content: Double
   types:
-  - summary: 에 `GeneratorIndex`설명 된 용어의 계수입니다.
+  - summary: 에 설명 된 용어의 계수입니다 `GeneratorIndex` .
     isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 8fbf424210cde86aa57068f2f5d2b7a1c85033a7
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 3a4eaf64844b4087338a85d9c878b1a51ea96484
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682524"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89329633"
