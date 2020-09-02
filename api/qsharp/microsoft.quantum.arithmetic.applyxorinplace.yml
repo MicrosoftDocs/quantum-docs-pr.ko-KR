@@ -2,15 +2,15 @@
 uid: microsoft.quantum.arithmetic.applyxorinplace
 name: ApplyXorInPlace
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: >-
   는 고전적인 정수와, 비트의 레지스터가 나타내는 정수 사이에 비트 XOR 연산을 적용 합니다.
 
 
-  정수 `X` 에서 1 비트를 기반으로 하는 작은 endian 레지스터에 작업을 적용 합니다.
+  `X`정수에서 1 비트를 기반으로 하는 작은 endian 레지스터에 작업을 적용 합니다.
 
 
-  에 `value` 의해 표시 되 고 y가에서 `target`인코딩된 부호 없는 정수 인 경우 $ \ket{y}\rightarrow `InPlaceXorLE` \ket{y\oplus a} $로 지정 된 작업을 수행 합니다. 여기서 $ \oplus $는 배타적 비트 or 연산자입니다.
+  에 의해 표시 되 `value` 고 y가에서 인코딩된 부호 없는 정수 인 `target` 경우 $ `InPlaceXorLE` \ket{y}\rightarrow \ket{y\oplus a} $로 지정 된 작업을 수행 합니다. 여기서 $ \oplus $는 배타적 비트 or 연산자입니다.
 syntax: 'operation ApplyXorInPlace (value : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
   content: '(value : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian)'
@@ -20,7 +20,7 @@ input:
     isPrimitive: true
     uid: Int
   - name: target
-    summary: 작은 endian 인코딩으로 저장 `value` 하는 데 사용 되는 퀀텀 레지스터입니다.
+    summary: 작은 endian 인코딩으로 저장 하는 데 사용 되는 퀀텀 레지스터 `value` 입니다.
     uid: microsoft.quantum.arithmetic.littleendian
 output:
   content: Unit
@@ -31,9 +31,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 27568274d343242f3b3bd0eef8de6e48d546de1f
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 7b4e125f76051b966ec65ca43c7edb1efd270ded
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679906"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89342536"

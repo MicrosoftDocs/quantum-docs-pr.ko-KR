@@ -2,7 +2,7 @@
 uid: microsoft.quantum.machinelearning.misclassifications
 name: Misclassifications
 type: function
-namespace: Microsoft.Quantum.MachineLearning
+namespace: microsoft.quantum.machinelearning
 summary: 유추 된 레이블 집합과 올바른 레이블 집합을 지정 하면 각 레이블 집합이 다른에 대 한 인덱스를 반환 합니다.
 examples: >-
   ```Q#
@@ -29,14 +29,14 @@ input:
 output:
   content: Int[]
   types:
-  - summary: 이에 해당 하 `idx` 는 `inferredLabels[idx] != actualLabels[idx]`인덱스의 배열입니다.
+  - summary: '`idx`이에 해당 하는 인덱스의 배열입니다 `inferredLabels[idx] != actualLabels[idx]` .'
     isArray: true
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 62a99747a7e711ece041ee0d0d046ac78c0bb95e
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 3376caa295931db2817b3982854572d4d0c97b30
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82684463"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89335855"

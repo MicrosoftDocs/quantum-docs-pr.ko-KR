@@ -2,10 +2,10 @@
 uid: microsoft.quantum.machinelearning.trainingoptions
 name: TrainingOptions
 type: newtype
-namespace: Microsoft.Quantum.MachineLearning
+namespace: microsoft.quantum.machinelearning
 summary: 퀀텀 분류자 학습에 사용할 옵션의 컬렉션입니다.
 remarks: >-
-  이 UDT는 직접 만들 수 없습니다. 대신를 호출 @"microsoft.quantum.machinelearning.defaulttrainingoptions" 하 고 연산자를 `w/` 사용 하 여 다른 기본값을 재정의 하 여 지정 해야 합니다.
+  이 UDT는 직접 만들 수 없습니다. 대신를 호출 하 @"microsoft.quantum.machinelearning.defaulttrainingoptions" 고 연산자를 사용 하 여 다른 기본값을 재정의 하 여 지정 해야 합니다 `w/` .
 
 
   예를 들어 10만 측정치와 최대 8 교육 epoch를 사용 하려면 다음을 수행 합니다.
@@ -20,9 +20,9 @@ remarks: >-
 syntax: newtype TrainingOptions = (Double, Double, Int, Int, Int, Int, Double, Int, (String -> Unit));
 references: '- [arXiv: 1804.00633](https://arxiv.org/abs/1804.00633)'
 metadata:
-  ms.openlocfilehash: b8a24b0a9e036c0a6c1eea229ca76d62e400fde8
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: e9020ee77dbad438c06e6504416303968ec5bba3
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82684330"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89335515"

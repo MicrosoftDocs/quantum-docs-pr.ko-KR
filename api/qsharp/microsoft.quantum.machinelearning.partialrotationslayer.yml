@@ -2,7 +2,7 @@
 uid: microsoft.quantum.machinelearning.partialrotationslayer
 name: PartialRotationsLayer
 type: function
-namespace: Microsoft.Quantum.MachineLearning
+namespace: microsoft.quantum.machinelearning
 summary: 고유 모델 매개 변수에 의해 매개 변수화 된 지정 된 축을 따라 단일가 비트 회전의 배열을 반환 합니다.
 syntax: 'function PartialRotationsLayer (idxsQubits : Int[], axis : Pauli) : Microsoft.Quantum.MachineLearning.ControlledRotation[]'
 input:
@@ -20,13 +20,13 @@ input:
 output:
   content: Microsoft.Quantum.MachineLearning.ControlledRotation[]
   types:
-  - summary: 지정 된 축에 대 한 제어 되는 회전의 배열입니다. `nQubits` 각 비트에 하나씩 있습니다.
+  - summary: 지정 된 축에 대 한 제어 되는 회전의 배열입니다. 각 비트에 하나씩 `nQubits` 있습니다.
     isArray: true
     uid: microsoft.quantum.machinelearning.controlledrotation
 metadata:
-  ms.openlocfilehash: 1dd7b0309f257501119cd6039f16b3913e952950
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 9264e2e76aecac2d49bd7e53098fcd19d58294d6
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82684431"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89335787"

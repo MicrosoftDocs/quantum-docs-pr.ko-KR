@@ -2,7 +2,7 @@
 uid: microsoft.quantum.machinelearning.nmisclassifications
 name: NMisclassifications
 type: function
-namespace: Microsoft.Quantum.MachineLearning
+namespace: microsoft.quantum.machinelearning
 summary: 유추 된 레이블 집합과 올바른 레이블 집합을 지정 하면 각 레이블 집합이 다른 인덱스 수를 반환 합니다.
 examples: >-
   ```Q#
@@ -27,13 +27,13 @@ input:
 output:
   content: Int
   types:
-  - summary: 이에 해당 하 `idx` 는 `inferredLabels[idx] != actualLabels[idx]`인덱스 수입니다.
+  - summary: 이에 해당 하는 인덱스 수입니다 `idx` `inferredLabels[idx] != actualLabels[idx]` .
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 0fb65949c86d41412148ae9fc8cda993c518e9e9
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 6cdc97f48ed8ecca1d7d347b5fbfc6f36326ed55
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82684451"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89335821"
