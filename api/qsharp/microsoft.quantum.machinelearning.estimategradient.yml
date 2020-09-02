@@ -2,7 +2,7 @@
 uid: microsoft.quantum.machinelearning.estimategradient
 name: EstimateGradient
 type: operation
-namespace: Microsoft.Quantum.MachineLearning
+namespace: microsoft.quantum.machinelearning
 summary: 특정 모델 및 지정 된 인코딩된 입력에 대 한 순차 분류자의 학습 그라데이션을 추정 합니다.
 remarks: 이 작업에서는 Hadamard 테스트를 사용 하 고 매개 변수를 함께 사용 하 여 그라데이션을 계산 합니다.
 syntax: 'operation EstimateGradient (model : Microsoft.Quantum.MachineLearning.SequentialModel, encodedInput : Microsoft.Quantum.MachineLearning.StateGenerator, nMeasurements : Int) : Double[]'
@@ -27,9 +27,9 @@ output:
     isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 3416401dba73f3b0f65470388d3ac2c08fbaa54c
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 155ad002732796d2c5ab3710b81d23a089b238ef
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82683552"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89336144"

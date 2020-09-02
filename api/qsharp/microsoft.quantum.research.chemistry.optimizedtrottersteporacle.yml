@@ -2,14 +2,14 @@
 uid: microsoft.quantum.research.chemistry.optimizedtrottersteporacle
 name: OptimizedTrotterStepOracle
 type: function
-namespace: Microsoft.Quantum.Research.Chemistry
+namespace: microsoft.quantum.research.chemistry
 summary: 최적화 된 Trotter step 작업 및이 작업을 실행 하는 데 필요한 매개 변수를 반환 합니다.
 syntax: 'function OptimizedTrotterStepOracle (qSharpData : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerEncodingData, trotterStepSize : Double, trotterOrder : Int) : (Int, (Double, (Qubit[] => Unit is Adj + Ctl)))'
 input:
   content: '(qSharpData : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerEncodingData, trotterStepSize : Double, trotterOrder : Int)'
   types:
   - name: qSharpData
-    summary: Hamiltonian은 형식 `JordanWignerEncodingData` 으로 설명 됩니다.
+    summary: Hamiltonian은 형식으로 설명 `JordanWignerEncodingData` 됩니다.
     uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerencodingdata
   - name: trotterStepSize
     summary: Trotter 통합자의 단계 크기입니다.
@@ -22,7 +22,7 @@ input:
 output:
   content: (Int, (Double, (Qubit[] => Unit is Adj + Ctl)))
   types:
-  - summary: '튜플: `Int` 은 할당 된 값이 고, `Double` 은 `1.0/trotterStepSize`이며, 작업은 Trotter 단계입니다.'
+  - summary: 튜플:은 `Int` 할당 된 값이 `Double` `1.0/trotterStepSize` 고,은 이며, 작업은 Trotter 단계입니다.
     types:
     - isPrimitive: true
       uid: Int
@@ -43,9 +43,9 @@ output:
         - Adjoint
         - Controlled
 metadata:
-  ms.openlocfilehash: defa30f488d64991bea7e005d18b9eafeb99f05a
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 0df7574ed599e094ec820ef683742d0bb02973cc
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82683110"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89330364"
