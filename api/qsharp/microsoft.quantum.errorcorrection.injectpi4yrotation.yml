@@ -2,15 +2,15 @@
 uid: microsoft.quantum.errorcorrection.injectpi4yrotation
 name: InjectPi4YRotation
 type: operation
-namespace: Microsoft.Quantum.ErrorCorrection
+namespace: microsoft.quantum.errorcorrection
 summary: >-
   Y 축에 대해 π/4를 기준으로 단일의 비트를 회전 합니다.
 
 
-  에 대해 `Y`π/4 회전을 수행 합니다.
+  에 대해 π/4 회전을 수행 `Y` 합니다.
 
 
-  회전은 매직 상태를 사용 하 여 수행 됩니다. 즉, $ $ \begin{align}{8} \cos\frac{\pi} \ket{0} + \sin \frac{\pi}{8} \ket{1}상태를 복사 합니다.
+  회전은 매직 상태를 사용 하 여 수행 됩니다. 즉, $ $ \begin{align} \cos\frac{\pi} {8} \ket {0} + \sin \frac{\pi} \ket 상태를 복사 합니다 {8} {1} .
 
   \end{align} $ $
 remarks: >-
@@ -24,7 +24,7 @@ remarks: >-
   ```
 
 
-  and
+  및
 
 
   ```qsharp
@@ -38,7 +38,7 @@ remarks: >-
   ```
 
 
-  이 작업은 동작 `Adjoint` 을 지원 합니다 .이 경우 동일한 매직 상태를 사용 하지만 데이터의 효과는 $-\ pi/4 $ $Y $-회전입니다.
+  이 작업은 동작을 지원 합니다 .이 `Adjoint` 경우 동일한 매직 상태를 사용 하지만 데이터의 효과는 $-\ pi/4 $ $Y $-회전입니다.
 syntax: 'operation InjectPi4YRotation (data : Qubit, magic : Qubit) : Unit'
 input:
   content: '(data : Qubit, magic : Qubit)'
@@ -48,7 +48,7 @@ input:
     isPrimitive: true
     uid: Qubit
   - name: magic
-    summary: 초기 상태의 초기 상태에 있는 놀라운 비트입니다. 이 작업의 다음 응용 프로그램이 `magic` $ \ket{0}$ 상태로 반환 됩니다.
+    summary: 초기 상태의 초기 상태에 있는 놀라운 비트입니다. 이 작업의 다음 응용 프로그램이 `magic` $ \ket $ 상태로 반환 됩니다 {0} .
     isPrimitive: true
     uid: Qubit
 output:
@@ -59,9 +59,9 @@ output:
 functors:
 - Adjoint
 metadata:
-  ms.openlocfilehash: cb0efd896b4d8f9b4b81c061b644a1e2f7f74e96
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: bf39fac578e364b5b228490484525f044d40b29d
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82684874"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89336229"
