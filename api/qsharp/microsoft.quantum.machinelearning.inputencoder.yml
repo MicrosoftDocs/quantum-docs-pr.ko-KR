@@ -2,7 +2,7 @@
 uid: microsoft.quantum.machinelearning.inputencoder
 name: InputEncoder
 type: function
-namespace: Microsoft.Quantum.MachineLearning
+namespace: microsoft.quantum.machinelearning
 summary: 계수 및 허용 오차 집합이 지정 된 경우 각 계수를 계산 기준 상태의 해당 진폭으로 준비 하는 상태 준비 작업을 반환 합니다.
 syntax: 'function InputEncoder (coefficients : Double[]) : Microsoft.Quantum.MachineLearning.StateGenerator'
 input:
@@ -19,9 +19,9 @@ output:
   - summary: 지정 된 레지스터에서 지정 된 계수를 입력 상태로 준비 하는 상태 준비 작업입니다.
     uid: microsoft.quantum.machinelearning.stategenerator
 metadata:
-  ms.openlocfilehash: b1a45c2ce026ab15f1134167355fb131d9b0022e
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 88bb75d8e6e330cdc7d157b80581413333c9b371
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82684527"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89336059"

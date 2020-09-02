@@ -2,7 +2,7 @@
 uid: microsoft.quantum.machinelearning.localrotationslayer
 name: LocalRotationsLayer
 type: function
-namespace: Microsoft.Quantum.MachineLearning
+namespace: microsoft.quantum.machinelearning
 summary: 고유 모델 매개 변수를 사용 하 여 레지스터의 각 고 비트에 대해 하나의 회전을 사용 하 여 지정 된 축을 따라 제어 되지 않는 (단일 비트) 회전의 배열을 반환 합니다.
 syntax: 'function LocalRotationsLayer (nQubits : Int, axis : Pauli) : Microsoft.Quantum.MachineLearning.ControlledRotation[]'
 input:
@@ -19,13 +19,13 @@ input:
 output:
   content: Microsoft.Quantum.MachineLearning.ControlledRotation[]
   types:
-  - summary: 지정 된 축에 대 한 제어 되는 회전의 배열입니다. `nQubits` 각 비트에 하나씩 있습니다.
+  - summary: 지정 된 축에 대 한 제어 되는 회전의 배열입니다. 각 비트에 하나씩 `nQubits` 있습니다.
     isArray: true
     uid: microsoft.quantum.machinelearning.controlledrotation
 metadata:
-  ms.openlocfilehash: ad6259c46aee6b05ac201bd978f42ce3add8f03d
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: a08df354e389b1f282e18657f579e831180c81f2
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82684488"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89335919"

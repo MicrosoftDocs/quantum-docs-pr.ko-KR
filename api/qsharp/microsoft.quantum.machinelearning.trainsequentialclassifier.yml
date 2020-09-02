@@ -2,7 +2,7 @@
 uid: microsoft.quantum.machinelearning.trainsequentialclassifier
 name: TrainSequentialClassifier
 type: operation
-namespace: Microsoft.Quantum.MachineLearning
+namespace: microsoft.quantum.machinelearning
 summary: 순차 분류자의 구조가 지정 된 경우 지정 된 레이블이 지정 된 학습 집합에 분류자를 학습 합니다.
 syntax: 'operation TrainSequentialClassifier (models : Microsoft.Quantum.MachineLearning.SequentialModel[], samples : Microsoft.Quantum.MachineLearning.LabeledSample[], options : Microsoft.Quantum.MachineLearning.TrainingOptions, trainingSchedule : Microsoft.Quantum.MachineLearning.SamplingSchedule, validationSchedule : Microsoft.Quantum.MachineLearning.SamplingSchedule) : (Microsoft.Quantum.MachineLearning.SequentialModel, Int)'
 input:
@@ -17,7 +17,7 @@ input:
     isArray: true
     uid: microsoft.quantum.machinelearning.labeledsample
   - name: options
-    summary: 학습 시 사용할 구성 자세한 @"microsoft.quantum.machinelearning.trainingoptions" 내용은 @"microsoft.quantum.machinelearning.defaulttrainingoptions" 및를 참조 하세요.
+    summary: 학습 시 사용할 구성 @"microsoft.quantum.machinelearning.trainingoptions" 자세한 내용은 및 @"microsoft.quantum.machinelearning.defaulttrainingoptions" 를 참조 하세요.
     uid: microsoft.quantum.machinelearning.trainingoptions
   - name: trainingSchedule
     summary: 학습 단계 중 학습 데이터에서 샘플을 선택할 때 사용할 샘플링 일정입니다.
@@ -40,9 +40,9 @@ seeAlso:
 - microsoft.quantum.machinelearning.trainsequentialclassifieratmodel
 - microsoft.quantum.machinelearning.validatesequentialclassifier
 metadata:
-  ms.openlocfilehash: e5a9d2c6747ee970bfd01b266e2f10f45d514f06
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: b8b0873395a3d75ea06f655a08d0de496c1f4449
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82684321"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89335498"

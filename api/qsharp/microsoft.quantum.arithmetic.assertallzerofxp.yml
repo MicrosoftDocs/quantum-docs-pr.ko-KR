@@ -2,8 +2,8 @@
 uid: microsoft.quantum.arithmetic.assertallzerofxp
 name: AssertAllZeroFxP
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
-summary: 퀀텀 고정 소수점 숫자가 0으로 초기화 됨을 어설션 하는 도우미 함수입니다. 즉, 모든 요소는 $ \ket{0}$ 상태에 있습니다.
+namespace: microsoft.quantum.arithmetic
+summary: 퀀텀 고정 소수점 숫자가 0으로 초기화 됨을 어설션 하는 도우미 함수입니다. 즉, 모든 요소는 $ \ket $ 상태에 있습니다. {0}
 syntax: 'operation AssertAllZeroFxP (fp : Microsoft.Quantum.Arithmetic.FixedPoint) : Unit'
 input:
   content: '(fp : Microsoft.Quantum.Arithmetic.FixedPoint)'
@@ -19,9 +19,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 1a891bdcd59ca8ac3eacec9f712c3cb6692ccdac
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 555e663f774ead9d40dbec23c073f0d5faee7f4e
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82672821"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89342502"
