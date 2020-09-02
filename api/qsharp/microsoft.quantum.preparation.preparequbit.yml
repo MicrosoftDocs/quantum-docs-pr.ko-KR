@@ -2,17 +2,17 @@
 uid: microsoft.quantum.preparation.preparequbit
 name: PrepareQubit
 type: operation
-namespace: Microsoft.Quantum.Preparation
+namespace: microsoft.quantum.preparation
 summary: >-
-  지정 된 Pauli 연산자의 + 1`Zero`() eigenstate에서 eibit를 준비 합니다.
+  `Zero`지정 된 Pauli 연산자의 + 1 () eigenstate에서 eibit를 준비 합니다.
 
   Id 연산자가 지정 된 경우에는 최대 혼합 된 상태에서 해당 비트를 준비 합니다.
 
 
-  이 작업은 처음에 $ \ket{0}$ 상태에 있는 경우이 작업을 통해 지정 된 Pauli 연산자의 $ + $1 eigenstate 또는의 최대 mixed 상태 ()에 대 `PauliI`한 추가 비트를 준비 합니다 (참조 <xref:microsoft.quantum.preparation.preparesinglequbitidentity>).
+  이 작업은 처음에 $ \ket $ 상태에 있는 경우 {0} 이 작업을 통해 지정 된 Pauli 연산자의 $ + $1 eigenstate 또는의 최대 mixed 상태 ()에 대 한 추가 비트를 준비 `PauliI` 합니다 (참조 <xref:microsoft.quantum.preparation.preparesinglequbitidentity> ).
 
 
-  이 연산은{0}$ \ket $ 이외의 상태에 있는 경우 다음 게이트를 적용 합니다. $H $ for `PauliX`, $HS $ for `PauliY`, $I $ for 및 <xref:microsoft.quantum.preparation.preparesinglequbitidentity> `PauliI` `PauliZ`
+  이 연산은 $ \ket $ 이외의 상태에 있는 경우 {0} 다음 게이트를 적용 합니다. $H $ for `PauliX` , $HS $ for `PauliY` , $I $ for `PauliZ` 및 <xref:microsoft.quantum.preparation.preparesinglequbitidentity> `PauliI`
 syntax: 'operation PrepareQubit (basis : Pauli, qubit : Qubit) : Unit'
 input:
   content: '(basis : Pauli, qubit : Qubit)'
@@ -31,9 +31,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 70032bd9174bb987206e2084e2788e5ac7169ae7
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: f42cb0ab28168124c7589606c34446d35013a325
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681113"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89331384"

@@ -2,10 +2,10 @@
 uid: microsoft.quantum.canon.applywithinputtransformation
 name: ApplyWithInputTransformation
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: 일부 입력을 허용 하는 작업, 해당 작업과 호환 되는 출력을 반환 하는 함수 및이 함수에 대 한 입력을 제공 하는 경우 함수를 사용 하 여 작업에 필요한 형식으로 입력을 변환 하는 작업을 적용 합니다.
 examples: >-
-  다음 호출에서는를 @"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian" 사용 하 여 형식의 @"Microsoft.Quantum.Arithmetic.BigEndian" @"Microsoft.Quantum.Arithmetic.LittleEndian"입력에 대 한 입력 용으로 설계 된 작업을 적용 합니다.
+  다음 호출에서는를 사용 하 여 @"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian" 형식의 입력에 대 한 입력 용으로 설계 된 작업을 적용 합니다 @"Microsoft.Quantum.Arithmetic.BigEndian" @"Microsoft.Quantum.Arithmetic.LittleEndian" .
 
 
   ```qsharp
@@ -54,9 +54,9 @@ seeAlso:
 - applywithinputtransformationca
 - transformedoperation
 metadata:
-  ms.openlocfilehash: 16a4fe250118c60a4ff6b206503baa1309b78bbd
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 4b01940550ac75b01044d94f2be037fed81be7bc
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676289"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89357156"

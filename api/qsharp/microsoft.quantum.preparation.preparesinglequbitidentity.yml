@@ -2,12 +2,12 @@
 uid: microsoft.quantum.preparation.preparesinglequbitidentity
 name: PrepareSingleQubitIdentity
 type: operation
-namespace: Microsoft.Quantum.Preparation
+namespace: microsoft.quantum.preparation
 summary: >-
   최대 혼합 상태에서 고 비트를 준비 합니다.
 
 
-  Depolarizing channel $ $ \begin{align} \00p (\rho) \mathrel{를 적용 하 여 $ \boldone/$2 상태에서 지정 된 비트를 준비 합니다. ={1} {4} } \frac \ sum_ {\omega \omega \{0, 1, 2,\}3}\_\omega {\mu} \rho \omega\_{\mu} ^ {\dagger}, \end{align} $ $ where $ \omega\_i $는 $i $ th pauli 연산자 이며 여기서 $ \rho $는 혼합 상태를 나타내는 밀도 연산자입니다.
+  Depolarizing channel $ $ \begin{align} \00P (\rho) \mathrel{를 적용 하 여 $ \boldone/$2 상태에서 지정 된 비트를 준비 합니다. =} \frac {1} {4} \ sum_ {\omega \omega \{ 0, 1, 2, 3 \} } \omega \_ {\mu} \rho \omega \_ {\mu} ^ {\dagger}, \end{align} $ $ where $ \omega \_ i $는 $i $ th pauli 연산자 이며 여기서 $ \rho $는 혼합 상태를 나타내는 밀도 연산자입니다.
 remarks: >-
   상태에이 작업을 적용 한 결과를 설명 하는 혼합 상태 $ \boldone/$2는이 작업에서 수행 되는 임의의 선택 항목에 대 한 예상 값을 암시적으로 설명 합니다.
 
@@ -28,9 +28,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 4dd07e9e59575d60bca81c996ad5fc1a3a82b16d
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 65b39d742a6ba4399137fb4d88c6f762969a0f93
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82686516"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89331350"

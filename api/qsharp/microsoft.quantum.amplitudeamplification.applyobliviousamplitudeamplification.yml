@@ -2,15 +2,15 @@
 uid: microsoft.quantum.amplitudeamplification.applyobliviousamplitudeamplification
 name: ApplyObliviousAmplitudeAmplification
 type: operation
-namespace: Microsoft.Quantum.AmplitudeAmplification
+namespace: microsoft.quantum.amplitudeamplification
 summary: 부분 반사를 지정 하 여 명확한 진폭 증폭
 remarks: >-
-  특정 보조 시작 상태 $ \ket{\text{start}}\_a $, 특정 보조 대상 상태 $ \ket{\text{target}}\_a $ 및 모든 시스템 상태 $ \ket{\psi}\_s $가 지정 된 경우 일부 단일 $U $에 대해 \begin{align} O\ket {\ text {\_start}} a\ket {\_\ psi}\_s = \lambda\ket{\text{target}}\_a U \ket{\psi} s + \sqrt{1-| \lambda | ^ 2}\_\ket{\text{target} ^ \perp} a\cdots \end{align}이 있다고 가정 합니다.
+  특정 보조 시작 상태 $ \ket{\text{start}} \_ a $, 특정 보조 대상 상태 $ \ket{\text{target}} \_ a $ 및 모든 시스템 상태 $ \ket{\psi} s $가 지정 된 \_ 경우 일부 단일 $U $에 대해 \begin{align} O\ket {\ text {start}} \_ a\ket {\ psi} \_ s = \lambda\ket{\text{target}} \_ a U \ket{\psi} \_ s + \sqrt{1-| \lambda | ^ 2} \ket{\text{target} ^ \perp} a\cdots \end{align}이 있다고 가정 \_ 합니다.
 
-  및 해당 adjoint의 `signalOracle` 응용 프로그램에 의해 인터리브 된 보조 레지스터의 시작 및 대상 상태에 대 한 반사 시퀀스를 통해 U 적용의 성공 확률이 변경 될 수 있습니다.
+  및 해당 adjoint의 응용 프로그램에 의해 인터리브 된 보조 레지스터의 시작 및 대상 상태에 대 한 반사 시퀀스를 통해 `signalOracle` U 적용의 성공 확률이 변경 될 수 있습니다.
 
 
-  대부분의 경우 `auxiliaryRegister` 는 $ \ket{\text{start}}\_a $ 상태에서 초기화 됩니다.
+  대부분의 경우 `auxiliaryRegister` 는 $ \ket{\text{start}} a $ 상태에서 초기화 됩니다 \_ .
 syntax: 'operation ApplyObliviousAmplitudeAmplification (phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, targetStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle, auxiliaryRegister : Qubit[], systemRegister : Qubit[]) : Unit'
 references: >-
   참조 항목
@@ -32,7 +32,7 @@ input:
     summary: 보조 레지스터의 대상 상태에 대 한 리플렉션 연산자
     uid: microsoft.quantum.oracles.reflectionoracle
   - name: signalOracle
-    summary: 보조 및 시스템 레지스터에 대해 `ObliviousOracle` 공동으로 작동 하는 형식의 단일 oracle $O $입니다.
+    summary: '`ObliviousOracle`보조 및 시스템 레지스터에 대해 공동으로 작동 하는 형식의 단일 oracle $O $입니다.'
     uid: microsoft.quantum.oracles.obliviousoracle
   - name: auxiliaryRegister
     summary: 보조 레지스터
@@ -53,9 +53,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 7452686a76d9ff89c0eb79290e7dae23347778ac
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 21bdb88716a07c32673425fd4f5276559b56d266
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82672955"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89340530"

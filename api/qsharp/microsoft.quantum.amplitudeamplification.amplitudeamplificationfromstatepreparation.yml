@@ -2,14 +2,14 @@
 uid: microsoft.quantum.amplitudeamplification.amplitudeamplificationfromstatepreparation
 name: AmplitudeAmplificationFromStatePreparation
 type: function
-namespace: Microsoft.Quantum.AmplitudeAmplification
+namespace: microsoft.quantum.amplitudeamplification
 summary: 부분 반사를 위해 oracles에 의해 진폭 증폭
 remarks: >-
-  이를 통해 보다는 시작 및 대상 상태의 형태에 보다 엄격한 조건을 `AmpAmpByReflectionPhases`적용 합니다.
+  이를 통해 보다는 시작 및 대상 상태의 형태에 보다 엄격한 조건을 적용 `AmpAmpByReflectionPhases` 합니다.
 
-  대상 상태가 $ \ket{1}\_f $로 표시 되어 있다고 가정 합니다.
+  대상 상태가 $ \ket f $로 표시 되어 있다고 가정 합니다 {1} \_ .
 
-  {0}\_대부분의{0}\_{1}\_경우\_{0}\_{0}\_{0}\_\begin{align} A\ket {f} \ket s = \lambda\ket f\ket {\ text {target}} s + \sqrt{1-| \lambda | ^ 2} \ket f\citn, \end{align}가 $ \ket {f} \ket s $ 상태에서 초기화 된다고 가정 합니다. `flagQubit` `auxiliaryRegister`
+  {0} \_ 대부분의 경우 \begin{align} A\ket {f} \ket {0} \_ s = \lambda\ket {1} \_ f\ket {\ text {target}} \_ s + \sqrt{1-| \lambda | ^ 2} \ket {0} \_ f\citn, \end{align}가 `flagQubit` `auxiliaryRegister` $ \ket {0} \_ {f} \ket s $ 상태에서 초기화 된다고 가정 {0} \_ 합니다.
 syntax: 'function AmplitudeAmplificationFromStatePreparation (phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, stateOracle : Microsoft.Quantum.Oracles.StateOracle, idxFlagQubit : Int) : (Qubit[] => Unit is Adj + Ctl)'
 input:
   content: '(phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, stateOracle : Microsoft.Quantum.Oracles.StateOracle, idxFlagQubit : Int)'
@@ -42,9 +42,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: 2d29383db3cebfe1848a1fcee3115fcee0825d4d
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: de9059b0abc7eb8fd622c72561b8875e07a831ad
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676961"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89340666"
