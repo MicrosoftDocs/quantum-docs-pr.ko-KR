@@ -2,15 +2,15 @@
 uid: microsoft.quantum.diagnostics.assertqubit
 name: AssertQubit
 type: operation
-namespace: Microsoft.Quantum.Diagnostics
-summary: Eibit `q` 가 Pauli Z 연산자의 예상 eigenstate 임을 어설션 합니다.
-remarks: <xref:microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance>에서는 $ eigenstates $Z 아닌 임의의 eibit 상태를 어설션할 수 있습니다.
+namespace: microsoft.quantum.diagnostics
+summary: '`q`Eibit가 Pauli Z 연산자의 예상 eigenstate 임을 어설션 합니다.'
+remarks: <xref:microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance> 에서는 $ eigenstates $Z 아닌 임의의 eibit 상태를 어설션할 수 있습니다.
 syntax: 'operation AssertQubit (expected : Result, q : Qubit) : Unit'
 input:
   content: '(expected : Result, q : Qubit)'
   types:
   - name: expected
-    summary: 에서 예상 하는 것으로 예상 되는 상태는 `Zero` 또는 `One`입니다.
+    summary: 에서 예상 하는 것으로 예상 되는 상태는 `Zero` 또는 `One` 입니다.
     isPrimitive: true
     uid: Result
   - name: q
@@ -25,9 +25,9 @@ output:
 seeAlso:
 - assertqubitisinstatewithintolerance
 metadata:
-  ms.openlocfilehash: 18d1db5c36dddf7bd40c64e02252a15d37dc4fe1
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: d50c75ef8bb7e1dd1c800149ff6d1862aefac6a5
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677254"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89337554"

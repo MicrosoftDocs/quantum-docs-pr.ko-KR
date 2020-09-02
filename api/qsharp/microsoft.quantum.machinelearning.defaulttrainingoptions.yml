@@ -2,10 +2,10 @@
 uid: microsoft.quantum.machinelearning.defaulttrainingoptions
 name: DefaultTrainingOptions
 type: function
-namespace: Microsoft.Quantum.MachineLearning
+namespace: microsoft.quantum.machinelearning
 summary: 학습용 분류자에 대 한 기본 옵션 집합을 반환 합니다.
 examples: >-
-  기본 옵션을 사용 하지만 추가 측정을 사용 하려면 연산자를 사용 `w/` 합니다.
+  기본 옵션을 사용 하지만 추가 측정을 사용 하려면 연산자를 사용 합니다 `w/` .
 
 
   ```Q#
@@ -23,9 +23,9 @@ output:
   - summary: 분류자를 학습 하는 데 사용할 적절 한 기본 교육 옵션 집합입니다.
     uid: microsoft.quantum.machinelearning.trainingoptions
 metadata:
-  ms.openlocfilehash: 87f056e336ca78881421e669b3d282af8e679353
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 5f9882b1067851fc206e302310657f9bf64cea3f
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82685444"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89344763"

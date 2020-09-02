@@ -2,19 +2,19 @@
 uid: microsoft.quantum.diagnostics.assertallzerowithintolerance
 name: AssertAllZeroWithinTolerance
 type: operation
-namespace: Microsoft.Quantum.Diagnostics
-summary: 지정 된 것과 같은 Assert는 지정 된 허용{0}오차까지 모두 $ \ket $ 상태에 있습니다.
+namespace: microsoft.quantum.diagnostics
+summary: 지정 된 것과 같은 Assert는 {0} 지정 된 허용 오차까지 모두 $ \ket $ 상태에 있습니다.
 syntax: 'operation AssertAllZeroWithinTolerance (qubits : Qubit[], tolerance : Double) : Unit'
 input:
   content: '(qubits : Qubit[], tolerance : Double)'
   types:
   - name: qubits
-    summary: $ \Ket{0}$ 상태에 있도록 어설션된 비트입니다.
+    summary: $ \Ket $ 상태에 있도록 어설션된 비트입니다 {0} .
     isArray: true
     isPrimitive: true
     uid: Qubit
   - name: tolerance
-    summary: 상태가 $ \ket{0}$ 상태 여야 하는 정확도
+    summary: 상태가 $ \ket $ 상태 여야 하는 정확도 {0}
     isPrimitive: true
     uid: Double
 output:
@@ -28,9 +28,9 @@ functors:
 seeAlso:
 - assertqubitwithintolerance
 metadata:
-  ms.openlocfilehash: ae55998333d6bc3a4d8b41341842147d80dcd183
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 547180aac49fde1525a7477d9ec75b302912fe2b
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677290"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89337576"

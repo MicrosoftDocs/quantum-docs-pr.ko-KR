@@ -2,7 +2,7 @@
 uid: microsoft.quantum.machinelearning.cyclicentanglinglayer
 name: CyclicEntanglingLayer
 type: function
-namespace: Microsoft.Quantum.MachineLearning
+namespace: microsoft.quantum.machinelearning
 summary: 지정 된 축을 따라 단일 제어 회전의 배열을 반환 하 고,이를 통해 주기적의 레지스터를 정렬 하 고, 고유 모델 매개 변수에 의해 매개 변수화 됩니다.
 examples: >-
   다음은 동일 합니다.
@@ -38,13 +38,13 @@ input:
 output:
   content: Microsoft.Quantum.MachineLearning.ControlledRotation[]
   types:
-  - summary: 주기적의 `nQubits` 레지스터를 중심으로 하는 두 개의 고 비트 제어 되는 회전의 배열입니다.
+  - summary: 주기적의 레지스터를 중심으로 하는 두 개의 고 비트 제어 되는 회전의 배열입니다 `nQubits` .
     isArray: true
     uid: microsoft.quantum.machinelearning.controlledrotation
 metadata:
-  ms.openlocfilehash: 9578cb4798fc403642a98c7886374295000b6097
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: daac61ccccadbe16910c6487549cd6ce524d3b58
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681658"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89344848"

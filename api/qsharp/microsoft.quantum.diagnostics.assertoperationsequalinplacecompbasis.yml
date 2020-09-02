@@ -2,9 +2,9 @@
 uid: microsoft.quantum.diagnostics.assertoperationsequalinplacecompbasis
 name: AssertOperationsEqualInPlaceCompBasis
 type: operation
-namespace: Microsoft.Quantum.Diagnostics
+namespace: microsoft.quantum.diagnostics
 summary: >-
-  계산 단위의 벡터 에서만 `givenU` 작업의 동작을 확인 `expectedU` 하 여 작업이 지정 된 입력 크기에 대 한 작업과 같은지 확인 합니다.
+  `givenU` `expectedU` 계산 단위의 벡터 에서만 작업의 동작을 확인 하 여 작업이 지정 된 입력 크기에 대 한 작업과 같은지 확인 합니다.
 
   이는 두 unitaries의 같음에 대 한 필수 조건 이지만 충분 하지 않습니다.
 syntax: 'operation AssertOperationsEqualInPlaceCompBasis (nQubits : Int, givenU : (Qubit[] => Unit), expectedU : (Qubit[] => Unit is Adj)) : Unit'
@@ -12,7 +12,7 @@ input:
   content: '(nQubits : Int, givenU : (Qubit[] => Unit), expectedU : (Qubit[] => Unit is Adj))'
   types:
   - name: nQubits
-    summary: 작업이 `givenU` 수행 하 고 `expectedU` 작동 하는 $n $의 수입니다.
+    summary: 작업이 수행 하 고 작동 하는 $n $의 수입니다 `givenU` `expectedU` .
     isPrimitive: true
     uid: Int
   - name: givenU
@@ -28,7 +28,7 @@ input:
       - isPrimitive: true
         uid: Unit
   - name: expectedU
-    summary: 비교할 $로 비트 `givenU` $n에 대 한 참조 연산입니다.
+    summary: 비교할 $로 비트 $n에 대 한 참조 연산 `givenU` 입니다.
     isOperation: true
     input:
       types:
@@ -47,9 +47,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: c3a98dee80b9e41ea3c27e1e52c3046751307912
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 1c49d1e32852be40d94621da2a8c1fa53b6e666c
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677282"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89337521"

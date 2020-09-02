@@ -2,9 +2,9 @@
 uid: microsoft.quantum.core.rangestep
 name: RangeStep
 type: function
-namespace: Microsoft.Quantum.Core
+namespace: microsoft.quantum.core
 summary: 범위의 다음 값이 계산 되는 방법을 지정 하는 정수를 반환 합니다.
-remarks: 범위 식의 `start`첫 번째 요소는이 전달 될 때까지 `start+step` `start+step+step` `end` , 두 번째 요소는, 세 번째 요소는 등입니다.
+remarks: 범위 식의 첫 번째 요소는이 `start` `start+step` `start+step+step` 전달 될 때까지, 두 번째 요소는, 세 번째 요소는 등입니다. `end`
 syntax: 'function RangeStep (range : Range) : Int'
 input:
   content: '(range : Range)'
@@ -19,9 +19,9 @@ output:
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 30f67fba4e263f3b01bec1c360198728087783f2
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 7196f33548767bb47fde9e8bbd6b6dcf720e5f9c
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677322"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89337946"
