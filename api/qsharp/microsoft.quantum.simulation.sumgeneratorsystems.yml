@@ -2,27 +2,27 @@
 uid: microsoft.quantum.simulation.sumgeneratorsystems
 name: SumGeneratorSystems
 type: function
-namespace: Microsoft.Quantum.Simulation
-summary: 새 GeneratorSystem `GeneratorSystem`을 만들려면를 여러 개 추가 합니다.
+namespace: microsoft.quantum.simulation
+summary: '`GeneratorSystem`새 GeneratorSystem을 만들려면를 여러 개 추가 합니다.'
 syntax: 'function SumGeneratorSystems (generatorSystems : Microsoft.Quantum.Simulation.GeneratorSystem[]) : Microsoft.Quantum.Simulation.GeneratorSystem'
 input:
   content: '(generatorSystems : Microsoft.Quantum.Simulation.GeneratorSystem[])'
   types:
   - name: generatorSystems
-    summary: '`GeneratorSystem[]` 유형의 배열입니다.'
+    summary: '`GeneratorSystem[]` 형식의 배열입니다.'
     isArray: true
     uid: microsoft.quantum.simulation.generatorsystem
 output:
   content: Microsoft.Quantum.Simulation.GeneratorSystem
   types:
-  - summary: 입력 `GeneratorSystem` 생성기 시스템의 합계인 시스템을 나타내는입니다.
+  - summary: '`GeneratorSystem`입력 생성기 시스템의 합계인 시스템을 나타내는입니다.'
     uid: microsoft.quantum.simulation.generatorsystem
 seeAlso:
 - microsoft.quantum.canon.generatorsystem
 metadata:
-  ms.openlocfilehash: 5474e35cb303a6f490794a77483aafd609724eaa
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: cf4fe3793578c1050f7a95773112985ad671a695
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82687321"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89328392"

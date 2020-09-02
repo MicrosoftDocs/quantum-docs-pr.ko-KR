@@ -2,7 +2,7 @@
 uid: microsoft.quantum.arithmetic.greaterthan
 name: GreaterThan
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: >-
   비교 결과에 따라 대상의 범위를 대칭 이동 하는 두 개의 정수를 해당 형식으로 인코딩된 두 정수 사이에 보다 큼 비교를 적용 합니다.
 
@@ -14,7 +14,7 @@ references: >-
   - Thomas G. Draper, Samuel A. Kutin, David Petrie Moulton: "A new 퀀텀 ripple and A new, 2004.
     https://arxiv.org/abs/quant-ph/0410184v1
 
-  - Thomas Haener, Martin Roetteler, Krysta M. Svore: "2n를 사용 하는 Toffoli + 2 based 모듈형 곱셈", 2016https://arxiv.org/abs/1611.07995
+  - Thomas Haener, Martin Roetteler, Krysta M. Svore: "2n를 사용 하는 Toffoli + 2 based 모듈형 곱셈", 2016 https://arxiv.org/abs/1611.07995
 input:
   content: '(xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, result : Qubit)'
   types:
@@ -37,9 +37,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 64c96858ea4bf1449a5ddd18f0f7cca45d09fb17
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: b6e2a3faab9db052cf77b987e5d7ba1578eb4081
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679607"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89341941"

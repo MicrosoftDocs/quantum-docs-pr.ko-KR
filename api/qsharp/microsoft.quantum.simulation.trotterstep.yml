@@ -2,8 +2,8 @@
 uid: microsoft.quantum.simulation.trotterstep
 name: TrotterStep
 type: function
-namespace: Microsoft.Quantum.Simulation
-summary: Trotter – Suzuki 분해를 `EvolutionGenerator` 사용 하 여에 설명 된 시스템의 시간 진화의 단일 시간 단계를 구현 합니다.
+namespace: microsoft.quantum.simulation
+summary: '`EvolutionGenerator`Trotter – Suzuki 분해를 사용 하 여에 설명 된 시스템의 시간 진화의 단일 시간 단계를 구현 합니다.'
 remarks: Trotter – Suzuki 분해에 대 한 자세한 내용은 [시간이 지정 된 컴퍼지션](/quantum/libraries/control-flow#time-ordered-composition)을 참조 하세요.
 syntax: 'function TrotterStep (evolutionGenerator : Microsoft.Quantum.Simulation.EvolutionGenerator, trotterOrder : Int, trotterStepSize : Double) : (Qubit[] => Unit is Adj + Ctl)'
 input:
@@ -23,7 +23,7 @@ input:
 output:
   content: (Qubit[] => Unit is Adj + Ctl)
   types:
-  - summary: 기간 `trotterStepSize`에 대 한 단일 시간 진화의 단일 단계를 대략적으로 나타내는 단일 작업입니다.
+  - summary: 기간에 대 한 단일 시간 진화의 단일 단계를 대략적으로 나타내는 단일 작업입니다 `trotterStepSize` .
     isOperation: true
     input:
       types:
@@ -38,9 +38,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: 7059972ad5494e7d2cd86c943314005f620ad60f
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 649c8cf249287df71297fd0ae1604fe6e4893f34
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82687221"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89328137"
