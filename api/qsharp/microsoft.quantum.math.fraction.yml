@@ -2,13 +2,13 @@
 uid: microsoft.quantum.math.fraction
 name: Fraction
 type: newtype
-namespace: Microsoft.Quantum.Math
-summary: 폼 `p/q`의 유리수를 나타냅니다. 정수 `p` 는 튜플의 첫 번째 요소이 고 `q` 는 튜플의 두 번째 요소입니다.
+namespace: microsoft.quantum.math
+summary: 폼의 유리수를 나타냅니다 `p/q` . 정수 `p` 는 튜플의 첫 번째 요소이 고 `q` 는 튜플의 두 번째 요소입니다.
 syntax: newtype Fraction = (Int, Int);
 metadata:
-  ms.openlocfilehash: 3059bc8bfb8e5f0cd92f373bc3999e25374dd777
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 63ff365d45d7000f2c75e72630da48fc75144eb9
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673806"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89343947"

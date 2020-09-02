@@ -2,14 +2,14 @@
 uid: microsoft.quantum.canon.applyifzeroca
 name: ApplyIfZeroCA
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   기존 결과 값에 0이 조건 화 된 단일 작업을 적용 합니다.
 
 
-  작업 `op` `result`및 결과 값이 지정 된 `op` `target` 경우이 인 `result` `Zero`경우에 적용 됩니다. 이면 `One`이 발생 하지 않습니다 `target`.
+  작업 `op` 및 결과 값이 지정 된 `result` `op` `target` 경우이 인 경우에 적용 됩니다 `result` `Zero` . 이면이 `One` 발생 하지 않습니다 `target` .
 
-  접미사 `CA` 는 적용 될 작업이 단일 (제어 가능 및 adjointable) 임을 나타냅니다.
+  접미사는 `CA` 적용 될 작업이 단일 (제어 가능 및 adjointable) 임을 나타냅니다.
 syntax: "operation ApplyIfZeroCA (result : Result, (op : ('T => Unit is Adj + Ctl), target : 'T)) : Unit"
 input:
   content: "(result : Result, (op : ('T => Unit is Adj + Ctl), target : 'T))"
@@ -52,9 +52,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifzeroa
 - microsoft.quantum.canon.applyifzeroca
 metadata:
-  ms.openlocfilehash: 64e35b2fc198e7c3df862681e8c16870399f58c7
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 2acf8c83aa4c0afbd129b2f18267f45bf9537390
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82672582"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89358159"

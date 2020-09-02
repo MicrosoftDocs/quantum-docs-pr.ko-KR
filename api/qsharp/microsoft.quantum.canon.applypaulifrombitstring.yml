@@ -2,7 +2,7 @@
 uid: microsoft.quantum.canon.applypaulifrombitstring
 name: ApplyPauliFromBitString
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: 부울 배열의 해당 비트가 지정 된 입력과 일치 하는 경우 배열의 각 비트에 Pauli 연산자를 적용 합니다.
 remarks: 부울 배열과 퀀텀 레지스터의 길이는 같아야 합니다.
 syntax: 'operation ApplyPauliFromBitString (pauli : Pauli, bitApply : Bool, bits : Bool[], qubits : Qubit[]) : Unit'
@@ -10,7 +10,7 @@ input:
   content: '(pauli : Pauli, bitApply : Bool, bits : Bool[], qubits : Qubit[])'
   types:
   - name: pauli
-    summary: 에 `qubits[idx]` 적용할 pauli 연산자`bitsApply == bits[idx]`
+    summary: 에 적용할 pauli 연산자 `qubits[idx]``bitsApply == bits[idx]`
     isPrimitive: true
     uid: Pauli
   - name: bitApply
@@ -18,7 +18,7 @@ input:
     isPrimitive: true
     uid: Bool
   - name: bits
-    summary: 에서 `qubits` 작동 해야 하는 해당 고 비트를 지정 하는 부울 레지스터입니다.
+    summary: 에서 작동 해야 하는 해당 고 비트를 지정 하는 부울 레지스터입니다. `qubits`
     isArray: true
     isPrimitive: true
     uid: Bool
@@ -36,9 +36,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 5a65ec2aae17a1469e820e8cd14a0d50d0639015
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 7efea4ea34ee1ae68695aa74142ebf6bce93d289
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82672419"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89357972"

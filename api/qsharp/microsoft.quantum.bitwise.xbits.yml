@@ -2,9 +2,9 @@
 uid: microsoft.quantum.bitwise.xbits
 name: XBits
 type: function
-namespace: Microsoft.Quantum.Bitwise
+namespace: microsoft.quantum.bitwise
 summary: Pauli 연산자 배열의 X 비트를 나타내는 정수를 반환 합니다.
-remarks: '`paulis` 배열의 길이가 63 보다 큰 경우 함수는을 throw 합니다.'
+remarks: 배열의 길이가 63 보다 큰 경우 함수는을 throw 합니다 `paulis` .
 syntax: 'function XBits (paulis : Pauli[]) : Int'
 input:
   content: '(paulis : Pauli[])'
@@ -17,15 +17,15 @@ input:
 output:
   content: Int
   types:
-  - summary: '{62}\,정수 $x $ (p_ p_{61}\,\dots ..\,p_0) $ (여기서 $p _i = $0 인 경우 `paulis[i]` `PauliI` $p _i = $1 인 경우 `PauliZ` 이 `paulis[i]` `PauliX` 고, 그렇지 않으면입니다 `PauliY`.'
+  - summary: 정수 $x $ (p_ {62} \, p_ {61} \, \dots .. \, p_0) $ (여기서 $p _i = $0 인 경우 $p _i = $1 인 경우 `paulis[i]` `PauliI` `PauliZ` `paulis[i]` 이 고 `PauliX` `PauliY` , 그렇지 않으면입니다.
     isPrimitive: true
     uid: Int
 seeAlso:
 - zbits
 metadata:
-  ms.openlocfilehash: 0dccf94d895984b3661790b44f10455fce35331d
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 386db905e433b5ab424eae80209ac9907ba3ed8c
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680578"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89351019"

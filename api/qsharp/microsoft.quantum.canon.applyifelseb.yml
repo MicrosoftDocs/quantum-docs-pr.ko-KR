@@ -2,22 +2,22 @@
 uid: microsoft.quantum.canon.applyifelseb
 name: ApplyIfElseB
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   는 클래식 비트의 값에 따라 두 작업 중 하나를 적용 합니다.
 
 
-  비트가 `bit` `trueOp` 지정 된 경우 `trueInput` `bit` 가 `true`인 경우 해당 입력으로 작업을 적용 하 고가 `falseOp(falseInput)` `bit` `false`인 경우 적용 됩니다.
+  비트가 지정 된 경우 `bit` 가 인 경우 `trueOp` 해당 입력으로 작업을 적용 `trueInput` `bit` `true` 하 고가 인 경우 적용 됩니다 `falseOp(falseInput)` `bit` `false` .
 syntax: "operation ApplyIfElseB (bit : Bool, (trueOp : ('T => Unit), trueInput : 'T), (falseOp : ('U => Unit), falseInput : 'U)) : Unit"
 input:
   content: "(bit : Bool, (trueOp : ('T => Unit), trueInput : 'T), (falseOp : ('U => Unit), falseInput : 'U))"
   types:
   - name: bit
-    summary: 또는 `trueOp` `falseOp` 를 적용할지 여부를 결정 하는 데 사용 되는 부울 값입니다.
+    summary: 또는를 적용할지 여부를 결정 하는 데 사용 되는 부울 값 `trueOp` `falseOp` 입니다.
     isPrimitive: true
     uid: Bool
   - name: trueOp
-    summary: 가 인 `bit` `true`경우 적용 될 작업입니다.
+    summary: 가 인 경우 적용 될 작업 `bit` 입니다 `true` .
     isOperation: true
     input:
       types:
@@ -28,11 +28,11 @@ input:
       - isPrimitive: true
         uid: Unit
   - name: trueInput
-    summary: 가 인 `trueOp` `bit` `true`경우에 제공 되는 입력입니다.
+    summary: 가 인 경우에 제공 되는 입력입니다 `trueOp` `bit` `true` .
     uid: "'T"
     isLocal: true
   - name: falseOp
-    summary: 가 인 `bit` `false`경우 적용 될 작업입니다.
+    summary: 가 인 경우 적용 될 작업 `bit` 입니다 `false` .
     isOperation: true
     input:
       types:
@@ -43,7 +43,7 @@ input:
       - isPrimitive: true
         uid: Unit
   - name: falseInput
-    summary: 가 인 `falseOp` `bit` `false`경우에 제공 되는 입력입니다.
+    summary: 가 인 경우에 제공 되는 입력입니다 `falseOp` `bit` `false` .
     uid: "'U"
     isLocal: true
 output:
@@ -53,9 +53,9 @@ output:
     uid: Unit
 typeParameters:
 - uid: "'T"
-  summary: 조건부로 적용할 작업 `trueOp` 의 입력 형식입니다.
+  summary: 조건부로 적용할 작업의 입력 형식 `trueOp` 입니다.
 - uid: "'U"
-  summary: 조건부로 적용할 작업 `falseOp` 의 입력 형식입니다.
+  summary: 조건부로 적용할 작업의 입력 형식 `falseOp` 입니다.
 seeAlso:
 - microsoft.quantum.canon.applyifzero
 - microsoft.quantum.canon.applyifone
@@ -63,9 +63,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifelsera
 - microsoft.quantum.canon.applyifelserca
 metadata:
-  ms.openlocfilehash: cce5dba2473874f5af7c8cbb41a69ed6ba62e7c7
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 756cfb829ce29e658641e9e7a4e42c626bce4798
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82675026"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89350424"

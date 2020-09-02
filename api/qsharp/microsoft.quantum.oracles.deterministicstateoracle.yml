@@ -2,7 +2,7 @@
 uid: microsoft.quantum.oracles.deterministicstateoracle
 name: DeterministicStateOracle
 type: newtype
-namespace: Microsoft.Quantum.Oracles
+namespace: microsoft.quantum.oracles
 summary: >-
   결정적 상태 준비를 위한 oracle을 나타냅니다.
 
@@ -10,16 +10,16 @@ summary: >-
   Oracle $O $에 대 한 입력은 다음과 같습니다.
 
 
-  - 원하는 퀀텀 상태 $ \ket{\psi}\_s $를 저장할 레지스터입니다.
+  - 원하는 퀀텀 상태 $ \ket{\psi} s $를 저장할 레지스터입니다 \_ .
 remarks: >-
-  $O \ket{0}= \ket{\psi} $에서 정의한이 oracle은 상태 $ \ket{\psi} $를 만들기 위해 계산{0}기준 상태 $ \ket $에 대해 작동 합니다.
+  $O \ket = \ket{\psi} $에서 정의한이 oracle {0} 은 {0} 상태 $ \ket{\psi} $를 만들기 위해 계산 기준 상태 $ \ket $에 대해 작동 합니다.
 
   첫 번째 매개 변수는 $ \ket{\psi} $의 기본 비트 레지스터입니다.
 syntax: newtype DeterministicStateOracle = (Qubit[] => Unit is Adj + Ctl);
 metadata:
-  ms.openlocfilehash: 35d4b0243fac954c483a81ae1cccb46b44759ca0
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 49a8342a6e8a0fcae7a7cdae05967187c98ec34c
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681303"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89332098"

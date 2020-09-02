@@ -2,31 +2,31 @@
 uid: microsoft.quantum.oracles.deterministicstateoraclefromstateoracle
 name: DeterministicStateOracleFromStateOracle
 type: function
-namespace: Microsoft.Quantum.Oracles
-summary: 형식의 `StateOracle` oracle을로 `DeterministicStateOracle`변환 합니다.
+namespace: microsoft.quantum.oracles
+summary: 형식의 oracle `StateOracle` 을로 변환 `DeterministicStateOracle` 합니다.
 syntax: 'function DeterministicStateOracleFromStateOracle (idxFlagQubit : Int, stateOracle : Microsoft.Quantum.Oracles.StateOracle) : Microsoft.Quantum.Oracles.DeterministicStateOracle'
 input:
   content: '(idxFlagQubit : Int, stateOracle : Microsoft.Quantum.Oracles.StateOracle)'
   types:
   - name: idxFlagQubit
-    summary: '두 레지스터에 대해 명시적으로 동작 하는 `stateOracle` $A $의 플래그의 인덱스입니다. 플래그 $f $와 system $s $ (예: $A \ket{0}\_f\ket {\ psi}\_s $)입니다.'
+    summary: '`stateOracle`두 레지스터에 대해 명시적으로 동작 하는 $A $의 플래그의 인덱스입니다. 플래그 $f $와 system $s $ (예: $A \ket {0} \_ f\ket {\ psi} \_ s $)입니다.'
     isPrimitive: true
     uid: Int
   - name: stateOracle
-    summary: 형식의 `StateOracle`상태 준비 oracle $A입니다.
+    summary: 형식의 상태 준비 oracle $A `StateOracle` 입니다.
     uid: microsoft.quantum.oracles.stateoracle
 output:
   content: Microsoft.Quantum.Oracles.DeterministicStateOracle
   types:
-  - summary: Oracle $A $와 같은 상태를 준비 하지만, 이제 `DeterministicStateOracle`는 $a, s $는 더 이상 명시적으로 구분 되지 않습니다. 예를 들어  $A \ket{0\psi}\_{as} $입니다.
+  - summary: Oracle $A $와 같은 상태를 준비 하지만, 이제는 `DeterministicStateOracle` $a, s $는 더 이상 명시적으로 구분 되지 않습니다. 예를 들어  $A \ket{0\psi} \_ {as} $입니다.
     uid: microsoft.quantum.oracles.deterministicstateoracle
 seeAlso:
 - microsoft.quantum.canon.stateoracle
 - microsoft.quantum.canon.deterministicstateoracle
 metadata:
-  ms.openlocfilehash: cf6ddc1f1baff27c986f36d944e67192958a0d3f
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 20ce22cb90be3f7fd3c135e9dccce4482a3e3939
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681296"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89332064"
