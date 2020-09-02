@@ -2,16 +2,16 @@
 uid: microsoft.quantum.preparation.quantumrom
 name: QuantumROM
 type: function
-namespace: Microsoft.Quantum.Preparation
+namespace: microsoft.quantum.preparation
 summary: >-
   는 퀀텀 ROM 기술을 사용 하 여 지정 된 밀도 행렬을 나타냅니다.
 
 
-  $ 계수의 $ \ alpha_j $ $N 목록이 지정 된 경우,이는 \ket{j}\bra{j} 기술을 사용 하 여 밀도 행렬 $ \rho = \ p_j {j = 0} ^ {N-1} \frac{| sum_ |}의 purification에 대 한 근사치 $ \tilde\rho\ sum_ {j = 0} ^ {N-1} alpha_j $를 준비 하는 단일 $U $를 반환 합니다. {\ sum_k | \ alpha_k |} \ket{j}\bra{j} $. 이러한 근사값에서 $ \epsilon $ 오류는 $ | p_j-\frac{| alpha_j |}입니다. {\ sum_k | \ alpha_k |} | \le \le/N $ 및 $\|\tilde\rho-\rho\| \le \te\e $를 입력 합니다. 즉, $ $ \begin{align} U\ket{0}^ {\Lceil\ log_2 N\rceil} \ k{0}^ {m} = \ sum_ {j = 0} ^ {N-1} \sqrt{p_j} \ket{j}\ket{\text{garbage} _j}입니다.
+  $ 계수의 $ \ alpha_j $ $N 목록이 지정 된 경우,이는 \ket{j}\bra{j} 기술을 사용 하 여 밀도 행렬 $ \rho = \ p_j {j = 0} ^ {N-1} \frac{| sum_ |}의 purification에 대 한 근사치 $ \tilde\rho\ sum_ {j = 0} ^ {N-1} alpha_j $를 준비 하는 단일 $U $를 반환 합니다. {\ sum_k | \ alpha_k |} \ket{j}\bra{j} $. 이러한 근사값에서 $ \epsilon $ 오류는 $ | p_j-\frac{| alpha_j |}입니다. {\ sum_k | \ alpha_k |} | \le \le/N $ 및 $ \| \tilde\rho-\rho \| \le \te\e $를 입력 합니다. 즉, $ $ \begin{align} U\ket {0} ^ {\lceil\ log_2 N\rceil} \ k {0} ^ {m} = \ sum_ {j = 0} ^ {N-1} \sqrt{p_j} \ket{j}\ket{\text{garbage} _j}입니다.
 
   \end{align} $ $
 examples: >-
-  다음 코드 조각에서는 $3 $-stbit 상태 $ \rho = \ sum_ {j = 0} ^{4}\frac{| alpha_j |}의 purification를 준비 합니다. {\ sum_k | \ alpha_k |} \ket{j}\bra{j} $, where $ \vec\alpha = (1.0, 2.0, 3.0, 4.0, 5.0) $ 및 오류는 `1e-3`입니다.
+  다음 코드 조각에서는 $3 $-stbit 상태 $ \rho = \ sum_ {j = 0} ^ {4} \frac{| alpha_j |}의 purification를 준비 합니다. {\ sum_k | \ alpha_k |} \ket{j}\bra{j} $, where $ \vec\alpha = (1.0, 2.0, 3.0, 4.0, 5.0) $ 및 오류는 `1e-3` 입니다.
 
 
   ```qsharp
@@ -30,7 +30,7 @@ examples: >-
 
   ```
 syntax: 'function QuantumROM (targetError : Double, coefficients : Double[]) : ((Int, (Int, Int)), Double, ((Microsoft.Quantum.Arithmetic.LittleEndian, Qubit[]) => Unit is Adj + Ctl))'
-references: '- 선형 T 복잡성 Ryan Babbush, Craig Gidney, Dominic Berry, 네, Spectra Wiebe, Jarrod McClean, Alexandru 고, 연한, 오스틴 Fowler, Hartmut Neven를 사용 하 여 퀀텀 회로에서 전자 인코딩https://arxiv.org/abs/1805.03662'
+references: '- 선형 T 복잡성 Ryan Babbush, Craig Gidney, Dominic Berry, 네, Spectra Wiebe, Jarrod McClean, Alexandru 고, 연한, 오스틴 Fowler, Hartmut Neven를 사용 하 여 퀀텀 회로에서 전자 인코딩 https://arxiv.org/abs/1805.03662'
 input:
   content: '(targetError : Double, coefficients : Double[])'
   types:
@@ -53,7 +53,7 @@ output:
       ## <a name="first-parameter"></a>첫 번째 매개 변수
 
 
-      `x = y + z` 는 할당 `(x,(y,z))` 된 총 수 인 튜플을, `y` 는 `LittleEndian` 레지스터의 값이 고 `z` ,은 가비지 비트 수입니다.
+      `(x,(y,z))`는 할당 된 총 수 인 튜플을,는 레지스터의 값이 고,은 `x = y + z` `y` 가비지 비트 수입니다 `LittleEndian` `z` .
 
 
       ## <a name="second-parameter"></a>두 번째 매개 변수
@@ -92,9 +92,9 @@ output:
       - Adjoint
       - Controlled
 metadata:
-  ms.openlocfilehash: 9bf373f0cb7c495f8c29a4426861c74fbb0ec7f6
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 6f0626eeccd1c8b411f8210b5e59f0321527a39c
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82686487"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89331283"

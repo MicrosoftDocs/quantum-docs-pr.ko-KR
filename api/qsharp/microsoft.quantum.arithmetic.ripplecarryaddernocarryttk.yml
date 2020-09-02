@@ -2,12 +2,12 @@
 uid: microsoft.quantum.arithmetic.ripplecarryaddernocarryttk
 name: RippleCarryAdderNoCarryTTK
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: >-
   해독 가능, 내부 ripple-수행 하지 않고 두 개의 정수를 추가 합니다.
 
 
-  LittleEndian 레지스터 `xs` 및 `ys`에서 인코딩된 두 개의 $n $ bit 정수를 지정 하면 연산은 두 정수 모듈로 $2 ^ n $의 합계를 계산 합니다. 여기서 $n $는 입력 `xs` 및 `ys`의 비트 크기입니다. 이는 운반 비트를 계산 하지 않습니다.
+  LittleEndian 레지스터 및에서 인코딩된 두 개의 $n $ bit 정수를 지정 하면 `xs` `ys` 연산은 두 정수 모듈로 $2 ^ n $의 합계를 계산 합니다. 여기서 $n $는 입력 및의 비트 크기입니다 `xs` `ys` . 이는 운반 비트를 계산 하지 않습니다.
 remarks: 이 작업은 RippleCarryAdderTTK와 동일한 기능을 수행 하지만 운반 비트를 반환 하지 않습니다.
 syntax: 'operation RippleCarryAdderNoCarryTTK (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 references: >-
@@ -31,9 +31,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: cf6855325edc354d22b0324f5949a435a11ce8bb
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 88ebe0e7799d446d4a3ff668a9abe8dd71601642
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676674"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352804"

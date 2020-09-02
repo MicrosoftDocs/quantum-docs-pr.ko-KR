@@ -2,8 +2,8 @@
 uid: microsoft.quantum.arithmetic.squarei
 name: SquareI
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
-summary: '`result`에서 정수의 `xs` 제곱을 계산 하 여 처음에 0 이어야 합니다.'
+namespace: microsoft.quantum.arithmetic
+summary: 에서 정수의 제곱을 계산 하 `xs` 여 `result` 처음에 0 이어야 합니다.
 remarks: 표준 시프트 및 추가 방법을 사용 하 여 사각형을 계산 합니다. 일반 승수를 적용 하기 전에 먼저 xs를 복사 하 고 복사 작업을 실행 취소 하는 단순 전방 솔루션과 비교 하 여 $n-$1의 비트를 저장 합니다.
 syntax: 'operation SquareI (xs : Microsoft.Quantum.Arithmetic.LittleEndian, result : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
@@ -13,7 +13,7 @@ input:
     summary: $n $ bit number to square (LittleEndian)
     uid: microsoft.quantum.arithmetic.littleendian
   - name: result
-    summary: $2n $-bit result (LittleEndian)는 $ \ket{0}$ 상태 여야 합니다.
+    summary: $2n $-bit result (LittleEndian)는 $ \ket $ 상태 여야 합니다 {0} .
     uid: microsoft.quantum.arithmetic.littleendian
 output:
   content: Unit
@@ -24,9 +24,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: eedc2536da0fd75712929af44f5167d3fc73add3
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 4b001663d1d4f863d0b597e31bec87c65871ebc1
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676619"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352702"

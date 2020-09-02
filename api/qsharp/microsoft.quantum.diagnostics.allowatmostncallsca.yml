@@ -2,7 +2,7 @@
 uid: microsoft.quantum.diagnostics.allowatmostncallsca
 name: AllowAtMostNCallsCA
 type: operation
-namespace: Microsoft.Quantum.Diagnostics
+namespace: microsoft.quantum.diagnostics
 summary: 이 작업 및 해당 adjoint 호출 사이에는 지정 된 작업이 지정 된 횟수 만큼만 호출 됨을 어설션 합니다.
 remarks: 이 작업을 지원 하지 않는 대상에서는이 작업을 수행할 수 없습니다.
 examples: >-
@@ -56,9 +56,9 @@ output:
 functors:
 - Adjoint
 metadata:
-  ms.openlocfilehash: 05a5791a9ec42aad2a2e90bb048204c642e68511
-  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+  ms.openlocfilehash: 70c12ee6d605a6132770ec07f69a889e46eecdc1
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 08/25/2020
-  ms.locfileid: "88864178"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89337878"

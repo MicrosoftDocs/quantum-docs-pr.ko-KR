@@ -2,10 +2,10 @@
 uid: microsoft.quantum.machinelearning.controlledrotation
 name: ControlledRotation
 type: newtype
-namespace: Microsoft.Quantum.MachineLearning
+namespace: microsoft.quantum.machinelearning
 summary: 대상 및 컨트롤 인덱스, 회전 축 및 모델 매개 변수 벡터로의 인덱스를 기준으로 제어 되는 회전을 설명 합니다.
 remarks: >-
-  을 (를) 빈 인덱스 배열 ( `ControlIndices` `new Int[0]`)로 설정 하 여 미제어 회전을 표현할 수 있습니다.
+  `ControlIndices`을 (를) 빈 인덱스 배열 ()로 설정 하 여 미제어 회전을 표현할 수 있습니다 `new Int[0]` .
 
 
   ### <a name="examples"></a>예
@@ -24,9 +24,9 @@ remarks: >-
   ```
 syntax: newtype ControlledRotation = ((Int, Int[]), Pauli, Int);
 metadata:
-  ms.openlocfilehash: 058c1dc75dd169971d0c542d0577d739327e4d56
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 132a69f35e1cbec57c15c3f362a25849e3d66c27
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681686"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89344916"
