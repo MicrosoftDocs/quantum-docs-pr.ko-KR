@@ -2,7 +2,7 @@
 uid: microsoft.quantum.arrays.exclude
 name: Exclude
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: 지정 된 인덱스 목록에서 요소를 제외 하 고 다른 배열의 요소를 포함 하는 배열을 반환 합니다.
 examples: >-
   ```qsharp
@@ -31,7 +31,7 @@ input:
 output:
   content: "'T[]"
   types:
-  - summary: '인덱스를 `output` 에 `output[0]` `output[1]` `array` `remove`표시 하지 않는의 첫 번째 요소 (예: 두 번째 요소 등) 인 배열입니다.'
+  - summary: '인덱스를 `output` `output[0]` 에 표시 하지 않는의 첫 번째 요소 (예: `array` `remove` `output[1]` 두 번째 요소 등) 인 배열입니다.'
     isArray: true
     uid: "'T"
     isLocal: true
@@ -39,9 +39,9 @@ typeParameters:
 - uid: "'T"
   summary: 배열 요소의 형식입니다.
 metadata:
-  ms.openlocfilehash: 715610f2e8d0932a22d6dfdd0232e981a495fd6f
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 7e0f978f711962247c08c1b367f3ca62e16cad2c
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676474"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352345"

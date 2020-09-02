@@ -2,8 +2,8 @@
 uid: microsoft.quantum.arrays.fold
 name: Fold
 type: function
-namespace: Microsoft.Quantum.Arrays
-summary: 배열을 `f` `array`통해 함수를 반복 하 여를 `f(f(f(initialState, array[0]), array[1]), ...)`반환 합니다.
+namespace: microsoft.quantum.arrays
+summary: 배열을 통해 함수를 반복 `f` `array` 하 여를 반환 `f(f(f(initialState, array[0]), array[1]), ...)` 합니다.
 examples: >-
   ```qsharp
 
@@ -45,18 +45,18 @@ input:
 output:
   content: "'State"
   types:
-  - summary: 의 `array`모든 요소를 반복한 후 폴더에서 반환 되는 최종 상태입니다.
+  - summary: 의 모든 요소를 반복한 후 폴더에서 반환 되는 최종 상태 `array` 입니다.
     uid: "'State"
     isLocal: true
 typeParameters:
 - uid: "'State"
-  summary: 함수가 작동 하는 `folder` 상태 유형 (예:)은 첫 번째 인수로 수락 하 고를 반환 합니다.
+  summary: 함수가 작동 하는 상태 유형 (예:)은 `folder` 첫 번째 인수로 수락 하 고를 반환 합니다.
 - uid: "'T"
-  summary: '`array` 요소의 형식입니다.'
+  summary: '`array`요소의 형식입니다.'
 metadata:
-  ms.openlocfilehash: d02d20c049e8b8d21214028efcd6a647067bf71f
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 584344137b498a9c5348cb1f0a0cb85aeec127bd
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676439"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352311"

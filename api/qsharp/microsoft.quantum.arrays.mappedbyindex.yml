@@ -2,7 +2,7 @@
 uid: microsoft.quantum.arrays.mappedbyindex
 name: MappedByIndex
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: 배열의 인덱싱된 요소에 대해 정의 된 배열과 함수가 지정 된 경우 함수에서 원래 배열의 이미지로 구성 된 새 배열을 반환 합니다.
 examples: >-
   다음 두 줄은 동일 합니다.
@@ -15,7 +15,7 @@ examples: >-
   ```
 
 
-  and
+  및
 
 
   ```qsharp
@@ -28,7 +28,7 @@ input:
   content: "(mapper : ((Int, 'T) -> 'U), array : 'T[])"
   types:
   - name: mapper
-    summary: 요소와 해당 `(Int, 'T)` 인덱스 `'U` 를 매핑하는 데 사용 되는의 함수입니다.
+    summary: "`(Int, 'T)` `'U` 요소와 해당 인덱스를 매핑하는 데 사용 되는의 함수입니다."
     isFunction: true
     input:
       types:
@@ -41,28 +41,28 @@ input:
       - uid: "'U"
         isLocal: true
   - name: array
-    summary: 에 있는 요소의 배열 `'T`입니다.
+    summary: 에 있는 요소의 배열 `'T` 입니다.
     isArray: true
     uid: "'T"
     isLocal: true
 output:
   content: "'U[]"
   types:
-  - summary: 함수로 매핑되 `'U[]` 는 요소의 배열입니다. `mapper`
+  - summary: "`'U[]`함수로 매핑되는 요소의 배열입니다 `mapper` ."
     isArray: true
     uid: "'U"
     isLocal: true
 typeParameters:
 - uid: "'T"
-  summary: '`array` 요소의 형식입니다.'
+  summary: '`array`요소의 형식입니다.'
 - uid: "'U"
-  summary: '`mapper` 함수의 결과 형식입니다.'
+  summary: 함수의 결과 형식 `mapper` 입니다.
 seeAlso:
 - mapped
 metadata:
-  ms.openlocfilehash: 64741df4a3d7b7937f13614ffc9c7c7ec1aa3f7b
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: d6f50c3fe90998431b71050a953ec5dc08e31e92
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680927"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89351937"

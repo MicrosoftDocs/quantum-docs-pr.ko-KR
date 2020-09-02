@@ -2,7 +2,7 @@
 uid: microsoft.quantum.arrays.drawmany
 name: DrawMany
 type: operation
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: 지정 된 수의 샘플에 대해 작업을 반복 하 여 배열에서 해당 출력을 수집 합니다.
 examples: >-
   다음은 한 번에 단일 비트를 샘플링 하는 연산이 주어진 경우 정수를 샘플링 합니다.
@@ -50,9 +50,9 @@ typeParameters:
 seeAlso:
 - microsoft.quantum.canon.repeat
 metadata:
-  ms.openlocfilehash: 8ed96fbb8b543cf8f9f167304e45e5f4fd82ad44
-  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.openlocfilehash: a4f3ab6f4224a9b5a293fe458ad653171983a6cc
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 07/02/2020
-  ms.locfileid: "85886772"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352396"

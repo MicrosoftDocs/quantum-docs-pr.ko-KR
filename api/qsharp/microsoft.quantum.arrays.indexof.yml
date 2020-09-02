@@ -2,10 +2,10 @@
 uid: microsoft.quantum.arrays.indexof
 name: IndexOf
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: 배열에서 지정 된 조건자를 만족 하는 첫 번째 요소의 첫 번째 인덱스를 반환 합니다. 이러한 요소가 없는 경우-1을 반환 합니다.
 examples: >-
-  해당 입력 `IsEven : Int -> Bool` 이 이더라도 인 경우에 `true` 만를 반환 하는 함수 라고 가정 합니다. 그런 다음와 함께 `IndexOf` 사용 하 여 배열에서 첫 번째 짝수 요소를 찾을 수 있습니다.
+  해당 `IsEven : Int -> Bool` 입력이 이더라도 인 경우에만를 반환 하는 함수 라고 가정 `true` 합니다. 그런 다음와 함께 사용 하 여 `IndexOf` 배열에서 첫 번째 짝수 요소를 찾을 수 있습니다.
 
 
   ```Q#
@@ -38,13 +38,13 @@ input:
 output:
   content: Int
   types:
-  - summary: True `predicate(arr[idx])` 인 가장 작은 `idx` 인덱스 이거나, 이러한 요소가 없는 경우-1입니다.
+  - summary: True 인 가장 작은 인덱스 이거나 `idx` `predicate(arr[idx])` , 이러한 요소가 없는 경우-1입니다.
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 6fb95357096751e53f601a9c855ff656e2dd1b34
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 6b0097c4feb41a00f0d9c1fcb4c2b5dbcaa186ef
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680998"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352124"

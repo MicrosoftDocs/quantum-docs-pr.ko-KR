@@ -2,9 +2,9 @@
 uid: microsoft.quantum.math.bitsizel
 name: BitSizeL
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: >-
-  음수가 아닌 정수의 `a`경우를 나타내는 `a`데 필요한 비트 수를 반환 합니다.
+  음수가 아닌 정수의 경우 `a` 를 나타내는 데 필요한 비트 수를 반환 `a` 합니다.
 
 
   즉, $a < 2 ^ n $와 같은 가장 작은 $n $를 반환 합니다.
@@ -19,13 +19,13 @@ input:
 output:
   content: Int
   types:
-  - summary: 의 `a`비트 크기입니다.
+  - summary: 의 비트 크기 `a` 입니다.
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 70293cfdf4beb784e379632d2e7dc193300d4b52
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 6f3e3219e62cf1c51153185ef9a78d710f4fd60f
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82683393"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89344389"

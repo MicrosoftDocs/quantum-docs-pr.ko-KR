@@ -2,7 +2,7 @@
 uid: microsoft.quantum.arrays.rest
 name: Rest
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: 첫 번째 배열 요소가 삭제 된 경우를 제외 하 고 입력 배열과 같은 배열을 만듭니다.
 syntax: "function Rest (array : 'T[]) : 'T[]"
 input:
@@ -16,7 +16,7 @@ input:
 output:
   content: "'T[]"
   types:
-  - summary: 요소 `array[1..Length(array) - 1]`를 포함 하는 배열입니다.
+  - summary: 요소를 포함 하는 배열 `array[1..Length(array) - 1]` 입니다.
     isArray: true
     uid: "'T"
     isLocal: true
@@ -24,9 +24,9 @@ typeParameters:
 - uid: "'T"
   summary: 배열 요소의 형식입니다.
 metadata:
-  ms.openlocfilehash: 045480f59b03523e39f8feaddacc17b9e6a20c8a
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 7ffe760d9abfac16053228dc2d3f8518a1b3b288
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680858"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89351767"

@@ -2,8 +2,8 @@
 uid: microsoft.quantum.math.continuedfractionconvergenti
 name: ContinuedFractionConvergentI
 type: function
-namespace: Microsoft.Quantum.Math
-summary: 일치에 가장 가까운 `fraction` 연속 분수를 찾습니다.`denominatorBound`
+namespace: microsoft.quantum.math
+summary: 일치에 가장 가까운 연속 분수를 찾습니다. `fraction``denominatorBound`
 syntax: 'function ContinuedFractionConvergentI (fraction : Microsoft.Quantum.Math.Fraction, denominatorBound : Int) : Microsoft.Quantum.Math.Fraction'
 input:
   content: '(fraction : Microsoft.Quantum.Math.Fraction, denominatorBound : Int)'
@@ -16,12 +16,12 @@ input:
 output:
   content: Microsoft.Quantum.Math.Fraction
   types:
-  - summary: 분모와 작거나 같은 `fraction` 에 가장 가까운 연속 분수`denominatorBound`
+  - summary: 분모와 작거나 같은에 가장 가까운 연속 분수 `fraction``denominatorBound`
     uid: microsoft.quantum.math.fraction
 metadata:
-  ms.openlocfilehash: 4134f4b1f53403eee1c2c87c7442b05931c40026
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 60865a8dd02392f9dcd8585c4301939d5fdcfa17
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82685732"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89344186"
