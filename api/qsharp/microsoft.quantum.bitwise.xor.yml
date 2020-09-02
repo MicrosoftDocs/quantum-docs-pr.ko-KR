@@ -2,11 +2,11 @@
 uid: microsoft.quantum.bitwise.xor
 name: Xor
 type: function
-namespace: Microsoft.Quantum.Bitwise
+namespace: microsoft.quantum.bitwise
 summary: >-
   두 정수의 배타적 비트 or (XOR)를 반환 합니다.
 
-  이는 기본 제공 `^^^` 연산자와 동일한 계산을 수행 합니다.
+  이는 기본 제공 연산자와 동일한 계산을 수행 합니다 `^^^` .
 remarks: '자세한 내용은 [c # ^ 연산자](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/xor-operator) 를 참조 하세요.'
 examples: >-
   ```qsharp
@@ -34,9 +34,9 @@ output:
   - isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 8b7da5a00592a071617d775d71fb7f07931cf299
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 5df8cd3ce94d5868776955e26797dbbe265b5390
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680550"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89350951"

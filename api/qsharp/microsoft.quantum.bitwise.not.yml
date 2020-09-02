@@ -2,11 +2,11 @@
 uid: microsoft.quantum.bitwise.not
 name: Not
 type: function
-namespace: Microsoft.Quantum.Bitwise
+namespace: microsoft.quantum.bitwise
 summary: >-
   정수의 비트 NOT을 반환 합니다.
 
-  이는 기본 제공 `~~~` 연산자와 동일한 계산을 수행 합니다.
+  이는 기본 제공 연산자와 동일한 계산을 수행 합니다 `~~~` .
 remarks: '자세한 내용은 [c # ~ 연산자](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/bitwise-complement-operator) 를 참조 하세요.'
 examples: >-
   ```qsharp
@@ -29,9 +29,9 @@ output:
   - isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 3de6cbe072ab770fba893c41112df3bb686c3e79
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 7393d7628bff3b4e0b15596119d71b86574180c7
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680661"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89351206"

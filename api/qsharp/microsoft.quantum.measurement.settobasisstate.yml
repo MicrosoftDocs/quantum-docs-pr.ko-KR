@@ -2,9 +2,9 @@
 uid: microsoft.quantum.measurement.settobasisstate
 name: SetToBasisState
 type: operation
-namespace: Microsoft.Quantum.Measurement
+namespace: microsoft.quantum.measurement
 summary: 필요에 따라 비트를 측정 하 고 비트 대칭을 적용 하 여 지정 된 계산 기준 상태로 원하는 비트를 설정 합니다.
-remarks: 이 작업의 invariant로 직후를 호출 `M(q)` 하면 `SetToBasisState(result, q)` 가 반환 `result`됩니다.
+remarks: 이 작업의 invariant로 직후를 호출 하면 `M(q)` `SetToBasisState(result, q)` 가 반환 됩니다 `result` .
 syntax: 'operation SetToBasisState (desired : Result, target : Qubit) : Unit'
 input:
   content: '(desired : Result, target : Qubit)'
@@ -23,9 +23,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 002ca4716f0aa57c0ddd4f33d421402c068ad244
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 1bd8b8d83ff2bee3dfb1f4a696ddc3b493a2bb82
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681351"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89332251"

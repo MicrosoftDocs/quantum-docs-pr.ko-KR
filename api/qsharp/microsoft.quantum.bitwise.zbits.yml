@@ -2,9 +2,9 @@
 uid: microsoft.quantum.bitwise.zbits
 name: ZBits
 type: function
-namespace: Microsoft.Quantum.Bitwise
+namespace: microsoft.quantum.bitwise
 summary: Pauli 연산자 배열의 Z 비트를 나타내는 정수를 반환 합니다.
-remarks: '`paulis` 배열의 길이가 63 보다 큰 경우 함수는을 throw 합니다.'
+remarks: 배열의 길이가 63 보다 큰 경우 함수는을 throw 합니다 `paulis` .
 syntax: 'function ZBits (paulis : Pauli[]) : Int'
 input:
   content: '(paulis : Pauli[])'
@@ -17,15 +17,15 @@ input:
 output:
   content: Int
   types:
-  - summary: '{62}\,정수 $x $ (p_ p_{61}\,\dots ..\,p_0) $ (여기서 $p _i = $0 인 경우 `paulis[i]` `PauliI` $p _i = $1 인 경우 `PauliX` 이 `paulis[i]` `PauliY` 고, 그렇지 않으면입니다 `PauliZ`.'
+  - summary: 정수 $x $ (p_ {62} \, p_ {61} \, \dots .. \, p_0) $ (여기서 $p _i = $0 인 경우 $p _i = $1 인 경우 `paulis[i]` `PauliI` `PauliX` `paulis[i]` 이 고 `PauliY` `PauliZ` , 그렇지 않으면입니다.
     isPrimitive: true
     uid: Int
 seeAlso:
 - xbits
 metadata:
-  ms.openlocfilehash: d7605a48451292792a97e9049125674c6716780f
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 38515f1ad8e6f4a11161f4bea0604a21a61c7546
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676434"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89350917"

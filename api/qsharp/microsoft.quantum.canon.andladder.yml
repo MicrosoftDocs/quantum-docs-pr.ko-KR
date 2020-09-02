@@ -2,14 +2,14 @@
 uid: microsoft.quantum.canon.andladder
 name: AndLadder
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   대상의 레지스터에서 제어 되는 "및 사다리"를 수행 합니다.
 
 
-  \_이 작업은 계산 기준, $ $ \begin{align} \ket{x 1, \dots, x\_n} \ket{y\_1, \dots, y\_{n-1}} \maps\ket{x\_1, \dots, x\_n} \ket{y\_1 \oplus (x\_1 \stx\_2), \sti의 매핑에 의해 설명 된 변환을 적용 합니다. y\_{n-1} \oplus (x\_1 \stx\_2 \st\cststomx\_{n-1}}, \end{align} $ $ where $ \ket{x\_1, \dots, x\_n} $는의 `controls`계산 기준 상태를 나타내며, 여기서 $ \ket{y\_1, \dots, y\_{n-1}} $는의 `targets`계산 기준 상태를 나타냅니다.
+  이 작업은 계산 기준, $ $ \begin{align} \ket{x \_ 1, \dots, x \_ n} \ket{y \_ 1, \dots, y \_ {n-1}} \maps\ket{x \_ 1, \dots, x \_ n} \ket{y \_ 1 \oplus (x 1 \stx 2), \sti의 매핑에 의해 설명 된 변환을 적용 합니다. \_ \_ y \_ {n-1} \oplus (x \_ 1 \stx \_ 2 \st\cststomx \_ {n-1}}, \end{align} $ $ where $ \ket{x \_ 1, \dots, x \_ n} $는의 계산 기준 상태를 나타내며 `controls` , 여기서 $ \ket{y \_ 1, \dots, y \_ {n-1}} $는의 계산 기준 상태를 나타냅니다 `targets` .
 remarks: >-
-  - 및 <xref:microsoft.quantum.canon.applymulticontrolledc> <xref:microsoft.quantum.canon.applymulticontrolledca>의 일부로 사용 됩니다.
+  - 및의 일부로 사용 <xref:microsoft.quantum.canon.applymulticontrolledc> <xref:microsoft.quantum.canon.applymulticontrolledca> 됩니다.
 
   - 설명 및 회로 다이어그램의 경우 그림 4.10, Nielsen & Chuang의 섹션 4.3을 참조 하세요.
 syntax: 'operation AndLadder (ccnot : Microsoft.Quantum.Canon.CCNOTop, controls : Qubit[], targets : Qubit[]) : Unit'
@@ -24,14 +24,14 @@ input:
     summary: >-
       및 사다리의 컨트롤로 사용할 비트의 레지스터입니다.
 
-      이 작업은 고정의 계산 기준 `controls` 상태를 유지 합니다.
+      이 작업은 고정의 계산 기준 상태를 유지 `controls` 합니다.
 
-      의 `controls` 길이는 2 자 이상 이어야 하며,의 `targets`길이는 1과 같아야 합니다.
+      의 길이는 `controls` 2 자 이상 이어야 하며,의 길이는 1과 같아야 합니다 `targets` .
     isArray: true
     isPrimitive: true
     uid: Qubit
   - name: targets
-    summary: 의 `targets` 길이는 1 자 이상 이어야 하 고 1의 `controls` 길이에서 1을 뺀 값 사이 여야 합니다.
+    summary: 의 길이는 `targets` 1 자 이상 이어야 하 고 1의 길이에서 1을 뺀 값 사이 여야 합니다 `controls` .
     isArray: true
     isPrimitive: true
     uid: Qubit
@@ -43,9 +43,9 @@ output:
 functors:
 - Adjoint
 metadata:
-  ms.openlocfilehash: 4cc74315145176fd3a2258a3d92b2f2dfb4d66d3
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 194e562588a7ea244b39795ea1c489a07a7fbfba
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676387"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89350883"

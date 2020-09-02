@@ -2,10 +2,10 @@
 uid: microsoft.quantum.math.extendedgreatestcommondivisorl
 name: ExtendedGreatestCommonDivisorL
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: $U \cdot a + v \cdot b = \operatorname{GCD} (a, b) $와 같이 튜플을 $ (u, v) $로 계산 합니다. 여기서 $ \operatorname{GCD} $은 $a $ $a $ 및 $b $의 최대 공약수입니다. GCD는 항상 양수입니다.
 syntax: 'function ExtendedGreatestCommonDivisorL (a : BigInt, b : BigInt) : (BigInt, BigInt)'
-references: '- 이 구현은 다음에 따라 구현 됩니다.https://en.wikipedia.org/wiki/Extended_Euclidean_algorithm'
+references: '- 이 구현은 다음에 따라 구현 됩니다. https://en.wikipedia.org/wiki/Extended_Euclidean_algorithm'
 input:
   content: '(a : BigInt, b : BigInt)'
   types:
@@ -27,9 +27,9 @@ output:
     - isPrimitive: true
       uid: BigInt
 metadata:
-  ms.openlocfilehash: ade2f3451a273b69bcabaeae06ef7b234816291b
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: fe9049c6d886b7920706ba92b4e2a19bc33d5d8d
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673845"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89344100"
