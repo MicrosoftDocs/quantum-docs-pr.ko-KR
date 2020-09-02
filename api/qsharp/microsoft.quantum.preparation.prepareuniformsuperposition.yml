@@ -2,16 +2,16 @@
 uid: microsoft.quantum.preparation.prepareuniformsuperposition
 name: PrepareUniformSuperposition
 type: operation
-namespace: Microsoft.Quantum.Preparation
+namespace: microsoft.quantum.preparation
 summary: >-
-  0부터까지 `nIndices`인코딩하는 상태에 대 한 균일 한 superposition를 만듭니다.
+  0부터까지 인코딩하는 상태에 대 한 균일 한 superposition를 만듭니다 `nIndices` .
 
 
-  즉,이 단일 $U $는 입력 상태가 $ \ket{0\cdots 0} $ 인 경우 $0 $에서 $1 $M까지 모든 숫자 상태에 대 한 균일 한 superposition를 만듭니다. 즉, $ $ \begin{align} U\ket{0}= \frac{1}{\sqrt{m}}\ sum_ {j = 0} ^ {M-1} \ket{j}.
+  즉,이 단일 $U $는 입력 상태가 $ \ket{0\cdots 0} $ 인 경우 $0 $에서 $1 $M까지 모든 숫자 상태에 대 한 균일 한 superposition를 만듭니다. 즉, $ $ \begin{align} U\ket {0} = \frac {1} {\sqrt{m}}\ sum_ {j = 0} ^ {M-1} \ket{j}.
 
   \end{align} $ $.
 examples: >-
-  다음 예에서는 $3 $ stbits에서 $ \frac{1}{{6}\sqrt} \ sum_ {j = 0{5}} ^ \ket{j} $ 상태를 준비 합니다.
+  다음 예에서는 {1} $3 $ stbits에서 $ \frac {\sqrt {6} } \ sum_ {j = 0} ^ \ket{j} $ 상태를 준비 합니다 {5} .
 
 
   ```Q#
@@ -33,7 +33,7 @@ input:
     uid: Int
   - name: indexRegister
     summary: >-
-      숫자 상태를 형식으로 `LittleEndian` 저장 하는?
+      숫자 상태를 형식으로 저장 하는? `LittleEndian`
 
       이 레지스터는 $M-$1 수를 저장할 수 있어야 하며, $ \ket{0\cdots 0} $ 상태에서 초기화 되는 것으로 간주 됩니다.
     uid: microsoft.quantum.arithmetic.littleendian
@@ -46,9 +46,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: a697f4d410ed47c8be3908e2206080a9393260f7
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 442daa4affb6b59191af9117a8094f7bfbf71302
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82686518"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89331333"

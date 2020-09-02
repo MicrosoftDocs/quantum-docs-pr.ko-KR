@@ -3,13 +3,13 @@ uid: microsoft.quantum.chemistry
 name: Microsoft.Quantum.Chemistry
 functions:
 - uid: microsoft.quantum.chemistry.htermstogenidx
-  summary: 인덱스를 `HTerm[]` 데이터 형식의 Hamiltonian 용어로 변환 합니다.
+  summary: 인덱스를 데이터 형식의 Hamiltonian 용어로 변환 `HTerm[]` 합니다.
 - uid: microsoft.quantum.chemistry.htermstogensys
   summary: Hamiltonian `HTerm[]` 데이터 형식을 GeneratorSystem로 변환 합니다.
 - uid: microsoft.quantum.chemistry.htermtogenidx
-  summary: '`HTerm` 데이터 형식의 Hamiltonian 항을 GeneratorIndex로 변환 합니다.'
+  summary: 데이터 형식의 Hamiltonian 항을 `HTerm` GeneratorIndex로 변환 합니다.
 - uid: microsoft.quantum.chemistry.isnotzero
-  summary: '`Double` 숫자가 약 0이 아닌지 여부를 확인 합니다.'
+  summary: '`Double`숫자가 약 0이 아닌지 여부를 확인 합니다.'
 newtypes:
 - uid: microsoft.quantum.chemistry.hterm
   summary: >-
@@ -17,9 +17,9 @@ newtypes:
 
     표시 되는 데이터의 의미는 해당 데이터를 수신 하는 알고리즘에 의해 결정 됩니다.
 metadata:
-  ms.openlocfilehash: fda6e5c8daebeae115046771e85e0e49d057e666
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: d39701c0e7ee50a064d24020298bef12406e5728
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677029"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89340224"

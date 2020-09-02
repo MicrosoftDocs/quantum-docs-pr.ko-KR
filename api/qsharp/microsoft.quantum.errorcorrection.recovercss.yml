@@ -2,20 +2,20 @@
 uid: microsoft.quantum.errorcorrection.recovercss
 name: RecoverCSS
 type: operation
-namespace: Microsoft.Quantum.ErrorCorrection
-summary: '`CSS` 형식으로 설명 되는 퀀텀 코드에의 한 오류 수정 사항을 한 번 수행 합니다.'
+namespace: microsoft.quantum.errorcorrection
+summary: 형식으로 설명 되는 퀀텀 코드에의 한 오류 수정 사항을 한 번 수행 합니다 `CSS` .
 syntax: 'operation RecoverCSS (code : Microsoft.Quantum.ErrorCorrection.CSS, fnX : Microsoft.Quantum.ErrorCorrection.RecoveryFn, fnZ : Microsoft.Quantum.ErrorCorrection.RecoveryFn, logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister) : Unit'
 input:
   content: '(code : Microsoft.Quantum.ErrorCorrection.CSS, fnX : Microsoft.Quantum.ErrorCorrection.RecoveryFn, fnZ : Microsoft.Quantum.ErrorCorrection.RecoveryFn, logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister)'
   types:
   - name: code
-    summary: 퀀텀 CSS 오류- `CSS` 형식으로 패키지 된 코드를 수정 하면 퀀텀 데이터의 인코딩과 디코딩을 설명 하 고 오류 syndromes을 측정 하는 방법을 설명 합니다.
+    summary: 퀀텀 CSS 오류-형식으로 패키지 된 코드를 수정 하면 `CSS` 퀀텀 데이터의 인코딩과 디코딩을 설명 하 고 오류 syndromes을 측정 하는 방법을 설명 합니다.
     uid: microsoft.quantum.errorcorrection.css
   - name: fnX
-    summary: 검색 `RecoveryFn` 된 오류를 수정 하는 `Pauli[]` 작업에 각 $X $ error 증후군를 매핑하는입니다.
+    summary: '`RecoveryFn`검색 된 오류를 수정 하는 작업에 각 $X $ error 증후군를 매핑하는입니다 `Pauli[]` .'
     uid: microsoft.quantum.errorcorrection.recoveryfn
   - name: fnZ
-    summary: 검색 `RecoveryFn` 된 오류를 수정 하는 `Pauli[]` 작업에 각 $Z $ error 증후군를 매핑하는입니다.
+    summary: '`RecoveryFn`검색 된 오류를 수정 하는 작업에 각 $Z $ error 증후군를 매핑하는입니다 `Pauli[]` .'
     uid: microsoft.quantum.errorcorrection.recoveryfn
   - name: logicalRegister
     summary: 안정기 코드가 정의 된 요소의 배열입니다.
@@ -30,9 +30,9 @@ seeAlso:
 - microsoft.quantum.canon.recoveryfn
 - microsoft.quantum.canon.logicalregister
 metadata:
-  ms.openlocfilehash: 8c9504e985b224421d3eb66b0d7e9bc0ef8f2e96
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: cb3a6bf49913b340545e3659f078adc244356246
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682283"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89349897"
