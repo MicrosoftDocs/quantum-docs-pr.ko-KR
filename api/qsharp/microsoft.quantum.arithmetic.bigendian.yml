@@ -2,14 +2,14 @@
 uid: microsoft.quantum.arithmetic.bigendian
 name: BigEndian
 type: newtype
-namespace: Microsoft.Quantum.Arithmetic
-summary: 부호 없는 정수를 빅 endian 순서로 인코딩하는 레지스터입니다. 인덱스 `0` 를 사용 하는가 중 비트는 부호 없는 정수의 상위 비트를 인코딩합니다.
-remarks: 설명서에서 `BigEndian` 와 `BE` 같이 축약 됩니다.
+namespace: microsoft.quantum.arithmetic
+summary: 부호 없는 정수를 빅 endian 순서로 인코딩하는 레지스터입니다. 인덱스를 사용 하는가 중 비트는 `0` 부호 없는 정수의 상위 비트를 인코딩합니다.
+remarks: '`BigEndian`설명서에서와 같이 축약 `BE` 됩니다.'
 syntax: newtype BigEndian = Qubit[];
 metadata:
-  ms.openlocfilehash: 9c59021955710a182a2315d4e848016f8d13d6fa
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: b8aca5fb596ff61064b7542785d245a3ef7ecace
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679867"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89327593"

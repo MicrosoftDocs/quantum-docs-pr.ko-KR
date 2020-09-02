@@ -2,8 +2,8 @@
 uid: microsoft.quantum.arithmetic.carry
 name: Carry
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
-summary: 해독 가능한 전달 게이트를 구현 합니다. 에서로 인코딩된 `carryIn` 전달 비트와 및 `summand1` `summand2`에서 인코딩된 두 개의 summand 비트가 지정 된 경우,는의 `carryIn` `summand1` `summand2` 비트 xor를 계산 하 `summand2` 고,는이 비트의 비트 xor를 계산 합니다. `carryOut`
+namespace: microsoft.quantum.arithmetic
+summary: 해독 가능한 전달 게이트를 구현 합니다. 에서로 인코딩된 전달 비트 `carryIn` 와 및에서 인코딩된 두 개의 summand 비트가 지정 된 경우 `summand1` `summand2` ,는의 비트 xor를 계산 하 고,는이 비트의 비트 xor를 계산 `carryIn` `summand1` `summand2` `summand2` 합니다 `carryOut` .
 syntax: 'operation Carry (carryIn : Qubit, summand1 : Qubit, summand2 : Qubit, carryOut : Qubit) : Unit'
 input:
   content: '(carryIn : Qubit, summand1 : Qubit, summand2 : Qubit, carryOut : Qubit)'
@@ -17,7 +17,7 @@ input:
     isPrimitive: true
     uid: Qubit
   - name: summand2
-    summary: 두 번째 summand는 및 `summand1` `summand2`의 합계에서 하위 비트를 대체 합니다.
+    summary: 두 번째 summand는 및의 합계에서 하위 비트를 대체 합니다 `summand1` `summand2` .
     isPrimitive: true
     uid: Qubit
   - name: carryOut
@@ -33,9 +33,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 3fa18b56fb242e76a88a23af02b3ebe7e5cc57d4
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: b620fa934d3e40772c9a55eda317449e3329a6d5
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679846"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89327422"

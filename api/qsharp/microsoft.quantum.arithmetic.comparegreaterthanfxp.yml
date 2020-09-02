@@ -2,7 +2,7 @@
 uid: microsoft.quantum.arithmetic.comparegreaterthanfxp
 name: CompareGreaterThanFxP
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: 퀀텀 레지스터에 저장 된 두 개의 고정 소수점 숫자를 비교 하 고 결과에서 대칭 이동을 제어 합니다.
 remarks: 현재 구현에서는 두 개의 고정 소수점 숫자가 동일한 점 위치와 동일한 수의 값을 갖도록 요구 합니다.
 syntax: 'operation CompareGreaterThanFxP (fp1 : Microsoft.Quantum.Arithmetic.FixedPoint, fp2 : Microsoft.Quantum.Arithmetic.FixedPoint, result : Qubit) : Unit'
@@ -16,7 +16,7 @@ input:
     summary: 비교할 두 번째 고정 소수점 숫자입니다.
     uid: microsoft.quantum.arithmetic.fixedpoint
   - name: result
-    summary: 비교 결과입니다. 인 경우 `fp1 > fp2`가 대칭 이동 됩니다.
+    summary: 비교 결과입니다. 인 경우가 대칭 이동 됩니다 `fp1 > fp2` .
     isPrimitive: true
     uid: Qubit
 output:
@@ -28,9 +28,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 851baa02ebf746966b5534a96f1c1bc285632bc2
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 68b23de42a62a20d33cc713649df8714706dc592
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679806"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89327414"
