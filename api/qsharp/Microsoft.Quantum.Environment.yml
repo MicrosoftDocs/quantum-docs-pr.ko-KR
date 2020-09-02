@@ -7,13 +7,13 @@ operations:
   summary: >-
     현재 사용할 수 있는 데 사용할 수 있는 고 비트 수를 반환 합니다.
 
-    사용 되지 않은 비트를 포함 합니다. 즉,에 의해 `GetQubitsAvailableToUse`반환 되는의 비트를 포함 합니다.
+    사용 되지 않은 비트를 포함 합니다. 즉,에 의해 반환 되는의 비트를 포함 `GetQubitsAvailableToUse` 합니다.
 - uid: microsoft.quantum.environment.getqubitsavailabletouse
   summary: 현재 사용할 수 있는 범위의 비트 수를 반환 합니다.
 metadata:
-  ms.openlocfilehash: bd6d442aabb179f4c5fea0a0f48efaa472ec00cf
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 7f597d8f429089b0ebf2c22cef1d1b98ea270402
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673340"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89341159"

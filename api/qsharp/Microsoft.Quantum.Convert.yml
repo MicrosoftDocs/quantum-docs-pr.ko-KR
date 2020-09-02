@@ -18,9 +18,9 @@ functions:
 - uid: microsoft.quantum.convert.boolarrayaspauli
   summary: 비트 문자열이 지정 된 경우 단일 수준 비트 Pauli 연산자의 배열로 표시 되는 다중 값 비트 Pauli 연산자를 반환 합니다.
 - uid: microsoft.quantum.convert.boolarrayasresultarray
-  summary: '`Bool[]` `Result[]` 형식을 형식 `true` 으로 변환 합니다. 여기서은로 `One` `false` 매핑되고는에 `Zero`매핑됩니다.'
+  summary: '`Bool[]`형식을 형식으로 변환 `Result[]` `true` 합니다. 여기서은로 매핑되고는 `One` `false` 에 매핑됩니다 `Zero` .'
 - uid: microsoft.quantum.convert.boolasresult
-  summary: '`Bool` `Result` 형식을 형식 `true` 으로 변환 합니다. 여기서은로 `One` `false` 매핑되고는에 `Zero`매핑됩니다.'
+  summary: '`Bool`형식을 형식으로 변환 `Result` `true` 합니다. 여기서은로 매핑되고는 `One` `false` 에 매핑됩니다 `Zero` .'
 - uid: microsoft.quantum.convert.boolasstring
   summary: 지정 된 부울 값을 해당 하는 문자열 표현으로 변환 합니다.
 - uid: microsoft.quantum.convert.doubleasstring
@@ -47,20 +47,20 @@ functions:
 - uid: microsoft.quantum.convert.pauliarrayasint
   summary: 단일가 나 비트 Pauli 연산자의 배열로 표현 되는 다중 기능 비트 Pauli 연산자를 정수로 인코딩합니다.
 - uid: microsoft.quantum.convert.rangeasintarray
-  summary: Start .로 `arr` 열거 된 정수 배열을 만듭니다. 단계. 종단.
+  summary: '`arr`Start .로 열거 된 정수 배열을 만듭니다. 단계. 종단.'
 - uid: microsoft.quantum.convert.resultarrayasboolarray
-  summary: '`Result[]` `Bool[]` 형식을 형식 `One` 으로 변환 합니다. 여기서은로 `true` `Zero` 매핑되고는에 `false`매핑됩니다.'
+  summary: '`Result[]`형식을 형식으로 변환 `Bool[]` `One` 합니다. 여기서은로 매핑되고는 `true` `Zero` 에 매핑됩니다 `false` .'
 - uid: microsoft.quantum.convert.resultarrayasint
   summary: Little endian 형식의 결과 문자열에서 양의 정수를 생성 합니다.
 - uid: microsoft.quantum.convert.resultasbool
-  summary: '`Result` `Bool` 형식을 형식 `One` 으로 변환 합니다. 여기서은로 `true` `Zero` 매핑되고는에 `false`매핑됩니다.'
+  summary: '`Result`형식을 형식으로 변환 `Bool` `One` 합니다. 여기서은로 매핑되고는 `true` `Zero` 에 매핑됩니다 `false` .'
 operations:
 - uid: microsoft.quantum.convert.call
   summary: 지정 된 입력을 사용 하 여 함수를 호출 합니다.
 metadata:
-  ms.openlocfilehash: d435979692fe94efb64af82f4a7a949cb2341ef8
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 7ab5e02631823dcf4dee36f98c14212b43381b74
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677008"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89341363"
