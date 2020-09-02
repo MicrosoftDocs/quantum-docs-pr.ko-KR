@@ -2,11 +2,11 @@
 uid: microsoft.quantum.canon.applytofirsttwoqubitsca
 name: ApplyToFirstTwoQubitsCA
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   레지스터의 처음 두 비트에 작업을 적용 합니다.
 
-  한정자 `CA` 는 작업을 제어 하 고 adjointable 나타냅니다.
+  한정자는 `CA` 작업을 제어 하 고 adjointable 나타냅니다.
 remarks: >-
   다음 코드와 동일합니다.
 
@@ -52,9 +52,9 @@ functors:
 seeAlso:
 - microsoft.quantum.canon.applytofirsttwoqubits
 metadata:
-  ms.openlocfilehash: fc1291d7fda28978ae73746310f0adf3d4935efb
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: edb0bd59eb46d4828980d8007176bc28950bfd28
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82674650"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89357377"
