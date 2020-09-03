@@ -2,12 +2,12 @@
 uid: microsoft.quantum.bitwise.and
 name: And
 type: function
-namespace: Microsoft.Quantum.Bitwise
+namespace: microsoft.quantum.bitwise
 summary: >-
   두 정수의 비트 AND를 반환 합니다.
 
-  이는 기본 제공 `&&&` 연산자와 동일한 계산을 수행 합니다.
-remarks: '자세한 내용은 [c &amp; # 연산자](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/and-operator) (binary)를 참조 하세요.'
+  이는 기본 제공 연산자와 동일한 계산을 수행 합니다 `&&&` .
+remarks: '자세한 내용은 [c # &amp; 연산자](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/and-operator) (binary)를 참조 하세요.'
 examples: >-
   ```qsharp
 
@@ -34,9 +34,9 @@ output:
   - isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 502101daebe79aeb14732f6e484f96e45e65d089
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 74bc26f5b9f113573e51a0f3e066403d2bfbbb50
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680707"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89351325"

@@ -2,7 +2,7 @@
 uid: microsoft.quantum.logical.greaterthanorequali
 name: GreaterThanOrEqualI
 type: function
-namespace: Microsoft.Quantum.Logical
+namespace: microsoft.quantum.logical
 summary: 숫자가 다른 숫자 보다 크거나 같은 경우에만 true를 반환 합니다.
 remarks: >-
   다음은 동일 합니다.
@@ -30,13 +30,13 @@ input:
 output:
   content: Bool
   types:
-  - summary: '`true`가 보다 크거나가 `a` 와 같은 경우에 `b`만입니다.'
+  - summary: '`true``a`가 보다 크거나가와 같은 경우에만입니다 `b` .'
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: 78c69a4e3e0463b965b69969e384aaf396471b91
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 72f63c48cf6da7affac2d2fb40fdd0500ccabdfb
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82684751"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89345749"

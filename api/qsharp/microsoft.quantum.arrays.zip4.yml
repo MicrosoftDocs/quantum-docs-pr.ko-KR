@@ -2,7 +2,7 @@
 uid: microsoft.quantum.arrays.zip4
 name: Zip4
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: 4 개의 배열이 지정 된 경우 각 4 튜플은 각 원래 배열의 요소를 포함 하도록 4 튜플의 새 배열을 반환 합니다.
 syntax: "function Zip4 (first : 'T1[], second : 'T2[], third : 'T3[], fourth : 'T4[]) : ('T1, 'T2, 'T3, 'T4)[]"
 input:
@@ -31,7 +31,7 @@ input:
 output:
   content: ('T1, 'T2, 'T3, 'T4)[]
   types:
-  - summary: 각 `(first[idx], second[idx], third[idx], fourth[idx])` `idx`에 대 한 형식의 4 개 튜플을 포함 하는 배열입니다. 네 배열의 길이가 같지 않은 경우 출력은 입력 중 짧은 값 만큼 길어야 합니다.
+  - summary: 각에 대 한 형식의 4 개 튜플을 포함 하는 배열 `(first[idx], second[idx], third[idx], fourth[idx])` `idx` 입니다. 네 배열의 길이가 같지 않은 경우 출력은 입력 중 짧은 값 만큼 길어야 합니다.
     isArray: true
     types:
     - uid: "'T1"
@@ -55,9 +55,9 @@ seeAlso:
 - zip
 - zip3
 metadata:
-  ms.openlocfilehash: 5e099a24bdcad341d018cf7c5becec8a4d558631
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 437027a767ea7a2c49fd3b8dfa73858c847942c6
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680721"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89351342"
