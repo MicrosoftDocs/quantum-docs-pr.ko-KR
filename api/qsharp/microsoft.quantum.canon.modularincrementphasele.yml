@@ -2,7 +2,7 @@
 uid: microsoft.quantum.canon.modularincrementphasele
 name: ModularIncrementPhaseLE
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: ModularIncrementPhaseLE는 더 이상 사용 되지 않습니다. 대신 @"microsoft.quantum.arithmetic.incrementphasebymodularinteger"를 사용하십시오.
 syntax: 'operation ModularIncrementPhaseLE (increment : Int, modulus : Int, target : Microsoft.Quantum.Arithmetic.PhaseLittleEndian) : Unit'
 input:
@@ -25,9 +25,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 13e27dd0584e5866c69b18ab4364aa8becc2fb5e
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 95080ec39cdbe70d82f47bfbdd89f4c559b4d2d6
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82678914"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89356102"

@@ -2,26 +2,26 @@
 uid: microsoft.quantum.canon.isresultzero
 name: IsResultZero
 type: function
-namespace: Microsoft.Quantum.Canon
-summary: 지정 된 결과 값이와 같은지 테스트 `Zero`합니다.
+namespace: microsoft.quantum.canon
+summary: 지정 된 결과 값이와 같은지 테스트 `Zero` 합니다.
 syntax: 'function IsResultZero (input : Result) : Bool'
 input:
   content: '(input : Result)'
   types:
   - name: input
-    summary: '`Result`테스트할 값입니다.'
+    summary: '`Result` 테스트할 값입니다.'
     isPrimitive: true
     uid: Result
 output:
   content: Bool
   types:
-  - summary: 가와 같으면를 `true` `Zero`반환 합니다. `input`
+  - summary: '`true` `input` 가와 같으면를 반환 `Zero` 합니다.'
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: eec7a18daccb41bd29fcd00d139914574488f60f
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 5899f53a7ce1b2398657e728cd410a8cfd0dff2c
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679086"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89356204"

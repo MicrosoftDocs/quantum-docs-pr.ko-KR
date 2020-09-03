@@ -2,14 +2,14 @@
 uid: microsoft.quantum.chemistry.htermstogenidx
 name: HTermsToGenIdx
 type: function
-namespace: Microsoft.Quantum.Chemistry
-summary: 인덱스를 `HTerm[]` 데이터 형식의 Hamiltonian 용어로 변환 합니다.
+namespace: microsoft.quantum.chemistry
+summary: 인덱스를 데이터 형식의 Hamiltonian 용어로 변환 `HTerm[]` 합니다.
 syntax: 'function HTermsToGenIdx (data : Microsoft.Quantum.Chemistry.HTerm[], termType : Int[], idx : Int) : Microsoft.Quantum.Simulation.GeneratorIndex'
 input:
   content: '(data : Microsoft.Quantum.Chemistry.HTerm[], termType : Int[], idx : Int)'
   types:
   - name: data
-    summary: '`HTerm[]` 형식의 입력 데이터입니다.'
+    summary: 형식의 입력 데이터 `HTerm[]` 입니다.
     isArray: true
     uid: microsoft.quantum.chemistry.hterm
   - name: termType
@@ -24,12 +24,12 @@ input:
 output:
   content: Microsoft.Quantum.Simulation.GeneratorIndex
   types:
-  - summary: 가 나타내는 `data[idx]`Hamiltonian 용어를에 의해 `termType`추가 된 추가 정보와 함께 나타내는 GeneratorIndex입니다.
+  - summary: 가 나타내는 Hamiltonian 용어를에 `data[idx]` 의해 추가 된 추가 정보와 함께 나타내는 GeneratorIndex `termType` 입니다.
     uid: microsoft.quantum.simulation.generatorindex
 metadata:
-  ms.openlocfilehash: 6c7c235cc1d3ccb5ea0b739c22a5d2c5c33129ce
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 451332a2ad0ade4871920a7da34d8af0afd990c9
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677559"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89354215"

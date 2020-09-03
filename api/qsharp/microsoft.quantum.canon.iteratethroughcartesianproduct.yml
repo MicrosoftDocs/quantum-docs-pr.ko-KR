@@ -2,14 +2,14 @@
 uid: microsoft.quantum.canon.iteratethroughcartesianproduct
 name: IterateThroughCartesianProduct
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   여러 범위의 데카르트 곱에서 각 인덱스에 대 한 작업을 적용 합니다.
 
 
-  , `0..(bounds[0] - 1)` `0..(bounds[1] - 1)`, ...,,, ...,의 데카르트 곱의 각 요소에 대 한 작업을 반복적으로 적용 합니다.`0..(bounds[Length(bounds) - 1] - 1)`
+  `0..(bounds[0] - 1)`, `0..(bounds[1] - 1)` , ...,,, ...,의 데카르트 곱의 각 요소에 대 한 작업을 반복적으로 적용 합니다.`0..(bounds[Length(bounds) - 1] - 1)`
 examples: >-
-  작업 `op`을 지정 하는 경우 다음 두 코드 조각이 동일 합니다.
+  작업을 지정 하는 경우 `op` 다음 두 코드 조각이 동일 합니다.
 
 
   ```Q#
@@ -69,9 +69,9 @@ output:
 seeAlso:
 - microsoft.quantum.canon.iteratethroughcartesianpower
 metadata:
-  ms.openlocfilehash: 0021d7715963d0b0d2f3a0248b857b7591876220
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 07b22e7b094198a42c6126579ebf285b7d93af52
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679037"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89356187"
