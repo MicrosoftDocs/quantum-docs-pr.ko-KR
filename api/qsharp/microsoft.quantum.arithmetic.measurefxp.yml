@@ -2,7 +2,7 @@
 uid: microsoft.quantum.arithmetic.measurefxp
 name: MeasureFxP
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: 고정 소수점 숫자를 측정 하 고, 값을 Double로 반환 하 고, 모든 레지스터를 0으로 다시 설정 합니다.
 syntax: 'operation MeasureFxP (fp : Microsoft.Quantum.Arithmetic.FixedPoint) : Double'
 input:
@@ -17,9 +17,9 @@ output:
   - isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: e75aedffc516bda5d39358f1b629545d50195fce
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 85efdf3e7c46ea0997d439a03317cfb3f7a9cd16
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676778"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89353620"

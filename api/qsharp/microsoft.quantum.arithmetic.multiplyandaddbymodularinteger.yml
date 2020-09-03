@@ -2,7 +2,7 @@
 uid: microsoft.quantum.arithmetic.multiplyandaddbymodularinteger
 name: MultiplyAndAddByModularInteger
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: >-
   은 (는) 정수 계열 레지스터에서 모듈식 곱하기 및 추가 정수 상수를 수행 합니다.
 
@@ -24,7 +24,7 @@ input:
     isPrimitive: true
     uid: Int
   - name: multiplier
-    summary: 값이의 `summand`각 기본 상태 레이블에 추가 될 부호 없는 정수를 나타내는 퀀텀 레지스터입니다.
+    summary: 값이의 각 기본 상태 레이블에 추가 될 부호 없는 정수를 나타내는 퀀텀 레지스터입니다 `summand` .
     uid: microsoft.quantum.arithmetic.littleendian
   - name: summand
     summary: 이 작업의 대상으로 사용할 부호 없는 정수를 나타내는 퀀텀 레지스터입니다.
@@ -40,9 +40,9 @@ functors:
 seeAlso:
 - microsoft.quantum.arithmetic.multiplyandaddphasebymodularinteger
 metadata:
-  ms.openlocfilehash: 38efb2840406fc82b7ae24640bec6641f048a5b2
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: de9bec96048c4c1f8431bdfd831f560e7c1af72c
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676746"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89353535"

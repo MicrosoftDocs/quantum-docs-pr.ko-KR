@@ -2,12 +2,12 @@
 uid: microsoft.quantum.intrinsic.expfrac
 name: ExpFrac
 type: operation
-namespace: Microsoft.Quantum.Intrinsic
+namespace: microsoft.quantum.intrinsic
 summary: >-
   Dyadic 분수로 지정 된 인수를 사용 하 여 다중 기능 비트 Pauli 연산자의 지 수를 적용 합니다.
 
 
-  \begin{align} e ^ {i \pi k [P_0 \otime P_1 \coP_ {N-1}]/2 ^ N}, \end{align} where $P _i $은의 `paulis`$i $ th 요소 이며 where $N = $`Length(paulis)`입니다.
+  \begin{align} e ^ {i \pi k [P_0 \otime P_1 \coP_ {N-1}]/2 ^ N}, \end{align} where $P _i $은의 $i $ th 요소 `paulis` 이며 where $N = $입니다 `Length(paulis)` .
 syntax: 'operation ExpFrac (paulis : Pauli[], numerator : Int, power : Int, qubits : Qubit[]) : Unit'
 input:
   content: '(paulis : Pauli[], numerator : Int, power : Int, qubits : Qubit[])'
@@ -39,9 +39,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 61bd52b3bcce87c6bcbf61ebeb52f720e96fe0f0
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 9873cc2a15cb458baba9c6984c050974ad4b17d4
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82683797"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89347058"

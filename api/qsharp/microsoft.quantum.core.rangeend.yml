@@ -2,10 +2,10 @@
 uid: microsoft.quantum.core.rangeend
 name: RangeEnd
 type: function
-namespace: Microsoft.Quantum.Core
+namespace: microsoft.quantum.core
 summary: 시퀀스의 마지막 요소가 아닐 수 있는 지정 된 범위의 정의 된 끝 값을 반환 합니다.
 remarks: >-
-  범위 식의 `start`첫 번째 요소는이 전달 될 때까지 `start+step` `start+step+step` `end` , 두 번째 요소는, 세 번째 요소는 등입니다.
+  범위 식의 첫 번째 요소는이 `start` `start+step` `start+step+step` 전달 될 때까지, 두 번째 요소는, 세 번째 요소는 등입니다. `end`
 
 
   범위의 정의 된 끝 값은 범위에 지정 된 시퀀스의 마지막 요소와 다를 수 있습니다. 예를 들어, 범위는 0 .입니다. 2.. 5 마지막 요소는 4 이지만 끝 값은 5입니다.
@@ -23,9 +23,9 @@ output:
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 85e9006f73cd5f7b5a78b57148cbd7ad5b764878
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 08a7e70a8e12ef85902f03d7e24f99d3b5082f38
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82657632"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89337997"

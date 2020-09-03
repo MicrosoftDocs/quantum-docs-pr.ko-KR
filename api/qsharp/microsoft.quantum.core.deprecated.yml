@@ -2,13 +2,13 @@
 uid: microsoft.quantum.core.deprecated
 name: Deprecated
 type: newtype
-namespace: Microsoft.Quantum.Core
+namespace: microsoft.quantum.core
 summary: 형식을 표시 하거나 사용 되지 않는 것으로 표시 하는 데 사용 되는 컴파일러 인식 특성입니다.
 syntax: newtype Deprecated = String;
 metadata:
-  ms.openlocfilehash: 9a23655237abefaecec1dc3f1be0a511191a9205
-  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.openlocfilehash: f655aeb9c5c36fdf182eec073b8f430301596800
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 07/02/2020
-  ms.locfileid: "85885364"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89338218"
