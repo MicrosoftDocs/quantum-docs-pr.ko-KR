@@ -2,8 +2,8 @@
 uid: microsoft.quantum.intrinsic.rx
 name: Rx
 type: operation
-namespace: Microsoft.Quantum.Intrinsic
-summary: "지정 된 각도 만큼 $x $ 축에 대 한 회전을 적용 합니다.\n\n\\begin{align} R_x (\\theta) \\mathrel{: =} e ^ {-i \\om\\ sigma_x/2} = \\begin{bmatrix} \\theta \\frac{\\theta}{2} &-i\\sin{2} \\\\ \\\\ \\frac{\\theta}-i\\sin \\frac{\\theta}{2} & \\theta \\frac{\\theta}{2} \\end{bmatrix}.  \n\\end{align}"
+namespace: microsoft.quantum.intrinsic
+summary: "지정 된 각도 만큼 $x $ 축에 대 한 회전을 적용 합니다.\n\n\\begin{align} R_x (\\theta) \\mathrel{: =} e ^ {-i \\om\\ sigma_x/2} = \\begin{bmatrix} \\theta \\frac{\\theta} {2} &-i\\sin \\frac{\\theta} {2} \\\\ \\\\ -i\\sin \\frac{\\theta} {2} & \\theta \\frac{\\theta} {2} \\end{bmatrix}.  \n\\end{align}"
 remarks: >-
   다음에 해당 합니다.
 
@@ -34,9 +34,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 7a205e787e79743cad3f40e978f459d0f42a8100
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: df0884ddba4b104f875db5179c808c5a7695170c
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82683672"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89346514"

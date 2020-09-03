@@ -2,12 +2,12 @@
 uid: microsoft.quantum.math.realmod
 name: RealMod
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: 두 실수 사이의 모듈러스를 계산 합니다.
 remarks: >-
   이 함수는 unit 원에 대 한 실제 줄을 래핑하고 입력에 해당 하는 단위 원에서 각도를 찾는 방법으로 실제 모듈러스를 계산 합니다.
 
-  입력 `minValue` 은 unit 원을 잘라낼 위치를 효과적으로 지정 합니다.
+  `minValue`입력은 unit 원을 잘라낼 위치를 효과적으로 지정 합니다.
 examples: >-
   ```qsharp
       // Returns 3 π / 2.
@@ -38,9 +38,9 @@ output:
   - isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 0a35628198ae5d496b093b98542daeac16aced9b
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 6738040f8628998a98a69a7e884125ac91228787
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681487"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89333135"

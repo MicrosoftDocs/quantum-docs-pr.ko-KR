@@ -2,9 +2,9 @@
 uid: microsoft.quantum.intrinsic.r1
 name: R1
 type: operation
-namespace: Microsoft.Quantum.Intrinsic
+namespace: microsoft.quantum.intrinsic
 summary: >-
-  지정 된 각도로 $ \ket{1}$ 상태에 대 한 회전을 적용 합니다.
+  지정 된 각도로 $ \ket $ 상태에 대 한 회전을 적용 {1} 합니다.
 
 
   \begin{align} R_1 (\theta) \mathrel{: =} \operatorname{diag} (1, e ^ {i\theta}).
@@ -42,9 +42,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 5be535daca1227284ddfa8c38a0082fdf8df7865
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 38998df8067a22ce1fdc81f9ad9fbed0a6ec48a2
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82674123"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89346786"

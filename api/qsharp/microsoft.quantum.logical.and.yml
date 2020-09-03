@@ -2,10 +2,10 @@
 uid: microsoft.quantum.logical.and
 name: And
 type: function
-namespace: Microsoft.Quantum.Logical
+namespace: microsoft.quantum.logical
 summary: 두 값의 부울 값을 반환 합니다.
 remarks: >-
-  `and` 연산자와 달리이 함수는 두 입력이 모두 완전히 계산 되도록 하는 짧은 회로는 아닙니다.
+  연산자와 달리 `and` 이 함수는 두 입력이 모두 완전히 계산 되도록 하는 짧은 회로는 아닙니다.
 
 
   단기 동작으로, 다음은 동일 합니다.
@@ -33,13 +33,13 @@ input:
 output:
   content: Bool
   types:
-  - summary: '`true`및 `a` `b` 가 둘 다 `true`인 경우에만입니다.'
+  - summary: '`true``a`및 `b` 가 둘 다 인 경우에만 `true` 입니다.'
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: 01c26ef3804d484d2cfbd6f54261ad80b8f66594
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 79d3e2fb5499e10a73c4ead1c19d36f09b721f98
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82674101"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89346276"
