@@ -2,7 +2,7 @@
 uid: microsoft.quantum.canon.conjugatedby
 name: ConjugatedBy
 type: function
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: 외부 및 내부 연산을 지정 하면는 외부 작업에 의해 내부 작업을 변화 시키고 하는 새 작업을 반환 합니다.
 remarks: 외부 작업은 항상 adjointable으로 간주 되지만 결합 된 작업을 제어 하기 위해 제어 하지 않아도 됩니다.
 syntax: "function ConjugatedBy (outerOperation : ('T => Unit is Adj), innerOperation : ('T => Unit)) : ('T => Unit)"
@@ -55,9 +55,9 @@ seeAlso:
 - conjugatedbyca
 - applywith
 metadata:
-  ms.openlocfilehash: 48db80c3b5e1d9cb07f81f742f97150e11034a4f
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 3d71e48fd0595ca729018e00ea04ef140192e8ca
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82675797"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89356714"

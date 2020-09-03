@@ -2,14 +2,14 @@
 uid: microsoft.quantum.chemistry.jordanwigner.optimizedqubitizationoracle
 name: OptimizedQubitizationOracle
 type: function
-namespace: Microsoft.Quantum.Chemistry.JordanWigner
+namespace: microsoft.quantum.chemistry.jordanwigner
 summary: T-count에 최적화 된 작업 및이 작업을 실행 하는 데 필요한 매개 변수를 반환 합니다.
 syntax: 'function OptimizedQubitizationOracle (qSharpData : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerEncodingData, targetError : Double) : (Int, (Double, (Qubit[] => Unit is Adj + Ctl)))'
 input:
   content: '(qSharpData : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerEncodingData, targetError : Double)'
   types:
   - name: qSharpData
-    summary: Hamiltonian은 형식 `JordanWignerEncodingData` 으로 설명 됩니다.
+    summary: Hamiltonian은 형식으로 설명 `JordanWignerEncodingData` 됩니다.
     uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerencodingdata
   - name: targetError
     summary: 보조 상태 준비 단계 오류입니다.
@@ -18,7 +18,7 @@ input:
 output:
   content: (Int, (Double, (Qubit[] => Unit is Adj + Ctl)))
   types:
-  - summary: '튜플 (: `Int` )은 할당 된 값이 고, `Double` 는 Hamiltonian 계수는 하나 이며, 작업은이 작업은이를 통해 생성 된 퀀텀 탐색입니다.'
+  - summary: '튜플 (: `Int` )은 할당 된 값이 고,는 Hamiltonian 계수는 하나 이며, 작업은이 작업은이를 `Double` 통해 생성 된 퀀텀 탐색입니다.'
     types:
     - isPrimitive: true
       uid: Int
@@ -39,9 +39,9 @@ output:
         - Adjoint
         - Controlled
 metadata:
-  ms.openlocfilehash: b6dff5ce49e6f0d106df31040c2e539fc1a24029
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 381d6b251cf4fe2e44b5533f0de74ec0f1791572
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82665095"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89339374"

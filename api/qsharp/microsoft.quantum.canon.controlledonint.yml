@@ -2,7 +2,7 @@
 uid: microsoft.quantum.canon.controlledonint
 name: ControlledOnInt
 type: function
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: 컨트롤 레지스터 상태가 지정 된 양의 정수에 해당 하는 경우 대상 레지스터에 oracle을 적용 하는 단일 연산자를 반환 합니다.
 remarks: 의 값은 `numberState` 작은 endian 인코딩을 사용 하 여 해석 됩니다.
 syntax: "function ControlledOnInt (numberState : Int, oracle : ('T => Unit is Adj + Ctl)) : ((Qubit[], 'T) => Unit is Adj + Ctl)"
@@ -47,9 +47,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: 81aeec4086549691d789e02e5a94e86cd75fdf06
-  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.openlocfilehash: 9b1b2c01eb46eaadc6296e96fad042eb7124bc0d
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 07/02/2020
-  ms.locfileid: "85885479"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89356629"

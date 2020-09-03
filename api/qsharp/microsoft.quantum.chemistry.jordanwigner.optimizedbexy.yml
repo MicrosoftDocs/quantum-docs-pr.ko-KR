@@ -2,15 +2,15 @@
 uid: microsoft.quantum.chemistry.jordanwigner.optimizedbexy
 name: OptimizedBEXY
 type: operation
-namespace: Microsoft.Quantum.Chemistry.JordanWigner
-summary: $ (X ^ {z + 1}\_pY ^ {z}\_p) z\_{p-1}에 pauli 문자열을 적용 하는 단일 $U $ 인덱스에서 $ on stbits $0 조건 화 된 p $를 Z_0 합니다 $z \in\{0, 1\}$ 및 $p $입니다. 즉, $ $ \begin{align} U\ket {z} \ k {p} \ k {\ psi} = \ket{z}\ket{p} (X ^ {z + 1}\_pY ^ {z}\_p) z\_{p-1} ... Z_0 \ket{\psi} \end{align} $ $
+namespace: microsoft.quantum.chemistry.jordanwigner
+summary: $ (X ^ {z + 1} \_ pY ^ {z} \_ p) z \_ {p-1}에 pauli 문자열을 적용 하는 단일 $U $ 인덱스에서 $ on stbits $0 조건 화 된 p $를 Z_0 합니다 $z \in \{ 0, 1 \} $ 및 $p $입니다. 즉, $ $ \begin{align} U\ket {z} \ k {p} \ k {\ psi} = \ket{z}\ket{p} (X ^ {z + 1} \_ pY ^ {z} \_ p) z \_ {p-1} ... Z_0 \ket{\psi} \end{align} $ $
 syntax: 'operation OptimizedBEXY (pauliBasis : Qubit, indexRegister : Microsoft.Quantum.Arithmetic.LittleEndian, targetRegister : Qubit[]) : Unit'
-references: '- 선형 T 복잡성 Ryan Babbush, Craig Gidney, Dominic Berry, 네, Spectra Wiebe, Jarrod McClean, Alexandru 고, 연한, 오스틴 Fowler, Hartmut Neven를 사용 하 여 퀀텀 회로에서 전자 인코딩https://arxiv.org/abs/1805.03662'
+references: '- 선형 T 복잡성 Ryan Babbush, Craig Gidney, Dominic Berry, 네, Spectra Wiebe, Jarrod McClean, Alexandru 고, 연한, 오스틴 Fowler, Hartmut Neven를 사용 하 여 퀀텀 회로에서 전자 인코딩 https://arxiv.org/abs/1805.03662'
 input:
   content: '(pauliBasis : Qubit, indexRegister : Microsoft.Quantum.Arithmetic.LittleEndian, targetRegister : Qubit[])'
   types:
   - name: pauliBasis
-    summary: 이 고가 $ \ket{0}$ 상태에 있는 경우 $X $가 적용 됩니다. 상태가 $ \ket{1}$ 인 경우 $Y $가 적용 됩니다.
+    summary: 이 고가 $ \ket $ 상태에 있는 경우 {0} $X $가 적용 됩니다. 상태가 $ \ket $ 인 경우 {1} $Y $가 적용 됩니다.
     isPrimitive: true
     uid: Qubit
   - name: indexRegister
@@ -30,9 +30,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 2208efefe094c472d4f179e3a75dae721c4ff211
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: b221c123b0917232b6f470be84d56358fe08f47e
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82665297"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89339459"

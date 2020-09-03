@@ -2,24 +2,24 @@
 uid: microsoft.quantum.chemistry.jordanwigner.optimizedblockencodinggeneratorsystem
 name: OptimizedBlockEncodingGeneratorSystem
 type: function
-namespace: Microsoft.Quantum.Chemistry.JordanWigner
-summary: 에 설명 `JWOptimizedHTerms` 된 Hamiltonian를 Pauli `GeneratorSystem` `GeneratorIndex`로 표현 된로 변환 합니다.
+namespace: microsoft.quantum.chemistry.jordanwigner
+summary: 에 설명 된 Hamiltonian를 `JWOptimizedHTerms` Pauli로 표현 된로 변환 합니다 `GeneratorSystem` `GeneratorIndex` .
 syntax: 'function OptimizedBlockEncodingGeneratorSystem (data : Microsoft.Quantum.Chemistry.JordanWigner.JWOptimizedHTerms) : Microsoft.Quantum.Chemistry.JordanWigner.OptimizedBEGeneratorSystem'
 input:
   content: '(data : Microsoft.Quantum.Chemistry.JordanWigner.JWOptimizedHTerms)'
   types:
   - name: data
-    summary: 형식의 Hamiltonian에 `JWOptimizedHTerms` 대 한 설명입니다.
+    summary: 형식의 Hamiltonian에 대 한 설명 `JWOptimizedHTerms` 입니다.
     uid: microsoft.quantum.chemistry.jordanwigner.jwoptimizedhterms
 output:
   content: Microsoft.Quantum.Chemistry.JordanWigner.OptimizedBEGeneratorSystem
   types:
-  - summary: Hamiltonian의 표현 `GeneratorSystem`입니다.
+  - summary: Hamiltonian의 표현 `GeneratorSystem` 입니다.
     uid: microsoft.quantum.chemistry.jordanwigner.optimizedbegeneratorsystem
 metadata:
-  ms.openlocfilehash: 3a8354223ba4c5fe7c45d6b494f62aa5ceb41a38
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: d2fe71ccfcc25e80df51e5a2505073ec7da812a8
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82665231"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89339408"
