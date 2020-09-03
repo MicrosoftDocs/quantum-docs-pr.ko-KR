@@ -2,12 +2,12 @@
 uid: microsoft.quantum.arithmetic.multiplybymodularinteger
 name: MultiplyByModularInteger
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: >-
   이상 비트 레지스터에서 정수 상수로 모듈식 곱하기를 수행 합니다.
 
 
-  $N $ 및 `modulus` `constMultiplier` $a $를 사용 하 여 나타냅니다.
+  `modulus`$N $ 및 $a $를 사용 하 여 나타냅니다 `constMultiplier` .
 
   그런 다음이 작업은 계산 단위로 정의 된 단일 작업을 구현 합니다. $ $ \begin{align} \ket{y} \maps\ket{(a \mapsto y) \operatorname{mod} N} \end{align} $ $ (모든 $y $ between $0 $N $-$1)
 remarks: >-
@@ -23,7 +23,7 @@ input:
     isPrimitive: true
     uid: Int
   - name: modulus
-    summary: 곱하기 연산은 모듈로 `modulus`수행 됩니다.
+    summary: 곱하기 연산은 모듈로 수행 됩니다 `modulus` .
     isPrimitive: true
     uid: Int
   - name: multiplier
@@ -41,9 +41,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 48a0f19334f65a6b80003d90dc4dc216dc8dee98
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 4ebbe9808772f51b1a7b2b3caf47379e74bd823e
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676730"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89353518"
