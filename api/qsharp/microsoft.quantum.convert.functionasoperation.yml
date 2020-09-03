@@ -2,7 +2,7 @@
 uid: microsoft.quantum.convert.functionasoperation
 name: FunctionAsOperation
 type: function
-namespace: Microsoft.Quantum.Convert
+namespace: microsoft.quantum.convert
 summary: >-
   함수를 작업으로 변환 합니다.
 
@@ -27,7 +27,7 @@ input:
 output:
   content: ('Input => 'Output)
   types:
-  - summary: 모든 `op` `input`에 대해와 `op(input)` 동일한 작업입니다. `fn(input)`
+  - summary: '`op` `op(input)` 모든에 대해와 동일한 작업입니다 `fn(input)` `input` .'
     isOperation: true
     input:
       types:
@@ -43,9 +43,9 @@ typeParameters:
 - uid: "'Output"
   summary: 변환할 함수의 출력 형식입니다.
 metadata:
-  ms.openlocfilehash: a1383f44c1515e60cde3ee44f8daf3c53a621839
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 6e5d92c4aeae43707fc21cfa116e1c375160e0b3
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82659517"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89338592"

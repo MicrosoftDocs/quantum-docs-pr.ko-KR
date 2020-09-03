@@ -2,7 +2,7 @@
 uid: microsoft.quantum.convert.boolarrayaspauli
 name: BoolArrayAsPauli
 type: function
-namespace: Microsoft.Quantum.Convert
+namespace: microsoft.quantum.convert
 summary: 비트 문자열이 지정 된 경우 단일 수준 비트 Pauli 연산자의 배열로 표시 되는 다중 값 비트 Pauli 연산자를 반환 합니다.
 remarks: 부울 배열과 퀀텀 레지스터의 길이는 같아야 합니다.
 syntax: 'function BoolArrayAsPauli (pauli : Pauli, bitApply : Bool, bits : Bool[]) : Pauli[]'
@@ -10,7 +10,7 @@ input:
   content: '(pauli : Pauli, bitApply : Bool, bits : Bool[])'
   types:
   - name: pauli
-    summary: 에 적용 되는 `bitsApply == bits[idx]`pauli 연산자.
+    summary: 에 적용 되는 pauli 연산자 `bitsApply == bits[idx]` .
     isPrimitive: true
     uid: Pauli
   - name: bitApply
@@ -29,9 +29,9 @@ output:
     isPrimitive: true
     uid: Pauli
 metadata:
-  ms.openlocfilehash: c4f43eb0a30e42b6deb28c9910b1c95454b827c8
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: b839b3aec8195ec0240ad16cbc83a0c7a8c83430
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82661367"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89338779"
