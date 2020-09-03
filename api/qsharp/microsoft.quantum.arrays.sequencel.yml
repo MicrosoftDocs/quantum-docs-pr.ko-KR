@@ -2,9 +2,9 @@
 uid: microsoft.quantum.arrays.sequencel
 name: SequenceL
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: 지정 된 간격의 정수 배열을 가져옵니다.
-remarks: 과 `from` `to` 사이의 차이는 `Int` 값에 맞아야 합니다.
+remarks: 과 사이의 차이 `from` 는 `to` 값에 맞아야 합니다 `Int` .
 examples: >-
   ```qsharp
 
@@ -24,20 +24,20 @@ input:
     isPrimitive: true
     uid: BigInt
   - name: to
-    summary: 보다 `from`작은 간격의 포함 끝 인덱스입니다.
+    summary: 보다 작은 간격의 포함 끝 인덱스입니다 `from` .
     isPrimitive: true
     uid: BigInt
 output:
   content: BigInt[]
   types:
-  - summary: 숫자 `from` `from + 1`시퀀스 (, ..., `to`)를 포함 하는 배열입니다.
+  - summary: 숫자 시퀀스 (, ...,)를 포함 하는 배열입니다. `from` `from + 1` `to`
     isArray: true
     isPrimitive: true
     uid: BigInt
 metadata:
-  ms.openlocfilehash: 7271856286009cfd1651f19f69f932e79d79c2bf
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: c39259d5c39ff523464b1defc3c29c7dca6551ee
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680819"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89351665"

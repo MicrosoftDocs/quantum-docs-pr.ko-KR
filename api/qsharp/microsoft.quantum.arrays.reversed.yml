@@ -2,7 +2,7 @@
 uid: microsoft.quantum.arrays.reversed
 name: Reversed
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: 입력 배열과 동일한 요소가 포함 된 배열을 역순으로 만듭니다.
 syntax: "function Reversed (array : 'T[]) : 'T[]"
 input:
@@ -16,7 +16,7 @@ input:
 output:
   content: "'T[]"
   types:
-  - summary: 요소가 `array[Length(array) - 1]` 포함 된 배열입니다. `array[0]`.
+  - summary: 요소가 포함 된 배열입니다 `array[Length(array) - 1]` . `array[0]`.
     isArray: true
     uid: "'T"
     isLocal: true
@@ -24,9 +24,9 @@ typeParameters:
 - uid: "'T"
   summary: 배열 요소의 형식입니다.
 metadata:
-  ms.openlocfilehash: f7424045ae518a2ea4c91724a0811d1ce5aaabd9
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: ee68cb5aa0207b5a09fd02146cda4c0067c79130
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680854"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89351716"

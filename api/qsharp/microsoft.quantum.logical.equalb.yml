@@ -2,7 +2,7 @@
 uid: microsoft.quantum.logical.equalb
 name: EqualB
 type: function
-namespace: Microsoft.Quantum.Logical
+namespace: microsoft.quantum.logical
 summary: 두 입력이 같으면 true를 반환 하 고,
 remarks: >-
   다음은 동일 합니다.
@@ -30,13 +30,13 @@ input:
 output:
   content: Bool
   types:
-  - summary: '`true``a` 가와 같으면이 고, 그렇지 `b`않으면입니다.'
+  - summary: '`true` 가와 같으면이 고, 그렇지 않으면입니다 `a` `b` .'
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: 34208830ef00fff1689c351e2a19a76aca617d76
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 2cb58b5f72d91be6c8fb406113d02d62b3234591
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82685983"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89346123"
