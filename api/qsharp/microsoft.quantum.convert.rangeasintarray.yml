@@ -2,8 +2,8 @@
 uid: microsoft.quantum.convert.rangeasintarray
 name: RangeAsIntArray
 type: function
-namespace: Microsoft.Quantum.Convert
-summary: Start .로 `arr` 열거 된 정수 배열을 만듭니다. 단계. 종단.
+namespace: microsoft.quantum.convert
+summary: '`arr`Start .로 열거 된 정수 배열을 만듭니다. 단계. 종단.'
 examples: >-
   ```qsharp
 
@@ -17,20 +17,20 @@ input:
   content: '(range : Range)'
   types:
   - name: range
-    summary: 배열로 `Range` 변환할 값 `start..step..end` 의입니다.
+    summary: '`Range`배열로 변환할 값의입니다 `start..step..end` .'
     isPrimitive: true
     uid: Range
 output:
   content: Int[]
   types:
-  - summary: 에 의해 반복 되 `range`는 값에 해당 하는 정수의 새 배열입니다.
+  - summary: 에 의해 반복 되는 값에 해당 하는 정수의 새 배열입니다 `range` .
     isArray: true
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: f909319a624459b2453db2ac73d3ceaec38f6911
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 22077ab84984e3701fef26c28fefefd325ea4627
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677387"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89338320"

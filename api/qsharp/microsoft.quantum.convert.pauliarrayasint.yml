@@ -2,7 +2,7 @@
 uid: microsoft.quantum.convert.pauliarrayasint
 name: PauliArrayAsInt
 type: function
-namespace: Microsoft.Quantum.Convert
+namespace: microsoft.quantum.convert
 summary: 단일가 나 비트 Pauli 연산자의 배열로 표현 되는 다중 기능 비트 Pauli 연산자를 정수로 인코딩합니다.
 remarks: >-
   각 Pauli 연산자는 두 비트를 사용 하 여 인코딩할 수 있습니다. $ $ \begin{align} \boldone \maps00, \쿼드 X \maps01, \쿼드 Y \maps11, \쿼드 Z \maps10.
@@ -10,7 +10,7 @@ remarks: >-
   \end{align} $ $
 
 
-  Pauli 연산자 `[P0, ..., Pn]`의 배열이 지정 된 경우이 함수는 각 pauli 연산자의 매핑을 빅 endian 순서로 `bits(Pn) ... bits(P0)`연결 하 여 이진 확장이 형성 된 정수를 반환 합니다.
+  Pauli 연산자의 배열이 지정 된 `[P0, ..., Pn]` 경우이 함수는 각 Pauli 연산자의 매핑을 빅 endian 순서로 연결 하 여 이진 확장이 형성 된 정수를 반환 `bits(Pn) ... bits(P0)` 합니다.
 syntax: 'function PauliArrayAsInt (paulis : Pauli[]) : Int'
 input:
   content: '(paulis : Pauli[])'
@@ -23,13 +23,13 @@ input:
 output:
   content: Int
   types:
-  - summary: 아래에서 설명 하 `paulis`는 고유 하 게 식별 하는 정수입니다.
+  - summary: 아래에서 설명 하는 고유 하 게 식별 하는 정수 `paulis` 입니다.
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 170218ccf1ec4ee1183a7a69ff1e0969f595cac4
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: e0ec584f77489d019a501ff31074e730152218f7
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677421"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89338297"
