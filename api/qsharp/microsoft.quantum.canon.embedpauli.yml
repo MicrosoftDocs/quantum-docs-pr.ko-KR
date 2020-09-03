@@ -2,10 +2,10 @@
 uid: microsoft.quantum.canon.embedpauli
 name: EmbedPauli
 type: function
-namespace: Microsoft.Quantum.Canon
-summary: 단일 기능 비트를 지정 하는 경우 해당 인덱스 및 `PauliI` 다른 모든 인덱스에서 지정 된 단일 수준 비트 연산자를 사용 하 여 다중 값 비트 Pauli 연산자를 반환 합니다.
+namespace: microsoft.quantum.canon
+summary: 단일 기능 비트를 지정 하는 경우 해당 인덱스 및 다른 모든 인덱스에서 지정 된 단일 수준 비트 연산자를 사용 하 여 다중 값 비트 Pauli 연산자를 반환 합니다 `PauliI` .
 examples: >-
-  배열을 `[PauliI, PauliI, PauliX, PauliI]`가져오려면 다음을 수행 합니다.
+  배열을 가져오려면 다음을 `[PauliI, PauliI, PauliX, PauliI]` 수행 합니다.
 
 
   ```qsharp
@@ -22,7 +22,7 @@ input:
     isPrimitive: true
     uid: Pauli
   - name: location
-    summary: 이 함수의 출력 인 `output[location] == pauli`인덱스입니다 `output` .
+    summary: '`output[location] == pauli`이 함수의 출력 인 인덱스입니다 `output` .'
     isPrimitive: true
     uid: Int
   - name: n
@@ -36,9 +36,9 @@ output:
     isPrimitive: true
     uid: Pauli
 metadata:
-  ms.openlocfilehash: df9cff23b6a7255ec57e944fd1bed140ff18560a
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: a5a6dbabfe51f52da9eb63d23bfbf1cf7ee03370
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82675597"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89356374"

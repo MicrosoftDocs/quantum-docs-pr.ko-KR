@@ -2,7 +2,7 @@
 uid: microsoft.quantum.canon.bound
 name: Bound
 type: function
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: 단일 입력에 대해 작동 하는 작업 배열이 지정 된 경우 지정 된 각 작업을 순서 대로 수행 하는 새 작업을 생성 합니다.
 examples: >-
   다음은 동일 합니다.
@@ -17,7 +17,7 @@ examples: >-
   ```
 
 
-  and
+  및
 
 
   ```qsharp
@@ -62,9 +62,9 @@ seeAlso:
 - microsoft.quantum.canon.bounda
 - microsoft.quantum.canon.boundca
 metadata:
-  ms.openlocfilehash: 3b588e1481ff35c06aef5a381ca3a8fb67054ebd
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 67c61c10e00585f1419f01f19ca3dc5f4ca07d4f
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676027"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89356935"

@@ -2,7 +2,7 @@
 uid: microsoft.quantum.amplitudeamplification.rotationphasesasreflectionphases
 name: RotationPhasesAsReflectionPhases
 type: function
-namespace: Microsoft.Quantum.AmplitudeAmplification
+namespace: microsoft.quantum.amplitudeamplification
 summary: 단일 비트 회전으로 지정 된 단계를 부분 반사로 지정 된 단계로 변환 합니다.
 syntax: 'function RotationPhasesAsReflectionPhases (rotPhases : Microsoft.Quantum.AmplitudeAmplification.RotationPhases) : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases'
 references: >-
@@ -22,9 +22,9 @@ output:
   - summary: 부분 반사로 지정 된 단계를 구현 하는 작업입니다.
     uid: microsoft.quantum.amplitudeamplification.reflectionphases
 metadata:
-  ms.openlocfilehash: 9fde93767d1ac0d99b6d0f27db00cfe672315831
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: a11d124796a0e164c7a8348c76a720e704d49dc9
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680065"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89339561"

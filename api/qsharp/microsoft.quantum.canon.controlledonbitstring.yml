@@ -2,7 +2,7 @@
 uid: microsoft.quantum.canon.controlledonbitstring
 name: ControlledOnBitString
 type: function
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   컨트롤 레지스터 상태가 지정 된 비트 마스크에 해당 하는 경우 대상 레지스터에 oracle을 적용 하는 단일 작업을 반환 합니다.
 
@@ -104,9 +104,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: 98bb8a9d5770e34257cd2fbc5456bcf70139af07
-  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.openlocfilehash: 3064af5cc25b8d5a63f57d62803b8484d2f93d2c
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 07/02/2020
-  ms.locfileid: "85885516"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89356646"
