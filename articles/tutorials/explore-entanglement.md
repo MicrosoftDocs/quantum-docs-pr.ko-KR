@@ -9,12 +9,12 @@ uid: microsoft.quantum.write-program
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: d815a9a25b8ba5e9489b6d3d27fb0d64ab4aaa1d
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: 3e95f142572e104fe1e133b109d197ed5bb01d9a
+ms.sourcegitcommit: af2e9691c1900ced7e09d6320255617c9939ed55
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863433"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90063243"
 ---
 # <a name="tutorial-explore-entanglement-with-q"></a>자습서: Q\#을 사용한 얽힘 살펴보기
 
@@ -112,7 +112,7 @@ Q#작업은 퀀텀 서브루틴입니다. 즉, 다른 퀀텀 작업에 대 한 �
 
 연산에 대한 인수는 괄호로 묶인 튜플로 지정됩니다.
 
-연산의 반환 형식은 콜론 뒤에 지정됩니다. 이 경우 `SetQubitState` 연산에는 반환이 없으므로 `Unit`를 반환하는 것으로 표시됩니다. 이는 Q# `unit` c #의와 거의 유사한 F #의에 해당 `void` 하며 Python의 빈 튜플 ( `Tuple[()]` )입니다.
+연산의 반환 형식은 콜론 뒤에 지정됩니다. 이 경우 `SetQubitState` 연산에는 반환이 없으므로 `Unit`를 반환하는 것으로 표시됩니다. 이는 c #의와 거의 유사한 F #의에 해당 하는 것입니다 .이는 Q# `unit` `void` 형식 힌트로 표현 되는 Python의 빈 튜플입니다 `()` `Tuple[()]` .
 
 첫 번째 작업에서 두 개의 퀀텀 작업을 사용 했습니다 Q# .
 
