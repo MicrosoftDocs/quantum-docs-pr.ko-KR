@@ -2,19 +2,19 @@
 title: Quantum Katas 소개
 description: Microsoft QDK(Quantum Development Kit)에서 제공하는 카타(학습 연습)에 대해 알아봅니다.
 author: bradben
-ms.author: bradben
+ms.author: v-benbra
 ms.date: 06/02/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.katas
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 780f04aa941d416032ea3e50b05769f93fae769f
-ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
+ms.openlocfilehash: 097d7f70088b6ee84a1e91ee99be59149dd9e15b
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90759394"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834825"
 ---
 # <a name="learn-quantum-computing-with-the-quantum-katas"></a>Quantum Katas에서 퀀텀 컴퓨팅 알아보기
 

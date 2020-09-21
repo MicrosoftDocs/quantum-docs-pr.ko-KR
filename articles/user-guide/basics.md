@@ -1,22 +1,22 @@
 ---
-title: Q#기본 사항
-description: 의 기본 개념Q#
+title: Q# 기본 사항
+description: 의 기본 개념 Q#
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 02/28/2020
 ms.topic: article
 uid: microsoft.quantum.guide.basics
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 4f4a75cdaaa070fd763d7f75429b7c39357d25a5
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 86f6538cf383f4e7c14255b38cfb1c141c8f991b
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869650"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835522"
 ---
-# <a name="no-locq-basics"></a>Q#기본 사항
+# <a name="no-locq-basics"></a>Q# 기본 사항
 
 이 문서에서는의 기본 구성 요소에 대 한 간략 한 소개를 제공 Q# 합니다.
 
@@ -39,7 +39,7 @@ using (qubit = Qubit()) {
 ```
 을 초기화 하거나 *할당*하는 방법에 대 한 자세한 내용은 [작업](xref:microsoft.quantum.guide.qubits)을 참조 하세요.
 
-## <a name="quantum-states-in-no-locq"></a>퀀텀 상태Q#
+## <a name="quantum-states-in-no-locq"></a>퀀텀 상태 Q#
 
 중요 한 점은 이전 프로그램은 내에서 상태를 명시적으로 참조 하지 Q# 않지만 프로그램이 상태를 *변환* 하는 방법을 설명 했습니다.
 이 접근 방식을 사용 하면 각 대상 컴퓨터 *에도 있는 퀀텀 상태를 완전히* 제어할 수 없으며, 컴퓨터에 따라 서로 다른 해석이 있을 수 있습니다. 
@@ -53,7 +53,7 @@ Q#프로그램은 introspect의 상태로 전환 될 수 없습니다.
 Q#프로그램은 대상 컴퓨터에서 정의한 대로 이러한 작업을 다시 결합 하 여 퀀텀 계산을 표현할 수 있는 새로운 수준의 새 작업을 만듭니다.
 이러한 방식으로를 사용 하면 Q# 대상 컴퓨터 또는 시뮬레이터의 구조와 관련 하 여 일반적으로 사용 되는 논리 퀀텀 및 하이브리드 퀀텀 – 기존 알고리즘을 쉽게 표현할 수 있습니다.
 
-## <a name="no-locq-operations-and-functions"></a>Q#작업 및 함수
+## <a name="no-locq-operations-and-functions"></a>Q# 작업 및 함수
 
 구체적으로 프로그램은 Q# *작업*, *함수*및 사용자 정의 형식으로 구성 됩니다. 
 
@@ -65,13 +65,13 @@ Q#프로그램은 대상 컴퓨터에서 정의한 대로 이러한 작업을 �
 작업 및 함수를 함께 *callables*이라고 합니다. 의 기본 구조와 동작은 [의 Q# 작업 및 함수 ](xref:microsoft.quantum.guide.operationsfunctions)에서 도입 되 고 자세히 설명 합니다.
 
 
-## <a name="no-locq-syntax-overview"></a>Q#구문 개요
+## <a name="no-locq-syntax-overview"></a>Q# 구문 개요
 
 언어의 구문은 구문상 올바른 프로그램을 구성 하는 기호의 여러 조합을 설명 합니다.
 에서 Q# 구문 요소는 형식, 식 및 문과 같은 세 가지 그룹으로 분류 됩니다.
 
-### <a name="types"></a>유형
-Q#는 강력한 형식의 언어 이며, 신중 하 게 형식을 사용 하면 컴파일러가 Q# 컴파일 시간에 프로그램에 대 한 강력한 보증을 제공할 수 있습니다.
+### <a name="types"></a>형식
+Q# 는 강력한 형식의 언어 이며, 신중 하 게 형식을 사용 하면 컴파일러가 Q# 컴파일 시간에 프로그램에 대 한 강력한 보증을 제공할 수 있습니다.
 표준 및 퀀텀 관련 기본 제공 기본 형식 (예:,, 및) 외에 `Int` 도 `Bool` `Qubit` `Result` Q# 사용자 정의 형식에 대 한 지원을 제공 합니다.
 
 모든 기본 형식, 배열 및 튜플 형식에 대 한 자세한 내용 및 파일 내에 새 형식을 정의 하는 단계에 대 한 설명은 Q# [의 Q# 형식 ](xref:microsoft.quantum.guide.types)을 참조 하세요.

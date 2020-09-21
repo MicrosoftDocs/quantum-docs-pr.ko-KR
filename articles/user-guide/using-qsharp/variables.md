@@ -1,24 +1,24 @@
 ---
-title: 변수Q#
-description: 채우기 설명
+title: 변수 Q#
+description: 에서 다른 변수를 사용 하는 방법을 알아봅니다. Q#
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.variables
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 00af0989cd5a1f9ccc7d9f2545acd0d256bc7eb9
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: bb87f36d3c9b7df195f64e85151e833d494ea945
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867848"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835879"
 ---
-# <a name="variables-in-no-locq"></a>변수Q#
+# <a name="variables-in-no-locq"></a>변수 Q#
 
-Q#식에 바인딩된/할당 된 변경 가능한 기호 또는 *변수*를 구분 합니다.
+Q# 식에 바인딩된/할당 된 변경 가능한 기호 또는 *변수*를 구분 합니다.
 일반적으로 컴파일러에서 더 많은 최적화를 수행할 수 있기 때문에 변경할 수 없는 기호를 사용 하는 것이 좋습니다.
 
 바인딩의 왼쪽은 기호 튜플 및 식의 오른쪽으로 구성 되어 있습니다.
@@ -166,7 +166,7 @@ function PauliEmbedding(pauli : Pauli, length : Int, location : Int) : Pauli[] {
 바인딩의 오른쪽이 튜플이 면 할당 시 해당 튜플을 분해할 수 있습니다.
 이러한 분해에는 중첩 된 튜플이 포함 될 수 있으며, 모든 전체 또는 부분 분해는 오른쪽에 있는 튜플의 모양이 기호 튜플의 모양과 호환 되는 한 유효 합니다.
 
-예를 들어:
+예를 들면 다음과 같습니다.
 
 ```qsharp
 let (i, f) = (5, 0.1); // i is bound to 5 and f to 0.1
@@ -201,7 +201,7 @@ let n = 8;
 ...                 // n is 8
 ```
 
-and
+및
 
 ```qsharp
 if (a == b) {

@@ -9,12 +9,12 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 4caacaad127f8a4d3b6f77efe35ebe7d3b97cacf
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: a3380627aa196a749dd9487ad603aad29f34ae29
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868766"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759931"
 ---
 # <a name="applications"></a>애플리케이션 #
 
@@ -52,9 +52,9 @@ Hamiltonian 분해 Hermitian 부분을 합산 하는 특별 한 경우 Trotter S
 
 > [!TIP]
 > Trotter-Suzuki 시뮬레이션 알고리즘의 응용 프로그램은 샘플에서 설명 합니다.
-> 각 대상 컴퓨터에서 제공 되는 내장 작업만 사용 하는 Ising 모델의 경우 [ **simpleising** 샘플](https://github.com/microsoft/Quantum/blob/master/samples/simulation/ising/simple)을 참조 하세요.
-> Trotter-Suzuki library 컨트롤 구조를 사용 하는 Ising 모델의 경우 [ **IsingTrotter** 샘플](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/trotter-evolution)을 참조 하세요.
-> Trotter-Suzuki library 컨트롤 구조를 사용 하는 분자 Hydrogen의 경우 [ **H2 시뮬레이션** 샘플](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line)을 참조 하세요.
+> 각 대상 컴퓨터에서 제공 되는 내장 작업만 사용 하는 Ising 모델의 경우 [ **simpleising** 샘플](https://github.com/microsoft/Quantum/blob/main/samples/simulation/ising/simple)을 참조 하세요.
+> Trotter-Suzuki library 컨트롤 구조를 사용 하는 Ising 모델의 경우 [ **IsingTrotter** 샘플](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/trotter-evolution)을 참조 하세요.
+> Trotter-Suzuki library 컨트롤 구조를 사용 하는 분자 Hydrogen의 경우 [ **H2 시뮬레이션** 샘플](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line)을 참조 하세요.
 
 대부분의 경우 시뮬레이션 알고리즘을 구현 하지만 해당 구현에 대 한 세부 정보에 관심이 없습니다. 예를 들면 두 번째 주문 통합자는 $ $ \begin{align} U (t) & = \left (e ^ {-iH \_ 0 t/2r} e ^ {-ih \_ 1 t/2r} \c도트 e ^ {-ih \_ {d-1} t/2r})를 대략적으로 계산 합니다. e ^ {-ih \_ {d-1} t/2r} \c도트 e ^ {-ih \_ 1 t/2r} e ^ {-ih \_ 0 t/2r} \left) ^ {r} + \mathcal{O} (d ^ 3 \ max_j \\ | H \_ j \\ | ^ 3 t ^ 3/r ^ 2), $2rd $ 약관의 제품을 사용 하 여 $ $ \end{align}. 더 큰 주문에는 더 많은 용어가 포함 되 고, 최적화 된 변형에는 지 수에 대 한 매우 특수 한 순서 필요할 수 있습니다. 다른 고급 알고리즘은 중간 단계에서 ancilla의 사용을 포함할 수도 있습니다. 따라서 라고의 시뮬레이션 알고리즘을 사용자 정의 형식으로 패키지 합니다.
 
@@ -87,8 +87,8 @@ function TimeDependentTrotterSimulationAlgorithm(
 ```
 
 > [!TIP]
-> 시뮬레이션 라이브러리의 응용 프로그램은 샘플에서 설명 합니다. 을 사용 하는 Ising 모델의 단계 예측에 대해서 `SimulationAlgorithm` 는 [ **IsingPhaseEstimation** 샘플](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/phase-estimation)을 참조 하세요.
-> 를 사용 하는 Ising 모델의 adiabatic 상태 준비는 `TimeDependentSimulationAlgorithm` [ **AdiabaticIsing** 샘플](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/adiabatic)을 참조 하세요.
+> 시뮬레이션 라이브러리의 응용 프로그램은 샘플에서 설명 합니다. 을 사용 하는 Ising 모델의 단계 예측에 대해서 `SimulationAlgorithm` 는 [ **IsingPhaseEstimation** 샘플](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/phase-estimation)을 참조 하세요.
+> 를 사용 하는 Ising 모델의 adiabatic 상태 준비는 `TimeDependentSimulationAlgorithm` [ **AdiabaticIsing** 샘플](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/adiabatic)을 참조 하세요.
 
 
 ### <a name="adiabatic-state-preparation--phase-estimation"></a>Adiabatic 상태 준비 & 단계 예측 ###
@@ -129,14 +129,14 @@ operation EstimateAdiabaticStateEnergy(
 }
 ```
 
-`nQubits`초기 퀀텀 상태를 인코딩하는 데 사용 되는 비트 수입니다. `statePrepUnitary`계산 기준 $ \ket{0\cdots 0} $에서 시작 상태를 준비 합니다. `adiabaticUnitary`는 함수에 의해 생성 된 것과 같이 adiabatic 상태 준비를 구현 하는 단일 작업입니다 `InterpolatedEvolution` . `qpeUnitary`는 결과 퀀텀 상태에서 단계 예측을 수행 하는 데 사용 되는 단일 작업입니다. `phaseEstAlgorithm`는 단계 추정 알고리즘을 선택 합니다.
+`nQubits` 초기 퀀텀 상태를 인코딩하는 데 사용 되는 비트 수입니다. `statePrepUnitary` 계산 기준 $ \ket{0\cdots 0} $에서 시작 상태를 준비 합니다. `adiabaticUnitary` 는 함수에 의해 생성 된 것과 같이 adiabatic 상태 준비를 구현 하는 단일 작업입니다  `InterpolatedEvolution` . `qpeUnitary` 는 결과 퀀텀 상태에서 단계 예측을 수행 하는 데 사용 되는 단일 작업입니다. `phaseEstAlgorithm` 는 단계 추정 알고리즘을 선택 합니다.
 
 > [!TIP]
-> Adiabatic 상태 준비의 응용 프로그램은 샘플에 설명 되어 있습니다. Adiabatic 상태 준비 및 함수 사용의 수동 구현을 사용 하는 Ising 모델은 `AdiabaticEvolution` [ **AdiabaticIsing** 샘플](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/adiabatic)을 참조 하세요.
-> Ising 모델에서 단계 예측 및 adiabatic 상태 준비는 [ **IsingPhaseEstimation** 샘플](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/phase-estimation)을 참조 하세요.
+> Adiabatic 상태 준비의 응용 프로그램은 샘플에 설명 되어 있습니다. Adiabatic 상태 준비 및 함수 사용의 수동 구현을 사용 하는 Ising 모델은 `AdiabaticEvolution` [ **AdiabaticIsing** 샘플](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/adiabatic)을 참조 하세요.
+> Ising 모델에서 단계 예측 및 adiabatic 상태 준비는 [ **IsingPhaseEstimation** 샘플](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/phase-estimation)을 참조 하세요.
 
 > [!TIP]
-> [분자 Hydrogen의 시뮬레이션](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line) 은 흥미로운 간단한 샘플입니다. 모델 및 실험적 결과가 [O'Malley et](https://arxiv.org/abs/1512.06860) 에 보고 되었습니다. Pauli 행렬이 필요 하 고 $ \hat H = g \_ {0} i \_ 0i \_ 1 + g \_ 1 {z \_ 0} + g \_ 2 {z \_ 1} + g \_ 3 {z \_ 0} {z 1} + g \_ \_ 4 {y \_ 0} {y \_ 1} + g \_ 5 {x \_ 0} {x \_ 1} $ 형식으로 사용 합니다. 이는 두 Hydrogen 원소 사이의 거리 $R $에서 상수 $g $가 계산 되는 2 개의 비트 비트만을 필요로 하는 효과적인 Hamiltonian. 라고 함수를 사용 하 여 paulis는 unitaries로 변환 된 다음 Trotter-Suzuki 분해를 사용 하 여 짧은 기간에 걸쳐 발전 했습니다. Adiabatic 상태 준비를 사용 하지 않고 $H _2 $ 그라운드 상태에 대 한 적절 한 근사값을 만들 수 있으므로 canon의 단계 예측을 활용 하 여 직접 상태 에너지를 찾을 수 있습니다.
+> [분자 Hydrogen의 시뮬레이션](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line) 은 흥미로운 간단한 샘플입니다. 모델 및 실험적 결과가 [O'Malley et](https://arxiv.org/abs/1512.06860) 에 보고 되었습니다. Pauli 행렬이 필요 하 고 $ \hat H = g \_ {0} i \_ 0i \_ 1 + g \_ 1 {z \_ 0} + g \_ 2 {z \_ 1} + g \_ 3 {z \_ 0} {z 1} + g \_ \_ 4 {y \_ 0} {y \_ 1} + g \_ 5 {x \_ 0} {x \_ 1} $ 형식으로 사용 합니다. 이는 두 Hydrogen 원소 사이의 거리 $R $에서 상수 $g $가 계산 되는 2 개의 비트 비트만을 필요로 하는 효과적인 Hamiltonian. 라고 함수를 사용 하 여 paulis는 unitaries로 변환 된 다음 Trotter-Suzuki 분해를 사용 하 여 짧은 기간에 걸쳐 발전 했습니다. Adiabatic 상태 준비를 사용 하지 않고 $H _2 $ 그라운드 상태에 대 한 적절 한 근사값을 만들 수 있으므로 canon의 단계 예측을 활용 하 여 직접 상태 에너지를 찾을 수 있습니다.
 
 ## <a name="shors-algorithm"></a>쇼어 알고리즘 ##
 Shor의 알고리즘은 현재 일반적으로 intractable 문제를 해결 하는 데 퀀텀 컴퓨터를 사용할 수 있다는 것을 보여 주므로 퀀텀 컴퓨팅에서 가장 중요 한 개발 중 하나입니다.

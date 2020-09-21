@@ -1,20 +1,20 @@
 ---
-title: 의 퀀텀 알고리즘Q#
+title: 의 퀀텀 알고리즘 Q#
 description: 진폭 증폭, 푸리에 변환, Draper 및 Beauregard adders 및 단계 예측을 비롯 한 기본 퀀텀 컴퓨팅 알고리즘에 대해 알아봅니다.
 author: QuantumWriter
-ms.author: martinro@microsoft.com
+ms.author: martinro
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.libraries.standard.algorithms
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 0b5972480061c460345057285bbfe53305acc122
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 7ce13c5df3795656156cccf28640c0a4b0dcba2e
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868817"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835675"
 ---
 # <a name="quantum-algorithms"></a>퀀텀 알고리즘 #
 
@@ -30,7 +30,7 @@ ms.locfileid: "87868817"
 
 이에서 제공 하는 또 다른 유용한 속성은 eigenvalue $ \theta $가 초기 상태가 표시 될 확률과 직접적으로 관련 된다는 것입니다 ($P _0 $이 초기 상태에만 프로젝터 인 경우).  $Q $의 eigenphases $2 \ 테타 = 2 \ sin ^ {-1} (\Sqrt{\pr (success)}) $ 이기 때문에, $Q $에 단계 예측을 적용 하면 단일 퀀텀 프로시저에 대 한 성공 확률을 알 수 있습니다.  이는 필요한 경우 보다 성공 확률을 quadratically 퀀텀 절차의 응용 프로그램을 더 덜 필요로 하기 때문에 유용 합니다.
 
-Q#명확한 진폭 증폭의 특수화로 진폭 증폭을 소개 합니다.  명확한 진폭 증폭은 프로젝터를 초기 eigenspace가 초기 상태로 만들지 않아도 되므로이 모니커를 획득 합니다.  이러한 점에서 프로토콜은 초기 상태로 명확한 됩니다.  명확한 진폭 증폭의 주요 응용 프로그램은 단일 Hamiltonian 시뮬레이션 방법의 특정 *선형 조합* 으로, 초기 상태를 알 수 없지만 시뮬레이션 프로토콜에서 ancilla 레지스터를 사용 하 여 레지스터를 사용 합니다.  이 ancilla 레지스터가 고정 값으로 측정 되어야 하는 경우 (예: $0 $) 이러한 시뮬레이션 메서드는 원하는 단일 변환을 나머지의 나머지 비트 (시스템 레지스터 라고 함)에 적용 합니다.  그러나 다른 모든 측정 결과는 실패를 야기 합니다.  명확한 진폭 증폭은 \\ 위의 이유를 사용 하 여이 측정의 성공 확률을 $100% $로 높일 수 있습니다.  또한 일반 진폭 증폭은 시스템 레지스터가 비어 있는 경우에 해당 합니다.  이러한 이유로 Q# 명확한 진폭 증폭을 기본적인 진폭 증폭 서브루틴으로 사용 합니다.
+Q# 명확한 진폭 증폭의 특수화로 진폭 증폭을 소개 합니다.  명확한 진폭 증폭은 프로젝터를 초기 eigenspace가 초기 상태로 만들지 않아도 되므로이 모니커를 획득 합니다.  이러한 점에서 프로토콜은 초기 상태로 명확한 됩니다.  명확한 진폭 증폭의 주요 응용 프로그램은 단일 Hamiltonian 시뮬레이션 방법의 특정 *선형 조합* 으로, 초기 상태를 알 수 없지만 시뮬레이션 프로토콜에서 ancilla 레지스터를 사용 하 여 레지스터를 사용 합니다.  이 ancilla 레지스터가 고정 값으로 측정 되어야 하는 경우 (예: $0 $) 이러한 시뮬레이션 메서드는 원하는 단일 변환을 나머지의 나머지 비트 (시스템 레지스터 라고 함)에 적용 합니다.  그러나 다른 모든 측정 결과는 실패를 야기 합니다.  명확한 진폭 증폭은 \\ 위의 이유를 사용 하 여이 측정의 성공 확률을 $100% $로 높일 수 있습니다.  또한 일반 진폭 증폭은 시스템 레지스터가 비어 있는 경우에 해당 합니다.  이러한 이유로 Q# 명확한 진폭 증폭을 기본적인 진폭 증폭 서브루틴으로 사용 합니다.
 
 일반 루틴 ( `AmpAmpObliviousByReflectionPhases` )에는 및를 호출 하는 레지스터가 두 개 있습니다 `ancillaRegister` `systemRegister` . 또한 필요한 반사에 대해 두 개의 oracles를 허용 합니다. 는 `ReflectionOracle` 두 레지스터를 공동으로 수행 하는 동안에만 작동 합니다 `ancillaRegister` `ObliviousOracle` . 에 대 한 입력은 `ancillaRegister` 첫 번째 리플렉션 operator $ \boldone-2P_1 $의-1 eigenstate로 초기화 되어야 합니다.
 

@@ -2,19 +2,19 @@
 title: 프로그램을 실행 하는 방법 Q#
 description: 프로그램을 실행 하는 다양 한 방법에 대 한 개요입니다 Q# . 명령 프롬프트에서 Q# jupyter 노트북 및 Python 또는 .net 언어의 클래식 호스트 프로그램에서.
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 05/15/2020
 ms.topic: article
 uid: microsoft.quantum.guide.host-programs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: f24c608ffc6522cb50f512de1a02b3db4b290e83
-ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
+ms.openlocfilehash: 2cb02617c81ee8b144ffe933f11b476ba6f4a23e
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90759819"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835964"
 ---
 # <a name="ways-to-run-a-no-locq-program"></a>프로그램을 실행 하는 방법 Q#
 
@@ -93,9 +93,9 @@ namespace NamespaceName {
 > 이에 대 한 한 가지 예외는 [`Microsoft.Quantum.Core`](xref:microsoft.quantum.core) 항상 자동으로 열리는 네임 스페이스입니다.
 > 따라서와 같은 callables은 [`Length`](xref:microsoft.quantum.core.length) 항상 직접 사용할 수 있습니다.
 
-### <a name="execution-on-target-machines"></a>대상 컴퓨터에서 실행
+### <a name="running-on-target-machines"></a>대상 컴퓨터에서 실행
 
-이제 프로그램의 일반 실행 모델이 명확 하 게 Q# 됩니다.
+이제 프로그램의 일반 실행 모델이 명확 하 게 됩니다 Q# .
 
 <br/>
 <img src="../media/hostprograms_general_execution_model.png" alt="Q# program execution diagram" width="400">
@@ -107,29 +107,32 @@ namespace NamespaceName {
 이러한 대상 컴퓨터는 실제 퀀텀 하드웨어 이거나 QDK의 일부로 사용할 수 있는 여러 시뮬레이터 수 있습니다.
 여기에서 가장 유용 하 게 사용할 수 있는 대상 컴퓨터는 [전체 상태 시뮬레이터](xref:microsoft.quantum.machines.full-state-simulator)의 인스턴스이고,이는 `QuantumSimulator` 프로그램의 동작을 의미 없는 퀀텀 컴퓨터에서 실행 되는 것 처럼 계산 합니다.
 
-지금까지 특정 Q# 호출 가능이 실행 될 때 발생 하는 상황을 설명 했습니다.
+지금까지 특정 Q# 호출 가능이 실행 중일 때 발생 하는 상황을 설명 했습니다.
 Q#는 독립 실행형 응용 프로그램에서 사용 되는지에 관계 없이 호스트 프로그램에서 사용 되는지에 관계 없이이 일반적인 프로세스는---하 여 QDK 유연성을 사용 합니다.
-따라서 퀀텀 개발 키트를 호출 하는 다양 한 방법 간의 차이점으로 인해 해당 호출 *how* 을 Q# 실행 하기 위해 호출 하는 방법 및 결과가 반환 되는 방식에도 표시 됩니다.
-좀 더 구체적으로 말해서 차이를 중심으로 설명 합니다. 
-1. Q#실행할 호출 가능 여부를 나타내는
-2. 잠재적 호출 가능 인수가 제공 되는 방법
-3. 실행 대상 컴퓨터를 지정 합니다.
-4. 결과가 반환 되는 방법입니다.
+따라서 퀀텀 개발 키트를 호출 하는 방법 간의 차이점으로 인해 해당 호출을 *how* Q# 실행 하기 위해 호출 하는 방법 및 결과가 반환 되는 방식에도 표시 됩니다.
+좀 더 구체적으로 말하자면 다음과 같이 차이가 있습니다.
+
+- Q#실행할 호출 가능 여부 표시
+- 잠재적 호출 가능 인수가 제공 되는 방법
+- 실행할 대상 컴퓨터 지정
+- 결과가 반환 되는 방법
 
 먼저 명령 프롬프트에서 독립 실행형 응용 프로그램을 사용 하 여이 작업을 수행한 Q# 다음 Python 및 c # 호스트 프로그램을 사용 하 여이 작업을 진행 하는 방법을 설명 합니다.
 Q#처음 세 가지가 아닌 주 기능이 로컬 파일을 중심으로 하지 않기 때문에 처음에는 jupyter 노트북의 독립 실행형 응용 프로그램을 예약 합니다 Q# .
 
 > [!NOTE]
-> 이러한 예에서 설명 하지는 않지만, 실행 메서드 간의 공통점은 프로그램 내부에서 인쇄 되는 모든 메시지 Q# ( [`Message`](xref:microsoft.quantum.intrinsic.message) [`DumpMachine`](xref:microsoft.quantum.diagnostics.dumpmachine) 예: 또는)가 일반적으로 해당 콘솔에 항상 인쇄 된다는 것입니다.
+> 이러한 예에서 설명 하지는 않지만, 실행 메서드 간에는 프로그램 내에서 인쇄 되는 모든 메시지 Q# ( [`Message`](xref:microsoft.quantum.intrinsic.message) [`DumpMachine`](xref:microsoft.quantum.diagnostics.dumpmachine) 예: 또는)가 항상 해당 콘솔에 인쇄 되는 것이 일반적입니다.
 
 ## <a name="no-locq-from-the-command-prompt"></a>Q# 명령 프롬프트에서
 프로그램 작성을 시작 하는 가장 쉬운 방법 중 하나는 Q# 별도의 파일과 두 번째 언어를 함께 사용 하는 것을 걱정 하지 않는 것입니다.
 QDK 확장과 함께 Visual Studio Code 또는 Visual Studio를 사용 하면 Q# 단일 파일 에서만 callables을 실행 하는 원활한 워크플로를 사용할 수 있습니다 Q# .
 
-이렇게 하려면 다음을 입력 하 여 프로그램 실행을 궁극적으로 호출 합니다.
+이를 위해 궁극적으로 다음을 입력 하 여 프로그램을 실행 합니다.
+
 ```dotnetcli
 dotnet run
 ```
+
 명령 프롬프트에서
 가장 간단한 워크플로는 터미널의 디렉터리 위치가 파일과 동일 하 여 Q# Q# VS Code에서 통합 터미널을 사용 하 여 파일 편집과 함께 쉽게 처리할 수 있는 경우입니다.
 그러나이 [ `dotnet run` 명령은](https://docs.microsoft.com/dotnet/core/tools/dotnet-run) 다양 한 옵션을 허용 하며, `--project <PATH>` 파일의 위치를 단순히 제공 하 여 다른 위치에서 프로그램을 실행할 수도 있습니다 Q# .
@@ -137,7 +140,7 @@ dotnet run
 
 ### <a name="add-entry-point-to-no-locq-file"></a>파일에 진입점 추가 Q#
 
-대부분의 Q# 파일에는 두 개 이상의 호출 가능이 포함 되어 있으므로 기본적으로 컴파일러에서 *which* 명령을 제공할 때 실행할 호출 가능 항목을 알 수 있도록 해야 합니다 `dotnet run` .
+대부분의 Q# 파일에는 두 개 이상의 호출 가능이 포함 되므로, 기본적으로 컴파일러에서 *which* 명령을 제공할 때 실행할 호출 가능 항목을 알 수 있도록 해야 합니다 `dotnet run` .
 이렇게 하려면 파일 자체에 대 한 간단한 변경 작업을 수행 합니다 Q# . 
     - 호출 가능 바로 앞에를 사용 하 여 줄을 추가 `@EntryPoint()` 합니다.
 
@@ -228,7 +231,7 @@ BorrowedWidth   0
 
 이러한 메트릭에 표시 되는 내용에 대 한 자세한 내용은 [Resource 평가기: 보고 된 메트릭](xref:microsoft.quantum.machines.resources-estimator#metrics-reported)을 참조 하세요.
 
-### <a name="command-line-execution-summary"></a>명령줄 실행 요약
+### <a name="command-line-run-summary"></a>명령줄 실행 요약
 <br/>
 <img src="../media/hostprograms_command_line_diagram.png" alt="Q# program from command line" width="700">
 
@@ -236,19 +239,19 @@ BorrowedWidth   0
 
 위에서 언급 한 옵션을 사용 하 여 위에서 언급 한 것 처럼 `--project` 이 [ `dotnet run` 명령은](https://docs.microsoft.com/dotnet/core/tools/dotnet-run) 호출 가능 인수와 관련이 없는 옵션도 허용 Q# 합니다.
 두 종류의 옵션을 모두 제공 하는 경우 `dotnet` 관련 옵션을 먼저 제공 하 고 그 다음에 구분 기호가를 입력 한 다음 관련 옵션을 제공 해야 합니다 `--` Q# .
-예를 들어 위의 작업에 대 한 숫자 값과 함께 경로를 지정 하 여를 통해 실행 `dotnet run --project <PATH> -- -n <n>` 합니다.
+예를 들어 위의 작업에 대해 숫자 값과 함께 경로를 지정 하는 것은를 통해 실행 됩니다 `dotnet run --project <PATH> -- -n <n>` .
 
 ## <a name="no-locq-with-host-programs"></a>Q# 호스트 프로그램 사용
 
 직접 파일을 사용 하는 경우 Q# 명령 프롬프트에서 직접 작업 또는 함수를 호출 하는 대신 다른 기존 언어로 *호스트 프로그램* 을 사용할 수 있습니다. 특히 c # 또는 F # 등의 .NET 언어를 사용 하 여이 작업을 수행할 수 있습니다 .이를 위해 c # 또는 F #과 같은 .NET 언어를 사용 하 여이 작업을 수행할 수 있습니다.
 상호 운용성을 사용 하려면 약간의 설정이 필요 하지만 이러한 세부 정보는 [설치 가이드](xref:microsoft.quantum.install)에서 찾을 수 있습니다.
 
-간단히 말해서, 이러한 상황에는 `*.py` `*.cs` 파일과 동일한 위치에 호스트 프로그램 파일 (예: 또는)이 포함 되어 있습니다 Q# .
-이제 실행 되는 *호스트* 프로그램이 실행 되는 과정에서 파일의 특정 Q# 작업 및 함수를 호출할 수 있습니다 Q# .
+간단히 말해서, 이러한 상황에는 `*.py` `*.cs` 파일의 동일한 위치에 호스트 프로그램 파일 (예: 또는)이 포함 됩니다 Q# .
+이제 실행 되는 *호스트* 프로그램이 실행 되는 동안 Q# 파일에서 특정 작업 및 함수를 호출할 수 있습니다 Q# .
 상호 운용성의 핵심은 Q# Q# 호출 될 수 있도록 호스트 프로그램에서 파일의 콘텐츠를 액세스할 수 있도록 하는 컴파일러를 기반으로 합니다.
 
 호스트 프로그램을 사용할 때의 주요 이점 중 하나는 프로그램에서 반환 된 기존 데이터가 Q# 호스트 언어로 추가로 처리 될 수 있다는 것입니다.
-이는 일부 고급 데이터 처리 (예:에서 내부적으로 수행 될 수 없는 항목)로 구성 될 수 Q# 있으며, Q# 그 결과에 따라 추가 작업을 호출 하거나 결과를 그리는 것 처럼 간단 하 게 처리할 수 있습니다. Q#
+이는 일부 고급 데이터 처리 (예:에서 내부적으로 수행 될 수 없는 항목)로 구성 된 Q# 다음 Q# 해당 결과에 따라 추가 작업을 호출 하거나 결과를 그리는 것 처럼 간단 하 게 처리할 수 있습니다 Q# .
 
 일반적인 체계는 다음과 같습니다. 여기에서는 Python 및 c #에 대 한 특정 구현을 설명 합니다. F # 호스트 프로그램을 사용 하는 샘플은 [.net 상호 운용성 샘플](https://github.com/microsoft/Quantum/tree/main/samples/interoperability/dotnet)에서 찾을 수 있습니다.
 
@@ -292,7 +295,7 @@ Python 호스트 프로그램은 다음과 같이 구성 됩니다.
 1. 모듈 `qsharp` 을 가져옵니다 .이 모듈은 상호 운용성을 위해 모듈 로더를 등록 합니다 Q# . 
     이렇게 하면 Q# 네임 스페이스를 Python 모듈로 표시 하 여 "가져오기" 호출을 수행할 수 있습니다 Q# .
     기술적으로는 가져올 수 있는 것이 아니라이를 Q# 호출할 수 있는 Python 스텁을 사용 합니다.
-    그런 다음 메서드를 사용 하 여 실행을 위해 작업을 보낼 대상 컴퓨터를 지정 하는 Python 클래스의 개체로 동작 합니다.
+    이러한 동작은 Python 클래스의 개체로 작동 합니다. 이러한 개체의 메서드를 사용 하 여 프로그램을 실행할 때 작업을 보낼 대상 컴퓨터를 지정 합니다.
 
 2. Q#이 경우---를 직접 호출 하는 callables을 가져옵니다 `MeasureSuperposition` `MeasureSuperpositionArray` .
     ```python
@@ -404,16 +407,16 @@ Q#컴파일러는 Q# 파일의 네임 스페이스에서 동등 하 게 명명 �
 ```csharp
 using System;
 using System.Threading.Tasks;
-using Microsoft.Quantum.Simulation.Simulators;    // contains the target machines (e.g. QuantumSimulator, ResourcesEstimator)
+using Microsoft.Quantum.Simulation.Simulators;    // contains the target machines (for example, QuantumSimulator, ResourcesEstimator)
 using NamespaceName;                              // make the Q# namespace available
 ```
 
-다음으로 c # 네임 스페이스, 몇 가지 다른 비트 및 부분 (아래의 전체 코드 블록 참조)을 선언 하 고 원하는 모든 기존 프로그래밍을 선언 합니다 (예: callables의 인수 계산 Q# ).
+다음으로 c # 네임 스페이스, 몇 가지 다른 비트 및 부분 (아래의 전체 코드 블록 참조)을 선언 하 고 원하는 모든 기존 프로그래밍 (예: callables의 인수 계산)을 선언 Q# 합니다.
 후자의 경우에는 후자를 사용할 필요가 없지만 이러한 사용의 예는  [.net 상호 운용성 샘플](https://github.com/microsoft/Quantum/tree/main/samples/interoperability/dotnet)에서 찾을 수 있습니다.
 
 #### <a name="target-machines"></a>대상 머신
 
-로 돌아가서 Q# , 작업을 실행 하는 대상 컴퓨터의 인스턴스를 만들어야 합니다.
+로 돌아가서 Q# 작업을 실행할 대상 컴퓨터의 인스턴스를 만들어야 합니다.
 
 ```csharp
             using var sim = new QuantumSimulator();
@@ -431,9 +434,9 @@ using NamespaceName;                              // make the Q# namespace avail
 ```
 
 > [!NOTE]
-> `Run`메서드는 실제 퀀텀 하드웨어의 경우에는 비동기적으로 실행 되므로 `await` 작업이 완료 될 때까지 키워드는 추가 실행을 차단 합니다.
+> `Run`메서드는 실제 퀀텀 하드웨어의 경우에는 비동기적으로 실행 되므로 `await` 작업이 완료 될 때까지 키워드가 추가 처리를 차단 합니다.
 
-호출에 Q# 반환 형식이 있는 반환 형식이 없는 경우에 `Unit` 도 실행은 변수에 할당 하지 않고 동일한 방식으로 수행할 수 있습니다.
+호출에 반환 형식이 있는 경우와 같이 반환 형식이 없는 경우에는 Q# `Unit` 변수에 할당 하지 않고 동일한 방법으로 실행을 계속 수행할 수 있습니다.
 이 경우 전체 줄은 다음과 같이 구성 됩니다. 
 ```csharp
 await <callable>.Run(<simulator>);
@@ -441,7 +444,7 @@ await <callable>.Run(<simulator>);
 
 #### <a name="arguments"></a>인수
 
-호출 가능한에 대 한 모든 인수 Q# 는 대상 컴퓨터에 대 한 추가 인수로 전달 됩니다.
+호출 가능한에 대 한 모든 인수 Q# 는 대상 컴퓨터 뒤에 추가 인수로 전달 됩니다.
 따라서에 대 한 결과는 다음을 `MeasureSuperpositionArray` `n=4` 통해 인출 됩니다. 
 
 ```csharp
@@ -590,7 +593,7 @@ Jupyter Notebook에서 Q# Q# 파일의 네임 스페이스 내에서와 같은 �
 이러한 문을 사용 하 여 셀을 실행할 때 해당 네임 스페이스의 정의는 작업 영역 전체에서 사용할 수 있습니다.
 
 > [!NOTE]
-> [Microsoft](xref:microsoft.quantum.intrinsic) 에서 사용 하는 callables [(예](xref:microsoft.quantum.canon) : [`H`](xref:microsoft.quantum.intrinsic.h) 및 [`ApplyToEach`](xref:microsoft.quantum.canon.applytoeach) )은 jupyter 노트북의 셀 내에 정의 된 작업에서 자동으로 사용할 수 있습니다. Q#
+> [Microsoft.](xref:microsoft.quantum.intrinsic) m a s. a s. a s. a s. a s. a s. i [s.](xref:microsoft.quantum.canon) [`H`](xref:microsoft.quantum.intrinsic.h) [`ApplyToEach`](xref:microsoft.quantum.canon.applytoeach) Q#
 > 그러나 외부 소스 파일에서 가져온 코드 Q# ( [ Q# 및 Jupyter 노트북](https://github.com/microsoft/Quantum/blob/main/samples/getting-started/intro-to-iqsharp/Notebook.ipynb)에 표시 되는 프로세스)에는 적용 되지 않습니다. 
 > 
 
@@ -609,7 +612,7 @@ Jupyter Notebook에서 Q# Q# 파일의 네임 스페이스 내에서와 같은 �
 
 ### <a name="passing-inputs-to-functions-and-operations"></a>함수 및 작업에 입력 전달
 
-작업에 입력을 전달 하기 위해 Q# 인수는 `key=value` 실행 매직 명령에 쌍으로 전달 될 수 있습니다.
+작업에 입력을 전달 하기 위해 Q# 인수는 `key=value` magic run 명령에 쌍으로 전달 될 수 있습니다.
 따라서 `MeasureSuperpositionArray` 4 개의 비트를 사용 하 여를 실행 하려면 다음을 실행할 수 있습니다 `%simulate MeasureSuperpositionArray n=4` .
 
 <img src="../media/hostprograms_jupyter_args_sim_crop.png" alt="Jupyter cell simulating a Q# operation with arguments" width="773">

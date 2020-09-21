@@ -1,20 +1,20 @@
 ---
 title: 두 번째 양자화
 description: 퀀텀 프로그래밍에서 전자 구조를 모델링 하는 두 번째 양자화 방법에 대해 알아봅니다.
-author: nathanwiebe2
-ms.author: nawiebe@microsoft.com
+author: bradben
+ms.author: v-benbra
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.secondquantization
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: ba77c499d6830b1f78bba39e20b15c4ebe9433fc
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 6becd348f7b3957cb60b16bbd5a28228527e1d4c
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869463"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835811"
 ---
 # <a name="second-quantization"></a>두 번째 양자화
 
@@ -77,7 +77,7 @@ $ \Sigma \sigma의 $ (j, \sigma) $에 대 한이 결합 \{ \} 된 인덱스는 �
 ```
 
 Fermionic 시스템의 경우 Pauli 제외 원칙은 둘 이상의 전자 프로그램을 동시에 모든 회전 궤도에 제공 하는 것을 방지 합니다.
-즉, $ \ psi_1 $에 대 한 두 가지 법적 상태를 \begin{equation} \ psi_1 \rightarrow \begin{cases} \ket {0} ec& \text{s ($ \ psi_1 $가 사용 되지 않는 경우)로 작성할 수 있습니다.\\\
+즉, $ \ psi_1 $에 대 한 두 가지 법적 상태를 \begin{equation} \ psi_1 \rightarrow \begin{cases} \ket {0} ec& \text{s ($ \ psi_1 $가 사용 되지 않는 경우)로 작성할 수 있습니다. \\\
 \ket {1} _1 & \text{if $ \ psi_1 $가 차지 하는 경우} \end{cases} \end{c}이 인코딩은 단일 퀀텀 비트로 전자 직업을 저장할 수 있으므로 퀀텀 컴퓨터에 유용 합니다.
 
 $2N $ spin orbitals의 직업 상태는 비슷한 방법으로 $2N $에 저장 될 수 있습니다.

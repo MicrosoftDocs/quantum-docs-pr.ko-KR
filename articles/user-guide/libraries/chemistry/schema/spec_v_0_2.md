@@ -2,19 +2,19 @@
 title: Broombridge 스키마 사양 (ver 0.2)
 description: Microsoft 퀀텀 화학 library에 대 한 Broombridge 퀀텀 화학 schema v 0.2의 사양에 대해 자세히 설명 합니다.
 author: guanghaolow
-ms.author: gulow@microsoft.com
+ms.author: gulow
 ms.date: 05/28/2019
 ms.topic: article
 uid: microsoft.quantum.libraries.chemistry.schema.spec_v_0_2
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 3d935ec9de7e9b93bcdb00a4e13fc7bfce33b0aa
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 851d10c0137deecf8e861aad30b5e08a9ae61754
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869089"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833771"
 ---
 # <a name="broombridge-specification-v02"></a>Broombridge 사양 v 0.2 #
 

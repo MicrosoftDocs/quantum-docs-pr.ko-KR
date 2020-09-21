@@ -3,18 +3,18 @@ title: 표준 libararies 흐름 제어 Q#
 description: Microsoft 표준 라이브러리의 흐름 제어 작업 및 함수에 대해 알아봅니다 Q# .
 author: QuantumWriter
 uid: microsoft.quantum.concepts.control-flow
-ms.author: martinro@microsoft.com
+ms.author: martinro
 ms.date: 12/11/2017
 ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: a440f1ef2b901b18593816ca27aeadf7ab827104
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 1cfef50cf2bbecd2043972a662edd8120c5570ec
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868579"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835624"
 ---
 # <a name="higher-order-control-flow"></a>고차 제어 흐름 #
 
@@ -86,7 +86,7 @@ ApplyToEachCA(Adjoint U, register);
 마찬가지로 <xref:microsoft.quantum.canon.applytoeachindex> 는 양식의 패턴을 표시 하는 데 유용 `U(0, targets[0]); U(1, targets[1]); ...` 하며 입력에서 지원 되는 함수의 각 조합에 대 한 버전을 제공 합니다.
 
 > [!TIP]
-> `ApplyToEach`는 이외의 입력을 취하는 작업과 함께 사용할 수 있도록 형식 매개 변수화 됩니다 `Qubit` .
+> `ApplyToEach` 는 이외의 입력을 취하는 작업과 함께 사용할 수 있도록 형식 매개 변수화 됩니다 `Qubit` .
 > 예를 들어, `codeBlocks` 가 복구 해야 하는 값의 배열 이라고 가정 합니다 <xref:microsoft.quantum.errorcorrection.logicalregister> .
 > 그런 다음 `ApplyToEach(Recover(code, recoveryFn, _), codeBlocks)` 는 `code` `recoveryFn` 각 블록에 독립적으로 오류 수정 코드 및 복구 기능을 적용 합니다.
 > 이는 기존 입력에 대해서도 유지 `ApplyToEach(R(_, _, qubit), [(PauliX, PI() / 2.0); (PauliY(), PI() / 3.0]))` 됩니다 .는 $ \pi/$2에 $Y $3 $pi $X 대 한 회전을 적용 합니다.
@@ -120,7 +120,7 @@ function Sum(xs : Int[]) {
 
 > [!NOTE]
 > $U $를 팩터링 하는 다른 한 가지 다른 결과는 함수를에 적용 하는 방법을 몰라도 됩니다 `Controlled` `U` .
-> `ApplyWithCA`따라서 필요한 것 보다 더 약한 서명이 있습니다.
+> `ApplyWithCA` 따라서 필요한 것 보다 더 약한 서명이 있습니다.
 > ```qsharp
 > ApplyWithCA<'T> : (('T => Unit is Adj),
 >     ('T => Unit is Adj + Ctl), 'T) => Unit

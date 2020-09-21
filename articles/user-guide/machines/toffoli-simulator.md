@@ -2,19 +2,19 @@
 title: 퀀텀 Toffoli 시뮬레이터-퀀텀 개발 키트
 description: 수백만 개의 다양 한 비트와 함께 사용할 수 있는 특별 한 용도의 퀀텀 시뮬레이터 인 Microsoft QDK Toffoli 시뮬레이터에 대해 알아봅니다.
 author: alan-geller
-ms.author: ageller@microsoft.com
+ms.author: ageller
 ms.date: 6/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.toffoli-simulator
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 6a0885035c12a99ae43533f04cdc95c5c529380a
-ms.sourcegitcommit: 11bd357baeb6ab53a402882979e75964d0869b57
+ms.openlocfilehash: 82882f01d1b5c036faee71f18a18b2595107ddb7
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88992213"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835913"
 ---
 # <a name="quantum-development-kit-qdk-toffoli-simulator"></a>QDK (퀀텀 Development Kit) Toffoli 시뮬레이터
 
@@ -77,7 +77,7 @@ Toffoli 시뮬레이터는 다음을 지원 합니다.
 알고리즘이이 보다 더 많은 비트를 필요로 하는 경우 매개 변수의 값을 생성자에 제공 하 여 원하는 비트 수를 지정할 수 있습니다 `qubitCount` .
 각 추가 비트에는 1 바이트의 메모리만 필요 하므로 필요한 overestimating의 수를 크게 줄일 수 있는 비용은 없습니다.
 
-예를 들어:
+예를 들면 다음과 같습니다.
 
 ```csharp
     var sim = new ToffoliSimulator(qubitCount: 1000000);

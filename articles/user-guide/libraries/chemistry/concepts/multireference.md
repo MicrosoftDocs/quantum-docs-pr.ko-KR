@@ -2,19 +2,19 @@
 title: 상관 관계가 지정된 파동 함수
 description: Microsoft 퀀텀 화학 라이브러리를 사용 하 여 wavefunctions의 동적 및 비동적 상관 관계에 대해 알아봅니다.
 author: guanghaolow
-ms.author: gulow@microsoft.com
+ms.author: gulow
 ms.date: 05/28/2019
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.multireference
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 0066d676205901d4f2d41538684f9ba57407eb82
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 420fc8e108852f6548e2147693e089f5ce970aa9
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869565"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835488"
 ---
 # <a name="correlated-wavefunctions"></a>상관 관계가 지정된 파동 함수
 

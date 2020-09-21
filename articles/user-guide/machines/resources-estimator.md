@@ -2,19 +2,19 @@
 title: 퀀텀 리소스 평가기-퀀텀 개발 키트
 description: 퀀텀 컴퓨터에서 지정 된 작업 인스턴스를 실행 하는 데 필요한 리소스를 추정 하는 Microsoft QDK resources 평가기에 대해 알아봅니다 Q# .
 author: anpaz-msft
-ms.author: anpaz@microsoft.com
+ms.author: anpaz
 ms.date: 06/26/2020
 ms.topic: article
 uid: microsoft.quantum.machines.resources-estimator
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 1892431c3e332385a5bcefa357eb64a9fac3f381
-ms.sourcegitcommit: 11bd357baeb6ab53a402882979e75964d0869b57
+ms.openlocfilehash: 6138c098a4efe2797c7d7360573ddcb9cb70a6c1
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88992244"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835930"
 ---
 # <a name="quantum-development-kit-qdk-resources-estimator"></a>QDK (퀀텀 Development Kit) 리소스 평가기
 

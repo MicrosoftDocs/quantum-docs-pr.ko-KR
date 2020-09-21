@@ -3,17 +3,17 @@ title: Q#표준 라이브러리의 진단
 description: Q#퀀텀 프로그램의 실수 또는 오류를 catch 하는 데 사용 되는 표준 라이브러리의 진단 기능 및 작업에 대해 알아봅니다.
 author: cgranade
 uid: microsoft.quantum.libraries.diagnostics
-ms.author: chgranad@microsoft.com
+ms.author: chgranad
 ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 4a98795b2459adaa4e47c888751121fffdc70971
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 11ce1bc86db0c5aa0f81ba7d0f2d6ec3463b178c
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868545"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835573"
 ---
 # <a name="diagnostics"></a>진단 #
 
@@ -33,7 +33,7 @@ Message($"About to rotate by an angle of {angle}...");
 ```
 
 > [!NOTE]
-> `Message`에 시그니처가 있으므로에서 `(String -> Unit)` 디버그 로그 메시지를 내보낼 수 없다는 것을 나타냅니다 Q# .
+> `Message` 에 시그니처가 있으므로에서 `(String -> Unit)` 디버그 로그 메시지를 내보낼 수 없다는 것을 나타냅니다 Q# .
 
 <xref:microsoft.quantum.diagnostics.dumpmachine>및 <xref:microsoft.quantum.diagnostics.dumpregister> callables은 대상 컴퓨터에 현재 할당 된 모든 수에 대 한 진단 정보를 제공 하거나 각각의 특정 기능에 대 한 진단 정보를 제공 하도록 지시 합니다.
 각 대상 컴퓨터는 덤프 명령에 대 한 응답으로 제공 되는 진단 정보에 따라 달라 집니다.
@@ -69,14 +69,14 @@ Q#표준 라이브러리는 다음과 같은 여러 가지 기능을 제공 합�
 보다 일반적으로 <xref:microsoft.quantum.diagnostics.assertmeasurement> 지정 된 Pauli의 지정 된 비트를 측정 하는 작업에는 항상 지정 된 결과가 포함 됩니다.
 어설션이 실패 하면 지정 된 메시지와 함께를 호출 하 여 실행이 종료 `fail` 됩니다.
 기본적으로이 작업은 구현 되지 않습니다. 이를 지원할 수 있는 시뮬레이터는 런타임 검사를 수행 하는 구현을 제공 해야 합니다.
-`AssertMeasurement`에 시그니처가 `((Pauli[], Qubit[], Result, String) -> ())` 있습니다.
+`AssertMeasurement` 에 시그니처가 `((Pauli[], Qubit[], Result, String) -> ())` 있습니다.
 `AssertMeasurement`는 빈 튜플을 출력 형식으로 사용 하는 함수 이므로 호출 된의 효과 `AssertMeasurement` 는 프로그램 내에서 관찰 가능 하지 않습니다 Q# .
 
 <xref:microsoft.quantum.diagnostics.assertmeasurementprobability>작업 함수는 지정 된 Pauli의 지정 된 비트 수를 측정 하는 assert를 사용 하 여 지정 된 결과가 특정 허용 범위 내에서 지정 된 확률로 포함 되도록 합니다.
-허용 오차는 덧셈 (예: `abs(expected-actual) < tol` )입니다.
+허용 오차는 덧셈입니다 (예: `abs(expected-actual) < tol` ).
 어설션이 실패 하면 지정 된 메시지와 함께를 호출 하 여 실행이 종료 `fail` 됩니다.
 기본적으로이 작업은 구현 되지 않습니다. 이를 지원할 수 있는 시뮬레이터는 런타임 검사를 수행 하는 구현을 제공 해야 합니다.
-`AssertMeasurementProbability`에 시그니처가 `((Pauli[], Qubit[], Result, Double, String, Double) -> Unit)` 있습니다. 첫 번째 `Double` 매개 변수는 결과의 원하는 확률을 제공 하 고 두 번째 매개 변수는 허용 오차를 제공 합니다.
+`AssertMeasurementProbability` 에 시그니처가 `((Pauli[], Qubit[], Result, Double, String, Double) -> Unit)` 있습니다. 첫 번째 `Double` 매개 변수는 결과의 원하는 확률을 제공 하 고 두 번째 매개 변수는 허용 오차를 제공 합니다.
 
 단일 측정을 어설션하는 것 보다 더 많은 작업을 수행할 수 있습니다. 시뮬레이터에서 사용 되는 기존 정보를 복사 하는 것이 적합할,이를 통해 실제로 어설션을 테스트할 수 있습니다.
 특히,이를 통해 실제 하드웨어에서 사용할 수 없는 *호환 되지* 않는 측정에 대해 설명할 수 있습니다.
@@ -149,7 +149,7 @@ $T $가 진화 시간을 나타내는 경우 예상 대로 ^ \aa&gt (t) = U (-t)
 이러한 테스트는 모두 퀀텀 프로그램의 정확성을 보장 하는 데 유용 합니다.
 
 
-## <a name="further-reading"></a>추가 정보 ##
+## <a name="further-reading"></a>추가 참고 자료 ##
 
 - <xref:microsoft.quantum.guide.testingdebugging>
 - <xref:microsoft.quantum.diagnostics>

@@ -1,20 +1,20 @@
 ---
 title: 큐비트 사용
-description: 채우기 설명
+description: 에서의 작업에 대해 알아보기 Q#
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.qubits
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 6808a852ee0de7d3a38ea44e9637eeaa6bea382a
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: aa942a61280553ae4e51cd5ddcc85c0df935dab1
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867865"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835862"
 ---
 # <a name="working-with-qubits"></a>큐비트 사용
 
@@ -150,7 +150,7 @@ operation PreparePlusMinusState(bitstring : Bool[], register : Qubit[]) : Unit {
 ### <a name="measure-a-single-qubit-in-the-pauliz-basis"></a>단일 `PauliZ` 비트 단위 측정
 
 [`M`](xref:microsoft.quantum.intrinsic.m)기본 제공 되는 기본이 아닌 작업 인 작업을 사용 하 여 단일 비트를 측정 하 `PauliZ` 고 결과에 기존 값을 할당 합니다.
-`M`에는 예약 된 반환 형식이 있습니다. 여기에는 `Result` 값을 사용 `Zero` 하거나 `One` 측정 된 상태 $ \ket {0} $ 또는 $ \ket {1} $-결과가 더 이상 퀀텀 상태가 아님을 나타내는 값만 사용할 수 있습니다.
+`M` 에는 예약 된 반환 형식이 있습니다. 여기에는 `Result` 값을 사용 `Zero` 하거나 `One` 측정 된 상태 $ \ket {0} $ 또는 $ \ket {1} $-결과가 더 이상 퀀텀 상태가 아님을 나타내는 값만 사용할 수 있습니다.
 
 간단한 예는 $ \ket $ 상태에서 1 개의 한 비트를 할당 하 {0} 고, Hadamard 작업을 적용 하 고, 결과를 측정 하는 다음 작업입니다 `H` `PauliZ` .
 

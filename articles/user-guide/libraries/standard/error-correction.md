@@ -9,12 +9,12 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8b1f008793281121bc547d1a6ac3b960feb082ab
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 480d115453fe56c258a403fbb9b7676465425849
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868494"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759870"
 ---
 # <a name="error-correction"></a>오류 수정 #
 
@@ -78,7 +78,7 @@ Q#라고은 안정기 코드에서의 인코딩 및 디코딩을 설명 하 고,
 > 안정기 정해진에 대 한 전체 소개는이 섹션의 범위를 벗어나는 것입니다.
 > [Gottesman 2009](https://arxiv.org/abs/0904.2557)에 대 한 자세한 내용은 독자를 대상으로 합니다.
 
-## <a name="representing-error-correcting-codes-in-no-locq"></a>오류 수정 코드 표시Q# ##
+## <a name="representing-error-correcting-codes-in-no-locq"></a>오류 수정 코드 표시 Q# ##
 
 오류 수정 코드를 지정 하는 데 도움이 되도록 Q# 라고은 다음과 같이 여러 가지 고유한 사용자 정의 형식을 제공 합니다.
 
@@ -120,6 +120,6 @@ using (scratch = Qubit[nScratch]) {
 }
 ```
 
-이에 대 한 자세한 내용은 [비트 대칭 코드 샘플](https://github.com/microsoft/Quantum/tree/master/samples/error-correction/bit-flip-code)을 살펴보세요.
+이에 대 한 자세한 내용은 [비트 대칭 코드 샘플](https://github.com/microsoft/Quantum/tree/main/samples/error-correction/bit-flip-code)을 살펴보세요.
 
 비트 대칭 코드 외에도 Q# 라고은 [5 ~ 5 비트 코드](https://arxiv.org/abs/quant-ph/9602019)및 [일곱 번째 비트 코드](https://arxiv.org/abs/quant-ph/9705052)의 구현과 함께 제공 되며, 둘 다 임의의 단일 기능 비트 오류를 수정할 수 있습니다.

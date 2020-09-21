@@ -2,19 +2,19 @@
 title: 무효화 되는 ombits 사용 검사기-퀀텀 개발 키트
 description: 퀀텀 추적 시뮬레이터를 사용 하 여 코드에서 잠재적으로 잘못 된 수를 확인 하는 Microsoft QDK 무효화 된 사용 검사기에 대해 알아봅니다 Q# .
 author: vadym-kl
-ms.author: vadym@microsoft.com
+ms.author: vadym
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.invalidated-qubits
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: c451747badba03801bd4ecd419420f131ac502d6
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 18371b3798d0eaa12d4e7107f58f44379594619f
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868290"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835998"
 ---
 # <a name="quantum-trace-simulator-invalidated-qubits-use-checker"></a>퀀텀 추적 시뮬레이터: 무효화 되는 사용 검사기
 

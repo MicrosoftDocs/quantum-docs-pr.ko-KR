@@ -9,12 +9,12 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 0090fb2b9ac5f3c9d195a3ab02dcd21c848d8ef7
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: b226f355771f2b65399ebe00cc3de9429a3cebb0
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868630"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759912"
 ---
 # <a name="quantum-characterization-and-statistics"></a>퀀텀 특성화 및 통계 #
 
@@ -74,7 +74,7 @@ Bayes ' 정리 \begin{align} \frac{\sqrt{\Pr ( \_ \aaj)} \sqrt{\Pr (\text{Result
 ### <a name="bayesian-phase-estimation"></a>Bayesian 단계 예측 ###
 
 > [!TIP]
-> Bayesian 단계 예측에 대 한 자세한 내용은 [**PhaseEstimation**](https://github.com/microsoft/Quantum/tree/master/samples/characterization/phase-estimation) 샘플을 참조 하세요.
+> Bayesian 단계 예측에 대 한 자세한 내용은 [**PhaseEstimation**](https://github.com/microsoft/Quantum/tree/main/samples/characterization/phase-estimation) 샘플을 참조 하세요.
 
 Bayesian 단계 추정의 개념은 간단 합니다.
 단계 추정 프로토콜에서 측정 통계를 수집한 다음 Bayesian 유추를 사용 하 여 결과를 처리 하 고 예상 된 매개 변수를 제공 합니다.
@@ -112,7 +112,7 @@ Concretely, \begin{equation} \Pr(\phi | d) = \frac{\Pr(d | \phi) \Pr(\phi)}{\int
 그 밖의 관련 세부 정보에는 $1 $ ancilla?의 작은 공간 오버 헤드 또는 프로시저가 비 적응 (예를 들어, 퀀텀 실험의 필수 시퀀스는 중간 측정 결과와 무관)이 있습니다. 단계 추정 알고리즘의 선택이 중요 한이 예제와 향후 예제에서는,와 같은 설명서를 참조 하 고 해당 구현에 대 한 참조 된 게시를 참조 해야 합니다 @"microsoft.quantum.characterization.robustphaseestimation" .
 
 > [!TIP]
-> 강력한 단계 예측을 사용 하는 많은 샘플이 있습니다. 다양 한 물리적 시스템의 그라운드 상태 에너지를 추출 하는 단계를 예측 하려면 [ **H2 시뮬레이션** 샘플](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line), [ **simpleising** 샘플](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/simple)및 [ **model** 샘플](https://github.com/microsoft/Quantum/tree/master/samples/simulation/hubbard)을 참조 하세요.
+> 강력한 단계 예측을 사용 하는 많은 샘플이 있습니다. 다양 한 물리적 시스템의 그라운드 상태 에너지를 추출 하는 단계를 예측 하려면 [ **H2 시뮬레이션** 샘플](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line), [ **simpleising** 샘플](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/simple)및 [ **model** 샘플](https://github.com/microsoft/Quantum/tree/main/samples/simulation/hubbard)을 참조 하세요.
 
 
 ### <a name="continuous-oracles"></a>연속 Oracles ###
@@ -130,7 +130,7 @@ $ $ 또한 [Hamiltonian 시뮬레이션](xref:microsoft.quantum.libraries.applic
 
 ### <a name="random-walk-phase-estimation"></a>무작위 워크 단계 예측 ###
 
-Q#반복 단계 추정에서 얻은 데이터 레코드에 대 한 임의 워크를 조절 하 여 작동 하는 퀀텀 장치에 가까운 사용을 위해 설계 된 Bayesian 단계 추정의 유용한 근사값을 제공 합니다.
+Q# 반복 단계 추정에서 얻은 데이터 레코드에 대 한 임의 워크를 조절 하 여 작동 하는 퀀텀 장치에 가까운 사용을 위해 설계 된 Bayesian 단계 추정의 유용한 근사값을 제공 합니다.
 이 메서드는 적응 및 완전히 결정적 이며, 예상 되는 단계 $ \hat{\phi} $에서 메모리 오버 헤드가 매우 낮으므로 거의 최적의 오류 확장을 허용 합니다.
 
 프로토콜이 이전 분포를 가우스로 가정 하는 대략적인 Bayesian 유추 메서드를 사용 합니다.

@@ -3,18 +3,18 @@ title: 표준 라이브러리의 데이터 구조 Q#
 description: Microsoft standard 라이브러리의 데이터 구조, oracles 및 동적 생성기에 대해 알아봅니다 Q# .
 author: QuantumWriter
 uid: microsoft.quantum.libraries.data-structures
-ms.author: martinro@microsoft.com
+ms.author: martinro
 ms.date: 12/11/2017
 ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 222fa7d0d33d4ac6c15e9ee9e6e97f380867a145
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 51eb52d0b8ace972f6a425edba400ca9a8916d2e
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868524"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835590"
 ---
 # <a name="data-structures-and-modeling"></a>데이터 구조 및 모델링 #
 
@@ -160,8 +160,8 @@ is Adj + Ctl {
 
 > [!TIP]
 > 아래에 설명 된 두 oracle 형식은 모두 샘플에서 설명 합니다.
-> 연속 쿼리 oracles 대해 자세히 알아보려면 [ **PhaseEstimation** 샘플](https://github.com/microsoft/Quantum/tree/master/samples/characterization/phase-estimation)을 참조 하세요.
-> 불연속 쿼리 oracles에 대해 자세히 알아보려면 [ **IsingPhaseEstimation** 샘플](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/phase-estimation)을 참조 하세요.
+> 연속 쿼리 oracles 대해 자세히 알아보려면 [ **PhaseEstimation** 샘플](https://github.com/microsoft/Quantum/tree/main/samples/characterization/phase-estimation)을 참조 하세요.
+> 불연속 쿼리 oracles에 대해 자세히 알아보려면 [ **IsingPhaseEstimation** 샘플](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/phase-estimation)을 참조 하세요.
 
 Oracle의 첫 번째 유형은 개별 쿼리를 호출 하 고 사용자 정의 유형을 사용 하 여 표시 하는 oracle은 <xref:microsoft.quantum.oracles.discreteoracle> 단일 행렬을 포함 합니다.
 $U $가 예측 하려는 고유 값의 단일 인 경우 $U $에 대 한 oracle은 단순히 $U $를 구현 하는 서브루틴에 대 한 독립 실행형입니다.
@@ -211,8 +211,8 @@ $ $ \begin{align} U (t) & = \left (e ^ {-iH \_ 0 t/r} e ^ {-ih \_ 1 t/r} \c도�
 동적 생성기 모델링 라이브러리는 간단한 생성기를 기준으로 복잡 한 생성기를 위한 프레임 워크를 제공 합니다. 이러한 설명은 시뮬레이션 라이브러리를 사용 하 여 선택의 시뮬레이션 알고리즘에의 한 시간 진화를 구현 하는 것과 같은 여러 세부 정보가 자동으로 처리 되는 것을 말합니다.
 
 > [!TIP]
-> 아래에 설명 된 동적 생성기 라이브러리는 샘플에서 설명 합니다. Ising 모델을 기반으로 하는 예제는 [ **Isinggenerators** 샘플](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/generators)을 참조 하세요.
-> 분자 Hydrogen를 기반으로 하는 예제는 [**H2SimulationCmdLine**](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line) 및 [**H2SimulationGUI**](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/gui) 샘플을 참조 하세요.
+> 아래에 설명 된 동적 생성기 라이브러리는 샘플에서 설명 합니다. Ising 모델을 기반으로 하는 예제는 [ **Isinggenerators** 샘플](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/generators)을 참조 하세요.
+> 분자 Hydrogen를 기반으로 하는 예제는 [**H2SimulationCmdLine**](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line) 및 [**H2SimulationGUI**](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/gui) 샘플을 참조 하세요.
 
 ### <a name="complete-description-of-a-generator"></a>생성기의 전체 설명 ###
 

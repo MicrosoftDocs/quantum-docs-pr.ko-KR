@@ -9,14 +9,14 @@ uid: microsoft.quantum.contributing.style
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 27a2ae5ae9d00329fc369268edae24228a9a9d0d
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: fef3cea1c11e4fef49ddbf63adb34e07675049d2
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867592"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834196"
 ---
-# <a name="no-locq-style-guide"></a>Q#스타일 안내선 #
+# <a name="no-locq-style-guide"></a>Q# 스타일 안내선 #
 ## <a name="general-conventions"></a>일반 규칙 ##
 
 이 가이드에서 제안 하는 규칙은 쉽게 읽고 이해할 수 있도록 작성 된 프로그램 및 라이브러리를 만드는 데 도움을 주기 위한 것 Q# 입니다.
@@ -52,7 +52,7 @@ ms.locfileid: "87867592"
 > 이러한 관점에서 사용자 정의 형식은 형식 자체와 생성자 함수에 일관 된 이름을 갖도록 명사로 이름을 지정 해야 합니다.
 
 적절 한 경우 작업 이름이 작업에서 수행한 효과를 명확 하 게 나타내는 동사로 시작 되는지 확인 합니다.
-예를 들어:
+예를 들면 다음과 같습니다.
 
 - `MeasureInteger`
 - `EstimateEnergy`
@@ -70,7 +70,7 @@ ms.locfileid: "87867592"
 | 예측값 | 하나 이상의 측정값 으로부터 그려진 추정치를 나타내는 고전 값이 반환 됩니다. |
 | 측정값 | 퀀텀 측정이 수행 되며 결과가 사용자에 게 반환 됩니다. |
 | 준비 | 지정 된 비트 레지스터가 특정 상태로 초기화 됩니다. |
-| 샘플 | 일부 분포에서 무작위로 값이 반환 됩니다. |
+| 예제 | 일부 분포에서 무작위로 값이 반환 됩니다. |
 
 함수의 경우 일반적인 명사를 선호 하는 동사를 사용 하지 않는 것이 좋습니다 (아래의 적절 한 명사에 대 한 지침 참조).
 
@@ -79,7 +79,7 @@ ms.locfileid: "87867592"
 - `LookupFunction`
 
 특히 거의 모든 경우에, 함수 이름이 퀀텀 프로그램의 다른 위치에 있는 작업 또는 부작용에 강력 하 게 연결 되어 있음을 나타내기 위해 해당 하는 경우 과거 participles를 사용 하는 것이 좋습니다.
-예를 들어는 `ControlledOnInt` 동사 "control"의 part 분사 폼을 사용 하 여 함수에서 인수를 수정 하는 형용사로 동작 함을 표시 합니다.
+예를 들어는  `ControlledOnInt` 동사 "control"의 part 분사 폼을 사용 하 여 함수에서 인수를 수정 하는 형용사로 동작 함을 표시 합니다.
 이 이름에는 아래에서 설명한 대로 기본 제공 함수의 의미 체계와 일치 하는 추가 혜택이 있습니다 `Controlled` .
 마찬가지로 _에이전트 명사_ 는와 강력 하 게 연결 된 udt의 이름에 대 한 작업 이름에서 함수와 UDT 이름을 생성 하는 데 사용할 수 있습니다 `Encoder` `Encode` .
 
@@ -96,7 +96,7 @@ ms.locfileid: "87867592"
 
 # <a name="examples"></a>[예](#tab/examples)
 
-|   | 이름 | 설명 |
+| &nbsp;  | Name | 설명 |
 |---|------|-------------|
 | ☑ | `operation ReflectAboutStart` | 작업의 효과를 나타내려면 동사 ("반사")를 사용 하지 않습니다. |
 | ☒ | <s>`operation XRotation`</s> | 명사구를 사용 하는 것은 연산이 아니라 함수를 제안 합니다. |
@@ -115,7 +115,7 @@ ms.locfileid: "87867592"
 
 프로그램에 대 한 진입점을 정의 하는 경우 Q# Q# 컴파일러는 진입점이 특정 이름 (예: [ `@EntryPoint()` ](xref:microsoft.quantum.core.entrypoint) `main` , `Main` 또는 `__main__` )을 요구 하는 대신 특성을 인식 합니다.
 즉, 개발자의 관점에서 Q# 진입점은로 주석이 지정 된 일반 작업입니다 `@EntryPoint()` .
-또한 Q# 진입점은 전체 응용 프로그램 (예: Q# 독립 실행형 실행 파일)에 대 한 진입점 이거나 Q# 응용 프로그램의 호스트 프로그램 (예: Python 또는 .net과 함께 사용 하는 경우)에 대 한 진입점 일 수 있습니다. Q# 이는 진입점에 적용 될 때 "main" 이름이 잘못 될 수 있다는 점 Q# 입니다.
+또한 Q# 진입점은 전체 응용 프로그램에 대 한 진입점 일 수 있습니다 (예 Q# : 독립 실행형 실행 프로그램의 경우) Q# . 또는 응용 프로그램의 호스트 프로그램 (예: Python 또는 .net과 함께를 사용 하는 경우)에 대 한 진입점이 진입점 Q# 에 적용 될 때 잘못 된 이름일 Q# 수 있습니다.
 
 `@EntryPoint()`위에 나열 된 이름 지정 작업에 대 한 일반적인 조언을 사용 하 여 특성 사용을 반영 하기 위해 명명 진입점을 사용 하는 것이 좋습니다.
 
@@ -129,7 +129,7 @@ ms.locfileid: "87867592"
 
 # <a name="examples"></a>[예](#tab/examples)
 
-|   | 이름 | 설명 |
+| &nbsp;  | Name | 설명 |
 |---|------|-------------|
 | ☑ | `@EntryPoint() operation RunSimulation` | 작업 이름을 통해 진입점의 용도를 명확 하 게 전달 합니다. |
 | ☒ | <s>`@EntryPoint() operation Main`</s> | 를 사용 `Main` 하면 진입점의 목적이 명확 하 게 전달 되지 않으며 특성으로 중복 됩니다 `@EntryPoint()` . |
@@ -171,7 +171,7 @@ is Adj + Ctl {
 
 # <a name="examples"></a>[예](#tab/examples)
 
-|   | 이름 | 설명 |
+| &nbsp;   | Name | 설명 |
 |---|------|-------------|
 | ☑ | `X` | "$X $ 변환 적용"의 이해 하기 쉬운 약어 |
 | ☑ | `CNOT` | "제어-없음"에 대 한 이해 하기 쉬운 약어 |
@@ -228,7 +228,7 @@ Q#는 강력 하 고 staticly 지정 된 언어 이므로 한 형식의 값은 �
 
 # <a name="examples"></a>[예](#tab/examples)
 
-|   | 이름 | 설명 |
+| &nbsp;   | Name | 설명 |
 |---|------|-------------|
 | ☒ | <s>`ToDouble`</s> | 전치사 "to"는 동사가 아닌 연산을 나타내는 동사 구를 생성 합니다. |
 | ☒ | <s>`AsDouble`</s> | 입력 형식이 함수 이름에서 명확 하지 않습니다. |
@@ -251,7 +251,7 @@ Q#는 강력 하 고 staticly 지정 된 언어 이므로 한 형식의 값은 �
 
 # <a name="examples"></a>[예](#tab/examples)
 
-|   | 이름 | 설명 |
+| &nbsp;  | Name | 설명 |
 |---|------|-------------|
 | ☒ | <s>`operation _ApplyDecomposedOperation`</s> | `_`이 작업이 내부용 으로만 사용 됨을 나타내기 위해 밑줄을 사용 하지 않습니다. |
 | ☑ | `internal operation ApplyDecomposedOperation` | `internal`시작 부분에 있는 키워드는이 작업이 내부용 으로만 사용 됨을 나타냅니다. |
@@ -264,12 +264,12 @@ Q#는 강력 하 고 staticly 지정 된 언어 이므로 한 형식의 값은 �
 
 | 접미사 | 의미 |
 |--------|---------|
-| `A` | 지원 해야 하는 입력`Adjoint` |
-| `C` | 지원 해야 하는 입력`Controlled` |
+| `A` | 지원 해야 하는 입력 `Adjoint` |
+| `C` | 지원 해야 하는 입력 `Controlled` |
 | `CA` | 입력은 및를 지원 해야 합니다. `Controlled``Adjoint` |
-| `I` | 입력 또는 입력은 형식입니다.`Int` |
-| `D` | 입력 또는 입력은 형식입니다.`Double` |
-| `L` | 입력 또는 입력은 형식입니다.`BigInt` |
+| `I` | 입력 또는 입력은 형식입니다. `Int` |
+| `D` | 입력 또는 입력은 형식입니다. `Double` |
+| `L` | 입력 또는 입력은 형식입니다. `BigInt` |
 
 # <a name="guidance"></a>[지침](#tab/guidance)
 
@@ -300,7 +300,7 @@ Q#함수 또는 작업에 대 한 코드의 핵심 목표는 쉽게 읽고 이�
 - 리터럴 이름 ( `flagQubit` ) 및 배열 형식 ()으로 스칼라 형식을 나타냅니다 `measResults` .
   구체적 비트 배열의 경우에는 `Register` 이름이 특정 방식으로 밀접 하 게 관련 된 다양 한 비트 시퀀스를 참조 하는 방식으로 이러한 형식을 나타내는 것이 좋습니다.
 - 배열로 인덱스로 사용 되는 변수는로 시작 해야 `idx` 하며 단수형 (예:) 이어야 합니다. `things[idxThing]`
-  특히 단일 문자 변수 이름을 인덱스로 사용 하지 않는 것이 좋습니다. `idx`최소한을 사용 하십시오.
+  특히 단일 문자 변수 이름을 인덱스로 사용 하지 않는 것이 좋습니다. `idx` 최소한을 사용 하십시오.
 - 배열의 길이를 포함 하는 데 사용 되는 변수는로 시작 해야 `n` 하 고 복수화 해야 합니다 (예: `nThings` ).
 
 # <a name="examples"></a>[예](#tab/examples)
@@ -323,7 +323,7 @@ Q#함수 또는 작업에 대 한 코드의 핵심 목표는 쉽게 읽고 이�
 
 # <a name="examples"></a>[예](#tab/examples)
 
-|   | 코드 조각 | 설명 |
+| &nbsp;  | 코드 조각 | 설명 |
 |---|---------|-------------|
 | ☑ | `newtype Oracle = (Apply : Qubit[] => Unit is Adj + Ctl)` | 이름은 `Apply` `CamelCase` 형식이 지정 된 동사 구로, 명명 된 항목이 작업 임을 제안 합니다. |
 | ☒ | <s>`newtype Oracle = (apply : Qubit[] => Unit is Adj + Ctl) `</s> | 명명 된 항목은 초기 대문자로 시작 해야 합니다. |
@@ -479,7 +479,7 @@ is Adj + Ctl {
 
 # <a name="examples"></a>[예](#tab/examples)
 
-|   | 코드 조각 | 설명 |
+| &nbsp; | 코드 조각 | 설명 |
 |---|---------|-------------|
 | ☒ | <s>`2+3`</s> | 이항 연산자 주위의 공백을 사용 합니다. |
 | ☒ | <s>`target:Qubit`</s> | 형식 주석 콜론 앞뒤에 공백을 사용 합니다. |

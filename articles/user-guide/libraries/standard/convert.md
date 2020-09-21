@@ -3,21 +3,21 @@ title: 표준 라이브러리의 형식 변환 Q#
 description: 표준 라이브러리의 공용 및 사용자 정의 형식 변환 함수에 대해 알아봅니다 Q# .
 author: cgranade
 uid: microsoft.quantum.libraries.convert
-ms.author: chgranad@microsoft.com
+ms.author: chgranad
 ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 2319bf453f5fbf6bd068859ea65562423d3ff4d0
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: aa8a1ad624067906998d2735c7a95174a163ce97
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868518"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835607"
 ---
 # <a name="type-conversions"></a>형식 변환 #
 
-Q#는 **강력한** 형식의 언어입니다.
+Q# 는 **강력한** 형식의 언어입니다.
 특히 Q# 은 고유 형식 간에 암시적으로 캐스팅 되지 않습니다. 예를 들어 `1 + 2.0` 은 유효한 식이 아닙니다 Q# .
 대신는 Q# 지정 된 형식의 새 값을 생성 하기 위한 다양 한 형식 변환 함수를 제공 합니다.
 

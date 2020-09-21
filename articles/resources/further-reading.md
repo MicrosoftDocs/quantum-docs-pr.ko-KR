@@ -1,20 +1,20 @@
 ---
 title: 퀀텀 컴퓨팅 학습 리소스 | Microsoft Docs
 description: 퀀텀 컴퓨터 프로그래밍에 대 한 자세한 내용을 보려는 경우 퀀텀 컴퓨팅 항목의 심층 검사가 포함 된 참조 목록입니다.
-author: QuantumWriter
+author: bradben
 uid: microsoft.quantum.more-information
-ms.author: nawiebe@microsoft.com
+ms.author: v-benbra
 ms.date: 12/11/2017
 ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 7c5063fccbe73478aeb917e0cd2fe2f7fe51c070
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 91b4c052fd7f20906433a4bb481f113acbe789ea
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866845"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834179"
 ---
 # <a name="more-quantum-computing-learning-resources"></a>추가 퀀텀 컴퓨팅 학습 리소스
 

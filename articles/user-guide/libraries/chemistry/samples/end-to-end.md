@@ -2,18 +2,18 @@
 title: 샘플 NWChem 퀀텀 프로그램
 description: NWChem 입력 데크를 사용 하 여 퀀텀 화학 시뮬레이션에 대 한 게이트 수를 가져오는 예제를 살펴봅니다.
 author: cgranade
-ms.author: chgranad@microsoft.com
+ms.author: chgranad
 ms.date: 10/23/2018
 uid: microsoft.quantum.chemistry.examples.endtoend
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 528c34ea9b28b2f9b8f9a8bad681557f44bfcdaa
-ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
+ms.openlocfilehash: 986ff2c2ff144c57bd01ddeea0467d0168fd9334
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90759718"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835760"
 ---
 # <a name="end-to-end-with-nwchem"></a>NWChem을 사용하는 엔드투엔드 #
 
@@ -47,13 +47,13 @@ Import-Module InvokeNWChem.psm1
 
 > [!NOTE]
 > 기본적으로 Windows는 보안 조치로 스크립트나 모듈을 실행 하는 것을 방지 합니다.
-> 와 같은 모듈이 `Invoke-NWChem.psm1` Windows에서 실행 되도록 허용 하려면 실행 정책을 변경 해야 할 수 있습니다.
+> 와 같은 모듈이 `Invoke-NWChem.psm1` Windows에서 실행 되도록 허용 하려면 정책을 변경 해야 할 수 있습니다.
 > 이렇게 하려면 다음 명령을 실행 합니다 `Set-ExecutionPolicy` .
 > ```powershell
 > Set-ExecutionPolicy RemoteSigned -Scope Process
 > ```
-> 그런 다음 PowerShell을 종료 하면 실행 정책이 되돌려집니다.
-> 실행 정책을 저장 하려면 다음에 대해 다른 값을 사용 합니다 `-Scope` .
+> PowerShell을 종료 하면 정책이 되돌려집니다.
+> 정책을 저장 하려면 다음에 대해 다른 값을 사용 합니다 `-Scope` .
 > ```powershell
 > Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 > ```

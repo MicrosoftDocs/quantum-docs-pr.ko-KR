@@ -1,24 +1,24 @@
 ---
 title: 기본 작업 카운터-퀀텀 개발 키트
-description: 퀀텀 추적 시뮬레이터를 사용 하 여 프로그램의 작업에서 사용 되는 기본 실행을 추적 하는 Microsoft QDK 기본 작업 카운터에 대해 알아봅니다 Q# .
+description: 퀀텀 추적 시뮬레이터를 사용 하 여 프로그램의 작업에서 사용 되는 기본 프로세스를 추적 하는 Microsoft QDK 기본 작업 카운터에 대해 알아봅니다 Q# .
 author: vadym-kl
-ms.author: vadym@microsoft.com
+ms.author: vadym
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.primitive-counter
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: ceb70cef6dc0a4530b992b5a529248a8b283c17f
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 8ee9ce25e680112e2f3c68d82ae9267c1b0fb355
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868239"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835981"
 ---
 # <a name="quantum-trace-simulator-primitive-operations-counter"></a>퀀텀 추적 시뮬레이터: 기본 작업 카운터
 
-기본 작업 카운터는 퀀텀 개발 키트 [퀀텀 추적 시뮬레이터](xref:microsoft.quantum.machines.qc-trace-simulator.intro)의 일부입니다. 퀀텀 프로그램에서 호출 된 모든 작업에서 사용 되는 기본 실행 수를 계산 합니다. 
+기본 작업 카운터는 퀀텀 개발 키트 [퀀텀 추적 시뮬레이터](xref:microsoft.quantum.machines.qc-trace-simulator.intro)의 일부입니다. 퀀텀 프로그램에서 호출 된 모든 작업에서 사용 되는 기본 프로세스의 수를 계산 합니다. 
 
 모든 <xref:microsoft.quantum.intrinsic> 연산은 단일 비트 회전, T 작업, 단일가 Clifford 작업, CNOT 작업 및 여러 가지 관찰 가능 개체의 측정값으로 표현 됩니다. 기본 작업 카운터는 작업 [호출 그래프](https://en.wikipedia.org/wiki/Call_graph)의 모든 가장자리에 대 한 통계를 집계 하 고 수집 합니다.
 

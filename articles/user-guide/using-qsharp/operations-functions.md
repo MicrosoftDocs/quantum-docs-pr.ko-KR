@@ -2,19 +2,19 @@
 title: 의 작업 및 함수 Q#
 description: 작업 및 함수를 정의 하 고 호출 하는 방법 뿐만 아니라 제어 된 및 adjoint 작업 특수화입니다.
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.operationsfunctions
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: c2ce999ea2a0fe7204f402fedb4cd3a3c15bd44b
-ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
+ms.openlocfilehash: e9a84de2753bc3293f441e66ee53e78559263e5c
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90759427"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833476"
 ---
 # <a name="operations-and-functions-in-no-locq"></a>의 작업 및 함수 Q#
 
@@ -73,9 +73,7 @@ operation DecodeSuperdense(here : Qubit, there : Qubit) : (Result, Result) {
 
 에서 많은 작업을 수행 하는 경우 처럼 작업에서 단일 변환을 구현 하는 경우 Q# *adjointed* 또는 *제어*될 때 작업의 작동 방식을 정의할 수 있습니다. 작업의 *adjoint* 특수화는 작업의 "역"이 작동 하는 방식을 지정 하는 반면, *제어* 되는 특수화는 응용 프로그램이 특정 퀀텀 레지스터의 상태에서 조건 화 된 때 작업이 작동 하는 방식을 지정 합니다.
 
-퀀텀 작업의 adjoints는 퀀텀 컴퓨팅의 많은 측면에서 매우 중요 합니다. 유용한 프로그래밍 기법을 함께 설명 하는 이러한 상황에 대 한 예는 Q# 이 문서의 [변화](#conjugations) 를 참조 하세요. 
-
-제어 되는 작업 버전은 모든 컨트롤이 지정 된 상태에 있는 경우에만 기본 작업을 효과적으로 적용 하는 새 작업입니다.
+퀀텀 작업의 adjoints는 퀀텀 컴퓨팅의 많은 측면에서 매우 중요 합니다. 유용한 프로그래밍 기술을 함께 설명 하는 이러한 상황에 대 한 예는 Q# [제어 흐름: 변화](xref:microsoft.quantum.guide.controlflow#conjugations)을 참조 하세요. 제어 되는 작업 버전은 모든 컨트롤이 지정 된 상태에 있는 경우에만 기본 작업을 효과적으로 적용 하는 새 작업입니다.
 컨트롤의 superposition에 있는 경우 기본 작업은 superposition의 해당 부분에 coherently 적용 됩니다.
 따라서 제어 된 작업은 종종 되거나 얽 히을 생성 하는 데 사용 됩니다.
 
@@ -151,7 +149,7 @@ operation DecodeSuperdense(here : Qubit, there : Qubit) : (Result, Result) {
 
 ### <a name="implicitly-specifying-implementations"></a>암시적으로 구현 지정
 
-이 경우 작업 선언의 본문은 기본 구현 으로만 구성 됩니다. 예를 들어:
+이 경우 작업 선언의 본문은 기본 구현 으로만 구성 됩니다. 예를 들면 다음과 같습니다.
 
 ```qsharp
 operation PrepareEntangledPair(here : Qubit, there : Qubit) : Unit 
@@ -364,46 +362,6 @@ function ConjugateUnitaryWith(
 
 사용자 정의 형식은 하위 형식이 아니라 기본 형식의 래핑된 버전으로 취급 됩니다.
 이는 기본 형식의 값이 인 것으로 간주 되는 사용자 정의 형식의 값을 사용할 수 없음을 의미 합니다.
-
-
-### <a name="conjugations"></a>변화
-
-기존 비트와는 달리, 더 이상 필요 하지 않은 계산에 대 한 의도 하지 않은 영향이 있을 경우이를 무조건 다시 설정 하면 나머지 계산에 원치 않는 영향이 있을 수 있으므로 퀀텀 메모리 해제는 약간 더 복잡 합니다. 메모리를 해제 하기 전에 수행 된 계산을 적절히 "실행 취소" 하 여 이러한 효과를 방지할 수 있습니다. 따라서 퀀텀 컴퓨팅의 일반적인 패턴은 다음과 같습니다. 
-
-```qsharp
-operation ApplyWith<'T>(
-    outerOperation : ('T => Unit is Adj), 
-    innerOperation : ('T => Unit), 
-    target : 'T) 
-: Unit {
-
-    outerOperation(target);
-    innerOperation(target);
-    Adjoint outerOperation(target);
-}
-```
-
-0.9 릴리스부터는 Q# 이전 변환을 구현 하는 활용 문을 지원 합니다. 이 문을 사용 하 여 `ApplyWith` 다음과 같은 방법으로 작업을 구현할 수 있습니다.
-
-```qsharp
-operation ApplyWith<'T>(
-    outerOperation : ('T => Unit is Adj), 
-    innerOperation : ('T => Unit), 
-    target : 'T) 
-: Unit {
-
-    within{ 
-        outerOperation(target);
-    }
-    apply {
-        innerOperation(target);
-    }
-}
-```
-외부 및 내부 변환을 작업으로 쉽게 사용할 수 없지만 대신 여러 문으로 구성 된 블록에서 더 편리 하 게 설명 하는 경우 이러한 활용 문은 훨씬 더 유용 해 집니다. 
-
-블록 내에서 정의 된 문에 대 한 역 변환은 컴파일러에 의해 자동으로 생성 되 고 적용 블록이 완료 된 후에 실행 됩니다.
-블록 내에 사용 되는 변경할 수 있는 변수는 적용 블록에서 바인딩 가능 하지 않으므로 생성 된 변환은 블록 내에서 계산의 adjoint로 보장 됩니다. 
 
 
 ## <a name="defining-new-functions"></a>새 함수 정의
@@ -663,7 +621,7 @@ Q# callables은 직접 또는 간접적으로 재귀적으로 사용할 수 있�
 그러나 재귀 사용에 대 한 두 가지 중요 한 설명은 다음과 같습니다.
 
 - 작업에서 재귀를 사용 하면 특정 최적화에 방해가 될 수 있습니다.
-  이 간섭을 통해 알고리즘의 실행 시간에 상당한 영향을 줄 수 있습니다.
+  이 간섭을 통해 알고리즘의 런타임에 상당한 영향을 줄 수 있습니다.
 - 실제 퀀텀 장치에서 실행 되는 경우 스택 공간이 제한 될 수 있으므로 심층 재귀가 런타임 오류가 발생할 수 있습니다.
   특히 Q# 컴파일러와 런타임에서는 마무리 재귀를 식별 하 고 최적화 하지 않습니다.
 

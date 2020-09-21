@@ -1,6 +1,6 @@
 ---
 제목: 퀀텀 컴퓨팅 용어집 설명: 퀀텀 컴퓨팅에 사용 되는 일반적인 용어, 작업 및 개체의 용어집입니다.
-작성자: QuantumWriter: Alan.Geller@microsoft.com ms. date: 12/11/2017 밀리초. 토픽: 문서 uid: microsoft 양자:
+작성자: bradben: benbra m. 날짜: 9/1/2020 밀리초. 토픽: 문서 uid: microsoft 양자:
 - "Q#"
 - "$$v"
 - "$$"
@@ -99,7 +99,7 @@
 
 ## <a name="bloch-sphere"></a>Bloch 구
 
-3 차원 단위 구의 점으로 서 단일[비트](xref:microsoft.quantum.glossary#qubit) [퀀텀 상태](xref:microsoft.quantum.glossary#quantum-state) 를 그래픽으로 표현한 것입니다. 자세한 내용은 [Bloch 구를 사용 하 여 다양 한 비트 및 변형 시각화](xref:microsoft.quantum.concepts.qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere)를 참조 하세요.
+3 차원 단위 구의 점으로 서 단일[비트](xref:microsoft.quantum.glossary#qubit) [퀀텀 상태](xref:microsoft.quantum.glossary#quantum-state) 를 그래픽으로 표현한 것입니다. 자세한 내용은  [Bloch 구를 사용 하 여 다양 한 비트 및 변형 시각화](xref:microsoft.quantum.concepts.qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere)를 참조 하세요.
 
 ## <a name="callable"></a>호출
 
@@ -137,7 +137,7 @@
 
 시간이 지남에 따라 [퀀텀 상태](xref:microsoft.quantum.glossary#quantum-state) 를 변경 하는 방법입니다. 자세한 내용은 [Matrix 지 수](xref:microsoft.quantum.concepts.matrix-advanced#matrix-exponentials)을 (를) 참조 하세요.
 
-## <a name="function"></a>기능
+## <a name="function"></a>함수
 Q#순수 하 게 일반 (비 퀀텀) 인 언어의 서브루틴 유형입니다. 퀀텀 알고리즘 내에서 함수를 사용 하는 [동안에는](xref:microsoft.quantum.glossary#qubit) 이 함수를 사용 하 여 [작업](xref:microsoft.quantum.glossary#operation)을 호출할 수 없습니다. 자세한 내용은 [작업 및 함수](xref:microsoft.quantum.guide.operationsfunctions)를 참조 하세요.
 
 ## <a name="gate"></a>라는
@@ -168,9 +168,9 @@ Hadamard 연산 (Hadamard gate 또는 transform이 라고도 함)은 단일의 [
 
 관련 이름 (예: [작업](xref:microsoft.quantum.glossary#operation), [함수](xref:microsoft.quantum.glossary#function)및 [사용자 정의 형식](xref:microsoft.quantum.glossary#user-defined-type))의 컬렉션에 대 한 레이블입니다. 예를 들어, [네임 스페이스](xref:microsoft.quantum.preparation) 는 초기 상태를 준비 하는 데 도움이 되는 표준 라이브러리에 정의 된 모든 기호에 레이블을 지정 합니다.
 
-## <a name="operation"></a>연산
+## <a name="operation"></a>작업(Operation)
 
-에서 퀀텀 실행의 기본 단위 Q# 입니다. C, c + + 또는 Python의 함수 또는 c # 또는 Java의 정적 메서드와 거의 동일 합니다. 자세한 내용은 [작업 및 함수](xref:microsoft.quantum.guide.operationsfunctions)를 참조 하세요.
+에서 퀀텀 계산의 기본 단위 Q# 입니다. C, c + + 또는 Python의 함수 또는 c # 또는 Java의 정적 메서드와 거의 동일 합니다. 자세한 내용은 [작업 및 함수](xref:microsoft.quantum.guide.operationsfunctions)를 참조 하세요.
 
 ## <a name="operator-application"></a>운영자 응용 프로그램
 
