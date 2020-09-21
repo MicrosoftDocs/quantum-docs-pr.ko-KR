@@ -2,19 +2,19 @@
 title: 에서의 비트 수준 프로그램 작성 및 시뮬레이트 Q#
 description: 개별 기능 비트 수준에서 작동 하는 퀀텀 프로그램 작성 및 시뮬레이션에 대 한 단계별 자습서
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 10/06/2019
 uid: microsoft.quantum.circuit-tutorial
 ms.topic: tutorial
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 39b2d762c0efbfa4bb3a60a1dcee6bcbe2bd91a9
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: 0dbeee8e092c830576ba8f79733035cdeeac11de
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863344"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834961"
 ---
 # <a name="tutorial-write-and-simulate-qubit-level-programs-in-q"></a>자습서: Q:에서의 비트 수준 프로그램 작성 및 시뮬레이트\#
 
@@ -32,7 +32,7 @@ Q#는 주로 대규모 퀀텀 프로그램을 위한 상위 수준 프로그래�
 <br/>
 <img src="../media/qft_full.PNG" alt="Three qubit quantum Fourier transform circuit diagram" width="600">
 
-## <a name="prerequisites"></a>사전 준비 사항
+## <a name="prerequisites"></a>전제 조건
 
 * 원하는 언어 및 개발 환경을 사용 하 여 퀀텀 개발 키트를 [설치](xref:microsoft.quantum.install) 합니다.
 * QDK가 이미 설치되어 있는 경우 최신 버전으로 [업데이트](xref:microsoft.quantum.update)해야 합니다.
@@ -116,7 +116,7 @@ Q#이 작업 내에서 먼저 다음 문을 사용 하 여 세 가지의 레지�
 다음으로 작업 자체를 구성 하는 게이트를 적용 합니다.
 Q# 에는 네임 스페이스의 작업으로 기본 퀀텀 게이트가 이미 많이 포함 되어 [`Microsoft.Quantum.Intrinsic`](xref:microsoft.quantum.intrinsic) 있으며, 이러한 작업은 예외는 아닙니다. 
 
-작업 내에서 Q# callables을 호출 하는 문은 물론 순차적으로 실행 됩니다.
+Q#물론 작업 내에서 callables을 호출 하는 문은 순차적으로 실행 됩니다.
 따라서 첫 번째는 적용 되는 첫 번째 게이트가 [`H`](xref:microsoft.quantum.intrinsic.h) (Hadamard)입니다.
 
 <br/>
@@ -132,9 +132,9 @@ Q# 에는 네임 스페이스의 작업으로 기본 퀀텀 게이트가 이미 
 (Hadamard) 게이트를 개별의 개별 비트에 적용 하는 것 외에도 `H` QFT 회로는 주로 제어 되는 회전으로 구성 됩니다 [`R1`](xref:microsoft.quantum.intrinsic.r1) .
 `R1(θ, <qubit>)`일반적으로 작업은 {0} $e ^ {i\theta} $의 회전을 $ \ket $ 구성 요소에 적용 하는 동안의 $ \ket $ 구성 요소를 변경 하지 않고 그대로 유지 합니다 {1} .
 
-#### <a name="controlled-operations"></a>제어 된 작업
+#### <a name="controlled-operations"></a>제어된 연산
 
-Q# 를 사용 하면 하나 또는 여러 컨트롤의 작업을 매우 쉽게 실행할 수 있습니다.
+Q# 를 사용 하면 하나 또는 여러 컨트롤의 컨트롤에 대 한 작업 실행이 매우 쉽습니다.
 일반적으로 호출을로 호출 하 `Controlled` 고 작업 인수가 다음과 같이 변경 됩니다.
 
  `Op(<normal args>)` $ \to $ `Controlled Op([<control qubits>], (<normal args>))` .
@@ -244,7 +244,7 @@ namespace NamespaceQFT {
 
 Q#파일 및 작업이 완료 되 면 퀀텀 프로그램을 호출 하 고 시뮬레이션할 준비가 된 것입니다.
 
-## <a name="execute-the-program"></a>프로그램 실행
+## <a name="run-the-program"></a>프로그램 실행
 
 Q#작업을 파일에 정의 했으므로 `.qs` 이제 해당 작업을 호출 하 고 반환 된 모든 기존 데이터를 관찰 해야 합니다.
 지금은 반환 된 내용이 없습니다 (위에서 정의한 작업이 반환 됨 `Unit` ). 하지만 나중에 Q# 측정 결과 ()의 배열을 반환 하도록 작업을 수정 하는 경우이를 `Result[]` 해결 합니다.
@@ -269,7 +269,7 @@ Q#명령 프롬프트에서 프로그램을 실행 하려면 파일을 약간만
 dotnet run
 ```
 
-실행 시 `Message` `DumpMachine` 콘솔에 아래 출력 및 출력이 표시 됩니다.
+완료 되 면 `Message` `DumpMachine` 아래의 및 출력이 콘솔에 인쇄 됩니다.
 
 
 #### <a name="python"></a>[Python](#tab/tabid-python)
@@ -314,8 +314,8 @@ C # 호스트는 네 부분으로 구성 됩니다.
     이 예제에는 없음이 있습니다.
 3. 양자 알고리즘을 실행합니다. 
     각 Q# 작업은 동일한 이름의 c # 클래스를 생성 합니다. 
-    이 클래스에는 **비동기적으로** 연산을 실행하는 `Run` 메서드가 있습니다.
-    실제 하드웨어에서 비동기적으로 실행되므로 실행이 비동기적입니다. 
+    이 클래스에는 `Run` **비동기**작업을 실행 하는 메서드가 있습니다.
+    실제 하드웨어에서 실행 하는 것은 비동기식으로 실행 되기 때문입니다. 
     메서드가 비동기 이기 때문에 `Run` 메서드를 호출 합니다 `Wait()` .이 메서드는 작업이 완료 될 때까지 실행을 차단 하 고 결과를 동기적으로 반환 합니다. 
 4. 작업의 반환 된 결과를 처리 합니다.
     지금은 작업에서 아무 것도 반환 하지 않습니다.
@@ -499,7 +499,7 @@ $ $ \begin{align} \ket{\psi} \_ {final} &= \frac {1} {\sqrt {8} } \left (\ket {0
 }
 ```
 
-명령 프롬프트에서 작업 하는 경우 반환 된 배열은 단순히 실행이 끝날 때 콘솔에 직접 출력 됩니다.
+명령 프롬프트에서 작업 하는 경우 반환 된 배열은 단순히 실행이 끝날 때 콘솔에 직접 표시 됩니다.
 그렇지 않으면 반환 된 배열을 처리 하도록 호스트 프로그램을 업데이트 합니다.
 
 #### <a name="command-prompt"></a>[명령 프롬프트](#tab/tabid-cmdline)

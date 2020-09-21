@@ -1,5 +1,5 @@
 ---
-title: 의 작업 및 함수Q#
+title: 의 작업 및 함수 Q#
 description: 작업 및 함수를 정의 하 고 호출 하는 방법 뿐만 아니라 제어 된 및 adjoint 작업 특수화입니다.
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
@@ -9,14 +9,14 @@ uid: microsoft.quantum.guide.operationsfunctions
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 76437c83df894fa86409e680f961d97e267c6869
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: c2ce999ea2a0fe7204f402fedb4cd3a3c15bd44b
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867882"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759427"
 ---
-# <a name="operations-and-functions-in-no-locq"></a>의 작업 및 함수Q#
+# <a name="operations-and-functions-in-no-locq"></a>의 작업 및 함수 Q#
 
 ## <a name="defining-new-operations"></a>새 작업 정의
 
@@ -43,12 +43,12 @@ operation BitFlip(target : Qubit) : Unit {
 키워드는 `operation` 작업 정의를 시작 하 고 그 뒤에 이름을 입력 `BitFlip` 합니다. 여기서는입니다.
 그런 다음 입력의 형식이 `Qubit` `target` 새 작업 내의 입력을 참조 하는 이름과 함께 정의 됩니다 ().
 마지막으로,는 `Unit` 작업의 출력이 비어 있음을 정의 합니다.
-`Unit`는 `void` c # 및 기타 명령형 언어에서와 유사 하 게 사용 되며 `unit` F # 및 다른 기능 언어에서와 동일 합니다.
+`Unit` 는 `void` c # 및 기타 명령형 언어에서와 유사 하 게 사용 되며 `unit` F # 및 다른 기능 언어에서와 동일 합니다.
 
 작업은 보다 더 흥미로운 형식을 반환할 수도 있습니다 `Unit` .
 예를 들어 <xref:microsoft.quantum.intrinsic.m> 작업은 측정을 수행 하는 `Result` 것을 나타내는 형식의 출력을 반환 합니다.  작업에서 다른 작업으로 전달 하거나 키워드와 함께 사용 하 여 `let` 새 변수를 정의할 수 있습니다.
 
-이 접근 방식을 사용 하면 [슈퍼 조밀한 코딩](https://github.com/microsoft/QuantumKatas/tree/master/SuperdenseCoding)의 경우와 같이 낮은 수준에서 퀀텀 작업과 상호 작용 하는 기존 계산을 나타낼 수 있습니다.
+이 접근 방식을 사용 하면 [슈퍼 조밀한 코딩](https://github.com/microsoft/QuantumKatas/tree/main/SuperdenseCoding)의 경우와 같이 낮은 수준에서 퀀텀 작업과 상호 작용 하는 기존 계산을 나타낼 수 있습니다.
 
 ```qsharp
 operation DecodeSuperdense(here : Qubit, there : Qubit) : (Result, Result) {
@@ -100,14 +100,14 @@ operation DecodeSuperdense(here : Qubit, there : Qubit) : (Result, Result) {
 예를 들어 `Adjoint` 작업에 함수를 적용 하면 `Y` 새 작업이 반환 `Adjoint Y` 됩니다. 다른 작업과 마찬가지로 새 작업을 호출할 수 있습니다.
 또는 함수의 응용 프로그램을 지 원하는 작업의 경우 `Adjoint` `Controlled` 반환 형식은 여야 `Unit` 합니다. 
 
-#### <a name="adjoint-functor"></a>`Adjoint`함수
+#### <a name="adjoint-functor"></a>`Adjoint` 함수
 
 따라서에서는 `Adjoint Y(q1)` 작업에 함수를 적용 하 여 `Adjoint` `Y` 새 작업을 생성 하 고 새 작업을에 적용 `q1` 합니다.
 새 작업의 시그니처와 형식이 기본 작업과 동일 합니다 `Y` .
 특히, 새 작업은를 지원 하 `Adjoint` 고, `Controlled` 기본 작업이 수행한 경우에만를 지원 합니다.
 `Adjoint`함수는 자체적으로 반전 됩니다. 즉, `Adjoint Adjoint Op` 는 항상와 동일 합니다 `Op` .
 
-#### <a name="controlled-functor"></a>`Controlled`함수
+#### <a name="controlled-functor"></a>`Controlled` 함수
 
 마찬가지로에서는 `Controlled X(controls, target)` 작업에 함수를 적용 하 여 `Controlled` `X` 새 작업을 생성 하 고 해당 새 작업을 및에 적용 합니다 `controls` `target` .
 
@@ -123,11 +123,11 @@ operation DecodeSuperdense(here : Qubit, there : Qubit) : (Result, Result) {
 
 원래 작업에 단일 인수만 사용한 경우 단일 [튜플 동등성](xref:microsoft.quantum.guide.types) 은 여기에서 재생 됩니다.
 예를 들어 `Controlled X` 는 작업의 제어 된 버전입니다 `X` . 
-`X`에는 형식이 `(Qubit => Unit is Adj + Ctl)` 있으므로 `Controlled X` 형식이 있습니다 `((Qubit[], (Qubit)) => Unit is Adj + Ctl)` . 단일 튜플 동치로 인해와 동일 합니다 `((Qubit[], Qubit) => Unit is Adj + Ctl)` .
+`X` 에는 형식이 `(Qubit => Unit is Adj + Ctl)` 있으므로 `Controlled X` 형식이 있습니다 `((Qubit[], (Qubit)) => Unit is Adj + Ctl)` . 단일 튜플 동치로 인해와 동일 합니다 `((Qubit[], Qubit) => Unit is Adj + Ctl)` .
 
 기본 작업에서 여러 인수를 사용한 경우에는 작업의 제어 되는 버전에 대 한 해당 인수를 괄호로 묶어 튜플로 변환 해야 합니다.
 예를 들어 `Controlled Rz` 는 작업의 제어 된 버전입니다 `Rz` . 
-`Rz`형식에는 `((Double, Qubit) => Unit is Adj + Ctl)` `Controlled Rz` 형식이 `((Qubit[], (Double, Qubit)) => Unit is Adj + Ctl)` 있습니다.
+`Rz` 형식에는 `((Double, Qubit) => Unit is Adj + Ctl)` `Controlled Rz` 형식이 `((Qubit[], (Double, Qubit)) => Unit is Adj + Ctl)` 있습니다.
 따라서는 `Controlled Rz(controls, (0.1, target))` 의 유효한 호출입니다 `Controlled Rz` (괄호로 묶인 괄호 `0.1, target` ).
 
 또 다른 예로는를 `CNOT(control, target)` 로 구현할 수 있습니다 `Controlled X([control], target)` . 대상이 CCNOT (두 제어 비트)로 제어 되어야 하는 경우 `Controlled X([control1, control2], target)` 문을 사용 합니다.
@@ -192,7 +192,7 @@ operation DecodeSuperdense(here : Qubit, there : Qubit) : (Result, Result) {
 
 #### <a name="explicit-specialization-declarations"></a>명시적 특수화 선언
 
-Q#작업에는 다음과 같은 명시적 특수화 선언이 포함 될 수 있습니다.
+Q# 작업에는 다음과 같은 명시적 특수화 선언이 포함 될 수 있습니다.
 
 - `body`특수화는 함수 적용 되지 않은 작업의 구현을 지정 합니다.
 - `adjoint`특수화는 적용 된 함수를 사용 하 여 작업의 구현을 지정 합니다 `Adjoint` .
@@ -331,7 +331,7 @@ Adjoint 또는 제어 된 버전이 없는 작업을 지정 하는 것은 유효
 
 Q#는 호출 가능 반환 형식과 관련 하 여 *공변 (covariant* )이 있습니다. 형식을 반환 하는 호출 가능은 `'A` 동일한 입력 형식 및와 호환 되는 결과 형식으로 호출할 수 있는와 호환 됩니다. `'A`
 
-Q#입력 형식과 관련 하 여 *반공 변 (contravariant* ): 형식을 입력으로 사용 하는 호출할 수 있는는 `'A` 동일한 결과 형식 및와 호환 되는 입력 형식으로 호출할 수 있는와 호환 됩니다 `'A` .
+Q# 입력 형식과 관련 하 여 *반공 변 (contravariant* ): 형식을 입력으로 사용 하는 호출할 수 있는는 `'A` 동일한 결과 형식 및와 호환 되는 입력 형식으로 호출할 수 있는와 호환 됩니다 `'A` .
 
 즉, 다음과 같은 정의가 제공 됩니다.
 
@@ -360,7 +360,7 @@ function ConjugateUnitaryWith(
 - 에서 형식의 값을 반환 `(Qubit[] => Unit is Adj + Ctl)` `ConjugateInvertWith` 합니다.
 
 > [!IMPORTANT]
-> Q#0.3에서는 사용자 정의 형식의 동작에 상당한 차이점이 도입 되었습니다.
+> Q# 0.3에서는 사용자 정의 형식의 동작에 상당한 차이점이 도입 되었습니다.
 
 사용자 정의 형식은 하위 형식이 아니라 기본 형식의 래핑된 버전으로 취급 됩니다.
 이는 기본 형식의 값이 인 것으로 간주 되는 사용자 정의 형식의 값을 사용할 수 없음을 의미 합니다.
@@ -509,7 +509,7 @@ function MapDoublesToStrings(fn : (Double -> String), values : Double[]) : Strin
 그러나 이러한 어려움의 대부분은 서로 다른 버전의와 관련 된 방법을 인식 하는 데 필요한 정보를 컴파일러에 제공 하지 않았기 때문에 발생 `Map` 합니다.
 효과적으로 컴파일러에서 `Map` Q# *형식* 에서 함수로 함수를 일종의 수학적 함수로 처리 하려고 합니다 Q# .
 
-Q#는 함수 및 작업에 *형식 매개 변수와*일반적인 튜플 매개 변수를 포함 하도록 허용 하 여이 개념을 공식화 합니다.
+Q# 는 함수 및 작업에 *형식 매개 변수와*일반적인 튜플 매개 변수를 포함 하도록 허용 하 여이 개념을 공식화 합니다.
 앞의 예제에서는 `Map` `Int, Pauli` 첫 번째 경우와 두 번째 경우에 형식 매개 변수를 포함 한다고 생각 합니다 `Double, String` .
 대부분의 경우 이러한 형식 매개 변수를 일반적인 형식인 것 처럼 사용 합니다. 형식 매개 변수 값을 사용 하 여 배열 및 튜플을 만들고, 함수 및 작업을 호출 하 고, 일반 변수 또는 변경 가능한 변수에 할당 합니다.
 
@@ -657,7 +657,7 @@ function SquareOperation(op : (Qubit => Unit)) : (Qubit => Unit) {
 
 ## <a name="recursion"></a>재귀
 
-Q#callables은 직접 또는 간접적으로 재귀적으로 사용할 수 있습니다.
+Q# callables은 직접 또는 간접적으로 재귀적으로 사용할 수 있습니다.
 즉, 작업 또는 함수가 자신을 호출 하거나 호출 가능 작업을 직접 또는 간접적으로 호출 하는 다른 호출 가능 함수를 호출할 수 있습니다.
 
 그러나 재귀 사용에 대 한 두 가지 중요 한 설명은 다음과 같습니다.

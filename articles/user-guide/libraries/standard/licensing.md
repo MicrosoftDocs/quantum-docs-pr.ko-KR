@@ -2,30 +2,30 @@
 title: QDK에 대 한 오픈 소스 라이선스
 description: 을 사용 하 고 Microsoft standard 라이브러리에 기여 하 고 참여 하는 라이선스에 대해 알아봅니다 Q# .
 author: martinro
-ms.author: martinro@microsoft.com
+ms.author: martinro
 ms.date: 2/16/2018
 ms.topic: article
 uid: microsoft.quantum.libraries.licensing
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: f964d5f4a4c20c8d53ceb4375c869030cd53ff07
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 4531d8c19e35f48f6e4c3cc2cebe3d82d6fa1025
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868460"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833686"
 ---
-# <a name="licensing"></a>라이선스 #
+# <a name="licensing"></a>라이선싱 #
 
-퀀텀 개발 키트는 [MIT 라이선스](https://github.com/Microsoft/Quantum/blob/master/LICENSE.txt)에 따라 사용이 허가 되는 다양 한 오픈 소스 함수 및 작업 모음을 제공 합니다.
+퀀텀 개발 키트는 [MIT 라이선스](https://github.com/Microsoft/Quantum/blob/main/LICENSE.txt)에 따라 사용이 허가 되는 다양 한 오픈 소스 함수 및 작업 모음을 제공 합니다.
 대상 컴퓨터에서 이식할 수 있는 표준 라이브러리의 부분은 및 기타 라이브러리 (예: [퀀텀 화학 라이브러리](xref:microsoft.quantum.chemistry.concepts.intro))와 함께 GitHub의 [Microsoft/QuantumLibraries](https://github.com/Microsoft/QuantumLibraries) 리포지토리에서 가져올 수 있습니다.
 
-Microsoft의 퀀텀 개발 키트는 [Microsoft Research 라이선스](https://github.com/Microsoft/Quantum-NC/blob/master/LICENSE)에 따라 사용이 허가 된 특수 라이브러리 기능 및 작업도 제공 합니다.
+Microsoft의 퀀텀 개발 키트는 [Microsoft Research 라이선스](https://github.com/Microsoft/Quantum-NC/blob/main/LICENSE)에 따라 사용이 허가 된 특수 라이브러리 기능 및 작업도 제공 합니다.
 GitHub의 [Microsoft/퀀텀 NC](https://github.com/microsoft/quantum-nc) 리포지토리에서 가져올 수 있습니다.
 
 표준 라이브러리 및 기타 라이브러리의 함수 및 작업 사용을 설명 하 고 설명 하는 많은 샘플이 있습니다.
-이러한 샘플은 [MIT 라이선스](https://github.com/Microsoft/Quantum/blob/master/LICENSE.txt)에 따라 사용이 허가 됩니다.
+이러한 샘플은 [MIT 라이선스](https://github.com/Microsoft/Quantum/blob/main/LICENSE.txt)에 따라 사용이 허가 됩니다.
 샘플은 GitHub의 [Microsoft/퀀텀](https://github.com/Microsoft/Quantum) 리포지토리에서 가져올 수 있습니다.
 
 ## <a name="contributing"></a>참여 ##

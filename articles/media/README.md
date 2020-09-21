@@ -2,15 +2,15 @@
 title: 미디어 추가 정보
 description: 이미지 업로드에 대 한 팁
 author: geduardo
-ms.author: v-edsanc@microsoft.com
+ms.author: v-edsanc
 ms.date: 03/04/2020
 ms.topic: readme
-ms.openlocfilehash: a4922e28a8fc5ddfb4cbc80302e23869154234d8
-ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
+ms.openlocfilehash: bf28f57820e95bbbf81f5ac7ade582d89b945a26
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "79024188"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834536"
 ---
 # <a name="readme"></a>추가 정보
 **중요**: 이미지를 어두운 모드에서 제대로 렌더링 하려면 투명지를 피해 야 합니다.

@@ -4,18 +4,18 @@ description: 타사 소프트웨어 통지 및 정보를 Microsoft Quantum Devel
 services: service-name-with-dashes-AZURE-ONLY
 keywords: SEO champ와 상담하지 않고 키워드를 추가하거나 편집하지 마세요.
 author: QuantumWriter
-ms.author: MSFT-alias-person-or-DL
+ms.author: v-benbra
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 1d76e9c8532dd7818941d182773a8f85a86becee
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 939dc681d6b9a89f02fd1f392b7fd84067d98e8f
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869752"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834128"
 ---
 # <a name="third-party-software-notices-and-information"></a>타사 소프트웨어 고지 사항 및 정보
 
@@ -195,7 +195,7 @@ Microsoft 공용 라이선스 (Ms-PL)
 
 (D) 귀하가 이 소프트웨어의 일부를 소스 코드 형태로 배포하는 경우에는, 이 사용권에 따라 반드시 이 사용권의 전체 사본을 포함시켜 배포해야 합니다. 귀하가 이 소프트웨어의 일부를 번역된 형태나 개체 코드 형태로 배포하는 경우, 이 사용권을 준수하는 사용권을 적용하는 경우에 한해 배포할 수 있습니다.
 
-(E) 소프트웨어는 "있는 그대로" 라이선스가 허여됩니다. 해당 사용으로 인해 발생하는 모든 위험은 귀하의 책임입니다. 기여자는 어떠한 명시적 보증, 보장 또는 조건도 제공 하지 않습니다. 귀하는 귀하가 거주하는 지역의 법률에 따른 추가적인 소비자 권리를 보유할 수 있으며, 이 권리는 본 사용권을 통해 변경되지 않습니다. 귀하가 거주하는 지역의 법규가 허용하는 범위 내에서 기여자는 상업성, 특정 목적에의 적합성 및 비침해성과 관련된 묵시적 보증을 배제합니다.
+(E) 소프트웨어는 "있는 그대로" 라이선스가 허여됩니다. 정보의 사용으로 발생하는 위험은 귀하의 책임입니다. 기여자는 어떠한 명시적 보증, 보장 또는 조건도 제공 하지 않습니다. 귀하는 귀하가 거주하는 지역의 법률에 따른 추가적인 소비자 권리를 보유할 수 있으며, 이 권리는 본 사용권을 통해 변경되지 않습니다. 귀하가 거주하는 지역의 법규가 허용하는 범위 내에서 기여자는 상업성, 특정 목적에의 적합성 및 비침해성과 관련된 묵시적 보증을 배제합니다.
 
 ## <a name="fsharpcore-notices-and-information"></a>Fsharp.core 통지 및 정보
 ---------------------------------------
@@ -268,7 +268,7 @@ Copyright (c) 2016 Eirik Tsarpalis
 
 달리 명시 된 경우를 제외 하 고 source 및 binary 형식의 FParsec 라이브러리는 단순화 된 BSD 라이선스에 따라 배포 됩니다. 간소화 된 BSD 라이선스 ( "2 ‐ clause BSD License")는 OSI ‐ 규격 인 단순 하 고 허용 가능한 라이선스입니다. 
 
-FParsec는 유니코드 문자 데이터베이스 v에서 파생 된 데이터를 통합 합니다. 8.0.0, Copyright (c) 1991 년 \ u20122015 Unicode, i n c .는 다음과 같은 용어를 사용 하 여 배포 됩니다.http://www.unicode.org/terms_of_use.html#Exhibit1 
+FParsec는 유니코드 문자 데이터베이스 v에서 파생 된 데이터를 통합 합니다. 8.0.0, Copyright (c) 1991 년 \ u20122015 Unicode, i n c .는 다음과 같은 용어를 사용 하 여 배포 됩니다. http://www.unicode.org/terms_of_use.html#Exhibit1 
 
 Doc 폴더의 설명서는 Creative Commons 특성 ‐ NonCommercial 3.0 Unported License에서 사용이 허가 됩니다. 이 Creative Commons 라이선스로는 권한 없이 상업적 용도로 설명서를 사용할 수 없습니다. 즉, 예를 들어 광고를 사용 하 여 비용을 얻기 위해 설명서를 책 형태로 판매 하거나 웹 콘텐츠 팜에 배치할 수 없습니다. 그러나 설명서 텍스트에서 money를 직접 획득 하려고 하지 않는 한 상업적 상황에서 설명서를 사용할 수 있습니다 (예: 상용 기업의 인트라넷에 배치). 
 
@@ -284,6 +284,6 @@ Copyright (c) 2007 \ u20122017, Stephan Tolksdorf. All rights reserved.
 
 2.2 Creative Commons 특성 ‐ NonCommercial 3.0 Unported License
 
-정리https://creativecommons.org/licenses/by-nc/3.0/
+정리 https://creativecommons.org/licenses/by-nc/3.0/
 
-전체 라이선스 텍스트:https://creativecommons.org/licenses/by-nc/3.0/legalcode 
+전체 라이선스 텍스트: https://creativecommons.org/licenses/by-nc/3.0/legalcode 

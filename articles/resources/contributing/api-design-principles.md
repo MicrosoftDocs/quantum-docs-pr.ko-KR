@@ -1,6 +1,6 @@
 ---
-title: Q#API 디자인 원칙
-description: Q#API 디자인 원칙
+title: Q# API 디자인 원칙
+description: Q# API 디자인 원칙
 author: cgranade
 ms.author: chgranad
 ms.date: 3/9/2020
@@ -9,14 +9,14 @@ uid: microsoft.quantum.contributing.api-design
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 580fcaea575ff544ed2c5f31eba7e963bea4534b
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 8714d3290e4099f901dab20a9ee9334699c4ad81
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866896"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834911"
 ---
-# <a name="no-locq-api-design-principles"></a>Q#API 디자인 원칙
+# <a name="no-locq-api-design-principles"></a>Q# API 디자인 원칙
 
 ## <a name="introduction"></a>소개
 
@@ -44,7 +44,7 @@ ms.locfileid: "87866896"
     유용 하 게 사용할 수 있는 경우에는 공용 Api를 사용 하지 않는 것이 좋습니다. 하지만 API의 각 부분에 유용한 *구체적인* 예제가 있는지 확인 해야 합니다.
 
   *예:*
-  - @"microsoft.quantum.canon.applytoeachca"는 `ApplyToEachCA(H, _)` 여러 퀀텀 알고리즘에서 공통 작업 인 일관 된 superposition 상태에서 등록을 준비 하는 데 사용할 수 있습니다. 동일한 작업은 준비, 숫자 및 oracle 기반 알고리즘의 다른 많은 작업에도 사용할 수 있습니다.
+  - @"microsoft.quantum.canon.applytoeachca" 는 `ApplyToEachCA(H, _)` 여러 퀀텀 알고리즘에서 공통 작업 인 일관 된 superposition 상태에서 등록을 준비 하는 데 사용할 수 있습니다. 동일한 작업은 준비, 숫자 및 oracle 기반 알고리즘의 다른 많은 작업에도 사용할 수 있습니다.
 
 - ✅새 API 설계 **를 브레인스토밍 및** 워크숍 하 여 직관적이 고 제안 된 사용 사례를 충족 하는지 다시 한 번 확인 합니다.
 
@@ -65,11 +65,11 @@ ms.locfileid: "87866896"
 - ✅사용 중단 중에 기존 사용자 코드가 제대로 작동 하도록 허용 하는 "shim" 작업 및 함수 **를 제공 합니다** .
 
   *예:*
-  - 로 호출 되는 작업의 이름을 바꾸면 `EstimateExpectation` `EstimateAverage` `EstimateExpectation` 기존 코드가 계속 제대로 작동할 수 있도록 새 이름으로 원래 작업을 호출 하는 라는 새 작업을 소개 합니다.
+  - 로 호출 되는 작업의 이름을 바꾸면 `EstimateExpectation`   `EstimateAverage`   `EstimateExpectation` 기존 코드가 계속 제대로 작동할 수 있도록 새 이름으로 원래 작업을 호출 하는 라는 새 작업을 소개 합니다.
 
 - ✅**DO** 특성을 사용 @"microsoft.quantum.core.deprecated" 하 여 사용자에 게 결함를 전달 합니다.
 
-- ✅작업 또는 함수의 이름을 바꿀 때에는에 **대 한 문자열** 입력으로 새 이름을 제공 `@Deprecated` 합니다.
+- ✅ 작업 또는 함수의 이름을 바꿀 때에는에 **대 한 문자열** 입력으로 새 이름을 제공 `@Deprecated` 합니다.
 
 - 미리 보기 릴리스 기간을 6 개월 이상 사용 하지 않거나 지원 되는 릴리스에 대해 2 년 이상 사용 하지 않는 기존 함수 또는 작업은 제거 **하지 않습니다** . ⛔️
 
@@ -91,13 +91,13 @@ ms.locfileid: "87866896"
 
   *예:*
   - 부동 소수점 입력을 제곱 하는 서브루틴은 명확 하 게 작성할 수 있으므로 작업이 아니라 사용자에 게 노출 되어야 합니다 `Squared : Double -> Double` `Square : Double => Double` . 이를 통해 더 많은 위치에서 서브루틴이 호출 될 수 있으며 (예: 다른 함수 내부) 성능 및 최적화에 영향을 줄 수 있는 유용한 최적화 정보를 컴파일러에 제공할 수 있습니다.
-  - `ForEach<'TInput, 'TOutput>('TInput => 'TOutput, 'TInput[]) => 'TOutput[]`및 `Mapped<'TInput, 'TOutput>('TInput -> 'TOutput, 'TInput[]) -> 'TOutput[]` 는 명확성을 고려 하 여 보장 됩니다. 두 가지 모두 다른 상황에서 유용 합니다.
-  - 퀀텀 작업의 응용 프로그램을 변환 하는 API 루틴은 결정적 방식으로 수행 될 수 있으므로와 같은 함수로 사용할 수 있습니다 `CControlled<'T>(op : 'T => Unit) => ((Bool, 'T) => Unit)` .
+  - `ForEach<'TInput, 'TOutput>('TInput => 'TOutput, 'TInput[]) => 'TOutput[]` 및 `Mapped<'TInput, 'TOutput>('TInput -> 'TOutput, 'TInput[]) -> 'TOutput[]` 는 명확성을 고려 하 여 보장 됩니다. 두 가지 모두 다른 상황에서 유용 합니다.
+  - 퀀텀 작업의 응용 프로그램을 변환 하는 API 루틴은 결정적 방식으로 수행 될 수 있으므로와 같은 함수로 사용할 수 있습니다   `CControlled<'T>(op : 'T => Unit) => ((Bool, 'T) => Unit)` .
 
 - ✅필요에 따라 형식 매개 변수를 사용 하 여 각 함수 및 작업에 대 한 적절 한 입력 **형식을 일반화 합니다** .
 
   *예:*
-  - `ApplyToEach`에는 `<'T>(('T => Unit), 'T[]) => Unit` 가장 일반적인 응용 프로그램의 특정 형식이 아닌 형식이 `((Qubit => Unit), Qubit[]) => Unit` 있습니다.
+  - `ApplyToEach` 에는 `<'T>(('T => Unit), 'T[]) => Unit` 가장 일반적인 응용 프로그램의 특정 형식이 아닌 형식이 `((Qubit => Unit), Qubit[]) => Unit` 있습니다.
 
 > [!TIP]
 > 향후 요구 사항을 예상 하는 것이 중요 하지만 사용자에 대 한 구체적인 문제를 해결 하는 것도 중요 합니다.
@@ -121,7 +121,7 @@ ms.locfileid: "87866896"
 - ✅가장 일반적으로 적용 되는 입력이 먼저 발생 하도록 (즉, 부분 응용 프로그램이 currying와 비슷하게 작동 하도록) 입력 튜플의 항목 **을 정렬 합니다** .
 
   *예:*
-  - 부동 소수점 `ApplyRotation` 숫자와 원하는 비트를 입력으로 사용 하는 연산은 형식의 입력을 필요로 하는 작업과 함께 사용 하기 위해 먼저 부동 소수점 입력에 부분적으로 적용 될 수 있습니다 `Qubit => Unit` . 따라서 서명 된`operation ApplyRotation(angle : Double, target : Qubit) : Unit is Adj + Ctl`
+  - 부동 소수점 `ApplyRotation` 숫자와 원하는 비트를 입력으로 사용 하는 연산은 형식의 입력을 필요로 하는 작업과 함께 사용 하기 위해 먼저 부동 소수점 입력에 부분적으로 적용 될 수 있습니다 `Qubit => Unit` . 따라서 서명 된 `operation ApplyRotation(angle : Double, target : Qubit) : Unit is Adj + Ctl`
       는 부분 응용 프로그램에서 가장 일관 된 방식으로 작동 합니다.
   - 일반적으로이 지침은 입력 튜플의 모든 모든 데이터를 앞에 배치 하는 것을 의미 하지만 좋은 결정을 사용 하 고 API가 실제로 호출 되는 방식을 검사 합니다.
 
@@ -132,7 +132,7 @@ ms.locfileid: "87866896"
 - ✅Long 및/또는 복잡 한 형식에 대해 유용한 약어를 제공 하기 위해 새로운 사용자 정의 **형식을 도입 합니다** .
 
   *예:*
-  - 세 개의 비트율 비트 배열 입력을 포함 하는 작업 유형을 일반적으로 입력으로 사용 하거나 출력으로 반환 하는 경우와 같은 UDT를 제공 합니다.`newtype TimeDependentBlockEncoding = ((Qubit[], Qubit[], Qubit[]) => Unit is Adj + Ctl)`
+  - 세 개의 비트율 비트 배열 입력을 포함 하는 작업 유형을 일반적으로 입력으로 사용 하거나 출력으로 반환 하는 경우와 같은 UDT를 제공 합니다. `newtype TimeDependentBlockEncoding = ((Qubit[], Qubit[], Qubit[]) => Unit is Adj + Ctl)`
       는 유용한 약어를 제공 하는 데 도움이 됩니다.
 
 - ✅지정 된 기본 형식이 매우 특정 한 의미 에서만 사용 되어야 함을 나타내기 위해 새 사용자 정의 **형식을 도입 합니다** .
@@ -143,12 +143,12 @@ ms.locfileid: "87866896"
 - ✅이후 확장성을 허용 하는 명명 된 항목 (예: 앞으로 추가 명명 된 항목을 포함할 수 있는 결과 구조)을 포함 하는 새로운 사용자 정의 **형식을 도입 합니다** .
 
   *예:*
-  - 작업에서 `TrainModel` 많은 구성 옵션을 노출 하는 경우 이러한 옵션을 새 udt로 노출 하 `TrainingOptions` 고 새 함수를 제공 하면 `DefaultTrainingOptions : Unit -> TrainingOptions` 라이브러리 개발자가 새 udt 항목을 적절 하 게 추가할 수 있도록 하는 동시에 TrainingOptions UDT 값의 특정 명명 된 항목을 재정의할 수 있습니다.
+  - 작업에서 `TrainModel` 많은 구성 옵션을 노출 하는 경우 이러한 옵션을 새 udt로 노출 하   `TrainingOptions` 고 새 함수를 제공 하면   `DefaultTrainingOptions : Unit -> TrainingOptions` 라이브러리 개발자가 새 udt 항목을 적절 하 게 추가할 수 있도록 하는 동시에 TrainingOptions UDT 값의 특정 명명 된 항목을 재정의할 수 있습니다.
 
 - ✅사용자가 올바른 튜플 분해를 알아야 하는 기본 설정에서 새 사용자 정의 형식에 대해 명명 된 항목 **을 선언 합니다** .
 
   *예:*
-  - 극좌표 형 분해에서 복소수를 나타낼 경우에는를 사용 하는 것이 좋습니다 `newtype ComplexPolar = (Magnitude: Double, Argument: Double)` `newtype ComplexPolar = (Double, Double)` .
+  - 극좌표 형 분해에서 복소수를 나타낼 경우에는를 사용 하는 것이 좋습니다   `newtype ComplexPolar = (Magnitude: Double, Argument: Double)`   `newtype ComplexPolar = (Double, Double)` .
 
 **주요 원칙:** 에서 사용자 정의 형식을 사용 하 여 인지 부하를 줄이고 사용자가 추가 개념 및 명명법을 배우지 않아도 됩니다.
 
@@ -167,7 +167,7 @@ ms.locfileid: "87866896"
 - 반드시 필요한 경우가 아니면 접근자 함수 **를 도입할 ⛔️** .   이 경우 명명 된 항목을 강력 하 게 선호 합니다.
 
   *예:*
-  - UDT를 도입할 때 `newtype Complex = (Double, Double)` `newtype Complex = (Real : Double, Imag : Double)` 함수 및를 도입 하기 위해 정의를 수정 하는 것을 선호 합니다 `GetReal : Complex -> Double` `GetImag : Complex -> Double` .
+  - UDT를 도입할 때 `newtype Complex = (Double, Double)`   `newtype Complex = (Real : Double, Imag : Double)` 함수 및를 도입 하기 위해 정의를 수정 하는 것을 선호 합니다 `GetReal : Complex -> Double`   `GetImag : Complex -> Double` .
 
 ## <a name="namespaces-and-organization"></a>네임 스페이스 및 조직
 
@@ -176,29 +176,29 @@ ms.locfileid: "87866896"
 - ✅네임 **스페이스 이름을** 로 `Publisher.Product.DomainArea` 합니다.
 
   *예:*
-  - Microsoft에서 퀀텀 개발 키트의 퀀텀 시뮬레이션 기능의 일부로 게시 한 함수, 작업 및 Udt는 네임 스페이스에 배치 됩니다 `Microsoft.Quantum.Simulation` .
-  - `Microsoft.Quantum.Math`Microsoft에서 수학 도메인 영역과 관련 된 퀀텀 개발 키트의 일부로 게시 한 네임 스페이스를 나타냅니다.
+  - Microsoft에서 퀀텀 개발 키트의 퀀텀 시뮬레이션 기능의 일부로 게시 한 함수, 작업 및 Udt는 네임 스페이스에 배치 됩니다   `Microsoft.Quantum.Simulation` .
+  - `Microsoft.Quantum.Math` Microsoft에서 수학 도메인 영역과 관련 된 퀀텀 개발 키트의 일부로 게시 한 네임 스페이스를 나타냅니다.
 
 - ✅특정 기능에 사용 되는 작업, 함수 및 사용자 정의 형식을 해당 기능을 설명 하는 네임 스페이스 **에 추가 하** 여 해당 기능이 여러 문제 도메인에서 사용 되는 경우에도 마찬가지입니다.
 
   *예:*
-  - Microsoft에서 퀀텀 개발 키트의 일부로 게시 한 상태 준비 Api는에 배치 됩니다 `Microsoft.Quantum.Preparation` .
-  - Microsoft에서 퀀텀 개발 키트의 일부로 게시 한 퀀텀 시뮬레이션 Api는에 배치 됩니다 `Microsoft.Quantum.Simulation` .
+  - Microsoft에서 퀀텀 개발 키트의 일부로 게시 한 상태 준비 Api는에 배치 됩니다   `Microsoft.Quantum.Preparation` .
+  - Microsoft에서 퀀텀 개발 키트의 일부로 게시 한 퀀텀 시뮬레이션 Api는에 배치 됩니다   `Microsoft.Quantum.Simulation` .
 
 - ✅특정 도메인 내 에서만 사용 되는 작업, 함수 및 사용자 정의 형식을 유틸리티의 도메인을 나타내는 네임 **스페이스로 추가 합니다** . 필요한 경우 네임 스페이스를 사용 하 여 각 도메인별 네임 스페이스 내에서 포커스가 있는 작업을 표시 합니다.
 
   *예:*
-  - Microsoft에서 게시 하는 퀀텀 기계 학습 라이브러리는 대부분 @"microsoft.quantum.machinelearning" 네임 스페이스에 저장 되지만 네임 스페이스는 예제 데이터 집합을 제공 합니다 @"microsoft.quantum.machinelearning.datasets" .
+  - Microsoft에서 게시 하는 퀀텀 기계 학습 라이브러리는 대부분 @"microsoft.quantum.machinelearning" 네임 스페이스에 저장 되지만 네임 스페이스는 예제 데이터 집합을 제공 합니다 @"microsoft.quantum.machinelearning.datasets"   .
   - Microsoft에서 퀀텀 개발 키트의 일부로 게시 한 퀀텀 화학 Api는에 배치 해야 `Microsoft.Quantum.Chemistry` 합니다. Wigner 분해 구현과 관련 된 기능을에 배치 하 여 `Microsoft.Quantum.Chemistry.JordanWigner` 퀀텀 화학 도메인 영역에 대 한 기본 인터페이스가 구현과 관련 되지 않도록 할 수 있습니다.
 
 **주요 원칙:** 네임 스페이스와 액세스 한정자를 함께 사용 하 여 사용자에 게 노출 되는 API 노출에 대해 의도적인 다음 Api의 구현 및 테스트와 관련 된 내부 세부 정보를 숨깁니다.
 
-- ✅적절 한 경우 **에는** api를 구현 하는 데 필요한 모든 함수 및 작업을 구현 하는 api와 동일한 네임 스페이스에 저장 하지만 "private" 또는 "internal" 키워드로 표시 하 여 라이브러리에 대 한 공용 api 표면의 일부가 아님을 나타내야 합니다. 밑줄 ()로 시작 하는 이름을 사용 `_` 하 여 전용 및 내부 작업과 공용 callables의 함수를 시각적으로 구분할 수 있습니다.
+- ✅ 적절 한 경우 **에는** api를 구현 하는 데 필요한 모든 함수 및 작업을 구현 하는 api와 동일한 네임 스페이스에 저장 하지만 "private" 또는 "internal" 키워드로 표시 하 여 라이브러리에 대 한 공용 api 표면의 일부가 아님을 나타내야 합니다. 밑줄 ()로 시작 하는 이름을 사용 `_` 하 여 전용 및 내부 작업과 공용 callables의 함수를 시각적으로 구분할 수 있습니다.
 
   *예:*
   - 작업 이름은 `_Features` 지정 된 네임 스페이스와 어셈블리에 대 한 전용 함수를 나타내며 키워드와 함께 제공 되어야 합니다 `internal` .
 
-- ✅드물지만 지정 된 네임 스페이스에 대 한 **API를 구현** 하기 위해 광범위 한 전용 함수 또는 작업 집합이 필요한 경우에는 구현 하 고 끝나는 네임 스페이스와 일치 하는 새 네임 스페이스에 저장 `.Private` 합니다.
+- ✅ 드물지만 지정 된 네임 스페이스에 대 한 **API를 구현** 하기 위해 광범위 한 전용 함수 또는 작업 집합이 필요한 경우에는 구현 하 고 끝나는 네임 스페이스와 일치 하는 새 네임 스페이스에 저장 `.Private` 합니다.
 
 - ✅모든 단위 테스트를 테스트 중인 네임 스페이스와 일치 하는 네임 스페이스 **에 저장 하** 고 종료 `.Tests` 합니다.
 
@@ -224,7 +224,7 @@ ms.locfileid: "87866896"
 
   - **동사의**
 
-    - **Assert**: 물리적 리소스를 사용 하 여 대상 컴퓨터와 해당 비트의 상태에 대 한 가정이 있는지 확인 합니다. 이 동사를 사용 하는 작업은 라이브러리 및 실행 프로그램의 기능에 영향을 주지 않고 항상 안전 하 게 제거 되어야 합니다. 팩트와 달리 어설션은 일반적인 경우에는 표준에 따라 결정 될 수 있습니다. 예를 들어,이는, 실행 환경 등의 외부 상태에 따라 달라질 수 있습니다. 외부 상태에 대 한 종속성은 일종의 부작용 이므로 어설션이 함수 대신 작업으로 노출 되어야 합니다.
+    - **Assert**: 물리적 리소스를 사용 하 여 대상 컴퓨터와 해당 비트의 상태에 대 한 가정이 있는지 확인 합니다. 이 동사를 사용 하는 작업은 라이브러리 및 실행 프로그램의 기능에 영향을 주지 않고 항상 안전 하 게 제거 되어야 합니다. 팩트와 달리 어설션은 일반적으로의 상태 (예: 표준), 실행 환경 등의 외부 상태에 따라 달라질 수 있습니다. 외부 상태에 대 한 종속성은 일종의 부작용 이므로 어설션이 함수 대신 작업으로 노출 되어야 합니다.
 
     - **예상**: 하나 이상의 반복 되는 측정값을 사용 하 여 측정 결과에서 기존 수량을 예측 합니다.
 
@@ -249,12 +249,12 @@ ms.locfileid: "87866896"
 
   - **명사**:
 
-    - **팩트**: 대상 컴퓨터의 상태, 해당 환경 또는 컴퓨터의 기능에 대 한 상태가 아닌 입력에만 의존 하는 부울 조건입니다. 어설션과 달리 팩트는 해당 팩트에 제공 되는 *값* 만을 인식 합니다. 예를 들어:
+    - **팩트**: 대상 컴퓨터의 상태, 해당 환경 또는 컴퓨터의 기능에 대 한 상태가 아닌 입력에만 의존 하는 부울 조건입니다. 어설션과 달리 팩트는 해당 팩트에 제공 되는 *값* 만을 인식 합니다. 예를 들면 다음과 같습니다.
 
       *예:*
       - @"microsoft.quantum.diagnostics.equalityfacti": 두 정수 입력에 대 한 같음 팩트를 나타냅니다. 입력으로 제공 된 정수는 서로 같거나 다른 프로그램 상태와는 독립적입니다.
 
-    - **옵션:** 함수 또는 작업에 대해 "선택적 인수"로 작동할 수 있는 여러 개의 명명 된 항목이 포함 된 UDT입니다. 예를 들어:
+    - **옵션:** 함수 또는 작업에 대해 "선택적 인수"로 작동할 수 있는 여러 개의 명명 된 항목이 포함 된 UDT입니다. 예를 들면 다음과 같습니다.
 
       *예:*
       - UDT에는 @"microsoft.quantum.machinelearning.trainingoptions" 학습 률, 미니 배치 크기 및 ML 학습을 위한 구성 가능한 기타 매개 변수에 대 한 명명 된 항목이 포함 되어 있습니다.
@@ -268,7 +268,7 @@ ms.locfileid: "87866896"
     - **As:** 함수의 입력 및 출력이 동일한 정보를 나타내지만 출력은 해당 정보를 원래 표현이 아닌 *X* **로** 나타냅니다. 이는 형식 변환 함수에 특히 일반적입니다.
 
       *예:*
-      - `IntAsDouble(2)`입력 ( `2` )과 출력 ()이 모두 `2.0` 동일한 정보를 나타내지만 다른 Q 데이터 형식을 사용 하 여 qualitatively 나타냅니다 \# .
+      - `IntAsDouble(2)` 입력 ( `2` )과 출력 ()이 모두 `2.0` 동일한 정보를 나타내지만 다른 Q 데이터 형식을 사용 하 여 qualitatively 나타냅니다 \# .
 
     - **시작:** 일관성을 유지 하기 위해이 **전치사를** 사용 하 여 형식 변환 함수 또는 다른 모든 경우를 사용 하면 안 **됩니다.**
 

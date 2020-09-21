@@ -1,6 +1,6 @@
 ---
 제목: 퀀텀 계산의 벡터 및 행렬 설명: 벡터 및 매트릭스를 사용 하는 방법에 대 한 기본 사항을 알아봅니다.
-작성자: QuantumWriter uid:: nawiebe@microsoft.com 12/11/2017: ms. 날짜:. 토픽: 문서 번호:
+작성자: QuantumWriter uid: benbra: 12/11/2017. 날짜: 밀리초. 토픽: 문서 번호-loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -93,7 +93,7 @@ $$v =\begin{bmatrix}
 v_1\\\\
 v_2\\\\
 \vdots\\\\
-v_n\end{bmatrix}$$
+v_n \end{bmatrix}$$
 
 벡터 $ v는 $ $ \sqrt { \sum \_ i | v \_ i | ^ 2 } $ 로 정의 됩니다. 벡터가 1 인 경우 벡터는 unit (또는 [*unit vector*](https://en.wikipedia.org/wiki/Unit_vector)라고 함) 이라고 합니다 $ $ . [*벡터 v의 adjoint*](https://en.wikipedia.org/wiki/Adjoint_matrix) 는 $ $ $ v ^로 표시 되며 \dagger $ 은 $ \* $ 복소수 복소수를 나타내는 다음 행 벡터로 정의 됩니다.
 
@@ -114,12 +114,12 @@ u_1\\\\
 u_2\\\\
 \vdots\\\\
 u_n \end{bmatrix} ~ \mathrm { 및}~
-hyper-v=\begin{bmatrix}
+hyper-v =\begin{bmatrix}
     v_1\\\\
     v_2\\\\
     \vdots\\\\
     v_n \end{bmatrix} ~ \mathrm { 다음}~
-오스트레일리아 + bv=\begin{bmatrix}
+오스트레일리아 + bv =\begin{bmatrix}
 au_1 + bv_1\\\\
 au_2 + bv_2\\\\
 \vdots\\\\
@@ -128,7 +128,7 @@ $$
 
 크기 [*matrix*](https://en.wikipedia.org/wiki/Matrix_(mathematics)) $ m n의 행렬 \times $ 은 아래와 $ $ $ $ 같이 m 행과 $ n 개의 $ 열로 정렬 된 mn 복소수의 컬렉션입니다.
 
-$$매= 
+$$매 = 
 \begin{bmatrix}
 M_ { 11 } ~~ M_ { 12 } ~~ \cdots ~~ M_ { 1n}\\\\
 M_ { 21 } ~~ M_ { 22 } ~~ \cdots ~~ M_ { 2n}\\\\
@@ -183,7 +183,7 @@ $ $ M m ^ 인 경우 행렬 m은 [*Hermitian*](https://en.wikipedia.org/wiki/Her
 마지막으로, 크기가 m n 및 n 인 두 행렬 m의 [*텐서 product*](https://en.wikipedia.org/wiki/Tensor_product) (또는 Kronecker product)는 $ $ $ \times $ $ $ $ \times $ $ 크기 mp nq의 더 큰 행렬 p = m n 이며 다음과 \otimes $ $ \times $ $ $ 같이 m과 n에서 가져옵니다 $ $ .
 
 \begin{align}
-    M \otimes N&=
+    M \otimes N &=
     \begin{bmatrix}
         M_ { 11 } ~~ \cdots ~~ M_ { 1n }\\\\
         \ddots\\\\
@@ -211,40 +211,40 @@ $$
     \begin{bmatrix}
         a \\\\ b \end{bmatrix} \otimes \begin{bmatrix} c \\\\ d \\\\ e \end{bmatrix}=
     \begin{bmatrix}
-        a \begin{bmatrix} c \\\\ d \\\\ e\end{bmatrix}
+        a \begin{bmatrix} c \\\\ d \\\\ e \end{bmatrix}
         \\\\[1.5 em] b \begin{bmatrix} c \\\\ d \\\\ e\end{bmatrix}
     \end{bmatrix}
     =\begin{bmatrix}a \\\\ ca d \\\\ a e \\\\ b c \\\\ b d \\\\\end{bmatrix}
 $$
 
-and
+및
 
 $$
     \begin{bmatrix}
-        a \ b \\\\ c \ d\end{bmatrix}
+        a \ b \\\\ c \ d \end{bmatrix}
     \otimes 
     \begin{bmatrix}
-        e \ f \\\\ g \ h\end{bmatrix}
+        e \ f \\\\ g \ h \end{bmatrix}
      =
     \begin{bmatrix}
     은\begin{bmatrix}
-    e \ f \\\\ g \ h\end{bmatrix}
+    e \ f \\\\ g \ h \end{bmatrix}
     b\begin{bmatrix}
-    e \ f \\\\ g \ h\end{bmatrix}
+    e \ f \\\\ g \ h \end{bmatrix}
     \\\\[1em] c\begin{bmatrix}
-    e \ f \\\\ g \ h\end{bmatrix}
+    e \ f \\\\ g \ h \end{bmatrix}
     2\begin{bmatrix}
-    e \ f \\\\ g \ h\end{bmatrix}
+    e \ f \\\\ g \ h \end{bmatrix}
     \end{bmatrix}
     =
     \begin{bmatrix}
-    ns\\\\\
-    ag \ ah \ bg \ bh\\\\
-    ce \ cf \ de \ df\\\\
+    ns\ \\\\
+    ag \ ah \ bg \ bh \\\\
+    ce \ cf \ de \ df \\\\
     cg \ ch \ dg \ dh \end{bmatrix} .
 $$
 
-텐서 제품에 대 한 최종 유용한 표기법 밑수 규칙은 모든 벡터 $ v $ 또는 매트릭스 M의 $ 경우 $ $ v ^ { \otimes n } $ 또는 $ M ^ { \otimes n } $ 은 $ n $ 접기 반복 텐서 제품에 대 한 짧은 손입니다.  예를 들어:
+텐서 제품에 대 한 최종 유용한 표기법 밑수 규칙은 모든 벡터 $ v $ 또는 매트릭스 M의 $ 경우 $ $ v ^ { \otimes n } $ 또는 $ M ^ { \otimes n } $ 은 $ n $ 접기 반복 텐서 제품에 대 한 짧은 손입니다.  예를 들면 다음과 같습니다.
 
 \begin{align}
 &\begin{bmatrix}1 \\\\ 0 \end{bmatrix} ^ { \otimes 1 } = \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} , \qquad \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} ^ { \otimes 2 } = \begin{bmatrix} 1 \\\\ 0 0 0 \\\\ \\\\ \end{bmatrix} , \qquad \begin{bmatrix} 1 \\\\ -1 \end{bmatrix} ^ { \otimes 2 } = \begin{bmatrix} 1 \\\\ -1 \\\\ -1 \\\\ 1 \end{bmatrix} ,\\\\

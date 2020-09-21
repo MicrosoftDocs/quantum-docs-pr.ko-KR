@@ -2,19 +2,19 @@
 title: Quantum Development Kit 릴리스 정보
 description: Microsoft Quantum Development Kit 미리보기의 최신 업데이트에 대해 알아보세요.
 author: bradben
-ms.author: bradben
-ms.date: 5/30/2020
+ms.author: v-benbra
+ms.date: 8/30/2020
 ms.topic: article
 uid: microsoft.quantum.relnotes
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 70d0c9b61e49d4ee6142edbe2767310403885f01
-ms.sourcegitcommit: 11bd357baeb6ab53a402882979e75964d0869b57
+ms.openlocfilehash: 5036b4d401bb775a7fee2252ca26e7725bc19004
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88992261"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834145"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit 릴리스 정보
 
@@ -48,7 +48,7 @@ ms.locfileid: "88992261"
 
 이 릴리스에는 다음이 포함됩니다.
 
-- 이제는 전자 필기장에서 열린 네임 스페이스를 Q# 나중에 모든 셀 실행에 사용할 수 있습니다. 이렇게 하면 예를 들어 각 코드 셀에서 관련 네임 스페이스를 열 필요 없이 노트북 맨 위에 있는 셀에서 한 번에 네임 스페이스를 열 수 있습니다. 새 `%lsopen` 매직 명령은 현재 열려 있는 네임 스페이스 목록을 표시 합니다.
+- Q#이제 나중에 모든 셀 계산에 사용할 수 있는 노트북의 네임 스페이스를 사용할 수 있습니다. 이렇게 하면 예를 들어 각 코드 셀에서 관련 네임 스페이스를 열 필요 없이 노트북 맨 위에 있는 셀에서 한 번에 네임 스페이스를 열 수 있습니다. 새 `%lsopen` 매직 명령은 현재 열려 있는 네임 스페이스 목록을 표시 합니다.
 
 [라이브러리](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [컴파일러](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [런타임](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [샘플](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed), [I Q# ](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed) 및 [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed)에 대 한 폐쇄형 pr의 전체 목록을 참조 하세요.  
 
@@ -132,7 +132,7 @@ ms.locfileid: "88992261"
 
 이 릴리스에는 다음이 포함됩니다.
 
-- 새로운 양자 기계 학습 라이브러리. 자세한 내용은 [QML 문서 페이지](https://docs.microsoft.com/quantum/libraries/machine-learning/?view=qsharp-preview)에서 확인하세요.
+- 새로운 양자 기계 학습 라이브러리. 자세한 내용은 [QML 문서 페이지](xref:microsoft.quantum.machine-learning.concepts.intro)에서 확인하세요.
 - Q#20x를 수정 하 여 NuGet 패키지를 로드할 때 성능 향상을 10 개까지 산출 함
 
 [라이브러리](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [컴파일러](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [런타임](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [샘플](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) 및 [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed)에 대한 비공개 PR의 전체 목록을 참조하세요.  
@@ -144,7 +144,7 @@ ms.locfileid: "88992261"
 이 릴리스에는 다음이 포함됩니다.
 
 - 새 프로젝트를 만들 때 Microsoft.Quantum.Development.Kit NuGet 패키지를 대체할 새로운 Microsoft.Quantum.SDK NuGet Microsoft.Quantum.Development.Kit NuGet 패키지는 기존 프로젝트를 계속 지원합니다. 
-- Q#새 Microsoft 양자 NuGet 패키지에서 사용 하도록 설정 된 컴파일러 확장 지원. 자세한 내용은 [Github에](https://github.com/microsoft/qsharp-compiler/tree/master/src/QuantumSdk#extending-the-q-compiler)대 한 설명서, [컴파일러 확장 샘플](https://github.com/microsoft/qsharp-compiler/tree/master/examples/CompilerExtensions) 및 [ Q# 개발자 블로그](https://devblogs.microsoft.com/qsharp/extending-the-q-compiler/) 를 참조 하세요.
+- Q#새 Microsoft 양자 NuGet 패키지에서 사용 하도록 설정 된 컴파일러 확장 지원. 자세한 내용은 [Github에](https://github.com/microsoft/qsharp-compiler/tree/main/src/QuantumSdk#extending-the-q-compiler)대 한 설명서, [컴파일러 확장 샘플](https://github.com/microsoft/qsharp-compiler/tree/main/examples/CompilerExtensions) 및 [ Q# 개발자 블로그](https://devblogs.microsoft.com/qsharp/extending-the-q-compiler/) 를 참조 하세요.
 - .NET Core 3.1에 대한 지원 추가. 이전 .NET Core SDK 버전으로 빌드하면 문제가 발생할 수 있으므로 버전 3.1.100을 설치하는 것이 좋습니다.
 - Microsoft.Quantum.QsCompiler.Experimental에서 사용할 수 있는 새 컴파일러 변환
 - 출력 상태 벡터를 I에 HTML로 노출 하는 새로운 기능Q#
@@ -182,7 +182,7 @@ ms.locfileid: "88992261"
 
 이 릴리스에는 다음이 포함됩니다.
 
-- .NET Core SDK 버전에 종속되지 않도록 언어 서버를 자체 포함 실행 파일로 배포하는 Visual Studio Code 및 Visual Studio 확장 업데이트  
+- Visual Studio Code & Visual Studio 확장을 업데이트 하 여 언어 서버를 자체 포함 된 실행 파일로 배포 하 고 .NET Core SDK 버전 종속성을 제거 합니다.  
 - .NET Core 3.0으로 마이그레이션
 - 새 `Fail` 메서드가 도입된 Microsoft.Quantum.Simulation.Core.IOperationFactory의 주요 변경 내용입니다. SimulatorBase를 확장하지 않는 사용자 지정 시뮬레이터에만 영향을 줍니다. 자세한 내용은 [GitHub에서 끌어오기 요청 보기를 참조하세요](https://github.com/microsoft/qsharp-runtime/pull/59).
 - 사용되지 않는 특성에 대한 새로운 지원
@@ -224,7 +224,7 @@ ms.locfileid: "88992261"
 이 릴리스에는 다음이 포함됩니다.
 
 - 배열 조각화에 대한 새 인덱싱 위치 - 자세한 내용은 [언어 참조](xref:microsoft.quantum.guide.expressions#array-slices)를 참조하세요.
-- [Microsoft Container Registry](https://github.com/microsoft/ContainerRegistry)에서 호스트 되는 Dockerfile을 추가 했습니다 [. Q# 자세한 내용은 I 리포지토리](https://github.com/microsoft/iqsharp/blob/master/README.md) 를 참조 하세요.
+- [Microsoft Container Registry](https://github.com/microsoft/ContainerRegistry)에서 호스트 되는 Dockerfile을 추가 했습니다 [. Q# 자세한 내용은 I 리포지토리](https://github.com/microsoft/iqsharp/blob/main/README.md) 를 참조 하세요.
 - [추적 시뮬레이터](xref:microsoft.quantum.machines.qc-trace-simulator.intro)에 대한 호환성이 손상되는 변경, 구성 설정 업데이트, 이름 변경 - [업데이트된 이름에 대한 .NET API 브라우저](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulatorconfiguration)를 참조하세요.
 
 [라이브러리](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed) 및 [샘플](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed)에 대한 비공개 PR의 전체 목록을 참조하세요.  
@@ -252,14 +252,14 @@ ms.locfileid: "88992261"
 
 ### <a name="library"></a>라이브러리 
 
-이 릴리스에는 숫자 라이브러리가 추가되었습니다. [새 숫자 라이브러리를 사용](xref:microsoft.quantum.numerics.usage)하는 방법에 대한 자세한 정보를 알아보고, [새 샘플](https://github.com/microsoft/quantum/tree/master/Numerics)을 사용해 보세요.  [PR #102](https://github.com/Microsoft/QuantumLibraries/pull/102)  
+이 릴리스에는 숫자 라이브러리가 추가되었습니다. [새 숫자 라이브러리를 사용](xref:microsoft.quantum.numerics.usage)하는 방법에 대한 자세한 정보를 알아보고, [새 샘플](https://github.com/microsoft/quantum/tree/main/Numerics)을 사용해 보세요.  [PR #102](https://github.com/Microsoft/QuantumLibraries/pull/102)  
 
 이 릴리스에서는 화학 라이브러리가 확장 및 업데이트되었습니다.
 * 구성 요소, 확장성, 일반 코드 정리의 모듈화가 향상되었습니다.  [PR #58](https://github.com/microsoft/QuantumLibraries/pull/58).
 * [다중 참조 wavefunction(파동 함수)](xref:microsoft.quantum.chemistry.concepts.multireference)에 대한 지원(스파스 다중 참조 파동 함수 및 단일 결합 클러스터 모두)이 추가되었습니다.  [PR #110](https://github.com/Microsoft/QuantumLibraries/pull/110)
 * (감사합니다!) [1QBit](https://1qbit.com) 기여자([@valentinS4t1qbit](https://github.com/ValentinS4t1qbit)): 변이 가설 풀이(variational ansatz)를 사용한 에너지 평가입니다. [PR #120](https://github.com/Microsoft/QuantumLibraries/pull/120)
 * [Broombridge](xref:microsoft.quantum.libraries.chemistry.schema.broombridge) 스키마가 새 [0.2 버전](xref:microsoft.quantum.libraries.chemistry.schema.spec_v_0_2)으로 업데이트되고, 단일 결합 클러스터 사양이 추가되었습니다. [Issue #65](https://github.com/microsoft/QuantumLibraries/issues/65)
-* Python 상호 운용성이 화학 라이브러리 기능에 추가되었습니다. 이 [샘플](https://github.com/microsoft/Quantum/tree/master/Chemistry/PythonIntegration)을 사용해 보세요. [이슈 #53](https://github.com/microsoft/QuantumLibraries/issues/53) [PR #110](https://github.com/Microsoft/QuantumLibraries/pull/110).
+* Python 상호 운용성이 화학 라이브러리 기능에 추가되었습니다. 이 [샘플](https://github.com/microsoft/Quantum/tree/main/Chemistry/PythonIntegration)을 사용해 보세요. [이슈 #53](https://github.com/microsoft/QuantumLibraries/issues/53) [PR #110](https://github.com/Microsoft/QuantumLibraries/pull/110).
 
 ## <a name="version-061905"></a>버전 0.6.1905
 
@@ -349,7 +349,7 @@ Q#퀀텀 개발 키트 버전 0.5의 기존 프로젝트가 있는 경우 해당
 
 - 는에 대해 알아볼 수 있는 좋은 방법을 제공 하는 Jupyter Notebook에 대 한 지원을 추가 Q# 합니다.  [새 Jupyter Notebook 샘플을 확인하고 사용자 고유의 노트북을 작성하는 방법을 알아보세요](xref:microsoft.quantum.install). 
 
-- 정수 adder 산술을 Quantum Canon 라이브러리에 추가합니다.  [새 정수 adder를 사용하는 방법](https://github.com/microsoft/Quantum/blob/master/samples/arithmetic/AdderExample.ipynb)을 설명하는 Jupyter Notebook도 참조하세요.
+- 정수 adder 산술을 Quantum Canon 라이브러리에 추가합니다.  [새 정수 adder를 사용하는 방법](https://github.com/microsoft/Quantum/blob/main/samples/arithmetic/AdderExample.ipynb)을 설명하는 Jupyter Notebook도 참조하세요.
 
 - 커뮤니티가 보고한 DumpRegister 문제의 버그를 수정했습니다([#148](https://github.com/Microsoft/Quantum/issues/148)).
 
@@ -635,7 +635,7 @@ Microsoft.Quantum.Canon 네임스페이스의 RandomWalkPhaseEstimation 작업�
 
 #### <a name="testing"></a>테스트
 
-- 테스트는 64비트 모드로 실행되어야 합니다. BadImageFormatException으로 인해 테스트에 실패한 경우 [테스트] 메뉴로 이동하고 [테스트 설정] > [기본 프로세서 아키텍처] > [X64]를 선택합니다.
+- 테스트는 64 비트 모드로 실행 해야 합니다. BadImageFormatException으로 인해 테스트에 실패한 경우 [테스트] 메뉴로 이동하고 [테스트 설정] > [기본 프로세서 아키텍처] > [X64]를 선택합니다.
 - 일부 테스트는 실행하는 데 오랜 시간이 걸립니다(컴퓨터에 따라 5분 정도 걸릴 수 있음). 일부 테스트에서는 20개 이상의 큐비트를 사용하므로 정상적인 상황입니다. 현재 가장 큰 테스트는 23개의 큐비트에서 실행됩니다.
 
 #### <a name="samples"></a>샘플

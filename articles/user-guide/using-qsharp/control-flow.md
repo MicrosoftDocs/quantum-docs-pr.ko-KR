@@ -1,38 +1,39 @@
 ---
-title: 제어 흐름Q#
+title: 제어 흐름 Q#
 description: 루프, 조건 등
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.controlflow
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: fc619d64bfebfc27d7feac6dafb2dd4cf22825d6
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 547c57cab67443e8b487bf817eb79fc922b43cdc
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867950"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833506"
 ---
-# <a name="control-flow-in-no-locq"></a>제어 흐름Q#
+# <a name="control-flow-in-no-locq"></a>제어 흐름 Q#
 
 작업 또는 함수 내에서 각 문은 다른 일반적인 명령적 언어와 비슷하게 순서 대로 실행 됩니다.
 그러나 다음과 같은 세 가지 방법으로 제어 흐름을 수정할 수 있습니다.
 
-* `if`할당문
-* `for`하며
-* `repeat-until-success`하며
+* `if` 할당문
+* `for` 하며
+* `repeat-until-success` 하며
+* 변화 ( `apply-within` 문)
 
-`if`및 `for` 제어 흐름 구성은 대부분의 일반적인 프로그래밍 언어에 대해 친숙 하 게 진행 됩니다. [`Repeat-until-success`](#repeat-until-success-loop)루프는이 문서의 뒷부분에서 설명 합니다.
+`if`및 `for` 제어 흐름 구성은 대부분의 일반적인 프로그래밍 언어에 대해 친숙 하 게 진행 됩니다. [`Repeat-until-success`](#repeat-until-success-loop) 루프 및 [변화](#conjugations) 이이 문서의 뒷부분에서 설명 합니다.
 
 중요 한 `for` `if` 것은 [특수화](xref:microsoft.quantum.guide.operationsfunctions) 가 자동 생성 되는 작업에 루프 및 문을 사용할 수 있다는 것입니다. 이 시나리오에서 루프의 adjoint는 `for` 방향을 바꾸고 각 반복의 adjoint를 사용 합니다.
 이 작업은 "신발 및 socks" 원칙을 따릅니다. 즉, socks에 배치를 취소 한 다음 신발로 전환 하려면 축구 전환에 대 한 실행을 취소 하 고 socks에 배치를 실행 취소 해야 합니다. 
 
 ## <a name="if-else-if-else"></a>If, Else-if, Else
 
-`if`문은 조건부 실행을 지원 합니다.
+`if`문은 조건부 처리를 지원 합니다.
 키워드 `if` , 괄호 안의 부울 식, 문 블록 ( _then_ 블록)으로 구성 됩니다.
 필요에 따라, 각각 키워드 `elif` , 괄호 안의 부울 식 및 문 블록 ( _else-if_ 블록)으로 구성 된 else 절을 사용할 수 있습니다.
 마지막으로, `else` 다른 문 블록 ( _else_ 블록) 뒤에 오는 키워드로 구성 된 else 절을 사용 하 여 문을 선택적으로 완료할 수 있습니다.
@@ -150,9 +151,10 @@ until (expression);
 
 ## <a name="while-loop"></a>While 루프
 
-반복-성공 패턴에는 퀀텀 별 connotation가 있을 수 있습니다. 이러한 클래스는 특정 퀀텀 알고리즘 클래스에서 널리 사용 되므로의 전용 언어 구문 Q# 입니다. 그러나 조건에 따라 중단 되 고 해당 실행 길이는 컴파일 시간에 알 수 없는 루프는 퀀텀 런타임에서 특히 주의 해 서 처리 됩니다. 그러나 이러한 루프는 기존 (비 퀀텀) 하드웨어에서 실행 되는 코드만 포함 하므로 함수 내에서 사용 하는 것은 문제가 되지 않습니다. 
+반복-성공 패턴에는 퀀텀 별 connotation가 있을 수 있습니다. 이러한 클래스는 특정 퀀텀 알고리즘 클래스에서 널리 사용 되므로의 전용 언어 구문 Q# 입니다. 그러나 루프는 조건에 따라 중단 되 고 해당 실행 길이는 컴파일 시간에 알 수 없는 루프는 퀀텀 런타임에서 특히 주의 해 서 처리 됩니다. 그러나 이러한 루프는 기존 (비 퀀텀) 하드웨어에서 실행 되는 코드만 포함 하므로 함수 내에서 사용 하는 것은 문제가 되지 않습니다. 
 
-Q#따라서는 함수 내 에서만 루프를 사용할 수 있도록 지원 합니다. `while`문은 키워드 `while` , 괄호 안의 부울 식 및 문 블록으로 구성 됩니다.
+Q#따라서는 함수 내 에서만 루프를 사용할 수 있도록 지원 합니다.
+`while`문은 키워드 `while` , 괄호 안의 부울 식 및 문 블록으로 구성 됩니다.
 문 블록 (루프의 본문)은 조건이로 확인 되 면 실행 됩니다 `true` .
 
 ```qsharp
@@ -163,6 +165,45 @@ while (index < Length(arr) && item < 0) {
     set index += 1;
 }
 ```
+
+## <a name="conjugations"></a>변화
+
+기존 비트와는 달리, 더 이상 필요 하지 않은 계산에 대 한 의도 하지 않은 영향이 있을 경우이를 무조건 다시 설정 하면 나머지 계산에 원치 않는 영향이 있을 수 있으므로 퀀텀 메모리 해제는 약간 더 복잡 합니다. 메모리를 해제 하기 전에 수행 된 계산을 적절히 "실행 취소" 하 여 이러한 효과를 방지할 수 있습니다. 따라서 퀀텀 컴퓨팅의 일반적인 패턴은 다음과 같습니다. 
+
+```qsharp
+operation ApplyWith<'T>(
+    outerOperation : ('T => Unit is Adj), 
+    innerOperation : ('T => Unit), 
+    target : 'T) 
+: Unit {
+
+    outerOperation(target);
+    innerOperation(target);
+    Adjoint outerOperation(target);
+}
+```
+
+Q# 는 앞의 변환을 구현 하는 활용 문을 지원 합니다. 이 문을 사용 하 여 `ApplyWith` 다음과 같은 방법으로 작업을 구현할 수 있습니다.
+
+```qsharp
+operation ApplyWith<'T>(
+    outerOperation : ('T => Unit is Adj), 
+    innerOperation : ('T => Unit), 
+    target : 'T) 
+: Unit {
+
+    within{ 
+        outerOperation(target);
+    }
+    apply {
+        innerOperation(target);
+    }
+}
+```
+이러한 활용은 외부 및 내부 변환을 작업으로 쉽게 사용할 수 없지만 대신 여러 문으로 구성 된 블록에서 더 편리 하 게 설명 하는 경우에 유용 합니다. 
+
+블록 내에서 정의 된 문에 대 한 역 변환은 컴파일러에 의해 자동으로 생성 되 고 적용 블록이 완료 된 후에 실행 됩니다.
+블록 내에 사용 되는 변경할 수 있는 변수는 적용 블록에서 바인딩 가능 하지 않으므로 생성 된 변환은 블록 내에서 계산의 adjoint로 보장 됩니다. 
 
 ## <a name="return-statement"></a>Return 문
 
@@ -248,7 +289,7 @@ fixup {
 }
 ```
 
-### <a name="rus-without-fixup"></a>RUS (없음)`fixup`
+### <a name="rus-without-fixup"></a>RUS (없음) `fixup`
 
 이 예제에서는 픽스업 단계가 없는 RUS 루프를 보여 줍니다. 이 코드는 {5} 및 게이트를 사용 하 여 $V _3 = (\boldone + 2 i Z)/\sqrt $ 중요 한 회전 게이트를 구현 하는 확률 회로입니다 `H` `T` .
 루프는 평균에서 $ \frac {8} {5} $ 반복을 종료 합니다.
@@ -330,7 +371,7 @@ operation PrepareStateUsingRUS(target : Qubit) : Unit {
 }
 ```
 
-자세한 내용은 [표준 라이브러리와 함께 제공 되는 단위 테스트 샘플](https://github.com/microsoft/Quantum/blob/master/samples/diagnostics/unit-testing/RepeatUntilSuccessCircuits.qs)을 참조 하세요.
+자세한 내용은 [표준 라이브러리와 함께 제공 되는 단위 테스트 샘플](https://github.com/microsoft/Quantum/blob/main/samples/diagnostics/unit-testing/RepeatUntilSuccessCircuits.qs)을 참조 하세요.
 
 ## <a name="next-steps"></a>다음 단계
 

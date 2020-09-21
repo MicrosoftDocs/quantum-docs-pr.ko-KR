@@ -1,6 +1,6 @@
 ---
 제목: 퀀텀 회로 설명: 퀀텀 회로 다이어그램으로 단순 하 고 복잡 한 퀀텀 작업을 시각적으로 표시 하는 방법을 알아봅니다.
-작성자: QuantumWriter uid:: nawiebe@microsoft.com 12/11/2017: 밀리초. 토픽: 문서 번호-loc:
+작성자: QuantumWriter uid: benbra: 12/11/2017. 날짜: 밀리초. 토픽: 문서 번호-loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -156,7 +156,7 @@ $G = X $ 및 g Z의 경우 제어 되는 $ = $ 게이트 버전을 설명 하는
 <!--를 쉽게 가운데에 맞출 수 없습니다. 필요한 확장이 있을 수 있습니다.>
 ![제어 되는 게이트의 특수 사례에 대 한 회로 다이어그램](~/media/6.svg)
 
-Q#작업의 제어 된 버전을 자동으로 생성 하는 메서드를 제공 합니다. 그러면 프로그래머가 이러한 작업을 직접 코딩할 필요가 없습니다. 이에 대 한 예제는 다음과 같습니다.
+Q# 작업의 제어 된 버전을 자동으로 생성 하는 메서드를 제공 합니다. 그러면 프로그래머가 이러한 작업을 직접 코딩할 필요가 없습니다. 이에 대 한 예제는 다음과 같습니다.
 
 ```qsharp
 operation PrepareSuperposition(qubit : Qubit) : Unit
@@ -175,7 +175,7 @@ is Ctl { // Auto-generate the controlled specialization of the operation
 <!--를 쉽게 가운데에 맞출 수 없습니다. 필요한 확장이 있을 수 있습니다.>
 ![측정 작업을 나타내는 기호](~/media/7.svg)
 
-Q#이 목적에 대 한 [측정값 연산자](xref:microsoft.quantum.intrinsic.measure) 를 구현 합니다.
+Q# 이 목적에 대 한 [측정값 연산자](xref:microsoft.quantum.intrinsic.measure) 를 구현 합니다.
 자세한 내용은 [측정에](xref:microsoft.quantum.libraries.standard.prelude#measurements) 대 한 섹션을 참조 하세요.
 
 마찬가지로 subcircuit

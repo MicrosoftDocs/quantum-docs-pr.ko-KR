@@ -9,12 +9,12 @@ uid: microsoft.quantum.overview.katas
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: b2a3b25bf90109468f02c98c6c687befb83648bc
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 780f04aa941d416032ea3e50b05769f93fae769f
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869684"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759394"
 ---
 # <a name="learn-quantum-computing-with-the-quantum-katas"></a>Quantum Katas에서 퀀텀 컴퓨팅 알아보기
 
@@ -41,50 +41,50 @@ ms.locfileid: "87869684"
 
 | Kata | 설명 |
 |:-----|-------------|
-|[복소수](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/ComplexArithmetic)|이 자습서에서는 퀀텀 컴퓨팅으로 작업하는 데 필요한 몇 가지 수학적 배경(예: 허수 및 복소수)을 설명합니다.|
-|[선형 대수](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/LinearAlgebra)|선형 대수학은 퀀텀 컴퓨팅에서 퀀텀 상태와 연산을 나타내기 위해 사용됩니다. 이 자습서는 행렬과 벡터를 포함한 기본 내용을 다룹니다.|
-|[큐비트의 개념](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/Qubit)|퀀텀 컴퓨팅의 핵심 개념 중 하나인 큐비트에 대해 알아보세요. |
-|[단일 큐비트 퀀텀 게이트](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/SingleQubitGates)|이 자습서에서는 퀀텀 알고리즘의 기본 구성 요소 역할을 하고 퀀텀 큐비트 상태를 다양한 방식으로 변환하는 단일 큐비트 퀀텀 게이트를 소개합니다.|
-|[다중 큐비트 시스템](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/MultiQubitSystems)|이 자습서에서는 다중 기능 비트 시스템, 수학 표기법 및 코드에서의 표현, Q# 되거나 얽 히의 개념을 소개 합니다.|
-|[다중 큐비트 퀀텀 게이트](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/MultiQubitGates)|이 자습서는 [단일 퀀텀 게이트](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/SingleQubitGates) 자습서를 따르며 다중 큐비트 시스템에 다중 퀀텀 게이트를 적용하는 데 초점을 두고 있습니다.|
+|[복소수](https://github.com/microsoft/QuantumKatas/tree/main/tutorials/ComplexArithmetic)|이 자습서에서는 퀀텀 컴퓨팅으로 작업하는 데 필요한 몇 가지 수학적 배경(예: 허수 및 복소수)을 설명합니다.|
+|[선형 대수](https://github.com/microsoft/QuantumKatas/tree/main/tutorials/LinearAlgebra)|선형 대수학은 퀀텀 컴퓨팅에서 퀀텀 상태와 연산을 나타내기 위해 사용됩니다. 이 자습서는 행렬과 벡터를 포함한 기본 내용을 다룹니다.|
+|[큐비트의 개념](https://github.com/microsoft/QuantumKatas/tree/main/tutorials/Qubit)|퀀텀 컴퓨팅의 핵심 개념 중 하나인 큐비트에 대해 알아보세요. |
+|[단일 큐비트 퀀텀 게이트](https://github.com/microsoft/QuantumKatas/tree/main/tutorials/SingleQubitGates)|이 자습서에서는 퀀텀 알고리즘의 기본 구성 요소 역할을 하고 퀀텀 큐비트 상태를 다양한 방식으로 변환하는 단일 큐비트 퀀텀 게이트를 소개합니다.|
+|[다중 큐비트 시스템](https://github.com/microsoft/QuantumKatas/tree/main/tutorials/MultiQubitSystems)|이 자습서에서는 다중 기능 비트 시스템, 수학 표기법 및 코드에서의 표현, Q# 되거나 얽 히의 개념을 소개 합니다.|
+|[다중 큐비트 퀀텀 게이트](https://github.com/microsoft/QuantumKatas/tree/main/tutorials/MultiQubitGates)|이 자습서는 [단일 퀀텀 게이트](https://github.com/microsoft/QuantumKatas/tree/main/tutorials/SingleQubitGates) 자습서를 따르며 다중 큐비트 시스템에 다중 퀀텀 게이트를 적용하는 데 초점을 두고 있습니다.|
 
 ### <a name="quantum-computing-fundamentals"></a>퀀텀 컴퓨팅 기본 사항
 
 | Kata | 설명 |
 |:-----|-------------|
-|[퀀텀 게이트 인식](https://github.com/microsoft/QuantumKatas/tree/master/BasicGates)|의 기본 퀀텀 게이트에 익숙해질 수 있도록 설계 된 일련의 연습 Q# 입니다. 기본 단일 큐비트 및 다중 큐비트 게이트, 수반 및 제어된 게이트, 게이트를 사용하여 큐비트 상태를 수정하는 방법을 포함합니다.|
-|[퀀텀 중첩 만들기](https://github.com/microsoft/QuantumKatas/tree/master/Superposition)|이러한 연습을 사용 하 여의 superposition 및 프로그래밍 개념을 익힐 수 Q# 있습니다. 기본 단일 기능을 위한 연습과의 superposition 및 흐름 제어와 재귀를 포함 Q# 합니다.|
-|[측정값을 사용하여 퀀텀 상태 구별](https://github.com/microsoft/QuantumKatas/tree/master/Measurements)|퀀텀 측정과 직교 및 비직교 상태에 대해 배우면서 이들 연습 과제를 해결합니다. |
-|[공동 측정값](https://github.com/microsoft/QuantumKatas/tree/master/JointMeasurements)|조인트 패리티 측정 및 [Measure](xref:microsoft.quantum.intrinsic.measure) 연산을 사용하여 퀀텀 상태를 구분하는 방법에 대해 알아봅니다.|
+|[퀀텀 게이트 인식](https://github.com/microsoft/QuantumKatas/tree/main/BasicGates)|의 기본 퀀텀 게이트에 익숙해질 수 있도록 설계 된 일련의 연습 Q# 입니다. 기본 단일 큐비트 및 다중 큐비트 게이트, 수반 및 제어된 게이트, 게이트를 사용하여 큐비트 상태를 수정하는 방법을 포함합니다.|
+|[퀀텀 중첩 만들기](https://github.com/microsoft/QuantumKatas/tree/main/Superposition)|이러한 연습을 사용 하 여의 superposition 및 프로그래밍 개념을 익힐 수 Q# 있습니다. 기본 단일 기능을 위한 연습과의 superposition 및 흐름 제어와 재귀를 포함 Q# 합니다.|
+|[측정값을 사용하여 퀀텀 상태 구별](https://github.com/microsoft/QuantumKatas/tree/main/Measurements)|퀀텀 측정과 직교 및 비직교 상태에 대해 배우면서 이들 연습 과제를 해결합니다. |
+|[공동 측정값](https://github.com/microsoft/QuantumKatas/tree/main/JointMeasurements)|조인트 패리티 측정 및 [Measure](xref:microsoft.quantum.intrinsic.measure) 연산을 사용하여 퀀텀 상태를 구분하는 방법에 대해 알아봅니다.|
 
 ### <a name="algorithms"></a>알고리즘
 
 | Kata | 설명 |
 |:-----|-------------|
-|[퀀텀 순간 이동](https://github.com/microsoft/QuantumKatas/tree/master/Teleportation)|이 kata는 기존 전용 통신과 이전에 공유된 퀀텀 얽힘만을 사용하여 퀀텀 상태를 전달할 수 있는 프로토콜인 퀀텀 순간 이동을 살펴봅니다.|
-|[초고밀도 코딩](https://github.com/microsoft/QuantumKatas/tree/master/SuperdenseCoding)|슈퍼덴스 코딩은 기존에 공유된 퀀텀 얽힘을 사용하여 단 하나의 큐비트를 전송하여 2비트의 클래식 정보를 전송할 수 있는 프로토콜입니다.  |
-|[도이치–조사 알고리즘](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/ExploringDeutschJozsaAlgorithm)|이 알고리즘은 결정적 기존 알고리즘보다 상당히 빠른 퀀텀 알고리즘의 첫 번째 예 중 하나입니다.|
-|[Grover 검색 알고리즘의 상위 수준 속성 살펴보기](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/ExploringGroversAlgorithm)|퀀텀 컴퓨팅에서 가장 유명한 알고리즘 중 하나에 대한 개략적인 소개입니다. 특정 출력을 생성하는 블랙 박스(oracle)에 입력을 찾는 문제를 해결합니다. |
-|[Grover 검색 알고리즘 구현](https://github.com/microsoft/QuantumKatas/tree/master/GroversAlgorithm)|이 kata는 Grover의 검색 알고리즘에 더 자세히 알아보며, oracles 쓰기, 알고리즘 단계 수행 및 마지막으로 이를 모두 종합합니다.|
-|[Grover 알고리즘을 사용하여 실제 문제 해결: SAT 문제](https://github.com/microsoft/QuantumKatas/tree/master/SolveSATWithGrover)|Grover 알고리즘을 사용하여 [부울 만족도 문제](https://en.wikipedia.org/wiki/Boolean_satisfiability_problem)(SAT)를 예로 들어 현실적인 문제를 해결하는 일련의 연습입니다.  |
-|[Grover 알고리즘을 사용하여 실제 문제 해결: 그래프 색 지정 문제](https://github.com/microsoft/QuantumKatas/tree/master/GraphColoring)| 이 kata는 Grover의 알고리즘을 좀 더 살펴보고, 이번에는 그래프 색 지정 문제를 예로 들어 [제약 조건 만족 문제](https://en.wikipedia.org/wiki/Constraint_satisfaction_problem)를 해결합니다. |
+|[퀀텀 순간 이동](https://github.com/microsoft/QuantumKatas/tree/main/Teleportation)|이 kata는 기존 전용 통신과 이전에 공유된 퀀텀 얽힘만을 사용하여 퀀텀 상태를 전달할 수 있는 프로토콜인 퀀텀 순간 이동을 살펴봅니다.|
+|[초고밀도 코딩](https://github.com/microsoft/QuantumKatas/tree/main/SuperdenseCoding)|슈퍼덴스 코딩은 기존에 공유된 퀀텀 얽힘을 사용하여 단 하나의 큐비트를 전송하여 2비트의 클래식 정보를 전송할 수 있는 프로토콜입니다.  |
+|[도이치–조사 알고리즘](https://github.com/microsoft/QuantumKatas/tree/main/tutorials/ExploringDeutschJozsaAlgorithm)|이 알고리즘은 결정적 기존 알고리즘보다 상당히 빠른 퀀텀 알고리즘의 첫 번째 예 중 하나입니다.|
+|[Grover 검색 알고리즘의 상위 수준 속성 살펴보기](https://github.com/microsoft/QuantumKatas/tree/main/tutorials/ExploringGroversAlgorithm)|퀀텀 컴퓨팅에서 가장 유명한 알고리즘 중 하나에 대한 개략적인 소개입니다. 특정 출력을 생성하는 블랙 박스(oracle)에 입력을 찾는 문제를 해결합니다. |
+|[Grover 검색 알고리즘 구현](https://github.com/microsoft/QuantumKatas/tree/main/GroversAlgorithm)|이 kata는 Grover의 검색 알고리즘에 더 자세히 알아보며, oracles 쓰기, 알고리즘 단계 수행 및 마지막으로 이를 모두 종합합니다.|
+|[Grover 알고리즘을 사용하여 실제 문제 해결: SAT 문제](https://github.com/microsoft/QuantumKatas/tree/main/SolveSATWithGrover)|Grover 알고리즘을 사용하여 [부울 만족도 문제](https://en.wikipedia.org/wiki/Boolean_satisfiability_problem)(SAT)를 예로 들어 현실적인 문제를 해결하는 일련의 연습입니다.  |
+|[Grover 알고리즘을 사용하여 실제 문제 해결: 그래프 색 지정 문제](https://github.com/microsoft/QuantumKatas/tree/main/GraphColoring)| 이 kata는 Grover의 알고리즘을 좀 더 살펴보고, 이번에는 그래프 색 지정 문제를 예로 들어 [제약 조건 만족 문제](https://en.wikipedia.org/wiki/Constraint_satisfaction_problem)를 해결합니다. |
 
 ### <a name="protocols-and-libraries"></a>프로토콜 및 라이브러리
 
 | Kata | 설명 |
 |:-----|-------------|
-|[퀀텀 키 배포용 BB84 프로토콜](https://github.com/microsoft/QuantumKatas/tree/master/KeyDistribution_BB84)|큐비트를 사용하여 암호 키를 교환하는 퀀텀 키 배포 프로토콜 [BB84](https://en.wikipedia.org/wiki/BB84)에 대해 알아보고 구현합니다. |
-|[비트 대칭 이동 오류 수정 코드](https://github.com/microsoft/QuantumKatas/tree/master/QEC_BitFlipCode)|가장 간단한 QEC(퀀텀 오류 수정) 코드인 3큐비트 대칭 이동 코드를 사용하여 퀀텀 오류 수정에 대해 살펴봅니다.|
-|[단계 예측](https://github.com/microsoft/QuantumKatas/blob/master/PhaseEstimation)|위상 추정 알고리즘은 퀀텀 컴퓨팅의 가장 기본적인 구성 요소의 일부입니다. 퀀텀 단계 예측 및에서 단계 예측 루틴을 준비 하 고 실행 하는 방법을 다루는 이러한 연습과 관련 된 단계를 알아봅니다 Q# .|
-|[퀀텀 산술: 리플 캐리 가산기 만들기](https://github.com/microsoft/QuantumKatas/blob/master/RippleCarryAdder)|퀀텀 컴퓨터에서 [리플 캐리](https://en.wikipedia.org/wiki/Adder_(electronics)#Ripple-carry_adder) 추가에 대해 살펴보는 일련의 심층 연습입니다. 인플레이스 퀀텀 가산기를 만들고 다른 알고리즘으로 확장한 다음, 마지막으로 인플레이스 퀀텀 감산기를 만듭니다.   |
+|[퀀텀 키 배포용 BB84 프로토콜](https://github.com/microsoft/QuantumKatas/tree/main/KeyDistribution_BB84)|큐비트를 사용하여 암호 키를 교환하는 퀀텀 키 배포 프로토콜 [BB84](https://en.wikipedia.org/wiki/BB84)에 대해 알아보고 구현합니다. |
+|[비트 대칭 이동 오류 수정 코드](https://github.com/microsoft/QuantumKatas/tree/main/QEC_BitFlipCode)|가장 간단한 QEC(퀀텀 오류 수정) 코드인 3큐비트 대칭 이동 코드를 사용하여 퀀텀 오류 수정에 대해 살펴봅니다.|
+|[단계 예측](https://github.com/microsoft/QuantumKatas/blob/main/PhaseEstimation)|위상 추정 알고리즘은 퀀텀 컴퓨팅의 가장 기본적인 구성 요소의 일부입니다. 퀀텀 단계 예측 및에서 단계 예측 루틴을 준비 하 고 실행 하는 방법을 다루는 이러한 연습과 관련 된 단계를 알아봅니다 Q# .|
+|[퀀텀 산술: 리플 캐리 가산기 만들기](https://github.com/microsoft/QuantumKatas/blob/main/RippleCarryAdder)|퀀텀 컴퓨터에서 [리플 캐리](https://en.wikipedia.org/wiki/Adder_(electronics)#Ripple-carry_adder) 추가에 대해 살펴보는 일련의 심층 연습입니다. 인플레이스 퀀텀 가산기를 만들고 다른 알고리즘으로 확장한 다음, 마지막으로 인플레이스 퀀텀 감산기를 만듭니다.   |
 
 ### <a name="entanglement-games"></a>얽힘 게임
 
 | Kata | 설명 |
 |:-----|-------------|
-|[CHSH 게임](https://github.com/microsoft/QuantumKatas/tree/master/CHSHGame)|[CHSH](https://en.wikipedia.org/wiki/CHSH_inequality) 게임을 구현하여 퀀텀 얽힘에 대해 살펴봅니다. 이 [비로컬](https://en.wikipedia.org/wiki/Quantum_refereed_game) 게임은 퀀텀 얽힘을 사용하여 단순한 고전적인 전략만으로도 플레이어의 승률을 높이는 방법을 보여줍니다.|
-|[GHZ 게임](https://github.com/microsoft/QuantumKatas/tree/master/GHZGame)|GHZ 게임은 또 다른 비로컬 게임이지만 3명의 플레이어가 참여할 수 있습니다.|
-|[머민-페레스 매직 스퀘어 게임](https://github.com/microsoft/QuantumKatas/tree/master/MagicSquareGame)|마법의 정사각형 게임을 통해 [퀀텀 의사 텔레파시](https://en.wikipedia.org/wiki/Quantum_pseudo-telepathy#The_Mermin%E2%80%93Peres_magic_square_game)에 대해 살펴보는 일련의 연습입니다.  |
+|[CHSH 게임](https://github.com/microsoft/QuantumKatas/tree/main/CHSHGame)|[CHSH](https://en.wikipedia.org/wiki/CHSH_inequality) 게임을 구현하여 퀀텀 얽힘에 대해 살펴봅니다. 이 [비로컬](https://en.wikipedia.org/wiki/Quantum_refereed_game) 게임은 퀀텀 얽힘을 사용하여 단순한 고전적인 전략만으로도 플레이어의 승률을 높이는 방법을 보여줍니다.|
+|[GHZ 게임](https://github.com/microsoft/QuantumKatas/tree/main/GHZGame)|GHZ 게임은 또 다른 비로컬 게임이지만 3명의 플레이어가 참여할 수 있습니다.|
+|[머민-페레스 매직 스퀘어 게임](https://github.com/microsoft/QuantumKatas/tree/main/MagicSquareGame)|마법의 정사각형 게임을 통해 [퀀텀 의사 텔레파시](https://en.wikipedia.org/wiki/Quantum_pseudo-telepathy#The_Mermin%E2%80%93Peres_magic_square_game)에 대해 살펴보는 일련의 연습입니다.  |
 
 ## <a name="resources"></a>리소스
 

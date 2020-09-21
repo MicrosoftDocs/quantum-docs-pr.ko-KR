@@ -1,22 +1,22 @@
 ---
-title: Q#파일 구조
+title: Q# 파일 구조
 description: 파일의 구조 및 구문에 대해 설명 합니다 Q# .
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.filestructure
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: ac73962b1a718cd04aa87ee3476c66781fe3ac2b
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 98b3a2e35186989b8191cc566a5d5310bc26eafc
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867933"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833316"
 ---
-# <a name="no-locq-file-structure"></a>Q#파일 구조
+# <a name="no-locq-file-structure"></a>Q# 파일 구조
 
 Q#파일은 *네임 스페이스 선언*시퀀스로 구성 됩니다.
 각 네임 스페이스 선언에는 사용자 정의 형식, 작업 및 함수에 대 한 선언이 포함 되며, 각 선언 형식 및 순서에 관계 없이 임의 개수의 형식을 포함할 수 있습니다.
@@ -76,7 +76,7 @@ namespace NS {
 일반적으로 지시문을 사용 하 여 네임 스페이스를 포함 하는 것이 좋습니다 `open` .
 두 네임 스페이스가 같은 이름을 사용 하 여 구문을 정의 하 고 현재 소스가 양쪽에서 구문을 사용 하는 경우 정규화 된 이름을 사용 해야 합니다.
 
-Q#는 다른 .NET 언어로 이름을 지정 하는 것과 동일한 규칙을 따릅니다.
+Q# 는 다른 .NET 언어로 이름을 지정 하는 것과 동일한 규칙을 따릅니다.
 그러나에서는 Q# 네임 스페이스에 대 한 상대 참조를 지원 하지 않습니다.
 예를 들어 네임 스페이스가 `a.b` 열려 있으면 이라는 작업에 대 한 참조는 `c.d` 전체 이름이 있는 작업으로 확인 *되지* 않습니다 `a.b.c.d` .
 
@@ -91,11 +91,11 @@ Q#는 다른 .NET 언어로 이름을 지정 하는 것과 동일한 규칙을 �
 
 ## <a name="statement-blocks"></a>문 블록
 
-Q#문은 중괄호에 포함 된 문 블록으로 그룹화 됩니다 `{ }` . 문 블록은 여는 것으로 시작 하 `{` 고 닫는로 끝납니다 `}` .
+Q# 문은 중괄호에 포함 된 문 블록으로 그룹화 됩니다 `{ }` . 문 블록은 여는 것으로 시작 하 `{` 고 닫는로 끝납니다 `}` .
 
 다른 블록 내에 어휘를 싸인 문 블록은 포함 하는 블록의 하위 블록으로 간주 됩니다. 포함 및 하위 블록은 외부 및 내부 블록이 라고도 합니다.
 
-## <a name="comments"></a>주석
+## <a name="comments"></a>의견
 
 주석은 두 개의 슬래시 ()로 시작 `//` 하 고 줄의 끝까지 계속 됩니다.
 주석은 소스 파일의 어디에 나 나타날 수 있습니다 Q# .
@@ -109,7 +109,7 @@ Q#문은 중괄호에 포함 된 문 블록으로 그룹화 됩니다 `{ }` . �
 Markdown에서 확장을 사용 `@"<ref target>"` 하 여의 상호 참조 작업, 함수 및 사용자 정의 형식을 사용 Q# 합니다. `<ref target>`참조 된 코드 개체의 정규화 된 이름으로 대체 합니다.
 다른 설명서 엔진은 추가 Markdown 확장을 지원할 수도 있습니다.
 
-예를 들어:
+예를 들면 다음과 같습니다.
 
 ```qsharp
 /// # Summary

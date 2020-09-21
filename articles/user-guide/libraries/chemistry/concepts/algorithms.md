@@ -1,20 +1,20 @@
 ---
 title: Hamiltonian Dynamics 시뮬레이션
 description: Suzuki 수식과 Trotter를 사용 하 여 Hamiltonian 시뮬레이션을 사용 하는 방법에 대해 알아봅니다.
-author: nathanwiebe2
-ms.author: nawiebe@microsoft.com
+author: bradben
+ms.author: v-benbra
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.simulationalgorithms
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 40f79a66ae95e20a8b1c19af735eedca5e3c15ef
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 299eb1484a697ad9d1577aabb44ccb61e908bae3
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869531"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834009"
 ---
 # <a name="simulating-hamiltonian-dynamics"></a>Hamiltonian Dynamics 시뮬레이션
 
@@ -46,9 +46,9 @@ $R $를 사용 하 여 진행 시간에서 수행 되는 단계 수를 지정 �
 Pauli 연산자는 Clifford 작업 (양자 컴퓨팅의 표준 게이트)을 사용 하 여 diagonalized 수 있으므로 쉽게 시뮬레이션할 수 있습니다.
 또한 diagonalized 된 후에는 해당 고유 값가 작동 하는 eibits의 패리티를 계산 하 여 찾을 수 있습니다.
 
-예를 들어 $ $ e ^ {-iX\otimes X t} = (H\otimes H) e ^ {-iZ\otimes Z t} (H\otimes H), $ $ where $ $ e ^ {-i Z Z \otimes Z t} = \begin{bmatrix} e ^ {-it} & 0 & 0 & 0\\\
-        0 & e ^ {i t} & 0 & 0\\\
-        0 & 0 & e ^ {it} & 0\\\
+예를 들어 $ $ e ^ {-iX\otimes X t} = (H\otimes H) e ^ {-iZ\otimes Z t} (H\otimes H), $ $ where $ $ e ^ {-i Z Z \otimes Z t} = \begin{bmatrix} e ^ {-it} & 0 & 0 & 0 \\\
+        0 & e ^ {i t} & 0 & 0 \\\
+        0 & 0 & e ^ {it} & 0 \\\
         0 & 0 & 0 & e ^ {-it} \end{bmatrix}.
 $ $ 여기에서 $e ^ {-iHt} \ket {00} = e ^ {it} \ket {00} $ 및 $e ^ {-iht} \ket {01} = e ^ {-it} \ket {01} $를 사용할 수 있습니다 .이는 $0 $의 패리티는 $0 $이 고 비트 문자열 $1 $는 $1 $입니다.
 
@@ -145,7 +145,7 @@ $ \Operatorname{Select} ^ 2 \ k {j} \ket{\psi} = \ket{j} \ket{\psi} $는 각 $H 
 
 두 번째 서브루틴을 $ \operatorname{Prepare} $ 이라고 합니다.
 Select 작업은 각 Hamiltonian 약관 $H에 대 한 액세스를 제공 하는 수단을 제공 하지만 _j $ 준비 서브루틴은 _j $, \begin{equation} \operatorname{Prepare}\ket {0} = \ sum_j \sqrt{\frac{h_j} {| H | _1}} \ket{j}.에 $h 액세스 하기 위한 메서드를 제공 합니다.
-\end{equation} 다음에는 곱하기 제어 단계 게이트를 사용 하 여 $ $ \Lambda\ket {0} ^ {\otimes n} = \begin{cases} \- \ket{x} & \text{if} x = 0이 표시 됩니다.\\\
+\end{equation} 다음에는 곱하기 제어 단계 게이트를 사용 하 여 $ $ \Lambda\ket {0} ^ {\otimes n} = \begin{cases} \- \ket{x} & \text{if} x = 0이 표시 됩니다. \\\
         \ket{x} & \text{otherwise} \end{cases}.
 $$
 
@@ -157,7 +157,7 @@ $ \Operatorname{Select} $ 및 $R $ 작업을 $ $ W = \operatorname{Select} R, $ 
 이러한 서브루틴은에서 쉽게 설정할 수 Q# 있습니다.
 예를 들어 단순 Ising Hamiltonian $H = X_1 + X_2 + Z_1 Z_2 $를 예로 들어 보겠습니다.
 이 경우 $ Q# \operatorname{Select} $ 작업을 구현 하는 코드는에 의해 호출 되는 <xref:microsoft.quantum.canon.multiplexoperations> 반면 $ \operatorname{Prepare} $ 작업은를 사용 하 여 구현할 수 있습니다 <xref:microsoft.quantum.preparation.preparearbitrarystate> .
-Hubbard 모델 시뮬레이션을 포함 하는 예제는 [ Q# 샘플](https://github.com/microsoft/Quantum/tree/master/samples/simulation/hubbard)로 볼 수 있습니다.
+Hubbard 모델 시뮬레이션을 포함 하는 예제는 [ Q# 샘플](https://github.com/microsoft/Quantum/tree/main/samples/simulation/hubbard)로 볼 수 있습니다.
 
 임의 화학 문제에 대해 이러한 단계를 수동으로 지정 하려면 화학 라이브러리를 사용 하지 않는 것이 좋습니다.
 위의 Trotter – Suzuki 시뮬레이션 알고리즘과 마찬가지로는 `JordanWignerEncodingData` `QubitizationOracle` 해당 실행에 필요한 다른 매개 변수와 함께을 반환 하는 편의 함수에 전달 됩니다.

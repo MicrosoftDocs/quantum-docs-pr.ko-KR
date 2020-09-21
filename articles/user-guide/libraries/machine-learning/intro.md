@@ -1,19 +1,20 @@
 ---
 title: 양자 기계 학습 라이브러리
+description: 퀀텀 시스템에서 기계 학습을 사용 하는 방법 알아보기
 author: alexeib2
-ms.author: alexei.bocharov@microsoft.com
+ms.author: alexeib
 ms.date: 11/22/2019
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.intro
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 65b0aa6a7f385765933d4d89ce34901f77cf76ec
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: 9f7f892fb2b76432942c86163497c22f0c73d51f
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863094"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833804"
 ---
 # <a name="introduction-to-quantum-machine-learning"></a>퀀텀 Machine Learning 소개
 
@@ -74,4 +75,4 @@ $ \Theta $에서 매개 변수의 중간 (또는 최종) 값을 지정 하는 �
 
 이 정보는 코드로의 재생을 시작 하는 데 충분 해야 합니다. 그러나이 모델에 대 한 자세한 내용은 [ *' 회로 중심 퀀텀 분류자 ', 민 Schuld, Alex Bocharov, Krysta sva및 네 번째 wiebe* 의 원래 제안을 읽어 보세요.](https://arxiv.org/abs/1804.00633)
 
-다음 단계에서 볼 수 있는 코드 샘플 외에 [이 자습서](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/QuantumClassification) 에서 퀀텀 분류 탐색을 시작할 수도 있습니다. 
+다음 단계에서 볼 수 있는 코드 샘플 외에 [이 자습서](https://github.com/microsoft/QuantumKatas/tree/main/tutorials/QuantumClassification) 에서 퀀텀 분류 탐색을 시작할 수도 있습니다. 

@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.host-programs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: f1eca44dabd72cd107d72d3b9e3ad1081c19c27d
-ms.sourcegitcommit: 11bd357baeb6ab53a402882979e75964d0869b57
+ms.openlocfilehash: f24c608ffc6522cb50f512de1a02b3db4b290e83
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88992193"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759819"
 ---
 # <a name="ways-to-run-a-no-locq-program"></a>프로그램을 실행 하는 방법 Q#
 
@@ -250,7 +250,7 @@ BorrowedWidth   0
 호스트 프로그램을 사용할 때의 주요 이점 중 하나는 프로그램에서 반환 된 기존 데이터가 Q# 호스트 언어로 추가로 처리 될 수 있다는 것입니다.
 이는 일부 고급 데이터 처리 (예:에서 내부적으로 수행 될 수 없는 항목)로 구성 될 수 Q# 있으며, Q# 그 결과에 따라 추가 작업을 호출 하거나 결과를 그리는 것 처럼 간단 하 게 처리할 수 있습니다. Q#
 
-일반적인 체계는 다음과 같습니다. 여기에서는 Python 및 c #에 대 한 특정 구현을 설명 합니다. F # 호스트 프로그램을 사용 하는 샘플은 [.net 상호 운용성 샘플](https://github.com/microsoft/Quantum/tree/master/samples/interoperability/dotnet)에서 찾을 수 있습니다.
+일반적인 체계는 다음과 같습니다. 여기에서는 Python 및 c #에 대 한 특정 구현을 설명 합니다. F # 호스트 프로그램을 사용 하는 샘플은 [.net 상호 운용성 샘플](https://github.com/microsoft/Quantum/tree/main/samples/interoperability/dotnet)에서 찾을 수 있습니다.
 
 <br/>
 <img src="../media/hostprograms_host_program_diagram.png" alt="Q# program from a host program" width="700">
@@ -409,7 +409,7 @@ using NamespaceName;                              // make the Q# namespace avail
 ```
 
 다음으로 c # 네임 스페이스, 몇 가지 다른 비트 및 부분 (아래의 전체 코드 블록 참조)을 선언 하 고 원하는 모든 기존 프로그래밍을 선언 합니다 (예: callables의 인수 계산 Q# ).
-후자의 경우에는 후자를 사용할 필요가 없지만 이러한 사용의 예는  [.net 상호 운용성 샘플](https://github.com/microsoft/Quantum/tree/master/samples/interoperability/dotnet)에서 찾을 수 있습니다.
+후자의 경우에는 후자를 사용할 필요가 없지만 이러한 사용의 예는  [.net 상호 운용성 샘플](https://github.com/microsoft/Quantum/tree/main/samples/interoperability/dotnet)에서 찾을 수 있습니다.
 
 #### <a name="target-machines"></a>대상 머신
 
@@ -580,7 +580,7 @@ BorrowedWidth   0
 Q# Jupyter 노트북은 Q# Q# 모든 지침, 메모 및 기타 콘텐츠와 함께---단일 노트북에서 callables을 정의, 컴파일 및 실행할 수 있는 I 커널을 사용 합니다.
 즉, 파일의 내용을 가져오고 사용할 수는 있지만 `*.qs` Q# 실행 모델에는 필요 하지 않습니다.
 
-여기서는 위에 정의 된 작업을 실행 하는 방법에 대해 자세히 설명 Q# 하지만, jupyter 노트북을 사용 하는 방법에 대 한 더 광범위 한 소개는 Q# [ Q# 및 jupyter 노트북](https://github.com/microsoft/Quantum/blob/master/samples/getting-started/intro-to-iqsharp/Notebook.ipynb)에서 제공 됩니다.
+여기서는 위에 정의 된 작업을 실행 하는 방법에 대해 자세히 설명 Q# 하지만, jupyter 노트북을 사용 하는 방법에 대 한 더 광범위 한 소개는 Q# [ Q# 및 jupyter 노트북](https://github.com/microsoft/Quantum/blob/main/samples/getting-started/intro-to-iqsharp/Notebook.ipynb)에서 제공 됩니다.
 
 ### <a name="defining-operations"></a>작업 정의
 
@@ -591,7 +591,7 @@ Jupyter Notebook에서 Q# Q# 파일의 네임 스페이스 내에서와 같은 �
 
 > [!NOTE]
 > [Microsoft](xref:microsoft.quantum.intrinsic) 에서 사용 하는 callables [(예](xref:microsoft.quantum.canon) : [`H`](xref:microsoft.quantum.intrinsic.h) 및 [`ApplyToEach`](xref:microsoft.quantum.canon.applytoeach) )은 jupyter 노트북의 셀 내에 정의 된 작업에서 자동으로 사용할 수 있습니다. Q#
-> 그러나 외부 소스 파일에서 가져온 코드 Q# ( [ Q# 및 Jupyter 노트북](https://github.com/microsoft/Quantum/blob/master/samples/getting-started/intro-to-iqsharp/Notebook.ipynb)에 표시 되는 프로세스)에는 적용 되지 않습니다. 
+> 그러나 외부 소스 파일에서 가져온 코드 Q# ( [ Q# 및 Jupyter 노트북](https://github.com/microsoft/Quantum/blob/main/samples/getting-started/intro-to-iqsharp/Notebook.ipynb)에 표시 되는 프로세스)에는 적용 되지 않습니다. 
 > 
 
 마찬가지로 작업을 정의 하려면 코드를 작성 Q# 하 고 셀을 실행 하기만 하면 됩니다.

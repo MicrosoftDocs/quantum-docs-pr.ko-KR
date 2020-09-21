@@ -1,6 +1,6 @@
 ---
 제목: Pauli 측정 설명: 단일 및 다중 값 비트를 사용 하는 방법에 대해 알아봅니다.
-작성자: QuantumWriter uid: microsoft..:. nawiebe@microsoft.com 날짜: 12/11/2017 밀리초. 토픽: 문서 번호-loc:
+작성자: bradben uid: benbra: 12/11/2017: 밀리초. 항목: article no-(영문).
 - "Q#"
 - "$$v"
 - "$$"
@@ -143,8 +143,8 @@ $$
 operation MeasureY(qubit : Qubit) : Result {
     mutable result = Zero;
     within {
-        H(q);
         Adjoint S(q);
+        H(q);
     } apply {
         set result = M(q);
     }
@@ -223,14 +223,14 @@ Z z의 고유 값는 $ \otimes $ 각 계산 기준 벡터를 구성 하는 eibit
 그 이유는 $ z z 측정 \otimes $ 에서 $ $ $ 이러한 연산자의 + 1 또는-1 $ eigenstate로 퀀텀 상태를 프로젝션 하기 때문입니다.
 $Z \otimes \mathbb { 1을 측정 한 } $ 다음 $ \mathbb { 1 } \otimes z는 $ 퀀텀 상태 벡터를 z 1의 절반 공간에 먼저 투영 $ \otimes \mathbb { } $ 하 고 그 다음에 $ \mathbb { 1 } \otimes z $ 의 반쪽 공간으로 투영 합니다. 네 가지 계산 기준 벡터가 있으므로 두 측정값을 모두 수행 하면 상태가 1/4로 줄어들고 단일 계산 기준 벡터로 줄어듭니다.
 
-## <a name="correlations-between-qubits"></a>이상 비트 간의 상관 관계
+## <a name="correlations-between-qubits"></a>큐비트 간의 상관 관계
 X x 또는 Z z와 같은 Pauli 매트릭스의 텐서 곱을 측정 하는 또 다른 방법은 $ \otimes $ $ \otimes $ 이러한 측정을 사용 하 여 두 개의 두 비트 간 상관 관계에 저장 된 정보를 확인할 수 있다는 것입니다.
 X를 측정 $ \otimes \id $ 하면 첫 번째 비트에 로컬로 저장 된 정보를 볼 수 있습니다.
 두 유형의 측정은 모두 퀀텀 컴퓨팅에서 동일 하 게 중요 하지만, 이전에는 퀀텀 컴퓨팅의 기능을 비춥니다.
 이는 퀀텀 컴퓨팅에서 배워야 하는 정보가 단일의 모든 비트에 저장 되지 않고 한 번에 모든 모든 기능에 로컬로 저장 되는 것이 아니라 공동 측정 (예: z z)을 통해 확인 하는 경우에만 $ \otimes $ 이 정보가 매니페스트가 됨을 나타냅니다.
 
 예를 들어 오류 수정에서는 보호 하려는 상태에 대 한 정보를 확인 하는 동안 발생 한 오류를 배우는 경우가 많습니다.
-[비트 대칭 코드 샘플](https://github.com/microsoft/Quantum/tree/master/samples/error-correction/bit-flip-code) 에서는 $ z \otimes z \otimes \id $ 및 $ \id \otimes z \otimes z $ < 와 같은 측정을 사용 하 여이 작업을 수행할 수 있는 방법의 예를 보여 줍니다. --TODO: 비트 대칭 코드 샘플이 온-등록 인 경우 바로 샘플 브라우저에 대 한 링크를 변경 합니다. -->
+[비트 대칭 코드 샘플](https://github.com/microsoft/Quantum/tree/main/samples/error-correction/bit-flip-code) 에서는 $ z \otimes z \otimes \id $ 및 $ \id \otimes z \otimes z $ < 와 같은 측정을 사용 하 여이 작업을 수행할 수 있는 방법의 예를 보여 줍니다. --TODO: 비트 대칭 코드 샘플이 온-등록 인 경우 바로 샘플 브라우저에 대 한 링크를 변경 합니다. -->
 
 X Y Z와 같은 임의 pauli 연산자를 $ \otimes \otimes \otimes \boldone $ 측정할 수도 있습니다.
 이러한 모든 텐서 제품의 pauli 연산자에는 두 개의 고유 값 $ \pm 1만 있고 $ 고유 값는 전체 벡터 공간의 반 공간을 구성 합니다.

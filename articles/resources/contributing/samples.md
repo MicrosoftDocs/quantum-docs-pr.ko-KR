@@ -9,12 +9,12 @@ uid: microsoft.quantum.contributing.samples
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 20da0e1765a242c172cc595f03d7791a0e8b8d2d
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: ae29614cc9c8bf965ea3cb373dc17470aec21252
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867516"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759189"
 ---
 # <a name="contributing-samples-to-the-quantum-development-kit"></a>퀀텀 개발 키트에 대 한 샘플 기여
 
@@ -46,12 +46,12 @@ microsoft/Quantum
 
 ## <a name="how-samples-are-structured"></a>샘플 구성 방법
 
-각 폴더를 구성 하는 파일을 살펴보면 샘플을 살펴보겠습니다 [`algorithms/chsh-game/`](https://github.com/microsoft/Quantum/tree/master/samples/algorithms/chsh-game) .
+각 폴더를 구성 하는 파일을 살펴보면 샘플을 살펴보겠습니다 [`algorithms/chsh-game/`](https://github.com/microsoft/Quantum/tree/main/samples/algorithms/chsh-game) .
 
 | 파일              | 설명                                                |
 |-------------------|------------------------------------------------------------|
-| `CHSHGame.csproj` | Q#.NET Core SDK를 사용 하 여 샘플을 빌드하는 데 사용 되는 프로젝트입니다. |
-| `Game.qs`         | Q#샘플에 대 한 작업 및 함수                 |
+| `CHSHGame.csproj` | Q# .NET Core SDK를 사용 하 여 샘플을 빌드하는 데 사용 되는 프로젝트입니다. |
+| `Game.qs`         | Q# 샘플에 대 한 작업 및 함수                 |
 | `Host.cs`         | 샘플을 실행 하는 데 사용 되는 c # 호스트 프로그램                     |
 | `host.py`         | 샘플을 실행 하는 데 사용 되는 Python 호스트 프로그램                 |
 | `README.md`       | 샘플에서 수행 하는 작업 및 사용 방법에 대 한 설명서    |

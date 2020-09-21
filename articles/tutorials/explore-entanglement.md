@@ -2,19 +2,19 @@
 title: 되거나 얽 히를 사용 하 여 탐색 Q#
 description: 에서 퀀텀 프로그램을 작성 하는 방법에 대해 알아봅니다 Q# . QDK(Quantum Development Kit)를 사용하여 Bell State 애플리케이션을 개발합니다.
 author: geduardo
-ms.author: v-edsanc@microsoft.com
+ms.author: v-edsanc
 ms.date: 05/29/2020
 ms.topic: tutorial
 uid: microsoft.quantum.write-program
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 3e95f142572e104fe1e133b109d197ed5bb01d9a
-ms.sourcegitcommit: af2e9691c1900ced7e09d6320255617c9939ed55
+ms.openlocfilehash: 6fd7494d341a83a1354d23a283d21a7ae535e49f
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90063243"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834026"
 ---
 # <a name="tutorial-explore-entanglement-with-q"></a>자습서: Q\#을 사용한 얽힘 살펴보기
 
@@ -83,7 +83,7 @@ Microsoft의 목표는 특정 퀀텀 상태에서 두 개의 작업을 준비 �
 
 ### <a name="initialize-qubit-using-measurement"></a>측정을 사용 하 여 비트를 초기화 합니다.
 
-아래의 첫 번째 코드에서는에서 원하는 비트를 사용 하는 방법을 보여 줍니다 Q# .  여기서는 두 가지 작업을 소개 하 고,이를 통해 [`M`](xref:microsoft.quantum.intrinsic.m) [`X`](xref:microsoft.quantum.intrinsic.x) 원하는 비트의 상태를 변환 합니다. 이 코드 조각에서 `SetQubitState` 연산은 큐비트를 매개 변수로 사용하고 또 다른 매개 변수 `desired`를 사용하여 우리가 원하는 큐비트 상태를 나타내는 것으로 정의됩니다.  `SetQubitState` 연산은 `M` 연산을 사용하여 큐비트를 측정합니다.  에서 Q# ,의 비트 측정은 항상 또는를 반환 합니다 `Zero` `One` .  측정값이 원하는 값과 일치 하지 않는 값을 반환 하는 경우에는 해당 값을 `SetQubitState` "대칭 이동" 합니다. 즉, 작업을 실행 합니다 .이 작업은 해당 값을 `X` 반환 하는 측정값의 확률을 반환 하는 새 상태로의 값을 변경 합니다 `Zero` `One` . 이러한 방식으로 `SetQubitState` 는 항상 대상의를 원하는 상태로 설정 합니다.
+아래의 첫 번째 코드에서는에서 원하는 비트를 사용 하는 방법을 보여 줍니다 Q# .  여기서는 두 가지 작업을 소개 하 고,이를 통해 [`M`](xref:microsoft.quantum.intrinsic.m) [`X`](xref:microsoft.quantum.intrinsic.x) 원하는 비트의 상태를 변환 합니다. 이 코드 조각에서 `SetQubitState` 연산은 큐비트를 매개 변수로 사용하고 또 다른 매개 변수 `desired`를 사용하여 우리가 원하는 큐비트 상태를 나타내는 것으로 정의됩니다.  `SetQubitState` 연산은 `M` 연산을 사용하여 큐비트를 측정합니다.  에서 Q# ,의 비트 측정은 항상 또는를 반환 합니다 `Zero` `One` .  측정값이 원하는 값과 일치 하지 않는 값을 반환 하는 경우에는 해당 값을 `SetQubitState` "대칭 이동" 합니다. 즉, `X` 작업을 실행 합니다 .이 작업은이를 반환 하는 측정값의 확률을 반환 하는 새 상태로의 값을 변경 하는 작업을 실행 `Zero` `One` 합니다. 이러한 방식으로 `SetQubitState` 는 항상 대상의를 원하는 상태로 설정 합니다.
 
 의 내용을 `Program.qs` 다음 코드로 바꿉니다.
 
@@ -104,7 +104,7 @@ Microsoft의 목표는 특정 퀀텀 상태에서 두 개의 작업을 준비 �
 이제 이 연산을 호출하여 큐비트를 클래식 상태로 설정하면 항상 `Zero`를 반환하거나 항상 `One`을 반환할 수 있습니다.
 `Zero` 및 `One`은 큐비트 측정에서 가능한 두 가지 결과를 나타내는 상수입니다.
 
-`SetQubitState` 연산은 큐비트를 측정합니다. 큐비트가 현재 우리가 원하는 상태이면 `SetQubitState`는 큐비트를 그대로 둡니다. 그렇지 않으면 `X` 연산을 실행하여 큐비트를 원하는 상태로 변경합니다.
+`SetQubitState` 연산은 큐비트를 측정합니다. 원하는 비트가 원하는 상태에 있는 경우에 `SetQubitState` 만 그대로 둡니다. 그렇지 않으면 작업을 실행 하 여 `X` 원하는 상태로 변경 합니다.
 
 #### <a name="about-no-locq-operations"></a>Q#작업 정보
 
@@ -300,7 +300,7 @@ Test results (# of 0s, # of 1s):
 ## <a name="prepare-entanglement"></a>얽힘 준비
 
 이제를 entangle로 표시 하는 방법을 살펴보겠습니다 Q# .
-먼저 첫 번째 큐비트를 초기 상태로 설정한 다음, `H` 연산을 사용하여 중첩 상태로 전환합니다.  그런 다음, 첫 번째 비트를 측정 하기 전에 제어 되지 않음을 나타내는 새 작업 ()을 사용 `CNOT` 합니다.  두 큐비트에 대해 이 연산을 실행하면 그 결과로 첫 번째 큐비트가 `One`인 경우 두 번째 큐비트가 대칭 이동됩니다.  이제 두 큐비트가 서로 얽혔습니다.  첫 번째 큐비트에 대한 통계는 변경되지 않았지만(측정 후 `Zero` 또는 `One`일 확률이 50-50), 이제 두 번째 큐비트의 측정 결과는 첫 번째 큐비트의 측정 결과와 __항상__ 동일합니다. `CNOT`는 두 큐비트를 얽어서 두 큐비트 중 한 큐비트에서 발생하는 모든 것이 다른 큐비트에서 발생하도록 했습니다. 반대로 측정한 경우(먼저 두 번째 큐비트를 측정한 후에 첫 번째 큐비트를 측정함)에도 동일한 상황이 발생합니다. 첫 번째 측정은 임의적이고, 두 번째 측정은 첫 번째 측정에서 발견된 모든 것과 함께 잠금 단계에 있습니다.
+먼저 첫 번째 큐비트를 초기 상태로 설정한 다음, `H` 연산을 사용하여 중첩 상태로 전환합니다.  그런 다음, 첫 번째 비트를 측정 하기 전에 `CNOT` *제어 되지 않음*을 나타내는 새 작업 ()을 사용 합니다.  두 개의 비트에 대해이 작업을 실행 한 결과는 첫 번째 비트를 인 경우 두 번째 비트를 대칭 이동 하는 것입니다 `One` .  이제 두 큐비트가 서로 얽혔습니다.  첫 번째 큐비트에 대한 통계는 변경되지 않았지만(측정 후 `Zero` 또는 `One`일 확률이 50-50), 이제 두 번째 큐비트의 측정 결과는 첫 번째 큐비트의 측정 결과와 __항상__ 동일합니다. `CNOT`는 두 큐비트를 얽어서 두 큐비트 중 한 큐비트에서 발생하는 모든 것이 다른 큐비트에서 발생하도록 했습니다. 반대로 측정한 경우(먼저 두 번째 큐비트를 측정한 후에 첫 번째 큐비트를 측정함)에도 동일한 상황이 발생합니다. 첫 번째 측정은 임의적이고, 두 번째 측정은 첫 번째 측정에서 발견된 모든 것과 함께 잠금 단계에 있습니다.
 
 가장 먼저 해야 할 일은에서 하나 대신 두 개의 두 비트를 할당 하는 것입니다 `TestBellState` .
 

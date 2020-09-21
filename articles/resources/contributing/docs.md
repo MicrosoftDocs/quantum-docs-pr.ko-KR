@@ -9,12 +9,12 @@ uid: microsoft.quantum.contributing.docs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 1110f32a6486de1a346b115fa928a098749b6690
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 20e9f8126a290f52701b6b0e525d7669a605d4c9
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866879"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759682"
 ---
 # <a name="improving-documentation"></a>설명서 개선
 
@@ -52,7 +52,7 @@ ms.locfileid: "87866879"
 :::code language="qsharp" source="~/quantum/samples/algorithms/chsh-game/Game.qs" range="4-8":::
 ```
 
-이 명령은 [ `Game.qs` `chsh-game` 샘플에서 파일](https://github.com/microsoft/Quantum/blob/master/samples/algorithms/chsh-game/Game.qs)의 4 ~ 8 줄을 가져와 Q# 구문 강조 표시의 용도에 대 한 코드로 표시 합니다.
+이 명령은 [ `Game.qs` `chsh-game` 샘플에서 파일](https://github.com/microsoft/Quantum/blob/main/samples/algorithms/chsh-game/Game.qs)의 4 ~ 8 줄을 가져와 Q# 구문 강조 표시의 용도에 대 한 코드로 표시 합니다.
 이 명령을 사용 하면 설명서의 샘플 코드를 항상 최대한 최신 상태로 유지 하기 위해 개념 아티클과 샘플 리포지토리 간에 코드를 복제할 수 있습니다.
 
 ## <a name="contributing-to-the-api-references"></a>API 참조에 기여

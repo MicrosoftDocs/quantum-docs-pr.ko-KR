@@ -8,21 +8,21 @@ uid: microsoft.quantum.chemistry.examples.endtoend
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 78d6488ed5e3972f85f1e6cf1ba2d197596c4cc3
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 528c34ea9b28b2f9b8f9a8bad681557f44bfcdaa
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869310"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759718"
 ---
 # <a name="end-to-end-with-nwchem"></a>NWChem을 사용하는 엔드투엔드 #
 
 이 문서에서는 [Nwchem](http://www.nwchem-sw.org/index.php/Main_Page) 입력 데크에서 시작 하 여 퀀텀 화학 시뮬레이션에 대 한 게이트 수를 가져오는 예제를 안내 합니다.
 이 예제를 진행 하기 전에 [설치 및 유효성 검사 가이드](xref:microsoft.quantum.chemistry.concepts.installation)에 따라 Docker를 설치 했는지 확인 합니다.
 
-추가 정보
+자세한 내용은 다음을 참조하세요.
 - [NWChem 입력 데크 구조](https://github.com/nwchemgit/nwchem/wiki/Getting-Started#input-file-structure)
-    - [퀀텀 개발 키트에 사용할 입력 데크 명령](https://github.com/nwchemgit/nwchem/tree/master/contrib/quasar)
+    - [퀀텀 개발 키트에 사용할 입력 데크 명령](https://github.com/nwchemgit/nwchem/tree/main/contrib/quasar)
 - [화학 라이브러리 및 종속성 설치](xref:microsoft.quantum.chemistry.concepts.installation)
 - [리소스 계산](xref:microsoft.quantum.chemistry.examples.resourcecounts)
 
@@ -65,7 +65,7 @@ Get-Command -Module InvokeNWChem
 ```
 
 다음으로 `Get-GateCount` **GetGateCount** 샘플과 함께 제공 된 명령을 가져옵니다.
-자세한 내용은 [샘플에서 제공](https://github.com/Microsoft/Quantum/tree/master/samples/chemistry/GetGateCount)하는 지침을 참조 하세요.
+자세한 내용은 [샘플에서 제공](https://github.com/Microsoft/Quantum/tree/main/samples/chemistry/GetGateCount)하는 지침을 참조 하세요.
 다음으로, `<runtime>` `win10-x64` `osx-x64` `linux-x64` 운영 체제에 따라, 또는로 대체 하 여 다음을 실행 합니다.
 
 ```powershell
@@ -95,7 +95,7 @@ NWChem 패키지는 메모리 할당 설정과 같은 다른 매개 변수와 �
 git clone https://github.com/nwchemgit/nwchem --depth 1
 ```
 
-`nwchemgit/nwchem`리포지토리는 [ `QA/chem_library_tests` 폴더](https://github.com/nwchemgit/nwchem/tree/master/QA/chem_library_tests)아래에 나열 된 퀀텀 개발 키트와 함께 사용 하기 위한 다양 한 입력 데크를 제공 합니다.
+`nwchemgit/nwchem`리포지토리는 [ `QA/chem_library_tests` 폴더](https://github.com/nwchemgit/nwchem/tree/main/QA/chem_library_tests)아래에 나열 된 퀀텀 개발 키트와 함께 사용 하기 위한 다양 한 입력 데크를 제공 합니다.
 이 예에서는 입력 데크를 사용 합니다 `H4` .
 
 ```powershell
@@ -167,7 +167,7 @@ ElapsedMilliseconds : 721
 - 의 매개 변수를 변경 하 여 다양 한 미리 정의 된 입력 데크를 사용해 보세요. `alpha` `h4_sto6g_alpha.nw` 
 - NWChem 데크를 직접 편집 하 여 (예: `STO-nG` 다양 한 n의 선택 항목에 대 한 모델 탐색) 데크를 수정 해 보세요. 
 - 에서 사용할 수 있는 미리 정의 된 기타 NWChem 입력 데크를 사용해 보세요. `nwchem/qa/chem_library_tests`
-- NWChem에서 생성 되었으며 [Microsoft/퀀텀 리포지토리의](https://github.com/Microsoft/Quantum/tree/master/samples/chemistry/IntegralData/YAML)일부로 사용할 수 있는 미리 정의 된 Broombridge yaml 벤치 마크를 사용해 보세요. 이러한 벤치 마크는 다음과 같습니다. 
+- NWChem에서 생성 되었으며 [Microsoft/퀀텀 리포지토리의](https://github.com/Microsoft/Quantum/tree/main/samples/chemistry/IntegralData/YAML)일부로 사용할 수 있는 미리 정의 된 Broombridge yaml 벤치 마크를 사용해 보세요. 이러한 벤치 마크는 다음과 같습니다. 
     - 분자 hydrogen (H2), molecules Yllium (be), 리튬 hydride (LiH)와 같은 small
     - ozone (O3), beta-carotene, cytosine 등의 더 큰 molecules. 
 - Microsoft Quantum Development Kit에 대 한 인터페이스 기능을 제공 하는 그래픽 프런트 엔드 [Emsl 화살표](https://arrows.emsl.pnnl.gov/api/qsharp_chem) 를 사용해 보세요. 
@@ -180,7 +180,7 @@ ElapsedMilliseconds : 721
 > [!NOTE]
 > 웹 브라우저에서 EMSL 화살표를 실행 하려면 JavaScript를 사용 하도록 설정 해야 합니다. 브라우저에서 JavaScript를 사용 하도록 설정 하는 방법에 대 한 다음 [지침](https://www.enable-javascript.com/) 을 참조 하세요. 
 
-먼저 쿼리 상자에 분자을 입력 합니다.``Enter an esmiles, esmiles reaction, or other Arrows input, then push the "Run Arrows" button.`` 
+먼저 쿼리 상자에 분자을 입력 합니다. ``Enter an esmiles, esmiles reaction, or other Arrows input, then push the "Run Arrows" button.`` 
 
 통상적 이름으로 많은 molecules (예: "1, 3, 7-Trimethylxanthine" 대신 "caffeine")를 입력할 수 있습니다. 
 

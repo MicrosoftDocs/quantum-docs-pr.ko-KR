@@ -9,16 +9,16 @@ uid: microsoft.quantum.chemistry.concepts.installation
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 5fe973d24ceffd413cdbd3c543013dcc7ee379c0
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: f1a7d1d041dab73980d8debc179d6c79acac6d33
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869344"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759802"
 ---
 # <a name="chemistry-library-installation"></a>화학 라이브러리 설치
 
-[ **MolecularHydrogen** 샘플](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/MolecularHydrogen) 은 수동으로 구성 된 분자 입력 데이터를 사용 합니다.
+[ **MolecularHydrogen** 샘플](https://github.com/microsoft/Quantum/tree/main/samples/chemistry/MolecularHydrogen) 은 수동으로 구성 된 분자 입력 데이터를 사용 합니다.
 이는 작은 예의 경우에는 적합 하지만, 규모의 퀀텀 연금술에는 수백만 또는 수십억 개의 용어로 Hamiltonians 필요 합니다.
 확장 가능한 계산 화학 패키지에 의해 생성 된 이러한 Hamiltonians는 너무 커서 수동으로 가져올 수 없습니다.
 
@@ -33,7 +33,7 @@ ms.locfileid: "87869344"
 
 퀀텀 개발 키트와 함께 NWChem을 사용 하 여 시작 하 고 실행 하려면 다음 방법 중 하나를 사용 합니다.
 
-- 기존 Broombridge [파일을 사용](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/IntegralData/YAML)하 여 시작 합니다.
+- 기존 Broombridge [파일을 사용](https://github.com/microsoft/Quantum/tree/main/samples/chemistry/IntegralData/YAML)하 여 시작 합니다.
 - 웹 기반 프런트 엔드를 사용 하는 [Microsoft Quantum Development Kit에 대 한 Emsl 화살표 작성기](https://arrows.emsl.pnnl.gov/api/qsharp_chem) 를 사용 하 여 새 Broombridge 분자 입력 파일을 생성 합니다.  
 - PNNL에서 제공 하는 [Docker 이미지](https://hub.docker.com/r/nwchemorg/nwchem-qc/) 를 사용 하 여 NWChem을 실행 하거나
 - 플랫폼용 [NWChem을 컴파일합니다](http://www.nwchem-sw.org/index.php/Compiling_NWChem) .
@@ -42,9 +42,9 @@ NWChem을 사용 하 여 퀀텀 개발 ... Kit 화학 라이브러리로 분석 
 
 ### <a name="getting-started-using-broombridge-files-provided-with-the-samples"></a>샘플과 함께 제공 되는 Broombridge 파일을 사용 하 여 시작
 
-퀀텀 개발 키트 샘플 리포지토리의 [Broombridge 폴더에](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/IntegralData/YAML) 는 형식이 인 분자 데이터 파일이 포함 되어 있습니다.  
+퀀텀 개발 키트 샘플 리포지토리의 [Broombridge 폴더에](https://github.com/microsoft/Quantum/tree/main/samples/chemistry/IntegralData/YAML) 는 형식이 인 분자 데이터 파일이 포함 되어 있습니다.  
 
-간단한 예로, 화학 라이브러리 샘플 [GetGateCount](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/GetGateCount) 를 사용 하 여 Broombridge 파일 중 하나에서 Hamiltonian를 로드 하 고 퀀텀 시뮬레이션 algorigthms의 게이트 예측을 수행 합니다.
+간단한 예로, 화학 라이브러리 샘플 [GetGateCount](https://github.com/microsoft/Quantum/tree/main/samples/chemistry/GetGateCount) 를 사용 하 여 Broombridge 파일 중 하나에서 Hamiltonian를 로드 하 고 퀀텀 시뮬레이션 algorigthms의 게이트 예측을 수행 합니다.
 
 ```bash
 cd Quantum/Chemistry/GetGateCount
@@ -124,7 +124,7 @@ Convert-NWChemToBroombridge -?
 Get-Help Convert-NWChemToBroombridge -Full
 ```
 
-## <a name="using-the-quantum-development-kit-with-qdk-chem"></a>에서 퀀텀 개발 키트 사용`qdk-chem`
+## <a name="using-the-quantum-development-kit-with-qdk-chem"></a>에서 퀀텀 개발 키트 사용 `qdk-chem`
 
 를 설치 하려면 `qdk-chem` 명령줄에서 .NET Core SDK를 사용할 수 있습니다.
 

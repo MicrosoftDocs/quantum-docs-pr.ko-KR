@@ -2,19 +2,19 @@
 title: 퀀텀 Machine Learning 라이브러리를 사용 하는 기본 분류
 description: Q#Microsoft QDK의 퀀텀 Machine Learning 라이브러리를 사용 하 여로 작성 된 퀀텀 순차 분류자를 실행 하는 방법에 대해 알아봅니다.
 author: geduardo
-ms.author: v-edsanc@microsoft.com
+ms.author: v-edsanc
 ms.date: 02/16/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.basics
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: f9c3e7ab85c0f0d1a6063e593607d35c5cb76936
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 5dc4614b9992e2c6b9f8ff4b839c0929ec8cab7c
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868970"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833716"
 ---
 # <a name="basic-classification-classify-data-with-the-qdk"></a>기본 분류: QDK 데이터 분류
 
@@ -70,7 +70,7 @@ ms.locfileid: "87868970"
 
     :::code language="csharp" source="~/quantum/samples/machine-learning/half-moons/Host.cs" range="4-86":::
 
-    그런 다음, F5 키를 누르면 프로그램이 실행되고 새 창에 다음 결과가 표시됩니다. 
+    F5 키를 누르면 프로그램이 실행 되기 시작 합니다. 새 창에 다음 결과가 표시 됩니다. 
 
     ```bash
     $ dotnet run
@@ -88,9 +88,9 @@ ms.locfileid: "87868970"
 
 위의 코드에 정의 된 가장 중요 한 함수와 연산은 다음과 같습니다.
 
-- `ClassifierStructure() : ControlledRotation[]`:이 함수에서 고려 하는 제어 되는 게이트의 계층을 추가 하 여 회로 모델 구조를 설정 합니다. 이 단계는 순차적 심층 학습 모델에서 뉴런의 계층 선언과 유사 합니다.
-- `TrainHalfMoonModel() : (Double[], Double)`:이 작업은 코드의 핵심 부분이 며 학습을 정의 합니다. 여기에서 라이브러리에 포함 된 데이터 집합의 샘플을 로드 하 고, 학습에 대 한 하이퍼 매개 변수 및 초기 매개 변수를 설정 하 고, 라이브러리에 포함 된 작업을 호출 하 여 학습을 시작 합니다 `TrainSequentialClassifier` . 분류자를 결정 하는 매개 변수 및 바이어스를 출력 합니다.
-- `ValidateHalfMoonModel(parameters : Double[], bias : Double) : Int`:이 작업은 모델을 평가 하는 유효성 검사 프로세스를 정의 합니다. 여기서는 유효성 검사에 대 한 샘플, 샘플 당 측정 수 및 허용 오차를 로드 합니다. 유효성 검사를 위해 선택한 샘플 일괄 처리의 오 분류 수를 출력 합니다.
+- `ClassifierStructure() : ControlledRotation[]` :이 함수에서 고려 하는 제어 되는 게이트의 계층을 추가 하 여 회로 모델 구조를 설정 합니다. 이 단계는 순차적 심층 학습 모델에서 뉴런의 계층 선언과 유사 합니다.
+- `TrainHalfMoonModel() : (Double[], Double)` :이 작업은 코드의 핵심 부분이 며 학습을 정의 합니다. 여기에서 라이브러리에 포함 된 데이터 집합의 샘플을 로드 하 고, 학습에 대 한 하이퍼 매개 변수 및 초기 매개 변수를 설정 하 고, 라이브러리에 포함 된 작업을 호출 하 여 학습을 시작 합니다 `TrainSequentialClassifier` . 분류자를 결정 하는 매개 변수 및 바이어스를 출력 합니다.
+- `ValidateHalfMoonModel(parameters : Double[], bias : Double) : Int` :이 작업은 모델을 평가 하는 유효성 검사 프로세스를 정의 합니다. 여기서는 유효성 검사에 대 한 샘플, 샘플 당 측정 수 및 허용 오차를 로드 합니다. 유효성 검사를 위해 선택한 샘플 일괄 처리의 오 분류 수를 출력 합니다.
 
 ## <a name="next-steps"></a>다음 단계
 

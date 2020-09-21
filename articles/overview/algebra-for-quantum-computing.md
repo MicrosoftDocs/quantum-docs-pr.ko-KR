@@ -9,12 +9,12 @@ uid: microsoft.quantum.overview.algebra
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8b06eba9cadce84aca6f87e4451026ca2ffc794f
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: d7a8dff8d491a9ce6451148d2d27121f1c190ed0
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867644"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759325"
 ---
 # <a name="linear-algebra-for-quantum-computing"></a>양자 컴퓨팅을 위한 선형 대수
 
@@ -22,8 +22,8 @@ ms.locfileid: "87867644"
 
 [양자 물리학의 기본 개념](xref:microsoft.quantum.overview.understanding)을 익히는 것이 양자 컴퓨팅을 이해하는데 도움이 되는 것처럼 몇 가지 기본적인 선형 대수를 알면 양자 알고리즘의 작동 방식을 이해하는 데 도움이 됩니다. 적어도 **벡터** 및 **행렬 곱**에 익숙해져야 합니다. 이러한 대수 개념에 대한 지식을 새로 고쳐야 하는 경우 기본 사항을 다루고 있는 몇 가지 자습서는 다음과 같습니다.
 
-- [선형 대수에 대한 Jupyter Notebook 자습서](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/LinearAlgebra)
-- [복소수 연산에 대한 Jupyter Notebook 자습서](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/ComplexArithmetic)
+- [선형 대수에 대한 Jupyter Notebook 자습서](https://github.com/microsoft/QuantumKatas/tree/main/tutorials/LinearAlgebra)
+- [복소수 연산에 대한 Jupyter Notebook 자습서](https://github.com/microsoft/QuantumKatas/tree/main/tutorials/ComplexArithmetic)
 - [양자 계산을 위한 선형 대수](https://cds.cern.ch/record/1522001/files/978-1-4614-6336-8_BookBackMatter.pdf)
 - [선형 대수의 기본 사항](https://www.math.ubc.ca/~carrell/NB.pdf)
 - [양자 계산 입문](https://www.codeproject.com/Articles/5155638/Quantum-Computation-Primer-Part-1#exploring-quantum-superposition)

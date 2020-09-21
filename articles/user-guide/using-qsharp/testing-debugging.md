@@ -2,19 +2,19 @@
 title: 테스트 및 디버깅
 description: 단위 테스트, 팩트 및 어설션을 사용 하는 방법 및 덤프 함수를 사용 하 여 퀀텀 프로그램을 테스트 하 고 디버그 하는 방법을 알아봅니다.
 author: tcNickolas
-ms.author: mamykhai@microsoft.com
+ms.author: mamykhai
 ms.date: 06/01/2020
 ms.topic: article
 uid: microsoft.quantum.guide.testingdebugging
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 2b5276da594ba263177d435c1153f6d96e29c4e8
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 2f2181d388a59c1c6c5a0f13c9aa49d5fa1e51ae
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867916"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833174"
 ---
 # <a name="testing-and-debugging"></a>테스트 및 디버깅
 
@@ -26,7 +26,7 @@ ms.locfileid: "87867916"
 클래식 프로그램을 테스트 하는 일반적인 방법 중 하나는 라이브러리에서 코드를 실행 하 고 출력을 예상 출력과 비교 하는 *단위 테스트*라는 작은 프로그램을 작성 하는 것입니다.
 예를 들어 `Square(2)` `4` $2 ^ 2 = $4 이라는 *apriori을* 알고 있으므로이 반환 되는지 확인할 수 있습니다.
 
-Q#는 퀀텀 프로그램에 대 한 단위 테스트 만들기를 지원 하 고 [Xunit](https://xunit.github.io/) 단위 테스트 프레임 워크 내에서 테스트로 실행 될 수 있습니다.
+Q# 는 퀀텀 프로그램에 대 한 단위 테스트 만들기를 지원 하 고 [Xunit](https://xunit.github.io/) 단위 테스트 프레임 워크 내에서 테스트로 실행 될 수 있습니다.
 
 ### <a name="creating-a-test-project"></a>테스트 프로젝트 만들기
 
@@ -177,7 +177,7 @@ operation AssertQubitsAreAvailable() : Unit
 ```
 
 여기에서 작업을 사용 하 여 <xref:microsoft.quantum.environment.getqubitsavailabletouse> 사용할 수 있는 값 비트 수를 반환 합니다.
-이는 프로그램의 전역 상태와 해당 실행 환경에 따라 달라 지므로의 정의 `AssertQubitsAreAvailable` 도 작업 이어야 합니다.
+이는 프로그램의 전역 상태와 해당 실행 환경에 따라 달라 지기 때문에의 정의 `AssertQubitsAreAvailable` 도 작업 이어야 합니다.
 그러나이 전역 상태를 사용 하 여 간단한 `Bool` 값을 함수에 대 한 입력으로 생성할 수 있습니다 `Fact` .
 
 이러한 아이디어를 기반으로 하 [는 Prelude는](xref:microsoft.quantum.libraries.standard.prelude)두 가지 특히 유용한 어설션을 제공 <xref:microsoft.quantum.diagnostics.assertmeasurement> 하며 <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> 둘 다 작업으로 모델링 `()` 됩니다. 이러한 어설션은 각각 특정 측정값을 설명 하는 Pauli 연산자, 측정을 수행 하는 퀀텀 레지스터 및 가상 결과를 사용 합니다.
@@ -333,7 +333,7 @@ namespace Samples {
 
 ### <a name="dumpregister"></a>DumpRegister
 
-<xref:microsoft.quantum.diagnostics.dumpregister>는 해당 하는 것과 <xref:microsoft.quantum.diagnostics.dumpmachine> 관련 된 정보만으로 정보량의 배열을 사용 한다는 점을 제외 하 고와 유사 하 게 작동 합니다.
+<xref:microsoft.quantum.diagnostics.dumpregister> 는 해당 하는 것과 <xref:microsoft.quantum.diagnostics.dumpmachine> 관련 된 정보만으로 정보량의 배열을 사용 한다는 점을 제외 하 고와 유사 하 게 작동 합니다.
 
 와 마찬가지로 <xref:microsoft.quantum.diagnostics.dumpmachine> 에서 생성 되는 정보는 <xref:microsoft.quantum.diagnostics.dumpregister> 대상 컴퓨터에 따라 다릅니다. 전체 상태 퀀텀 시뮬레이터에 대해 wave 함수를 파일에 기록 합니다 .이 함수는와 동일한 형식으로 제공 된 해당 하는 것으로 생성 된 퀀텀 하위 시스템의 전역 단계까지 파일에 기록 합니다 <xref:microsoft.quantum.diagnostics.dumpmachine> .  예를 들어 두 개의 기능을 할당 하 고 퀀텀 상태 $ $ \begin{align} \ket{\psi} = \frac {1} {\sqrt {2} } \ket {00} -\frac{(1 + i)} \ket =-e ^ {로 컴퓨터를 다시 사용 합니다. {2} {10} -i \ pi/4} ((\frac {1} {\sqrt {2} } \ket {0} -\frac{(1 + i)} {2} \ket {1} ) \frac \frac{-(1 + i)} {\sqrt {2} } \ket {0} ), \end{align} $ $ 호출은 <xref:microsoft.quantum.diagnostics.dumpregister> `qubit[0]` 다음 출력을 생성 합니다.
 
@@ -384,6 +384,6 @@ namespace app
 
 ## <a name="debugging"></a>디버깅
 
-`Assert`및 `Dump` 함수 및 작업을 기반으로 하는는 Q# 표준 Visual Studio 디버깅 기능의 하위 집합을 지원 합니다. [줄 중단점 설정](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints), F10 키를 [사용 하 여 코드 단계별](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger)실행 및 [클래식 변수의 값 검사](https://docs.microsoft.com/visualstudio/debugger/autos-and-locals-windows) 는 모두 시뮬레이터에서 코드를 실행 하는 동안 가능 합니다.
+`Assert`및 `Dump` 함수 및 작업을 기반으로 하는는 Q# 표준 Visual Studio 디버깅 기능의 하위 집합을 지원 합니다. [줄 중단점 설정](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints), F10 키를 [사용 하 여 코드 단계별](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger)실행 및 [클래식 변수의 값 검사](https://docs.microsoft.com/visualstudio/debugger/autos-and-locals-windows) 는 모두 시뮬레이터에서 코드를 실행할 때 가능 합니다.
 
 Visual Studio Code 디버깅은 c #에서 제공 하는 c # For Visual Studio Code 확장에서 제공 하는 디버깅 기능을 활용 하 고 [최신 버전](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)을 설치 해야 합니다. 

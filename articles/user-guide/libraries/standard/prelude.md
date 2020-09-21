@@ -2,19 +2,19 @@
 title: QDK의 내장 작업 및 함수
 description: 클래식 함수 및 단일 함수, 회전 및 측정 작업을 포함 하 여 QDK의 내장 작업 및 함수에 대해 알아봅니다.
 author: QuantumWriter
-ms.author: martinro@microsoft.com
+ms.author: martinro
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.libraries.standard.prelude
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 4eb10e82a64381c503703be440be90e60f3a8622
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: dd507d0c644ae711a5e5a1dff9156f571cb0fa92
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863736"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833542"
 ---
 # <a name="the-prelude"></a>Prelude #
 
@@ -240,7 +240,7 @@ return rs;
 
 ### <a name="math"></a>수식 ###
 
-<xref:microsoft.quantum.math>네임 스페이스는 .net 기본 클래스 라이브러리의 [ `System.Math` 클래스](https://docs.microsoft.com/dotnet/api/system.math?view=netframework-4.7.1)에서 많은 유용한 함수를 제공 합니다.
+<xref:microsoft.quantum.math>네임 스페이스는 .net 기본 클래스 라이브러리의 [ `System.Math` 클래스](https://docs.microsoft.com/dotnet/api/system.math?view=netframework-4.7.1&preserve-view=true)에서 많은 유용한 함수를 제공 합니다.
 이러한 함수는 다른 함수와 동일한 방식으로 사용할 수 있습니다 Q# .
 
 ```qsharp

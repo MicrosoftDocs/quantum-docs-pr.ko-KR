@@ -9,15 +9,15 @@ uid: microsoft.quantum.chemistry.examples.energyestimate
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: a2df4b829a3f4946c6de6e6b80ad72a5bc192b2c
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 05506f4099de754cd02d81fbd9200f2de091e37e
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869208"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759735"
 ---
 # <a name="obtaining-energy-level-estimates"></a>에너지 수준 추정치 얻기
-에너지 수준의 값을 예측 하는 것은 퀀텀 화학의 주요 응용 프로그램 중 하나입니다. 이 문서에서는 분자 hydrogen의 정식 예제에 대해이를 수행 하는 방법을 간략하게 설명 합니다. 이 섹션에서 참조 하는 샘플은 [`MolecularHydrogen`](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/MolecularHydrogen) 화학 샘플 리포지토리에 있습니다. 출력을 그리는 시각적 예제는 [`MolecularHydrogenGUI`](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/MolecularHydrogenGUI) 데모입니다.
+에너지 수준의 값을 예측 하는 것은 퀀텀 화학의 주요 응용 프로그램 중 하나입니다. 이 문서에서는 분자 hydrogen의 정식 예제에 대해이를 수행 하는 방법을 간략하게 설명 합니다. 이 섹션에서 참조 하는 샘플은 [`MolecularHydrogen`](https://github.com/microsoft/Quantum/tree/main/samples/chemistry/MolecularHydrogen) 화학 샘플 리포지토리에 있습니다. 출력을 그리는 시각적 예제는 [`MolecularHydrogenGUI`](https://github.com/microsoft/Quantum/tree/main/samples/chemistry/MolecularHydrogenGUI) 데모입니다.
 
 ## <a name="estimating-the-energy-values-of-molecular-hydrogen"></a>분자 hydrogen의 에너지 값 추정
 
@@ -65,7 +65,7 @@ Hamiltonian를 시뮬레이션 하려면 fermion 연산자를 연산자로 변�
     var qSharpData = QSharpFormat.Convert.ToQSharpFormat(qSharpHamiltonianData, qSharpWavefunctionData);
 ```
 
-그런 다음 `qSharpData` Hamiltonian를 나타내는을 함수에 전달 `TrotterStepOracle` 합니다. `TrotterStepOracle`Hamiltonian의 실시간 진화에 근사치를 주는 퀀텀 작업을 반환 합니다. 자세한 내용은 [Hamiltonian Dynamics 시뮬레이션](xref:microsoft.quantum.chemistry.concepts.simulationalgorithms)을 참조 하세요.
+그런 다음 `qSharpData` Hamiltonian를 나타내는을 함수에 전달 `TrotterStepOracle` 합니다. `TrotterStepOracle` Hamiltonian의 실시간 진화에 근사치를 주는 퀀텀 작업을 반환 합니다. 자세한 내용은 [Hamiltonian Dynamics 시뮬레이션](xref:microsoft.quantum.chemistry.concepts.simulationalgorithms)을 참조 하세요.
 
 ```qsharp
 // qSharpData passed from driver
@@ -156,5 +156,5 @@ using (var qsim = new QuantumSimulator())
 
 작업은 두 개의 매개 변수를 반환 합니다. 
 
-- `energyEst`는 그라운드 상태 에너지 추정치 이며 평균에 가까워야 합니다 `-1.137` . 
-- `phaseEst`단계 추정 알고리즘에서 반환 하는 원시 단계입니다. 이는 너무 커서 값으로 인해 발생 하는 별칭을 진단 하는 데 유용 `trotterStep` 합니다.
+- `energyEst` 는 그라운드 상태 에너지 추정치 이며 평균에 가까워야 합니다 `-1.137` . 
+- `phaseEst` 단계 추정 알고리즘에서 반환 하는 원시 단계입니다. 이는 너무 커서 값으로 인해 발생 하는 별칭을 진단 하는 데 유용 `trotterStep` 합니다.

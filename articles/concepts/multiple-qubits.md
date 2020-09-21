@@ -1,6 +1,6 @@
 ---
 제목: 여러 기능에 대 한 설명: 둘 이상의 이상에서 작업을 수행 하는 방법을 알아봅니다.
-만든이: QuantumWriter uid:: nawiebe@microsoft.com 12/11/2017: 밀리초. 토픽: 문서 번호-다음이 아닙니다.
+만든이: bradben uid: benbra: 12/11/2017 밀리초. 토픽: article no-.. s h a.
 - "Q#"
 - "$$v"
 - "$$"
@@ -97,7 +97,7 @@
 
 ## <a name="representing-two-qubits"></a>두 개의 비트를 나타내는
 1 ~ 2의 비트 상태 간의 주요 차이점은 두 번째 비트 상태는 2 차원이 아닌 4 차원 이라는 것입니다.
-이는 두 번째 비트 상태에 대 한 계산 기준이 한 수준 비트 상태의 텐서 products로 구성 되기 때문입니다.  예를 들어\begin{align}
+이는 두 번째 비트 상태에 대 한 계산 기준이 한 수준 비트 상태의 텐서 products로 구성 되기 때문입니다.  예를 들어 \begin{align}
 00 \equiv \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} \otimes \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} & = \begin{bmatrix} 1 \\\\ 0 0 0 \\\\ \\\\ \end{bmatrix} , \qquad 01 \equiv \begin{bmatrix} 1 \\\\ 0 0 \end{bmatrix} \otimes \begin{bmatrix} \\\\ 1 \end{bmatrix} = \begin{bmatrix} 0 \\\\ 1 \\\\ \\\\ \end{bmatrix} 0 0,\\\\
 10 \equiv \begin{bmatrix} 0 \\\\ 1 1 0 0 0 0 \end{bmatrix} \otimes \begin{bmatrix} \\\\ \end{bmatrix} & = \begin{bmatrix} \\\\ \\\\ 1 \\\\ \end{bmatrix} , \qquad 11 \equiv \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} \otimes \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} = \begin{bmatrix} 0 \\\\ \\\\ \\\\ \end{bmatrix} 0 0 1.
 \end{align}
@@ -122,7 +122,7 @@ $$
 
 $$\psi\otimes\phi = \begin{bmatrix} 1/ \sqrt { 2 } \\\\ 0 \\\\ 0 \\\\ 1/ \sqrt { 2 } \end{bmatrix} .$$ 
 
-단일 수준 비트 상태의 텐서 곱으로 작성할 수 없는 두 번째 비트 상태를 "entangled 상태" 라고 합니다. 두 개의이 두 비트는 [*entangled*](https://en.wikipedia.org/wiki/Quantum_entanglement)이라고 합니다.  느슨하게 말하면 퀀텀 상태를 단일 텐서의 곱으로 간주할 수 없기 때문에 상태가 보유 한 정보는 개별적 비트 중 하나로 제한 되지 않습니다.  대신이 정보는 두 상태 간의 상관 관계에서 로컬로 저장 되지 않습니다.  이러한 정보가 아닌 이러한 정보는 기존 컴퓨팅에 대 한 퀀텀 컴퓨팅의 주요 기능 중 하나 이며, [퀀텀 teleportation](https://github.com/microsoft/Quantum/tree/master/samples/getting-started/teleportation) 및 [퀀텀 오류 수정](xref:microsoft.quantum.libraries.error-correction)사항을 비롯 한 다양 한 퀀텀 프로토콜에 필수적입니다.
+단일 수준 비트 상태의 텐서 곱으로 작성할 수 없는 두 번째 비트 상태를 "entangled 상태" 라고 합니다. 두 개의이 두 비트는 [*entangled*](https://en.wikipedia.org/wiki/Quantum_entanglement)이라고 합니다.  느슨하게 말하면 퀀텀 상태를 단일 텐서의 곱으로 간주할 수 없기 때문에 상태가 보유 한 정보는 개별적 비트 중 하나로 제한 되지 않습니다.  대신이 정보는 두 상태 간의 상관 관계에서 로컬로 저장 되지 않습니다.  이러한 정보가 아닌 이러한 정보는 기존 컴퓨팅에 대 한 퀀텀 컴퓨팅의 주요 기능 중 하나 이며, [퀀텀 teleportation](https://github.com/microsoft/Quantum/tree/main/samples/getting-started/teleportation) 및 [퀀텀 오류 수정](xref:microsoft.quantum.libraries.error-correction)사항을 비롯 한 다양 한 퀀텀 프로토콜에 필수적입니다.
 
 ## <a name="measuring-two-qubit-states"></a>두 수준 비트 상태 측정 ##
 두 번째 비트 상태 측정은 단일 수준 비트 측정과 매우 유사 합니다. 상태 측정
@@ -137,9 +137,9 @@ $$
 확률은 00 $ $ $ | \alpha _ { } | ^ 2 $ , $ 01 $ 은 확률 01 ^ 2, 10은 확률 10 ^ 2, 10은 확률 11 ^ 2 인 00을 산출 합니다. $ | \alpha _ { } | $ $ $ $ | \alpha _ { } | $ $ $ $ | \alpha _ { } | $ 변수 $ \alpha _ { 00 } , \alpha _ { 01 } , \alpha _ { 10 } $ 및 $ 11은이 연결을 명확 하 게 하기 위해 의도적으로 이름이 지정 되었습니다 \alpha _ { } $ . 측정 후 결과가 00 인 경우 두 번째 $ $ 비트 시스템의 퀀텀 상태는 축소 되어 이제
 
 $$
-    00\equiv
+    00 \equiv
     \begin{bmatrix}
-        1(sp1)\\\\ 
+        1(sp1) \\\\ 
         0 \\\\ 
         0 \\\\ 
         0 \end{bmatrix} .
@@ -147,19 +147,19 @@ $$
 
 또한 두 번째 비트율의 퀀텀 상태를 한 번만 측정할 수 있습니다. 원하는 비트 중 하나만 측정 하는 경우 전체 상태가 계산 기준 상태로 축소 되지 않고 하나의 하위 시스템 으로만 축소 되므로 측정의 영향은 약간 다릅니다.  즉, 이러한 경우에는 하나의 요소를 측정 하는 경우에만 하위 시스템 중 하나만 축소할 수 있습니다.  
 
-이를 확인 하려면 $ $ 처음에 "0" 상태로 설정 된 두 개의 Hadamard transform H를 적용 하 여 형성 된 다음 상태의 첫 번째 비트를 측정 합니다.$$
+이를 확인 하려면 $ $ 처음에 "0" 상태로 설정 된 두 개의 Hadamard transform H를 적용 하 여 형성 된 다음 상태의 첫 번째 비트를 측정 합니다. $$
 H ^ { \otimes 2 } \left ( \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} \otimes \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} \right ) = \frac { 1 2 1 1 1 1 } { } \begin{bmatrix} & & & \\\\ & -1 1 & & -1 \\\\ 1 & & - & \\\\ & & & \end{bmatrix} \begin{bmatrix} \\\\ \\\\ \\\\ \end{bmatrix} = \frac { } { } \begin{bmatrix} \\\\ \\\\ \\\\ \end{bmatrix} \mapsto \begin{cases} \text { } = & \frac { } { \sqrt { } } \begin{bmatrix} \\\\ \\\\ \\\\ \end{bmatrix} \\\\ \text { } = & \frac { } { \sqrt { } } \begin{bmatrix} \\\\ \\\\ \\\\ \end{bmatrix} \\\\ \end{cases} 1-1 1-1-1-1-1-1-1-1-1-1-1 1 1 1 0 0 0 1 2 1 1 1  
 $$
 두 결과 모두 50% 발생 확률이 있습니다.  50% 확률에 대 한 결과는 초기 퀀텀 상태 벡터가 고정 임을 intuited 수 있습니다 $ $ $ $ . 첫 번째 비트의 0을 1로 바꾸면 됩니다.
 
-첫 번째 또는 두 번째 비트를 측정 하는 수학적 규칙은 간단 합니다.  E_k 수 있는 $ 경우 $ $ k ^ { \rm의 계산 기준 벡터를 사용 하 여 } $ $ $ $ $ $ $ 해당 값에 대해 값 1을 사용 하 $ $ 는 모든 e_k 집합을 사용할 수 있도록 합니다.  예를 들어 첫 번째 비트를 측정 하는 데 관심이 있는 경우 $ 는 $ $ e_1 \equiv 10 $ 및 $ e_3 \equiv 11 $ 로 구성 됩니다.  마찬가지로 두 번째는 $ $ $ e_2 \equiv 01 $ 및 $ e_3 \equiv 11 $ 로 구성 됩니다.  그런 다음 선택한의 비트를 1로 측정할 확률은 $ $ 상태 벡터에 대해입니다.$\psi$
+첫 번째 또는 두 번째 비트를 측정 하는 수학적 규칙은 간단 합니다.  E_k 수 있는 $ 경우 $ $ k ^ { \rm의 계산 기준 벡터를 사용 하 여 } $ $ $ $ $ $ $ 해당 값에 대해 값 1을 사용 하 $ $ 는 모든 e_k 집합을 사용할 수 있도록 합니다.  예를 들어 첫 번째 비트를 측정 하는 데 관심이 있는 경우 $ 는 $ $ e_1 \equiv 10 $ 및 $ e_3 \equiv 11 $ 로 구성 됩니다.  마찬가지로 두 번째는 $ $ $ e_2 \equiv 01 $ 및 $ e_3 \equiv 11 $ 로 구성 됩니다.  그런 다음 선택한의 비트를 1로 측정할 확률은 $ $ 상태 벡터에 대해입니다. $\psi$
 
 $$
 P ( \text { 결과 } = 1) = \sum _ { e_k \text { 집합 } S } \psi ^ \dagger e_k e_k ^에 \dagger \psi 있습니다.
 $$
 
 > [!NOTE]
->이 문서에서는 작은 endian 형식을 사용 하 여 계산 기준에 레이블을 지정 합니다. Little endian 형식에서 최하위 비트가 먼저 나옵니다. 예를 들어, 작은 endian 형식의 숫자 4는 비트 001의 문자열로 표시 됩니다.
+> 이 문서에서는 작은 endian 형식을 사용 하 여 계산 기준에 레이블을 지정 합니다. Little endian 형식에서 최하위 비트가 먼저 나옵니다. 예를 들어, 작은 endian 형식의 숫자 4는 비트 001의 문자열로 표시 됩니다.
 
 각의 비트 측정은 $ 0 또는 1만 생성할 수 있으므로 $ 0으로 $ $ 측정 되는 $ 확률 $ 은 단순히 $ 1-P ( \text { 결과 } = 1)입니다 $ .  이것은 측정의 확률에 대 한 수식을 명시적으로 제공 하는 이유입니다 $ $ .
 
@@ -198,37 +198,37 @@ intuition에 따라 다시 합니다.
 예를 들어 CNOT (제어 되지 않음) 게이트는 일반적으로 사용 되는 두 번째 비트 게이트 이며 다음과 같은 단일 행렬로 표시 됩니다.
 
 $$
-\operatorname{CNOT } = \begin{bmatrix} 1 \ 0 \ 0 \ 0 \\\\ 0 \ 1 \ 0 \ 0 \\\\ 0 \ 0 \ 0 \ 1 \\\\ 0 \ 0 \ 1 \ 0\end{bmatrix}
+\operatorname{CNOT } = \begin{bmatrix} 1 \ 0 \ 0 \ 0  \\\\  0 \ 1 \ 0 \ 0 \\\\  0 \ 0 \ 0 \ 1 \\\\  0 \ 0 \ 1 \ 0 \end{bmatrix}
 $$
 
 또한 두 가지 기능에 단일 고 비트 게이트를 적용 하 여 두 가지 비트 게이트를 형성할 수 있습니다. 예를 들어 게이트를 적용 하는 경우 
 
 $$
 \begin{bmatrix}
-a \ b \\\\ c \ d\end{bmatrix}
+a \ b \\\\ c \ d \end{bmatrix}
 $$
 
-and
+및
 
 $$\begin{bmatrix}
-e \ f \\\\ g \ h\end{bmatrix}
+e \ f \\\\ g \ h \end{bmatrix}
 $$
 
-첫 번째 및 두 번째 비트의 경우 각각 텐서 제품에서 제공 하는 두 번째 비트를 적용 하는 것과 같습니다.$$\begin{bmatrix}
-a \ b \\\\ c \ d\end{bmatrix}
+첫 번째 및 두 번째 비트의 경우 각각 텐서 제품에서 제공 하는 두 번째 비트를 적용 하는 것과 같습니다. $$\begin{bmatrix}
+a \ b \\\\ c \ d \end{bmatrix}
 \otimes 
 \begin{bmatrix}
-e \ f \\\\ g \ h\end{bmatrix}=
+e \ f \\\\ g \ h \end{bmatrix}=
     \begin{bmatrix}
-    ns\\\\\
-    ag \ ah \ bg \ bh\\\\
-    ce \ cf \ de \ df\\\\
+    ns\ \\\\
+    ag \ ah \ bg \ bh \\\\
+    ce \ cf \ de \ df \\\\
     cg \ ch \ dg \ dh \end{bmatrix} .$$
 따라서 몇 가지 알려진 단일 고 비트 게이트의 텐서 제품을 활용 하 여 두 가지 비트 게이트를 형성할 수 있습니다. 2 배 비트 게이트의 몇 가지 예에는 $ h \otimes h $ , $ x \otimes \boldone $ 및 $ x \otimes Z가 $ 있습니다.
 
 두 개의 단일 기능 비트 게이트가 텐서 제품을 가져와 두 번째 비트 게이트를 정의 하지만 반대의 경우는 그렇지 않습니다. 두 가지 모든 비트 게이트는 단일 고 비트 게이트의 텐서 곱으로 작성할 수 없습니다.  이러한 게이트를 *entangling* 게이트 라고 합니다. Entangling gate의 한 가지 예로 CNOT gate가 있습니다.
 
-제어 되지 않는 게이트 intuition 뒤에 있는 경우 임의 게이트로 일반화 될 수 있습니다.  일반적으로 제어 되는 게이트는 특정 비트 비트가 1 인 경우를 제외 하 고 id 역할을 하는 게이트 (작업 없음)입니다 $ $ .  이 경우 x $ $ $ \Lambda \_ (U)를 사용 하 여 $ 레이블이 지정 된 x에 대 한 제어 된 단일를 나타냅니다.  예를 들어 $ \Lambda _0 (u) e \_ { 1 } \otimes { \psi } = e 1 \_ { } \otimes U { \psi } $ 및 $ \Lambda \_ 0 (u) e \_ { 0 } \otimes { \psi } = e \_ { 0 } \otimes { \psi } $ $ \_ 입니다. 여기서 e 0 $ 과 $ e \_ 1 $ 은 값 $ 0 $ 및 1에 해당 하는 단일 값에 대 한 계산 기준 벡터입니다 $ $ .  예를 들어 다음과 같은 제어-Z 게이트를 고려 하 여 $ $ 이를 표현할 수 있습니다.$$
+제어 되지 않는 게이트 intuition 뒤에 있는 경우 임의 게이트로 일반화 될 수 있습니다.  일반적으로 제어 되는 게이트는 특정 비트 비트가 1 인 경우를 제외 하 고 id 역할을 하는 게이트 (작업 없음)입니다 $ $ .  이 경우 x $ $ $ \Lambda \_ (U)를 사용 하 여 $ 레이블이 지정 된 x에 대 한 제어 된 단일를 나타냅니다.  예를 들어 $ \Lambda _0 (u) e \_ { 1 } \otimes { \psi } = e 1 \_ { } \otimes U { \psi } $ 및 $ \Lambda \_ 0 (u) e \_ { 0 } \otimes { \psi } = e \_ { 0 } \otimes { \psi } $ $ \_ 입니다. 여기서 e 0 $ 과 $ e \_ 1 $ 은 값 $ 0 $ 및 1에 해당 하는 단일 값에 대 한 계산 기준 벡터입니다 $ $ .  예를 들어 다음과 같은 제어-Z 게이트를 고려 하 여 $ $ 이를 표현할 수 있습니다. $$
 \Lambda\_0 (Z) 1 0 0 0 0 0 0 0 0 0 = \begin{bmatrix} & 1 0 0 0 & & \\\\ & & & \\\\ & & & \\\\ & & & -1 \end{bmatrix} = ( \boldone \otimes h) \operatorname { cnot } ( \boldone \otimes h).
 $$
 
@@ -251,7 +251,7 @@ $$
 
 \begin{align}
 &(X \otimes \operatorname { cnot } _ { 12 } \otimes \boldone \otimes \boldone \otimes \boldone \otimes \boldone ) \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} \otimes \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} \otimes \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} \otimes \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} \otimes \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} \otimes \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} \otimes \begin{bmatrix} \\\\ 0 1\end{bmatrix}\\\\
-&\qquad\qquad\equiv0011001.\end{align}
+&\qquad\qquad\equiv 0011001. \end{align}
 
 많은 수의 시스템에서 퀀텀 컴퓨터의 임시 메모리 역할을 하는 원하는 비트를 할당 하 고 할당을 취소 해야 하는 경우가 많습니다.  이러한 비트를 ancilla 라고 합니다.  기본적으로이 경우에는 $ 할당 될 때 e_0로 초기화 되는 것으로 가정 합니다 $ .  할당 취소 전에 e_0 하기 위해 다시 반환 되는 것으로 가정 $ $ 합니다.  이 가정은 ancilla가 할당 취소 될 때 다른의 비트 레지스터를 사용 하 여 점점 증가 하 게 되 면 할당 취소 프로세스에서 ancilla을 손상 시키기 때문에 중요 합니다.  이러한 이유로 항상 이러한 비트를 출시 되기 전의 초기 상태로 되돌리는 것으로 가정 합니다.
 

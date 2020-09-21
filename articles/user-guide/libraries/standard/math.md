@@ -3,17 +3,17 @@ title: Q#표준 라이브러리의 수학
 description: Q#기본 제공 데이터 형식과 함께 사용 되는 표준 라이브러리의 기존 수학 함수에 대해 알아봅니다.
 author: cgranade
 uid: microsoft.quantum.libraries.math
-ms.author: chgranad@microsoft.com
+ms.author: chgranad
 ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 4a3747eaa2c91e482ded3af1279a0e40d922bfb3
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 55b1ef70eed1eb47ab0c6b30e2b8203c38c9a67a
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868426"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833594"
 ---
 # <a name="classical-mathematical-functions"></a>기존 수학 함수 #
 

@@ -9,12 +9,12 @@ uid: microsoft.quantum.libraries.machine-learning.design
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 60e694e9f7c2f01a6679ef960f5a7774c8bd6a62
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: c87a84654cda04f81115a83684f0e125d23a77bc
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868946"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759224"
 ---
 # <a name="design-your-own-classifier"></a>사용자 고유의 분류자 설계
 
@@ -30,7 +30,7 @@ ms.locfileid: "87868946"
 
 분류자를 빌드하기 위해 회로 모델에서 매개 변수가 있는 제어 되는 회전을 연결 하겠습니다. 이렇게 하려면 [`ControlledRotation`](xref:microsoft.quantum.machinelearning.controlledrotation) 퀀텀 Machine Learning 라이브러리에 정의 된 형식을 사용할 수 있습니다. 이 형식에는 대상의 인덱스, 컨트롤의 인덱스 배열, 회전 축 및 모델을 정의 하는 매개 변수 배열에 있는 연결 된 매개 변수의 인덱스를 결정 하는 네 개의 인수가 허용 됩니다.
 
-분류자의 예를 살펴보겠습니다. [절반 moons 샘플](https://github.com/microsoft/Quantum/tree/master/samples/machine-learning/half-moons)에서는 파일에 정의 된 다음 분류자를 찾을 수 있습니다 `Training.qs` .
+분류자의 예를 살펴보겠습니다. [절반 moons 샘플](https://github.com/microsoft/Quantum/tree/main/samples/machine-learning/half-moons)에서는 파일에 정의 된 다음 분류자를 찾을 수 있습니다 `Training.qs` .
 
 ```qsharp
     function ClassifierStructure() : ControlledRotation[] {

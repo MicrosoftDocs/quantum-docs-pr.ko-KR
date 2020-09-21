@@ -2,19 +2,19 @@
 title: Grover의 검색 알고리즘을 실행 하는 Q# 퀀텀 개발 키트
 description: Q#정식 퀀텀 알고리즘 중 하나인 Grover의 알고리즘을 보여 주는 프로젝트를 빌드합니다.
 author: cgranade
-ms.author: chgranad@microsoft.com
+ms.author: chgranad
 ms.date: 10/19/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.search
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: f2ae56bdca893e8a317c16d0a993da15b9f021b5
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: 86c6a651a117b788eb4c8fdd805ead7ab8f54dd7
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863114"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834808"
 ---
 # <a name="tutorial-implement-grovers-search-algorithm-in-q"></a>자습서: Q\#에서 Grover의 검색 알고리즘 구현
 
@@ -58,9 +58,9 @@ Grover의 알고리즘은 목록의 항목이 검색 중인 항목인지 여부�
 
 ### <a name="no-locq-applications-with-visual-studio-or-visual-studio-code"></a>Q# Visual Studio 또는 Visual Studio Code를 사용 하는 응용 프로그램
 
-실행 파일은 프로젝트 구성 및 명령줄 옵션에 따라 시뮬레이터 또는 리소스 예측 도구에서 `@EntryPoint()` 특성으로 표시된 작업 또는 함수를 실행합니다.
+이 프로그램은 `@EntryPoint()` 프로젝트 구성 및 명령줄 옵션에 따라 시뮬레이터 또는 리소스 평가기의 특성으로 표시 된 작업 또는 함수를 실행 합니다.
 
-Visual Studio에서 Ctrl + F5 키를 눌러 스크립트를 실행하기만 하면 됩니다.
+Visual Studio에서 Ctrl + F5 키를 눌러 스크립트를 실행 하기만 하면 됩니다.
 
 VS Code에서 터미널에 아래를 입력하여 `Program.qs`를 처음으로 빌드합니다.
 
@@ -89,7 +89,7 @@ operations.qs [options] [command]
 Commands:
 ```
 
-이는 사용할 큐비트 수를 지정하지 않았기 때문에 터미널에서 실행 파일에 사용할 수 있는 명령을 알려줍니다. 5개의 큐비트를 사용하려면 다음을 입력해야 합니다.
+이는 사용 하려는 원하는 수의 수를 지정 하지 않았기 때문입니다. 터미널에서 실행 프로그램에 사용할 수 있는 명령을 표시 합니다. 5 비트를 사용 하려면 다음을 입력 해야 합니다.
 
 ```Command line
 dotnet run --n-qubits 5
@@ -110,7 +110,7 @@ Reflecting about marked state...
 이 자습서를 만든 경우를 사용 하 여 Q# 사용자 고유의 퀀텀 응용 프로그램을 작성 하는 방법에 대 한 자세한 내용을 보려면 아래 리소스 중 일부를 확인 하세요.
 
 - [QDK 시작 가이드로 돌아가기](xref:microsoft.quantum.welcome)
-- 더 일반적인 Grover의 검색 알고리즘 [샘플](https://github.com/microsoft/Quantum/tree/master/samples/algorithms/database-search)을 사용해 보기
+- 더 일반적인 Grover의 검색 알고리즘 [샘플](https://github.com/microsoft/Quantum/tree/main/samples/algorithms/database-search)을 사용해 보기
 - [Quantum Katas에서 Grover 검색에 대해 자세히 알아보기](xref:microsoft.quantum.overview.katas)
 - Grover 검색 알고리즘의 기반이 되는 양자 컴퓨팅 기술인 [진폭 증폭][amplitude-amplification]에 대해 자세히 알아봅니다.
 - [양자 컴퓨팅 개념](xref:microsoft.quantum.concepts.intro)

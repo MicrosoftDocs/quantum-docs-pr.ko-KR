@@ -1,6 +1,6 @@
 ---
 제목: 퀀텀 oracles 설명: 다른 알고리즘에 대 한 입력으로 사용 되는 퀀텀 oracles 및 블랙 박스 작업을 사용 하 고 정의 하는 방법을 알아봅니다.
-작성자: cgranade uid: oracles. author: Christopher.Granade@microsoft.com ms. 날짜: 07/11/2018 밀리초. 토픽: 문서 번호:
+작성자: cgranade uid: oracles. author: chgranad: 07/11/2018 밀리초. 토픽: 문서 번호:
 - "Q#"
 - "$$v"
 - "$$"
@@ -148,9 +148,9 @@ $$
 Oracle 단계가 초기에 계산 기준 상태 x로 작동 하는 경우 $ \ket { } $ 이 단계는 글로벌 단계 이므로 관찰 가능 하지 않습니다.
 그러나 이러한 oracle은 superposition에 적용 되거나 제어 된 작업으로 적용 되는 경우 매우 강력한 리소스가 될 수 있습니다.
 예를 들어 $ $ 단일 기능 비트 함수 f의 oracle O_f 단계를 살펴보겠습니다 $ $ .
-다음$$
+다음 $$
 \begin{align}
-    O_f\ket{+}
+    O_f \ket{+}
         &=O_f ( \ket { 0 }  +  \ket { 1 } )/ \sqrt { 2 }\\\\
         &=((-1) ^ { f (0) } \ket { 0 } + (-1) ^ { f (1) } \ket { 1 } )/ \sqrt { 2 }\\\\
         &=(-1) ^ { f (0) } ( \ket { 0 } + (-1) ^ { f (1)-f (0) } \ket { 1 } )/ \sqrt { 2 }\\\\

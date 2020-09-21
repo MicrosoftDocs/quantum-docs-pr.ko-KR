@@ -1,20 +1,20 @@
 ---
 title: Hartree-Fock 이론
 description: 퀀텀 시스템의 초기 상태를 구성 하는 간단한 방법인 Hartree – Fock 이론에 대해 알아보세요.
-author: nathanwiebe2
-ms.author: nawiebe@microsoft.com
+author: bradben
+ms.author: v-benbra
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.hartreefock
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 2d5e597c36f7873dfd1e011e7ce7d4b01c0f786e
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 53d6e4342e5b58886528e89871591e57d8e70c82
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869547"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835352"
 ---
 # <a name="hartreefock-theory"></a>Hartree – Fock 이론
 
@@ -54,7 +54,7 @@ var wavefunctionInt = wavefunctionSpinOrbital.ToIndexing(IndexConvention.UpDown)
 Hartree – Fock 이론에 대 한 가장 인상적인 기능은 파괴 간에 되거나 얽 히 없는 퀀텀 상태를 생성 한다는 것입니다.
 즉, 분자 시스템의 속성에 대 한 적절 한 질적 설명을 제공 하는 경우가 많습니다. 
 
-Hartree-Fock 상태는 다음과 같이에서 다시 구성할 수도 있습니다 `FermionHamiltonian` .
+Hartree-Fock 상태는 다음과 같이에서 다시 구성할 수도 있습니다 `FermionHamiltonian`  .
 ```csharp
 // We initialize a fermion Hamiltonian.
 var fermionHamiltonian = new FermionHamiltonian();
