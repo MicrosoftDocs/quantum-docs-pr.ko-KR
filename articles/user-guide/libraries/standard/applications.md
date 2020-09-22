@@ -3,18 +3,18 @@ title: 표준 라이브러리의 응용 프로그램 Q#
 description: 퀀텀 컴퓨팅 (Hamiltonian 시뮬레이션 및 Shor의 검색 알고리즘)의 두 가지 기본 응용 프로그램에 대해 알아봅니다.
 author: QuantumWriter
 uid: microsoft.quantum.libraries.applications
-ms.author: martinro@microsoft.com
+ms.author: martinro
 ms.date: 12/11/2017
 ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: a3380627aa196a749dd9487ad603aad29f34ae29
-ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
+ms.openlocfilehash: 115cd65621afd8272887b36163b066a4e6a554d7
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90759931"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835658"
 ---
 # <a name="applications"></a>애플리케이션 #
 
