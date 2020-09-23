@@ -2,19 +2,19 @@
 title: 퀀텀 시뮬레이터 및 Q# 프로그램
 description: Q# 프로그램의 대상 컴퓨터로 사용할 수 있는 퀀텀 시뮬레이터에 대해 설명합니다.
 author: QuantumWriter
-ms.author: Alan.Geller@microsoft.com
+ms.author: v-benbra
 ms.date: 6/17/2020
 ms.topic: article
 uid: microsoft.quantum.machines
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 77401ca3642b89d708f338f852dc60bf7346b87b
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 6a2a4bb829301f9db9bd14f3240556a403b9a54f
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868307"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833430"
 ---
 # <a name="quantum-simulators"></a>퀀텀 시뮬레이터
 
@@ -31,7 +31,7 @@ ms.locfileid: "87868307"
 
 ### <a name="quantum-machine-classes"></a>양자 컴퓨터 클래스
 
-향후, QDK는 다른 유형의 시뮬레이션을 지원하고 퀀텀 하드웨어에서 실행할 수 있도록 지원하는 추가 양자 컴퓨터 클래스를 정의할 예정입니다. 기본 컴퓨터 구현을 변경하면서 알고리즘은 일정하게 유지하면 시뮬레이션에서 알고리즘을 쉽게 테스트하고 디버그한 다음, 알고리즘이 변경되지 않았다는 확신을 가지고 실제 하드웨어에서 실행할 수 있습니다.
+향후, QDK는 다른 유형의 시뮬레이션을 지원하고 퀀텀 하드웨어에서 실행할 수 있도록 지원하는 추가 퀀텀 머신 클래스를 정의할 예정입니다. 기본 컴퓨터 구현을 변경하면서 알고리즘은 일정하게 유지하면 시뮬레이션에서 알고리즘을 쉽게 테스트하고 디버그한 다음, 알고리즘이 변경되지 않았다는 확신을 가지고 실제 하드웨어에서 실행할 수 있습니다.
 
 QDK에는 `Microsoft.Quantum.Simulation.Simulators` 네임스페이스에 모두 정의된 여러 양자 컴퓨터 클래스가 있습니다.
 

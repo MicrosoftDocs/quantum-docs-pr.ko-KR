@@ -2,19 +2,19 @@
 title: Q# 사용자 가이드
 description: 사용자 가이드의 용도 및 내용 개요
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 4fae2949bdcab0c3735b40ef029d70bf7ea3fb9f
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: f0680e773c8233d6c4f1acb742b3cc38dbc069d5
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869633"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834757"
 ---
 # <a name="the-no-locq-user-guide"></a>Q# 사용자 가이드
 
@@ -46,7 +46,7 @@ Q# 사용자 가이드 시작!
 
 - [큐비트 작업](xref:microsoft.quantum.guide.qubits): 개별 큐비트 및 큐비트 시스템을 처리하는 데 사용되는 Q#의 기능, 특히 할당, 작업 수행 및 측정에 대해 설명합니다. 
 
-- [제어 흐름](xref:microsoft.quantum.guide.controlflow): Q#에서 사용 가능한 프로그래밍 제어 흐름 패턴에 대해 자세히 설명합니다. 여기에는 다양한 표준 기술(예: 조건부 실행, for 루프, while 루프)은 물론 퀀텀 관련 "Repeat-Until-Success"(성공할 때까지 반복) 패턴이 포함됩니다.
+- [제어 흐름](xref:microsoft.quantum.guide.controlflow): Q#에서 사용 가능한 프로그래밍 제어 흐름 패턴에 대해 자세히 설명합니다. 여기에는 다양한 표준 기술(예: 조건부 실행, *for* 루프, *while* 루프)은 물론 퀀텀 관련 *Repeat-Until-Success(성공할 때까지 반복)* 패턴이 포함됩니다.
 
 - [테스트 및 디버깅](xref:microsoft.quantum.guide.testingdebugging): 코드가 수행해야 하는 작업을 수행하도록 만드는 몇 가지 기술을 자세히 설명합니다. 
     양자 정보는 일반적으로 불투명하기 때문에 양자 프로그램을 디버깅하려면 특수 기술이 필요할 수 있습니다. 

@@ -2,19 +2,19 @@
 title: 퀀텀 추적 시뮬레이터 - Quantum Development Kit
 description: Microsoft 양자 컴퓨터 추적 시뮬레이터를 사용하여 클래식 코드를 디버그하고 Q# 프로그램의 리소스 요구 사항을 예측하는 방법을 알아봅니다.
 author: vadym-kl
-ms.author: vadym@microsoft.com
+ms.author: vadym
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.intro
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 5d5efef037ff236bd040dfd88e94f7f3dd331aef
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 54a1f63461cfcc8146f7dc4d18d321238d77454d
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868222"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833367"
 ---
 # <a name="microsoft-quantum-development-kit-qdk-quantum-trace-simulator"></a>Microsoft QDK(Quantum Development Kit) 퀀텀 추적 시뮬레이터
 
@@ -86,7 +86,7 @@ QDK에는 퀀텀 추적 시뮬레이터에서 프로그램의 버그를 검색�
 |-----| -----|
 |[고유 입력 검사기](xref:microsoft.quantum.machines.qc-trace-simulator.distinct-inputs) |공유된 큐비트와의 충돌 가능성이 있는지 검사 |
 |[무효화된 큐비트 사용 검사기](xref:microsoft.quantum.machines.qc-trace-simulator.invalidated-qubits)  |프로그램이 이미 릴리스된 큐비트에 작업을 적용하는지 검사 |
-|[기본 연산 카운터](xref:microsoft.quantum.machines.qc-trace-simulator.primitive-counter)  | 양자 프로그램에서 호출된 모든 작업에서 사용되는 기본 실행 수를 계산  |
+|[기본 연산 카운터](xref:microsoft.quantum.machines.qc-trace-simulator.primitive-counter)  | 퀀텀 프로그램에서 호출된 모든 작업에서 사용되는 기본 프로세스 수를 계산  |
 |[깊이 카운터](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter)  |양자 프로그램에서 호출된 모든 작업 깊이의 하한을 나타내는 개수를 수집   |
 |[너비 카운터](xref:microsoft.quantum.machines.qc-trace-simulator.width-counter)  |양자 프로그램에서 각 작업에 의해 할당되고 빌린 큐비트 수를 계산 |
 
