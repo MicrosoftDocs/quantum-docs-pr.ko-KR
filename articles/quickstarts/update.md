@@ -2,7 +2,7 @@
 title: QDK(Quantum Development Kit) 업데이트
 description: Q# 프로젝트와 Microsoft Quantum Development Kit를 현재 버전으로 업데이트하는 방법을 설명합니다.
 author: bradben
-ms.author: bradben
+ms.author: v-benbra
 ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
@@ -10,12 +10,12 @@ uid: microsoft.quantum.update
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 84782d1628dd100c0939b2b12aa0a9aa8ab2b80e
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: d9678a61f5fe4ca466b6a84e9e4b68321c5baee3
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863635"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834926"
 ---
 # <a name="update-the-microsoft-quantum-development-kit-qdk"></a>Microsoft QDK(Quantum Development Kit) 업데이트
 
@@ -41,7 +41,7 @@ Q# 작업을 호스트하는 데 C#과 Python 중 무엇을 사용하든, 다음
 
 ### <a name="update-no-locq-projects-in-visual-studio"></a>Visual Studio에서 Q# 프로젝트 업데이트
  
-1. 최신 버전의 Visual Studio 2019로 업데이트합니다. (자세한 내용은 [여기](https://docs.microsoft.com/visualstudio/install/update-visual-studio?view=vs-2019)를 참조하세요.)
+1. 최신 버전의 Visual Studio 2019로 업데이트합니다. (자세한 내용은 [여기](https://docs.microsoft.com/visualstudio/install/update-visual-studio)를 참조하세요.)
 2. Visual Studio에서 솔루션을 엽니다.
 3. 메뉴에서 **빌드** -> **솔루션 정리**를 선택합니다.
 4. 각 .csproj 파일에서 대상 프레임워크를 `netcoreapp3.1`(라이브러리 프로젝트인 경우 `netstandard2.1`)로 업데이트합니다.
