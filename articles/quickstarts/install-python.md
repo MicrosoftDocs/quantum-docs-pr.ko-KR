@@ -1,20 +1,21 @@
 ---
 title: Q# 및 Python을 사용하여 개발
+description: Python을 사용하여 Q# 애플리케이션을 만드는 방법을 알아봅니다.
 author: bradben
-ms.author: bradben
-ms.date: 5/30/2020
+ms.author: v-benbra
+ms.date: 8/20/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.python
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 01a5c31a7a920a69f4f90701d370f3a772d2c4d2
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: f6a2a7d1888cfe458fa3989a27d71fcdeed0f01f
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866743"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834162"
 ---
 # <a name="develop-with-no-locq-and-python"></a>Q# 및 Python을 사용하여 개발
 
@@ -55,7 +56,7 @@ QDK를 설치하여 Q# 작업을 호출하는 Python 호스트 프로그램을 �
     pip install qsharp
     ```
 
-1. IQ#를 설치합니다. Jupyter 및 Python에서 주로 사용되는 커널이며, Q# 작업을 컴파일하고 실행하는 핵심 기능을 제공합니다.
+1. IQ#을 설치합니다. Jupyter 및 Python에서 주로 사용되는 커널이며, Q# 작업을 컴파일하고 실행하는 핵심 기능을 제공합니다.
 
     ```dotnetcli
     dotnet tool install -g Microsoft.Quantum.IQSharp
@@ -116,4 +117,4 @@ VS Code를 사용하려면 다음을 수행합니다.
 
 ## <a name="next-steps"></a>다음 단계
 
-기본 설정 환경에 Quantum Development Kit를 설치했으므로, 이제 이 자습서를 따라 [첫 번째 퀀텀 프로그램](xref:microsoft.quantum.quickstarts.qrng)을 작성하여 실행할 수 있습니다.
+기본 설정 환경에서 Quantum Development Kit를 테스트했으므로, 이제 이 자습서를 따라 [첫 번째 양자 프로그램](xref:microsoft.quantum.quickstarts.qrng)을 작성하여 실행할 수 있습니다.

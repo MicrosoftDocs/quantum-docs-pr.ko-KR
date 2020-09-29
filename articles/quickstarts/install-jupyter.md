@@ -1,29 +1,27 @@
 ---
 title: Q# Jupyter Notebook을 사용하여 개발
+description: Jupyter Notebook을 사용하여 Q# 애플리케이션을 만드는 방법을 알아봅니다.
 author: bradben
-ms.author: bradben
-ms.date: 5/30/2020
+ms.author: v-benbra
+ms.date: 8/20/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.jupyter
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 10b1faafa70c87a99ea09916e2c386b32f9a570f
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 51de510907ea087d1f23d3ff65d268d6d455a493
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866811"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834315"
 ---
 # <a name="develop-with-no-locq-jupyter-notebooks"></a>Q# Jupyter Notebook을 사용하여 개발
 
 Q# Jupyter Notebook에서 Q# 작업을 개발하기 위해 QDK를 설치합니다.
 
-Jupyter Notebook을 사용하면 지침, 메모 및 기타 콘텐츠와 함께 내부 코드를 실행할 수 있습니다. 이 환경은 설명 또는 퀀텀 컴퓨팅 대화형 자습서가 포함된 Q# 코드를 작성하는 데 적합합니다. 사용자 고유의 Q# Notebook 만들기를 시작하려면 다음 작업을 수행해야 합니다.
-
-> [!NOTE]
-> * Q# Jupyter Notebook에서는 Q# 코드만 실행할 수 있고 외부 호스트 프로그램(예: Python 또는 C# 파일)에서 작업을 호출할 수는 없습니다. 외부 클래식 호스트 프로그램과 퀀텀 프로그램을 결합하는 것이 목표라면 이 환경은 적합하지 않습니다.
+Jupyter Notebook을 사용하면 지침, 메모 및 기타 콘텐츠와 함께 내부 코드를 컴퓨팅할 수 있습니다. 이 환경은 설명 또는 퀀텀 컴퓨팅 대화형 자습서가 포함된 Q# 코드를 작성하는 데 적합합니다. 사용자 고유의 Q# Notebook 만들기를 시작하려면 다음 작업을 수행해야 합니다.
 
 ## <a name="install-the-ino-locq-jupyter-kernel"></a>IQ# Jupyter 커널 설치
 
@@ -62,14 +60,14 @@ IQ#(i-q-sharp로 발음)는 Jupyter 및 Python에서 .NET Core SDK에 주로 사
     dotnet iqsharp install
     ```
 
-    > [!NOTE]
-    > `dotnet iqsharp install` 단계 중에 오류가 발생하면 새 터미널 창을 열고 다시 시도합니다.
-    > 그래도 해결되지 않으면 설치된 `dotnet-iqsharp` 도구(Windows의 경우 `dotnet-iqsharp.exe`)를 찾아서 실행합니다.
-    > ```
-    > /path/to/dotnet-iqsharp install --user --path-to-tool="/path/to/dotnet-iqsharp"
-    > ```
-    > 여기서 `/path/to/dotnet-iqsharp`은 파일 시스템에서 `dotnet-iqsharp` 도구의 절대 경로로 바꿔야 합니다.
-    > 일반적으로 사용자 프로필 폴더의 `.dotnet/tools`에 있습니다.
+> [!NOTE]
+> `dotnet iqsharp install` 단계 중에 오류가 발생하면 새 터미널 창을 열고 다시 시도합니다.
+> 그래도 해결되지 않으면 설치된 `dotnet-iqsharp` 도구(Windows의 경우 `dotnet-iqsharp.exe`)를 찾아서 실행합니다.
+> ```
+> /path/to/dotnet-iqsharp install --user --path-to-tool="/path/to/dotnet-iqsharp"
+> ```
+> 여기서 `/path/to/dotnet-iqsharp`은 파일 시스템에서 `dotnet-iqsharp` 도구의 절대 경로로 바꿔야 합니다.
+> 일반적으로 사용자 프로필 폴더의 `.dotnet/tools`에 있습니다.
     
 ***
 
@@ -87,7 +85,7 @@ IQ#(i-q-sharp로 발음)는 Jupyter 및 Python에서 .NET Core SDK에 주로 사
 
     - 사용하는 브라우저에서 Jupyter Notebook이 자동으로 열리지 않으면 명령줄에 제공된 URL을 복사하여 브라우저에 붙여넣습니다.
 
-1. "새로 만들기" → "Q#"을 선택하여 Q# 커널로 Jupyter Notebook을 만들고, 첫 번째 Notebook 셀에 다음 코드를 추가합니다.
+1. **새로 만들기 → Q#** 을 선택하여 Q# 커널로 Jupyter Notebook을 만들고, 첫 번째 Notebook 셀에 다음 코드를 추가합니다.
 
     :::code language="qsharp" source="~/quantum/samples/interoperability/qrng/Qrng.qs" range="6-13":::
 

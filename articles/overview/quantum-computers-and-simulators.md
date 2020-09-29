@@ -2,19 +2,19 @@
 title: 양자 컴퓨터 및 양자 시뮬레이터
 description: 양자 하드웨어, 양자 시뮬레이터 및 양자 연산의 작동 방식에 대해 알아봅니다.
 author: bradben
-ms.author: bradben
+ms.author: v-benbra
 ms.date: 5/5/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.simulators
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 299baea75865a4f0ece6b490cef3301dd2a672ac
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 8691838b2d6c54baa40042245eee8c901a7ca965
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867712"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835012"
 ---
 # <a name="quantum-computers-and-quantum-simulators"></a>양자 컴퓨터 및 양자 시뮬레이터
 
@@ -33,7 +33,7 @@ ms.locfileid: "87867712"
 
 ## <a name="quantum-simulators"></a>양자 시뮬레이터
 
-클래식 컴퓨터에서 실행되는 양자 시뮬레이터를 사용하면 양자 시스템에서 양자 알고리즘 실행을 시뮬레이션할 수 있습니다.  Microsoft의 QDK(Qualumer Development Kit)에는 특수한 다른 양자 시뮬레이터와 함께 전체 상태 벡터 시뮬레이터가 포함되어 있습니다.
+클래식 컴퓨터에서 실행되는 양자 시뮬레이터를 사용하면 양자 시스템에서 양자 알고리즘 컴퓨팅을 시뮬레이션할 수 있습니다.  Microsoft의 QDK(Qualumer Development Kit)에는 특수한 다른 양자 시뮬레이터와 함께 전체 상태 벡터 시뮬레이터가 포함되어 있습니다.
 
 ## <a name="topological-qubit"></a>위상 큐비트
 

@@ -2,23 +2,23 @@
 title: 양자 컴퓨팅 이해
 description: 양자 컴퓨터란 무엇이며, 양자 역학의 원리를 어떻게 사용할까요?
 author: bradben
-ms.author: bradben
+ms.author: v-benbra
 ms.date: 5/5/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.understanding
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 214fe809aaeba759005fa76ba3615f376d402bc9
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 332afb4ea7de01da5d8f22fee6517032ed4f9fc1
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866964"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834995"
 ---
 # <a name="understanding-quantum-computing"></a>양자 컴퓨팅 이해
 
-양자 컴퓨팅은 양자 역학의 원리를 사용하여 정보를 처리합니다. 이에 따라 양자 컴퓨팅은 클래식 컴퓨팅과 다른 접근 방식이 필요합니다.  이러한 차이점의 한 가지 예는 양자 컴퓨터에서 사용되는 프로세서입니다.  클래식 컴퓨터는 익숙한 실리콘 기반 칩을 사용하지만, 양자 컴퓨터는 원자, 이온, 광자 또는 전자와 같은 양자 물질을 사용합니다.  
+양자 컴퓨팅은 양자 역학의 원리를 사용하여 정보를 처리합니다. 이에 따라 양자 컴퓨팅은 클래식 컴퓨팅과 다른 접근 방식이 필요합니다. 이러한 차이점의 한 가지 예는 양자 컴퓨터에서 사용되는 프로세서입니다. 클래식 컴퓨터는 익숙한 실리콘 기반 칩을 사용하지만, 양자 컴퓨터는 원자, 이온, 광자 또는 전자와 같은 양자 시스템을 사용합니다. 양자 컴퓨터는 양자 속성을 사용하여 1과 0의 서로 다른 양자 중첩에서 준비할 수 있는 비트를 나타냅니다.  
 
 양자 물질은 확률 계산, 중첩 및 얽힘과 같은 개념을 활용하여 양자 역학의 법칙에 따라 작동합니다. 이러한 개념은 양자 컴퓨팅의 강력한 기능을 활용하여 복잡한 문제를 해결하는 양자 알고리즘의 기초를 제공합니다. 이 문서에서는 양자 컴퓨팅의 기반이 되는 양자 역학의 몇 가지 핵심 개념에 대해 설명합니다.
 

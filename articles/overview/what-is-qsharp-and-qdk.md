@@ -2,23 +2,23 @@
 title: Q# 프로그래밍 언어 및 QDK란?
 description: Microsoft Quantum Development Kit, Q# 프로그래밍 언어 및 퀀텀 프로그램을 만드는 방법에 대해 알아봅니다.
 author: bradben
-ms.author: bradben
+ms.author: v-benbra
 ms.date: 5/5/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.q-sharp
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 5db574b0380ffa1616cb3959d84925854df4e321
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: 21adfcc1c5321d87665adb39a3c838bbda0b8861
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863785"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834570"
 ---
 # <a name="what-are-the-no-locq-programming-language-and-qdk"></a>Q# 프로그래밍 언어 및 QDK란?
 
-Q#은 퀀텀 알고리즘을 개발하고 실행하기 위한 Microsoft의 오픈 소스 프로그래밍 언어입니다. 이는 [Q#Q# 라이브러리](xref:microsoft.quantum.libraries), [퀀텀 시뮬레이터](xref:microsoft.quantum.machines), [다른 프로그래밍 환경용 확장](xref:microsoft.quantum.install) 및 [API 설명서](xref:microsoft.quantum.standardlibsintro)가 포함된 QDK(Qualument Development Kit)의 일부입니다. QDK에는 표준 Q# 라이브러리 외에도 화학, Machine Learning 및 숫자 라이브러리가 포함되어 있습니다.
+Q#은 퀀텀 알고리즘을 개발하고 실행하기 위한 Microsoft의 오픈 소스 프로그래밍 언어입니다. 이는 [Q#Q# 라이브러리](xref:microsoft.quantum.libraries), [퀀텀 시뮬레이터](xref:microsoft.quantum.machines), [다른 프로그래밍 환경용 확장](xref:microsoft.quantum.install) 및 [API 설명서](xref:microsoft.quantum.apiref-intro)가 포함된 QDK(Qualument Development Kit)의 일부입니다. QDK에는 표준 Q# 라이브러리 외에도 화학, Machine Learning 및 숫자 라이브러리가 포함되어 있습니다.
 
 프로그래밍 언어인 Q#은 Python, C# 및 F#에서 친숙한 요소를 가져오고 반복, if/then 문 및 공통 데이터 형식을 사용하여 프로그램을 작성하는 기본 절차 모델을 지원합니다. 또한 새로운 양자 관련 데이터 구조 및 연산도 소개합니다.
 
@@ -54,7 +54,7 @@ Q# 프로그램은 독립 실행형 애플리케이션으로 컴파일하거나 
 
 시뮬레이터에서 Q# 코드를 격리하면 알고리즘이 양자 물리학 법칙을 따르고 양자 컴퓨터에서 올바르게 실행될 수 있습니다.
 
-![qsharp-code-flow](~/media/qsharp-code-flow.png)
+![Qsharp 코드 흐름](~/media/qsharp-code-flow.png)
 
 ## <a name="how-do-i-use-the-qdk"></a>QDK를 사용하려면 어떻게 할까요?
 
