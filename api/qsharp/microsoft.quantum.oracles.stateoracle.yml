@@ -19,9 +19,9 @@ remarks: >-
   첫 번째 매개 변수는 $ \ket f $의 고 비트 레지스터에 대 한 인덱스입니다 {0} \_ . 두 번째 매개 변수는 두 레지스터를 모두 갖습니다.
 syntax: newtype StateOracle = ((Int, Qubit[]) => Unit is Adj + Ctl);
 metadata:
-  ms.openlocfilehash: 1a303e51638a792fb31ee7cca58bd3662d86897b
-  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
+  ms.openlocfilehash: 3c1dd8076ef6004098d5f82cc4a0f0462855a233
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 09/02/2020
-  ms.locfileid: "89331758"
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91491965"
