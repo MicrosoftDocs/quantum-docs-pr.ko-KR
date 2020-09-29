@@ -70,9 +70,9 @@ typeParameters:
 - uid: "'T"
   summary: 각 시간 단계가 작동 해야 하는 형식입니다. 일반적으로 `Qubit[]` 또는 `Qubit` 입니다.
 metadata:
-  ms.openlocfilehash: e3febe45478ca86a36844d6af75884872cb12680
-  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
+  ms.openlocfilehash: 435d63b6b5e8e36d240b964e14368a89e86cb4a6
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 09/02/2020
-  ms.locfileid: "89356544"
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91471731"
