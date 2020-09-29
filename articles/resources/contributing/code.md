@@ -9,12 +9,12 @@ uid: microsoft.quantum.contributing.code
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: b27d084bbe2cda878efa6250c52c0ae628637850
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 7a258a915a807b8e1ee7c2c9c062017d90f6a454
+ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834893"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91489768"
 ---
 # <a name="contributing-code"></a>코드 기여
 
@@ -82,6 +82,10 @@ operation TestApplyWith() : Unit {
 
 ### Citations and References ### -->
 
+## <a name="pull-requests"></a>끌어오기 요청
+
+작업에 기여할 준비가 되 면 GitHub를 통해 해당 리포지토리로 끌어오기 요청을 보내 주세요.
+팀에서 피드백을 검토 하 고 제공 합니다. 모든 주석을 응답 하 고 해결 해야 하며 코드를 분기에 병합 하기 전에 모든 검사를 통과 해야 `main` 합니다.
 
 ## <a name="when-well-reject-a-pull-request"></a>끌어오기 요청을 거부 하는 경우
 
