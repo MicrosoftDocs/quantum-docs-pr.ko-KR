@@ -9,12 +9,12 @@ uid: microsoft.quantum.write-program
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 6fd7494d341a83a1354d23a283d21a7ae535e49f
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: ac9c060c157ba5ee3bc66852c42298ac8adcb3b3
+ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834026"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91492339"
 ---
 # <a name="tutorial-explore-entanglement-with-q"></a>자습서: Q\#을 사용한 얽힘 살펴보기
 
@@ -32,7 +32,7 @@ ms.locfileid: "90834026"
 
 QDK를 설치 하지 않고도 설명을 따라 수행 하 고, Q# 프로그래밍 언어의 개요와 퀀텀 컴퓨팅의 첫 번째 개념을 검토할 수도 있습니다.
 
-## <a name="in-this-tutorial-youll-learn-how-to"></a>이 자습서에서 학습할 방법은 다음과 같습니다.
+## <a name="in-this-tutorial-youll-learn-how-to"></a>이 자습서에서는 다음과 같은 작업을 수행하는 방법을 알아봅니다.
 
 > [!div class="checklist"]
 > * Q에서 작업 만들기 및 결합\#
@@ -83,7 +83,7 @@ Microsoft의 목표는 특정 퀀텀 상태에서 두 개의 작업을 준비 �
 
 ### <a name="initialize-qubit-using-measurement"></a>측정을 사용 하 여 비트를 초기화 합니다.
 
-아래의 첫 번째 코드에서는에서 원하는 비트를 사용 하는 방법을 보여 줍니다 Q# .  여기서는 두 가지 작업을 소개 하 고,이를 통해 [`M`](xref:microsoft.quantum.intrinsic.m) [`X`](xref:microsoft.quantum.intrinsic.x) 원하는 비트의 상태를 변환 합니다. 이 코드 조각에서 `SetQubitState` 연산은 큐비트를 매개 변수로 사용하고 또 다른 매개 변수 `desired`를 사용하여 우리가 원하는 큐비트 상태를 나타내는 것으로 정의됩니다.  `SetQubitState` 연산은 `M` 연산을 사용하여 큐비트를 측정합니다.  에서 Q# ,의 비트 측정은 항상 또는를 반환 합니다 `Zero` `One` .  측정값이 원하는 값과 일치 하지 않는 값을 반환 하는 경우에는 해당 값을 `SetQubitState` "대칭 이동" 합니다. 즉, `X` 작업을 실행 합니다 .이 작업은이를 반환 하는 측정값의 확률을 반환 하는 새 상태로의 값을 변경 하는 작업을 실행 `Zero` `One` 합니다. 이러한 방식으로 `SetQubitState` 는 항상 대상의를 원하는 상태로 설정 합니다.
+아래의 첫 번째 코드 조각에서는에서 원하는 비트를 사용 하는 방법을 보여 줍니다 Q# .  여기서는 두 가지 작업을 소개 하 고,이를 통해 [`M`](xref:microsoft.quantum.intrinsic.m) [`X`](xref:microsoft.quantum.intrinsic.x) 원하는 비트의 상태를 변환 합니다. 이 코드 조각에서 `SetQubitState` 연산은 큐비트를 매개 변수로 사용하고 또 다른 매개 변수 `desired`를 사용하여 우리가 원하는 큐비트 상태를 나타내는 것으로 정의됩니다.  `SetQubitState` 연산은 `M` 연산을 사용하여 큐비트를 측정합니다.  에서 Q# ,의 비트 측정은 항상 또는를 반환 합니다 `Zero` `One` .  측정값이 원하는 값과 일치 하지 않는 값을 반환 하는 경우에는 해당 값을 `SetQubitState` "대칭 이동" 합니다. 즉, `X` 작업을 실행 합니다 .이 작업은이를 반환 하는 측정값의 확률을 반환 하는 새 상태로의 값을 변경 하는 작업을 실행 `Zero` `One` 합니다. 이러한 방식으로 `SetQubitState` 는 항상 대상의를 원하는 상태로 설정 합니다.
 
 의 내용을 `Program.qs` 다음 코드로 바꿉니다.
 
@@ -112,7 +112,7 @@ Q#작업은 퀀텀 서브루틴입니다. 즉, 다른 퀀텀 작업에 대 한 �
 
 연산에 대한 인수는 괄호로 묶인 튜플로 지정됩니다.
 
-연산의 반환 형식은 콜론 뒤에 지정됩니다. 이 경우 `SetQubitState` 연산에는 반환이 없으므로 `Unit`를 반환하는 것으로 표시됩니다. 이는 c #의와 거의 유사한 F #의에 해당 하는 것입니다 .이는 Q# `unit` `void` 형식 힌트로 표현 되는 Python의 빈 튜플입니다 `()` `Tuple[()]` .
+연산의 반환 형식은 콜론 뒤에 지정됩니다. 이 경우 `SetQubitState` 작업은 반환 형식을 포함 하지 않으므로 반환 되는 것으로 표시 됩니다 `Unit` . 이는 c #의와 거의 유사한 F #의에 해당 하는 것입니다 .이는 Q# `unit` `void` 형식 힌트로 표현 되는 Python의 빈 튜플입니다 `()` `Tuple[()]` .
 
 첫 번째 작업에서 두 개의 퀀텀 작업을 사용 했습니다 Q# .
 
@@ -159,7 +159,7 @@ Q#작업은 퀀텀 서브루틴입니다. 즉, 다른 퀀텀 작업에 대 한 �
 
 기본적으로의 변수 Q# 는 변경할 수 없으며, 바인딩된 후에는 해당 값이 변경 되지 않을 수 있습니다. `let` 키워드는 변경할 수 없는 변수의 바인딩을 나타내는 데 사용됩니다. 연산 인수는 항상 변경할 수 없습니다.
 
-예제의 `numOnes`와 같이 값이 변경될 수 있는 변수가 필요한 경우 `mutable` 키워드를 사용하여 해당 변수를 선언할 수 있습니다. 변경할 수 있는 변수의 값은 `setQubitState` 문을 사용하여 변경할 수 있습니다.
+예제의 `numOnes`와 같이 값이 변경될 수 있는 변수가 필요한 경우 `mutable` 키워드를 사용하여 해당 변수를 선언할 수 있습니다. 변경할 수 있는 변수의 값은 `set` 문을 사용하여 변경할 수 있습니다.
 
 두 경우 모두에서 변수 형식은 컴파일러를 통해 유추됩니다. Q# 변수에는 형식 주석이 필요 하지 않습니다.
 
@@ -169,7 +169,7 @@ Q#작업은 퀀텀 서브루틴입니다. 즉, 다른 퀀텀 작업에 대 한 �
 
 ## <a name="run-the-code-from-the-command-prompt"></a>명령 프롬프트에서 코드를 실행 합니다.
 
-코드를 실행 하기 위해 명령을 제공할 때 실행할 수 *있는* 컴파일러를 지정 해야 합니다 `dotnet run` . 이 Q# 작업은 호출 가능한 바로 앞에를 사용 하 여 줄을 추가 하 여 파일을 간단히 변경 하는 방식으로 수행 됩니다 `@EntryPoint()` `TestBellState` .이 경우에는 작업을 수행 합니다. 전체 코드는 다음과 같아야 합니다.
+코드를 실행 하기 위해 명령을 제공할 때 실행할 수 있는 호출할 수 *있는* 컴파일러에 지시 해야 합니다 `dotnet run` . 이 Q# 작업은 호출 가능한 바로 앞에를 사용 하 여 줄을 추가 하 여 파일을 간단히 변경 하는 방식으로 수행 됩니다 `@EntryPoint()` `TestBellState` .이 경우에는 작업을 수행 합니다. 전체 코드는 다음과 같아야 합니다.
 
 ```qsharp
 namespace Bell {
@@ -237,7 +237,7 @@ Test results (# of 0s, # of 1s):
 
 ### <a name="x-flips-qubit-state"></a>`X` 가는 비트 상태를 대칭 이동 합니다.
 
-먼저 큐비트를 전환하겠습니다(큐비트가 `Zero` 상태이면 `One` 상태로 전환하고 그 반대의 경우도 마찬가지). 이 작업은 `X` 연산을 수행한 후 `TestBellState`에서 측정하는 순서로 진행됩니다.
+먼저,이를 전환 하려고 합니다. 여기서는 해당 하는 비트를 전환 하려고 `Zero` `One` 합니다. 이 작업은 `X` 연산을 수행한 후 `TestBellState`에서 측정하는 순서로 진행됩니다.
 
 ```qsharp
 X(qubit);

@@ -9,12 +9,12 @@ uid: microsoft.quantum.relnotes
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 5036b4d401bb775a7fee2252ca26e7725bc19004
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 28e880445bf61150d7940730009a5482298adae2
+ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834145"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91492356"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit 릴리스 정보
 
@@ -23,6 +23,24 @@ ms.locfileid: "90834145"
 설치 지침은[설치 가이드](xref:microsoft.quantum.install)를 참조하세요.
 
 업데이트 지침은 [업데이트 가이드](xref:microsoft.quantum.update)를 참조하세요.
+
+## <a name="version-01220092803"></a>버전 0.12.20092803
+
+*릴리스 날짜: 9 월 29 일, 2020*
+
+이 릴리스에는 다음이 포함됩니다.
+
+- 다른 프런트 엔드 및 백 엔드에 대 한 공통 형식으로 제공 되는 [QIR (퀀텀 중간 표현)](https://github.com/microsoft/qsharp-language/tree/main/Specifications/QIR#quantum-intermediate-representation-qir) 의 알림 및 초안 사양입니다. QIR의 [블로그 게시물](https://devblogs.microsoft.com/qsharp/introducing-quantum-intermediate-representation-qir) 도 참조 하세요.
+- 전체 [ Q# 설명서](https://github.com/microsoft/qsharp-language/tree/main/Specifications/Language#q-language)를 포함 하는 새로운 [ Q# 언어 리포지토리](https://github.com/microsoft/qsharp-language) 를 시작 합니다.
+- 많은 수의 QuantumSimulator를 포함 하는 프로그램에 대 한 성능 향상: 게이트 fusion 결정에 대 한 향상 된 응용 프로그램 Linux 시스템의 병렬 처리 향상 게이트 실행의 지능형 일정 추가 버그 수정.
+- 이제 Visual Studio에서 파일에 대해 IntelliSense 기능이 지원 되며 Q# 프로젝트 파일이 없어도 Visual Studio Code.
+- Q#NumPy 데이터 형식에 대 한 지원 향상을 포함 하 여 다양 한/Python 상호 운용성 향상 및 버그 수정
+- Microsoft 양자 네임 스페이스의 향상 된 기능 ( [microsoft/QuantumLibraries # 313](https://github.com/microsoft/QuantumLibraries/issues/313)참조).
+- 두 개의 기능을 사용 하는 새 [반복-성공 예제가](https://github.com/microsoft/Quantum/tree/main/samples/algorithms/repeat-until-success) 추가 되었습니다.
+
+마지막 릴리스 이후에는 각 오픈 소스 리포지토리의 기본 분기가로 이름이 변경 되었습니다 `main` .
+
+[라이브러리](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+closed%3A2020-08-24..2020-09-24), [컴파일러](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+closed%3A2020-08-24..2020-09-24), [런타임](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+closed%3A2020-08-24..2020-09-24), [샘플](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+closed%3A2020-08-24..2020-09-24), [I Q# ](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+closed%3A2020-08-24..2020-09-24) 및 [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+closed%3A2020-08-24..2020-09-24)에 대 한 폐쇄형 pr의 전체 목록을 참조 하세요.
 
 ## <a name="version-01220082513"></a>버전 0.12.20082513
 
