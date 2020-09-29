@@ -1,0 +1,56 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.zipped
+name: Zipped
+type: function
+namespace: microsoft.quantum.arrays
+summary: 두 배열이 지정 된 경우 각 쌍은 각 원래 배열의 요소를 포함 하도록 쌍의 새 배열을 반환 합니다.
+examples: >-
+  ```qsharp
+
+  let left = [1, 3, 71];
+
+  let right = [false, true];
+
+  let pairs = Zipped(left, right); // [(1, false), (3, true)]
+
+  ```
+syntax: "function Zipped (left : 'T[], right : 'U[]) : ('T, 'U)[]"
+input:
+  content: "(left : 'T[], right : 'U[])"
+  types:
+  - name: left
+    summary: 각 튜플의 첫 번째 요소에 대 한 값을 포함 하는 배열입니다.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+  - name: right
+    summary: 각 튜플의 두 번째 요소에 대 한 값을 포함 하는 배열입니다.
+    isArray: true
+    uid: "'U"
+    isLocal: true
+output:
+  content: ('T, 'U)[]
+  types:
+  - summary: 각에 대 한 폼의 쌍을 포함 하는 배열 `(left[idx], right[idx])` `idx` 입니다. 두 배열의 길이가 같지 않은 경우에는 입력 중 짧은 값 만큼 출력 됩니다.
+    isArray: true
+    types:
+    - uid: "'T"
+      isLocal: true
+    - uid: "'U"
+      isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: 왼쪽 배열 요소의 형식입니다.
+- uid: "'U"
+  summary: 오른쪽 배열 요소의 형식입니다.
+seeAlso:
+- microsoft.quantum.arrays.zipped3
+- microsoft.quantum.arrays.zipped4
+- microsoft.quantum.arrays.unzipped
+metadata:
+  ms.openlocfilehash: 933bf0d7f80436f0e942f84ad89b05ccd5c91620
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+  ms.translationtype: MT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91494051"

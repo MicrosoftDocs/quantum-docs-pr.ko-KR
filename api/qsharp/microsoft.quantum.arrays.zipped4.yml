@@ -1,0 +1,63 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.zipped4
+name: Zipped4
+type: function
+namespace: microsoft.quantum.arrays
+summary: 4 개의 배열이 지정 된 경우 각 4 튜플은 각 원래 배열의 요소를 포함 하도록 4 튜플의 새 배열을 반환 합니다.
+syntax: "function Zipped4 (first : 'T1[], second : 'T2[], third : 'T3[], fourth : 'T4[]) : ('T1, 'T2, 'T3, 'T4)[]"
+input:
+  content: "(first : 'T1[], second : 'T2[], third : 'T3[], fourth : 'T4[])"
+  types:
+  - name: first
+    summary: 각 튜플의 첫 번째 요소에 대 한 값을 포함 하는 배열입니다.
+    isArray: true
+    uid: "'T1"
+    isLocal: true
+  - name: second
+    summary: 각 튜플의 두 번째 요소에 대 한 값을 포함 하는 배열입니다.
+    isArray: true
+    uid: "'T2"
+    isLocal: true
+  - name: third
+    summary: 각 튜플의 세 번째 요소에 대 한 값을 포함 하는 배열입니다.
+    isArray: true
+    uid: "'T3"
+    isLocal: true
+  - name: fourth
+    summary: 각 튜플의 네 번째 요소에 대 한 값을 포함 하는 배열입니다.
+    isArray: true
+    uid: "'T4"
+    isLocal: true
+output:
+  content: ('T1, 'T2, 'T3, 'T4)[]
+  types:
+  - summary: 각에 대 한 형식의 4 개 튜플을 포함 하는 배열 `(first[idx], second[idx], third[idx], fourth[idx])` `idx` 입니다. 네 배열의 길이가 같지 않은 경우 출력은 입력 중 짧은 값 만큼 길어야 합니다.
+    isArray: true
+    types:
+    - uid: "'T1"
+      isLocal: true
+    - uid: "'T2"
+      isLocal: true
+    - uid: "'T3"
+      isLocal: true
+    - uid: "'T4"
+      isLocal: true
+typeParameters:
+- uid: "'T1"
+  summary: 첫 번째 배열 요소의 형식입니다.
+- uid: "'T2"
+  summary: 두 번째 배열 요소의 형식입니다.
+- uid: "'T3"
+  summary: 세 번째 배열 요소의 형식입니다.
+- uid: "'T4"
+  summary: 네 번째 배열 요소의 형식입니다.
+seeAlso:
+- microsoft.quantum.arrays.zipped
+- microsoft.quantum.arrays.zipped3
+metadata:
+  ms.openlocfilehash: 12c6501fd173798718b2ab14d14d93b5d53361b6
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+  ms.translationtype: MT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91494039"

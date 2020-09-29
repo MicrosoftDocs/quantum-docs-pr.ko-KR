@@ -1,0 +1,66 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.unique
+name: Unique
+type: function
+namespace: microsoft.quantum.arrays
+summary: >-
+  인접 한 요소가 없는 새 배열을 반환 합니다.
+
+
+  일부 요소 배열 및 테스트 같음을 지정 하는 경우이 함수는 요소의 상대 순서가 유지 되는 새 배열을 반환 하지만 동일한 모든 인접 요소가 단일 요소로만 필터링 됩니다.
+remarks: 동일 하지만 서로 다른 여러 요소가 있는 경우 출력 배열에 여러 요소가 발생 합니다.  과 함께이 함수 `Sorted` 를 사용 하 여 전체 고유 요소가 포함 된 배열을 가져옵니다.
+examples: >-
+  ```Q#
+
+  let unique1 = Unique(EqualI, [1, 1, 3, 3, 2, 5, 5, 5, 7]);
+
+  // same as [1, 3, 2, 5, 7]
+
+  let unique2 = Unique(EqualI, [2, 2, 1, 1, 2, 2, 1, 1]);
+
+  // same as [2, 1, 2, 1];
+
+  let unique3 = Unique(EqualI, Sorted(LessThanOrEqualI, [2, 2, 1, 1, 2, 2, 1, 1]));
+
+  // same as [1, 2];
+
+  ```
+syntax: "function Unique (equal : (('T, 'T) -> Bool), array : 'T[]) : 'T[]"
+input:
+  content: "(equal : (('T, 'T) -> Bool), array : 'T[])"
+  types:
+  - name: equal
+    summary: '`a`가 인 경우와 동일한 것으로 간주 되는 두 요소를 비교 하는 함수입니다 `b` `equal(a, b)` `true` .'
+    isFunction: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Bool
+  - name: array
+    summary: 고유 요소에 대해 필터링 할 배열입니다.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: "'T[]"
+  types:
+  - summary: 인접 한 요소가 없는 배열입니다.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: 에 있는 각 요소의 형식입니다 `array` .
+metadata:
+  ms.openlocfilehash: a47f41ce4298035bd2ccf23dfd26491349f946f7
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+  ms.translationtype: MT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91494087"

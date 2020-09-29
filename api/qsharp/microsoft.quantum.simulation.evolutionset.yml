@@ -10,9 +10,9 @@ summary: >-
   집합의 요소는로 인덱싱됩니다.  <xref:microsoft.quantum.simulation.generatorindex> 각 집합은에 대 한 함수에서로 설명 됩니다 .이 함수는 `GeneratorIndex` 시간을  <xref:microsoft.quantum.simulation.evolutionunitary> 나타내는 실수에 의해 매개 변수화 된 작업입니다.
 syntax: newtype EvolutionSet = (Microsoft.Quantum.Simulation.GeneratorIndex -> Microsoft.Quantum.Simulation.EvolutionUnitary);
 metadata:
-  ms.openlocfilehash: 747986d1374a343827373ef85ac66720ca3c74b6
-  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
+  ms.openlocfilehash: 1e6072404b51a745b1c884f40cbd99bcbea0b212
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 09/02/2020
-  ms.locfileid: "89343199"
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91485162"
