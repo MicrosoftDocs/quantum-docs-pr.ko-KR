@@ -387,6 +387,22 @@ operations:
     레지스터의 처음 두 비트에 작업을 적용 합니다.
 
     한정자는 `CA` 작업을 제어 하 고 adjointable 나타냅니다.
+- uid: microsoft.quantum.canon.applytohead
+  summary: 배열의 첫 번째 요소에 작업을 적용 합니다.
+- uid: microsoft.quantum.canon.applytoheada
+  summary: 배열의 첫 번째 요소에 작업을 적용 합니다.
+- uid: microsoft.quantum.canon.applytoheadc
+  summary: 배열의 첫 번째 요소에 작업을 적용 합니다.
+- uid: microsoft.quantum.canon.applytoheadca
+  summary: 배열의 첫 번째 요소에 작업을 적용 합니다.
+- uid: microsoft.quantum.canon.applytomost
+  summary: 배열의 마지막 요소를 제외한 모든 요소에 작업을 적용 합니다.
+- uid: microsoft.quantum.canon.applytomosta
+  summary: 배열의 마지막 요소를 제외한 모든 요소에 작업을 적용 합니다.
+- uid: microsoft.quantum.canon.applytomostc
+  summary: 배열의 마지막 요소를 제외한 모든 요소에 작업을 적용 합니다.
+- uid: microsoft.quantum.canon.applytomostca
+  summary: 배열의 마지막 요소를 제외한 모든 요소에 작업을 적용 합니다.
 - uid: microsoft.quantum.canon.applytopartition
   summary: 지정 된 레지스터 파티션에 작업 쌍을 두 부분으로 적용 합니다.
 - uid: microsoft.quantum.canon.applytopartitiona
@@ -404,6 +420,14 @@ operations:
     지정 된 레지스터 파티션에 작업 쌍을 두 부분으로 적용 합니다.
 
     한정자는 `CA` 작업을 제어 하 고 adjointable 나타냅니다.
+- uid: microsoft.quantum.canon.applytorest
+  summary: 배열의 첫 번째 요소를 제외한 모든 요소에 작업을 적용 합니다.
+- uid: microsoft.quantum.canon.applytoresta
+  summary: 배열의 첫 번째 요소를 제외한 모든 요소에 작업을 적용 합니다.
+- uid: microsoft.quantum.canon.applytorestc
+  summary: 배열의 첫 번째 요소를 제외한 모든 요소에 작업을 적용 합니다.
+- uid: microsoft.quantum.canon.applytorestca
+  summary: 배열의 첫 번째 요소를 제외한 모든 요소에 작업을 적용 합니다.
 - uid: microsoft.quantum.canon.applytosubregister
   summary: 인스턴스의 하위 레지스터에 작업을 적용 합니다. 여기서는 해당 인덱스의 배열에 지정 된 것과 같은 작업을 수행 합니다.
 - uid: microsoft.quantum.canon.applytosubregistera
@@ -421,6 +445,14 @@ operations:
     인스턴스의 하위 레지스터에 작업을 적용 합니다. 여기서는 해당 인덱스의 배열에 지정 된 것과 같은 작업을 수행 합니다.
 
     한정자는 `CA` 작업을 제어 하 고 adjointable 나타냅니다.
+- uid: microsoft.quantum.canon.applytotail
+  summary: 배열의 마지막 요소에 작업을 적용 합니다.
+- uid: microsoft.quantum.canon.applytotaila
+  summary: 배열의 마지막 요소에 작업을 적용 합니다.
+- uid: microsoft.quantum.canon.applytotailc
+  summary: 배열의 마지막 요소에 작업을 적용 합니다.
+- uid: microsoft.quantum.canon.applytotailca
+  summary: 배열의 마지막 요소에 작업을 적용 합니다.
 - uid: microsoft.quantum.canon.applywith
   summary: 두 작업을 수행 하는 경우 conjugated로 다른 작업을 적용 합니다.
 - uid: microsoft.quantum.canon.applywitha
@@ -581,9 +613,9 @@ newtypes:
 - uid: microsoft.quantum.canon.resultstack
   summary: "\n> [!WARNING]\n> 사용되지 않음\n\nResultStack은 더 이상 사용 되지 않습니다."
 metadata:
-  ms.openlocfilehash: 969eec6767f3323e0470b0e968051bafb92d29ae
-  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
+  ms.openlocfilehash: 7346d86d3ff9db2146f37a3f402b60faebe442b7
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 09/02/2020
-  ms.locfileid: "89341567"
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91464439"
