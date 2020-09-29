@@ -8,40 +8,74 @@ functions:
   summary: 배열의 요소에 대해 정의 된 배열과 조건자가 지정 된 경우는 배열의 요소 중 하나 이상이 조건자를 충족 하는지 확인 합니다.
 - uid: microsoft.quantum.arrays.chunks
   summary: 배열을 같은 길이의 여러 요소로 분할 합니다.
+- uid: microsoft.quantum.arrays.columnat
+  summary: 행렬에서 열을 추출 합니다.
 - uid: microsoft.quantum.arrays.constantarray
   summary: 모든 요소가 지정 된 값과 같은 지정 된 길이의 배열을 만듭니다.
+- uid: microsoft.quantum.arrays.count
+  summary: 배열의 요소에 대해 정의 된 배열과 조건자가 지정 된 경우 조건자를 충족 하는 요소로 구성 된 배열의 요소 수를 반환 합니다.
+- uid: microsoft.quantum.arrays.cumulativefolded
+  summary: 매핑된 및 접기를 단일 함수로 결합 합니다.
+- uid: microsoft.quantum.arrays.diagonal
+  summary: 2 차원 배열의 대각선 요소 배열을 반환 합니다.
+- uid: microsoft.quantum.arrays.elementat
+  summary: 배열의 지정 된 인덱스에 있는를 반환 합니다.
+- uid: microsoft.quantum.arrays.elementsat
+  summary: 지정 된 인덱스 범위에서 배열의 요소를 반환 합니다.
+- uid: microsoft.quantum.arrays.emptyarray
+  summary: 지정 된 형식의 빈 배열을 반환 합니다.
 - uid: microsoft.quantum.arrays.enumerated
   summary: 배열이 지정 된 경우 각 요소의 인덱스와 함께 원래 배열의 요소를 포함 하는 새 배열을 반환 합니다.
 - uid: microsoft.quantum.arrays.equala
   summary: 동일한 형식의 두 배열과 배열의 요소 쌍에 대해 정의 된 조건자가 지정 된 경우 배열이 같은지 여부를 확인 합니다.
 - uid: microsoft.quantum.arrays.exclude
   summary: 지정 된 인덱스 목록에서 요소를 제외 하 고 다른 배열의 요소를 포함 하는 배열을 반환 합니다.
+- uid: microsoft.quantum.arrays.excluding
+  summary: 지정 된 인덱스 목록에서 요소를 제외 하 고 다른 배열의 요소를 포함 하는 배열을 반환 합니다.
 - uid: microsoft.quantum.arrays.filtered
   summary: 배열의 요소에 대해 정의 된 배열과 조건자가 지정 된 경우 조건자를 충족 하는 요소로 구성 된 배열을 반환 합니다.
+- uid: microsoft.quantum.arrays.flatmapped
+  summary: 배열 요소를 일부 출력 배열에 매핑하는 배열과 함수가 지정 된 경우 각 배열 요소에 대해 연결 된 출력 배열을 반환 합니다.
+- uid: microsoft.quantum.arrays.flattened
+  summary: 배열의 배열이 지정 된 경우 모든 배열의 연결을 반환 합니다.
 - uid: microsoft.quantum.arrays.fold
   summary: 배열을 통해 함수를 반복 `f` `array` 하 여를 반환 `f(f(f(initialState, array[0]), array[1]), ...)` 합니다.
 - uid: microsoft.quantum.arrays.head
   summary: 배열의 첫 번째 요소를 반환 합니다.
+- uid: microsoft.quantum.arrays.headandrest
+  summary: 배열의 첫 번째 및 나머지 모든 요소에 대 한 튜플을 반환 합니다.
 - uid: microsoft.quantum.arrays.indexof
   summary: 배열에서 지정 된 조건자를 만족 하는 첫 번째 요소의 첫 번째 인덱스를 반환 합니다. 이러한 요소가 없는 경우-1을 반환 합니다.
 - uid: microsoft.quantum.arrays.indexrange
   summary: 배열이 지정 된 경우 for 루프에서 사용 하기에 적합 한 해당 배열의 인덱스에 대해 범위를 반환 합니다.
+- uid: microsoft.quantum.arrays.interleaved
+  summary: 인터리브 하며는 거의 동일한 크기의 두 배열을 가집니다.
 - uid: microsoft.quantum.arrays.isempty
   summary: 배열이 비어 있는 경우에만 true를 반환 합니다.
 - uid: microsoft.quantum.arrays.ispermutation
   summary: 지정 된 배열이 순열을 나타내는 경우에만 true를 출력 합니다.
+- uid: microsoft.quantum.arrays.issorted
+  summary: 배열이 지정 된 경우 지정 된 비교 함수에 의해 정의 된 대로 배열이 정렬 되는지 여부를 반환 합니다.
 - uid: microsoft.quantum.arrays.lookupfunction
   summary: 배열이 지정 된 경우 해당 배열의 요소를 반환 하는 함수를 반환 합니다.
 - uid: microsoft.quantum.arrays.mapped
   summary: 배열의 요소에 대해 정의 된 배열과 함수가 지정 된 경우 함수에서 원래 배열의 이미지로 구성 된 새 배열을 반환 합니다.
 - uid: microsoft.quantum.arrays.mappedbyindex
   summary: 배열의 인덱싱된 요소에 대해 정의 된 배열과 함수가 지정 된 경우 함수에서 원래 배열의 이미지로 구성 된 새 배열을 반환 합니다.
+- uid: microsoft.quantum.arrays.mappedoverrange
+  summary: 정수를 입력으로 사용 하는 범위와 함수가 지정 된 경우 함수 아래 범위 값의 이미지로 구성 된 새 배열을 반환 합니다.
 - uid: microsoft.quantum.arrays.most
   summary: 마지막 배열 요소가 삭제 된 경우를 제외 하 고 입력 배열과 같은 배열을 만듭니다.
+- uid: microsoft.quantum.arrays.mostandtail
+  summary: 배열의 모든 및 마지막 요소에 대 한 튜플을 반환 합니다.
 - uid: microsoft.quantum.arrays.padded
   summary: 지정 된 값을 사용 하 여 지정 된 길이까지 채워진 배열을 반환 합니다.
 - uid: microsoft.quantum.arrays.partitioned
   summary: 배열을 여러 부분으로 분할 합니다.
+- uid: microsoft.quantum.arrays.prefixes
+  summary: 배열이 지정 된 경우 모든 접두사를 반환 합니다.
+- uid: microsoft.quantum.arrays.rectangulararrayfact
+  summary: 2 차원 배열에 사각형 모양이 있는 상태를 나타냅니다.
 - uid: microsoft.quantum.arrays.rest
   summary: 첫 번째 배열 요소가 삭제 된 경우를 제외 하 고 입력 배열과 같은 배열을 만듭니다.
 - uid: microsoft.quantum.arrays.reversed
@@ -50,21 +84,63 @@ functions:
   summary: 지정 된 간격의 정수 배열을 가져옵니다.
 - uid: microsoft.quantum.arrays.sequencel
   summary: 지정 된 간격의 정수 배열을 가져옵니다.
+- uid: microsoft.quantum.arrays.sorted
+  summary: 배열이 지정 된 경우 지정 된 비교 함수를 기준으로 정렬 된 해당 배열의 요소를 반환 합니다.
+- uid: microsoft.quantum.arrays.squarearrayfact
+  summary: 2 차원 배열에 사각형 모양의 조건을 나타냅니다.
 - uid: microsoft.quantum.arrays.subarray
   summary: 배열 및 위치 목록을 가져오고, 지정 된 위치와 일치 하는 원래 배열의 요소에서 형성 된 새 배열을 생성 합니다.
 - uid: microsoft.quantum.arrays.swapped
   summary: 배열에 두 요소의 교환을 적용 합니다.
 - uid: microsoft.quantum.arrays.tail
   summary: 배열의 마지막 요소를 반환합니다.
+- uid: microsoft.quantum.arrays.transposed
+  summary: 배열의 배열로 표시 되는 매트릭스의 바꾸기를 반환 합니다.
 - uid: microsoft.quantum.arrays.tuplearrayasnestedarray
   summary: 2 튜플의 목록을 중첩 된 배열로 변환 합니다.
+- uid: microsoft.quantum.arrays.unique
+  summary: 인접 한 요소가 없는 새 배열을 반환 합니다.
+- uid: microsoft.quantum.arrays.unzipped
+  summary: 2 튜플 배열이 지정 된 경우 각각 입력 배열의 튜플 요소를 포함 하는 두 배열의 튜플을 반환 합니다.
 - uid: microsoft.quantum.arrays.where
   summary: 조건자와 배열이 지정 된 경우 조건자가 true 인 배열의 인덱스를 반환 합니다.
+- uid: microsoft.quantum.arrays.windows
+  summary: 길이의 연속 subarrays 모두 반환 합니다 `size` .
 - uid: microsoft.quantum.arrays.zip
-  summary: 두 배열이 지정 된 경우 각 쌍은 각 원래 배열의 요소를 포함 하도록 쌍의 새 배열을 반환 합니다.
+  summary: >-
+    두 배열이 지정 된 경우 각 쌍은 각 원래 배열의 요소를 포함 하도록 쌍의 새 배열을 반환 합니다.
+
+    > [!WARNING]
+
+    > 사용되지 않음
+
+
+    Zip은 더 이상 사용 되지 않습니다. 대신 @"microsoft.quantum.arrays.zipped"를 사용하십시오.
 - uid: microsoft.quantum.arrays.zip3
-  summary: 3 개의 배열이 지정 된 경우 각 3 튜플은 각 원래 배열의 요소를 포함 하도록 3 튜플의 새 배열을 반환 합니다.
+  summary: >-
+    3 개의 배열이 지정 된 경우 각 3 튜플은 각 원래 배열의 요소를 포함 하도록 3 튜플의 새 배열을 반환 합니다.
+
+    > [!WARNING]
+
+    > 사용되지 않음
+
+
+    List.zip3는 더 이상 사용 되지 않습니다. 대신 @"microsoft.quantum.arrays.zipped3"를 사용하십시오.
 - uid: microsoft.quantum.arrays.zip4
+  summary: >-
+    4 개의 배열이 지정 된 경우 각 4 튜플은 각 원래 배열의 요소를 포함 하도록 4 튜플의 새 배열을 반환 합니다.
+
+    > [!WARNING]
+
+    > 사용되지 않음
+
+
+    Zip4는 더 이상 사용 되지 않습니다. 대신 @"microsoft.quantum.arrays.zipped4"를 사용하십시오.
+- uid: microsoft.quantum.arrays.zipped
+  summary: 두 배열이 지정 된 경우 각 쌍은 각 원래 배열의 요소를 포함 하도록 쌍의 새 배열을 반환 합니다.
+- uid: microsoft.quantum.arrays.zipped3
+  summary: 3 개의 배열이 지정 된 경우 각 3 튜플은 각 원래 배열의 요소를 포함 하도록 3 튜플의 새 배열을 반환 합니다.
+- uid: microsoft.quantum.arrays.zipped4
   summary: 4 개의 배열이 지정 된 경우 각 4 튜플은 각 원래 배열의 요소를 포함 하도록 4 튜플의 새 배열을 반환 합니다.
 summary: " # <a name=\"summary\"></a>요약\n 이 네임 스페이스는 데이터 배열을 만들고 조작 하는 함수를 포함 합니다."
 operations:
@@ -73,9 +149,9 @@ operations:
 - uid: microsoft.quantum.arrays.foreach
   summary: 배열의 요소에 대해 정의 된 배열과 작업이 지정 된 경우 작업에서 원래 배열의 이미지로 구성 된 새 배열을 반환 합니다.
 metadata:
-  ms.openlocfilehash: f84118178b46d8c65fbffa00562bbb1b21099353
-  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
+  ms.openlocfilehash: af1527356d0b4962f6aba2aad79395a383fa3fab
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 09/02/2020
-  ms.locfileid: "89341278"
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91464456"

@@ -45,6 +45,8 @@ functions:
   summary: 숫자가 다른 숫자 보다 작거나 같은 경우에만 true를 반환 합니다.
 - uid: microsoft.quantum.logical.lessthanorequall
   summary: 숫자가 다른 숫자 보다 작거나 같은 경우에만 true를 반환 합니다.
+- uid: microsoft.quantum.logical.lexographiccomparison
+  summary: 비교 함수가 지정 된 경우 lexographically는 두 배열을 비교 하는 새 함수를 반환 합니다.
 - uid: microsoft.quantum.logical.nearlyequald
   summary: 두 입력이 거의 동일한 경우에만 true를 반환 합니다. 즉, 허용 오차의 허용 오차 범위 내에 있습니다.
 - uid: microsoft.quantum.logical.not
@@ -70,9 +72,9 @@ functions:
 - uid: microsoft.quantum.logical.xor
   summary: 두 값의 부울 배타적 논리합을 반환 합니다.
 metadata:
-  ms.openlocfilehash: 0ab7077bc2cdf9bc76f3da701a88869f8bb9bf85
-  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
+  ms.openlocfilehash: 006100b659daedbcca30fe443756a185a965ee1e
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 09/02/2020
-  ms.locfileid: "89340105"
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91464337"
