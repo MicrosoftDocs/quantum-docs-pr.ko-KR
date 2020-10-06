@@ -9,12 +9,12 @@ uid: microsoft.quantum.numerics.usage
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 474fc74b9c92fbf28c0618a3090905d025699d32
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: dfcb8e9e5a15d0881750d67cf58d7ad47cbecd3a
+ms.sourcegitcommit: 897ace8b506adb2331e911ee5633dceced566174
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868800"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91764125"
 ---
 # <a name="using-the-numerics-library"></a>숫자 라이브러리 사용
 
@@ -31,13 +31,13 @@ ms.locfileid: "87868800"
 open Microsoft.Quantum.Arithmetic;
 ```
 
-## <a name="types"></a>유형
+## <a name="types"></a>형식
 
 숫자 라이브러리는 다음 형식을 지원 합니다.
 
 1. **`LittleEndian`**: `qArr : Qubit[]` 가 최하위 비트를 표시 하는 정수를 나타내는의 정수 배열입니다 `qArr[0]` .
 1. **`SignedLittleEndian`**: `LittleEndian` 2의 보수에 저장 된 부호 있는 정수를 나타내는 점을 제외 하 고와 동일 합니다.
-1. **`FixedPoint`**:은 (는) 바이트 배열과 이진 점 위치로 구성 된 실수를 나타내며 `qArr2 : Qubit[]` `pos` ,이는 이진 점 왼쪽의 이진 자릿수를 계산 합니다. `qArr2`는와 같은 방식으로 저장 됩니다 `SignedLittleEndian` .
+1. **`FixedPoint`**:은 (는) 바이트 배열과 이진 점 위치로 구성 된 실수를 나타내며 `qArr2 : Qubit[]` `pos` ,이는 이진 점 왼쪽의 이진 자릿수를 계산 합니다. `qArr2` 는와 같은 방식으로 저장 됩니다 `SignedLittleEndian` .
 
 ## <a name="operations"></a>작업
 
@@ -120,7 +120,7 @@ $P _ {홀수} (x) = x + 2x ^ 3 $를 평가 합니다.
 
 ```bash
 git clone https://github.com/Microsoft/Quantum.git
-cd Quantum/Numerics
+cd Quantum/samples/numerics
 ```
 
 그런 다음 `cd` 샘플 폴더 중 하나에을 (를) 통해 샘플을 실행 합니다.
