@@ -8,12 +8,12 @@ uid: microsoft.quantum.guide.quickref.iqsharp
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 75a1e1820e5ca16268c9b11322eb5653094b1a3c
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 4549afb84bf0084160079e3cef3a7f94dffcda3e
+ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833561"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91771342"
 ---
 # <a name="ino-locq-magic-commands"></a>- Q# 매직 명령
 
@@ -34,7 +34,7 @@ ms.locfileid: "90833561"
 ### <a name="azure-quantum-integration"></a>Azure 퀀텀 통합
 
 - [`%azure.connect`](xref:microsoft.quantum.iqsharp.magic-ref.azure.connect): Azure 퀀텀 작업 영역에 연결 하거나 현재 연결 상태를 표시 합니다.
-- [`%azure.execute`](xref:microsoft.quantum.iqsharp.magic-ref.azure.execute): Azure 퀀텀 작업 영역에서 작업을 실행 합니다.
+- [`%azure.execute`](xref:microsoft.quantum.iqsharp.magic-ref.azure.execute): Azure 퀀텀 작업 영역에 작업을 제출 하 고 완료 될 때까지 기다립니다.
 - [`%azure.jobs`](xref:microsoft.quantum.iqsharp.magic-ref.azure.jobs): 현재 Azure 퀀텀 작업 영역에서 작업 목록을 표시 합니다.
 - [`%azure.output`](xref:microsoft.quantum.iqsharp.magic-ref.azure.output): 현재 Azure 퀀텀 작업 영역에서 작업에 대 한 결과를 표시 합니다.
 - [`%azure.status`](xref:microsoft.quantum.iqsharp.magic-ref.azure.status): 현재 Azure 퀀텀 작업 영역에서 작업의 상태를 표시 합니다.

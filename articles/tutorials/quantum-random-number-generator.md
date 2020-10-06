@@ -9,12 +9,12 @@ uid: microsoft.quantum.quickstarts.qrng
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: a0e8933e6a77d017db914e4bb969ea05f760a443
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: cefe35a10dd89c14d2f1abc3080d52ab125236d1
+ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834043"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91771276"
 ---
 # <a name="tutorial-implement-a-quantum-random-number-generator-in-q"></a>자습서: Q\#에서 퀀텀 난수 생성기 구현
 
@@ -33,7 +33,7 @@ ms.locfileid: "90834043"
 
 :::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="3-15,34":::
 
-[퀀텀 컴퓨팅 이해](xref:microsoft.quantum.overview.understanding) 문서에서 설명한 대로 큐비트는 중첩될 수 있는 퀀텀 정보의 단위입니다. 측정된 큐비트는 0 또는 1 중 하나만 될 수 있습니다. 그러나 작업을 실행 하는 경우에는 값이 0 또는 1이 있는 1을 읽을 확률을 나타냅니다. 이 확률적 상태를 중첩이라고 합니다. 이 확률을 사용하여 난수를 생성할 수 있습니다.
+[퀀텀 컴퓨팅 이해](xref:microsoft.quantum.overview.understanding) 문서에서 설명한 대로 큐비트는 중첩될 수 있는 퀀텀 정보의 단위입니다. 측정된 큐비트는 0 또는 1 중 하나만 될 수 있습니다. 그러나 측정 하기 전에는 값이 0 또는 1을 사용 하 여 값을 읽을 확률을 나타냅니다. 이 확률적 상태를 중첩이라고 합니다. 이 확률을 사용하여 난수를 생성할 수 있습니다.
 
 이 Q# 작업에서는 `Qubit` 데이터 형식을 네이티브로 도입 합니다 Q# . `Qubit`는 `using` 문으로만 할당할 수 있습니다. 할당되는 경우 큐비트는 항상 `Zero` 상태입니다. 
 

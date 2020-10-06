@@ -9,12 +9,12 @@ uid: microsoft.quantum.relnotes
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 28e880445bf61150d7940730009a5482298adae2
-ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+ms.openlocfilehash: 27038a86dc4854c397458d95529aca463d493fd6
+ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91492356"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91771321"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit 릴리스 정보
 
@@ -23,6 +23,12 @@ ms.locfileid: "91492356"
 설치 지침은[설치 가이드](xref:microsoft.quantum.install)를 참조하세요.
 
 업데이트 지침은 [업데이트 가이드](xref:microsoft.quantum.update)를 참조하세요.
+
+## <a name="version-01220100504"></a>버전 0.12.20100504
+
+*릴리스 날짜: 10 월 5 일, 2020*
+
+이 릴리스는 전자 필기장의 부하에 영향을 주는 버그를 수정 Q# 합니다 ( [iqsharp # 331](https://github.com/microsoft/iqsharp/pull/331)참조).
 
 ## <a name="version-01220092803"></a>버전 0.12.20092803
 
@@ -66,7 +72,7 @@ ms.locfileid: "91492356"
 
 이 릴리스에는 다음이 포함됩니다.
 
-- Q#이제 나중에 모든 셀 계산에 사용할 수 있는 노트북의 네임 스페이스를 사용할 수 있습니다. 이렇게 하면 예를 들어 각 코드 셀에서 관련 네임 스페이스를 열 필요 없이 노트북 맨 위에 있는 셀에서 한 번에 네임 스페이스를 열 수 있습니다. 새 `%lsopen` 매직 명령은 현재 열려 있는 네임 스페이스 목록을 표시 합니다.
+- Q#이제 모든 이후 셀을 실행할 때 노트북에서 열린 네임 스페이스를 사용할 수 있습니다. 이렇게 하면 예를 들어 각 코드 셀에서 관련 네임 스페이스를 열 필요 없이 노트북 맨 위에 있는 셀에서 한 번에 네임 스페이스를 열 수 있습니다. 새 `%lsopen` 매직 명령은 현재 열려 있는 네임 스페이스 목록을 표시 합니다.
 
 [라이브러리](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [컴파일러](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [런타임](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [샘플](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed), [I Q# ](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed) 및 [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed)에 대 한 폐쇄형 pr의 전체 목록을 참조 하세요.  
 
