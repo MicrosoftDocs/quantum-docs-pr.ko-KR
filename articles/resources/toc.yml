@@ -1,3 +1,5 @@
+- name: MS Learn을 통해 기술 배우기
+  href: 'https://docs.microsoft.com/learn/paths/quantum-computing-fundamentals/'
 - name: 용어
   href: glossary.md
 - name: QDK에 기여

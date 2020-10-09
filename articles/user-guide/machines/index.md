@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 6a2a4bb829301f9db9bd14f3240556a403b9a54f
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: f40c63eed60379aa46a0cd9cfdd7d8de8c22c079
+ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833430"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91771315"
 ---
 # <a name="quantum-simulators"></a>퀀텀 시뮬레이터
 
@@ -24,7 +24,7 @@ ms.locfileid: "90833430"
 
 ## <a name="the-quantum-development-kit-qdk-quantum-simulators"></a>QDK(Quantum Development Kit) 퀀텀 시뮬레이터
 
-퀀텀 시뮬레이터는 알고리즘을 위한 퀀텀 기본 형식을 구현합니다. 여기에는 `H`, `CNOT` 및 `Measure`와 같은 기본 작업뿐만 아니라, 큐비트 관리와 추적도 포함됩니다. QDK에는 동일한 퀀텀 알고리즘에 대해 여러 실행 모델을 나타내는 여러 클래스의 퀀텀 시뮬레이터가 있습니다. 
+퀀텀 시뮬레이터는 알고리즘을 위한 퀀텀 기본 형식을 구현합니다. 여기에는 `H`, `CNOT` 및 `Measure`와 같은 기본 작업뿐만 아니라, 큐비트 관리와 추적도 포함됩니다. QDK에는 동일한 퀀텀 알고리즘의 여러 시뮬레이션 방식을 나타내는 여러 클래스의 퀀텀 시뮬레이터가 있습니다. 
 
 
 각 유형의 퀀텀 시뮬레이터는 이러한 기본 형식의 다른 구현을 제공할 수 있습니다. 예를 들어, [전체 상태 시뮬레이터](xref:microsoft.quantum.machines.full-state-simulator)는 [퀀텀 상태 벡터](xref:microsoft.quantum.glossary#quantum-state)를 완전히 시뮬레이션하여 퀀텀 알고리즘을 실행하는 반면 [양자 컴퓨터 추적 시뮬레이터](xref:microsoft.quantum.machines.qc-trace-simulator.intro)는 실제 퀀텀 상태를 전혀 고려하지 않습니다. 대신 알고리즘에 대한 게이트, 큐비트 및 기타 리소스 사용을 추적합니다.

@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: f0680e773c8233d6c4f1acb742b3cc38dbc069d5
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 81f31a531a1b50ead332bb578ccf392ddced9e8d
+ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834757"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91771377"
 ---
 # <a name="the-no-locq-user-guide"></a>Q# 사용자 가이드
 
@@ -55,7 +55,7 @@ Q# 사용자 가이드 시작!
 
 ### <a name="quantum-simulators-and-resource-estimators"></a>양자 시뮬레이터 및 리소스 예측 도구
 
-- [퀀텀 시뮬레이터 및 호스트 애플리케이션](xref:microsoft.quantum.machines): 사용 가능한 여러 시뮬레이터에 대한 개요 및 호스트 프로그램과 대상 머신 간의 일반적인 실행 모델입니다.
+- [퀀텀 시뮬레이터 및 호스트 애플리케이션](xref:microsoft.quantum.machines): 사용 가능한 여러 시뮬레이터와 호스트 프로그램 및 대상 머신이 함께 작동하여 Q# 프로그램을 실행하는 방법에 대한 개요입니다.
 
 - [전체 상태 시뮬레이터](xref:microsoft.quantum.machines.full-state-simulator): 전체 퀀텀 상태를 시뮬레이션하는 대상 머신입니다. 소규모 프로그램(몇십 큐비트 미만)을 완전히 실행하거나 디버그하는 데 유용합니다.
 

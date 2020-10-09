@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines.qc-trace-simulator.intro
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 54a1f63461cfcc8146f7dc4d18d321238d77454d
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 7f5e25aa7b58277642783e03d03854cd75ff4ca3
+ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833367"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91771298"
 ---
 # <a name="microsoft-quantum-development-kit-qdk-quantum-trace-simulator"></a>Microsoft QDK(Quantum Development Kit) 퀀텀 추적 시뮬레이터
 
@@ -86,7 +86,7 @@ QDK에는 퀀텀 추적 시뮬레이터에서 프로그램의 버그를 검색�
 |-----| -----|
 |[고유 입력 검사기](xref:microsoft.quantum.machines.qc-trace-simulator.distinct-inputs) |공유된 큐비트와의 충돌 가능성이 있는지 검사 |
 |[무효화된 큐비트 사용 검사기](xref:microsoft.quantum.machines.qc-trace-simulator.invalidated-qubits)  |프로그램이 이미 릴리스된 큐비트에 작업을 적용하는지 검사 |
-|[기본 연산 카운터](xref:microsoft.quantum.machines.qc-trace-simulator.primitive-counter)  | 퀀텀 프로그램에서 호출된 모든 작업에서 사용되는 기본 프로세스 수를 계산  |
+|[기본 연산 카운터](xref:microsoft.quantum.machines.qc-trace-simulator.primitive-counter)  | 퀀텀 프로그램에서 호출된 모든 작업에서 사용되는 기본 형식 수 계산  |
 |[깊이 카운터](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter)  |양자 프로그램에서 호출된 모든 작업 깊이의 하한을 나타내는 개수를 수집   |
 |[너비 카운터](xref:microsoft.quantum.machines.qc-trace-simulator.width-counter)  |양자 프로그램에서 각 작업에 의해 할당되고 빌린 큐비트 수를 계산 |
 
