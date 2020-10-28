@@ -1,0 +1,100 @@
+### YamlMime:QSharpNamespace
+functions: []
+name: Microsoft.Quantum.Extensions.Testing
+newtypes: []
+operations:
+- summary: >+
+    > [!WARNING]
+
+    > AssertAllZero는 더 이상 사용 되지 않습니다. 대신 <xref:Microsoft.Quantum.Diagnostics.AssertAllZero>를 사용하십시오.
+
+    >
+
+    > @"microsoft.quantum.diagnostics.assertallzero"을 사용하세요.
+
+  uid: Microsoft.Quantum.Extensions.Testing.AssertAllZero
+- summary: >+
+    > [!WARNING]
+
+    > AssertAllZeroTol는 더 이상 사용 되지 않습니다. 대신 <xref:Microsoft.Quantum.Diagnostics.AssertAllZeroWithinTolerance>를 사용하십시오.
+
+    >
+
+    > @"microsoft.quantum.diagnostics.assertallzerowithintolerance"을 사용하세요.
+
+  uid: Microsoft.Quantum.Extensions.Testing.AssertAllZeroTol
+- summary: >+
+    > [!WARNING]
+
+    > AssertOperationsEqualInPlace는 더 이상 사용 되지 않습니다. 대신 <xref:Microsoft.Quantum.Diagnostics.AssertOperationsEqualInPlace>를 사용하십시오.
+
+    >
+
+    > @"microsoft.quantum.diagnostics.assertoperationsequalinplace"을 사용하세요.
+
+    > 이 작업에 대 한 인수의 순서가 변경 된 것을 확인 합니다.
+
+  uid: Microsoft.Quantum.Extensions.Testing.AssertOperationsEqualInPlace
+- summary: >+
+    > [!WARNING]
+
+    > AssertOperationsEqualInPlaceCompBasis는 더 이상 사용 되지 않습니다. 대신 <xref:Microsoft.Quantum.Diagnostics.AssertOperationsEqualInPlaceCompBasis>를 사용하십시오.
+
+    >
+
+    > @"microsoft.quantum.diagnostics.assertoperationsequalinplaceCompBasis"을 사용하세요.
+
+    > 이 작업에 대 한 인수의 순서가 변경 된 것을 확인 합니다.
+
+  uid: Microsoft.Quantum.Extensions.Testing.AssertOperationsEqualInPlaceCompBasis
+- summary: >+
+    > [!WARNING]
+
+    > AssertOperationsEqualReferenced는 더 이상 사용 되지 않습니다. 대신 <xref:Microsoft.Quantum.Diagnostics.AssertOperationsEqualReferenced>를 사용하십시오.
+
+    >
+
+    > @"microsoft.quantum.diagnostics.assertoperationsequalreferenced"을 사용하세요.
+
+    > 이 작업에 대 한 인수의 순서가 변경 된 것을 확인 합니다.
+
+  uid: Microsoft.Quantum.Extensions.Testing.AssertOperationsEqualReferenced
+- summary: >+
+    > [!WARNING]
+
+    > AssertQubit는 더 이상 사용 되지 않습니다. 대신 <xref:Microsoft.Quantum.Diagnostics.AssertQubit>를 사용하십시오.
+
+    >
+
+    > @"microsoft.quantum.diagnostics.assertqubit"을 사용하세요.
+
+  uid: Microsoft.Quantum.Extensions.Testing.AssertQubit
+- summary: >+
+    > [!WARNING]
+
+    > AssertQubitState는 더 이상 사용 되지 않습니다. 대신 <xref:Microsoft.Quantum.Diagnostics.AssertQubitIsInStateWithinTolerance>를 사용하십시오.
+
+    >
+
+    > @"microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance"을 사용하세요.
+
+  uid: Microsoft.Quantum.Extensions.Testing.AssertQubitState
+- summary: >+
+    > [!WARNING]
+
+    > AssertQubitTol는 더 이상 사용 되지 않습니다. 대신 <xref:Microsoft.Quantum.Diagnostics.AssertQubitWithinTolerance>를 사용하십시오.
+
+    >
+
+    > @"microsoft.quantum.diagnostics.assertqubitwithintolerance"을 사용하세요.
+
+  uid: Microsoft.Quantum.Extensions.Testing.AssertQubitTol
+summary: ''
+uid: Microsoft.Quantum.Extensions.Testing
+metadata:
+  ms.openlocfilehash: 717665e821b4e56b01664e6e0ed940cacd2a485c
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92712097"
