@@ -1,0 +1,162 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: 에 설명 된 Hamiltonian를 `JWOptimizedHTerms` Pauli로 표현 된로 변환 합니다 `GeneratorSystem` `GeneratorIndex` .
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerBlockEncodingGeneratorSystem
+- summary: 동적 생성기를 simulatable 게이트 집합으로, JordanWigner 기준으로 확장을 나타냅니다.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerClusterOperatorEvolutionSet
+- summary: 에 설명 된 Hamiltonian를 `JWOptimizedHTerms` `GeneratorSystem` `GeneratorIndex` 이 파일에 정의 된 규칙의 용어로 표현 된로 변환 합니다.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerClusterOperatorGeneratorSystem
+- summary: 동적 생성기를 simulatable 게이트 집합으로, JordanWigner 기준으로 확장을 나타냅니다.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerFermionEvolutionSet
+- summary: 동적 생성기를 simulatable 게이트 집합으로, JordanWigner 기준으로 확장을 나타냅니다.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerFermionFunction
+- summary: 에 설명 된 Hamiltonian를 `JWOptimizedHTerms` `GeneratorSystem` `GeneratorIndex` 이 파일에 정의 된 규칙의 용어로 표현 된로 변환 합니다.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerGeneratorSystem
+- summary: 에 설명 된 Hamiltonian를 `JWOptimizedHTerms` Pauli로 표현 된로 변환 합니다 `GeneratorSystem` `GeneratorIndex` .
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.OptimizedBlockEncodingGeneratorSystem
+- summary: T-count에 최적화 된 작업 및이 작업을 실행 하는 데 필요한 매개 변수를 반환 합니다.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.OptimizedQubitizationOracle
+- summary: 는이 작업 및 실행에 필요한 매개 변수를 반환 합니다.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.QubitizationOracle
+- summary: Trotter step 작업과이 작업을 실행 하는 데 필요한 매개 변수를 반환 합니다.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.TrotterStepOracle
+- summary: Fermion 개의 생성/annihilation 연산자를 사용 하 여 fermionic 연산자의 인덱스 사이에서 요르단 – Wigner 문자열의 Z 구성 요소를 계산 합니다.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._ComputeJordanWignerBitString
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._ComputeJordanWignerPauliString
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._ComputeJordanWignerPauliZString
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._GetOptimizedBETermIndexCoeff_
+- summary: 동적 생성기를 simulatable 게이트 집합으로, JordanWigner 기준으로 확장을 나타냅니다.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._JordanWignerClusterOperatorFunction
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._JordanWignerClusterOperatorGeneratorIndex
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._JordanWignerClusterOperatorGeneratorSystemImpl
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._JordanWignerClusterOperatorPQRSTermSigns
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._JordanWignerOptimizedBlockEncodingQubitCount_
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._JordanWignerOptimizedBlockEncodingQubitManager_
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._JordanWignerOptimizedBlockEncoding_
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._JordanWignerOptimizedQuantumWalkByQubitization_
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._JordanWignerSelectQubitCount_
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._JordanWignerSelectQubitManager_
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._OptimizedBEGeneratorSystemCoeff_
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._OptimizedBEXY_
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._OptimizedQubitizationOracleSeperatedRegisters_
+- summary: PQ 용어를 설명 하는 GeneratorIndex을 Paulis의 식 ' GeneratorIndex [] '로 변환 합니다.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._PQTermToPauliGenIdx_
+- summary: PQ 용어를 설명 하는 GeneratorIndex을 Paulis의 식 ' GeneratorIndex [] '로 변환 합니다.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._PQTermToPauliMajIdx_
+- summary: PQ 또는 PQQR 항을 설명 하는 GeneratorIndex을 Paulis 라는 식의 ' GeneratorIndex [] ' 식으로 변환 합니다.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._PQandPQQRTermToPauliGenIdx_
+- summary: PQ 또는 PQQR 항을 설명 하는 GeneratorIndex을 Paulis 라는 식의 ' GeneratorIndex [] ' 식으로 변환 합니다.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._PQandPQQRTermToPauliMajIdx_
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._PrepareSingleConfigurationalStateSingleSiteOccupation
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._QubitizationOracleSeperatedRegisters
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._SelectZ_
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._ToJordanWignerSelectInput_
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._ToPauliBases_
+- summary: PQRS 용어를 설명 하는 GeneratorIndex을 Paulis의 식 ' GeneratorIndex [] '로 변환 합니다.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._V0123TermToPauliGenIdx_
+- summary: PQRS 용어를 설명 하는 GeneratorIndex을 Paulis의 식 ' GeneratorIndex [] '로 변환 합니다.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._V0123TermToPauliMajIdx_
+- summary: Z 용어를 설명 하는 GeneratorIndex을 Paulis의 ' GeneratorIndex [] ' 식으로 변환 합니다.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._ZTermToPauliGenIdx
+- summary: Z 용어를 설명 하는 GeneratorIndex을 Paulis의 ' GeneratorIndex [] ' 식으로 변환 합니다.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._ZTermToPauliMajIdx_
+- summary: ZZ 용어를 설명 하는 GeneratorIndex을 Paulis 라는 식의 ' GeneratorIndex [] ' 식으로 변환 합니다.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._ZZTermToPauliGenIdx
+- summary: ZZ 용어를 설명 하는 GeneratorIndex을 Paulis 라는 식의 ' GeneratorIndex [] ' 식으로 변환 합니다.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._ZZTermToPauliMajIdx_
+name: Microsoft.Quantum.Chemistry.JordanWigner
+newtypes:
+- summary: 'Hamiltonian 용어를 나타내기 위해 c #에서 Q #으로 전달 되는 데이터의 형식입니다. 표시 되는 데이터의 의미는 해당 데이터를 수신 하는 알고리즘에 의해 결정 됩니다.'
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.JWOptimizedHTerms
+- summary: 'Hamiltonian 시뮬레이션에 대 한 모든 정보를 나타내기 위해 c #에서 Q #으로 전달 되는 데이터의 형식입니다. 표시 되는 데이터의 의미는 해당 데이터를 수신 하는 알고리즘에 의해 결정 됩니다.'
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerEncodingData
+- summary: '초기 상태를 준비 하기 위해 c #에서 Q #으로 전달 되는 데이터의 형식입니다. 표시 되는 데이터의 의미는이를 수신 하는 알고리즘에 의해 결정 됩니다.'
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerInputState
+- summary: 정수에 지정 된 정수에 대 한 데이터를 반환 하는 함수입니다 .이 함수는 `OptimizedBETermIndex` 첫 번째에 있는 `n` `n` 용어 수와 `Int` 에 있는 모든 용어 계수의 절대값 합계와 함께 사용 `Double` 됩니다.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.OptimizedBEGeneratorSystem
+- summary: 최적화 된 블록 인코딩 알고리즘의 데이터 용어입니다.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.OptimizedBETermIndex
+operations:
+- summary: >-
+    동적 생성기를 simulatable 게이트 집합으로, JordanWigner 기준으로 확장을 나타냅니다.
+
+    자세한 내용은 [동적 생성기 모델링](../libraries/data-structures#dynamical-generator-modeling) 을 참조 하세요.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerFermionImpl
+- summary: $ (X ^ {z + 1} \_ pY ^ {z} \_ p) z \_ {p-1}에 pauli 문자열을 적용 하는 단일 $U $ 인덱스에서 $ on stbits $0 조건 화 된 p $를 Z_0 합니다 $z \in \{ 0, 1 \} $ 및 $p $입니다. 즉, $ $ \begin{align} U\ket {z} \ k {p} \ k {\ psi} = \ket{z}\ket{p} (X ^ {z + 1} \_ pY ^ {z} \_ p) z \_ {p-1} ... Z_0 \ket{\psi} \end{align} $ $
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.OptimizedBEXY
+- summary: Spin orbitals를 실행 하 여 시험 상태의 단순 상태 준비
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.PrepareSingleConfigurationalStateSingleSiteOccupation
+- summary: 초기 평가판 상태에 excitations를 추가 하 여 구성의 스파스 상태 준비 상태입니다.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.PrepareSparseMultiConfigurationalState
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.PrepareTrialState
+- summary: 단일 연결-평가판 상태의 클러스터 상태 준비
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.PrepareUnitaryCoupledClusterState
+- summary: 인덱스 상태 $ \ket{p} $에서 $ 조건 화 된에 대 한 $Z $ $p gate를 적용 하는 단일 $U $입니다. 즉, $ $ \begin{align} U\ket {p} \ k {\ psi} = \ket{p}Z \_ p\ket {\ psi} \end{align} $ $입니다.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.SelectZ
+- summary: 에 설명 된 PQRS 용어의 시간 진화를 적용 `GeneratorIndex` 합니다.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._ApplyJordanWigner0123Term_
+- summary: 에서 설명 하는 클러스터 연산자 PQRS 용어에의 한 시간 진화를 적용 `GeneratorIndex` 합니다.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._ApplyJordanWignerClusterOperatorPQRSTerm
+- summary: 에서 설명 하는 클러스터 연산자 PQ 용어에의 한 시간 진화를 적용 `GeneratorIndex` 합니다.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._ApplyJordanWignerClusterOperatorPQTerm
+- summary: 에 설명 된 PQ 용어의 시간 진화를 적용 `GeneratorIndex` 합니다.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._ApplyJordanWignerPQTerm_
+- summary: 에 설명 된 PQ 또는 PQQR 용어로 시간 진화를 적용 `GeneratorIndex` 합니다.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._ApplyJordanWignerPQandPQQRTerm_
+- summary: 에서 설명 하는 Z 용어에의 한 시간 진화를 적용 `GeneratorIndex` 합니다.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._ApplyJordanWignerZTerm_
+- summary: 에서 설명 하는 ZZ 용어에의 한 시간 진화를 적용 `GeneratorIndex` 합니다.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._ApplyJordanWignerZZTerm_
+- summary: >-
+    동적 생성기를 simulatable 게이트 집합으로, JordanWigner 기준으로 확장을 나타냅니다.
+
+    자세한 내용은 [동적 생성기 모델링](../libraries/data-structures#dynamical-generator-modeling) 을 참조 하세요.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._JordanWignerClusterOperatorImpl
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._JordanWignerOptimizedBlockEncodingSelect_
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._JordanWignerOptimizedBlockEncodingStatePrep
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._JordanWignerOptimizedBlockEncodingStatePrep_
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._JordanWignerSelect_
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._MergeTwoRegisters_
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._OptimizedBEXY
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._SelectZ
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._ToJordanWignerSelectInput
+- summary: ''
+  uid: Microsoft.Quantum.Chemistry.JordanWigner._ToPauliBases
+summary: ''
+uid: Microsoft.Quantum.Chemistry.JordanWigner
+metadata:
+  ms.openlocfilehash: 909133bb6f75aa814c17ac1e54667c3599e47bf6
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92714085"
