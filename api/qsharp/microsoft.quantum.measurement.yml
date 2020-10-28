@@ -1,0 +1,32 @@
+### YamlMime:QSharpNamespace
+functions: []
+name: Microsoft.Quantum.Measurement
+newtypes: []
+operations:
+- summary: ''
+  uid: Microsoft.Quantum.Measurement.BasisChangeZtoY
+- summary: X 단위로 단일 계산 비트를 측정 하 고 측정값을 따라 고정 된 초기 상태로 다시 설정 합니다.
+  uid: Microsoft.Quantum.Measurement.MResetX
+- summary: Y를 기준으로 단일의 비트를 측정 하 고 측정 다음에 고정 된 초기 상태로 다시 설정 합니다.
+  uid: Microsoft.Quantum.Measurement.MResetY
+- summary: Z 단위로 단일 비트를 측정 하 고, 측정값을 따라 고정 된 초기 상태로 다시 설정 합니다.
+  uid: Microsoft.Quantum.Measurement.MResetZ
+- summary: 는 Pauli Z 기준으로 원하는 비트의 레지스터를 측정 합니다.
+  uid: Microsoft.Quantum.Measurement.MeasureAllZ
+- summary: 여러 가지 기능을 제공 하는 배열에서 지정 된 측정 가젯을 사용 하 여 각 측정값을 측정 한 다음 결과의 배열을 반환 합니다.
+  uid: Microsoft.Quantum.Measurement.MeasurePaulis
+- summary: 측정을 수행 하기 위해 명시적인 스크래치 비트를 사용 하 여 지정 된 Pauli 연산자를 측정 합니다.
+  uid: Microsoft.Quantum.Measurement.MeasureWithScratch
+- summary: 지정 된 배열의 각 고 비트를 표준 기준으로 측정 합니다.
+  uid: Microsoft.Quantum.Measurement.MultiM
+- summary: 필요에 따라 비트를 측정 하 고 비트 대칭을 적용 하 여 지정 된 계산 기준 상태로 원하는 비트를 설정 합니다.
+  uid: Microsoft.Quantum.Measurement.SetToBasisState
+summary: ''
+uid: Microsoft.Quantum.Measurement
+metadata:
+  ms.openlocfilehash: f35f2867ca9fd68cbc0fbc0cf3d386d441adbaa7
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92710312"
