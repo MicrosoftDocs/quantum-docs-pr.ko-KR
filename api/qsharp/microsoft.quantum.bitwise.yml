@@ -1,0 +1,36 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: 두 정수의 비트 AND를 반환 합니다. 이는 기본 제공 연산자와 동일한 계산을 수행 합니다 `&&&` .
+  uid: Microsoft.Quantum.Bitwise.And
+- summary: 지정 된 비트 수 만큼 왼쪽에 있는 숫자의 비트 표현을 이동 합니다.
+  uid: Microsoft.Quantum.Bitwise.LeftShiftedI
+- summary: 지정 된 비트 수 만큼 왼쪽에 있는 숫자의 비트 표현을 이동 합니다.
+  uid: Microsoft.Quantum.Bitwise.LeftShiftedL
+- summary: 정수의 비트 NOT을 반환 합니다. 이는 기본 제공 연산자와 동일한 계산을 수행 합니다 `~~~` .
+  uid: Microsoft.Quantum.Bitwise.Not
+- summary: 두 정수의 비트 OR을 반환 합니다. 이는 기본 제공 연산자와 동일한 계산을 수행 합니다 `|||` .
+  uid: Microsoft.Quantum.Bitwise.Or
+- summary: 정수의 비트 패리티를 반환 합니다 (이진 표현에 홀수 개의 숫자가 포함 된 경우 1, 그렇지 않은 경우 0).
+  uid: Microsoft.Quantum.Bitwise.Parity
+- summary: 숫자의 비트 표현을 지정 된 비트 수 만큼 오른쪽으로 이동 합니다.
+  uid: Microsoft.Quantum.Bitwise.RightShiftedI
+- summary: 숫자의 비트 표현을 지정 된 비트 수 만큼 오른쪽으로 이동 합니다.
+  uid: Microsoft.Quantum.Bitwise.RightShiftedL
+- summary: Pauli 연산자 배열의 X 비트를 나타내는 정수를 반환 합니다.
+  uid: Microsoft.Quantum.Bitwise.XBits
+- summary: 두 정수의 배타적 비트 or (XOR)를 반환 합니다. 이는 기본 제공 연산자와 동일한 계산을 수행 합니다 `^^^` .
+  uid: Microsoft.Quantum.Bitwise.Xor
+- summary: Pauli 연산자 배열의 Z 비트를 나타내는 정수를 반환 합니다.
+  uid: Microsoft.Quantum.Bitwise.ZBits
+name: Microsoft.Quantum.Bitwise
+newtypes: []
+operations: []
+summary: 이 네임 스페이스는 기존 데이터 형식의 비트 표현에 대해 동작 하는 함수를 포함 합니다.
+uid: Microsoft.Quantum.Bitwise
+metadata:
+  ms.openlocfilehash: 6730a0350f56c2356b9c0851b37de1cd277da90f
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92719216"
