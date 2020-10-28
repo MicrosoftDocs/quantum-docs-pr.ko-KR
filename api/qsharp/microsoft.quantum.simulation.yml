@@ -1,0 +1,178 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: 새를 `GeneratorSystem` 만드는 두 개의를 추가 `GeneratorSystem` 합니다.
+  uid: Microsoft.Quantum.Simulation.AddGeneratorSystems
+- summary: >-
+    원하는 연산자를로 인코딩합니다 `BlockEncoding` .
+
+    이는 `BlockEncoding` 단일 $U = P\cdot V\cdot P ^ \kcdot $를 생성 합니다 .이 경우 일부 연산자 $H = \ sum_ {j} | \ alpha_j | Unitaries의 선형 조합 인 관심 U_j $입니다. 일반적으로 $P $은 $P \ket {0} \_ a = \ sum_j \sqrt{\ alpha_j/ \| \vec\alpha \| \_ 2} \ket{j} \_ a $ 및 $V = \ sum_ {j} \ket{j}\bra{j} \_ a\otimes U_j $ 같은 상태 준비의 단일 사항입니다.
+  uid: Microsoft.Quantum.Simulation.BlockEncodingByLCU
+- summary: >-
+    원하는 연산자를로 인코딩합니다 `BlockEncodingReflection` .
+
+    이는 `BlockEncodingReflection` 단일 $U = P\cdot V\cdot P ^ \kcdot $를 생성 합니다 .이 경우 일부 연산자 $H = \ sum_ {j} | \ alpha_j | Unitaries의 선형 조합 인 관심 U_j $입니다. 일반적으로 $P $은 $P \ket {0} \_ a \ sum_j \sqrt{\ alpha_j/ \| \vec\alpha \| \_ 2} \ket{j} \_ a $ 및 $V = \ sum_ {j} \ket{j}\bra{j} \_ a\otimes U_j $ 같은 상태 준비의 단일입니다.
+  uid: Microsoft.Quantum.Simulation.BlockEncodingReflectionByLCU
+- summary: >-
+    을 해당 하는으로 변환 합니다 `BlockEncoding` `BLockEncodingReflection` .
+
+    즉, 특정 `BlockEncoding` $H 연산자 ($)를 인코딩하는 단일 $U $가 지정 된 경우,이 연산자를 `BlockEncodingReflection` 동일한 연산자를 인코딩하는 $U ' $로 변환 하 고, $U ' ^ \A턴 = U ' $를 충족 합니다. 그러면 $U $의 보조 레지스터 크기가 1 배 비트로 늘어납니다.
+  uid: Microsoft.Quantum.Simulation.BlockEncodingToReflection
+- summary: '`GeneratorIndex`에서 함수를 검색 `GeneratorSystem` 합니다.'
+  uid: Microsoft.Quantum.Simulation.GetGeneratorSystemFunction
+- summary: 에서 용어 수를 검색 `GeneratorSystem` 합니다.
+  uid: Microsoft.Quantum.Simulation.GetGeneratorSystemNTerms
+- summary: Id 진화 작업에 해당 하는 0 Hamiltonian와 일치 하는 생성기 인덱스를 반환 합니다 `H = 0` .
+  uid: Microsoft.Quantum.Simulation.IdentityGeneratorIndex
+- summary: Id 진화 작업에 해당 하는 0 Hamiltonian 일치 하는 생성기 시스템을 반환 합니다 `H = 0` .
+  uid: Microsoft.Quantum.Simulation.IdentityGeneratorSystem
+- summary: Hamiltonian와 일치 하는 시간 종속 생성기 시스템을 반환 합니다 `H(s) = 0` .
+  uid: Microsoft.Quantum.Simulation.IdentityTimeDependentGeneratorSystem
+- summary: 구현에 사용 됨 `PauliBlockEncoding`
+  uid: Microsoft.Quantum.Simulation.IdxToCoeff
+- summary: 구현에 사용 됨 `PauliBlockEncoding`
+  uid: Microsoft.Quantum.Simulation.IdxToUnitary
+- summary: 정수를 단일 값 비트 Pauli 연산자로 변환 합니다.
+  uid: Microsoft.Quantum.Simulation.IntToPauli
+- summary: '`TimeDependentGeneratorSystem`두의 선형 보간을 나타내는을 반환 합니다 `GeneratorSystem` .'
+  uid: Microsoft.Quantum.Simulation.InterpolateGeneratorSystems
+- summary: '`GeneratorSystems` `s` 0에서 1 사이 (포함) 사이의 일정 매개 변수에 따라 두 개의를 선형으로 보간합니다.'
+  uid: Microsoft.Quantum.Simulation.InterpolateGeneratorSystemsImpl
+- summary: 균일 한 일정을 사용 하 여 두 생성기 간을 보간합니다. 결과 시간 종속 생성기에서 시뮬레이션 된 진화를 원하는 비트 레지스터에 적용 하는 작업을 반환 합니다.
+  uid: Microsoft.Quantum.Simulation.InterpolatedEvolution
+- summary: 정수 배열을 단일가 나 비트 Pauli 연산자의 배열로 변환 합니다.
+  uid: Microsoft.Quantum.Simulation.IntsToPaulis
+- summary: 에 계수를 곱합니다 `GeneratorIndex` .
+  uid: Microsoft.Quantum.Simulation.MultiplyGeneratorIndex
+- summary: 에 있는 모든 용어의 계수를 곱합니다 `GeneratorSystem` .
+  uid: Microsoft.Quantum.Simulation.MultiplyGeneratorSystem
+- summary: >-
+    Hamiltonian에 대 한 블록 인코딩 단일를 만듭니다.
+
+    Hamiltonian $H = \ sum_ {j} \ alpha_j P_j $는 각각 실제 계수 $ \ $P $를 포함 하는 Pauli 용어 _j alpha_j의 합계로 설명 됩니다.
+  uid: Microsoft.Quantum.Simulation.PauliBlockEncoding
+- summary: 에서 설명 하는 Pauli 용어의 계수를 추출 `GeneratorIndex` 합니다.
+  uid: Microsoft.Quantum.Simulation.PauliCoefficientFromGenIdx
+- summary: 동적 생성기를 simulatable 게이트 집합으로 나타내고 Pauli로 확장 합니다.
+  uid: Microsoft.Quantum.Simulation.PauliEvolutionFunction
+- summary: 동적 생성기를 simulatable 게이트 집합으로 나타내고 Pauli로 확장 합니다.
+  uid: Microsoft.Quantum.Simulation.PauliEvolutionSet
+- summary: 구현에 사용 됨 `PauliBlockEncoding`
+  uid: Microsoft.Quantum.Simulation.PauliLCUUnitary
+- summary: 에서 설명 하는 Pauli 문자열 및 해당의 해당 비트 인덱스를 추출 `GeneratorIndex` 합니다.
+  uid: Microsoft.Quantum.Simulation.PauliStringFromGenIdx
+- summary: 블록 인코딩 리플렉션을 퀀텀 탐색으로 변환 합니다.
+  uid: Microsoft.Quantum.Simulation.QuantumWalkByQubitization
+- summary: '`GeneratorSystem`새 GeneratorSystem을 만들려면를 여러 개 추가 합니다.'
+  uid: Microsoft.Quantum.Simulation.SumGeneratorSystems
+- summary: '`TimeDependentSimulationAlgorithm` Trotter – Suzuki 분해를 사용 하 여 시간 종속 Schrodinger 수식을 해결 하는 단일 연산자를 대략적으로 계산 하는 함수입니다.'
+  uid: Microsoft.Quantum.Simulation.TimeDependentTrotterSimulationAlgorithm
+- summary: '`SimulationAlgorithm` Trotter – Suzuki 분해를 사용 하 여 시간-진화 연산자 _exp (-iHt)_ 에 근사치를 적용 하는 함수입니다.'
+  uid: Microsoft.Quantum.Simulation.TrotterSimulationAlgorithm
+- summary: '`EvolutionGenerator`Trotter – Suzuki 분해를 사용 하 여에 설명 된 시스템의 시간 진화의 단일 시간 단계를 구현 합니다.'
+  uid: Microsoft.Quantum.Simulation.TrotterStep
+- summary: 새를 `GeneratorSystem` 만드는 두 개의를 추가 `GeneratorSystem` 합니다.
+  uid: Microsoft.Quantum.Simulation._AddGeneratorSystems
+- summary: Hamiltonian와 일치 하는 생성기 시스템을 반환 합니다 `H(s) = 0` `s` . 여기서는 일정 매개 변수입니다.
+  uid: Microsoft.Quantum.Simulation._IdentityTimeDependentGeneratorSystem
+- summary: 에 있는 모든 용어의 계수를 곱합니다 `GeneratorSystem` .
+  uid: Microsoft.Quantum.Simulation._MultiplyGeneratorSystem
+- summary: >-
+    Hamiltonian에 대 한 블록 인코딩 단일를 만듭니다.
+
+    Hamiltonian $H = \ sum_ {j} \ alpha_j P_j $는 각각 실제 계수 $ \ $P $를 포함 하는 Pauli 용어 _j alpha_j의 합계로 설명 됩니다.
+  uid: Microsoft.Quantum.Simulation._PauliBlockEncoding
+name: Microsoft.Quantum.Simulation
+newtypes:
+- summary: >-
+    관심이 있는 임의의 연산자가 왼쪽 위 블록에서 인코딩된 단일를 나타냅니다.
+
+    즉,는 `BlockEncoding` 시스템 레지스터에 대해 수행 되는 임의의 연산자 $H $ `s` \ket _a $에 해당 하는 왼쪽 위 블록에 인코딩 되는 임의의 연산자를 갖는 단일 $U $ {0} 입니다. 즉, $ $ \begin{align} (\bra {0} _a \otimes I_s) U (\ket {0} _a \otimes I_s) = H \end{align} $ $입니다.
+  uid: Microsoft.Quantum.Simulation.BlockEncoding
+- summary: Reflection 이기도 한를 나타냅니다 `BlockEncoding` .
+  uid: Microsoft.Quantum.Simulation.BlockEncodingReflection
+- summary: >-
+    동적 생성기를 simulatable 게이트 집합으로 표시 하 고이를 기준으로 확장을 나타냅니다.
+
+    용어 수의 마지막 매개 변수입니다.
+  uid: Microsoft.Quantum.Simulation.EvolutionGenerator
+- summary: >-
+    시간 종속 동적 생성기를 나타냅니다.
+
+    `Double`매개 변수는 $ [0, 1] $의 일정입니다.
+  uid: Microsoft.Quantum.Simulation.EvolutionSchedule
+- summary: >-
+    시뮬레이션 알고리즘을 구현 하는 데 쉽게 구현 하 고 사용할 수 있는 게이트 집합을 나타냅니다.
+
+    집합의 요소는로 인덱싱됩니다.  <xref:microsoft.quantum.simulation.generatorindex> 각 집합은에 대 한 함수에서로 설명 됩니다 .이 함수는 `GeneratorIndex` 시간을  <xref:microsoft.quantum.simulation.evolutionunitary> 나타내는 실수에 의해 매개 변수화 된 작업입니다.
+  uid: Microsoft.Quantum.Simulation.EvolutionSet
+- summary: >-
+    단일 시간 진화 연산자를 나타냅니다.
+
+    첫 번째 매개 변수는 시간 진화의 기간 이며 두 번째 매개 변수는 단일에 의해 처리 되는 고 비트 레지스터입니다.
+  uid: Microsoft.Quantum.Simulation.EvolutionUnitary
+- summary: >-
+    모든 동적 생성기 집합의 단일 기본 용어를 나타냅니다. 예를 들어 Hermitian 연산자는 해당 생성기의 map이 해당 생성기의 시간 혁신을 통해 발생 하는 것입니다 `EvolutionSet` .
+
+    첫 번째 요소 (Int [], Double [])는 단일 용어로 이루어진 인덱스입니다. 예를 들어, Pauli 문자열 XXY 계수 0.5는 ([1, 1, 2], [0.5])으로 인덱싱됩니다. 또는 X cos φ + Y sin φ와 같이 연속 변수에 의해 매개 변수화 된 Hamiltonians은 ([], [φ])로 표현 될 수 있습니다. 두 번째 요소는 생성기가 작동 하는 하위 시스템을 인덱싱합니다.
+  uid: Microsoft.Quantum.Simulation.GeneratorIndex
+- summary: >-
+    Es의 컬렉션을 나타냅니다 `GeneratorIndex` .
+
+    단일 인덱스 정수를 사용 하 여이 컬렉션을 반복 하 고 컬렉션의 크기는 알려진 것으로 간주 됩니다.
+  uid: Microsoft.Quantum.Simulation.GeneratorSystem
+- summary: >-
+    시간 독립적 시뮬레이션 알고리즘을 나타냅니다.
+
+    시간 독립적 시뮬레이션 기술은 <xref:microsoft.quantum.simulation.evolutiongenerator> 일정 시간 간격 동안을 단일 시간으로 전환 합니다.
+  uid: Microsoft.Quantum.Simulation.SimulationAlgorithm
+- summary: >-
+    클록 레지스터에 의해 제어 되는를 나타냅니다 `BlockEncoding` .
+
+    즉,는 `TimeDependentBlockEncoding` 클록 등록의 state $ \ket{k} d $로 제어 되는 단일 $U $입니다 .이는 _`d` 시스템 레지스터에 대해 작동 하는 $H _k $ 관련 된 임의 연산자 `s` 가 보조 상태 $ \ket a $에 해당 하는 왼쪽 위 블록에 인코딩되어 {0} _있습니다. 즉, $ $ \begin{align} (\bra {0} \_ a\otimes I_ {Ds}) U (\ket {0} \_ a\otimes i_ {ds}) = \ sum_ {k} \ket{k}\bra{k} \_ d\otimes H_k. \end{align} $ $.
+  uid: Microsoft.Quantum.Simulation.TimeDependentBlockEncoding
+- summary: 시간에 따른 동적 생성기를 시간에서 동적 생성기 값 까지의 함수로 나타냅니다.
+  uid: Microsoft.Quantum.Simulation.TimeDependentGeneratorSystem
+- summary: >-
+    시간이 종속 된 시뮬레이션 알고리즘을 나타냅니다.
+
+    시간에 따라 달라 지는 시뮬레이션 기술은를 <xref:microsoft.quantum.simulation.evolutionschedule> 일정 시간 간격 동안 단일 시간 진화로 변환 합니다.
+  uid: Microsoft.Quantum.Simulation.TimeDependentSimulationAlgorithm
+- summary: 단일 연산자의 진화를 나타냅니다.
+  uid: Microsoft.Quantum.Simulation.Unitary
+operations:
+- summary: 을 사용 하 여 상태를 적용 하 고,를 `statePrepUnitary` 사용 하 여 adiabatic 상태 준비를 수행 하 `adiabaticUnitary` 고,를 `qpeUnitary` 사용 하 여 결과 상태에 대 한 마지막 단계 추정치를 적용 하 여 상태 준비를 수행 합니다 `phaseEstAlgorithm` .
+  uid: Microsoft.Quantum.Simulation.AdiabaticStateEnergyUnitary
+- summary: '`BlockEncodingToReflection`의 구현입니다.'
+  uid: Microsoft.Quantum.Simulation.ApplyBlockEncodingAsReflection
+- summary: '`BlockEncodingByLCU`의 구현입니다.'
+  uid: Microsoft.Quantum.Simulation.ApplyBlockEncodingByLCU
+- summary: ((LittleEndian, Adj []) => ()를 BlockEncoding으로 변환 ()
+  uid: Microsoft.Quantum.Simulation.ApplyBlockEncodingFromBEandQubit
+- summary: 구현에 사용 됨 `PauliBlockEncoding`
+  uid: Microsoft.Quantum.Simulation.ApplyPauliLCUUnitary
+- summary: '`Qubitization`의 구현입니다.'
+  uid: Microsoft.Quantum.Simulation.ApplyQuantumWalkByQubitization
+- summary: '`statePrepUnitary` `qpeUnitary` 을 사용 하 여 결과 상태에 대해 자동으로 할당 된 입력 상태 단계 추정에를 적용 하 여 상태 준비를 수행 `phaseEstAlgorithm` 합니다.'
+  uid: Microsoft.Quantum.Simulation.EstimateEnergy
+- summary: '`statePrepUnitary`자동으로 할당 된 입력 상태에를 적용 하 고,를 사용 하 여 adiabatic 상태 준비를 수행 하 `adiabaticUnitary` 고,를 `qpeUnitary` 사용 하 여 결과 상태에 대 한 마지막 단계 추정치를 적용 하 여 상태 준비를 수행 합니다 `phaseEstAlgorithm` .'
+  uid: Microsoft.Quantum.Simulation.EstimateEnergyWithAdiabaticEvolution
+- summary: >-
+    동적 생성기를 simulatable 게이트 집합으로 나타내고 Pauli로 확장 합니다.
+
+    자세한 내용은 [동적 생성기 모델링](/quantum/libraries/data-structures#dynamical-generator-modeling) 을 참조 하세요.
+  uid: Microsoft.Quantum.Simulation.PauliEvolutionImpl
+- summary: 시간 종속 Schrödinger 방정식을 해결 하는 단일 연산자의 근사값을 위한 여러 Trotter 단계 구현.
+  uid: Microsoft.Quantum.Simulation.TimeDependentTrotterSimulationAlgorithmImpl
+- summary: 는를 반복 해 서 호출 하 여 `TrotterStep` 시간 진화 연산자 exp ( _-iht_ )를 대략적으로 호출 합니다.
+  uid: Microsoft.Quantum.Simulation.TrotterSimulationAlgorithmImpl
+- summary: 에 포함 된 용어에의 한 시간 혁신을 구현 `GeneratorSystem` 합니다.
+  uid: Microsoft.Quantum.Simulation.TrotterStepImpl
+summary: 이 네임 스페이스는 퀀텀 시스템의 dynamics를 시뮬레이션 하는 coherently 함수 및 작업을 포함 합니다.
+uid: Microsoft.Quantum.Simulation
+metadata:
+  ms.openlocfilehash: dd1c6fe3baab8788047020bbe3d5dbe2888dec45
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92725779"
