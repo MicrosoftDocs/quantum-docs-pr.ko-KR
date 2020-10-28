@@ -1,0 +1,52 @@
+---
+uid: Microsoft.Quantum.Extensions.Math.Sin
+title: Sin 함수
+ms.date: 10/26/2020 12:00:00 AM
+ms.topic: article
+qsharp.kind: function
+qsharp.namespace: Microsoft.Quantum.Extensions.Math
+qsharp.name: Sin
+qsharp.summary: >-
+  > [!WARNING]
+
+  > Sin has been deprecated. Please use <xref:Microsoft.Quantum.Math.Sin> instead.
+
+  >
+
+  > Please use @"microsoft.quantum.math.sin".
+ms.openlocfilehash: 8e10ede97c1a268379044aaa01c628f93dd84db7
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92722678"
+---
+# <a name="sin-function"></a>Sin 함수
+
+네임 스페이스: [Microsoft 양자 확장명](xref:Microsoft.Quantum.Extensions.Math)
+
+패키지 [](https://nuget.org/packages/)
+
+
+> [!WARNING]
+> Sin은 더 이상 사용 되지 않습니다. 대신 <xref:Microsoft.Quantum.Math.Sin>를 사용하십시오.
+>
+> @"microsoft.quantum.math.sin"을 사용하세요.
+
+
+
+```qsharp
+function Sin (theta : Double) : Double
+```
+
+
+## <a name="input"></a>입력
+
+### <a name="theta--double"></a>테타: [Double](xref:microsoft.quantum.lang-ref.double)
+
+
+
+
+
+## <a name="output--double"></a>출력: [Double](xref:microsoft.quantum.lang-ref.double)
+

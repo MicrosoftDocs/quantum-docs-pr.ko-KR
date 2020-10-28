@@ -1,0 +1,281 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: 형식의 복소수의 절대값을 반환 합니다 `Complex` .
+  uid: Microsoft.Quantum.Math.AbsComplex
+- summary: 형식의 복소수의 절대값을 반환 합니다 `ComplexPolar` .
+  uid: Microsoft.Quantum.Math.AbsComplexPolar
+- summary: 배정밀도 부동 소수점 수의 절대 값을 반환합니다.
+  uid: Microsoft.Quantum.Math.AbsD
+- summary: 정수의 절대값을 반환 합니다.
+  uid: Microsoft.Quantum.Math.AbsI
+- summary: 큰 정수의 절대 값을 반환 합니다.
+  uid: Microsoft.Quantum.Math.AbsL
+- summary: 형식의 복소수의 제곱 절대값을 반환 합니다 `Complex` .
+  uid: Microsoft.Quantum.Math.AbsSquaredComplex
+- summary: 형식의 복소수의 제곱 절대값을 반환 합니다 `ComplexPolar` .
+  uid: Microsoft.Quantum.Math.AbsSquaredComplexPolar
+- summary: 값의 bitsize를 재귀적으로 계산 하는 데 사용 되는 도우미 함수입니다.
+  uid: Microsoft.Quantum.Math.AccumulatedBitsizeI
+- summary: 값의 bitsize를 재귀적으로 계산 하는 데 사용 되는 도우미 함수입니다.
+  uid: Microsoft.Quantum.Math.AccumulatedBitsizeL
+- summary: 코사인을 적용했을 때 지정된 숫자가 나오는 각도를 반환합니다.
+  uid: Microsoft.Quantum.Math.ArcCos
+- summary: 숫자의 역 쌍 곡 코사인을 계산 합니다.
+  uid: Microsoft.Quantum.Math.ArcCosh
+- summary: 사인을 적용했을 때 지정된 숫자가 나오는 각도를 반환합니다.
+  uid: Microsoft.Quantum.Math.ArcSin
+- summary: 숫자의 역 하이퍼볼릭 사인을 계산 합니다.
+  uid: Microsoft.Quantum.Math.ArcSinh
+- summary: 탄젠트를 적용했을 때 지정된 숫자가 나오는 각도를 반환합니다.
+  uid: Microsoft.Quantum.Math.ArcTan
+- summary: 탄젠트를 적용했을 때 지정된 두 숫자의 몫이 나오는 각도를 반환합니다.
+  uid: Microsoft.Quantum.Math.ArcTan2
+- summary: 숫자의 역 하이퍼볼릭 탄젠트를 계산 합니다.
+  uid: Microsoft.Quantum.Math.ArcTanh
+- summary: 복소수 형식의 단계를 반환 합니다 `Complex` .
+  uid: Microsoft.Quantum.Math.ArgComplex
+- summary: 복소수 형식의 단계를 반환 합니다 `ComplexPolar` .
+  uid: Microsoft.Quantum.Math.ArgComplexPolar
+- summary: >-
+    음수가 아닌 정수의 경우 `a` 를 나타내는 데 필요한 비트 수를 반환 `a` 합니다.
+
+    즉, $a < 2 ^ n $와 같은 가장 작은 $n $를 반환 합니다.
+  uid: Microsoft.Quantum.Math.BitSizeI
+- summary: >-
+    음수가 아닌 정수의 경우 `a` 를 나타내는 데 필요한 비트 수를 반환 `a` 합니다.
+
+    즉, $a < 2 ^ n $와 같은 가장 작은 $n $를 반환 합니다.
+  uid: Microsoft.Quantum.Math.BitSizeL
+- summary: 지정된 수보다 크거나 같은 최소 정수를 반환합니다.
+  uid: Microsoft.Quantum.Math.Ceiling
+- summary: 복소수 수를 형식의 복소수로 변환 `Complex` `ComplexPolar` 합니다.
+  uid: Microsoft.Quantum.Math.ComplexAsComplexPolar
+- summary: 복소수 수를 형식의 복소수로 변환 `ComplexPolar` `Complex` 합니다.
+  uid: Microsoft.Quantum.Math.ComplexPolarAsComplex
+- summary: 일치에 가장 가까운 연속 분수를 찾습니다. `fraction``denominatorBound`
+  uid: Microsoft.Quantum.Math.ContinuedFractionConvergentI
+- summary: 일치에 가장 가까운 연속 분수를 찾습니다. `fraction``denominatorBound`
+  uid: Microsoft.Quantum.Math.ContinuedFractionConvergentL
+- summary: 지정된 각도의 코사인을 반환합니다.
+  uid: Microsoft.Quantum.Math.Cos
+- summary: 지정된 각도의 하이퍼볼릭 코사인을 반환합니다.
+  uid: Microsoft.Quantum.Math.Cosh
+- summary: 하나의 BigInteger 값을 다른 값으로 나누고 결과와 나머지를 튜플로 반환 합니다.
+  uid: Microsoft.Quantum.Math.DivRemL
+- summary: 두 입력의 몫을 반환 합니다.
+  uid: Microsoft.Quantum.Math.DividedByC
+- summary: 두 입력의 몫을 반환 합니다.
+  uid: Microsoft.Quantum.Math.DividedByCP
+- summary: 두 입력의 몫을 반환 합니다.
+  uid: Microsoft.Quantum.Math.DividedByD
+- summary: 두 입력의 몫을 반환 합니다.
+  uid: Microsoft.Quantum.Math.DividedByI
+- summary: 두 입력의 몫을 반환 합니다.
+  uid: Microsoft.Quantum.Math.DividedByL
+- summary: 자연 로그 밑 $e $를 반환 합니다.
+  uid: Microsoft.Quantum.Math.E
+- summary: 지정 된 지 수로 거듭제곱 한 $e 반환 합니다.
+  uid: Microsoft.Quantum.Math.ExpD
+- summary: 지정 된 모듈러스와 관련 하 여 지정 된 지 수 만큼 거듭제곱 한 정수를 반환 합니다.
+  uid: Microsoft.Quantum.Math.ExpModI
+- summary: 지정 된 모듈러스와 관련 하 여 지정 된 지 수 만큼 거듭제곱 한 정수를 반환 합니다.
+  uid: Microsoft.Quantum.Math.ExpModL
+- summary: $U \cdot a + v \cdot b = \operatorname{GCD} (a, b) $와 같이 튜플을 $ (u, v) $로 계산 합니다. 여기서 $ \operatorname{GCD} $은 $a $ $a $ 및 $b $의 최대 공약수입니다. GCD는 항상 양수입니다.
+  uid: Microsoft.Quantum.Math.ExtendedGreatestCommonDivisorI
+- summary: $U \cdot a + v \cdot b = \operatorname{GCD} (a, b) $와 같이 튜플을 $ (u, v) $로 계산 합니다. 여기서 $ \operatorname{GCD} $은 $a $ $a $ 및 $b $의 최대 공약수입니다. GCD는 항상 양수입니다.
+  uid: Microsoft.Quantum.Math.ExtendedGreatestCommonDivisorL
+- summary: 지정한 숫자보다 작거나 같은 가장 큰 정수를 반환합니다.
+  uid: Microsoft.Quantum.Math.Floor
+- summary: $A $ 및 $b $의 최대 공약수를 계산 합니다. GCD는 항상 양수입니다.
+  uid: Microsoft.Quantum.Math.GreatestCommonDivisorI
+- summary: $A $ 및 $b $의 최대 공약수를 계산 합니다. GCD는 항상 양수입니다.
+  uid: Microsoft.Quantum.Math.GreatestCommonDivisorL
+- summary: 지정된 수를 지정된 다른 수로 나눈 나머지를 반환합니다.
+  uid: Microsoft.Quantum.Math.IEEERemainder
+- summary: $A \cdot b = 1 (\operatorname{mod} \texttt{modulus}) $과 같은 $b $를 반환 합니다.
+  uid: Microsoft.Quantum.Math.InverseModI
+- summary: $A \cdot b = 1 (\operatorname{mod} \texttt{modulus}) $과 같은 $b $를 반환 합니다.
+  uid: Microsoft.Quantum.Math.InverseModL
+- summary: $A $ 및 $b $가 같은 경우 true를 반환 하 고 그렇지 않으면 false를 반환 합니다.
+  uid: Microsoft.Quantum.Math.IsCoprimeI
+- summary: $A $ 및 $b $가 같은 경우 true를 반환 하 고 그렇지 않으면 false를 반환 합니다.
+  uid: Microsoft.Quantum.Math.IsCoprimeL
+- summary: 숫자의 밑이 2 인 로그를 계산 합니다.
+  uid: Microsoft.Quantum.Math.Lg
+- summary: 지정 된 숫자의 자연 (밑 $e $) 로그를 반환 합니다.
+  uid: Microsoft.Quantum.Math.Log
+- summary: 밑을 10으로 사용하여 지정된 숫자의 로그를 반환합니다.
+  uid: Microsoft.Quantum.Math.Log10
+- summary: 2의 자연 로그를 반환 합니다.
+  uid: Microsoft.Quantum.Math.LogOf2
+- summary: 정수 배열이 지정 된 경우 가장 큰 요소를 반환 합니다.
+  uid: Microsoft.Quantum.Math.Max
+- summary: 지정된 두 숫자 중 더 큰 숫자를 반환합니다.
+  uid: Microsoft.Quantum.Math.MaxD
+- summary: 지정된 두 숫자 중 더 큰 숫자를 반환합니다.
+  uid: Microsoft.Quantum.Math.MaxI
+- summary: 지정된 두 숫자 중 더 큰 숫자를 반환합니다.
+  uid: Microsoft.Quantum.Math.MaxL
+- summary: 정수 배열이 지정 된 경우 가장 작은 요소를 반환 합니다.
+  uid: Microsoft.Quantum.Math.Min
+- summary: 지정 된 두 숫자 중 더 작은 숫자를 반환 합니다.
+  uid: Microsoft.Quantum.Math.MinD
+- summary: 지정 된 두 숫자 중 더 작은 숫자를 반환 합니다.
+  uid: Microsoft.Quantum.Math.MinI
+- summary: 지정 된 두 숫자 중 더 작은 숫자를 반환 합니다.
+  uid: Microsoft.Quantum.Math.MinL
+- summary: 두 입력 간의 차이를 반환 합니다.
+  uid: Microsoft.Quantum.Math.MinusC
+- summary: 두 입력 간의 차이를 반환 합니다.
+  uid: Microsoft.Quantum.Math.MinusCP
+- summary: 두 입력 간의 차이를 반환 합니다.
+  uid: Microsoft.Quantum.Math.MinusD
+- summary: 두 입력 간의 차이를 반환 합니다.
+  uid: Microsoft.Quantum.Math.MinusI
+- summary: 두 입력 간의 차이를 반환 합니다.
+  uid: Microsoft.Quantum.Math.MinusL
+- summary: 다른 숫자와 관련 된 숫자의 모듈러스를 반환 합니다.
+  uid: Microsoft.Quantum.Math.ModI
+- summary: 다른 숫자와 관련 된 숫자의 모듈러스를 반환 합니다.
+  uid: Microsoft.Quantum.Math.ModL
+- summary: 다른 숫자의 승수로 거듭제곱 한 숫자에 대해 모듈식 나누기를 수행 합니다.
+  uid: Microsoft.Quantum.Math.ModPowL
+- summary: 모듈로 정식 residue을 계산 `value` `modulus` 합니다.
+  uid: Microsoft.Quantum.Math.ModulusI
+- summary: 모듈로 정식 residue을 계산 `value` `modulus` 합니다.
+  uid: Microsoft.Quantum.Math.ModulusL
+- summary: 입력의 단항 부정을 반환 합니다.
+  uid: Microsoft.Quantum.Math.NegationC
+- summary: 입력의 단항 부정을 반환 합니다.
+  uid: Microsoft.Quantum.Math.NegationCP
+- summary: 입력의 단항 부정을 반환 합니다.
+  uid: Microsoft.Quantum.Math.NegationD
+- summary: 입력의 단항 부정을 반환 합니다.
+  uid: Microsoft.Quantum.Math.NegationI
+- summary: 입력의 단항 부정을 반환 합니다.
+  uid: Microsoft.Quantum.Math.NegationL
+- summary: 상수(π)로 지정된 원주율을 나타냅니다.
+  uid: Microsoft.Quantum.Math.PI
+- summary: >-
+    `L(p)`S 벡터의 표준을 반환 합니다 `Double` .
+
+    즉, 형식의 $x $ 배열을 지정 하면 `Double[]` $-ad$ \| x \| \_ p = (\ sum_ {j} | x_j | ^ {p}) ^ {1/p} $ $p 반환 됩니다.
+  uid: Microsoft.Quantum.Math.PNorm
+- summary: >-
+    일반에서의 벡터를 정규화 `Double` `L(p)` 합니다.
+
+    즉, 형식의 $x $ 배열이 지정 된 경우 `Double[]` 모든 요소가 $-일반 $ x _p $ $p으로 나뉘는 배열을 반환 \| \| 합니다.
+  uid: Microsoft.Quantum.Math.PNormalized
+- summary: 두 입력의 합 (연결)을 반환 합니다.
+  uid: Microsoft.Quantum.Math.PlusA
+- summary: 두 입력의 합을 반환 합니다.
+  uid: Microsoft.Quantum.Math.PlusC
+- summary: 두 입력의 합을 반환 합니다.
+  uid: Microsoft.Quantum.Math.PlusCP
+- summary: 두 입력의 합을 반환 합니다.
+  uid: Microsoft.Quantum.Math.PlusD
+- summary: 두 입력의 합을 반환 합니다.
+  uid: Microsoft.Quantum.Math.PlusI
+- summary: 두 입력의 합을 반환 합니다.
+  uid: Microsoft.Quantum.Math.PlusL
+- summary: 지정 된 지 수 만큼 거듭제곱 한 숫자를 반환 합니다.
+  uid: Microsoft.Quantum.Math.PowC
+- summary: 내부에서 사용됩니다. 극좌표 형 형식으로 반환 하는 것 처럼 두 복소수를 데카르트 형식으로 정의 하는 것이 가장 간단 하기 때문에 여기에서 정의한 다음 필요에 따라 변환 합니다.
+  uid: Microsoft.Quantum.Math.PowCAsCP
+- summary: 지정 된 지 수 만큼 거듭제곱 한 숫자를 반환 합니다.
+  uid: Microsoft.Quantum.Math.PowCP
+- summary: 거듭제곱 한 숫자 x를 반환 합니다.
+  uid: Microsoft.Quantum.Math.PowD
+- summary: 지정 된 지 수 만큼 거듭제곱 한 숫자를 반환 합니다.
+  uid: Microsoft.Quantum.Math.PowI
+- summary: 지정 된 지 수 만큼 거듭제곱 한 숫자를 반환 합니다.
+  uid: Microsoft.Quantum.Math.PowL
+- summary: 두 실수 사이의 모듈러스를 계산 합니다.
+  uid: Microsoft.Quantum.Math.RealMod
+- summary: 값을 가장 가까운 정수로 반올림 합니다.
+  uid: Microsoft.Quantum.Math.Round
+- summary: 숫자의 부호를 나타내는 정수를 반환합니다.
+  uid: Microsoft.Quantum.Math.SignD
+- summary: 숫자의 부호를 나타내는 정수를 반환합니다.
+  uid: Microsoft.Quantum.Math.SignI
+- summary: 숫자의 부호를 나타내는 정수를 반환합니다.
+  uid: Microsoft.Quantum.Math.SignL
+- summary: 지정된 각도의 사인을 반환합니다.
+  uid: Microsoft.Quantum.Math.Sin
+- summary: 지정된 각도의 하이퍼볼릭 사인을 반환합니다.
+  uid: Microsoft.Quantum.Math.Sinh
+- summary: 지정된 숫자의 제곱근을 반환합니다.
+  uid: Microsoft.Quantum.Math.Sqrt
+- summary: 벡터의 2 차 제곱을 반환 합니다.
+  uid: Microsoft.Quantum.Math.SquaredNorm
+- summary: 지정된 각도의 탄젠트를 반환합니다.
+  uid: Microsoft.Quantum.Math.Tan
+- summary: 지정된 각도의 하이퍼볼릭 탄젠트를 반환합니다.
+  uid: Microsoft.Quantum.Math.Tanh
+- summary: 두 입력의 곱을 반환 합니다.
+  uid: Microsoft.Quantum.Math.TimesC
+- summary: 두 입력의 곱을 반환 합니다.
+  uid: Microsoft.Quantum.Math.TimesCP
+- summary: 두 입력의 곱을 반환 합니다.
+  uid: Microsoft.Quantum.Math.TimesD
+- summary: 두 입력의 곱을 반환 합니다.
+  uid: Microsoft.Quantum.Math.TimesI
+- summary: 두 입력의 곱을 반환 합니다.
+  uid: Microsoft.Quantum.Math.TimesL
+- summary: 숫자의 정수 부분을 계산합니다.
+  uid: Microsoft.Quantum.Math.Truncate
+- summary: 바인딩된 GCD를 계산 하는 내부 재귀 호출입니다.
+  uid: Microsoft.Quantum.Math._ContinuedFractionConvergentI
+- summary: 바인딩된 GCD를 계산 하는 내부 재귀 호출입니다.
+  uid: Microsoft.Quantum.Math._ContinuedFractionConvergentL
+- summary: GCD을 계산 하는 내부 재귀 호출입니다.
+  uid: Microsoft.Quantum.Math._ExtendedGreatestCommonDivisorI
+- summary: GCD을 계산 하는 내부 재귀 호출입니다.
+  uid: Microsoft.Quantum.Math._ExtendedGreatestCommonDivisorL
+name: Microsoft.Quantum.Math
+newtypes:
+- summary: 폼의 유리수를 나타냅니다 `p/q` . 정수 `p` 는 튜플의 첫 번째 요소이 고 `q` 는 튜플의 두 번째 요소입니다.
+  uid: Microsoft.Quantum.Math.BigFraction
+- summary: 실수 및 허수 구성 요소로 복소수를 나타냅니다. 튜플의 첫 번째 요소는 실제 구성 요소이 고, 두 번째는 허수 구성 요소입니다.
+  uid: Microsoft.Quantum.Math.Complex
+- summary: >-
+    극좌표 형식의 복소수를 나타냅니다.
+
+    복소수의 극좌표 표현은 $c = r e ^ {i t} $입니다.
+  uid: Microsoft.Quantum.Math.ComplexPolar
+- summary: 폼의 유리수를 나타냅니다 `p/q` . 정수 `p` 는 튜플의 첫 번째 요소이 고 `q` 는 튜플의 두 번째 요소입니다.
+  uid: Microsoft.Quantum.Math.Fraction
+operations:
+- summary: >+
+    > [!WARNING]
+
+    > RandomInt는 더 이상 사용 되지 않습니다. 대신 <xref:Microsoft.Quantum.Random.DrawRandomInt>를 사용하십시오.
+
+  uid: Microsoft.Quantum.Math.RandomInt
+- summary: >+
+    > [!WARNING]
+
+    > RandomIntPow2는 더 이상 사용 되지 않습니다. 대신 <xref:Microsoft.Quantum.Random.DrawRandomInt>를 사용하십시오.
+
+  uid: Microsoft.Quantum.Math.RandomIntPow2
+- summary: >+
+    > [!WARNING]
+
+    > RandomReal는 더 이상 사용 되지 않습니다. 대신 <xref:Microsoft.Quantum.Random.DrawRandomDouble>를 사용하십시오.
+
+  uid: Microsoft.Quantum.Math.RandomReal
+- summary: >+
+    > [!WARNING]
+
+    > RandomSingleQubitPauli는 더 이상 사용 되지 않습니다. 대신 <xref:Microsoft.Quantum.Random.DrawRandomPauli>를 사용하십시오.
+
+  uid: Microsoft.Quantum.Math.RandomSingleQubitPauli
+summary: 이 네임 스페이스는 기존 수학 함수 및 데이터 형식을 포함 합니다.
+uid: Microsoft.Quantum.Math
+metadata:
+  ms.openlocfilehash: 13ccb80ce78e7d9d6341d7b228e39b65026ab090
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92723399"
