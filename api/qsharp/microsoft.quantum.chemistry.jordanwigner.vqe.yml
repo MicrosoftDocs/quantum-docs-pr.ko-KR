@@ -1,0 +1,24 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: 이러한 및 Pauli 용어 사이에 일대일 매핑을 얻기 위해 Jordan-Wigner 계수의 압축 된 표현을 확장 합니다.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.VQE.ExpandedCoefficients
+- summary: Jordan-Wigner 용어의 예상 값을 계산 하는 데 필요한 모든 측정 연산자를 계산 합니다.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.VQE.MeasurementOperators
+name: Microsoft.Quantum.Chemistry.JordanWigner.VQE
+newtypes: []
+operations:
+- summary: 개별 Jordan-Wigner 용어로 제공한 에너지를 합산 하 여 분자의 에너지를 추정 합니다.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.VQE.EstimateEnergy
+- summary: 지정 된 Jordan-Wigner Hamiltonian term에 연결 된 에너지를 계산 합니다.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.VQE.EstimateTermExpectation
+- summary: Adjoint를 정의 하 여 EstimateFrequencyA와 호환 되도록 PrepareTrialState에 대 한 개인 래퍼입니다. EstimateFrequencyA는 QuantumSimulator를 대상으로 하는 경우 기본 제공 에뮬레이션 기능을 제공 하므로 실행 속도가 빨라집니다.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.VQE._prepareTrialStateWrapper
+summary: ''
+uid: Microsoft.Quantum.Chemistry.JordanWigner.VQE
+metadata:
+  ms.openlocfilehash: 6c99da452067d5e8902e05e53cabd70ca910cd60
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92714113"
