@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines.qc-trace-simulator.intro
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 7f5e25aa7b58277642783e03d03854cd75ff4ca3
-ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
+ms.openlocfilehash: 2e2d9f8494d8709fba34123793cecce4011b609a
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91771298"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92690830"
 ---
 # <a name="microsoft-quantum-development-kit-qdk-quantum-trace-simulator"></a>Microsoft QDK(Quantum Development Kit) 퀀텀 추적 시뮬레이터
 
@@ -55,7 +55,7 @@ namespace Quantum.MyProgram
 
 퀀텀 추적 시뮬레이터는 실제 퀀텀 상태를 시뮬레이션하지 않으므로 작업 내에서 측정 결과의 확률을 계산할 수 없습니다. 
 
-따라서 작업에 측정값이 포함된 경우 <xref:microsoft.quantum.diagnostics> 네임스페이스의 <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> 작업을 사용하여 이러한 확률을 명시적으로 제공해야 합니다. 다음 예제에서는 이에 대해 설명합니다.
+따라서 작업에 측정값이 포함된 경우 <xref:Microsoft.Quantum.Diagnostics> 네임스페이스의 <xref:Microsoft.Quantum.Diagnostics.AssertMeasurementProbability> 작업을 사용하여 이러한 확률을 명시적으로 제공해야 합니다. 다음 예제에서는 이에 대해 설명합니다.
 
 ```qsharp
 operation TeleportQubit(source : Qubit, target : Qubit) : Unit {
@@ -74,7 +74,7 @@ operation TeleportQubit(source : Qubit, target : Qubit) : Unit {
 }
 ```
 
-퀀텀 추적 시뮬레이터가 `AssertMeasurementProbability`를 만날 때 `source` 및 `q`에서 `PauliZ`를 측정하면 **0.5**의 확률로 `Zero`를 제공하는 것으로 기록합니다. 나중에 `M` 작업을 실행할 때, 결과 확률의 기록된 값을 찾고 `M`은 **0.5**의 확률로 `Zero` 또는 `One`을 반환합니다. 퀀텀 상태를 추적하는 시뮬레이터에서 동일한 코드를 실행하는 경우, 해당 시뮬레이터는 `AssertMeasurementProbability`의 제공된 확률이 올바른지 확인합니다.
+퀀텀 추적 시뮬레이터가 `AssertMeasurementProbability`를 만날 때 `source` 및 `q`에서 `PauliZ`를 측정하면 **0.5** 의 확률로 `Zero`를 제공하는 것으로 기록합니다. 나중에 `M` 작업을 실행할 때, 결과 확률의 기록된 값을 찾고 `M`은 **0.5** 의 확률로 `Zero` 또는 `One`을 반환합니다. 퀀텀 상태를 추적하는 시뮬레이터에서 동일한 코드를 실행하는 경우, 해당 시뮬레이터는 `AssertMeasurementProbability`의 제공된 확률이 올바른지 확인합니다.
 
 `AssertMeasurementProbability`를 사용하여 주석을 달지 않은 측정 작업이 하나 이상 있는 경우 시뮬레이터는 [`UnconstrainedMeasurementException`](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.unconstrainedmeasurementexception)을 throw합니다.
 
