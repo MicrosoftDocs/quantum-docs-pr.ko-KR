@@ -1,0 +1,187 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: 에서 `BigEndian` `LittleEndian` 의 비트 순서를 반대로 하 여이를 지정 합니다.
+  uid: Microsoft.Quantum.Arithmetic.BigEndianAsLittleEndian
+- summary: True 이면 비용이 많이 드는 추가 어설션이 가능 하지만 산술 함수 사용을 디버그 하는 데 유용 합니다.
+  uid: Microsoft.Quantum.Arithmetic.ExtraArithmeticAssertionsEnabled
+- summary: 제공 된 배열의 모든 고정 소수점 숫자가 동일한 점 위치와 고 비트 숫자를 갖도록 어설션 합니다.
+  uid: Microsoft.Quantum.Arithmetic.IdenticalFormatFactFxP
+- summary: 제공 된 배열의 모든 고정 소수점 숫자가 최하위 비트에서 계산 될 때 동일한 점 위치를 갖도록 어설션 합니다. 즉, 비트 수 빼기 point position은 배열의 모든 고정 소수점 숫자에 대해 상수 여야 합니다.
+  uid: Microsoft.Quantum.Arithmetic.IdenticalPointPosFactFxP
+- summary: 에서 `LittleEndian` `BigEndian` 의 비트 순서를 반대로 하 여이를 지정 합니다.
+  uid: Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian
+- summary: 빅 endian 입력을 사용 하는 작업의 경우는 작은 endian 입력을 사용 하는 새 작업을 반환 합니다.
+  uid: Microsoft.Quantum.Arithmetic.ReversedOpBE
+- summary: 빅 endian 입력을 사용 하는 작업의 경우는 작은 endian 입력을 사용 하는 새 작업을 반환 합니다.
+  uid: Microsoft.Quantum.Arithmetic.ReversedOpBEA
+- summary: 빅 endian 입력을 사용 하는 작업의 경우는 작은 endian 입력을 사용 하는 새 작업을 반환 합니다.
+  uid: Microsoft.Quantum.Arithmetic.ReversedOpBEC
+- summary: 빅 endian 입력을 사용 하는 작업의 경우는 작은 endian 입력을 사용 하는 새 작업을 반환 합니다.
+  uid: Microsoft.Quantum.Arithmetic.ReversedOpBECA
+- summary: 는 작은 endian 입력을 사용 하는 작업에 대해 빅 endian 입력을 사용 하는 새 작업을 반환 합니다.
+  uid: Microsoft.Quantum.Arithmetic.ReversedOpLE
+- summary: 는 작은 endian 입력을 사용 하는 작업에 대해 빅 endian 입력을 사용 하는 새 작업을 반환 합니다.
+  uid: Microsoft.Quantum.Arithmetic.ReversedOpLEA
+- summary: 는 작은 endian 입력을 사용 하는 작업에 대해 빅 endian 입력을 사용 하는 새 작업을 반환 합니다.
+  uid: Microsoft.Quantum.Arithmetic.ReversedOpLEC
+- summary: 는 작은 endian 입력을 사용 하는 작업에 대해 빅 endian 입력을 사용 하는 새 작업을 반환 합니다.
+  uid: Microsoft.Quantum.Arithmetic.ReversedOpLECA
+name: Microsoft.Quantum.Arithmetic
+newtypes:
+- summary: 부호 없는 정수를 빅 endian 순서로 인코딩하는 레지스터입니다. 인덱스를 사용 하는가 중 비트는 `0` 부호 없는 정수의 상위 비트를 인코딩합니다.
+  uid: Microsoft.Quantum.Arithmetic.BigEndian
+- summary: 고정 소수점 수에 해당 하는 비트의 레지스터를 나타냅니다. 는 이진 점의 왼쪽에 있는 값과 같은 정수 (즉, 1 보다 크거나 같은 가중치 비트)와 퀀텀 레지스터로 구성 됩니다.
+  uid: Microsoft.Quantum.Arithmetic.FixedPoint
+- summary: 부호 없는 정수를 거의 endian 순서로 인코딩하는 레지스터입니다. 인덱스가 있는 이상 비트는 `0` 부호 없는 정수의 최하위 비트를 인코딩합니다.
+  uid: Microsoft.Quantum.Arithmetic.LittleEndian
+- summary: >-
+    QFT 기반의 작은 endian 부호 없는 정수입니다.
+
+    예를 들어 $ \ket{x} $가 계산을 기준으로 하는 정수 $x $의 작은 endian 인코딩이 면 $ \operatorname{QFTLE} \ket{x} $는 QFT의 $x $의 인코딩입니다.
+  uid: Microsoft.Quantum.Arithmetic.PhaseLittleEndian
+- summary: Little endian에 저장 된 부호 있는 정수 형식입니다 (LittleEndian 참조).
+  uid: Microsoft.Quantum.Arithmetic.SignedLittleEndian
+operations:
+- summary: 퀀텀 고정 소수점 숫자에 기존 상수를 추가 합니다.
+  uid: Microsoft.Quantum.Arithmetic.AddConstantFxP
+- summary: 퀀텀 레지스터에 저장 된 두 개의 고정 소수점 숫자를 추가 합니다.
+  uid: Microsoft.Quantum.Arithmetic.AddFxP
+- summary: 는의 레지스터 크기에 따라의 추가 및 포함 없이 추가를 자동으로 선택 `ys` 합니다.
+  uid: Microsoft.Quantum.Arithmetic.AddI
+- summary: RippleCarryAdderTTK 작업에 대 한 내부 더하기 함수를 구현 합니다. 이 작업은 전체 adder를 생성 하는 외부 작업과 conjugated 된 내부 작업입니다.
+  uid: Microsoft.Quantum.Arithmetic.ApplyInnerTTKAdder
+- summary: RippleCarryAdderNoCarryTTK 작업에 대 한 내부 더하기 함수를 구현 합니다. 이 작업은 전체 adder를 생성 하는 외부 작업과 conjugated 된 내부 작업입니다.
+  uid: Microsoft.Quantum.Arithmetic.ApplyInnerTTKAdderWithoutCarry
+- summary: <xref:microsoft.quantum.arithmetic.phaselittleendian>형식의 대상 레지스터에서 등록을 입력으로 사용 하는 작업을 적용 <xref:microsoft.quantum.arithmetic.littleendian> 합니다.
+  uid: Microsoft.Quantum.Arithmetic.ApplyLEOperationOnPhaseLE
+- summary: <xref:microsoft.quantum.arithmetic.phaselittleendian>형식의 대상 레지스터에서 등록을 입력으로 사용 하는 작업을 적용 <xref:microsoft.quantum.arithmetic.littleendian> 합니다.
+  uid: Microsoft.Quantum.Arithmetic.ApplyLEOperationOnPhaseLEA
+- summary: <xref:microsoft.quantum.arithmetic.phaselittleendian>형식의 대상 레지스터에서 등록을 입력으로 사용 하는 작업을 적용 <xref:microsoft.quantum.arithmetic.littleendian> 합니다.
+  uid: Microsoft.Quantum.Arithmetic.ApplyLEOperationOnPhaseLEC
+- summary: <xref:microsoft.quantum.arithmetic.phaselittleendian>형식의 대상 레지스터에서 등록을 입력으로 사용 하는 작업을 적용 <xref:microsoft.quantum.arithmetic.littleendian> 합니다.
+  uid: Microsoft.Quantum.Arithmetic.ApplyLEOperationOnPhaseLECA
+- summary: 은 (는) 다양 한 비트의 레지스터에 세 가지 주요 비트 작업을 적용 합니다.
+  uid: Microsoft.Quantum.Arithmetic.ApplyMajorityInPlace
+- summary: 해독 가능한 내부 ripple 작업은 아래 RippleCarryAdderCDKM 정수 더하기 연산에 사용 됩니다. 두 개의 두 가지 비트 레지스터 `xs` 와 `ys` 길이가 동일한 경우 작업은 CNOT 및 ccnot 게이트의 ripple 작업 시퀀스를의 `xs` 및의 `ys` 컨트롤 및 컨트롤 및의에 있는 컨트롤 및의 컨트롤 및의에 대 한으로 적용 합니다 `xs` .
+  uid: Microsoft.Quantum.Arithmetic.ApplyOuterCDKMAdder
+- summary: RippleCarryAdderTTK에 대 한 외부 작업을 구현 하 여 전체 adder를 생성 하는 내부 작업을 수행 합니다.
+  uid: Microsoft.Quantum.Arithmetic.ApplyOuterTTKAdder
+- summary: <xref:microsoft.quantum.arithmetic.littleendian>형식의 대상 레지스터에서 등록을 입력으로 사용 하는 작업을 적용 <xref:microsoft.quantum.arithmetic.phaselittleendian> 합니다.
+  uid: Microsoft.Quantum.Arithmetic.ApplyPhaseLEOperationOnLE
+- summary: ''
+  uid: Microsoft.Quantum.Arithmetic.ApplyPhaseLEOperationOnLEA
+- summary: ''
+  uid: Microsoft.Quantum.Arithmetic.ApplyPhaseLEOperationOnLEC
+- summary: ''
+  uid: Microsoft.Quantum.Arithmetic.ApplyPhaseLEOperationOnLECA
+- summary: 빅 endian 입력을 사용 하는 작업을 작은 endian 형식을 사용 하 여 부호 없는 정수로 등록 인코딩에 적용 합니다.
+  uid: Microsoft.Quantum.Arithmetic.ApplyReversedOpBE
+- summary: 빅 endian 입력을 사용 하는 작업을 작은 endian 형식을 사용 하 여 부호 없는 정수로 등록 인코딩에 적용 합니다.
+  uid: Microsoft.Quantum.Arithmetic.ApplyReversedOpBEA
+- summary: 빅 endian 입력을 사용 하는 작업을 작은 endian 형식을 사용 하 여 부호 없는 정수로 등록 인코딩에 적용 합니다.
+  uid: Microsoft.Quantum.Arithmetic.ApplyReversedOpBEC
+- summary: 빅 endian 입력을 사용 하는 작업을 작은 endian 형식을 사용 하 여 부호 없는 정수로 등록 인코딩에 적용 합니다.
+  uid: Microsoft.Quantum.Arithmetic.ApplyReversedOpBECA
+- summary: 빅 endian 형식을 사용 하 여 부호 없는 정수를 레지스터 인코딩에 사용 하는 작업을 적용 합니다.
+  uid: Microsoft.Quantum.Arithmetic.ApplyReversedOpLE
+- summary: 빅 endian 형식을 사용 하 여 부호 없는 정수를 레지스터 인코딩에 사용 하는 작업을 적용 합니다.
+  uid: Microsoft.Quantum.Arithmetic.ApplyReversedOpLEA
+- summary: 빅 endian 형식을 사용 하 여 부호 없는 정수를 레지스터 인코딩에 사용 하는 작업을 적용 합니다.
+  uid: Microsoft.Quantum.Arithmetic.ApplyReversedOpLEC
+- summary: 빅 endian 형식을 사용 하 여 부호 없는 정수를 레지스터 인코딩에 사용 하는 작업을 적용 합니다.
+  uid: Microsoft.Quantum.Arithmetic.ApplyReversedOpLECA
+- summary: 는 고전적인 정수와, 비트의 레지스터가 나타내는 정수 사이에 비트 XOR 연산을 적용 합니다.
+  uid: Microsoft.Quantum.Arithmetic.ApplyXorInPlace
+- summary: 퀀텀 고정 소수점 숫자가 0으로 초기화 됨을 어설션 하는 도우미 함수입니다. 즉, 모든 요소는 $ \ket $ 상태에 있습니다. {0}
+  uid: Microsoft.Quantum.Arithmetic.AssertAllZeroFxP
+- summary: 부호 없는 정수를 나타내는 고 비트 레지스터의 가장 중요 한 것이 특정 상태에 있음을 어설션 합니다.
+  uid: Microsoft.Quantum.Arithmetic.AssertMostSignificantBit
+- summary: '`number`PhaseLittleEndian에서 인코딩된가 보다 작음을 어설션 합니다 `value` .'
+  uid: Microsoft.Quantum.Arithmetic.AssertPhaseLessThan
+- summary: 퀀텀 레지스터의 특정 상태에 대 한 확률이 예상 값을 가지는 것을 어설션 합니다.
+  uid: Microsoft.Quantum.Arithmetic.AssertProbInt
+- summary: 해독 가능한 전달 게이트를 구현 합니다. 에서로 인코딩된 전달 비트 `carryIn` 와 및에서 인코딩된 두 개의 summand 비트가 지정 된 경우 `summand1` `summand2` ,는의 비트 xor를 계산 하 고,는이 비트의 비트 xor를 계산 `carryIn` `summand1` `summand2` `summand2` 합니다 `carryOut` .
+  uid: Microsoft.Quantum.Arithmetic.Carry
+- summary: 위의 ApplyOuterCDKMAdder 작업과 함께 사용 되는 RippleCarryAdderCDKM의 핵심 작업입니다. 즉, RippleCarryAdderCDKM의 내부 작업을 가져오기 위해이 작업을 conjugated 합니다. 이 작업을 수행 하면 작업을 계산 하 여 입력의 일부에 대 한 게이트 없는 시퀀스를 적용 합니다 `ys` .
+  uid: Microsoft.Quantum.Arithmetic.CarryOutCoreCDKM
+- summary: 정수 비교를 위한 래퍼입니다 `result = x > y` .
+  uid: Microsoft.Quantum.Arithmetic.CompareGTI
+- summary: 부호 있는 정수 비교를 위한 `result = xs > ys` 래퍼입니다.
+  uid: Microsoft.Quantum.Arithmetic.CompareGTSI
+- summary: 퀀텀 레지스터에 저장 된 두 개의 고정 소수점 숫자를 비교 하 고 결과에서 대칭 이동을 제어 합니다.
+  uid: Microsoft.Quantum.Arithmetic.CompareGreaterThanFxP
+- summary: 이 연산은 값의 XOR를 출력의 비트에 적용 하 여, 값의 레지스터가 나타내는 정수가 다른 정수 보다 큰지 테스트 합니다.
+  uid: Microsoft.Quantum.Arithmetic.CompareUsingRippleCarry
+- summary: 고정 소수점 숫자 $x $에 대해 $1/x $를 계산 합니다.
+  uid: Microsoft.Quantum.Arithmetic.ComputeReciprocalFxP
+- summary: 정수 나누기를 사용 하 여 부호 없는 정수 x에 대해 역 1/x를 계산 합니다. 정수로 해석 된 결과는가 됩니다 `floor(2^(2*n-1) / x)` .
+  uid: Microsoft.Quantum.Arithmetic.ComputeReciprocalI
+- summary: '`from`부호 없는 정수를 나타내는 값 비트 레지스터의 가장 중요 한 비트를 해당 비트에 복사 합니다 `target` .'
+  uid: Microsoft.Quantum.Arithmetic.CopyMostSignificantBit
+- summary: 두 퀀텀 정수를 나눕니다.
+  uid: Microsoft.Quantum.Arithmetic.DivideI
+- summary: 고정 소수점 표현에서 짝수 다항식을 계산 합니다.
+  uid: Microsoft.Quantum.Arithmetic.EvaluateEvenPolynomialFxP
+- summary: 고정 소수점 표현에서 홀수 다항식을 계산 합니다.
+  uid: Microsoft.Quantum.Arithmetic.EvaluateOddPolynomialFxP
+- summary: 고정 소수점 표현에서 다항식을 계산 합니다.
+  uid: Microsoft.Quantum.Arithmetic.EvaluatePolynomialFxP
+- summary: 비교 결과에 따라 대상의 범위를 대칭 이동 하는 두 개의 정수를 해당 형식으로 인코딩된 두 정수 사이에 보다 큼 비교를 적용 합니다.
+  uid: Microsoft.Quantum.Arithmetic.GreaterThan
+- summary: 단계 회전을 사용 하 여, 부호 없는 퀀텀 레지스터를 고전 정수로 늘립니다.
+  uid: Microsoft.Quantum.Arithmetic.IncrementByInteger
+- summary: 정수 상수를 기준으로 하는 이상 비트 레지스터의 모듈식 증분을 수행 합니다.
+  uid: Microsoft.Quantum.Arithmetic.IncrementByModularInteger
+- summary: 단계 회전을 사용 하 여, 부호 없는 퀀텀 레지스터를 고전 정수로 늘립니다.
+  uid: Microsoft.Quantum.Arithmetic.IncrementPhaseByInteger
+- summary: 정수 상수를 기준으로 하는 이상 비트 레지스터의 모듈식 증분을 수행 합니다.
+  uid: Microsoft.Quantum.Arithmetic.IncrementPhaseByModularInteger
+- summary: 지정 된 정수 모듈로 2의 보수를 반전 합니다.
+  uid: Microsoft.Quantum.Arithmetic.Invert2sSI
+- summary: 이는 내부 과반수 작업을 3 개의 비트에 적용 합니다.
+  uid: Microsoft.Quantum.Arithmetic.MAJ
+- summary: 고정 소수점 숫자를 측정 하 고, 값을 Double로 반환 하 고, 모든 레지스터를 0으로 다시 설정 합니다.
+  uid: Microsoft.Quantum.Arithmetic.MeasureFxP
+- summary: 퀀텀 레지스터의 콘텐츠를 측정 하 고 정수로 변환 합니다. 측정은 표준 계산 기준, 즉의 eigenbasis을 기준으로 수행 `PauliZ` 됩니다.
+  uid: Microsoft.Quantum.Arithmetic.MeasureInteger
+- summary: 은 (는) 정수 계열 레지스터에서 모듈식 곱하기 및 추가 정수 상수를 수행 합니다.
+  uid: Microsoft.Quantum.Arithmetic.MultiplyAndAddByModularInteger
+- summary: MultiplyAndAddByModularInteger와 동일 하지만 summand가 QFT로 정수를 인코딩하는 것으로 가정 합니다.
+  uid: Microsoft.Quantum.Arithmetic.MultiplyAndAddPhaseByModularInteger
+- summary: 이상 비트 레지스터에서 정수 상수로 모듈식 곱하기를 수행 합니다.
+  uid: Microsoft.Quantum.Arithmetic.MultiplyByModularInteger
+- summary: 퀀텀 레지스터의 두 고정 소수점 숫자를 곱합니다.
+  uid: Microsoft.Quantum.Arithmetic.MultiplyFxP
+- summary: 정수를 `xs` 정수로 곱하고 `ys` 처음에 0 이어야 하는에 결과를 저장 합니다 `result` .
+  uid: Microsoft.Quantum.Arithmetic.MultiplyI
+- summary: 부호 있는 정수를 부호 있는 정수로 곱하고 `xs` `ys` 처음에 0 이어야 하는에 결과를 저장 합니다 `result` .
+  uid: Microsoft.Quantum.Arithmetic.MultiplySI
+- summary: 퀀텀 고정 소수점 수를 기존 상수로 초기화 합니다.
+  uid: Microsoft.Quantum.Arithmetic.PrepareFxP
+- summary: 지정 된 기존 정수에 대 한 퀀텀 레지스터를 반영 합니다.
+  uid: Microsoft.Quantum.Arithmetic.ReflectAboutInteger
+- summary: 해독 가능한 내부 ripple-두 개의 정수를 추가 합니다.
+  uid: Microsoft.Quantum.Arithmetic.RippleCarryAdderCDKM
+- summary: 해독 가능한 내부 ripple-두 개의 정수를 추가 합니다. LittleEndian 레지스터 및에서 인코딩된 두 개의 $n $ bit 정수를 제공 하 `xs` `ys` 고,이 작업은 두 정수의 합계를 계산 하며,이는 결과의 $n $ 최하위 비트를 유지 하 `ys` 고, 운반 비트를 xored 하는 것입니다 `carry` .
+  uid: Microsoft.Quantum.Arithmetic.RippleCarryAdderD
+- summary: 해독 가능, 내부 ripple-수행 하지 않고 두 개의 정수를 추가 합니다.
+  uid: Microsoft.Quantum.Arithmetic.RippleCarryAdderNoCarryTTK
+- summary: 해독 가능한 내부 ripple-두 개의 정수를 추가 합니다. LittleEndian 레지스터 및에서 인코딩된 두 개의 $n $ bit 정수를 제공 하 `xs` `ys` 고,이 작업은 두 정수의 합계를 계산 하며,이는 결과의 $n $ 최하위 비트를 유지 하 `ys` 고, 운반 비트를 xored 하는 것입니다 `carry` .
+  uid: Microsoft.Quantum.Arithmetic.RippleCarryAdderTTK
+- summary: 고정 소수점 수를 제곱 합니다.
+  uid: Microsoft.Quantum.Arithmetic.SquareFxP
+- summary: 에서 정수의 제곱을 계산 하 `xs` 여 `result` 처음에 0 이어야 합니다.
+  uid: Microsoft.Quantum.Arithmetic.SquareI
+- summary: 부호 있는 사각형 `xs` 의 정수 이며 처음에 0 이어야 하는에 결과를 저장 합니다 `result` .
+  uid: Microsoft.Quantum.Arithmetic.SquareSI
+- summary: 해독 가능한 sum gate를 구현 합니다. 에서로 인코딩된 전달 비트 `carryIn` 와 및에서 인코딩된 두 개의 summand 비트가 지정 된 경우 `summand1` 는 `summand2` 의 비트 xor를 계산 합니다 `carryIn` `summand1` `summand2` `summand2` .
+  uid: Microsoft.Quantum.Arithmetic.Sum
+summary: ''
+uid: Microsoft.Quantum.Arithmetic
+metadata:
+  ms.openlocfilehash: 73e3ac964e19ce4613c9426bfc09a39aff4228cf
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92719989"
