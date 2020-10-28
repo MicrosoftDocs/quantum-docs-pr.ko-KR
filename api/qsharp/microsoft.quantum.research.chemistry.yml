@@ -1,0 +1,57 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: 동적 생성기를 simulatable 게이트 집합으로 나타내고 JWOptimized 된 단위로 확장 합니다.
+  uid: Microsoft.Quantum.Research.Chemistry.JWOptimizedFermionEvolutionFunction
+- summary: 에 설명 된 Hamiltonian를 `JWOptimizedHTerms` `GeneratorSystem` `GeneratorIndex` 이 파일에 정의 된 규칙의 용어로 표현 된로 변환 합니다.
+  uid: Microsoft.Quantum.Research.Chemistry.JWOptimizedGeneratorSystem
+- summary: 동적 생성기를 simulatable 게이트 집합으로 나타내고 Pauli로 확장 합니다.
+  uid: Microsoft.Quantum.Research.Chemistry.JordanWignerOptimizedFermionEvolutionSet
+- summary: 최적화 된 Trotter step 작업 및이 작업을 실행 하는 데 필요한 매개 변수를 반환 합니다.
+  uid: Microsoft.Quantum.Research.Chemistry.OptimizedTrotterStepOracle
+- summary: 의 클래식 처리 단계입니다 `ApplyDeltaParity` . 이는 두 PQRS 사이의 패리티 차이를 평가 하기 위한 제어 비트 목록을 계산 합니다. 짝수의 조건입니다.
+  uid: Microsoft.Quantum.Research.Chemistry._DeltaParityCNOTbitstring
+name: Microsoft.Quantum.Research.Chemistry
+newtypes: []
+operations:
+- summary: ''
+  uid: Microsoft.Quantum.Research.Chemistry.ApplyBasisChange
+- summary: 이전 PQRS 간 패리티 차이를 계산 합니다. 용어 및 다음 PQRS 부채. 이 차이는 보조 비트에서 계산 됩니다.
+  uid: Microsoft.Quantum.Research.Chemistry.ApplyDeltaParity
+- summary: Spin orbitals를 실행 하 여 시험 상태의 단순 상태 준비
+  uid: Microsoft.Quantum.Research.Chemistry.JWOptimizedStatePreparation
+- summary: Z 연산자의 기반을 Y 연산자로 변경 하는 데 사용 됩니다. 활용.
+  uid: Microsoft.Quantum.Research.Chemistry.TransformZToX
+- summary: 활용에서 Z 연산자의 기반을 Y 연산자로 변경 하는 데 사용 됩니다.
+  uid: Microsoft.Quantum.Research.Chemistry.TransformZToY
+- summary: ''
+  uid: Microsoft.Quantum.Research.Chemistry._ApplyOptimizedTrotterStep
+- summary: 에 설명 된 PQRS 용어의 시간 진화를 적용 `GeneratorIndex` 합니다.
+  uid: Microsoft.Quantum.Research.Chemistry._JWOptimized0123Term
+- summary: 의 구현 단계 `JWOptimized0123Term_`
+  uid: Microsoft.Quantum.Research.Chemistry._JWOptimized0123TermImpl
+- summary: >-
+    동적 생성기를 simulatable 게이트 집합으로 나타내고 JWOptimized 된 단위로 확장 합니다.
+
+    자세한 내용은 [동적 생성기 모델링](../libraries/data-structures#dynamical-generator-modeling) 을 참조 하세요.
+  uid: Microsoft.Quantum.Research.Chemistry._JWOptimizedFermionEvolution
+- summary: 에 설명 된 PQ 용어의 시간 진화를 적용 `GeneratorIndex` 합니다.
+  uid: Microsoft.Quantum.Research.Chemistry._JWOptimizedHpqTerm
+- summary: 의 구현 단계입니다 `JWOptimizedHpqTerm_` .
+  uid: Microsoft.Quantum.Research.Chemistry._JWOptimizedHpqTermImpl
+- summary: 에 설명 된 PQ 또는 PQQR 용어로 시간 진화를 적용 `GeneratorIndex` 합니다.
+  uid: Microsoft.Quantum.Research.Chemistry._JWOptimizedPQandPQQRTerm
+- summary: 단계 추정에서 2 단계에 대 한 C NOT 트릭을 사용 하 여 Rz 회전을 적용 합니다.
+  uid: Microsoft.Quantum.Research.Chemistry._JWOptimizedZ
+- summary: 에서 설명 하는 Z 용어에의 한 시간 진화를 적용 `GeneratorIndex` 합니다.
+  uid: Microsoft.Quantum.Research.Chemistry._JWOptimizedZTerm
+- summary: 에서 설명 하는 ZZ 용어에의 한 시간 진화를 적용 `GeneratorIndex` 합니다.
+  uid: Microsoft.Quantum.Research.Chemistry._JWOptimizedZZTerm
+summary: 이 네임 스페이스는 퀀텀 화학 시뮬레이션에 대 한 고급 연구 메서드를 제공 합니다.
+uid: Microsoft.Quantum.Research.Chemistry
+metadata:
+  ms.openlocfilehash: 22850f044e31507f72d5ac505ece67112fbdccb9
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92711320"

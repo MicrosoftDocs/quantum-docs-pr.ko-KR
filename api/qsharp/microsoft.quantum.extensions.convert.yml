@@ -1,0 +1,114 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: >+
+    > [!WARNING]
+
+    > BigIntToBools는 더 이상 사용 되지 않습니다. 대신 <xref:Microsoft.Quantum.Convert.BigIntAsBoolArray>를 사용하십시오.
+
+    >
+
+    > @"microsoft.quantum.convert.bigintasboolarray"을 사용하세요.
+
+  uid: Microsoft.Quantum.Extensions.Convert.BigIntToBools
+- summary: >+
+    > [!WARNING]
+
+    > BoolsToBigInt는 더 이상 사용 되지 않습니다. 대신 <xref:Microsoft.Quantum.Convert.BoolArrayAsBigInt>를 사용하십시오.
+
+    >
+
+    > @"microsoft.quantum.convert.boolarrayasbigint"을 사용하세요.
+
+  uid: Microsoft.Quantum.Extensions.Convert.BoolsToBigInt
+- summary: >+
+    > [!WARNING]
+
+    > PauliArrayToInt는 더 이상 사용 되지 않습니다. 대신 <xref:Microsoft.Quantum.Convert.PauliArrayAsInt>를 사용하십시오.
+
+    >
+
+    > @"microsoft.quantum.convert.pauliarrayasint"을 사용하세요.
+
+  uid: Microsoft.Quantum.Extensions.Convert.PauliArrayToInt
+- summary: >+
+    > [!WARNING]
+
+    > ToBigInt는 더 이상 사용 되지 않습니다. 대신 <xref:Microsoft.Quantum.Convert.IntAsBigInt>를 사용하십시오.
+
+    >
+
+    > @"microsoft.quantum.convert.intasbigint"을 사용하세요.
+
+  uid: Microsoft.Quantum.Extensions.Convert.ToBigInt
+- summary: >+
+    > [!WARNING]
+
+    > ToDouble는 더 이상 사용 되지 않습니다. 대신 <xref:Microsoft.Quantum.Convert.IntAsDouble>를 사용하십시오.
+
+    >
+
+    > @"microsoft.quantum.convert.intasdouble"을 사용하세요.
+
+  uid: Microsoft.Quantum.Extensions.Convert.ToDouble
+- summary: >+
+    > [!WARNING]
+
+    > ToStringB는 더 이상 사용 되지 않습니다. 대신 <xref:Microsoft.Quantum.Convert.BoolAsString>를 사용하십시오.
+
+    >
+
+    > @"microsoft.quantum.convert.boolasstring"을 사용하세요.
+
+  uid: Microsoft.Quantum.Extensions.Convert.ToStringB
+- summary: >+
+    > [!WARNING]
+
+    > ToStringD는 더 이상 사용 되지 않습니다. 대신 <xref:Microsoft.Quantum.Convert.DoubleAsString>를 사용하십시오.
+
+    >
+
+    > @"microsoft.quantum.convert.doubleasstring"을 사용하세요.
+
+  uid: Microsoft.Quantum.Extensions.Convert.ToStringD
+- summary: >+
+    > [!WARNING]
+
+    > ToStringDFormat은 더 이상 사용 되지 않습니다. 대신 <xref:Microsoft.Quantum.Convert.DoubleAsStringWithFormat>를 사용하십시오.
+
+    >
+
+    > @"microsoft.quantum.convert.doubleasstringwithformat"을 사용하세요.
+
+  uid: Microsoft.Quantum.Extensions.Convert.ToStringDFormat
+- summary: >+
+    > [!WARNING]
+
+    > ToStringI는 더 이상 사용 되지 않습니다. 대신 <xref:Microsoft.Quantum.Convert.IntAsString>를 사용하십시오.
+
+    >
+
+    > @"microsoft.quantum.convert.intasstring"을 사용하세요.
+
+  uid: Microsoft.Quantum.Extensions.Convert.ToStringI
+- summary: >+
+    > [!WARNING]
+
+    > ToStringIFormat은 더 이상 사용 되지 않습니다. 대신 <xref:Microsoft.Quantum.Convert.IntAsStringWithFormat>를 사용하십시오.
+
+    >
+
+    > @"microsoft.quantum.convert.intasstringwithformat"을 사용하세요.
+
+  uid: Microsoft.Quantum.Extensions.Convert.ToStringIFormat
+name: Microsoft.Quantum.Extensions.Convert
+newtypes: []
+operations: []
+summary: '이러한 함수 중 일부는 Q # 형식 시스템 내에서 관련 된 .NET CLR의 Convert 네임 스페이스의 함수 중 일부입니다.'
+uid: Microsoft.Quantum.Extensions.Convert
+metadata:
+  ms.openlocfilehash: 1d03a685b323a4424055da4c10137af78268bb5f
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92711047"
