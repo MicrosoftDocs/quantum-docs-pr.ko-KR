@@ -96,7 +96,7 @@ Bits가 기존 컴퓨팅 정보에 대 한 기본 개체인 것 [*처럼, (*](ht
 
 $$\begin{bmatrix}1 \\\\ 0 \end{bmatrix} , \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} , \begin{bmatrix} \frac { 1 } { \sqrt { 2 } } \\\\ \frac { 1 } { \sqrt { 2 } } \end{bmatrix} , \begin{bmatrix} \frac { 1 } { \sqrt { 2 } } \\\\ \frac { -1 } { \sqrt { 2 } } \end{bmatrix} , \text { } \begin{bmatrix} \frac { 1 } { \sqrt { 2 } } \\\\ \frac { i } { \sqrt { 2 } } \end{bmatrix}      $$
 
-퀀텀 상태 벡터 $ \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} $ 및 $ \begin{bmatrix} 0 \\\\ 1은 \end{bmatrix} $ 특별 한 역할을 수행 합니다. 이러한 두 벡터는 원하는 비트의 상태를 설명 하는 벡터 공간에 대 한 기본을 형성 합니다. 즉, 모든 퀀텀 상태 벡터는 이러한 기준 벡터의 합계로 작성 될 수 있습니다. 특히 벡터 $ \begin{bmatrix} x y는 \\\\ \end{bmatrix} $ $ x \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} + y \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} $ 로 작성할 수 있습니다. 이러한 벡터의 회전은 원하는 비트에 대해 완벽 하 게 유효한 기본으로 사용 되는 반면,이를 *계산 기준*으로 호출 하 여이에 대 한 권한을 부여 하도록 선택 합니다.
+퀀텀 상태 벡터 $ \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} $ 및 $ \begin{bmatrix} 0 \\\\ 1은 \end{bmatrix} $ 특별 한 역할을 수행 합니다. 이러한 두 벡터는 원하는 비트의 상태를 설명 하는 벡터 공간에 대 한 기본을 형성 합니다. 즉, 모든 퀀텀 상태 벡터는 이러한 기준 벡터의 합계로 작성 될 수 있습니다. 특히 벡터 $ \begin{bmatrix} x y는 \\\\ \end{bmatrix} $ $ x \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} + y \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} $ 로 작성할 수 있습니다. 이러한 벡터의 회전은 원하는 비트에 대해 완벽 하 게 유효한 기본으로 사용 되는 반면,이를 *계산 기준* 으로 호출 하 여이에 대 한 권한을 부여 하도록 선택 합니다.
 
 이러한 두 퀀텀 상태는 클래식 비트의 두 가지 상태 즉, $ 0 $ 과 1에 해당 $ $ 합니다. 표준 규칙은 다음을 선택 하는 것입니다.
 
@@ -108,7 +108,7 @@ $$0 \equiv \begin{bmatrix} 1 \\\\  0 \end{bmatrix} , \qquad 1 \equiv \begin{bmat
 
 이제는 원하는 비트를 나타내는 방법을 배웠으므로 [*측정*](https://en.wikipedia.org/wiki/Measurement_in_quantum_mechanics)개념에 대해 설명 하 여 이러한 상태에 대 한 몇 가지 intuition을 얻을 수 있습니다. 측정값은 두 가지 클래식 상태 ( $ \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} $ 또는 $ \begin{bmatrix} 0 \\\\ 1) \end{bmatrix} $ 중 하나에 대 한 퀀텀 상태를 즉시 축소 하는, 해당 비트에서 "찾는 중" 인 비공식 아이디어에 해당 합니다. 퀀텀 상태 vector에서 지정 된 $ \begin{bmatrix} \alpha \\\\ \beta \end{bmatrix} $ 것으로 측정 되는 경우 $ 확률 ^ 2의 결과 0과 $ $ | \alpha | $ $ $ 확률 $ | \beta | ^ 2 $ 의 결과 1을 구합니다.   결과 $ 0에서 $ ,의 새 상태는 $ \begin{bmatrix} 1 \\\\ 0이 \end{bmatrix} $ 고, 결과 1의 경우 $ 상태는 $ $ \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} $ 입니다. 이러한 확률의 합계는 $ $ 정규화 조건 $ | \alpha | ^ 2 + | \beta | ^ 2 = 1 $ 때문에 최대 1입니다.
 
-또한 측정의 속성은 퀀텀 상태 벡터의 전체 부호가 관련이 없다는 것을 의미 합니다. 벡터 부정은 $ \alpha \right 화살표 \alpha $ 및 화살표-와 동일 $ \beta \right \beta $ 합니다. $0과 1을 측정할 확률 $ 은 $ $ 용어의 크기에 따라 달라 지므로 이러한 기호를 삽입 해도 확률은 변경 되지 않습니다. 이러한 단계를 일반적으로 [ `` *전역 단계*' '](https://en.wikipedia.org/wiki/Phase_factor) 이라고 하며, 일반적으로 $ { \phi } $ $ \pm 1 $ 이 아닌 e ^ i 형식으로 지정할 수 있습니다.
+또한 측정의 속성은 퀀텀 상태 벡터의 전체 부호가 관련이 없다는 것을 의미 합니다. 벡터 부정은 $ \alpha \right 화살표 \alpha $ 및 화살표-와 동일 $ \beta \right \beta $ 합니다. $0과 1을 측정할 확률 $ 은 $ $ 용어의 크기에 따라 달라 지므로 이러한 기호를 삽입 해도 확률은 변경 되지 않습니다. 이러한 단계를 일반적으로 [ `` *전역 단계* ' '](https://en.wikipedia.org/wiki/Phase_factor) 이라고 하며, 일반적으로 $ { \phi } $ $ \pm 1 $ 이 아닌 e ^ i 형식으로 지정할 수 있습니다.
 
 최종 중요 한 측정 속성은 모든 퀀텀 상태 벡터를 손상 시킬 필요는 없다는 것입니다. 클래식 상태 0에 해당 하는 상태 1 0의 이상으로 시작 하는 경우 $ \begin{bmatrix} \\\\ \end{bmatrix} $ $ $ 이 상태를 측정 하면 항상 결과 0이 생성 $ $ 되며 퀀텀 상태는 변경 되지 않고 그대로 유지 됩니다. 이러한 점에서는 기존 비트 (즉, $ \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} $ 또는 $ \begin{bmatrix} 0 1)만 있는 경우 \\\\ \end{bmatrix} $ 측정이 시스템을 손상 시 키 지 않습니다. 즉, 기존 데이터를 복제 하 고 기존 컴퓨터에서 수행할 수 있는 것 처럼 퀀텀 컴퓨터에서 조작할 수 있습니다. 그러나 두 상태에 정보를 한 번에 저장 하는 기능은 퀀텀 데이터 무제한 증가할을 복사 [하는 기능](https://en.wikipedia.org/wiki/No-cloning_theorem)에 대 한 가능한 일반적으로 및 추가 robs 컴퓨터를 초과 하는 퀀텀 컴퓨팅을 제공 합니다.
 
@@ -122,7 +122,7 @@ $ $ [*Bloch 구*](https://en.wikipedia.org/wiki/Bloch_sphere) 표현을 사용 �
 이 다이어그램의 화살표는 퀀텀 상태 벡터가 가리키는 방향을 보여 주고 화살표의 각 변환은 카디 날 축 중 하나에 대 한 회전으로 간주할 수 있습니다.
 계산 시퀀스로 퀀텀 계산을 고려 하는 것은 강력한 intuition이 intuition를 사용 하 여 알고리즘을 설계 하 고 설명 하는 것이 어렵습니다. Q# 이러한 회전을 설명 하는 언어를 제공 하 여이 문제를 완화 합니다.
 
-## <a name="single-qubit-operations"></a>단일 비트 작업
+## <a name="single-qubit-operations"></a>Single-Qubit 작업
 
 퀀텀 컴퓨터는 퀀텀 상태 벡터의 회전을 에뮬레이트할 수 있는 유니버설 퀀텀 게이트 집합을 적용 하 여 데이터를 처리 합니다.
 이 보편성 개념은 입력 비트의 모든 변환이 유한 길이 회로를 사용 하 여 수행 될 수 있는 경우 게이트 집합이 유니버설로 간주 되는 기존 (즉, 일반) 컴퓨팅의 보편성 개념과 유사 합니다.
@@ -176,7 +176,7 @@ Clifford 게이트 ( $ T $ 게이트)와 함께 이러한 작업을 단일의 �
 
 가장 간단한 이러한 기본 형식은 단일의 비트 회전입니다. 일반적으로 $ R_x $ , $ R_y $ 및 $ R_z의 $ 세 가지 단일 비트 회전이 고려 됩니다. 예를 들어 회전 $ R_x (\theta)의 동작을 시각화 하려면 $ Bloch 구의 x 축 방향으로 오른쪽 엄지 단추를 가리키고 $ $ $ \ 테타/2 라디안의 각도를 통해 손으로 벡터를 회전 한다고 가정 합니다 $ . 이 두 가지 혼동 계수는 $ $ 직교 벡터가 $ Bloch 구에 표시 될 때 180 ^ \circ $ 를 분리 하는 것과 동일 하지만 실제로는 모두 $ 기하학적으로 90 ^ \circ $ 도 떨어져 있다는 사실입니다. 해당 하는 단일 매트릭스는 다음과 같습니다.
 
-\begin{align* } 
+\begin{align *} 
  & R_z (\theta) = e ^ { -i\theta z/2 } = \begin{bmatrix} e ^ { -i \ 테타/2 } & 0 \\\\ 0 & e ^ { \theta/2 } \end{bmatrix} , \\\\ 
  & R_x (\theta) = e ^ { -i\theta x/2 HR_z (\theta) H \theta (\ 테타/2)-i\theta (\ 테타/2)-i\theta (\ 테타/2) } = = \begin{bmatrix} & \theta (\ 테타/2) \\\\ & \end{bmatrix} , \\\\ 
  & R_y (\theta) = e ^ { -i\theta y/2 } = SHR_z (\theta) HS ^ \theta (\ \dagger = \begin{bmatrix} & \\\\ & \end{bmatrix} \end { 테타/2)-\theta (\ 테타/2) \theta (\ 테타/2) \theta (\ 테타/2). 맞춤*}

@@ -9,12 +9,12 @@ uid: microsoft.quantum.libraries.standard.algorithms
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 7ce13c5df3795656156cccf28640c0a4b0dcba2e
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 982103876b00718aa3b42c6bc3a07d242cde7594
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835675"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92692227"
 ---
 # <a name="quantum-algorithms"></a>퀀텀 알고리즘 #
 
@@ -49,8 +49,8 @@ Q# 명확한 진폭 증폭의 특수화로 진폭 증폭을 소개 합니다.  �
 푸리에 변환은 기존 분석의 기본 도구로 서, 퀀텀 계산의 경우에만 중요 합니다.
 또한 qft ( *퀀텀 푸리에 변환* )의 효율성은 기존 컴퓨터에서 가능한 작업을 초과 퀀텀 알고리즘을 디자인할 때 선택한 첫 번째 도구 중 하나를 만들 수 있습니다.
 
-QFT의 대략적인 일반화로, <xref:microsoft.quantum.canon.approximateqft> 원하는 알고리즘 정확도에 꼭 필요 하지 않은 회전을 정리 하 여 추가 최적화를 허용 하는 작업을 제공 합니다.
-대략적인 QFT는 dyadic $Z $-rotation 작업 뿐만 아니라 <xref:microsoft.quantum.intrinsic.rfrac> 작업을 필요로 합니다 <xref:microsoft.quantum.intrinsic.h> .
+QFT의 대략적인 일반화로, <xref:Microsoft.Quantum.Canon.ApproximateQft> 원하는 알고리즘 정확도에 꼭 필요 하지 않은 회전을 정리 하 여 추가 최적화를 허용 하는 작업을 제공 합니다.
+대략적인 QFT는 dyadic $Z $-rotation 작업 뿐만 아니라 <xref:Microsoft.Quantum.Intrinsic.RFrac> 작업을 필요로 합니다 <xref:Microsoft.Quantum.Intrinsic.H> .
 입력 및 출력은 big endian 인코딩---인코딩된 것으로 간주 됩니다. 즉, 인덱스가 있는 이상 비트는 `0` 이진 정수 표현의 맨 왼쪽 (가장 높은 비트)으로 인코딩됩니다.
 이는 [k 표기법](xref:microsoft.quantum.concepts.dirac)에 맞게 정렬 됩니다. $ \ket $q $ 상태에 있는 세 가지의 레지스터는 $ {100} \ket $ 상태에 있으며, {1} $q _1 $ 및 $q _2 $은 모두 state $ \ket {0} $입니다.
 근사값 매개 변수 $a $는 $Z $-회전 (예: $a \in [0 ... n] $)의 정리 수준을 결정 합니다.
@@ -103,15 +103,15 @@ Beauregard adder는 Draper adder 또는 보다 구체적으로 $ \\a\operatornam
 
 ### <a name="quantum-phase-estimation"></a>양자 단계 예측 ###
 
-퀀텀 푸리에 변환의 특히 중요 한 응용 프로그램은 단일 연산자의 고유 값를 학습 하는 것입니다. 여기에는 *단계 예측*이라고 알려진 문제가 있습니다.
+퀀텀 푸리에 변환의 특히 중요 한 응용 프로그램은 단일 연산자의 고유 값를 학습 하는 것입니다. 여기에는 *단계 예측* 이라고 알려진 문제가 있습니다.
 단일 $U $ 및 상태 $ \ket{\phi} $를 고려해 보세요. $ \ket{\phi} $은 알 수 없는 eigenstate $ \a$, \begin{nation} U\ket {\ l} = \phi\ket{\phi}. $U의 eigenstate입니다.
 \end{equation} oracle as $U에만 액세스할 수 있는 경우 제어 되는 작업의 대상에 적용 된 $ 회전이 컨트롤에 다시 전파 되는 $Z를 활용 하 여 $ \\a$ 단계를 배울 수 있습니다.
 
 $V $는 $U $의 제어 된 응용 프로그램입니다 .이 응용 프로그램은 \begin{align} V (\ket {0} \otimes \ket{\phi}) & = \ket {0} \otimes \ket{\phi} \\ \\ \textrm{and} V (\ket {1} \otimes \ket{\phi}) & = e ^ {i \phi} \ket {1} \otimes \ket{\phi}.
 그런 다음 \end{align}, \begin{align} V (\ket{+} \otimes \ket{\phi}) & = \frac{(\ket {0} \otimes \ket{\phi}) + e ^ {i \phi} (\ket {1} \otimes \ket{\phi})} {\sqrt}를 입력 {2} 합니다.
-\end{align} \begin{align} V (\ket{+} \otimes \ket{\phi}) & = \frac{\ket {0} + e ^ {i \phi} \ket {1} } {\sqrt {2} } \otimes \ket{\phi} \\ \\ & = (R_1 (\emi\ket{) \ket{\phi} +}) \otimes \end{align}, where ($R _1 $은 작업에서 적용 한 단일 <xref:microsoft.quantum.intrinsic.r1> 항목)를 찾는 용어를 수집할 수 있습니다.
+\end{align} \begin{align} V (\ket{+} \otimes \ket{\phi}) & = \frac{\ket {0} + e ^ {i \phi} \ket {1} } {\sqrt {2} } \otimes \ket{\phi} \\ \\ & = (R_1 (\emi\ket{) \ket{\phi} +}) \otimes \end{align}, where ($R _1 $은 작업에서 적용 한 단일 <xref:Microsoft.Quantum.Intrinsic.R1> 항목)를 찾는 용어를 수집할 수 있습니다.
 $V $를 적용 하는 효과는 oracle로 $V $에만 액세스할 수 있는 경우에도 $R _1 $를 알 수 없는 각도로 적용 하는 것과 정확 하 게 동일 합니다.
-따라서이 문서의 나머지 부분에서는 *kickback 단계*를 사용 하 여 구현 하는 $R _1 (\\ax) $을 기준으로 단계 예측에 대해 설명 합니다.
+따라서이 문서의 나머지 부분에서는 *kickback 단계* 를 사용 하 여 구현 하는 $R _1 (\\ax) $을 기준으로 단계 예측에 대해 설명 합니다.
 
 이 프로세스를 수행한 후에는 컨트롤과 대상 레지스터가 untangled 상태로 남아 있으므로 $ \ket{\phi} $를 $U ^ $2의 제어 되는 응용 프로그램의 대상으로 사용 하 여 $R _1 (2 \phi) \ket{+} $ 상태에서 두 번째 컨트롤을 준비할 수 있습니다.
 이러한 방식으로 계속 하 여 \begin{align} \ket{\psi} & = \ sum_ {j = 0} ^ n R_1 (2 ^ j \as) \ket{+} \\ \\ & \propto \ bigotimes_ {j = 0} ^ {n} \phi (\ket + \phi) 형식의 등록을 가져올 수 있습니다. {0} (i 2 ^ {j} \\\ket) {1} \\ \\ & \propto \ sum_ {k = 0} ^ {2 ^ n-1} \phi (\\aak) \ket{k} \end{align} 여기서 $n $은 필요한 전체 자릿수의 비트 수입니다. $ {} \propto {} $를 사용 하 여 $1/\sqrt{2 ^ n} $의 정규화 요소를 표시 하지 않았음을 나타낼 수 있습니다.
@@ -119,4 +119,4 @@ $V $를 적용 하는 효과는 oracle로 $V $에만 액세스할 수 있는 경
 정수 $p $에 대해 $ \phi = 2 \phi p/2 ^ k $를 사용할 경우 $ \ket{\psi} = \operatorname{QFT} \ket{p_0 p_1 \phi} $로 인식 됩니다. 여기서 $p _j $은 $j ^ {\textrm{th}} $ 비트가 $2 \phi \phi n $입니다.
 따라서 퀀텀 푸리에 변환의 adjoint를 적용 하면 퀀텀 상태로 인코딩된 단계의 이진 표현을 가져옵니다.
 
-에서 Q# 이 <xref:microsoft.quantum.characterization.quantumphaseestimation> 작업은 <xref:microsoft.quantum.oracles.discreteoracle> $U ^ m $을 구현 하는 응용 프로그램을 양의 정수 $m $의 함수로 사용 하는 작업에 의해 구현 됩니다.
+에서 Q# 이 <xref:Microsoft.Quantum.Characterization.QuantumPhaseEstimation> 작업은 <xref:Microsoft.Quantum.Oracles.DiscreteOracle> $U ^ m $을 구현 하는 응용 프로그램을 양의 정수 $m $의 함수로 사용 하는 작업에 의해 구현 됩니다.

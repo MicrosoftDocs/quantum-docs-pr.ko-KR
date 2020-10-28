@@ -9,12 +9,12 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 115cd65621afd8272887b36163b066a4e6a554d7
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 5a29dcc74c638cb8ecbeb1f924d0e50d40d19f66
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835658"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92692177"
 ---
 # <a name="applications"></a>애플리케이션 #
 
@@ -48,12 +48,12 @@ Hamiltonian 시뮬레이션은 다른 여러 퀀텀 시뮬레이션 문제의 �
 
 퀀텀 시뮬레이션 알고리즘은 Hamiltonian의 지정 된 설명을 기본 퀀텀 게이트 시퀀스로 변환 합니다. 즉, Hamiltonian에 의해 전체적으로 대략적인 시간이 진화 합니다.
 
-Hamiltonian 분해 Hermitian 부분을 합산 하는 특별 한 경우 Trotter Suzuki 분해는 Hamiltonians 구성 요소 합계를 분리 하는 Hermitian를 시뮬레이션 하는 데 특히 간단 하 고 직관적인 알고리즘입니다. 예를 들면이 패밀리의 첫 번째 주문 통합자는 $ $ \begin{align} U (t) & = \left (e ^ {-iH \_ 0 t/r} e ^ {-ih \_ 1 t/r} \c도트 e ^ {-ih \_ {d-1} t/r} \left) ^ {r} + \mathcal{O} (d ^ 2 \ max_j \\ | H \_ j \\ | ^ 2 t ^ 2/r), \end{align} $ $ $r d $ of 제품 사용 
+Hamiltonian 분해 Hermitian Trotter-Suzuki 부분을 합산 하는 특수 한 경우에는 Hermitian 구성 요소 합계를 분석 하는 Hamiltonians를 시뮬레이션 하는 데 특히 간단 하 고 직관적인 알고리즘입니다. 예를 들면이 패밀리의 첫 번째 주문 통합자는 $ $ \begin{align} U (t) & = \left (e ^ {-iH \_ 0 t/r} e ^ {-ih \_ 1 t/r} \c도트 e ^ {-ih \_ {d-1} t/r} \left) ^ {r} + \mathcal{O} (d ^ 2 \ max_j \\ | H \_ j \\ | ^ 2 t ^ 2/r), \end{align} $ $ $r d $ of 제품 사용 
 
 > [!TIP]
 > Trotter-Suzuki 시뮬레이션 알고리즘의 응용 프로그램은 샘플에서 설명 합니다.
 > 각 대상 컴퓨터에서 제공 되는 내장 작업만 사용 하는 Ising 모델의 경우 [ **simpleising** 샘플](https://github.com/microsoft/Quantum/blob/main/samples/simulation/ising/simple)을 참조 하세요.
-> Trotter-Suzuki library 컨트롤 구조를 사용 하는 Ising 모델의 경우 [ **IsingTrotter** 샘플](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/trotter-evolution)을 참조 하세요.
+> Trotter-Suzuki library 컨트롤 구조를 사용 하는 Ising 모델에 대해서는 [ **IsingTrotter** 샘플](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/trotter-evolution)을 참조 하세요.
 > Trotter-Suzuki library 컨트롤 구조를 사용 하는 분자 Hydrogen의 경우 [ **H2 시뮬레이션** 샘플](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line)을 참조 하세요.
 
 대부분의 경우 시뮬레이션 알고리즘을 구현 하지만 해당 구현에 대 한 세부 정보에 관심이 없습니다. 예를 들면 두 번째 주문 통합자는 $ $ \begin{align} U (t) & = \left (e ^ {-iH \_ 0 t/2r} e ^ {-ih \_ 1 t/2r} \c도트 e ^ {-ih \_ {d-1} t/2r})를 대략적으로 계산 합니다. e ^ {-ih \_ {d-1} t/2r} \c도트 e ^ {-ih \_ 1 t/2r} e ^ {-ih \_ 0 t/2r} \left) ^ {r} + \mathcal{O} (d ^ 3 \ max_j \\ | H \_ j \\ | ^ 3 t ^ 3/r ^ 2), $2rd $ 약관의 제품을 사용 하 여 $ $ \end{align}. 더 큰 주문에는 더 많은 용어가 포함 되 고, 최적화 된 변형에는 지 수에 대 한 매우 특수 한 순서 필요할 수 있습니다. 다른 고급 알고리즘은 중간 단계에서 ancilla의 사용을 포함할 수도 있습니다. 따라서 라고의 시뮬레이션 알고리즘을 사용자 정의 형식으로 패키지 합니다.
@@ -68,7 +68,7 @@ newtype SimulationAlgorithm = ((Double, EvolutionGenerator, Qubit[]) => Unit is 
 newtype TimeDependentSimulationAlgorithm = ((Double, EvolutionSchedule, Qubit[]) => Unit : Adjoint, Controlled);
 ```
 
-예를 들어, `trotterStepSize` 각 지 수에서 시뮬레이션 기간을 수정 하는 매개 변수 및 `trotterOrder` 원하는 통합자의 순서에 따라 Trotter-Suzuki 분해 함수를 호출할 수 있습니다.
+예를 들어, 다음 라고 함수를 사용 하 여 Trotter-Suzuki 분해를 호출할 수 있습니다. 매개 변수를 사용 하 여 `trotterStepSize` 각 지 수에서 시뮬레이션 기간을 수정 하 고 `trotterOrder` 원하는 통합자의 순서를 변경 합니다.
 
 ```qsharp
 function TrotterSimulationAlgorithm(
@@ -136,11 +136,11 @@ operation EstimateAdiabaticStateEnergy(
 > Ising 모델에서 단계 예측 및 adiabatic 상태 준비는 [ **IsingPhaseEstimation** 샘플](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/phase-estimation)을 참조 하세요.
 
 > [!TIP]
-> [분자 Hydrogen의 시뮬레이션](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line) 은 흥미로운 간단한 샘플입니다. 모델 및 실험적 결과가 [O'Malley et](https://arxiv.org/abs/1512.06860) 에 보고 되었습니다. Pauli 행렬이 필요 하 고 $ \hat H = g \_ {0} i \_ 0i \_ 1 + g \_ 1 {z \_ 0} + g \_ 2 {z \_ 1} + g \_ 3 {z \_ 0} {z 1} + g \_ \_ 4 {y \_ 0} {y \_ 1} + g \_ 5 {x \_ 0} {x \_ 1} $ 형식으로 사용 합니다. 이는 두 Hydrogen 원소 사이의 거리 $R $에서 상수 $g $가 계산 되는 2 개의 비트 비트만을 필요로 하는 효과적인 Hamiltonian. 라고 함수를 사용 하 여 paulis는 unitaries로 변환 된 다음 Trotter-Suzuki 분해를 사용 하 여 짧은 기간에 걸쳐 발전 했습니다. Adiabatic 상태 준비를 사용 하지 않고 $H _2 $ 그라운드 상태에 대 한 적절 한 근사값을 만들 수 있으므로 canon의 단계 예측을 활용 하 여 직접 상태 에너지를 찾을 수 있습니다.
+> [분자 Hydrogen의 시뮬레이션](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line) 은 흥미로운 간단한 샘플입니다. 모델 및 실험적 결과가 [O'Malley et](https://arxiv.org/abs/1512.06860) 에 보고 되었습니다. Pauli 행렬이 필요 하 고 $ \hat H = g \_ {0} i \_ 0i \_ 1 + g \_ 1 {z \_ 0} + g \_ 2 {z \_ 1} + g \_ 3 {z \_ 0} {z 1} + g \_ \_ 4 {y \_ 0} {y \_ 1} + g \_ 5 {x \_ 0} {x \_ 1} $ 형식으로 사용 합니다. 이는 두 Hydrogen 원소 사이의 거리 $R $에서 상수 $g $가 계산 되는 2 개의 비트 비트만을 필요로 하는 효과적인 Hamiltonian. 라고 함수를 사용 하 여 paulis는 unitaries로 변환 된 다음 Trotter-Suzuki 분해를 사용 하 여 짧은 기간에 걸쳐 진화 합니다. Adiabatic 상태 준비를 사용 하지 않고 $H _2 $ 그라운드 상태에 대 한 적절 한 근사값을 만들 수 있으므로 canon의 단계 예측을 활용 하 여 직접 상태 에너지를 찾을 수 있습니다.
 
 ## <a name="shors-algorithm"></a>쇼어 알고리즘 ##
 Shor의 알고리즘은 현재 일반적으로 intractable 문제를 해결 하는 데 퀀텀 컴퓨터를 사용할 수 있다는 것을 보여 주므로 퀀텀 컴퓨팅에서 가장 중요 한 개발 중 하나입니다.
-Shor의 알고리즘은 퀀텀 컴퓨터를 사용 하 여 많은 수의 수를 제공 하는 빠른 방법을 제공 하며,이는 *팩터링*이라는 문제입니다.
+Shor의 알고리즘은 퀀텀 컴퓨터를 사용 하 여 많은 수의 수를 제공 하는 빠른 방법을 제공 하며,이는 *팩터링* 이라는 문제입니다.
 수많은 현재 인 cryptosystems의 보안은 팩터링에 대 한 빠른 알고리즘이 없다는 가정을 기반으로 합니다.
 따라서 Shor의 알고리즘은 퀀텀 전 세계의 보안을 고려 하는 방법에 큰 영향을 미칩니다.
 
@@ -151,7 +151,7 @@ Shor의 알고리즘은 하이브리드 알고리즘으로 간주할 수 있습�
 
 ### <a name="period-finding"></a>기간 찾기 ###
 
-퀀텀 푸리에 변환 및 단계 예측의 작동 방식에 대해 살펴보았습니다 ( [퀀텀 알고리즘](xref:microsoft.quantum.libraries.standard.algorithms)참조), 이러한 도구를 사용 하 여 *기간 찾기*라는 일반적으로 하드 계산 문제를 해결할 수 있습니다.  다음 섹션에서는 팩터링 하는 기간 찾기를 적용 하는 방법을 알아봅니다.
+퀀텀 푸리에 변환 및 단계 예측의 작동 방식에 대해 살펴보았습니다 ( [퀀텀 알고리즘](xref:microsoft.quantum.libraries.standard.algorithms)참조), 이러한 도구를 사용 하 여 *기간 찾기* 라는 일반적으로 하드 계산 문제를 해결할 수 있습니다.  다음 섹션에서는 팩터링 하는 기간 찾기를 적용 하는 방법을 알아봅니다.
 
 $ 및 $N $ $a 두 개의 정수를 지정 하는 경우 ($a<N $), order 찾기가 라고도 하는 기간 찾기를 목표로 하는 $r $ of $a $의 _주문_ $N을 찾는 것입니다. 여기서 $r $는 $a ^ r \equiv 1 \text{Mod} N $와 같이 최소 양의 정수로 정의 됩니다.  
 
@@ -178,8 +178,8 @@ QFT 게이트가 [이전](xref:microsoft.quantum.libraries.standard.algorithms)�
 $ (A ^ nx) \text{mod} N $을 얻기 위해 일반적으로 _ {a ^ n} $를 $U 적용 하기만 하면 됩니다. 여기서는 $a ^ n \text{mod} N $를 계산 하 여 퀀텀 회로에 연결 합니다.  
 이러한 모듈식 산술 연산을 수행 하기 위한 회로는 [퀀텀 산술 설명서](./algorithms.md#arithmetic)에 설명 되어 있습니다. 특히 제어 된 $U \_ {a ^ i} $ 작업을 구현 하려면 모듈식 지 수 회로가 필요 합니다.
 
-위의 회로는 [퀀텀 단계 예측](xref:microsoft.quantum.characterization.quantumphaseestimation) 에 해당 하 고 주문 찾기를 명시적으로 사용 하도록 설정 하는 반면 필요한 것은 필요한 비트 수를 줄일 수 있습니다. [ArXiv: Beauregard/0205095v3의 8 페이지에](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8)설명 된 대로 주문 찾기에 대해의 방법을 따르거나, Microsoft 양자에서 사용할 수 있는 단계 예측 루틴 중 하나를 사용할 수 있습니다. 예를 들어 [강력한 단계 예측](xref:microsoft.quantum.characterization.robustphaseestimation) 은 또 하나의 추가 비트를 사용 합니다.
- 
+위의 회로는 [퀀텀 단계 예측](xref:Microsoft.Quantum.Characterization.QuantumPhaseEstimation) 에 해당 하 고 주문 찾기를 명시적으로 사용 하도록 설정 하는 반면 필요한 것은 필요한 비트 수를 줄일 수 있습니다. [ArXiv: Beauregard/0205095v3의 8 페이지에](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8)설명 된 대로 주문 찾기에 대해의 방법을 따르거나, Microsoft 양자에서 사용할 수 있는 단계 예측 루틴 중 하나를 사용할 수 있습니다. 예를 들어 [강력한 단계 예측](xref:microsoft.quantum.characterization.robustphaseestimation) 은 또 하나의 추가 비트를 사용 합니다.
+
 ### <a name="factoring"></a>프로필과 ###
 팩터링의 목표는 정수 $N $의 두 소수 요소를 확인 하는 것입니다. 여기서 $N $는 $n $ 비트 숫자입니다.  
 팩터링은 아래에 설명 된 단계로 구성 됩니다. 이러한 단계는 클래식 전처리 루틴 (1-4)의 세 부분으로 나뉩니다. $a \text{mod} N $ (5)의 순서를 확인 하는 퀀텀 컴퓨팅 루틴 그리고 일반적인 후 처리 루틴은 순서 (6-9)에서 프라임 요인을 파생 시킵니다.
