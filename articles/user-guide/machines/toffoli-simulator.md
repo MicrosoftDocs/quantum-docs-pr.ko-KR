@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines.toffoli-simulator
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 82882f01d1b5c036faee71f18a18b2595107ddb7
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 036896a33fa02db671a5fd07421160df164bd41d
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835913"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92690780"
 ---
 # <a name="quantum-development-kit-qdk-toffoli-simulator"></a>QDK (퀀텀 Development Kit) Toffoli 시뮬레이터
 
@@ -67,7 +67,7 @@ Q#-매직 명령 [% toffoli을 (](xref:microsoft.quantum.iqsharp.magic-ref.toffo
 Toffoli 시뮬레이터는 다음을 지원 합니다.
 
 * 회전 및 지수화 Paulis는 `R` `Exp` 결과 작업이 같거나 항등 매트릭스가 될 때 및 등입니다 `X` .
-* 측정 및 [어설션](xref:microsoft.quantum.diagnostics.assertmeasurement) 작업 뿐만 아니라 Pauli에만 해당 `Z` 됩니다. 측정 연산의 확률은 항상 **0** 또는 **1**입니다. Toffoli 시뮬레이터에는 임의성이 없습니다.
+* 측정 및 [어설션](xref:Microsoft.Quantum.Diagnostics.AssertMeasurement) 작업 뿐만 아니라 Pauli에만 해당 `Z` 됩니다. 측정 연산의 확률은 항상 **0** 또는 **1** 입니다. Toffoli 시뮬레이터에는 임의성이 없습니다.
 * `DumpMachine` 및 `DumpRegister` 함수
 두 함수는 `Z` 각 비트의 현재 기본 상태를 한 줄에 하나씩 출력 합니다.
 

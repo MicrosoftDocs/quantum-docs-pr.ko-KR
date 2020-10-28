@@ -9,14 +9,14 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 1cfef50cf2bbecd2043972a662edd8120c5570ec
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: ad107f5c65a4bf368d12d30e4a72786f2076205c
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835624"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92690876"
 ---
-# <a name="higher-order-control-flow"></a>고차 제어 흐름 #
+# <a name="higher-order-control-flow"></a>Higher-Order 제어 흐름 #
 
 표준 라이브러리의 기본 역할 중 하나는 고급 알고리즘 아이디어를 [퀀텀 프로그램](https://en.wikipedia.org/wiki/Quantum_programming)으로 보다 쉽게 표현할 수 있도록 하는 것입니다.
 따라서 Q# 라고은 함수 및 작업의 부분 응용 프로그램을 사용 하 여 구현 되는 다양 한 흐름 제어 구문을 제공 합니다.
@@ -38,7 +38,7 @@ for (idxQubit in 0..nQubits - 2) {
 }
 ```
 
-<xref:microsoft.quantum.canon.applytoeachca>뿐만 아니라와 같은 배열 조작 함수를 사용 하 여 표현 <xref:microsoft.quantum.arrays.zip> 됩니다.
+<xref:Microsoft.Quantum.Canon.ApplyToEachCA>뿐만 아니라와 같은 배열 조작 함수를 사용 하 여 표현 <xref:Microsoft.Quantum.Arrays.Zipped> 됩니다.
 
 ```qsharp
 ApplyToEachCA(CNOT, Zip(register[0..nQubits - 2], register[1..nQubits - 1]));
@@ -50,7 +50,7 @@ ApplyToEachCA(CNOT, Zip(register[0..nQubits - 2], register[1..nQubits - 1]));
 
 라고에서 제공 하는 기본 추상화 중 하나가 반복입니다.
 예를 들어 단일의 단일 기능 $U $에 대해 \otimes U \otimes \cst\otimes U $ $U 형태의 단일 형식을 고려 합니다.
-에서는를 Q# 사용 하 여 <xref:microsoft.quantum.arrays.indexrange> 이를 레지스터에 대 한 루프로 나타낼 수 있습니다 `for` .
+에서는를 Q# 사용 하 여 <xref:Microsoft.Quantum.Arrays.IndexRange> 이를 레지스터에 대 한 루프로 나타낼 수 있습니다 `for` .
 
 ```qsharp
 /// # Summary
@@ -83,16 +83,16 @@ ApplyToEachCA(Adjoint U, register);
 ```
 
 특히이는에 대 `ApplyToEachCA` 한 호출이 adjoint 특수화가 자동 생성 되는 작업에 나타날 수 있음을 의미 합니다.
-마찬가지로 <xref:microsoft.quantum.canon.applytoeachindex> 는 양식의 패턴을 표시 하는 데 유용 `U(0, targets[0]); U(1, targets[1]); ...` 하며 입력에서 지원 되는 함수의 각 조합에 대 한 버전을 제공 합니다.
+마찬가지로 <xref:Microsoft.Quantum.Canon.ApplyToEachIndex> 는 양식의 패턴을 표시 하는 데 유용 `U(0, targets[0]); U(1, targets[1]); ...` 하며 입력에서 지원 되는 함수의 각 조합에 대 한 버전을 제공 합니다.
 
 > [!TIP]
 > `ApplyToEach` 는 이외의 입력을 취하는 작업과 함께 사용할 수 있도록 형식 매개 변수화 됩니다 `Qubit` .
-> 예를 들어, `codeBlocks` 가 복구 해야 하는 값의 배열 이라고 가정 합니다 <xref:microsoft.quantum.errorcorrection.logicalregister> .
+> 예를 들어, `codeBlocks` 가 복구 해야 하는 값의 배열 이라고 가정 합니다 <xref:Microsoft.Quantum.ErrorCorrection.LogicalRegister> .
 > 그런 다음 `ApplyToEach(Recover(code, recoveryFn, _), codeBlocks)` 는 `code` `recoveryFn` 각 블록에 독립적으로 오류 수정 코드 및 복구 기능을 적용 합니다.
 > 이는 기존 입력에 대해서도 유지 `ApplyToEach(R(_, _, qubit), [(PauliX, PI() / 2.0); (PauliY(), PI() / 3.0]))` 됩니다 .는 $ \pi/$2에 $Y $3 $pi $X 대 한 회전을 적용 합니다.
 
 Q#또한 라고은 함수형 프로그래밍에 익숙한 클래식 열거형 패턴에 대 한 지원을 제공 합니다.
-예를 들어은 <xref:microsoft.quantum.arrays.fold> 목록에 대 한 함수를 줄이기 위해 (f (f (s \_ {\text{initial}}, x \_ 0), x \_ 1), \도트) $ 패턴 $f을 구현 합니다.
+예를 들어은 <xref:Microsoft.Quantum.Arrays.Fold> 목록에 대 한 함수를 줄이기 위해 (f (f (s \_ {\text{initial}}, x \_ 0), x \_ 1), \도트) $ 패턴 $f을 구현 합니다.
 이 패턴은 합계, 제품, 최소, 최대 및 기타 해당 함수를 구현 하는 데 사용할 수 있습니다.
 
 ```qsharp
@@ -103,12 +103,12 @@ function Sum(xs : Int[]) {
 }
 ```
 
-마찬가지로 및와 같은 함수를 <xref:microsoft.quantum.arrays.mapped> <xref:microsoft.quantum.arrays.mappedbyindex> 사용 하 여의 함수형 프로그래밍 개념을 표현할 수 있습니다 Q# .
+마찬가지로 및와 같은 함수를 <xref:Microsoft.Quantum.Arrays.Mapped> <xref:Microsoft.Quantum.Arrays.MappedByIndex> 사용 하 여의 함수형 프로그래밍 개념을 표현할 수 있습니다 Q# .
 
 ## <a name="composing-operations-and-functions"></a>작업 및 함수 작성 ##
 
 라고 작업에서 제공 하는 제어 흐름 생성자는 입력으로 사용할 수 있습니다. 따라서 여러 작업이 나 함수를 단일 호출 가능으로 구성할 수 있습니다.
-예를 들어, $UVU ^ {\dagger} $ 패턴은 퀀텀 프로그래밍에서 매우 일반적입니다 .이는 라고에서 작업을 <xref:microsoft.quantum.canon.applywith> 이 패턴의 추상화로 제공 합니다.
+예를 들어, $UVU ^ {\dagger} $ 패턴은 퀀텀 프로그래밍에서 매우 일반적입니다 .이는 라고에서 작업을 <xref:Microsoft.Quantum.Canon.ApplyWith> 이 패턴의 추상화로 제공 합니다.
 이 추상화를 사용 하면 `Controlled` 시퀀스에 대해 작업 `U(qubit); V(qubit); Adjoint U(qubit);` 을 수행할 필요가 없으므로 회로에 더 효율적으로 compliation 수 있습니다 `U` .
 이를 확인 하려면 $c (U) $를 단일 항목으로 `Controlled U([control], target)` 지정 하 고 $c (V) $를 동일한 방식으로 정의할 수 있도록 합니다.
 그런 다음 임의의 상태 $ \ket{\psi} $, \begin{align} c (U) c (V) c (U) ^ \dagger \ket {1} \otimes \ket{\psi} & = \dagger} {1} \otime (uvu ^ {\ket{\psi} \boldone) \\ \\ & = (\Boldone \otimes u) (c (V)) (\Ket \otimes u ^ \dagger) {1} \otimes
@@ -126,7 +126,7 @@ function Sum(xs : Int[]) {
 >     ('T => Unit is Adj + Ctl), 'T) => Unit
 > ```
 
-마찬가지로는 <xref:microsoft.quantum.canon.bound> 다른 작업의 시퀀스를 차례로 적용 하는 작업을 생성 합니다.
+마찬가지로는 <xref:Microsoft.Quantum.Canon.Bound> 다른 작업의 시퀀스를 차례로 적용 하는 작업을 생성 합니다.
 예를 들어, 다음은 동일 합니다.
 
 ```qsharp
@@ -141,7 +141,7 @@ Bound([H, X], qubit);
 ApplyWith(ApplyToEach(Bound([H, X]), _), QFT, _);
 ```
 
-### <a name="time-ordered-composition"></a>시간이 지정 된 컴퍼지션 ###
+### <a name="time-ordered-composition"></a>Time-Ordered 컴퍼지션 ###
 
 부분 응용 프로그램 및 기존 함수 측면에서 흐름 제어를 고려 하 여 계속 진행할 수 있으며, 기존 흐름 제어 측면에서 매우 복잡 한 퀀텀 개념을 모델링할 수 있습니다.
 이러한 비유는 단일 연산자를 사용 하 여 다른 단일 연산자의 측면에서 단일 연산자를 분해 하는 것과 같은 특정 단일 연산자의 역할을 하는 기존 서브루틴에 대 한 특정 호출 시퀀스를 생성 하는 것과 일치 한다는 것을 인식 하 여 정확 하 게 결정 합니다.
@@ -162,9 +162,9 @@ U(1, time / Float(nSteps), target);
 // ...
 ```
 
-이제는 *퀀텀 메커니즘을 참조 하지 않고*Trotter – Suzuki 확장에 대 한 이유를 알 수 있습니다.
+이제는 *퀀텀 메커니즘을 참조 하지 않고* Trotter – Suzuki 확장에 대 한 이유를 알 수 있습니다.
 확장은 실제로 $ \eqref{eq: trotter-suzuki-0} $에서 지 주는 매우 구체적인 반복 패턴입니다.
-이 반복 패턴은 다음을 통해 구현 됩니다 <xref:microsoft.quantum.canon.decomposeintotimestepsca> .
+이 반복 패턴은 다음을 통해 구현 됩니다 <xref:Microsoft.Quantum.Canon.DecomposedIntoTimestepsCA> .
 
 ```qsharp
 // The 2 indicates how many terms we need to decompose,
@@ -180,7 +180,7 @@ DecomposeIntoTimeStepsCA((2, U), 1);
 마지막으로, 라고은 퀀텀 작업에 대 한 `Controlled` 추가 방법을 제공 하 여 함수를 기반으로 합니다.
 특히 퀀텀 산술에서 $ \ket{0\cdots 0} $ 이외의 계산 기준 상태에 대 한 조건 작업에 일반적입니다.
 위에서 소개한 제어 작업 및 함수를 사용 하 여 단일 문에서 더 일반적인 퀀텀 조건을 사용할 수 있습니다.
-이를 수행 하는 방법 <xref:microsoft.quantum.canon.controlledonbitstring> (예를 들어, 형식 매개 변수)으로 이동 하 여 피스를 하나씩 나눕니다.
+이를 수행 하는 방법 <xref:Microsoft.Quantum.Canon.ControlledOnBitString> (예를 들어, 형식 매개 변수)으로 이동 하 여 피스를 하나씩 나눕니다.
 가장 먼저 해야 할 일은 임의의 계산 기준 상태에서 컨트롤을 실제로 구현 하는 작업을 정의 하는 것입니다.
 그러나이 작업을 직접 호출 하지 않으므로 `_` 이름의 시작 부분에를 추가 하 여 다른 구문의 구현 임을 나타낼 수 있습니다.
 
@@ -212,8 +212,8 @@ $X ^ {\dagger} = X $ 이므로 $ \ket{0\dots 0} = X ^ {s \_ 0} \otimes x ^ {s \_
 }
 ```
 
-여기서는에 <xref:microsoft.quantum.canon.applypaulifrombitstring> 사용할 수 있도록 해당 대상에 대해 부분적으로 적용 되는 $P $를 적용 하는 데 사용 되었습니다 `ApplyWith` .
-그러나 *컨트롤* 레지스터를 원하는 형식으로 변환 해야 하므로 `(Controlled oracle)` *대상*에서 내부 작업을 부분적으로 적용 합니다.
+여기서는에 <xref:Microsoft.Quantum.Canon.ApplyPauliFromBitString> 사용할 수 있도록 해당 대상에 대해 부분적으로 적용 되는 $P $를 적용 하는 데 사용 되었습니다 `ApplyWith` .
+그러나 *컨트롤* 레지스터를 원하는 형식으로 변환 해야 하므로 `(Controlled oracle)` *대상* 에서 내부 작업을 부분적으로 적용 합니다.
 여기서 `ApplyWith` 는 원하는 대로 정확 하 게 $P $를 사용 하 여 컨트롤 레지스터를 대괄호로 묶습니다.
 
 이 시점에서이 작업을 수행할 수는 있지만 새 작업에서 함수를 적용 하는 것 처럼 "느낌" 하지 않습니다 `Controlled` .

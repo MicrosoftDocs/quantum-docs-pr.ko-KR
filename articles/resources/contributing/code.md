@@ -9,12 +9,12 @@ uid: microsoft.quantum.contributing.code
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 7a258a915a807b8e1ee7c2c9c062017d90f6a454
-ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+ms.openlocfilehash: 47845c4f3520e8c50cf8aefd9bf9e8f086c42842
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91489768"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691800"
 ---
 # <a name="contributing-code"></a>코드 기여
 
@@ -36,7 +36,7 @@ Q#라고과 같은 라이브러리를 구성 하는 함수, 작업 및 사용자
 
 최신 버전을 사용 Q# 하는 경우 특성을 사용 하 여 단위 테스트를 정의 `@Test("QuantumSimulator")` 합니다. 인수는 "QuantumSimulator", "ToffoliSimulator", "TraceSimulator" 또는 실행 대상을 지정 하는 정규화 된 이름일 수 있습니다. 다른 실행 대상을 정의 하는 여러 특성이 동일한 호출 가능에 연결 될 수 있습니다. 일부 테스트는 [Microsoft.Quantum.Xunit](https://www.nuget.org/packages/Microsoft.Quantum.Xunit/) Q# `Test` [xunit](https://xunit.github.io/) 프레임 워크로 끝나는 모든 함수와 작업을 노출 하는 사용 되지 않는 Microsoft. n e t. n e t 장치 패키지를 계속 사용 합니다. 이 패키지는 더 이상 단위 테스트를 정의 하는 데 필요 하지 않습니다. 
 
-다음 함수를 사용 하 여 <xref:microsoft.quantum.canon.fst> 및 <xref:microsoft.quantum.canon.snd> 함수가 대표적인 예제에서 올바른 출력을 반환 하는지 확인 합니다.
+다음 함수를 사용 하 여 <xref:Microsoft.Quantum.Canon.Fst> 및 <xref:Microsoft.Quantum.Canon.Snd> 함수가 대표적인 예제에서 올바른 출력을 반환 하는지 확인 합니다.
 또는의 출력이 잘못 된 경우 `Fst` `Snd` `fail` 문을 사용 하 여 테스트 실패를 발생 시킵니다.
 
 ```qsharp
@@ -57,7 +57,7 @@ function PairTest () : Unit {
 ```
 
 표준 라이브러리 가이드의 [테스트 섹션](xref:microsoft.quantum.libraries.diagnostics) 에 있는 기술을 사용 하 여 더 복잡 한 조건을 확인할 수 있습니다.
-예를 들어, 다음 테스트는에 의해 호출 되는와 동일한 작업을 수행 하는지 확인 합니다 `H(q); X(q); H(q);` <xref:microsoft.quantum.canon.applywith> `Z(q)` .
+예를 들어, 다음 테스트는에 의해 호출 되는와 동일한 작업을 수행 하는지 확인 합니다 `H(q); X(q); H(q);` <xref:Microsoft.Quantum.Canon.ApplyWith> `Z(q)` .
 
 ```Q#
 @Test("QuantumSimulator")

@@ -107,7 +107,7 @@
 
 ## <a name="clifford-group"></a>Clifford 그룹
 
-[Bloch 구의](xref:microsoft.quantum.glossary#bloch-sphere) octants을 차지 하는 작업 집합과 [pauli 연산자](xref:microsoft.quantum.glossary#pauli-operators)의 효과 순열 여기에는 작업 [ $ X $ ](xref:microsoft.quantum.intrinsic.x), [ $ Y $ ](xref:microsoft.quantum.intrinsic.y), [ $ Z $ ](xref:microsoft.quantum.intrinsic.z), [ $ H $ ](xref:microsoft.quantum.intrinsic.h) 및 [ $ S $ ](xref:microsoft.quantum.intrinsic.s)가 포함 됩니다.
+[Bloch 구의](xref:microsoft.quantum.glossary#bloch-sphere) octants을 차지 하는 작업 집합과 [pauli 연산자](xref:microsoft.quantum.glossary#pauli-operators)의 효과 순열 여기에는 작업 [ $ X $ ](xref:Microsoft.Quantum.Intrinsic.X), [ $ Y $ ](xref:Microsoft.Quantum.Intrinsic.Y), [ $ Z $ ](xref:Microsoft.Quantum.Intrinsic.Z), [ $ H $ ](xref:Microsoft.Quantum.Intrinsic.H) 및 [ $ S $ ](xref:Microsoft.Quantum.Intrinsic.S)가 포함 됩니다.
 
 ## <a name="controlled"></a>제어
 
@@ -150,7 +150,7 @@ Q#순수 하 게 일반 (비 퀀텀) 인 언어의 서브루틴 유형입니다.
 
 ## <a name="hadamard"></a>Hadamard
 
-Hadamard 연산 (Hadamard gate 또는 transform이 라고도 함)은 단일의 [비트](xref:microsoft.quantum.glossary#qubit) 에서 작동 하 고, [superposition](xref:microsoft.quantum.glossary#superposition) $ \ket { } $ $ \ket { } $ 가 처음에 $ \ket { 0 } $ 상태에 있는 경우에는 0 또는 1의 짝수 superposition에 배치 합니다. 에서 Q# 이 작업은 미리 정의 된 작업에 의해 적용 됩니다 [`H`](xref:microsoft.quantum.intrinsic.h) .
+Hadamard 연산 (Hadamard gate 또는 transform이 라고도 함)은 단일의 [비트](xref:microsoft.quantum.glossary#qubit) 에서 작동 하 고, [superposition](xref:microsoft.quantum.glossary#superposition) $ \ket { } $ $ \ket { } $ 가 처음에 $ \ket { 0 } $ 상태에 있는 경우에는 0 또는 1의 짝수 superposition에 배치 합니다. 에서 Q# 이 작업은 미리 정의 된 작업에 의해 적용 됩니다 [`H`](xref:Microsoft.Quantum.Intrinsic.H) .
 
 ## <a name="immutable"></a>변경할 수 없음
 
@@ -182,11 +182,11 @@ Hadamard 연산 (Hadamard gate 또는 transform이 라고도 함)은 단일의 [
 
 ## <a name="partial-application"></a>부분 응용 프로그램
 
-모든 필수 입력 없이 [함수](xref:microsoft.quantum.glossary#function) 또는 [작업](xref:microsoft.quantum.glossary#operation) 을 호출 합니다. 그러면 나중에 응용 프로그램에서 제공 하는 누락 된 매개 변수 (밑줄로 표시 됨)만 필요한 새 [호출 가능](xref:microsoft.quantum.glossary#callable) 이 반환 됩니다. 예를 들어 함수를 지정 `MyFunc(x : int, y : int) : int {return x + y;}` 하면 해당 함수를 새 함수에 부분적으로 적용할 수 있습니다 `let NewFunc = MyFunc(_, 3)` . 그런 다음 `NewFunc(2)` 값 *5*를 반환 하는 누락 된 매개 변수를 사용 하 여 나중에 새 함수를 호출할 수 있습니다.  자세한 내용은 [부분 응용 프로그램](xref:microsoft.quantum.guide.operationsfunctions#partial-application)을 참조 하세요.
+모든 필수 입력 없이 [함수](xref:microsoft.quantum.glossary#function) 또는 [작업](xref:microsoft.quantum.glossary#operation) 을 호출 합니다. 그러면 나중에 응용 프로그램에서 제공 하는 누락 된 매개 변수 (밑줄로 표시 됨)만 필요한 새 [호출 가능](xref:microsoft.quantum.glossary#callable) 이 반환 됩니다. 예를 들어 함수를 지정 `MyFunc(x : int, y : int) : int {return x + y;}` 하면 해당 함수를 새 함수에 부분적으로 적용할 수 있습니다 `let NewFunc = MyFunc(_, 3)` . 그런 다음 `NewFunc(2)` 값 *5* 를 반환 하는 누락 된 매개 변수를 사용 하 여 나중에 새 함수를 호출할 수 있습니다.  자세한 내용은 [부분 응용 프로그램](xref:microsoft.quantum.guide.operationsfunctions#partial-application)을 참조 하세요.
 
 ## <a name="pauli-operators"></a>Pauli 연산자
 
-`X`, `Y` 및 퀀텀 작업으로 알려진 3 개의 2 x 2 단일 매트릭스 집합입니다 `Z` . Id 매트릭스 I는 $ $ 집합에도 포함 되는 경우가 많습니다.  $I = \begin{bmatrix} 1 & 0 \\\\ 0 & 1 \end{bmatrix} $ , $ X = \begin{bmatrix} 0 & 1 \\\\ 1 & 0 \end{bmatrix} $ , $ Y = \begin{bmatrix} 0 & -i \\\\ i & 0 \end{bmatrix} $ , $ Z = \begin{bmatrix} 1 & 0 \\\\ & -1 \end{bmatrix} $ .   자세한 내용은 [단일 기능 비트 작업](xref:microsoft.quantum.concepts.qubit#single-qubit-operations)을 참조 하세요.
+`X`, `Y` 및 퀀텀 작업 이라고 하는 3 2 x 2 단일 행렬 집합입니다 `Z` . Id 매트릭스 I는 $ $ 집합에도 포함 되는 경우가 많습니다.  $I = \begin{bmatrix} 1 & 0 \\\\ 0 & 1 \end{bmatrix} $ , $ X = \begin{bmatrix} 0 & 1 \\\\ 1 & 0 \end{bmatrix} $ , $ Y = \begin{bmatrix} 0 & -i \\\\ i & 0 \end{bmatrix} $ , $ Z = \begin{bmatrix} 1 & 0 \\\\ & -1 \end{bmatrix} $ .   자세한 내용은 [단일 기능 비트 작업](xref:microsoft.quantum.concepts.qubit#single-qubit-operations)을 참조 하세요.
 
 ## <a name="quantum-circuit-diagram"></a>퀀텀 회로 다이어그램
 

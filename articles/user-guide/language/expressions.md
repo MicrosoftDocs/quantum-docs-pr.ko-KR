@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.expressions
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 9bf28e3854eae1892692d7ca840e1860de2e2934
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: e95a7cb9b74136ef9a6f51b4bbc32d1d93c43a0d
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835845"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691592"
 ---
 # <a name="expressions-in-no-locq"></a>식의 Q#
 
@@ -40,7 +40,7 @@ let bigOne = bigZero + 1L;
 소수점 또는 ' `.` e ' 또는 ' e '로 표시 된 지 수 부분 (음수 부호와 소수 자릿수가 유효 함)을 사용 하거나 사용 하지 않고 쓸 수 있습니다.
 유효한 `Double` 리터럴은 `0.0` , `1.2e5` , `1e-5` 입니다.
 
-모든 요소 형식의 배열 식이 지정 된 경우 `Int` 기본 제공 함수를 사용 하 여 식을 구성 하 고 [`Length`](xref:microsoft.quantum.core.length) 배열 식이 괄호로 묶여 있게 할 수 있습니다.
+모든 요소 형식의 배열 식이 지정 된 경우 `Int` 기본 제공 함수를 사용 하 여 식을 구성 하 고 [`Length`](xref:Microsoft.Quantum.Core.Length) 배열 식이 괄호로 묶여 있게 할 수 있습니다.
 예를 들어 `a` 가 배열에 바인딩된 경우 `Length(a)` 는 정수 식입니다.
 `b`가 정수 배열의 배열인 경우는 `Int[][]` `Length(b)` 의 하위 배열 수이 `b` 고 `Length(b[1])` 은의 두 번째 하위 배열에 있는 정수 수입니다 `b` .
 
@@ -111,7 +111,7 @@ let t = x == y;               // This will cause a compiler error.
 
 ## <a name="string-expressions"></a>문자열 식
 
-Q#`fail`문 ( [제어 흐름](xref:microsoft.quantum.guide.controlflow#fail-statement)에 설명) 및 표준 함수에 문자열을 사용할 수 있습니다 [`Message`](xref:microsoft.quantum.intrinsic.message) . 후자의 특정 동작은 사용 된 시뮬레이터에 따라 다르며 일반적으로 프로그램 중 호출 될 때 호스트 콘솔에 메시지를 기록 합니다 Q# .
+Q#`fail`문 ( [제어 흐름](xref:microsoft.quantum.guide.controlflow#fail-statement)에 설명) 및 표준 함수에 문자열을 사용할 수 있습니다 [`Message`](xref:Microsoft.Quantum.Intrinsic.Message) . 후자의 특정 동작은 사용 된 시뮬레이터에 따라 다르며 일반적으로 프로그램 중 호출 될 때 호스트 콘솔에 메시지를 기록 합니다 Q# .
 
 의 문자열 Q# 은 리터럴 또는 보간된 문자열입니다.
 
@@ -128,7 +128,7 @@ Q#문자열 보간 구문은 c # 구문의 하위 집합입니다. 다음은 관
 
 * 문자열 리터럴을 보간된 문자열로 식별하려면 `$` 기호를 사용하여 추가합니다. `$` `"` 문자열 리터럴을 시작 하는와 사이에 공백이 없을 수 있습니다.
 
-* 다음은 함수를 사용 하 여 [`Message`](xref:microsoft.quantum.intrinsic.message) 다른 식과 함께 측정 결과를 콘솔에 쓰는 기본적인 예입니다 Q# .
+* 다음은 함수를 사용 하 여 [`Message`](xref:Microsoft.Quantum.Intrinsic.Message) 다른 식과 함께 측정 결과를 콘솔에 쓰는 기본적인 예입니다 Q# .
 
 ```qsharp
     let num = 8;       // some Q# expression
@@ -189,7 +189,7 @@ C # 구문에 대 한 자세한 내용은 [*보간된 문자열*](https://docs.m
 
 리터럴 이외의 튜플 식은 튜플 값에 바인딩된 기호, 튜플 배열의 배열 요소 및 튜플을 반환 하는 호출 가능 호출입니다.
 
-## <a name="user-defined-type-expressions"></a>사용자 정의 형식 식
+## <a name="user-defined-type-expressions"></a>User-Defined 형식 식
 
 사용자 정의 형식의 리터럴은 형식 이름과 해당 형식의 기본 튜플 형식의 튜플 리터럴로 구성 됩니다.
 예를 들어 `IntPair` 가을 기반으로 하는 사용자 정의 형식인 경우는 `(Int, Int)` `IntPair(2, 3)` 해당 형식의 유효한 리터럴입니다.
@@ -237,7 +237,7 @@ let g = Foo(arg)!;      // Syntax error
 
 엔터티를 참조 하는 callables 및 callables의 경우 적절 한 기본값이 없습니다.
 따라서 이러한 형식의 경우 기본값은 c #, Java 등의 언어에서 null 참조와 비슷하게 런타임 오류를 발생 시 키 지 않고 사용할 수 없는 잘못 된 참조입니다.
-요소를 안전 하 게 사용 하려면 기본값이 아닌 값으로 valbits 또는 callables을 포함 하는 배열을 초기화 해야 합니다. 적절 한 초기화 루틴은를 참조 하십시오 <xref:microsoft.quantum.arrays> .
+요소를 안전 하 게 사용 하려면 기본값이 아닌 값으로 valbits 또는 callables을 포함 하는 배열을 초기화 해야 합니다. 적절 한 초기화 루틴은를 참조 하십시오 <xref:Microsoft.Quantum.Arrays> .
 
 각 형식에 대 한 기본값은 다음과 같습니다.
 
@@ -472,7 +472,7 @@ let combinedOp = Func<(Qubit[] => Unit), (Qubit[] => Unit is Adj)>(Op1, Op2, Op3
 
 Q# 우선 순위 순으로 최고에서 최저 순으로 연산자.
 
-연산자 | 숫자 | 설명 | 피연산자 형식
+연산자 | 숫자 | Description | 피연산자 형식
 ---------|----------|---------|---------------
  붙이지 `!` | 단항 | 래핑 취소 | 사용자 정의 형식
  `-`, `~~~`, `not` | 단항 | 숫자 음수, 비트 보수, 논리 부정 | `Int`,의 경우,,의 경우,의 경우 `BigInt` `Double` `-` `Int` `BigInt` `~~~` `Bool``not`

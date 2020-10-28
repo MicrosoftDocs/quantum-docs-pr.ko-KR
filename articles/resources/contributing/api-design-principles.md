@@ -9,12 +9,12 @@ uid: microsoft.quantum.contributing.api-design
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8714d3290e4099f901dab20a9ee9334699c4ad81
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 6b196cf1be584a3157c7a9eb8cf497fe1121dd7a
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834911"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691822"
 ---
 # <a name="no-locq-api-design-principles"></a>Q# API 디자인 원칙
 
@@ -224,32 +224,32 @@ ms.locfileid: "90834911"
 
   - **동사의**
 
-    - **Assert**: 물리적 리소스를 사용 하 여 대상 컴퓨터와 해당 비트의 상태에 대 한 가정이 있는지 확인 합니다. 이 동사를 사용 하는 작업은 라이브러리 및 실행 프로그램의 기능에 영향을 주지 않고 항상 안전 하 게 제거 되어야 합니다. 팩트와 달리 어설션은 일반적으로의 상태 (예: 표준), 실행 환경 등의 외부 상태에 따라 달라질 수 있습니다. 외부 상태에 대 한 종속성은 일종의 부작용 이므로 어설션이 함수 대신 작업으로 노출 되어야 합니다.
+    - **Assert** : 물리적 리소스를 사용 하 여 대상 컴퓨터와 해당 비트의 상태에 대 한 가정이 있는지 확인 합니다. 이 동사를 사용 하는 작업은 라이브러리 및 실행 프로그램의 기능에 영향을 주지 않고 항상 안전 하 게 제거 되어야 합니다. 팩트와 달리 어설션은 일반적으로의 상태 (예: 표준), 실행 환경 등의 외부 상태에 따라 달라질 수 있습니다. 외부 상태에 대 한 종속성은 일종의 부작용 이므로 어설션이 함수 대신 작업으로 노출 되어야 합니다.
 
-    - **예상**: 하나 이상의 반복 되는 측정값을 사용 하 여 측정 결과에서 기존 수량을 예측 합니다.
+    - **예상** : 하나 이상의 반복 되는 측정값을 사용 하 여 측정 결과에서 기존 수량을 예측 합니다.
 
       *예:*
       - @"microsoft.quantum.characterization.estimatefrequency"
       - @"microsoft.quantum.characterization.estimateoverlapbetweenstates"
 
-    - **준비**: 특정 초기 상태 (일반적으로 $ \ket{00\cdots 0} $)에서 시작 하 여 해당 하는 작업의 상태를 원하는 끝 상태로 전환 하는 데 퀀텀 작업 또는 일련의 작업을 적용 합니다. 일반적으로 지정 된 시작 상태를 제외 하 고 상태에 대해 작업을 수행 하면 정의 되지 않은 단일 변환이 발생할 **수** 있지만 작업 및 해당 adjoint "취소"를 유지 하 고 작업을 적용 하지 **않아야** 합니다.
+    - **준비** : 특정 초기 상태 (일반적으로 $ \ket{00\cdots 0} $)에서 시작 하 여 해당 하는 작업의 상태를 원하는 끝 상태로 전환 하는 데 퀀텀 작업 또는 일련의 작업을 적용 합니다. 일반적으로 지정 된 시작 상태를 제외 하 고 상태에 대해 작업을 수행 하면 정의 되지 않은 단일 변환이 발생할 **수** 있지만 작업 및 해당 adjoint "취소"를 유지 하 고 작업을 적용 하지 **않아야** 합니다.
 
       *예:*
       - @"microsoft.quantum.preparation.preparearbitrarystate"
       - @"microsoft.quantum.preparation.prepareuniformsuperposition"
 
-    - **Measure**: 하나 이상의 이상에 퀀텀 작업 또는 일련의 작업을 적용 하 여 기존 데이터를 다시 읽습니다.
+    - **Measure** : 하나 이상의 이상에 퀀텀 작업 또는 일련의 작업을 적용 하 여 기존 데이터를 다시 읽습니다.
 
       *예:*
-      - @"microsoft.quantum.intrinsic.measure"
+      - @"Microsoft.Quantum.Intrinsic.Measure"
       - @"microsoft.quantum.arithmetic.measurefxp"
       - @"microsoft.quantum.arithmetic.measureinteger"
 
-    - **적용**: 하나 이상의 이상에 퀀텀 작업 또는 일련의 작업을 적용 하 여 해당 하는 비트의 상태를 일관 된 방식으로 변경 합니다. 이 동사는 Q 명명법에서 가장 일반적 \# 으로 사용 되는 **동사 이며** 보다 구체적인 동사가 더 직접적으로 관련 된 경우에는 사용 하면 안 됩니다.
+    - **적용** : 하나 이상의 이상에 퀀텀 작업 또는 일련의 작업을 적용 하 여 해당 하는 비트의 상태를 일관 된 방식으로 변경 합니다. 이 동사는 Q 명명법에서 가장 일반적 \# 으로 사용 되는 **동사 이며** 보다 구체적인 동사가 더 직접적으로 관련 된 경우에는 사용 하면 안 됩니다.
 
-  - **명사**:
+  - **명사** :
 
-    - **팩트**: 대상 컴퓨터의 상태, 해당 환경 또는 컴퓨터의 기능에 대 한 상태가 아닌 입력에만 의존 하는 부울 조건입니다. 어설션과 달리 팩트는 해당 팩트에 제공 되는 *값* 만을 인식 합니다. 예를 들면 다음과 같습니다.
+    - **팩트** : 대상 컴퓨터의 상태, 해당 환경 또는 컴퓨터의 기능에 대 한 상태가 아닌 입력에만 의존 하는 부울 조건입니다. 어설션과 달리 팩트는 해당 팩트에 제공 되는 *값* 만을 인식 합니다. 예를 들면 다음과 같습니다.
 
       *예:*
       - @"microsoft.quantum.diagnostics.equalityfacti": 두 정수 입력에 대 한 같음 팩트를 나타냅니다. 입력으로 제공 된 정수는 서로 같거나 다른 프로그램 상태와는 독립적입니다.
@@ -259,9 +259,9 @@ ms.locfileid: "90834911"
       *예:*
       - UDT에는 @"microsoft.quantum.machinelearning.trainingoptions" 학습 률, 미니 배치 크기 및 ML 학습을 위한 구성 가능한 기타 매개 변수에 대 한 명명 된 항목이 포함 되어 있습니다.
 
-  - **형용사**:
+  - **형용사** :
 
-    - ⛔️ **New**: 많은 프로그래밍 언어 (예: c + +, c #, Java, TypeScript, PowerShell)에서 동사로 사용 되는 혼동을 방지 하기 위해이 형용사를 사용 하면 **안 됩니다.**
+    - ⛔️ **New** : 많은 프로그래밍 언어 (예: c + +, c #, Java, TypeScript, PowerShell)에서 동사로 사용 되는 혼동을 방지 하기 위해이 형용사를 사용 하면 **안 됩니다.**
 
   - **전치사:** 경우에 따라 전치사를 사용 하 여 함수 및 작업 이름에서 명사와 동사의 역할을 보다 명확 하 게 구분 하거나 명확 하 게 지정할 수 있습니다. 그러나 신중 하 고 일관 된 작업을 수행 해야 합니다.
 

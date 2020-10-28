@@ -9,22 +9,22 @@ uid: microsoft.quantum.machines.qc-trace-simulator.primitive-counter
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8ee9ce25e680112e2f3c68d82ae9267c1b0fb355
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: bf75eb94696a489a587316928bc3f33baa4a1785
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835981"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92690958"
 ---
 # <a name="quantum-trace-simulator-primitive-operations-counter"></a>퀀텀 추적 시뮬레이터: 기본 작업 카운터
 
 기본 작업 카운터는 퀀텀 개발 키트 [퀀텀 추적 시뮬레이터](xref:microsoft.quantum.machines.qc-trace-simulator.intro)의 일부입니다. 퀀텀 프로그램에서 호출 된 모든 작업에서 사용 되는 기본 프로세스의 수를 계산 합니다. 
 
-모든 <xref:microsoft.quantum.intrinsic> 연산은 단일 비트 회전, T 작업, 단일가 Clifford 작업, CNOT 작업 및 여러 가지 관찰 가능 개체의 측정값으로 표현 됩니다. 기본 작업 카운터는 작업 [호출 그래프](https://en.wikipedia.org/wiki/Call_graph)의 모든 가장자리에 대 한 통계를 집계 하 고 수집 합니다.
+모든 <xref:Microsoft.Quantum.Intrinsic> 연산은 단일 비트 회전, T 작업, 단일가 Clifford 작업, CNOT 작업 및 여러 가지 관찰 가능 개체의 측정값으로 표현 됩니다. 기본 작업 카운터는 작업 [호출 그래프](https://en.wikipedia.org/wiki/Call_graph)의 모든 가장자리에 대 한 통계를 집계 하 고 수집 합니다.
 
 ## <a name="invoking-the-primitive-operation-counter"></a>기본 작업 카운터 호출
 
-기본 작업 카운터를 사용 하 여 퀀텀 추적 시뮬레이터를 실행 하려면 인스턴스를 만들고 <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> `UsePrimitiveOperationsCounter` 속성을 **true**로 설정한 다음 <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> 를 매개 변수로 사용 하 여 새 인스턴스를 만들어야 합니다 `QCTraceSimulatorConfiguration` .
+기본 작업 카운터를 사용 하 여 퀀텀 추적 시뮬레이터를 실행 하려면 인스턴스를 만들고 <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> `UsePrimitiveOperationsCounter` 속성을 **true** 로 설정한 다음 <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> 를 매개 변수로 사용 하 여 새 인스턴스를 만들어야 합니다 `QCTraceSimulatorConfiguration` .
 
 ```csharp
 var config = new QCTraceSimulatorConfiguration();
@@ -34,7 +34,7 @@ var sim = new QCTraceSimulator(config);
 
 ## <a name="using-the-primitive-operation-counter-in-a-c-host-program"></a>C # 호스트 프로그램에서 기본 작업 카운터 사용
 
-이 단원의 뒷부분에 나오는 c # 예제에서는 <xref:microsoft.quantum.intrinsic.t> <xref:microsoft.quantum.intrinsic.ccnot> 다음 샘플 코드를 기반으로 작업을 구현 하는 데 필요한 작업 수를 계산 합니다 Q# .
+이 단원의 뒷부분에 나오는 c # 예제에서는 <xref:Microsoft.Quantum.Intrinsic.T> <xref:Microsoft.Quantum.Intrinsic.ccnot> 다음 샘플 코드를 기반으로 작업을 구현 하는 데 필요한 작업 수를 계산 합니다 Q# .
 
 ```qsharp
 open Microsoft.Quantum.Intrinsic;

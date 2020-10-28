@@ -9,12 +9,12 @@ uid: microsoft.quantum.overview.katas
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 097d7f70088b6ee84a1e91ee99be59149dd9e15b
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 6b2eff2a457b809bd168b9b59ab013b7fc7541e6
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834825"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691649"
 ---
 # <a name="learn-quantum-computing-with-the-quantum-katas"></a>Quantum Katas에서 퀀텀 컴퓨팅 알아보기
 
@@ -55,7 +55,7 @@ ms.locfileid: "90834825"
 |[퀀텀 게이트 인식](https://github.com/microsoft/QuantumKatas/tree/main/BasicGates)|의 기본 퀀텀 게이트에 익숙해질 수 있도록 설계 된 일련의 연습 Q# 입니다. 기본 단일 큐비트 및 다중 큐비트 게이트, 수반 및 제어된 게이트, 게이트를 사용하여 큐비트 상태를 수정하는 방법을 포함합니다.|
 |[퀀텀 중첩 만들기](https://github.com/microsoft/QuantumKatas/tree/main/Superposition)|이러한 연습을 사용 하 여의 superposition 및 프로그래밍 개념을 익힐 수 Q# 있습니다. 기본 단일 기능을 위한 연습과의 superposition 및 흐름 제어와 재귀를 포함 Q# 합니다.|
 |[측정값을 사용하여 퀀텀 상태 구별](https://github.com/microsoft/QuantumKatas/tree/main/Measurements)|퀀텀 측정과 직교 및 비직교 상태에 대해 배우면서 이들 연습 과제를 해결합니다. |
-|[공동 측정값](https://github.com/microsoft/QuantumKatas/tree/main/JointMeasurements)|조인트 패리티 측정 및 [Measure](xref:microsoft.quantum.intrinsic.measure) 연산을 사용하여 퀀텀 상태를 구분하는 방법에 대해 알아봅니다.|
+|[공동 측정값](https://github.com/microsoft/QuantumKatas/tree/main/JointMeasurements)|조인트 패리티 측정 및 [Measure](xref:Microsoft.Quantum.Intrinsic.Measure) 연산을 사용하여 퀀텀 상태를 구분하는 방법에 대해 알아봅니다.|
 
 ### <a name="algorithms"></a>알고리즘
 

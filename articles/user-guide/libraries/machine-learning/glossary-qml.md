@@ -9,12 +9,12 @@ uid: microsoft.quantum.libraries.machine-learning.training
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 39974af0121a5167f1965e508cd595535178548b
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 476e93e3737dee6ad8f3a97e8ffbcfb9b0012ee1
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833912"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691514"
 ---
 # <a name="quantum-machine-learning-glossary"></a>퀀텀 Machine Learning 용어집
 
@@ -30,7 +30,7 @@ ms.locfileid: "90833912"
 
 ## <a name="hyperparameters"></a>하이퍼 매개 변수
 
-모델 학습 프로세스는 하이퍼 *매개 변수*라고 하는 특정 미리 설정 된 값의 적용을 받습니다.
+모델 학습 프로세스는 하이퍼 *매개 변수* 라고 하는 특정 미리 설정 된 값의 적용을 받습니다.
 
 ### <a name="learning-rate"></a>학습 속도
 
@@ -56,9 +56,10 @@ ms.locfileid: "90833912"
 
 #### <a name="how-to-modify-the-hyperparameters"></a>하이퍼 매개 변수를 수정 하는 방법
 
-QML 라이브러리에서 하이퍼 매개 변수를 수정 하는 가장 좋은 방법은 UDT의 기본값을 재정의 하는 것입니다 [`TrainingOptions`](xref:microsoft.quantum.machinelearning.trainingoptions) . 이렇게 하려면 함수를 사용 하 여 호출 하 [`DefaultTrainingOptions`](xref:microsoft.quantum.machinelearning.defaulttrainingoptions) 고 연산자를 적용 `w/` 하 여 기본값을 재정의 합니다. 예를 들어 10만 측정치와 0.01의 학습 률을 사용 하려면 다음을 수행 합니다.
- ```qsharp
+QML 라이브러리에서 하이퍼 매개 변수를 수정 하는 가장 좋은 방법은 UDT의 기본값을 재정의 하는 것입니다 [`TrainingOptions`](xref:Microsoft.Quantum.MachineLearning.TrainingOptions) . 이렇게 하려면 함수를 사용 하 여 호출 하 [`DefaultTrainingOptions`](xref:Microsoft.Quantum.MachineLearning.DefaultTrainingOptions) 고 연산자를 적용 `w/` 하 여 기본값을 재정의 합니다. 예를 들어 10만 측정치와 0.01의 학습 률을 사용 하려면 다음을 수행 합니다.
+
+```qsharp
 let options = DefaultTrainingOptions()
 w/ LearningRate <- 0.01
 w/ NMeasurements <- 100000;
- ```
+```

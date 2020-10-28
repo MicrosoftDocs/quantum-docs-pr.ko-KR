@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.controlflow
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 547c57cab67443e8b487bf817eb79fc922b43cdc
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: eca37202e5fe9b48dcfdec4eeb4ba6cafaac8723
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833506"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691084"
 ---
 # <a name="control-flow-in-no-locq"></a>제어 흐름 Q#
 
@@ -38,10 +38,10 @@ ms.locfileid: "90833506"
 필요에 따라, 각각 키워드 `elif` , 괄호 안의 부울 식 및 문 블록 ( _else-if_ 블록)으로 구성 된 else 절을 사용할 수 있습니다.
 마지막으로, `else` 다른 문 블록 ( _else_ 블록) 뒤에 오는 키워드로 구성 된 else 절을 사용 하 여 문을 선택적으로 완료할 수 있습니다.
 
-`if`조건이 평가 되 고 *true*인 경우 *에는* 블록이 실행 됩니다.
-조건이 *false*이면 첫 번째 else 조건이 평가 됩니다. 해당 하는 경우 *else* 블록을 실행 합니다.
+`if`조건이 평가 되 고 *true* 인 경우 *에는* 블록이 실행 됩니다.
+조건이 *false* 이면 첫 번째 else 조건이 평가 됩니다. 해당 하는 경우 *else* 블록을 실행 합니다.
 그렇지 않은 경우 두 번째 else if 블록은를 계산 하 고, 세 번째는 true 조건이 있는 절이 발견 되거나 else if 절이 없을 때까지 계산 됩니다.
-원래 *if* 조건과 모든 else if 절이 *false*이면 *else* 블록이 실행 됩니다 (제공 된 경우).
+원래 *if* 조건과 모든 else if 절이 *false* 이면 *else* 블록이 실행 됩니다 (제공 된 경우).
 
 실행 되는 블록이 무엇이 든 해당 범위 내에서 실행 됩니다.
 `if`, 또는 블록 내부에서 만들어진 바인딩은 `elif` `else` 블록이 끝난 후에는 표시 되지 않습니다.
@@ -129,7 +129,7 @@ fixup {
 루프 본문이 실행 된 후 조건이 평가 됩니다.
 조건이 true 이면 문이 완료 된 것입니다. 그렇지 않으면 픽스업이 실행 되 고 문이 루프 본문부터 다시 실행 됩니다.
 
-RUS 루프의 세 부분 (본문, 테스트 및 수정)은 *각 반복에 대해*단일 범위로 처리 되므로 본문에 바인딩된 기호는 테스트와 픽스업에서 모두 사용할 수 있습니다.
+RUS 루프의 세 부분 (본문, 테스트 및 수정)은 *각 반복에 대해* 단일 범위로 처리 되므로 본문에 바인딩된 기호는 테스트와 픽스업에서 모두 사용할 수 있습니다.
 그러나 픽스업 실행을 완료 하면 문 범위가 끝나기 때문에 본문 또는 픽스업 중에 만든 기호 바인딩을 후속 반복에서 사용할 수 없습니다.
 
 또한 `fixup` 문은 종종 유용 하지만 항상 필요한 것은 아닙니다.
@@ -324,7 +324,7 @@ using (qubit = Qubit()) {
 * `fixup`퀀텀 작업과 관련 된 루프의 더 복잡 한 부분입니다. 
 * `AssertMeasurementProbability`문을 사용 하 여 프로그램의 지정 된 특정 지점에서 퀀텀 상태를 측정 하는 확률을 확인 합니다.
 
-및 작업에 대 한 자세한 내용은 [`AssertMeasurement`](xref:microsoft.quantum.diagnostics.assertmeasurement) [`AssertMeasurementProbability`](xref:microsoft.quantum.diagnostics.assertmeasurementprobability) [테스트 및 디버깅](xref:microsoft.quantum.guide.testingdebugging)을 참조 하세요.
+및 작업에 대 한 자세한 내용은 [`AssertMeasurement`](xref:Microsoft.Quantum.Diagnostics.assertmeasurement) [`AssertMeasurementProbability`](xref:Microsoft.Quantum.Diagnostics.assertmeasurementprobability) [테스트 및 디버깅](xref:microsoft.quantum.guide.testingdebugging)을 참조 하세요.
 
 ```qsharp
 operation PrepareStateUsingRUS(target : Qubit) : Unit {

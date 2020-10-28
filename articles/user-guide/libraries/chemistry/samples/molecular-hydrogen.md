@@ -9,12 +9,12 @@ uid: microsoft.quantum.chemistry.examples.energyestimate
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 05506f4099de754cd02d81fbd9200f2de091e37e
-ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
+ms.openlocfilehash: 81fba0c52c854d61f9143659795fb4d3c3cee8b9
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90759735"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691523"
 ---
 # <a name="obtaining-energy-level-estimates"></a>에너지 수준 추정치 얻기
 에너지 수준의 값을 예측 하는 것은 퀀텀 화학의 주요 응용 프로그램 중 하나입니다. 이 문서에서는 분자 hydrogen의 정식 예제에 대해이를 수행 하는 방법을 간략하게 설명 합니다. 이 섹션에서 참조 하는 샘플은 [`MolecularHydrogen`](https://github.com/microsoft/Quantum/tree/main/samples/chemistry/MolecularHydrogen) 화학 샘플 리포지토리에 있습니다. 출력을 그리는 시각적 예제는 [`MolecularHydrogenGUI`](https://github.com/microsoft/Quantum/tree/main/samples/chemistry/MolecularHydrogenGUI) 데모입니다.
@@ -44,7 +44,7 @@ ms.locfileid: "90759735"
     var fermionHamiltonian = new OrbitalIntegralHamiltonian(orbitalIntegrals).ToFermionHamiltonian();
 ```
 
-Hamiltonian를 시뮬레이션 하려면 fermion 연산자를 연산자로 변환 해야 합니다. 이러한 변환은 다음과 같이 Wigner 인코딩을 통해 수행 됩니다.
+Hamiltonian를 시뮬레이션 하려면 fermion 연산자를 연산자로 변환 해야 합니다. 이러한 변환은 다음과 같이 Jordan-Wigner 인코딩을 통해 수행 됩니다.
 
 ```csharp
     // The Jordan-Wigner encoding converts the fermion Hamiltonian, 
@@ -83,7 +83,7 @@ let integratorOrder = 4;
 let (nQubits, (rescale, oracle)) =  TrotterStepOracle (qSharpData, stepSize, integratorOrder);
 ```
 
-이제 표준 라이브러리의 [단계 추정 알고리즘](xref:microsoft.quantum.libraries.characterization) 을 사용 하 여 이전 시뮬레이션을 통해 그라운드 상태 에너지를 배울 수 있습니다. 이렇게 하려면 퀀텀 접지 상태에 대 한 적절 한 근사값을 준비 해야 합니다. 이러한 근사치에 대 한 제안은 스키마에 제공 됩니다 [`Broombridge`](xref:microsoft.quantum.libraries.chemistry.schema.broombridge) . 그러나 이러한 제안이 없는 경우에는 기본 방법으로 `hamiltonian.NElectrons` 적극적 대각선 파괴을 최소화 하기 위해 여러 개의를 추가 합니다. 단계 예측 함수 및 작업은 Microsoft. n a m [. 특성화](xref:microsoft.quantum.characterization) 네임 스페이스의 docfx 표기법으로 제공 됩니다.
+이제 표준 라이브러리의 [단계 추정 알고리즘](xref:microsoft.quantum.libraries.characterization) 을 사용 하 여 이전 시뮬레이션을 통해 그라운드 상태 에너지를 배울 수 있습니다. 이렇게 하려면 퀀텀 접지 상태에 대 한 적절 한 근사값을 준비 해야 합니다. 이러한 근사치에 대 한 제안은 스키마에 제공 됩니다 [`Broombridge`](xref:microsoft.quantum.libraries.chemistry.schema.broombridge) . 그러나 이러한 제안이 없는 경우에는 기본 방법으로 `hamiltonian.NElectrons` 적극적 대각선 파괴을 최소화 하기 위해 여러 개의를 추가 합니다. 단계 예측 함수 및 작업은 Microsoft. n a m [. 특성화](xref:Microsoft.Quantum.Characterization) 네임 스페이스의 docfx 표기법으로 제공 됩니다.
 
 다음 코드 조각에서는 화학 시뮬레이션 라이브러리의 실시간 진화 출력이 퀀텀 단계 예측과 통합 되는 방식을 보여 줍니다.
 

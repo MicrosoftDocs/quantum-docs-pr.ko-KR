@@ -89,7 +89,7 @@
 
 $$\mathrm{Cnot } _ { 01 } (H \otimes 1) \ket { 00 } = \frac { 1 } { \sqrt { 2 } } \left ( \ket { 00 }  +  \ket { 11 } \right ),$$
 
-이러한 복잡성을 포함 하는 작업은 퀀텀 알고리즘과 퀀텀 오류 수정에서 사용할 수 있으므로 *퀀텀 회로 다이어그램*이라고 하는 시각화에 대 한 간단한 메서드가 있는 것이 좋습니다.
+이러한 복잡성을 포함 하는 작업은 퀀텀 알고리즘과 퀀텀 오류 수정에서 사용할 수 있으므로 *퀀텀 회로 다이어그램* 이라고 하는 시각화에 대 한 간단한 메서드가 있는 것이 좋습니다.
 이 최대 entangled 퀀텀 상태를 준비 하기 위한 회로 다이어그램은 다음과 같습니다.
 
 <!--- ![](.\media\1.svg) --->
@@ -109,7 +109,7 @@ $$\mathrm{Cnot } _ { 01 } (H \otimes 1) \ket { 00 } = \frac { 1 } { \sqrt { 2 } 
 <!--를 쉽게 가운데에 맞출 수 없습니다. 필요한 확장이 있을 수 있습니다.>
 ![단일 기능 비트 레지스터에서 작동 하는 Hadamard 작업에 대 한 기호](~/media/2.svg)
 
-는 단일의 비트 레지스터에서 작동 하는 [Hadamard](xref:microsoft.quantum.intrinsic.h) 작업입니다.
+는 단일의 비트 레지스터에서 작동 하는 [Hadamard](xref:Microsoft.Quantum.Intrinsic.H) 작업입니다.
 
 퀀텀 게이트는 처음에는 관문을 중심으로 가장 왼쪽의 게이트가 있는 시간순으로 정렬 됩니다.
 즉, 퀀텀을 퀀텀 상태를 유지 하는 경우 와이어는 다이어그램의 각 게이트를 통해 퀀텀 상태를 왼쪽에서 오른쪽으로 가져옵니다.
@@ -150,7 +150,7 @@ Multi-factor bit 퀀텀 회로 다이어그램에 기본 제공 되는 다른 �
 ![단일 제어 게이트 회로 다이어그램](~/media/5.svg)
 
 여기서 검은색 원은 게이트가 제어 되는 퀀텀 비트를 나타내며, 세로는 컨트롤의 값이 1 인 경우 적용 되는 단일를 나타냅니다 $ $ .
-$G = X $ 및 g Z의 경우 제어 되는 $ = $ 게이트 버전을 설명 하는 다음과 같은 표기법이 도입 됩니다 (제어 된 X 게이트는 [ $ cnot $ 게이트](xref:microsoft.quantum.intrinsic.cnot)).
+$G = X $ 및 g Z의 경우 제어 되는 $ = $ 게이트 버전을 설명 하는 다음과 같은 표기법이 도입 됩니다 (제어 된 X 게이트는 [ $ cnot $ 게이트](xref:Microsoft.Quantum.Intrinsic.CNOT)).
 
 <!--- ![](.\media\6.svg) --->
 <!--를 쉽게 가운데에 맞출 수 없습니다. 필요한 확장이 있을 수 있습니다.>
@@ -175,7 +175,7 @@ is Ctl { // Auto-generate the controlled specialization of the operation
 <!--를 쉽게 가운데에 맞출 수 없습니다. 필요한 확장이 있을 수 있습니다.>
 ![측정 작업을 나타내는 기호](~/media/7.svg)
 
-Q# 이 목적에 대 한 [측정값 연산자](xref:microsoft.quantum.intrinsic.measure) 를 구현 합니다.
+Q# 이 목적에 대 한 [측정값 연산자](xref:Microsoft.Quantum.Intrinsic.Measure) 를 구현 합니다.
 자세한 내용은 [측정에](xref:microsoft.quantum.libraries.standard.prelude#measurements) 대 한 섹션을 참조 하세요.
 
 마찬가지로 subcircuit

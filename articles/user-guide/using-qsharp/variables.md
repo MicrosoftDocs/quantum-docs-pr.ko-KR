@@ -9,16 +9,16 @@ uid: microsoft.quantum.guide.variables
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: bb87f36d3c9b7df195f64e85151e833d494ea945
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 67c71c09e004d77360902360fefc7a7752e4a829
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835879"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92690941"
 ---
 # <a name="variables-in-no-locq"></a>변수 Q#
 
-Q# 식에 바인딩된/할당 된 변경 가능한 기호 또는 *변수*를 구분 합니다.
+Q# 식에 바인딩된/할당 된 변경 가능한 기호 또는 *변수* 를 구분 합니다.
 일반적으로 컴파일러에서 더 많은 최적화를 수행할 수 있기 때문에 변경할 수 없는 기호를 사용 하는 것이 좋습니다.
 
 바인딩의 왼쪽은 기호 튜플 및 식의 오른쪽으로 구성 되어 있습니다.
@@ -40,7 +40,7 @@ let measurementOperator = [PauliX, PauliZ, PauliZ, PauliX, PauliI];
 > [!NOTE]
 > 이전 예제에서는 문의 오른쪽에 있는 식이 명확 하지 않으므로 새 변수의 형식을 명시적으로 지정할 필요가 없으며, `let` 컴파일러는 올바른 형식을 유추 합니다. 
 
-을 사용 하 여 정의 된 변수 `let` 는 *변경할*수 없습니다. 즉,이 변수를 정의한 후에는 더 이상 변경할 수 없습니다.
+을 사용 하 여 정의 된 변수 `let` 는 *변경할* 수 없습니다. 즉,이 변수를 정의한 후에는 더 이상 변경할 수 없습니다.
 이렇게 하면 작업의 변형을 적용 하기 위해 다시 정렬할 변수에 적용 되는 기존 논리의 최적화를 비롯 하 여 여러 가지 유용한 최적화를 수행할 수 있습니다 `Adjoint` .
 
 ## <a name="mutable-variables"></a>변경 가능한 변수
@@ -92,7 +92,7 @@ for (q in qubits) {
 #### <a name="update-and-reassign-statements"></a>업데이트 및 재할당 문
 
 오른쪽에 [복사 및 업데이트 식](xref:microsoft.quantum.guide.expressions#copy-and-update-expressions) 에 대 한 유사한 연결이 있습니다.
-마찬가지로, 사용자 정의 형식의 *명명 된 항목* 뿐만 아니라 *배열 항목*에 대해 *업데이트 및 재할당* 문이 존재 합니다.  
+마찬가지로, 사용자 정의 형식의 *명명 된 항목* 뿐만 아니라 *배열 항목* 에 대해 *업데이트 및 재할당* 문이 존재 합니다.  
 
 ```qsharp
 newtype Complex = (Re : Double, Im : Double);
@@ -110,7 +110,7 @@ function ComplexSum(reals : Double[], ims : Double[]) : Complex[] {
 }
 ```
 
-배열의 경우 [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) Q# 표준 라이브러리는 여러 일반적인 배열 초기화 및 조작 요구에 필요한 도구를 제공 하므로 첫 번째 위치의 배열 항목을 업데이트 하지 않아도 됩니다. 
+배열의 경우 [`Microsoft.Quantum.Arrays`](xref:Microsoft.Quantum.Arrays) Q# 표준 라이브러리는 여러 일반적인 배열 초기화 및 조작 요구에 필요한 도구를 제공 하므로 첫 번째 위치의 배열 항목을 업데이트 하지 않아도 됩니다. 
 
 필요에 따라 업데이트 및 재할당 문이 대안을 제공 합니다.
 
@@ -135,7 +135,7 @@ operation SampleUniformDistrbution(nSamples : Int, nSteps : Int) : Double[] {
 
 ```
 
-예를 들어에서 제공 하는 배열에 대해 라이브러리 도구를 사용 하 여 [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) `Pauli` 인덱스의 요소가 지정 된 값을 `i` 사용 `Pauli` 하 고 다른 모든 항목은 id () 인 형식의 배열을 반환 하는 함수를 쉽게 정의할 수 있습니다 `PauliI` .
+예를 들어에서 제공 하는 배열에 대해 라이브러리 도구를 사용 하 여 [`Microsoft.Quantum.Arrays`](xref:Microsoft.Quantum.Arrays) `Pauli` 인덱스의 요소가 지정 된 값을 `i` 사용 `Pauli` 하 고 다른 모든 항목은 id () 인 형식의 배열을 반환 하는 함수를 쉽게 정의할 수 있습니다 `PauliI` .
 
 다음은 이러한 함수의 두 가지 정의 이며, 두 번째는 이러한 함수의 정의를 활용 하는 것입니다.
 
@@ -150,7 +150,7 @@ function PauliEmbedding(pauli : Pauli, length : Int, location : Int) : Pauli[] {
 }
 ```
 
-배열의 각 인덱스를 반복 하 고 조건부로 설정 하거나 지정 된로 설정 하는 대신 `PauliI` `pauli` 에서를 사용 하 여 `ConstantArray` [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) 형식의 배열을 만든 `PauliI` 다음 인덱스에서 특정 값을 변경한 복사 및 업데이트 식을 반환할 수 있습니다 `location` .
+배열의 각 인덱스를 반복 하 고 조건부로 설정 하거나 지정 된로 설정 하는 대신 `PauliI` `pauli` 에서를 사용 하 여 `ConstantArray` [`Microsoft.Quantum.Arrays`](xref:Microsoft.Quantum.Arrays) 형식의 배열을 만든 `PauliI` 다음 인덱스에서 특정 값을 변경한 복사 및 업데이트 식을 반환할 수 있습니다 `location` .
 
 ```qsharp
 function PauliEmbedding(pauli : Pauli, length : Int, location : Int) : Pauli[] {

@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines.resources-estimator
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 6138c098a4efe2797c7d7360573ddcb9cb70a6c1
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: e1ec01d85a141b9c8a7a5ba5589663a0773520e7
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835930"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691868"
 ---
 # <a name="quantum-development-kit-qdk-resources-estimator"></a>QDK (퀀텀 Development Kit) 리소스 평가기
 
@@ -123,20 +123,47 @@ namespace Quantum.MyProgram
 
 평가기 리소스는 다음 메트릭을 추적 합니다.
 
-|메트릭|설명|
+|메트릭|Description|
 |----|----|
 |__CNOT__    |작업의 실행 수 `CNOT` (제어 된 Pauli X 작업이 라고도 함).|
 |__QubitClifford__ |단일 Clifford 및 Pauli 작업의 실행 수입니다.|
 |__측정값__    |측정의 실행 횟수입니다.  |
 |__R__    |Clifford 및 Pauli 작업을 제외한 모든 단일 비트 회전의 실행 횟수입니다 `T` .  |
 |__T__    |작업의 실행 수 `T` 및 `T` 작업, T_x = .h 및 T_y = Hy. Hy를 포함 하는 변화 시키고입니다.  |
-|__Depth__|작업에 의해 실행 되는 퀀텀 회로 깊이의 하 한입니다 Q# . 기본적으로 깊이 메트릭은 게이트 수만 계산 `T` 합니다. 자세한 내용은 [깊이 카운터](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter)를 참조 하세요.   |
-|__Width__    |작업을 실행 하는 동안 할당 된 최대 값 수의 하한값입니다 Q# . __깊이__ 와 __너비__ 의 하한값을 동시에 실현 하지 못할 수도 있습니다.  |
+|__깊이__|작업에 의해 실행 되는 퀀텀 회로의 깊이 Q# 입니다 ( [아래](#depth-width-and-qubitcount)참조). 기본적으로 깊이 메트릭은 게이트 수만 계산 `T` 합니다. 자세한 내용은 [깊이 카운터](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter)를 참조 하세요.   |
+|__Width__|작업에 의해 실행 되는 퀀텀 회로의 너비 Q# 입니다 ( [아래](#depth-width-and-qubitcount)참조). 기본적으로 깊이 메트릭은 게이트 수만 계산 `T` 합니다. 자세한 내용은 [깊이 카운터](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter)를 참조 하세요.   |
+|__고 비트 수__    |작업을 실행 하는 동안 할당 된 최대 값 수의 하한값입니다 Q# . 이 메트릭은 __깊이__ 와 호환 되지 않을 수 있습니다 (아래 참조).  |
 |__BorrowedWidth__    |작업 내에서 빌려 온 최대 수입니다 Q# .  |
+
+
+## <a name="depth-width-and-qubitcount"></a>Depth, Width 및  Bitcount
+
+보고 된 깊이 및 너비 예상치는 서로 호환 됩니다.
+(이전에는 두 숫자를 모두 달성할 수 있었지만 깊이와 너비를 위해 서로 다른 회로가 필요 합니다.) 현재이 쌍의 두 메트릭은 동시에 동일한 회로를 통해 구현할 수 있습니다.
+
+보고 되는 메트릭은 다음과 같습니다.
+
+__깊이:__ 루트 작업의 경우 특정 게이트 시간을 가정 하 여 실행 하는 데 걸리는 시간입니다.
+작업의 시작과 끝에서 최신 비트율 비트 가용성 시간 사이의 후속 작업 시간 차이를 제공 합니다.
+
+__너비:__ 루트 작업의 경우-이를 실행 하는 데 실제로 사용 되는 작업 (및 호출 하는 작업)의 수입니다.
+작업을 시작할 때 이미 사용 된 것과 같은 작업의 경우 또는 후속 작업에 사용 된 것 보다 더 많은 이상 비트 수입니다.
+
+재사용 된 값은이 숫자에 영향을 주지 않습니다.
+즉, 작업 A가 시작 되기 전에 몇 개의 몇 가지 기능을 해제 하 고이 작업에서 요구 하는 모든 기능 (및에서 호출 된 작업)이 이전 릴리스를 다시 사용 하 여 충족 된 경우 작업 A의 너비가 0으로 보고 됩니다. 이 경우에는 너비에 영향을 주지 않습니다.
+
+고 __비트 수:__ 루트 작업의 경우-이 작업을 실행 하는 데 충분 하 고 해당 작업에서 호출 되는 작업을 실행 하기에 충분 한 최소 수의 단일 비트 수입니다.
+또는 후속 작업에 대해이 작업을 별도로 실행 하기에 충분 한 최소 수의 단일 비트 수입니다. 이 숫자에는 입력 비트 비트가 포함 되지 않습니다. 여기에는가 포함 됩니다.
+
+두 가지 작업 모드가 지원 됩니다. QCTraceSimulatorConfiguration. OptimizeDepth를 설정 하 여 모드를 선택 합니다.
+
+__OptimizeDepth = true:__ 이 경우는 더 이상 사용 하지 않는 것이 좋으며 비트를 사용 하는 것이 좋습니다. 루트 작업 __깊이__ 는 최소 깊이 (하한값)가 됩니다. 이 깊이에 대해 호환 되는 __너비가__ 보고 됩니다. 둘 다 동시에 달성할 수 있습니다. 이 너비는이 깊이에서 최적이 아닐 수 있습니다. 작업을 다시 사용 하는 것으로 가정 하기 때문에 루트 작업의 경우에는 너비 보다 낮을 __수 있습니다.__
+
+__OptimizeDepth = false:__ 새 항목을 할당 하기 전에 원하는 비트를 다시 사용 하는 것이 좋습니다. 루트 __작업의 경우 너비가 최소__ 너비 (하한값)가 됩니다. 호환 가능한 __깊이가__ 보고 될 수 있습니다. Borrowing가 없는 것으로 가정 하는 루트 작업의 __너비__ 와 동일한 __것이 있습니다__ .
 
 ## <a name="providing-the-probability-of-measurement-outcomes"></a>측정 결과의 확률 제공
 
-<xref:microsoft.quantum.diagnostics.assertmeasurementprobability> <xref:microsoft.quantum.diagnostics> 네임 스페이스에서를 사용 하 여 측정 작업의 예상 확률에 대 한 정보를 제공할 수 있습니다. 자세한 내용은 [퀀텀 추적 시뮬레이터](xref:microsoft.quantum.machines.qc-trace-simulator.intro) 를 참조 하세요.
+<xref:Microsoft.Quantum.Diagnostics.AssertMeasurementProbability> <xref:Microsoft.Quantum.Diagnostics> 네임 스페이스에서를 사용 하 여 측정 작업의 예상 확률에 대 한 정보를 제공할 수 있습니다. 자세한 내용은 [퀀텀 추적 시뮬레이터](xref:microsoft.quantum.machines.qc-trace-simulator.intro) 를 참조 하세요.
 
 ## <a name="see-also"></a>참고 항목
 

@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.qubits
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: aa942a61280553ae4e51cd5ddcc85c0df935dab1
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 9a3d7e03016332a04ac9d1610428b6fcd546d1f6
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835862"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691582"
 ---
 # <a name="working-with-qubits"></a>큐비트 사용
 
@@ -29,14 +29,14 @@ ms.locfileid: "90835862"
 
 실제 리소스는 퀀텀 컴퓨터의 귀중 한 리소스 이기 때문에 컴파일러의 작업 중 일부는 최대한 효율적으로 사용 되 고 있는지 확인 하는 것입니다.
 따라서 Q# 특정 문 블록 내에서 사용할 수 있도록이를 *할당* 해야 합니다.
-이를 단일의 비트 또는 *레지스터*라고 하는 원하는 비트 배열로 할당할 수 있습니다. 
+이를 단일의 비트 또는 *레지스터* 라고 하는 원하는 비트 배열로 할당할 수 있습니다. 
 
 ### <a name="clean-qubits"></a>정리 비트
 
 문을 사용 `using` 하 여 문 블록 중에 사용할 새 요소를 할당 합니다.
 
 문은 키워드로 구성 `using` 된 다음 괄호 안에 포함 된 바인딩과 함께 `( )` 사용할 수 있는 문 블록으로 구성 됩니다.
-바인딩은 문과 동일한 패턴을 따릅니다 `let` . 단일 기호 또는 기호 튜플, 등호 `=` , 단일 값 또는 *이니셜라이저의*일치 하는 튜플 중 하나를 수행 합니다.
+바인딩은 문과 동일한 패턴을 따릅니다 `let` . 단일 기호 또는 기호 튜플, 등호 `=` , 단일 값 또는 *이니셜라이저의* 일치 하는 튜플 중 하나를 수행 합니다.
 
 이니셜라이저는로 표시 된 단일의 비트 또는의 배열 ( `Qubit()` `Qubit[n]` 여기서 `n` 는 `Int` 식)으로 사용할 수 있습니다.
 예를 들면 다음과 같습니다.
@@ -95,7 +95,7 @@ Borrowing를 사용 하는 경우 시스템은 먼저 사용 중이지만 문의
 이 문서에서는 사용자가 사용할 수 있는 몇 가지 유용한 작업을 설명 Q# 합니다.
 이러한 항목 및 기타에 대 한 자세한 내용은 [내장 작업 및 함수](xref:microsoft.quantum.libraries.standard.prelude)를 참조 하세요. 
 
-첫째, 단일 기능 비트 Pauli 연산자 $X $, $Y $ 및 $Z $는 내장 작업, 및로 표시 되며, Q# [`X`](xref:microsoft.quantum.intrinsic.x) [`Y`](xref:microsoft.quantum.intrinsic.y) [`Z`](xref:microsoft.quantum.intrinsic.z) 각각 형식이 `(Qubit => Unit is Adj + Ctl)` 있습니다.
+첫째, 단일 기능 비트 Pauli 연산자 $X $, $Y $ 및 $Z $는 내장 작업, 및로 표시 되며, Q# [`X`](xref:Microsoft.Quantum.Intrinsic.X) [`Y`](xref:Microsoft.Quantum.Intrinsic.Y) [`Z`](xref:Microsoft.Quantum.Intrinsic.Z) 각각 형식이 `(Qubit => Unit is Adj + Ctl)` 있습니다.
 
 [내장 작업 및 함수](xref:microsoft.quantum.libraries.standard.prelude)에 설명 된 것 처럼, $X $ 등의 `X` 작업을 수행 하거나 게이트를 수행 하지 않는 것으로 간주 합니다.
 작업을 사용 하 여 `X` $ \ket{s_0 s_1 \dots .. s_n} $s $ 형식의 상태를 준비할 수 있습니다.
@@ -127,7 +127,7 @@ operation RunExample() : Unit {
 > [!TIP]
 > 나중에이 작업을 작성 하는 보다 간단한 방법으로 수동 제어 흐름이 필요 하지 않습니다.
 
-\Ket transform $H $를 사용 하 여 $ \ket{+} = \left (\ket {0} + \ket {1} \left)/\left $ {2} 및 $ \ket {-} = \left (\ket Hadamard \left)/\left $와 같은 상태를 준비할 수도 있습니다 {0} {1} {2} .이는 Q# 내장 작업 ( [`H`](xref:microsoft.quantum.intrinsic.h) => Unit is Adj + Ctl)에 의해 표현 됩니다.
+\Ket transform $H $를 사용 하 여 $ \ket{+} = \left (\ket {0} + \ket {1} \left)/\left $ {2} 및 $ \ket {-} = \left (\ket Hadamard \left)/\left $와 같은 상태를 준비할 수도 있습니다 {0} {1} {2} .이는 Q# 내장 작업 ( [`H`](xref:Microsoft.Quantum.Intrinsic.H) => Unit is Adj + Ctl)에 의해 표현 됩니다.
 
 ```qsharp
 operation PreparePlusMinusState(bitstring : Bool[], register : Qubit[]) : Unit {
@@ -149,7 +149,7 @@ operation PreparePlusMinusState(bitstring : Bool[], register : Qubit[]) : Unit {
 
 ### <a name="measure-a-single-qubit-in-the-pauliz-basis"></a>단일 `PauliZ` 비트 단위 측정
 
-[`M`](xref:microsoft.quantum.intrinsic.m)기본 제공 되는 기본이 아닌 작업 인 작업을 사용 하 여 단일 비트를 측정 하 `PauliZ` 고 결과에 기존 값을 할당 합니다.
+[`M`](xref:Microsoft.Quantum.Intrinsic.M)기본 제공 되는 기본이 아닌 작업 인 작업을 사용 하 여 단일 비트를 측정 하 `PauliZ` 고 결과에 기존 값을 할당 합니다.
 `M` 에는 예약 된 반환 형식이 있습니다. 여기에는 `Result` 값을 사용 `Zero` 하거나 `One` 측정 된 상태 $ \ket {0} $ 또는 $ \ket {1} $-결과가 더 이상 퀀텀 상태가 아님을 나타내는 값만 사용할 수 있습니다.
 
 간단한 예는 $ \ket $ 상태에서 1 개의 한 비트를 할당 하 {0} 고, Hadamard 작업을 적용 하 고, 결과를 측정 하는 다음 작업입니다 `H` `PauliZ` .
@@ -175,7 +175,7 @@ operation MeasureOneQubit() : Result {
 
 ### <a name="measure-one-or-more-qubits-in-specific-bases"></a>특정 베이스에서 하나 이상의 이상 비트 측정
 
-특정 베이스에서 하나 이상의 고 비트 배열을 측정 하려면 작업을 사용할 수 있습니다 [`Measure`](xref:microsoft.quantum.intrinsic.measure) .
+특정 베이스에서 하나 이상의 고 비트 배열을 측정 하려면 작업을 사용할 수 있습니다 [`Measure`](xref:Microsoft.Quantum.Intrinsic.Measure) .
 
 에 대 한 입력은 `Measure` 형식의 배열 `Pauli` (예: `[PauliX, PauliZ, PauliZ]` ) 및의 배열입니다.
 

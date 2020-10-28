@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.types
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: c4a3e6563b8cabee87d1db6b9cb1c1f1c1a7131b
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 349138984387cc564cca18ea09c7bf161524b0b6
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835828"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691615"
 ---
 # <a name="types-in-no-locq"></a>의 형식 Q#
 
@@ -22,7 +22,7 @@ ms.locfileid: "90835828"
 
 는 강력한 형식의 Q# 언어로, *strongly-typed* 이러한 형식을 신중히 사용 하면 컴파일러가 Q# 컴파일 시간에 프로그램에 대 한 강력한 보증을 제공 하는 데 도움이 될 수 있습니다.
 가장 강력한 보증을 제공 하기 위해의 형식 간 변환은 Q# 해당 변환을 표현 하는 함수에 대 한 호출을 명시적으로 사용 해야 합니다. 
-Q# 는 네임 스페이스의 일부분으로 다양 한 함수를 제공 합니다 <xref:microsoft.quantum.convert> .
+Q# 는 네임 스페이스의 일부분으로 다양 한 함수를 제공 합니다 <xref:Microsoft.Quantum.Convert> .
 반면에 호환 되는 형식에 대 한 upcasts은 암시적으로 수행 됩니다. 
 
 Q# 는 직접 사용 되는 기본 형식과 다른 형식에서 새 형식을 생성 하는 다양 한 방법을 제공 합니다.
@@ -30,7 +30,7 @@ Q# 는 직접 사용 되는 기본 형식과 다른 형식에서 새 형식을 �
 
 ## <a name="primitive-types"></a>기본 유형
 
-이 Q# 언어는 프로그램에서 직접 사용할 수 있는 다음과 같은 *기본 형식을*제공 합니다 Q# . 이러한 기본 형식을 사용 하 여 새 형식을 생성할 수도 있습니다.
+이 Q# 언어는 프로그램에서 직접 사용할 수 있는 다음과 같은 *기본 형식을* 제공 합니다 Q# . 이러한 기본 형식을 사용 하 여 새 형식을 생성할 수도 있습니다.
 
 - `Int`형식은 64 비트 부호 있는 정수를 나타냅니다 (예:,, `2` ) `107` `-5` .
 - `BigInt`형식은 임의 크기의 부호 있는 정수를 나타냅니다 (예:,,) `2L` `107L` `-5L` .
@@ -126,7 +126,7 @@ Q# 는 생성 된 튜플의 콘텐츠를 변경 하는 메커니즘을 제공 �
 
 특히이는 입력 튜플 또는 출력 튜플 형식에 단일 인수를 사용 하거나 단일 값을 반환 하는 하나의 필드가 있는 작업 또는 함수를 볼 수 있음을 의미 합니다.
 
-이 속성은 _단일 튜플 동치_로 참조 됩니다.
+이 속성은 _단일 튜플 동치_ 로 참조 됩니다.
 
 
 ## <a name="user-defined-types"></a>사용자 정의 형식
@@ -259,8 +259,8 @@ function AsComplexArray (data : Double[]) : ComplexArray {
 
 다음 형식 및이 제공 됩니다 `'Tinput` `'Tresult` .
 
-* `('Tinput => 'Tresult)` 는 모든 *작업*(예:)에 대 한 기본 형식입니다 `((Qubit, Pauli) => Result)` .
-* `('Tinput -> 'Tresult)` 는 *함수*에 대 한 기본 형식입니다 (예:) `(Int -> Int)` . 
+* `('Tinput => 'Tresult)` 는 모든 *작업* (예:)에 대 한 기본 형식입니다 `((Qubit, Pauli) => Result)` .
+* `('Tinput -> 'Tresult)` 는 *함수* 에 대 한 기본 형식입니다 (예:) `(Int -> Int)` . 
 
 이를 호출 가능의 *서명* 이라고 합니다.
 
@@ -282,13 +282,13 @@ function AsComplexArray (data : Double[]) : ComplexArray {
 `Controlled`작업 형식에서 and/or 함수를 지원 하려면 `Adjoint` 해당 특성을 나타내는 주석을 추가 해야 합니다.
 주석 `is Ctl` (예:)은 `(Qubit => Unit is Ctl)` 작업을 제어할 수 있음을 나타냅니다. 즉, 해당 실행은 다른 비트율 비트 또는 기타 비트의 상태에 의존 합니다. 마찬가지로 주석은 `is Adj` 작업에 adjoint가 있음을 나타냅니다. 즉, 작업을 연속적으로 적용 한 다음 해당 adjoint 상태를 변경 되지 않은 상태로 유지 하는 "반전" 될 수 있습니다. 
 
-해당 형식의 작업에서 및 함수를 둘 다 지원 하도록 요구 하려는 경우 `Adjoint` `Controlled` 이를로 표현할 수 있습니다 `(Qubit => Unit is Adj + Ctl)` . 예를 들어 기본 제공 Pauli 작업에는 <xref:microsoft.quantum.intrinsic.x> 형식이 `(Qubit => Unit is Adj + Ctl)` 있습니다. 
+해당 형식의 작업에서 및 함수를 둘 다 지원 하도록 요구 하려는 경우 `Adjoint` `Controlled` 이를로 표현할 수 있습니다 `(Qubit => Unit is Adj + Ctl)` . 예를 들어 기본 제공 Pauli 작업에는 <xref:Microsoft.Quantum.Intrinsic.X> 형식이 `(Qubit => Unit is Adj + Ctl)` 있습니다. 
 
 함수을 지원 하지 않는 작업 형식은 입력 및 출력 형식 만으로 지정 되 고 추가 주석은 포함 하지 않습니다.
 
-### <a name="type-parameterized-functions-and-operations"></a>형식 매개 변수화 된 함수 및 작업
+### <a name="type-parameterized-functions-and-operations"></a>Type-Parameterized 함수 및 작업
 
-호출 가능 형식에는 *형식 매개 변수가*포함 될 수 있습니다.
+호출 가능 형식에는 *형식 매개 변수가* 포함 될 수 있습니다.
 작은따옴표를 접두사로 사용 하는 기호를 사용 하 여 형식 매개 변수를 나타냅니다. 예를 들어 `'A` 은 올바른 형식 매개 변수입니다.
 형식 매개 변수가 있는 callables을 정의 하는 방법에 대 한 자세한 내용 및 세부 정보는 [의 Q# 작업 및 함수 ](xref:microsoft.quantum.guide.operationsfunctions#generic-type-parameterized-callables)를 참조 하세요.
 

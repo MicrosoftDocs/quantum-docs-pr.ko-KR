@@ -9,12 +9,12 @@ uid: microsoft.quantum.contributing.docs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 20e9f8126a290f52701b6b0e525d7669a605d4c9
-ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
+ms.openlocfilehash: 2debef858c38b9a8f11264858130ed7cb41543ae
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90759682"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691788"
 ---
 # <a name="improving-documentation"></a>설명서 개선
 
@@ -29,7 +29,7 @@ ms.locfileid: "90759682"
 
 - **개념 설명서** 는에 게시 되는 일련의 문서를 구성 https://docs.microsoft.com/quantum 하며,이를 통해 퀀텀 컴퓨팅의 기본 사항에서 교환 형식에 대 한 기술 사양을 설명 하는 모든 것을 설명 합니다. 이러한 문서는 풍부한 설명서 집합을 만드는 데 사용 되는 Markdown variant 인 [Flavored Markdown (DFM)](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html)로 작성 되었습니다.
 - **API 참조** 는 Q# 에 게시 된 각 함수, 작업 및 사용자 정의 형식에 대 한 페이지 집합입니다 https://docs.microsoft.com/qsharp/api/ . 이러한 페이지에는 호출 가능한 각에 대 한 입력 및 작업과 추가 정보에 대 한 링크와 예제가 나와 있습니다. API 참조는 Q# 각 릴리스의 일부로 소스 코드의 small DFM 문서에서 자동으로 추출 됩니다.
-- 각 샘플 및 kata에 포함 된 **추가 정보 <!----> ** 파일은 해당 샘플 또는 kata를 사용 하는 방법, 포함 된 내용, 나머지 퀀텀 개발 키트와의 관계를 설명 합니다. 이러한 파일은 코드 리포지토리에 직접 문서를 연결 하는 데 널리 사용 되는 [DFM (GitHub Flavored Markdown)](https://github.github.com/gfm/)을 사용 하 여 작성 되었습니다.
+- 각 샘플 및 kata에 포함 된 **추가 정보 <!---->** 파일은 해당 샘플 또는 kata를 사용 하는 방법, 포함 된 내용, 나머지 퀀텀 개발 키트와의 관계를 설명 합니다. 이러한 파일은 코드 리포지토리에 직접 문서를 연결 하는 데 널리 사용 되는 [DFM (GitHub Flavored Markdown)](https://github.github.com/gfm/)을 사용 하 여 작성 되었습니다.
 
 ## <a name="contributing-to-the-conceptual-documentation"></a>개념 설명서에 기여
 
@@ -46,7 +46,7 @@ ms.locfileid: "90759682"
 
 ### <a name="referencing-sample-code-from-conceptual-articles"></a>개념 문서에서 샘플 코드 참조
 
-[샘플 리포지토리의](https://github.com/Microsoft/Quantum)코드를 포함 하려면 특수 Docfx-Flavored Markdown 명령을 사용 하 여이 작업을 수행할 수 있습니다.
+[Samples 리포지토리의](https://github.com/Microsoft/Quantum)코드를 포함 하려면 특수 DocFX-Flavored Markdown 명령을 사용 하 여이 작업을 수행할 수 있습니다.
 
 ```markdown
 :::code language="qsharp" source="~/quantum/samples/algorithms/chsh-game/Game.qs" range="4-8":::
@@ -138,7 +138,7 @@ API 참조에 대 한 향상 된 기능을 제공 하기 위해 문서화 되는
  }
 ```
 
-[ `ControlledOnBitString` 함수에 대 한 API 설명서](xref:microsoft.quantum.canon.controlledonbitstring)에서 위의 코드에 대해 렌더링 된 버전을 볼 수 있습니다.
+[ `ControlledOnBitString` 함수에 대 한 API 설명서](xref:Microsoft.Quantum.Canon.ControlledOnBitString)에서 위의 코드에 대해 렌더링 된 버전을 볼 수 있습니다.
 
 문서 작성에 대 한 일반적인 관행 외에도 API 문서 주석을 작성 하면 몇 가지 사항을 염두에 두어야 합니다.
 

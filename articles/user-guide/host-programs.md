@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.host-programs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 2cb02617c81ee8b144ffe933f11b476ba6f4a23e
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: f1a4ef0616a8a3f1548b7a7207cf8cbb9dcc7260
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835964"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691706"
 ---
 # <a name="ways-to-run-a-no-locq-program"></a>프로그램을 실행 하는 방법 Q#
 
@@ -26,7 +26,7 @@ ms.locfileid: "90835964"
 - 독립 실행형 응용 프로그램으로 서, Q# 가 관련 된 유일한 언어 이며 프로그램이 직접 호출 됩니다. 두 메서드는 실제로이 범주에 속합니다.
   - 명령줄 인터페이스
   - Q# Jupyter 노트북
-- Python 또는 .NET 언어 (예: c # 또는 F #)로 작성 된 추가 *호스트 프로그램*을 사용 하 여 프로그램을 호출 하 고 반환 된 결과를 추가로 처리할 수 있습니다.
+- Python 또는 .NET 언어 (예: c # 또는 F #)로 작성 된 추가 *호스트 프로그램* 을 사용 하 여 프로그램을 호출 하 고 반환 된 결과를 추가로 처리할 수 있습니다.
 
 이러한 프로세스와 해당 차이점을 가장 잘 이해 하려면 간단한 프로그램을 고려 하 여 Q# 실행 하는 방법을 비교 합니다.
 
@@ -56,16 +56,16 @@ ms.locfileid: "90835964"
 ```
 입력을 `MeasureSuperposition` 사용 하지 않고 [Result](xref:microsoft.quantum.guide.types)형식의 값을 반환 하는 작업을 정의 했습니다.
 
-이 페이지의 예제는 작업 으로만 구성 되지만 Q# *operations*설명 하는 모든 개념은 함수에 동일 하 게 관련 Q# *functions*되어 있으므로 *callables*으로 통칭 됩니다. 이러한 차이점은 [ Q# 작업 및 함수](xref:microsoft.quantum.guide.basics#q-operations-and-functions)에 대 한 기본 사항 및 [작업 및 함수](xref:microsoft.quantum.guide.operationsfunctions)에 설명 되어 있습니다.
+이 페이지의 예제는 작업 으로만 구성 되지만 Q# *operations* 설명 하는 모든 개념은 함수에 동일 하 게 관련 Q# *functions* 되어 있으므로 *callables* 으로 통칭 됩니다. 이러한 차이점은 [ Q# 작업 및 함수](xref:microsoft.quantum.guide.basics#q-operations-and-functions)에 대 한 기본 사항 및 [작업 및 함수](xref:microsoft.quantum.guide.operationsfunctions)에 설명 되어 있습니다.
 
 ### <a name="callable-defined-in-a-no-locq-file"></a>파일에 정의 된 호출 가능 Q#
 
 호출 가능 하 고에서 실행 되는 것은 정확 합니다 Q# .
 그러나 전체 파일을 구성 하기 위해 몇 가지 추가 항목이 필요 `*.qs` Q# 합니다.
 
-모든 Q# 형식 및 callables (정의 하는 모든 형식 및 해당 언어의 내장 함수)은 네임 스페이스 내에서 정의 됩니다 .이 *네임 스페이스*는 각 이름에 대해 참조할 수 있는 전체 이름을 제공 합니다.
+모든 Q# 형식 및 callables (정의 하는 모든 형식 및 해당 언어의 내장 함수)은 네임 스페이스 내에서 정의 됩니다 .이 *네임 스페이스* 는 각 이름에 대해 참조할 수 있는 전체 이름을 제공 합니다.
 
-예를 들어 [`H`](xref:microsoft.quantum.intrinsic.h) 및 [`MResetZ`](xref:microsoft.quantum.measurement.mresetz) 작업은 [`Microsoft.Quantum.Instrinsic`](xref:microsoft.quantum.intrinsic) 및 [`Microsoft.Quantum.Measurement`](xref:microsoft.quantum.measurement) 네임 스페이스 ( [ Q# 표준 라이브러리](xref:microsoft.quantum.qsharplibintro)의 일부)에 있습니다.
+예를 들어 [`H`](xref:Microsoft.Quantum.Intrinsic.H) 및 [`MResetZ`](xref:Microsoft.Quantum.Measurement.MResetZ) 작업은 [`Microsoft.Quantum.Instrinsic`](xref:Microsoft.Quantum.Intrinsic) 및 [`Microsoft.Quantum.Measurement`](xref:Microsoft.Quantum.Measurement) 네임 스페이스 ( [ Q# 표준 라이브러리](xref:microsoft.quantum.qsharplibintro)의 일부)에 있습니다.
 따라서 항상 *전체* 이름 및를 통해 호출할 수 `Microsoft.Quantum.Intrinsic.H(<qubit>)` `Microsoft.Quantum.Measurement.MResetZ(<qubit>)` 있지만 항상이 작업을 수행 하면 매우 복잡 한 코드를 사용할 수 있습니다.
 
 대신 `open` 위의 작업 본문에서 수행한 것 처럼 문이 보다 간결한 줄임으로 참조 될 수 있도록 합니다.
@@ -90,8 +90,8 @@ namespace NamespaceName {
 > 예를 들어, 위의을 대신 사용 하 고를 통해를 호출할 수 있습니다 `open Microsoft.Quantum.Instrinsic as NamespaceWithH;` `H` `NamespaceWithH.H(<qubit>)` .
 
 > [!NOTE]
-> 이에 대 한 한 가지 예외는 [`Microsoft.Quantum.Core`](xref:microsoft.quantum.core) 항상 자동으로 열리는 네임 스페이스입니다.
-> 따라서와 같은 callables은 [`Length`](xref:microsoft.quantum.core.length) 항상 직접 사용할 수 있습니다.
+> 이에 대 한 한 가지 예외는 [`Microsoft.Quantum.Core`](xref:Microsoft.Quantum.Core) 항상 자동으로 열리는 네임 스페이스입니다.
+> 따라서와 같은 callables은 [`Length`](xref:Microsoft.Quantum.Core.Length) 항상 직접 사용할 수 있습니다.
 
 ### <a name="running-on-target-machines"></a>대상 컴퓨터에서 실행
 
@@ -121,7 +121,7 @@ Q#는 독립 실행형 응용 프로그램에서 사용 되는지에 관계 없�
 Q#처음 세 가지가 아닌 주 기능이 로컬 파일을 중심으로 하지 않기 때문에 처음에는 jupyter 노트북의 독립 실행형 응용 프로그램을 예약 합니다 Q# .
 
 > [!NOTE]
-> 이러한 예에서 설명 하지는 않지만, 실행 메서드 간에는 프로그램 내에서 인쇄 되는 모든 메시지 Q# ( [`Message`](xref:microsoft.quantum.intrinsic.message) [`DumpMachine`](xref:microsoft.quantum.diagnostics.dumpmachine) 예: 또는)가 항상 해당 콘솔에 인쇄 되는 것이 일반적입니다.
+> 이러한 예에서 설명 하지는 않지만, 실행 메서드 간에는 프로그램 내에서 인쇄 되는 모든 메시지 Q# ( [`Message`](xref:Microsoft.Quantum.Intrinsic.Message) [`DumpMachine`](xref:Microsoft.Quantum.Diagnostics.DumpMachine) 예: 또는)가 항상 해당 콘솔에 인쇄 되는 것이 일반적입니다.
 
 ## <a name="no-locq-from-the-command-prompt"></a>Q# 명령 프롬프트에서
 프로그램 작성을 시작 하는 가장 쉬운 방법 중 하나는 Q# 별도의 파일과 두 번째 언어를 함께 사용 하는 것을 걱정 하지 않는 것입니다.
@@ -180,7 +180,7 @@ namespace NamespaceName {
     }
 ```
 여기서 반환 된 값은 측정 결과의 배열입니다.
-및는 [`ApplyToEach`](xref:microsoft.quantum.canon.applytoeach) [`ForEach`](xref:microsoft.quantum.arrays.foreach) [`Microsoft.Quantum.Canon`](xref:microsoft.quantum.canon) 및 네임 스페이스에 있으므로 [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) `open` 각에 대 한 추가 문이 필요 합니다.
+및는 [`ApplyToEach`](xref:Microsoft.Quantum.Canon.ApplyToEach) [`ForEach`](xref:Microsoft.Quantum.Arrays.ForEach) [`Microsoft.Quantum.Canon`](xref:Microsoft.Quantum.Canon) 및 네임 스페이스에 있으므로 [`Microsoft.Quantum.Arrays`](xref:Microsoft.Quantum.Arrays) `open` 각에 대 한 추가 문이 필요 합니다.
 
 `@EntryPoint()`이 새 작업 앞에 특성을 이동 하는 경우 (참고: 파일에는 해당 줄이 하나만 있을 수 있음),이 작업을 실행 하려고 하면 `dotnet run` 추가 명령줄 옵션이 필요한 것을 나타내는 오류 메시지와이를 표현 하는 방법이 표시 됩니다.
 
@@ -593,7 +593,7 @@ Jupyter Notebook에서 Q# Q# 파일의 네임 스페이스 내에서와 같은 �
 이러한 문을 사용 하 여 셀을 실행할 때 해당 네임 스페이스의 정의는 작업 영역 전체에서 사용할 수 있습니다.
 
 > [!NOTE]
-> [Microsoft.](xref:microsoft.quantum.intrinsic) m a s. a s. a s. a s. a s. a s. i [s.](xref:microsoft.quantum.canon) [`H`](xref:microsoft.quantum.intrinsic.h) [`ApplyToEach`](xref:microsoft.quantum.canon.applytoeach) Q#
+> [Microsoft.](xref:Microsoft.Quantum.Intrinsic) m a s. a s. a s. a s. a s. a s. i [s.](xref:Microsoft.Quantum.Canon) [`H`](xref:Microsoft.Quantum.Intrinsic.H) [`ApplyToEach`](xref:Microsoft.Quantum.Canon.ApplyToEach) Q#
 > 그러나 외부 소스 파일에서 가져온 코드 Q# ( [ Q# 및 Jupyter 노트북](https://github.com/microsoft/Quantum/blob/main/samples/getting-started/intro-to-iqsharp/Notebook.ipynb)에 표시 되는 프로세스)에는 적용 되지 않습니다. 
 > 
 
