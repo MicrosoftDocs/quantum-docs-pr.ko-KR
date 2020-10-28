@@ -1,0 +1,92 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: 내부 증후군 측정을 사용 하 여 ⟦ 3, 1, 1 ⟧ 비트 대칭 코드 인코더 및 디코더를 나타내는 QECC 값을 반환 합니다.
+  uid: Microsoft.Quantum.ErrorCorrection.BitFlipCode
+- summary: ⟦ 3, 1, 1 ⟧ 비트 대칭 코드에 대 한 테이블 조회에 지정 된 증후군 측정에 대 한 복구 Pauli 작업에 대 한 함수입니다.
+  uid: Microsoft.Quantum.ErrorCorrection.BitFlipRecoveryFn
+- summary: 내부 증후군 측정을 포함 하는 ⟦ 5, 1, 3 ⟧ 코드 인코더 및 디코더를 나타내는 QECC 값을 반환 합니다.
+  uid: Microsoft.Quantum.ErrorCorrection.FiveQubitCode
+- summary: ⟦ 5, 1, 3 ⟧ 퀀텀 코드에 대 한 테이블 조회에 따라 오류 증후군 측정값을 적절 한 오류 수정으로 매핑하는 함수를 반환 합니다.
+  uid: Microsoft.Quantum.ErrorCorrection.FiveQubitCodeRecoveryFn
+- summary: 내부 증후군 측정을 포함 하는 ⟦ 7, 1, 3 ⟧ Steane 코드 인코더 및 디코더를 나타내는 CSS 값을 반환 합니다.
+  uid: Microsoft.Quantum.ErrorCorrection.SteaneCode
+- summary: ⟦ 7, 1, 3 ⟧ Steane 퀀텀 코드의 안정기 그룹에 결합 된 X 및 Z 부분을 위한 디코더입니다.
+  uid: Microsoft.Quantum.ErrorCorrection.SteaneCodeRecoveryFns
+- summary: ⟦ 7, 1, 3 ⟧ Steane 퀀텀 코드의 안정기 그룹에 있는 X 부분에 대 한 디코더입니다.
+  uid: Microsoft.Quantum.ErrorCorrection.SteaneCodeRecoveryX
+- summary: ⟦ 7, 1, 3 ⟧ Steane 퀀텀 코드의 안정기 그룹에서 Z 부분에 대 한 디코더
+  uid: Microsoft.Quantum.ErrorCorrection.SteaneCodeRecoveryZ
+- summary: 지정 된 양의 비트 레지스터에서 지정 된 Pauli 작업 테이블의 경우이 함수는 `RecoveryFn` 지정 된 Pauli 작업 배열과 관련 하 여 테이블 조회 디코딩을 수행 하는 데 필요한 모든 정보를 포함 하는 형식의 개체를 반환 합니다.
+  uid: Microsoft.Quantum.ErrorCorrection.TableLookupRecovery
+- summary: ''
+  uid: Microsoft.Quantum.ErrorCorrection.TableLookupRecoveryImpl
+name: Microsoft.Quantum.ErrorCorrection
+newtypes:
+- summary: 각각 및 오류에 대 한 인코더, 디코더 및 해당 증후군 측정 절차에서 정의한 대로 Calderbank – Shor – Steane (CSS) 코드를 나타냅니다 `X` `Z` .
+  uid: Microsoft.Quantum.ErrorCorrection.CSS
+- summary: >-
+    인코딩된 레지스터를 실제 레지스터로 디코딩하는 작업과 증후군을 기록 하는 데 사용 되는 스크래치 인스턴스를 나타냅니다.
+
+    DecodeOp에 대 한 인수는 EncodeOp에서 반환 하는 것과 동일 하며 그 반대의 경우도 마찬가지입니다.
+  uid: Microsoft.Quantum.ErrorCorrection.DecodeOp
+- summary: >-
+    제공 된 스크래치 인스턴스를 사용 하 여 실제 레지스터를 논리적 레지스터로 인코딩하는 작업을 나타냅니다.
+
+    첫 번째 인수는 인코딩할 물리적 레지스터가 되 고 두 번째 인수는 사용 되는 스크래치 레지스터가 됩니다.
+  uid: Microsoft.Quantum.ErrorCorrection.EncodeOp
+- summary: 논리적 및 비트를 인코딩하는 실제 실제 비트의 레지스터를 입력 `Qubit[]` 합니다.
+  uid: Microsoft.Quantum.ErrorCorrection.LogicalRegister
+- summary: 인코더, 디코더 및 증후군 측정 프로시저에 정의 된 오류 수정 코드를 나타냅니다.
+  uid: Microsoft.Quantum.ErrorCorrection.QECC
+- summary: 증후군 오류를 `Pauli[]` 검색 된 오류를 해결 하는 일련의 작업에 매핑하는 함수를 입력 합니다.
+  uid: Microsoft.Quantum.ErrorCorrection.RecoveryFn
+- summary: '`Result[]`퀀텀 코드의 오류 증후군 지정 하는 측정 결과를 입력 합니다.'
+  uid: Microsoft.Quantum.ErrorCorrection.Syndrome
+- summary: 오류 수정 코드 블록의 증후군을 측정 하는 데 사용 되는 작업을 나타냅니다.
+  uid: Microsoft.Quantum.ErrorCorrection.SyndromeMeasOp
+operations:
+- summary: >-
+    비트 플립 인코더와 디코더를 모두 구현 하는 데 사용 되는 개인 작업입니다.
+
+    이 인코더는 현재 위치의 일관 된 복구를 사용할 수 있으며,이 경우의 초기 상태에 설명 된 오류를 "발생" 시킵니다 `auxQubits` . 특히 `auxQubits` 이 $ \ket $ 상태에 있는 경우에는 {10} 인코딩된 비트의 $X _1 $ 오류가 발생 합니다.
+  uid: Microsoft.Quantum.ErrorCorrection.ApplyBitFlipEncoder
+- summary: '[3, 1, 3]/⟦ 3, 1, 1 ⟧ 비트 대칭 코드에서 디코딩합니다.'
+  uid: Microsoft.Quantum.ErrorCorrection.DecodeFromBitFlipCode
+- summary: ⟦ 5, 1, 3 ⟧ 퀀텀 코드를 디코딩합니다.
+  uid: Microsoft.Quantum.ErrorCorrection.DecodeFromFiveQubitCode
+- summary: ⟦ 7, 1, 3 ⟧ Steane 퀀텀 코드 아래의 인코딩된 퀀텀 레지스터에 인코딩되지 않은 퀀텀 레지스터를 매핑하는 역 인코딩 작업입니다.
+  uid: Microsoft.Quantum.ErrorCorrection.DecodeFromSteaneCode
+- summary: '[3, 1, 3]/⟦ 3, 1, 1 ⟧ 비트 대칭 코드를 인코딩합니다.'
+  uid: Microsoft.Quantum.ErrorCorrection.EncodeIntoBitFlipCode
+- summary: ⟦ 5, 1, 3 ⟧ 퀀텀 코드로 인코딩합니다.
+  uid: Microsoft.Quantum.ErrorCorrection.EncodeIntoFiveQubitCode
+- summary: ⟦ 7, 1, 3 ⟧ Steane 퀀텀 코드 아래의 인코딩된 퀀텀 레지스터에 인코딩되지 않은 퀀텀 레지스터를 매핑하는 인코딩 작업입니다.
+  uid: Microsoft.Quantum.ErrorCorrection.EncodeIntoSteaneCode
+- summary: 5 비트 인코더와 디코더를 모두 구현 하는 데 사용 되는 개인 작업입니다.
+  uid: Microsoft.Quantum.ErrorCorrection.FiveQubitCodeEncoderImpl
+- summary: Y 축에 대해 π/4를 기준으로 단일의 비트를 회전 합니다.
+  uid: Microsoft.Quantum.ErrorCorrection.InjectPi4YRotation
+- summary: Knill magic state 추출을 알고리즘을 구현 합니다.
+  uid: Microsoft.Quantum.ErrorCorrection.KnillDistill
+- summary: 안정기 그룹의 지정 된 생성기 집합을 측정 합니다.
+  uid: Microsoft.Quantum.ErrorCorrection.MeasureStabilizerGenerators
+- summary: 형식으로 설명 되는 퀀텀 코드에의 한 오류 수정 사항을 한 번 수행 합니다 `QECC` .
+  uid: Microsoft.Quantum.ErrorCorrection.Recover
+- summary: 형식으로 설명 되는 퀀텀 코드에의 한 오류 수정 사항을 한 번 수행 합니다 `CSS` .
+  uid: Microsoft.Quantum.ErrorCorrection.RecoverCSS
+- summary: Steane 코드 인코더와 디코더를 모두 구현 하는 데 사용 되는 개인 작업입니다.
+  uid: Microsoft.Quantum.ErrorCorrection.SteaneCodeEncoderImpl
+- summary: >-
+    증후군 측정과 포함의 역함수입니다.
+
+    $X $-및 $Z $-stabilizers은 특정 인코딩 회로 선택 때문에 동일 하 게 처리 되지 않습니다. 이 비대칭는 다른 증후군 추출 루틴으로 이어집니다. 이는 코드 상태에서 직접 여러 가지 증후군 비트 Pauli 연산자를 측정 하 여이를 측정할 수 있지만 추출을 목적으로 인해 추가 ancillas 없이 증후군 측정값을 수행할 수 있는 단일의 비트에 논리가 반환 됩니다.
+  uid: Microsoft.Quantum.ErrorCorrection._ExtractLogicalQubitFromSteaneCode
+summary: 이 네임 스페이스에는 퀀텀 오류 수정에 대 한 함수, 작업 및 사용자 정의 형식이 포함 되어 있습니다.
+uid: Microsoft.Quantum.ErrorCorrection
+metadata:
+  ms.openlocfilehash: ba16a793fc9389c7102047a6664c0338ea11314d
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92712545"

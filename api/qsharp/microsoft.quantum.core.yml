@@ -1,0 +1,32 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: 지정 된 형식의 기본 인스턴스를 반환 합니다.
+  uid: Microsoft.Quantum.Core.Default
+- summary: 배열 내의 요소 수를 반환합니다.
+  uid: Microsoft.Quantum.Core.Length
+- summary: 시퀀스의 마지막 요소가 아닐 수 있는 지정 된 범위의 정의 된 끝 값을 반환 합니다.
+  uid: Microsoft.Quantum.Core.RangeEnd
+- summary: 입력 범위의 역순 인 새 범위를 반환 합니다.
+  uid: Microsoft.Quantum.Core.RangeReverse
+- summary: 지정 된 범위의 정의 된 시작 값을 반환 합니다.
+  uid: Microsoft.Quantum.Core.RangeStart
+- summary: 범위의 다음 값이 계산 되는 방법을 지정 하는 정수를 반환 합니다.
+  uid: Microsoft.Quantum.Core.RangeStep
+name: Microsoft.Quantum.Core
+newtypes:
+- summary: 사용자 정의 형식을 특성으로 표시 하는 데 사용 되는 컴파일러 인식 특성입니다.
+  uid: Microsoft.Quantum.Core.Attribute
+- summary: 형식을 표시 하거나 사용 되지 않는 것으로 표시 하는 데 사용 되는 컴파일러 인식 특성입니다.
+  uid: Microsoft.Quantum.Core.Deprecated
+- summary: 실행 파일의 진입점을 표시 하는 데 사용 되는 컴파일러 인식 특성입니다.
+  uid: Microsoft.Quantum.Core.EntryPoint
+operations: []
+summary: '이 네임 스페이스는 Q # 핵심 함수 및 작업을 포함 합니다.'
+uid: Microsoft.Quantum.Core
+metadata:
+  ms.openlocfilehash: 12de9824c55c72651f5b29cc806058be14343ec5
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92713707"

@@ -1,0 +1,34 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: >+
+    > [!WARNING]
+
+    > 컴퓨터 \ 컴퓨터는 사용 되지 않습니다. 대신 <xref:Microsoft.Quantum.Diagnostics.DumpMachine>를 사용하십시오.
+
+    >
+
+    > @"microsoft.quantum.diagnostics.dumpmachine"을 사용하세요.
+
+  uid: Microsoft.Quantum.Extensions.Diagnostics.DumpMachine
+- summary: >+
+    > [!WARNING]
+
+    > DumpRegister는 더 이상 사용 되지 않습니다. 대신 <xref:Microsoft.Quantum.Diagnostics.DumpRegister>를 사용하십시오.
+
+    >
+
+    > @"microsoft.quantum.diagnostics.dumpregister"을 사용하세요.
+
+  uid: Microsoft.Quantum.Extensions.Diagnostics.DumpRegister
+name: Microsoft.Quantum.Extensions.Diagnostics
+newtypes: []
+operations: []
+summary: ''
+uid: Microsoft.Quantum.Extensions.Diagnostics
+metadata:
+  ms.openlocfilehash: 294353fae4a97f5065e321c8da7b53a835a783c1
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92712104"

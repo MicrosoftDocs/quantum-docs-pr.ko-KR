@@ -1,0 +1,18 @@
+### YamlMime:QSharpNamespace
+functions: []
+name: Microsoft.Quantum.Environment
+newtypes: []
+operations:
+- summary: 현재 사용할 수 있는 데 사용할 수 있는 고 비트 수를 반환 합니다. 사용 되지 않은 비트를 포함 합니다. 즉,에 의해 반환 되는의 비트를 포함 `GetQubitsAvailableToUse` 합니다.
+  uid: Microsoft.Quantum.Environment.GetQubitsAvailableToBorrow
+- summary: 현재 사용할 수 있는 범위의 비트 수를 반환 합니다.
+  uid: Microsoft.Quantum.Environment.GetQubitsAvailableToUse
+summary: 이러한 함수는 퀀텀 계산이 발생 하는 환경에 대 한 정보를 제공 합니다.
+uid: Microsoft.Quantum.Environment
+metadata:
+  ms.openlocfilehash: 04a3ffe56be7da2c9adc13e2b27fe9ce0f982c44
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92713182"

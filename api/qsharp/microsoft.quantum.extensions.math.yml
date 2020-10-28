@@ -1,0 +1,374 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: >+
+    > [!WARNING]
+
+    > AbsB는 더 이상 사용 되지 않습니다. 대신 <xref:Microsoft.Quantum.Math.AbsL>를 사용하십시오.
+
+    >
+
+    > @"microsoft.quantum.math.absl"을 사용하세요.
+
+  uid: Microsoft.Quantum.Extensions.Math.AbsB
+- summary: >+
+    > [!WARNING]
+
+    > AbsD는 더 이상 사용 되지 않습니다. 대신 <xref:Microsoft.Quantum.Math.AbsD>를 사용하십시오.
+
+    >
+
+    > @"microsoft.quantum.math.absd"을 사용하세요.
+
+  uid: Microsoft.Quantum.Extensions.Math.AbsD
+- summary: >+
+    > [!WARNING]
+
+    > AbsI는 더 이상 사용 되지 않습니다. 대신 <xref:Microsoft.Quantum.Math.AbsI>를 사용하십시오.
+
+    >
+
+    > @"microsoft.quantum.math.absi"을 사용하세요.
+
+  uid: Microsoft.Quantum.Extensions.Math.AbsI
+- summary: >+
+    > [!WARNING]
+
+    > ArcCos는 더 이상 사용 되지 않습니다. 대신 <xref:Microsoft.Quantum.Math.ArcCos>를 사용하십시오.
+
+    >
+
+    > @"microsoft.quantum.math.arccos"을 사용하세요.
+
+  uid: Microsoft.Quantum.Extensions.Math.ArcCos
+- summary: >+
+    > [!WARNING]
+
+    > ArcSin는 더 이상 사용 되지 않습니다. 대신 <xref:Microsoft.Quantum.Math.ArcSin>를 사용하십시오.
+
+    >
+
+    > @"microsoft.quantum.math.arcsin"을 사용하세요.
+
+  uid: Microsoft.Quantum.Extensions.Math.ArcSin
+- summary: >+
+    > [!WARNING]
+
+    > ArcTan은 더 이상 사용 되지 않습니다. 대신 <xref:Microsoft.Quantum.Math.ArcTan>를 사용하십시오.
+
+    >
+
+    > @"microsoft.quantum.math.arctan"을 사용하세요.
+
+  uid: Microsoft.Quantum.Extensions.Math.ArcTan
+- summary: >+
+    > [!WARNING]
+
+    > ArcTan2는 더 이상 사용 되지 않습니다. 대신 <xref:Microsoft.Quantum.Math.ArcTan2>를 사용하십시오.
+
+    >
+
+    > @"microsoft.quantum.math.arctan2"을 사용하세요.
+
+  uid: Microsoft.Quantum.Extensions.Math.ArcTan2
+- summary: >+
+    > [!WARNING]
+
+    > 상한은 더 이상 사용 되지 않습니다. 대신 <xref:Microsoft.Quantum.Math.Ceiling>를 사용하십시오.
+
+    >
+
+    > @"microsoft.quantum.math.ceiling"을 사용하세요.
+
+  uid: Microsoft.Quantum.Extensions.Math.Ceiling
+- summary: >+
+    > [!WARNING]
+
+    > Cos는 더 이상 사용 되지 않습니다. 대신 <xref:Microsoft.Quantum.Math.Cos>를 사용하십시오.
+
+    >
+
+    > @"microsoft.quantum.math.cos"을 사용하세요.
+
+  uid: Microsoft.Quantum.Extensions.Math.Cos
+- summary: >+
+    > [!WARNING]
+
+    > Cosh는 더 이상 사용 되지 않습니다. 대신 <xref:Microsoft.Quantum.Math.Cosh>를 사용하십시오.
+
+    >
+
+    > @"microsoft.quantum.math.cosh"을 사용하세요.
+
+  uid: Microsoft.Quantum.Extensions.Math.Cosh
+- summary: >+
+    > [!WARNING]
+
+    > DivRemB는 더 이상 사용 되지 않습니다. 대신 <xref:Microsoft.Quantum.Math.DivRemL>를 사용하십시오.
+
+    >
+
+    > @"microsoft.quantum.math.divreml"을 사용하세요.
+
+  uid: Microsoft.Quantum.Extensions.Math.DivRemB
+- summary: >+
+    > [!WARNING]
+
+    > E는 사용 되지 않습니다. 대신 <xref:Microsoft.Quantum.Math.E>를 사용하십시오.
+
+    >
+
+    > @"microsoft.quantum.math.e"을 사용하세요.
+
+  uid: Microsoft.Quantum.Extensions.Math.E
+- summary: >+
+    > [!WARNING]
+
+    > 더 이상 사용 되지 않습니다. 대신 <xref:Microsoft.Quantum.Math.ExpD>를 사용하십시오.
+
+    >
+
+    > @"microsoft.quantum.math.expd"을 사용하세요.
+
+  uid: Microsoft.Quantum.Extensions.Math.ExpD
+- summary: >+
+    > [!WARNING]
+
+    > Floor는 더 이상 사용 되지 않습니다. 대신 <xref:Microsoft.Quantum.Math.Floor>를 사용하십시오.
+
+    >
+
+    > @"microsoft.quantum.math.floor"을 사용하세요.
+
+  uid: Microsoft.Quantum.Extensions.Math.Floor
+- summary: >+
+    > [!WARNING]
+
+    > IEEERemainder는 더 이상 사용 되지 않습니다. 대신 <xref:Microsoft.Quantum.Math.IEEERemainder>를 사용하십시오.
+
+    >
+
+    > @"microsoft.quantum.math.ieeeremainder"을 사용하세요.
+
+  uid: Microsoft.Quantum.Extensions.Math.IEEERemainder
+- summary: >+
+    > [!WARNING]
+
+    > 로그는 더 이상 사용 되지 않습니다. 대신 <xref:Microsoft.Quantum.Math.Log>를 사용하십시오.
+
+    >
+
+    > @"microsoft.quantum.math.log"을 사용하세요.
+
+  uid: Microsoft.Quantum.Extensions.Math.Log
+- summary: >+
+    > [!WARNING]
+
+    > Log10는 더 이상 사용 되지 않습니다. 대신 <xref:Microsoft.Quantum.Math.Log10>를 사용하십시오.
+
+    >
+
+    > @"microsoft.quantum.math.log10"을 사용하세요.
+
+  uid: Microsoft.Quantum.Extensions.Math.Log10
+- summary: >+
+    > [!WARNING]
+
+    > MaxB는 더 이상 사용 되지 않습니다. 대신 <xref:Microsoft.Quantum.Math.MaxL>를 사용하십시오.
+
+    >
+
+    > @"microsoft.quantum.math.maxl"을 사용하세요.
+
+  uid: Microsoft.Quantum.Extensions.Math.MaxB
+- summary: >+
+    > [!WARNING]
+
+    > MaxD는 더 이상 사용 되지 않습니다. 대신 <xref:Microsoft.Quantum.Math.MaxD>를 사용하십시오.
+
+    >
+
+    > @"microsoft.quantum.math.maxd"을 사용하세요.
+
+  uid: Microsoft.Quantum.Extensions.Math.MaxD
+- summary: >+
+    > [!WARNING]
+
+    > MaxI는 더 이상 사용 되지 않습니다. 대신 <xref:Microsoft.Quantum.Math.MaxI>를 사용하십시오.
+
+    >
+
+    > @"microsoft.quantum.math.maxi"을 사용하세요.
+
+  uid: Microsoft.Quantum.Extensions.Math.MaxI
+- summary: >+
+    > [!WARNING]
+
+    > MinB는 더 이상 사용 되지 않습니다. 대신 <xref:Microsoft.Quantum.Math.MinL>를 사용하십시오.
+
+    >
+
+    > @"microsoft.quantum.math.minl"을 사용하세요.
+
+  uid: Microsoft.Quantum.Extensions.Math.MinB
+- summary: >+
+    > [!WARNING]
+
+    > 유의는 사용 되지 않습니다. 대신 <xref:Microsoft.Quantum.Math.MinD>를 사용하십시오.
+
+    >
+
+    > @"microsoft.quantum.math.mind"을 사용하세요.
+
+  uid: Microsoft.Quantum.Extensions.Math.MinD
+- summary: >+
+    > [!WARNING]
+
+    > 미니는 더 이상 사용 되지 않습니다. 대신 <xref:Microsoft.Quantum.Math.MinI>를 사용하십시오.
+
+    >
+
+    > @"microsoft.quantum.math.mini"을 사용하세요.
+
+  uid: Microsoft.Quantum.Extensions.Math.MinI
+- summary: >+
+    > [!WARNING]
+
+    > ModPowB는 더 이상 사용 되지 않습니다. 대신 <xref:Microsoft.Quantum.Math.ModPowL>를 사용하십시오.
+
+    >
+
+    > @"microsoft.quantum.math.modpowl"을 사용하세요.
+
+  uid: Microsoft.Quantum.Extensions.Math.ModPowB
+- summary: >+
+    > [!WARNING]
+
+    > PI는 더 이상 사용 되지 않습니다. 대신 <xref:Microsoft.Quantum.Math.PI>를 사용하십시오.
+
+    >
+
+    > @"microsoft.quantum.math.pi"을 사용하세요.
+
+  uid: Microsoft.Quantum.Extensions.Math.PI
+- summary: >+
+    > [!WARNING]
+
+    > PowD는 더 이상 사용 되지 않습니다. 대신 <xref:Microsoft.Quantum.Math.PowD>를 사용하십시오.
+
+    >
+
+    > @"microsoft.quantum.math.powd"을 사용하세요.
+
+  uid: Microsoft.Quantum.Extensions.Math.PowD
+- summary: >+
+    > [!WARNING]
+
+    > 라운드는 더 이상 사용 되지 않습니다. 대신 <xref:Microsoft.Quantum.Math.Round>를 사용하십시오.
+
+    >
+
+    > @"microsoft.quantum.math.round"을 사용하세요.
+
+  uid: Microsoft.Quantum.Extensions.Math.Round
+- summary: >+
+    > [!WARNING]
+
+    > SignB는 더 이상 사용 되지 않습니다. 대신 <xref:Microsoft.Quantum.Math.SignL>를 사용하십시오.
+
+    >
+
+    > @"microsoft.quantum.math.signl"을 사용하세요.
+
+  uid: Microsoft.Quantum.Extensions.Math.SignB
+- summary: >+
+    > [!WARNING]
+
+    > SignD는 더 이상 사용 되지 않습니다. 대신 <xref:Microsoft.Quantum.Math.SignD>를 사용하십시오.
+
+    >
+
+    > @"microsoft.quantum.math.signd"을 사용하세요.
+
+  uid: Microsoft.Quantum.Extensions.Math.SignD
+- summary: >+
+    > [!WARNING]
+
+    > SignI는 더 이상 사용 되지 않습니다. 대신 <xref:Microsoft.Quantum.Math.SignI>를 사용하십시오.
+
+    >
+
+    > @"microsoft.quantum.math.signi"을 사용하세요.
+
+  uid: Microsoft.Quantum.Extensions.Math.SignI
+- summary: >+
+    > [!WARNING]
+
+    > Sin은 더 이상 사용 되지 않습니다. 대신 <xref:Microsoft.Quantum.Math.Sin>를 사용하십시오.
+
+    >
+
+    > @"microsoft.quantum.math.sin"을 사용하세요.
+
+  uid: Microsoft.Quantum.Extensions.Math.Sin
+- summary: >+
+    > [!WARNING]
+
+    > Sinh는 더 이상 사용 되지 않습니다. 대신 <xref:Microsoft.Quantum.Math.Sinh>를 사용하십시오.
+
+    >
+
+    > @"microsoft.quantum.math.sinh"을 사용하세요.
+
+  uid: Microsoft.Quantum.Extensions.Math.Sinh
+- summary: >+
+    > [!WARNING]
+
+    > Sqrt는 더 이상 사용 되지 않습니다. 대신 <xref:Microsoft.Quantum.Math.Sqrt>를 사용하십시오.
+
+    >
+
+    > @"microsoft.quantum.math.sqrt"을 사용하세요.
+
+  uid: Microsoft.Quantum.Extensions.Math.Sqrt
+- summary: >+
+    > [!WARNING]
+
+    > Tan은 더 이상 사용 되지 않습니다. 대신 <xref:Microsoft.Quantum.Math.Tan>를 사용하십시오.
+
+    >
+
+    > @"microsoft.quantum.math.tan"을 사용하세요.
+
+  uid: Microsoft.Quantum.Extensions.Math.Tan
+- summary: >+
+    > [!WARNING]
+
+    > Tanh는 더 이상 사용 되지 않습니다. 대신 <xref:Microsoft.Quantum.Math.Tanh>를 사용하십시오.
+
+    >
+
+    > @"microsoft.quantum.math.tanh"을 사용하세요.
+
+  uid: Microsoft.Quantum.Extensions.Math.Tanh
+- summary: >+
+    > [!WARNING]
+
+    > Truncate는 더 이상 사용 되지 않습니다. 대신 <xref:Microsoft.Quantum.Math.Truncate>를 사용하십시오.
+
+    >
+
+    > @"microsoft.quantum.math.truncate"을 사용하세요.
+
+  uid: Microsoft.Quantum.Extensions.Math.Truncate
+name: Microsoft.Quantum.Extensions.Math
+newtypes: []
+operations: []
+summary: ''
+uid: Microsoft.Quantum.Extensions.Math
+metadata:
+  ms.openlocfilehash: c07f137eaca95237d581691008c614025dd35a1d
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92712090"
