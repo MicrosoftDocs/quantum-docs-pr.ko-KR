@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.operationsfunctions
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: e9a84de2753bc3293f441e66ee53e78559263e5c
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 55e6d3e1a242386c46213083692377520df83a80
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833476"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92692129"
 ---
 # <a name="operations-and-functions-in-no-locq"></a>의 작업 및 함수 Q#
 
@@ -32,7 +32,7 @@ ms.locfileid: "90833476"
 
 각 작업은 입력을 가져오고, 출력을 생성 하 고, 하나 이상의 작업 특수화에 대해 구현을 지정 합니다.
 가능한 특수화와이를 정의 하 고 호출 하는 방법은이 문서의 다른 섹션에 자세히 설명 되어 있습니다.
-지금은 기본 본문 특수화만 정의 하 고 단일 비트를 입력으로 사용 하 고 <xref:microsoft.quantum.intrinsic.x> 해당 입력에 대 한 기본 제공 작업을 호출 하는 다음 작업을 고려 합니다.
+지금은 기본 본문 특수화만 정의 하 고 단일 비트를 입력으로 사용 하 고 <xref:Microsoft.Quantum.Intrinsic.X> 해당 입력에 대 한 기본 제공 작업을 호출 하는 다음 작업을 고려 합니다.
 
 ```qsharp
 operation BitFlip(target : Qubit) : Unit {
@@ -46,7 +46,7 @@ operation BitFlip(target : Qubit) : Unit {
 `Unit` 는 `void` c # 및 기타 명령형 언어에서와 유사 하 게 사용 되며 `unit` F # 및 다른 기능 언어에서와 동일 합니다.
 
 작업은 보다 더 흥미로운 형식을 반환할 수도 있습니다 `Unit` .
-예를 들어 <xref:microsoft.quantum.intrinsic.m> 작업은 측정을 수행 하는 `Result` 것을 나타내는 형식의 출력을 반환 합니다.  작업에서 다른 작업으로 전달 하거나 키워드와 함께 사용 하 여 `let` 새 변수를 정의할 수 있습니다.
+예를 들어 <xref:Microsoft.Quantum.Intrinsic.m> 작업은 측정을 수행 하는 `Result` 것을 나타내는 형식의 출력을 반환 합니다.  작업에서 다른 작업으로 전달 하거나 키워드와 함께 사용 하 여 `let` 새 변수를 정의할 수 있습니다.
 
 이 접근 방식을 사용 하면 [슈퍼 조밀한 코딩](https://github.com/microsoft/QuantumKatas/tree/main/SuperdenseCoding)의 경우와 같이 낮은 수준에서 퀀텀 작업과 상호 작용 하는 기존 계산을 나타낼 수 있습니다.
 
@@ -65,13 +65,13 @@ operation DecodeSuperdense(here : Qubit, there : Qubit) : (Result, Result) {
 
 > [!NOTE]
 > 의 각 작업 Q# 은 정확히 하나의 입력을 받아 정확히 하나의 출력을 반환 합니다.
-> 여러 값을 단일 값으로 수집 하는 *튜플을*사용 하 여 여러 입력 및 출력이 표시 됩니다.
+> 여러 값을 단일 값으로 수집 하는 *튜플을* 사용 하 여 여러 입력 및 출력이 표시 됩니다.
 > 이와 관련 하 Q# 여은 "튜플 인 튜플" 언어입니다.
 > 이 개념에 따라 빈 괄호 집합은 `()` 형식을 가진 "empty" 튜플로 읽어야 합니다 `Unit` .
 
 ## <a name="controlled-and-adjoint-operations"></a>제어 된 및 Adjoint 작업
 
-에서 많은 작업을 수행 하는 경우 처럼 작업에서 단일 변환을 구현 하는 경우 Q# *adjointed* 또는 *제어*될 때 작업의 작동 방식을 정의할 수 있습니다. 작업의 *adjoint* 특수화는 작업의 "역"이 작동 하는 방식을 지정 하는 반면, *제어* 되는 특수화는 응용 프로그램이 특정 퀀텀 레지스터의 상태에서 조건 화 된 때 작업이 작동 하는 방식을 지정 합니다.
+에서 많은 작업을 수행 하는 경우 처럼 작업에서 단일 변환을 구현 하는 경우 Q# *adjointed* 또는 *제어* 될 때 작업의 작동 방식을 정의할 수 있습니다. 작업의 *adjoint* 특수화는 작업의 "역"이 작동 하는 방식을 지정 하는 반면, *제어* 되는 특수화는 응용 프로그램이 특정 퀀텀 레지스터의 상태에서 조건 화 된 때 작업이 작동 하는 방식을 지정 합니다.
 
 퀀텀 작업의 adjoints는 퀀텀 컴퓨팅의 많은 측면에서 매우 중요 합니다. 유용한 프로그래밍 기술을 함께 설명 하는 이러한 상황에 대 한 예는 Q# [제어 흐름: 변화](xref:microsoft.quantum.guide.controlflow#conjugations)을 참조 하세요. 제어 되는 작업 버전은 모든 컨트롤이 지정 된 상태에 있는 경우에만 기본 작업을 효과적으로 적용 하는 새 작업입니다.
 컨트롤의 superposition에 있는 경우 기본 작업은 superposition의 해당 부분에 coherently 적용 됩니다.
@@ -139,7 +139,7 @@ operation DecodeSuperdense(here : Qubit, there : Qubit) : (Result, Result) {
 
 앞의 예제에서 첫 번째 작업 선언에서 작업 및는 `BitFlip` `DecodeSuperdense` 각각 시그니처와로 정의 되었습니다 `(Qubit => Unit)` `((Qubit, Qubit) => (Result, Result))` .
 `DecodeSuperdense`에는 측정값이 포함 되어 있으므로 단일 연산이 아니므로 adjoint 특수화를 제어 하지 않습니다 (해당 작업이 반환 하는 관련 요구 사항 회수 `Unit` ).
-그러나는 `BitFlip` 단순히 단일 <xref:microsoft.quantum.intrinsic.x> 작업을 수행 하므로 두 가지 특수화를 모두 사용 하 여 정의 했을 수 있습니다.
+그러나는 `BitFlip` 단순히 단일 <xref:Microsoft.Quantum.Intrinsic.X> 작업을 수행 하므로 두 가지 특수화를 모두 사용 하 여 정의 했을 수 있습니다.
 
 이 섹션에서는 작업 선언에 특수화의 존재를 포함 하 여 Q# 또는 함수와 함께 호출할 수 있는 기능을 제공 하는 방법에 대해 자세히 설명 합니다 `Adjoint` `Controlled` .
 특정 특수화를 선언 하는 데 유효 하거나 유효 하지 않은 상황에 대 한 자세한 내용은이 문서에서 특수화를 올바르게 정의 하는 [상황](#circumstances-for-validly-defining-specializations) 을 참조 하세요.
@@ -368,7 +368,7 @@ function ConjugateUnitaryWith(
 
 함수는 순수 하 게 결정적 이며,이 루틴은 Q# 출력 값을 계산 하는 것 이상의 효과를 허용 하지 않는 작업과는 다릅니다.
 특히 함수는 작업을 호출할 수 없습니다. 작업 수행, 할당 또는 적용 샘플 난수 또는 함수에 대 한 입력 값 이상의 상태에 종속 됩니다.
-결과적으로 함수는 Q# 항상 동일한 입력 값을 동일한 출력 값에 매핑하기 때문에 *순수*합니다.
+결과적으로 함수는 Q# 항상 동일한 입력 값을 동일한 출력 값에 매핑하기 때문에 *순수* 합니다.
 이 동작을 통해 Q# 컴파일러는 작업 특수화를 생성할 때 함수를 호출 하는 방법 및 시기를 안전 하 게 다시 정렬할 수 있습니다.
 
 각 Q# 소스 파일은 원하는 수의 함수를 정의할 수 있습니다.
@@ -401,7 +401,7 @@ function DotProduct(a : Double[], b : Double[]) : Double {
 
 ### <a name="classical-logic-in-functions--good"></a>함수의 기존 논리 = = 양호
 
-이렇게 할 수 있는 경우에는 작업 보다 더 쉽게 사용할 수 있도록 함수 대신 함수를 사용 하 여 기존 논리를 작성 하는 것이 유용 합니다. 예를 들어 이전 `Square` 선언을 *작업*으로 작성 한 경우 컴파일러는 동일한 입력을 사용 하 여 호출 하는 것이 일관 되 게 동일한 출력을 생성 하도록 보장할 수 없습니다.
+이렇게 할 수 있는 경우에는 작업 보다 더 쉽게 사용할 수 있도록 함수 대신 함수를 사용 하 여 기존 논리를 작성 하는 것이 유용 합니다. 예를 들어 이전 `Square` 선언을 *작업* 으로 작성 한 경우 컴파일러는 동일한 입력을 사용 하 여 호출 하는 것이 일관 되 게 동일한 출력을 생성 하도록 보장할 수 없습니다.
 
 함수와 작업 사이의 차이를 표시 하려면 작업 내에서 난수를 샘플링 하 여 일반적으로 문제를 고려해 야 합니다 Q# .
 
@@ -415,7 +415,7 @@ operation U(target : Qubit) : Unit {
 
 `U`가 호출 될 때마다에 대해 다른 작업을 수행 `target` 합니다.
 특히 특수화 선언을에 추가 하는 경우 컴파일러는 `adjoint auto` `U` `U(target); Adjoint U(target);` id (즉, op)로 작동 하도록 보장할 수 없습니다.
-이는 [벡터 및 행렬](xref:microsoft.quantum.concepts.vectors)에 정의 된 adjoint의 정의를 위반 합니다. 즉, 컴파일러가 작업을 호출 하는 작업에서 adjoint 특수화를 자동으로 생성 하 여 <xref:microsoft.quantum.math.randomreal> 컴파일러에서 제공 하는 보증을 중단 하는 것과 같이 <xref:microsoft.quantum.math.randomreal> adjoint 또는 제어 된 버전이 없는 작업입니다.
+이는 [벡터 및 행렬](xref:microsoft.quantum.concepts.vectors)에 정의 된 adjoint의 정의를 위반 합니다. 즉, 컴파일러가 작업을 호출 하는 작업에서 adjoint 특수화를 자동으로 생성 하 여 <xref:Microsoft.Quantum.Math.RandomReal> 컴파일러에서 제공 하는 보증을 중단 하는 것과 같이 <xref:Microsoft.Quantum.Math.RandomReal> adjoint 또는 제어 된 버전이 없는 작업입니다.
 
 반면,와 같은 함수 호출을 안전 하 게 허용 하 `Square` 고 `Square` 출력을 안정적으로 유지 하기 위해 입력을 유지 해야 한다는 것을 컴파일러에 게 보장 합니다.
 따라서 함수에서 최대한 많은 고전 논리를 격리 하면 다른 함수와 작업에서 해당 논리를 쉽게 다시 사용할 수 있습니다.
@@ -467,7 +467,7 @@ function MapDoublesToStrings(fn : (Double -> String), values : Double[]) : Strin
 그러나 이러한 어려움의 대부분은 서로 다른 버전의와 관련 된 방법을 인식 하는 데 필요한 정보를 컴파일러에 제공 하지 않았기 때문에 발생 `Map` 합니다.
 효과적으로 컴파일러에서 `Map` Q# *형식* 에서 함수로 함수를 일종의 수학적 함수로 처리 하려고 합니다 Q# .
 
-Q# 는 함수 및 작업에 *형식 매개 변수와*일반적인 튜플 매개 변수를 포함 하도록 허용 하 여이 개념을 공식화 합니다.
+Q# 는 함수 및 작업에 *형식 매개 변수와* 일반적인 튜플 매개 변수를 포함 하도록 허용 하 여이 개념을 공식화 합니다.
 앞의 예제에서는 `Map` `Int, Pauli` 첫 번째 경우와 두 번째 경우에 형식 매개 변수를 포함 한다고 생각 합니다 `Double, String` .
 대부분의 경우 이러한 형식 매개 변수를 일반적인 형식인 것 처럼 사용 합니다. 형식 매개 변수 값을 사용 하 여 배열 및 튜플을 만들고, 함수 및 작업을 호출 하 고, 일반 변수 또는 변경 가능한 변수에 할당 합니다.
 
@@ -536,7 +536,7 @@ Q#표준 라이브러리는 이러한 형식의 매개 변수가 있는 작업 �
 이러한 내용은 [ Q# 표준 라이브러리 가이드](xref:microsoft.quantum.libraries.standard.intro)에 자세히 설명 되어 있습니다.
 
 
-## <a name="callables-as-first-class-values"></a>첫 번째 클래스 값으로 callables
+## <a name="callables-as-first-class-values"></a>First-Class 값으로 callables
 
 작업 대신 함수를 사용 하는 제어 흐름과 기존 논리를 추론 하는 한 가지 중요 한 기술은의 작업 및 함수를 활용 하는 것입니다 Q# . *first-class*
 즉, 해당 언어의 각 값은 고유한 권한입니다.
@@ -549,7 +549,7 @@ operation FirstClassExample(target : Qubit) : Unit {
 }
 ```
 
-`ourH`이전 코드 조각의 변수 값은 <xref:microsoft.quantum.intrinsic.h> 다른 작업 처럼 해당 값을 호출할 수 있도록 하는 작업입니다.
+`ourH`이전 코드 조각의 변수 값은 <xref:Microsoft.Quantum.Intrinsic.H> 다른 작업 처럼 해당 값을 호출할 수 있도록 하는 작업입니다.
 이 기능을 사용 하면 작업을 수행 하는 작업을 작성 하 여 고차 제어 흐름 개념을 형성할 수 있습니다.
 예를 들어 동일한 대상의 동일한 대상에 두 번 적용 하 여 작업을 "제곱" 하는 것을 생각해 볼 수 있습니다.
 
@@ -589,7 +589,7 @@ function TeleporationDecoderForMessage(hereBit : Result, thereBit : Result)
 
 ## <a name="partial-application"></a>부분 응용 프로그램
 
-*부분 응용 프로그램*을 사용 하 여 작업을 반환 하는 함수를 사용 하 여 작업을 반환 하는 함수를 사용 하 여 더 많은 작업을 수행할 수 있습니다. 이러한 함수는 실제로 호출 하지 않고 함수 또는 작업에 입력의 앞의 예제에서 입력 작업을 적용 해야 하는 것을 즉시 지정 하지 않으려는 경우를 `ApplyTwice` 나타낼 수 있습니다.
+*부분 응용 프로그램* 을 사용 하 여 작업을 반환 하는 함수를 사용 하 여 작업을 반환 하는 함수를 사용 하 여 더 많은 작업을 수행할 수 있습니다. 이러한 함수는 실제로 호출 하지 않고 함수 또는 작업에 입력의 앞의 예제에서 입력 작업을 적용 해야 하는 것을 즉시 지정 하지 않으려는 경우를 `ApplyTwice` 나타낼 수 있습니다.
 
 ```qsharp
 operation PartialApplicationExample(op : (Qubit => Unit), target : Qubit) : Unit {

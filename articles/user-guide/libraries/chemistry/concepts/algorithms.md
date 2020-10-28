@@ -1,6 +1,6 @@
 ---
 title: Hamiltonian Dynamics 시뮬레이션
-description: Suzuki 수식과 Trotter를 사용 하 여 Hamiltonian 시뮬레이션을 사용 하는 방법에 대해 알아봅니다.
+description: Hamiltonian 시뮬레이션을 사용 하는 Trotter-Suzuki 수식 및 작업을 사용 하는 방법에 대해 알아봅니다.
 author: bradben
 ms.author: v-benbra
 ms.date: 10/09/2017
@@ -9,12 +9,12 @@ uid: microsoft.quantum.chemistry.concepts.simulationalgorithms
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 299eb1484a697ad9d1577aabb44ccb61e908bae3
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: a303d54476e42b98a14c6b452227b0e1346567c8
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834009"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691887"
 ---
 # <a name="simulating-hamiltonian-dynamics"></a>Hamiltonian Dynamics 시뮬레이션
 
@@ -28,13 +28,13 @@ Trotter – Suzuki 수식의 개념은 간단 합니다. 즉, Hamiltonian를 시
 특히 $H = \ sum_ {j = 1} ^ m H_j $를 사용 하 여 Hamiltonian 수 있습니다.
 그런 다음 $ $ e ^ {-i \ sum_ {j = 1} ^ m H_j t} = \ prod_ {j = 1} ^ m e ^ {-iH_j t} + O (m ^ 2 t ^ 2), $ $이는 $t \ll $1 인 경우이 근사값의 오류는 무시 됩니다.
 $E ^ {-i H t} $가 일반 지 수 인 경우이 근사값의 오류는 $O 되지 않습니다 (m ^ 2 t ^ 2) $: 0입니다.
-이 오류는 $e ^ {-iHt} $이 (가) 연산자 지 수이 고 $H _j $ 용어가 commute (예 *:*$H _j H_k \ne H_k H_j $) 때문에이 수식을 사용할 때 오류가 발생 하는 경우에 발생 합니다.
+이 오류는 $e ^ {-iHt} $이 (가) 연산자 지 수이 고 $H _j $ 용어가 commute (예 *:* $H _j H_k \ne H_k H_j $) 때문에이 수식을 사용할 때 오류가 발생 하는 경우에 발생 합니다.
 
 $T $가 큰 경우에는 Trotter – Suzuki 수식을 사용 하 여 간단한 시간 단계 시퀀스로 분리 하 여 dynamics를 정확 하 게 시뮬레이션할 수 있습니다.
 $R $를 사용 하 여 진행 시간에서 수행 되는 단계 수를 지정 합니다. 따라서 각 시간 단계는 시간 $t/r $로 실행 됩니다. 그런 다음 $ $ e ^ {-i \ sum_ {j = 1} ^ m H_j t} = \left (\ prod_ {j = 1} ^ m e ^ {-iH_j t/r} \ right) ^ r + O (m ^ 2 t ^ 2/r)를 사용할 수 있습니다. $ $-$가 $m ^ 2 t ^ 2/\ 엡실론 $로 확장 하는 경우 $ \left>$0에 대 한 최대 $ \left $로 오류를 만들 수 있음을 의미 합니다. $r
 
 오류 용어가 취소 되는 연산자 지 수 시퀀스를 구성 하 여 보다 정확한 근사치을 작성할 수 있습니다.
-가장 간단한 이러한 수식, 두 번째 order Trotter-Suzuki formula $ $ U_2 (t) = \left (\ prod_ {j = 1} ^ {m} e ^ {-iH_j t/2r} \ prod_ {j = m} 형식으로 사용 합니다. ^ 1 e ^ {iH_j t/2r} \ right) ^ r = e ^ {-iHt} + O (m ^ 3 t ^ 3/r ^ 2), $ $ x = ^ {3/2} t ^ {3/2}/\sqrt {\ 엡실론} $로 크기를 조정 하려면 $r $를 선택 하 여 $ \left>$0에 대해 $ \left $ 보다 작은 값을 만들 수 있습니다. $m
+가장 간단한 수식, 두 번째 order Trotter-Suzuki 수식, $ $ U_2 (t) = \left (\ prod_ {j = 1} ^ {m} e ^ {-iH_j t/2r} \ prod_ {j = m} 형식으로 사용 합니다. ^ 1 e ^ {iH_j t/2r} \ right) ^ r = e ^ {-iHt} + O (m ^ 3 t ^ 3/r ^ 2), $ $ x = ^ {3/2} t ^ {3/2}/\sqrt {\ 엡실론} $로 크기를 조정 하려면 $r $를 선택 하 여 $ \left>$0에 대해 $ \left $ 보다 작은 값을 만들 수 있습니다. $m
 
 보다 고차 수식, 특히 ($ 2k $) $k>$0에 대 한 순서를 재귀적으로 생성할 수 있습니다. $ $ U_ {2k} (t) = [U_ {2k-2} (s_k \~ t)] ^ 2 U_ {2k-2} ([1-4s_k] t) [U_ {2k-2} (s_k \~ t)] ^ 2 = e ^ {-iht} + O ((m) ^ {2k + 1}/r ^ {2k}), $ $ where $s _k = (4-4 ^ {1/(2k-1)}) ^ {-1} $.
 
@@ -52,7 +52,7 @@ Pauli 연산자는 Clifford 작업 (양자 컴퓨팅의 표준 게이트)을 사
         0 & 0 & 0 & e ^ {-it} \end{bmatrix}.
 $ $ 여기에서 $e ^ {-iHt} \ket {00} = e ^ {it} \ket {00} $ 및 $e ^ {-iht} \ket {01} = e ^ {-it} \ket {01} $를 사용할 수 있습니다 .이는 $0 $의 패리티는 $0 $이 고 비트 문자열 $1 $는 $1 $입니다.
 
-Q#다음 작업을 사용 하 여 직접 지 수 Pauli 연산자를 구현할 수 있습니다 <xref:microsoft.quantum.intrinsic.exp> .
+Q#다음 작업을 사용 하 여 직접 지 수 Pauli 연산자를 구현할 수 있습니다 <xref:Microsoft.Quantum.Intrinsic.Exp> .
 ```qsharp
     using(qubits = Qubit[2]){
         let pauliString = [PauliX, PauliX];
@@ -65,7 +65,7 @@ Q#다음 작업을 사용 하 여 직접 지 수 Pauli 연산자를 구현할 �
 
 Fermionic Hamiltonians의 경우 [요르단 – Wigner 분해](xref:microsoft.quantum.chemistry.concepts.jordanwigner) 는 Hamiltonian를 Pauli 연산자의 합계에 편리 하 게 매핑합니다.
 즉, 위와 같은 방법으로 화학 시뮬레이션을 쉽게 적용할 수 있습니다.
-아래는 Wigner 표현의 모든 Pauli를 수동으로 반복 하는 대신, 이러한 시뮬레이션을 실행 하는 방법을 보여 주는 간단한 예입니다.
+Jordan-Wigner 표현의 모든 Pauli를 수동으로 반복 하는 대신, 다음은 연금술 내에서 이러한 시뮬레이션을 실행 하는 방법을 보여 주는 간단한 예입니다.
 시작 지점은 코드에서 클래스의 인스턴스로 표시 되는 Fermionic Hamiltonian의 [요르단 – Wigner 인코딩입니다](xref:microsoft.quantum.chemistry.concepts.jordanwigner) `JordanWignerEncoding` .
 
 ```csharp
@@ -156,7 +156,7 @@ $ \Operatorname{Select} $ 및 $R $ 작업을 $ $ W = \operatorname{Select} R, $ 
 
 이러한 서브루틴은에서 쉽게 설정할 수 Q# 있습니다.
 예를 들어 단순 Ising Hamiltonian $H = X_1 + X_2 + Z_1 Z_2 $를 예로 들어 보겠습니다.
-이 경우 $ Q# \operatorname{Select} $ 작업을 구현 하는 코드는에 의해 호출 되는 <xref:microsoft.quantum.canon.multiplexoperations> 반면 $ \operatorname{Prepare} $ 작업은를 사용 하 여 구현할 수 있습니다 <xref:microsoft.quantum.preparation.preparearbitrarystate> .
+이 경우 $ Q# \operatorname{Select} $ 작업을 구현 하는 코드는에 의해 호출 되는 <xref:Microsoft.Quantum.Canon.MultiplexOperations> 반면 $ \operatorname{Prepare} $ 작업은를 사용 하 여 구현할 수 있습니다 <xref:Microsoft.Quantum.Preparation.PrepareArbitraryState> .
 Hubbard 모델 시뮬레이션을 포함 하는 예제는 [ Q# 샘플](https://github.com/microsoft/Quantum/tree/main/samples/simulation/hubbard)로 볼 수 있습니다.
 
 임의 화학 문제에 대해 이러한 단계를 수동으로 지정 하려면 화학 라이브러리를 사용 하지 않는 것이 좋습니다.
@@ -182,6 +182,6 @@ using(qubits = Qubit[nQubits]){
 }
 ```
 
-중요 하 게 구현은 <xref:microsoft.quantum.chemistry.jordanwigner.qubitizationoracle> Pauli 문자열의 선형 조합으로 지정 된 임의의 Hamiltonians에 적용 됩니다.
-화학 시뮬레이션에 최적화 된 버전은를 사용 하 여 호출 됩니다 <xref:microsoft.quantum.chemistry.jordanwigner.optimizedqubitizationoracle> .
+중요 하 게 구현은 <xref:Microsoft.Quantum.Chemistry.JordanWigner.QubitizationOracle> Pauli 문자열의 선형 조합으로 지정 된 임의의 Hamiltonians에 적용 됩니다.
+화학 시뮬레이션에 최적화 된 버전은를 사용 하 여 호출 됩니다 <xref:Microsoft.Quantum.Chemistry.JordanWigner.OptimizedQubitizationOracle> .
 이 버전은 [선형 t 복잡성을 사용 하 여 퀀텀 회로의 전자 Spectra Encoding](https://arxiv.org/abs/1805.03662)에 설명 된 기술을 사용 하 여 T 게이트 수를 최소화 하도록 최적화 되었습니다.

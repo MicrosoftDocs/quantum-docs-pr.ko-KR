@@ -9,12 +9,12 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8dddc15354c32808e7ad1310bce233ee3dc93fe8
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 51e7b3bcf4402a4d0ba5647643f284e9f10c3bb3
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835641"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92692153"
 ---
 # <a name="quantum-characterization-and-statistics"></a>퀀텀 특성화 및 통계 #
 
@@ -39,7 +39,7 @@ Kickback 단계를 사용 하 여 블랙 박스 작업의 응용 프로그램을
 아래에서 제안 하는 각 방법은 실험을 설계 하 고 다양 한 데이터 처리 방법을 사용 하 여 단계를 학습할 수 있는 다른 전략을 사용 합니다.  각 사용자에 게는 엄격한 오류 범위를 포함 하는 것부터 이전 정보를 포함 하는 기능, 오류를 허용 하거나 메모리 limitted 클래식 컴퓨터에서 실행 하는 기능에 이르기까지 고유한 이점이 있습니다.
 
 반복 단계 예측에 대해 논의 하는 경우 블랙 박스 작업으로 제공 되는 단일 $U $을 고려 합니다.
-[데이터 구조](xref:microsoft.quantum.libraries.data-structures)에서 oracles에 대 한 섹션에서 설명한 것 처럼, Q# 사용자 정의 형식에의 한 작업 (예: <xref:microsoft.quantum.oracles.discreteoracle> 튜플 형식으로 정의 됨)을 모델링 합니다 `((Int, Qubit[]) => Unit : Adjoint, Controlled)` .
+[데이터 구조](xref:microsoft.quantum.libraries.data-structures)에서 oracles에 대 한 섹션에서 설명한 것 처럼, Q# 사용자 정의 형식에의 한 작업 (예: <xref:Microsoft.Quantum.Oracles.DiscreteOracle> 튜플 형식으로 정의 됨)을 모델링 합니다 `((Int, Qubit[]) => Unit : Adjoint, Controlled)` .
 구체적으로 인 경우 `U : DiscreteOracle` 에는 `U(m)` 에 대해 ^ m $ $U를 구현 `m : Int` 합니다.
 
 이 정의를 사용 하 여 반복 단계 예측의 각 단계는 초기 상태 $ \ket{\phi} $와 함께 $ \ket{+} $ 상태에서 보조 비트를 준비 하 여 진행 됩니다 .이는 $U [eigenvector](xref:microsoft.quantum.concepts.matrix-advanced) (m) $, 즉 $U (m) \ket{\phi} = e ^ {im\eml\ k {\ l o} $입니다.  
@@ -99,7 +99,7 @@ Concretely, \begin{equation} \Pr(\phi | d) = \frac{\Pr(d | \phi) \Pr(\phi)}{\int
 이에 대 한 자세한 내용은 $ 비트 변수 $x $를 $n 합니다.
 이전 배포 $ \Pr (x) $는 $2 ^ n $ $x $의 가상 값을 지원 합니다.
 즉, $x를 매우 정확 하 게 예측 해야 하는 경우에는 Bayesian 단계 예측에 필요한 메모리 및 처리 시간이 너무 늘어날 수 있습니다.
-퀀텀 시뮬레이션 같은 일부 응용 프로그램의 경우에는 limitted 정확도가 Shor의 알고리즘과 같은 다른 응용 프로그램에서 해당 단계 예측 단계 내에 정확한 Bayesian 유추를 사용할 수 없습니다.  이러한 이유로 [RWPE (임의 워크 단계 예측)](xref:microsoft.quantum.research.characterization.randomwalkphaseestimation) 와 같은 대략적인 Bayesian 메서드 및 [강력한 단계 추정치](xref:microsoft.quantum.characterization.robustphaseestimation)와 같은 Bayesian 없는 방법에 대 한 구현도 제공 합니다.
+퀀텀 시뮬레이션 같은 일부 응용 프로그램의 경우에는 limitted 정확도가 Shor의 알고리즘과 같은 다른 응용 프로그램에서 해당 단계 예측 단계 내에 정확한 Bayesian 유추를 사용할 수 없습니다.  이러한 이유로 [RWPE (임의 워크 단계 예측)](xref:Microsoft.Quantum.Research.Characterization.RandomWalkPhaseEstimation) 와 같은 대략적인 Bayesian 메서드 및 [강력한 단계 추정치](xref:Microsoft.Quantum.Characterization.RobustPhaseEstimation)와 같은 Bayesian 없는 방법에 대 한 구현도 제공 합니다.
 
 ### <a name="robust-phase-estimation"></a>강력한 단계 예측 ###
 
@@ -117,9 +117,9 @@ Concretely, \begin{equation} \Pr(\phi | d) = \frac{\Pr(d | \phi) \Pr(\phi)}{\int
 
 ### <a name="continuous-oracles"></a>연속 Oracles ###
 
-또한 라고 형식으로 모델링 된 연속 시간 oracles을 허용 하기 위해 위에서 사용 하는 oracle 모델에서 일반화할 수 있습니다 <xref:microsoft.quantum.oracles.continuousoracle> .
+또한 라고 형식으로 모델링 된 연속 시간 oracles을 허용 하기 위해 위에서 사용 하는 oracle 모델에서 일반화할 수 있습니다 <xref:Microsoft.Quantum.Oracles.ContinuousOracle> .
 단일 단일 연산자 대신 $ $U 하는 것이 아니라 (t) $ = $U (t + s) $와 $U 같은 $t \in \mathbb{R} $에 대 한 단일 연산자 $U (t) $를 포함 합니다.
-<xref:microsoft.quantum.oracles.discreteoracle> \, 일부 fixed $ \delta t $에 대해 $t = m \delta t $를 제한 하 여를 생성할 수 있기 때문에이는 불연속 사례에서 보다 약한 문입니다.
+<xref:Microsoft.Quantum.Oracles.DiscreteOracle> \, 일부 fixed $ \delta t $에 대해 $t = m \delta t $를 제한 하 여를 생성할 수 있기 때문에이는 불연속 사례에서 보다 약한 문입니다.
 일부 $H 연산자의 경우 [석재의 정리](https://en.wikipedia.org/wiki/Stone%27s_theorem_on_one-parameter_unitary_groups)(t) = \exp (i H t) $를 $U 합니다. 여기서 $ \exp $는 [고급 행렬](xref:microsoft.quantum.concepts.matrix-advanced)에 설명 된 대로 행렬 지 수입니다.
 $H $의 eigenstate $ \ket{\phi} $는 $H \ket{\phi} = \em\ket{\phi} $이 고 모든 $t $, \begin{station} U (t) \ket{\phi} = e ^ {\\emt} \ket{\phi}.에 대 한 $U (t) $의 eigenstate 이기도 합니다.
 \end{equation}
@@ -146,14 +146,14 @@ Q# 반복 단계 추정에서 얻은 데이터 레코드에 대 한 임의 워�
 
 라고과 함께 제공 되는 각 단계 예측 작업은 Q# 최종 예상 $ \hat{\phi} $에서 요구 하는 품질을 매개 변수화 하는 다른 입력 집합을 사용 합니다.
 그러나 이러한 다양 한 입력은 모두 공통 된 여러 입력을 공유 합니다. 예를 들어, 품질 매개 변수를 통해 부분 응용 프로그램에서 일반적인 서명이 발생 합니다.
-예를 들어 <xref:microsoft.quantum.characterization.robustphaseestimation> 다음 섹션에서 설명 하는 작업에는 다음과 같은 시그니처가 있습니다.
+예를 들어 <xref:Microsoft.Quantum.Characterization.RobustPhaseEstimation> 다음 섹션에서 설명 하는 작업에는 다음과 같은 시그니처가 있습니다.
 
 ```qsharp
 operation RobustPhaseEstimation(bitsPrecision : Int, oracle : DiscreteOracle, eigenstate : Qubit[])  : Double
 ```
 
 `bitsPrecision`입력은에 고유 `RobustPhaseEstimation` 하며, `oracle` 및 `eigenstate` 은 공통입니다.
-따라서 **H2Sample**에서 볼 수 있듯이 작업은 폼의 입력을 사용 하 여 반복적인 단계 추정 알고리즘을 허용 `(DiscreteOracle, Qubit[]) => Unit` 하 여 사용자가 임의 단계 추정 알고리즘을 지정할 수 있도록 합니다.
+따라서 **H2Sample** 에서 볼 수 있듯이 작업은 폼의 입력을 사용 하 여 반복적인 단계 추정 알고리즘을 허용 `(DiscreteOracle, Qubit[]) => Unit` 하 여 사용자가 임의 단계 추정 알고리즘을 지정할 수 있도록 합니다.
 
 ```qsharp
 operation H2EstimateEnergy(

@@ -9,12 +9,12 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: dad0db4d2aab27e5ae46d4df10ee050f785d8bb8
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 94251e185cea65c5fc08ed70d5fba9b7b19501e3
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835556"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92692035"
 ---
 # <a name="error-correction"></a>오류 수정 #
 
@@ -61,7 +61,7 @@ $Z _0 Z_1 \ket {000} = \ket {000} $ 이며 {111} {111} 이 측정값이 두 인�
 | $X_2$ | $ \ket {001} $ | $ \ket {110} $ | $+$ | $-$ |
 
 따라서 두 측정값의 결과는 어떤 비트 대칭 오류가 발생 했는지를 고유 하 게 결정 하지만 인코딩된 상태에 대 한 정보는 노출 하지 않습니다.
-이러한 결과를 *증후군*로 호출 하 고 증후군를 *복구*로 발생 시킨 오류에 다시 매핑하는 프로세스를 참조 합니다.
+이러한 결과를 *증후군* 로 호출 하 고 증후군를 *복구* 로 발생 시킨 오류에 다시 매핑하는 프로세스를 참조 합니다.
 특히 복구는 발생 하는 증후군의 입력으로 사용 되는 *기존* 유추 프로시저 이며 발생 했을 수 있는 오류를 해결 하는 방법에 대 한 prescription를 반환 합니다.
 
 > [!NOTE]
@@ -70,7 +70,7 @@ $Z _0 Z_1 \ket {000} = \ket {000} $ 이며 {111} {111} 이 측정값이 두 인�
 > 마찬가지로 단계 전환 작업을 적용 하면 $ `Z` \ket{\overline {1} } $가 $-\ket{\overline} $에 매핑되고 $ {1} \ket{\overline{+}} $가 $ \ket{\overline {-} } $로 매핑됩니다.
 > 보다 일반적으로 더 많은 오류를 처리 하 고 $Z $ errors 및 $X $ errors를 처리 하는 코드를 만들 수 있습니다.
 
-모든 코드 상태에서 동일한 방식으로 작동 하는 퀀텀 오류 수정의 측정을 설명할 수 있는 정보는 *안정기 정해진*의 핵심입니다.
+모든 코드 상태에서 동일한 방식으로 작동 하는 퀀텀 오류 수정의 측정을 설명할 수 있는 정보는 *안정기 정해진* 의 핵심입니다.
 Q#라고은 안정기 코드에서의 인코딩 및 디코딩을 설명 하 고, 오류에서 복구 하는 방법을 설명 하기 위한 프레임 워크를 제공 합니다.
 이 섹션에서는 몇 가지 간단한 퀀텀 오류 수정 코드에이 프레임 워크 및 해당 응용 프로그램을 설명 합니다.
 
@@ -82,14 +82,14 @@ Q#라고은 안정기 코드에서의 인코딩 및 디코딩을 설명 하 고,
 
 오류 수정 코드를 지정 하는 데 도움이 되도록 Q# 라고은 다음과 같이 여러 가지 고유한 사용자 정의 형식을 제공 합니다.
 
-- <xref:microsoft.quantum.errorcorrection.logicalregister>`= Qubit[]`: 비트 레지스터는 오류 수정 코드의 코드 블록으로 해석 되어야 함을 나타냅니다.
-- <xref:microsoft.quantum.errorcorrection.syndrome>`= Result[]`: 측정 결과 배열을 코드 블록에서 측정 된 증후군 해석 해야 함을 나타냅니다.
-- <xref:microsoft.quantum.errorcorrection.recoveryfn>`= (Syndrome -> Pauli[])`: *기존* 함수를 사용 하 여 증후군를 해석 하 고 적용 해야 하는 수정 사항을 반환 해야 함을 나타냅니다.
-- <xref:microsoft.quantum.errorcorrection.encodeop>`= ((Qubit[], Qubit[]) => LogicalRegister)`: 오류 수정 코드의 코드 블록을 생성 하기 위해 작업에서 새로운 ancilla 된 비트와 함께 데이터를 표현 하는 데 필요한 비트를 사용 함을 나타냅니다.
-- <xref:microsoft.quantum.errorcorrection.decodeop>`= (LogicalRegister => (Qubit[], Qubit[]))`: 분해는 작업에서 코드 블록을 데이터 요소에 수정 하 고 증후군 정보를 나타내는 데 사용 되는 ancilla을 사용 하는 작업을 나타냅니다.
-- <xref:microsoft.quantum.errorcorrection.syndromemeasop>`= (LogicalRegister => Syndrome)`: 코드에서 보호 되는 상태를 방해 하지 않고 코드 블록에서 증후군 정보를 추출 하는 데 사용 해야 하는 작업을 나타냅니다.
+- <xref:Microsoft.Quantum.ErrorCorrection.LogicalRegister>`= Qubit[]`: 비트 레지스터는 오류 수정 코드의 코드 블록으로 해석 되어야 함을 나타냅니다.
+- <xref:Microsoft.Quantum.ErrorCorrection.Syndrome>`= Result[]`: 측정 결과 배열을 코드 블록에서 측정 된 증후군 해석 해야 함을 나타냅니다.
+- <xref:Microsoft.Quantum.ErrorCorrection.RecoveryFn>`= (Syndrome -> Pauli[])`: *기존* 함수를 사용 하 여 증후군를 해석 하 고 적용 해야 하는 수정 사항을 반환 해야 함을 나타냅니다.
+- <xref:Microsoft.Quantum.ErrorCorrection.EncodeOp>`= ((Qubit[], Qubit[]) => LogicalRegister)`: 오류 수정 코드의 코드 블록을 생성 하기 위해 작업에서 새로운 ancilla 된 비트와 함께 데이터를 표현 하는 데 필요한 비트를 사용 함을 나타냅니다.
+- <xref:Microsoft.Quantum.ErrorCorrection.DecodeOp>`= (LogicalRegister => (Qubit[], Qubit[]))`: 분해는 작업에서 코드 블록을 데이터 요소에 수정 하 고 증후군 정보를 나타내는 데 사용 되는 ancilla을 사용 하는 작업을 나타냅니다.
+- <xref:Microsoft.Quantum.ErrorCorrection.SyndromeMeasOp>`= (LogicalRegister => Syndrome)`: 코드에서 보호 되는 상태를 방해 하지 않고 코드 블록에서 증후군 정보를 추출 하는 데 사용 해야 하는 작업을 나타냅니다.
 
-마지막으로 라고은 <xref:microsoft.quantum.errorcorrection.qecc> 퀀텀 오류 수정 코드를 정의 하는 데 필요한 다른 형식을 수집 하기 위한 형식을 제공 합니다. 각 안정기 퀀텀 코드와 연결 된 코드 $n 길이는 $, logical st$d bits의 숫자 $k $, ⟦ $n $, $k $, $d $ ⟧ 표기법에서 편리 하 게 그룹화 되는 것입니다. 예를 들어 <xref:microsoft.quantum.errorcorrection.bitflipcode> 함수는 ⟦ 3, 1, 1 ⟧ 비트 대칭 코드를 정의 합니다.
+마지막으로 라고은 <xref:Microsoft.Quantum.ErrorCorrection.QECC> 퀀텀 오류 수정 코드를 정의 하는 데 필요한 다른 형식을 수집 하기 위한 형식을 제공 합니다. 각 안정기 퀀텀 코드와 연결 된 코드 $n 길이는 $, logical st$d bits의 숫자 $k $, ⟦ $n $, $k $, $d $ ⟧ 표기법에서 편리 하 게 그룹화 되는 것입니다. 예를 들어 <xref:Microsoft.Quantum.ErrorCorrection.BitFlipCode> 함수는 ⟦ 3, 1, 1 ⟧ 비트 대칭 코드를 정의 합니다.
 
 ```qsharp
 let encodeOp = EncodeOp(BitFlipEncoder);
@@ -104,7 +104,7 @@ let code = QECC(encodeOp, decodeOp, syndMeasOp);
 형식에는 `QECC` 복구 기능이 포함 되어 *있지* 않습니다.
 이렇게 하면 코드 자체의 정의를 변경 하지 않고 오류를 수정 하는 데 사용 되는 복구 기능을 변경할 수 있습니다. 이러한 기능은 특성화 측정의 피드백을 복구로 간주 되는 모델로 통합할 때 특히 유용 합니다.
 
-이러한 방식으로 코드를 정의한 후에는 작업을 사용 하 여 <xref:microsoft.quantum.errorcorrection.recover> 오류를 복구할 수 있습니다.
+이러한 방식으로 코드를 정의한 후에는 작업을 사용 하 여 <xref:Microsoft.Quantum.ErrorCorrection.Recover> 오류를 복구할 수 있습니다.
 
 ```qsharp
 let code = BitFlipCode();

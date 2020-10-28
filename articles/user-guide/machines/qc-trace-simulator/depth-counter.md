@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines.qc-trace-simulator.depth-counter
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8280783adfcc2867c3a598a6f57d827125aadcfd
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 89d8a2c9f2ecd5c5332215cd4307bcf4a6422036
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833445"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92692100"
 ---
 # <a name="quantum-trace-simulator-depth-counter"></a>퀀텀 추적 시뮬레이터: 깊이 카운터
 
@@ -25,11 +25,11 @@ Depth 카운터는 퀀텀 개발 키트 [퀀텀 추적 시뮬레이터](xref:mic
 
 기본적으로 모든 작업은 깊이가 1 인 작업을 제외 하 고 깊이가 **0** 입니다 `T` . **1** 즉, 기본적으로 `T` 작업 수준도 계산 됩니다 (종종 바람직한 경우). 수준 카운터는 작업 [호출 그래프](https://en.wikipedia.org/wiki/Call_graph)의 모든 가장자리에 대 한 통계를 집계 하 고 수집 합니다.
 
-모든 <xref:microsoft.quantum.intrinsic> 연산은 단일 비트 회전, <xref:microsoft.quantum.intrinsic.t> 작업, 단일가 Clifford 작업, <xref:microsoft.quantum.intrinsic.cnot> 작업 및 다중 기능 비트 pauli 관찰 가능 개체의 측정값으로 표현 됩니다. 사용자는의 필드를 통해 각 기본 작업에 대 한 깊이를 설정할 수 있습니다 `gateTimes` <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> .
+모든 <xref:Microsoft.Quantum.Intrinsic> 연산은 단일 비트 회전, <xref:Microsoft.Quantum.Intrinsic.T> 작업, 단일가 Clifford 작업, <xref:Microsoft.Quantum.Intrinsic.CNOT> 작업 및 다중 기능 비트 pauli 관찰 가능 개체의 측정값으로 표현 됩니다. 사용자는의 필드를 통해 각 기본 작업에 대 한 깊이를 설정할 수 있습니다 `gateTimes` <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> .
 
 ## <a name="invoking-the-depth-counter"></a>수준 카운터 호출
 
-Depth 카운터를 사용 하 여 퀀텀 추적 시뮬레이터를 실행 하려면 인스턴스를 만들고 <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> 해당 `UseDepthCounter` 속성을 **true**로 설정한 다음 <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> 를 매개 변수로 사용 하 여 새 인스턴스를 만들어야 합니다 `QCTraceSimulatorConfiguration` . 
+Depth 카운터를 사용 하 여 퀀텀 추적 시뮬레이터를 실행 하려면 인스턴스를 만들고 <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> 해당 `UseDepthCounter` 속성을 **true** 로 설정한 다음 <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> 를 매개 변수로 사용 하 여 새 인스턴스를 만들어야 합니다 `QCTraceSimulatorConfiguration` . 
 
 ```csharp
 var config = new QCTraceSimulatorConfiguration();
