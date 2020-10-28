@@ -9,21 +9,21 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 51eb52d0b8ace972f6a425edba400ca9a8916d2e
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: c3ce5d531618c269d15be3e4eb58ecbb597a022c
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835590"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92692238"
 ---
 # <a name="data-structures-and-modeling"></a>데이터 구조 및 모델링 #
 
 ## <a name="classical-data-structures"></a>기존 데이터 구조 ##
 
 또한 라고은 퀀텀 개념을 나타내는 데 사용 되는 사용자 정의 형식과 함께 퀀텀 시스템의 제어에 사용 되는 기존 데이터로 작업 하기 위한 작업, 함수 및 유형도 제공 합니다.
-예를 들어 <xref:microsoft.quantum.arrays.reversed> 함수는 배열을 입력으로 사용 하 고 동일한 배열을 역순으로 반환 합니다.
+예를 들어 <xref:Microsoft.Quantum.Arrays.Reversed> 함수는 배열을 입력으로 사용 하 고 동일한 배열을 역순으로 반환 합니다.
 그러면 형식의 배열에서이를 사용 하 여 `Qubit[]` 양자의 퀀텀 표현 간에 변환 하는 동안 불필요 한 $ \operatorname{SWAP} $ 게이트를 적용할 필요가 없도록 할 수 있습니다.
-마찬가지로, 이전 섹션에서 형식의 형식이 `(Int, Int -> T)` 임의 액세스 컬렉션을 표시 하는 데 유용할 수 있으므로 <xref:microsoft.quantum.arrays.lookupfunction> 함수는 배열 형식에서 이러한 형식을 생성 하는 편리한 방법을 제공 합니다.
+마찬가지로, 이전 섹션에서 형식의 형식이 `(Int, Int -> T)` 임의 액세스 컬렉션을 표시 하는 데 유용할 수 있으므로 <xref:Microsoft.Quantum.Arrays.LookupFunction> 함수는 배열 형식에서 이러한 형식을 생성 하는 편리한 방법을 제공 합니다.
 
 ### <a name="pairs"></a>문자짝 ###
 
@@ -38,7 +38,7 @@ ApplyToEach(H, Snd(pair)); // No need to deconstruct to access the register.
 
 라고에서는 배열을 조작 하기 위한 여러 함수를 제공 합니다.
 이러한 함수는 형식 매개 변수화 되므로 모든 형식의 배열과 함께 사용할 수 있습니다 Q# .
-예를 들어, <xref:microsoft.quantum.arrays.reversed> 함수는 요소가 입력에서 역순으로 포함 된 새 배열을 반환 합니다.
+예를 들어, <xref:Microsoft.Quantum.Arrays.Reversed> 함수는 요소가 입력에서 역순으로 포함 된 새 배열을 반환 합니다.
 이를 사용 하 여 작업을 호출할 때 퀀텀 레지스터가 표시 되는 방식을 변경할 수 있습니다.
 
 ```qsharp
@@ -49,14 +49,14 @@ QFT(BigEndian(Reversed(leRegister!)));
 QFT(LittleEndianAsBigEndian(leRegister));
 ```
 
-마찬가지로 함수를 <xref:microsoft.quantum.arrays.subarray> 사용 하 여 배열 요소의 순서를 변경 하거나 하위 집합을 가져올 수 있습니다.
+마찬가지로 함수를 <xref:Microsoft.Quantum.Arrays.Subarray> 사용 하 여 배열 요소의 순서를 변경 하거나 하위 집합을 가져올 수 있습니다.
 
 ```qsharp
 // Applies H to qubits 2 and 5.
 ApplyToEach(H, Subarray([2, 5], register));
 ```
 
-흐름 제어와 함께 사용 하는 경우와 같은 배열 조작 함수는 <xref:microsoft.quantum.arrays.zip> 퀀텀 프로그램을 표현할 수 있는 강력한 방법을 제공 합니다.
+흐름 제어와 함께 사용 하는 경우와 같은 배열 조작 함수는 <xref:Microsoft.Quantum.Arrays.Zipped> 퀀텀 프로그램을 표현할 수 있는 강력한 방법을 제공 합니다.
 
 ```qsharp
 // Applies X₃ Y₁ Z₇ to a register of any size.
@@ -64,7 +64,7 @@ ApplyToEach(
     ApplyPauli(_, register),
     Map(
         EmbedPauli(_, _, Length(register)),
-        Zip([PauliX, PauliY, PauliZ], [3, 1, 7])
+        Zipped([PauliX, PauliY, PauliZ], [3, 1, 7])
     )
 );
 ```
@@ -127,8 +127,8 @@ is Adj + Ctl {
 }
 ```
 
-이 oracle은 작업의 특별 한 경우입니다 <xref:microsoft.quantum.canon.rall1> .이 경우 리플렉션 사례 $ \a= \phi $ 대신 임의의 단계로 회전할 수 있습니다.
-이 경우 `RAll1` 는 prelude 작업과 유사 하며,이 <xref:microsoft.quantum.intrinsic.r1> 는 단일가 나 비트 상태 $ \ket $ 대신 $ \ket{11\cdots1} $를 회전 {1} 합니다.
+이 oracle은 작업의 특별 한 경우입니다 <xref:Microsoft.Quantum.Canon.RAll1> .이 경우 리플렉션 사례 $ \a= \phi $ 대신 임의의 단계로 회전할 수 있습니다.
+이 경우 `RAll1` 는 prelude 작업과 유사 하며,이 <xref:Microsoft.Quantum.Intrinsic.R1> 는 단일가 나 비트 상태 $ \ket $ 대신 $ \ket{11\cdots1} $를 회전 {1} 합니다.
 
 초기 하위 공간을 표시 하는 oracle을 유사 하 게 생성할 수 있습니다.
 의사 코드:
@@ -139,7 +139,7 @@ is Adj + Ctl {
 4. 모든 고 비트에 $X $ 게이트를 적용 합니다.
 5. 모든 고 비트에 $H $ 게이트를 적용 합니다.
 
-이번에는 <xref:microsoft.quantum.canon.applywith> 위에서 설명한 작업과 함께를 사용 하는 방법도 보여 줍니다 <xref:microsoft.quantum.canon.rall1> .
+이번에는 <xref:Microsoft.Quantum.Canon.ApplyWith> 위에서 설명한 작업과 함께를 사용 하는 방법도 보여 줍니다 <xref:Microsoft.Quantum.Canon.RAll1> .
 
 ```qsharp
 operation ReflectAboutInitial(register : Qubit[]) : Unit
@@ -163,7 +163,7 @@ is Adj + Ctl {
 > 연속 쿼리 oracles 대해 자세히 알아보려면 [ **PhaseEstimation** 샘플](https://github.com/microsoft/Quantum/tree/main/samples/characterization/phase-estimation)을 참조 하세요.
 > 불연속 쿼리 oracles에 대해 자세히 알아보려면 [ **IsingPhaseEstimation** 샘플](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/phase-estimation)을 참조 하세요.
 
-Oracle의 첫 번째 유형은 개별 쿼리를 호출 하 고 사용자 정의 유형을 사용 하 여 표시 하는 oracle은 <xref:microsoft.quantum.oracles.discreteoracle> 단일 행렬을 포함 합니다.
+Oracle의 첫 번째 유형은 개별 쿼리를 호출 하 고 사용자 정의 유형을 사용 하 여 표시 하는 oracle은 <xref:Microsoft.Quantum.Oracles.DiscreteOracle> 단일 행렬을 포함 합니다.
 $U $가 예측 하려는 고유 값의 단일 인 경우 $U $에 대 한 oracle은 단순히 $U $를 구현 하는 서브루틴에 대 한 독립 실행형입니다.
 예를 들어, $ $U를 사용 하 여 진폭에 대해 앞에서 정의한 oracle $Q $를 사용할 수 있습니다.
 이 행렬의 고유 값를 사용 하 여 초기 및 대상 상태 $ \sin ^ 2 (\sin) $ 사이에서 겹치는 항목을 추정 하는 데 사용할 수 있습니다. 그 외에도 quadratically를 사용 하는 경우 보다 작은 샘플을 사용 해야 합니다.
@@ -173,7 +173,7 @@ $U $가 예측 하려는 고유 값의 단일 인 경우 $U $에 대 한 oracle�
 이러한 경우, 게이트에서 $ \theta $의이 고정 된 값을 학습 하기 위해 상호 작용 하는 서브루틴이 $ $ \begin{align} U & = R_z (\theta) \\ \\ & = \begin{bmatrix} e ^ {-i \theta/2} & 0 \\ \\ 0 & e ^ {a\ 테타/2} \end{bmatrix}.
 \end{align} $ $
 
-단계 예측에 사용 되는 oracle의 두 번째 유형은 형식으로 표현 되는 연속 쿼리 oracle입니다 <xref:microsoft.quantum.oracles.continuousoracle> .
+단계 예측에 사용 되는 oracle의 두 번째 유형은 형식으로 표현 되는 연속 쿼리 oracle입니다 <xref:Microsoft.Quantum.Oracles.ContinuousOracle> .
 단계 예측을 위한 연속 쿼리 oracle은 $U (t) $를 사용 합니다. 여기서 $t $은 알려진 일반적으로입니다.
 $를 고정 된 단일 형식으로 $U 수 있는 경우 연속 쿼리 oracle은 $U (t) = U ^ t $ 형식으로 사용 됩니다.
 이렇게 하면 불연속 쿼리 모델에서 직접 구현할 수 없는 $ \sqrt{U} $와 같은 행렬을 쿼리할 수 있습니다.
@@ -261,7 +261,7 @@ newtype EvolutionUnitary = ((Double, Qubit[]) => Unit is Adj + Ctl);
 
 첫 번째 매개 변수는 단일 진화의 계수를 곱하여 하는 시간 기간을 나타냅니다 `GeneratorIndex` . 두 번째 매개 변수는 단일 역할을 수행 하는 고 비트 레지스터입니다. 
 
-### <a name="time-dependent-generators"></a>시간 종속 생성기 ###
+### <a name="time-dependent-generators"></a>Time-Dependent 생성기 ###
 
 대부분의 경우에는 Schrödinger 수식 $ $ \begin{align} i\frac {d \ket{\psi (t)} {d t} & = \hat H (t) \ket{\psi (t)}, \end{align} $ $에서 발생 하는 것 처럼 시간 종속 생성기에도 관심이 있습니다. $ \hat H (t) $는 이제 시간에 따라 다릅니다 위의 시간 독립적 생성기에서이 경우의 확장은 간단 합니다. $T $에 대해 Hamiltonian를 설명 하는 고정을 사용 하는 대신 `GeneratorSystem` `GeneratorSystemTimeDependent` 사용자 정의 형식이 있습니다.
 
