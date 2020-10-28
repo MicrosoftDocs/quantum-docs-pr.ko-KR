@@ -1,0 +1,16 @@
+### YamlMime:QSharpNamespace
+functions: []
+name: Microsoft.Quantum.Targeting
+newtypes:
+- summary: 필요한 런타임 기능으로 호출할 수 있는를 표시 하는 데 사용 되는 컴파일러 인식 특성입니다.
+  uid: Microsoft.Quantum.Targeting.RequiresCapability
+operations: []
+summary: 이 네임 스페이스는 특정 퀀텀 프로세서를 대상으로 지정 하는 기능을 제공 합니다.
+uid: Microsoft.Quantum.Targeting
+metadata:
+  ms.openlocfilehash: 470a923d88c23857ef8b64cf2eb3de13c3c2cb4f
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92725142"

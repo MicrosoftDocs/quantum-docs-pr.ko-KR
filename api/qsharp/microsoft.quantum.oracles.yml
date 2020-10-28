@@ -1,0 +1,70 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: 형식의 oracle `StateOracle` 을로 변환 `DeterministicStateOracle` 합니다.
+  uid: Microsoft.Quantum.Oracles.DeterministicStateOracleFromStateOracle
+- summary: Oracles와를 결합 합니다 `DeterministicStateOracle` `ObliviousOracle` .
+  uid: Microsoft.Quantum.Oracles.ObliviousOracleFromDeterministicStateOracle
+- summary: "\"블랙 박스\" oracle을 나타내는 작업을 수행 하는 경우 \"블랙 박스\" oracle을 여러 번 반복 하는 불연속 시간 oracle이 반환 됩니다."
+  uid: Microsoft.Quantum.Oracles.OracleToDiscrete
+- summary: Oracle에서 지정 된 상태에 대 한 리플렉션을 생성 합니다.
+  uid: Microsoft.Quantum.Oracles.ReflectionOracleFromDeterministicStateOracle
+- summary: 형식의 oracle `DeterministicStateOracle` 을로 변환 `StateOracle` 합니다.
+  uid: Microsoft.Quantum.Oracles.StateOracleFromDeterministicStateOracle
+name: Microsoft.Quantum.Oracles
+newtypes:
+- summary: >-
+    연속 시간 oracle을 나타냅니다.
+
+    이는 $U (\delta t)를 구현 하는 oracle입니다. 모든 시간에 대 한 \ket{\psi (t)} \maps\ket{\psi (t + \delta t)} $ $t $, 여기서 $U $은 고정 연산이 며 $ \delta t $는 음수가 아닌 실수입니다.
+  uid: Microsoft.Quantum.Oracles.ContinuousOracle
+- summary: >-
+    결정적 상태 준비를 위한 oracle을 나타냅니다.
+
+    Oracle $O $에 대 한 입력은 다음과 같습니다.
+
+    - 원하는 퀀텀 상태 $ \ket{\psi} s $를 저장할 레지스터입니다 \_ .
+  uid: Microsoft.Quantum.Oracles.DeterministicStateOracle
+- summary: >-
+    불연속 시간 oracle을 나타냅니다.
+
+    이는 고정 된 작업 $U $ 및 음수가 아닌 정수 $m $에 대해 ^ m $ $U를 구현 하는 oracle입니다.
+  uid: Microsoft.Quantum.Oracles.DiscreteOracle
+- summary: >-
+    명확한 진폭 증폭의 oracle을 나타냅니다.
+
+    Oracle $O $에 대 한 입력은 다음과 같습니다.
+
+    - $O $가 작동 하는 ancilla 레지스터 $a $입니다. -원하는 단일 $U $이 적용 되 고, $ \ket{t} a $ 상태에 있는 레지스터 $a $에서 게시 된 시스템 등록 $s $입니다 \_ .
+  uid: Microsoft.Quantum.Oracles.ObliviousOracle
+- summary: >-
+    리플렉션 oracle을 나타냅니다.
+
+    리플렉션 oracle $O $에는 입력이 있습니다.
+
+    - 반사 된 하위 공간을 회전 하는 $ \\? $ 단계입니다. -지정 된 리플렉션을 수행할 수 있는의 비트 레지스터입니다.
+  uid: Microsoft.Quantum.Oracles.ReflectionOracle
+- summary: >-
+    상태 준비를 위한 oracle을 나타냅니다.
+
+    Oracle $O $에 대 한 입력은 다음과 같습니다.
+
+    - 플래그 $f $를 인덱싱하는 정수입니다. -필요한 퀀텀 상태 $ \ket{\psi} s $를 저장 하는 시스템 등록 $s $ \_ 입니다.
+  uid: Microsoft.Quantum.Oracles.StateOracle
+operations:
+- summary: <xref:microsoft.quantum.canon.deterministicstateoraclefromstateoracle>의 구현입니다.
+  uid: Microsoft.Quantum.Oracles.ApplyDeterministicStateOracleFromStateOracle
+- summary: <xref:microsoft.quantum.canon.obliviousoraclefromdeterministicstateoracle>의 구현입니다.
+  uid: Microsoft.Quantum.Oracles.ApplyObliviousOracleFromDeterministicStateOracle
+- summary: <xref:microsoft.quantum.canon.stateoraclefromdeterministicstateoracle>의 구현입니다.
+  uid: Microsoft.Quantum.Oracles.ApplyStateOracleFromDeterministicStateOracle
+- summary: <xref:microsoft.quantum.canon.reflectionoraclefromdeterministicstateoracle>의 구현입니다.
+  uid: Microsoft.Quantum.Oracles._ReflectionOracleFromDeterministicStateOracle
+summary: 이 네임 스페이스는 단계 예측 및 진폭 증폭과 같은 퀀텀 알고리즘에서 사용 하는 다양 한 종류의 oracles을 데코레이팅하는 사용자 정의 형식을 제공 합니다.
+uid: Microsoft.Quantum.Oracles
+metadata:
+  ms.openlocfilehash: 2a06057030f99eba20b84f493f4bfb40d5b6a7e4
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92724953"
