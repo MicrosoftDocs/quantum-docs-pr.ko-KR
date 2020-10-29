@@ -26,6 +26,8 @@
   name: '%chemistry.inputstate.load 매직 명령'
 - href: config.md
   name: '%config 매직 명령'
+- href: debug.md
+  name: '%debug 매직 명령'
 - href: estimate.md
   name: '%estimate 매직 명령'
 - href: kata.md
