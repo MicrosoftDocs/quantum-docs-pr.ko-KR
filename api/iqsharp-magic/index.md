@@ -1,22 +1,23 @@
 ---
 title: IQ# 매직 명령
+description: IQ# Jupyter 커널에서 사용할 수 있는 매직 명령을 나열합니다.
 author: rmshaffer
 uid: microsoft.quantum.iqsharp.magic-ref.index
-ms.author: rmshaffer
-ms.date: 09/29/2020
+ms.author: ryansha
+ms.date: 10/26/2020
 ms.topic: article
-ms.openlocfilehash: 934ab18b667797d09d2c8188f727e64b0017e1d5
-ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+ms.openlocfilehash: a615c6dac6cdb80ff84cec2b0a3c99fc700efb8e
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91464677"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691139"
 ---
 # <a name="iq-magic-commands"></a>IQ# 매직 명령
 | 매직 명령 | 요약 |
 |---------------|---------|
 | [`%azure.connect`](xref:microsoft.quantum.iqsharp.magic-ref.azure.connect) | Azure Quantum 작업 영역에 연결하거나 현재 연결 상태를 표시합니다. |
-| [`%azure.execute`](xref:microsoft.quantum.iqsharp.magic-ref.azure.execute) | Azure Quantum 작업 영역에서 작업을 실행합니다. |
+| [`%azure.execute`](xref:microsoft.quantum.iqsharp.magic-ref.azure.execute) | Azure Quantum 작업 영역에 작업을 제출하고 완료될 때까지 기다립니다. |
 | [`%azure.jobs`](xref:microsoft.quantum.iqsharp.magic-ref.azure.jobs) | 현재 Azure Quantum 작업 영역의 작업 목록을 표시합니다. |
 | [`%azure.output`](xref:microsoft.quantum.iqsharp.magic-ref.azure.output) | 현재 Azure Quantum 작업 영역의 작업 결과를 표시합니다. |
 | [`%azure.status`](xref:microsoft.quantum.iqsharp.magic-ref.azure.status) | 현재 Azure Quantum 작업 영역의 작업 상태를 표시합니다. |
@@ -29,6 +30,7 @@ ms.locfileid: "91464677"
 | [`%chemistry.fh.load`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.fh.load) | 전자 구조 문제에 대한 페르미온 해밀토니언을 로드합니다. 문제는 파일에서 로드되거나 인수로 전달됩니다. |
 | [`%chemistry.inputstate.load`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.inputstate.load) | Broombridge 전자 구조 문제를 로드하고 선택한 입력 상태를 반환합니다. |
 | [`%config`](xref:microsoft.quantum.iqsharp.magic-ref.config) | 구성 옵션을 설정하거나 쿼리할 수 있습니다. |
+| [`%debug`](xref:microsoft.quantum.iqsharp.magic-ref.debug) | 지정된 Q# 작업 또는 함수를 단계별로 실행합니다. |
 | [`%estimate`](xref:microsoft.quantum.iqsharp.magic-ref.estimate) | ResourcesEstimator 대상 머신에서 지정된 함수나 연산을 실행합니다. |
 | [`%kata`](xref:microsoft.quantum.iqsharp.magic-ref.kata) | 단일 테스트를 실행합니다. |
 | [`%lsmagic`](xref:microsoft.quantum.iqsharp.magic-ref.lsmagic) | 현재 사용할 수 있는 모든 매직 명령 목록을 반환합니다. |

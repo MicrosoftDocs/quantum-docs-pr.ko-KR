@@ -9,12 +9,12 @@ uid: microsoft.quantum.contributing
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 0fbbe127b9f4c6b98bdc2cf0e46098bf40a816e3
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: a8a527df59bd7ee038de71e04003cf456b094afb
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866862"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691765"
 ---
 # <a name="contributing-to-the-quantum-development-kit"></a>Quantum Development Kit 참여
 
@@ -59,6 +59,7 @@ Quantum Development Kit에는 양자 프로그램을 작성하기 위한 플랫�
 - [**microsoft/qsharp-compiler**](https://github.com/microsoft/qsharp-compiler): Q# 컴파일러, Visual Studio 확장 및 Visual Studio Code 확장입니다.
 - [**microsoft/qsharp-runtime**](https://github.com/microsoft/qsharp-runtime): Quantum Development Kit용 시뮬레이션 프레임워크, 코드 생성 및 시뮬레이션 대상 컴퓨터입니다.
 - [**microsoft/iqsharp**](https://github.com/microsoft/iqsharp): 클라우드 환경에서 IQ#를 사용하기 위한 Docker 이미지와 Q#용 Jupyter 커널 및 Python 호스트 기능입니다.
+- [**microsoft/qsharp-language**](https://github.com/microsoft/qsharp-language): 여기에서 새로운 Q# 기능이 개발되고 지정되며 Q# 언어 및 핵심 라이브러리의 향후 발전에 대한 아이디어와 제안을 공유할 수 있습니다.
 - [**MicrosoftDocs/quantum-docs-pr**](https://github.com/MicrosoftDocs/quantum-docs-pr): https://docs.microsoft.com/quantum 에서 게시된 설명서의 소스 코드입니다.
 
 > [!NOTE]
