@@ -9,18 +9,18 @@ uid: microsoft.quantum.overview.algebra
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: bff1da475f87278bc9e769805b3fe0fe8704d47a
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 3e6700acc09adf9e2e771f6289c73ad51aa2cb90
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835131"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92692258"
 ---
 # <a name="linear-algebra-for-quantum-computing"></a>양자 컴퓨팅을 위한 선형 대수
 
 선형 대수는 양자 컴퓨팅의 언어입니다. 양자 프로그램을 구현하거나 작성하기 위해 알 필요는 없지만, 큐비트 상태와 양자 연산을 설명하고 양자 컴퓨터가 일련의 명령에 응답하여 수행하는 작업을 예측하는 데 널리 사용됩니다.
 
-[양자 물리학의 기본 개념](xref:microsoft.quantum.overview.understanding)을 익히는 것이 양자 컴퓨팅을 이해하는데 도움이 되는 것처럼 몇 가지 기본적인 선형 대수를 알면 양자 알고리즘의 작동 방식을 이해하는 데 도움이 됩니다. 적어도 **벡터** 및 **행렬 곱**에 익숙해져야 합니다. 이러한 대수 개념에 대한 지식을 새로 고쳐야 하는 경우 기본 사항을 다루고 있는 몇 가지 자습서는 다음과 같습니다.
+[양자 물리학의 기본 개념](xref:microsoft.quantum.overview.understanding)을 익히는 것이 양자 컴퓨팅을 이해하는데 도움이 되는 것처럼 몇 가지 기본적인 선형 대수를 알면 양자 알고리즘의 작동 방식을 이해하는 데 도움이 됩니다. 적어도 **벡터** 및 **행렬 곱** 에 익숙해져야 합니다. 이러한 대수 개념에 대한 지식을 새로 고쳐야 하는 경우 기본 사항을 다루고 있는 몇 가지 자습서는 다음과 같습니다.
 
 - [선형 대수에 대한 Jupyter Notebook 자습서](https://github.com/microsoft/QuantumKatas/tree/main/tutorials/LinearAlgebra)
 - [복소수 연산에 대한 Jupyter Notebook 자습서](https://github.com/microsoft/QuantumKatas/tree/main/tutorials/ComplexArithmetic)
@@ -30,7 +30,7 @@ ms.locfileid: "90835131"
 
 ## <a name="vectors-and-matrices-in-quantum-computing"></a>양자 컴퓨팅의 벡터 및 행렬
 
-[양자 컴퓨팅 이해](xref:microsoft.quantum.overview.understanding) 항목에서 큐비트가 1 또는 0 상태이거나 중첩이거나 둘 다일 수 있음을 확인했습니다. 선형 대수를 사용하면 큐비트 상태가 벡터로 설명되며 $\begin{bmatrix} a \\\\  b \end{bmatrix}$ 단일 열 **행렬**로 표시됩니다. 또한 **양자 상태 벡터**라고도 하며 $|a|^2 + |b|^2 = 1$라는 요구 사항을 충족해야 합니다.  
+[양자 컴퓨팅 이해](xref:microsoft.quantum.overview.understanding) 항목에서 큐비트가 1 또는 0 상태이거나 중첩이거나 둘 다일 수 있음을 확인했습니다. 선형 대수를 사용하면 큐비트 상태가 벡터로 설명되며 $\begin{bmatrix} a \\\\  b \end{bmatrix}$ 단일 열 **행렬** 로 표시됩니다. 또한 **양자 상태 벡터** 라고도 하며 $|a|^2 + |b|^2 = 1$라는 요구 사항을 충족해야 합니다.  
 
 행렬의 요소는 큐비트가 한 방향 또는 다른 방향으로 붕괴될 확률을 나타내며, $|a|^2$는 0으로 붕괴될 확률이고 $|b|^2$는 1로 붕괴될 확률입니다. 다음 행렬은 모두 유효한 양자 상태 벡터를 나타냅니다.
 
@@ -41,7 +41,7 @@ $$\begin{bmatrix} 1 \\\\  0 \end{bmatrix}, \begin{bmatrix} 0 \\\\  1 \end{bmatri
 다음은 행렬 곱으로 나타내는 두 가지 일반적인 양자 연산입니다.
 
 
-[`X` 연산](xref:microsoft.quantum.intrinsic.x)은 $X$ Pauli 행렬로 나타냅니다.
+[`X` 연산](xref:Microsoft.Quantum.Intrinsic.X)은 $X$ Pauli 행렬로 나타냅니다.
 
 $$X = \begin{bmatrix} 0 & 1 \\\\ 1 & 0 \end{bmatrix},$$
     
@@ -49,7 +49,7 @@ $$X = \begin{bmatrix} 0 & 1 \\\\ 1 & 0 \end{bmatrix},$$
 
 $$\begin{bmatrix}0 &1\\\\ 1 &0\end{bmatrix}\begin{bmatrix} 1 \\\\  0 \end{bmatrix} = \begin{bmatrix} 0 \\\\  1 \end{bmatrix}.$$
 
-['H' 연산](xref:microsoft.quantum.intrinsic.h)은 $H$ Hadamard 변환으로 나타냅니다.
+['H' 연산](xref:Microsoft.Quantum.Intrinsic.H)은 $H$ Hadamard 변환으로 나타냅니다.
 
 $$H = \dfrac{1}{\sqrt{2}}\begin{bmatrix}1 &1\\\\ 1 &-1\end{bmatrix},$$
 
@@ -63,7 +63,7 @@ $$\frac{1}{\sqrt{2}}\begin{bmatrix}1 &1\\\\ 1 &-1\end{bmatrix}\begin{bmatrix} 1 
 
 위의 예에서 한 큐비트의 상태는 $\begin{bmatrix} a \\\\  b \end{bmatrix}$ 단일 열 행렬을 사용하여 설명했으며, 연산을 적용하는 것은 두 행렬을 곱하여 설명했습니다. 그러나 양자 컴퓨터는 둘 이상의 큐비트를 사용하므로 두 큐비트의 결합된 상태는 어떻게 설명할까요? 
 
-각 큐비트는 벡터 공간이므로 곱할 수는 없습니다. 대신 개별 벡터 공간에서 새 벡터 공간을 만들고 $\otimes$ 기호로 표현되는 관련 연산인 **텐서 곱**을 사용합니다. 예를 들어 두 개의 큐비트 상태($\begin{bmatrix} a \\\\  b \end{bmatrix}$ 및 $\begin{bmatrix} c \\\\  d \end{bmatrix}$)의 텐서 곱이 계산됩니다.
+각 큐비트는 벡터 공간이므로 곱할 수는 없습니다. 대신 개별 벡터 공간에서 새 벡터 공간을 만들고 $\otimes$ 기호로 표현되는 관련 연산인 **텐서 곱** 을 사용합니다. 예를 들어 두 개의 큐비트 상태($\begin{bmatrix} a \\\\  b \end{bmatrix}$ 및 $\begin{bmatrix} c \\\\  d \end{bmatrix}$)의 텐서 곱이 계산됩니다.
 
 $$ \begin{bmatrix} a \\\\  b \end{bmatrix} \otimes \begin{bmatrix} c \\\\  d \end{bmatrix} =\begin{bmatrix} a \begin{bmatrix} c \\\\  d \end{bmatrix} \\\\ b \begin{bmatrix}c \\\\  d \end{bmatrix} \end{bmatrix} = \begin{bmatrix} ac \\\\  ad \\\\  bc \\\\  bd \end{bmatrix}. $$
 
