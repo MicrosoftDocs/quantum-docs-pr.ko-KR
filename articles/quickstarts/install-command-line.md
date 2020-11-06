@@ -1,5 +1,5 @@
 ---
-title: Q# 애플리케이션을 사용하여 개발
+title: IDE에서 Q# 애플리케이션을 사용하여 개발
 description: 명령 프롬프트에서 실행되는 Q# 애플리케이션을 만드는 방법을 알아봅니다.
 author: bradben
 ms.author: v-benbra
@@ -10,68 +10,67 @@ uid: microsoft.quantum.install.standalone
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 68f530d80e5c5f40dc2bcbb185879c3cb6f93f91
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: a6823888dcbe8cf79f0045d2615fe8b889dcc7c3
+ms.sourcegitcommit: a13c7c86fd52a05cbf129b8dd713d6586ca1cc2c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834417"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93376425"
 ---
-# <a name="develop-with-no-locq-applications"></a>Q# 애플리케이션을 사용하여 개발
+# <a name="develop-with-no-locq-applications-in-an-ide"></a>IDE에서 Q# 애플리케이션을 사용하여 개발
 
-사용하는 환경에 해당하는 탭의 지침을 따릅니다.
+Q# 프로그램은 C#, F# 또는 Python과 같은 호스트 언어로 된 드라이버 없이 단독 실행이 가능합니다. Visual Studio Code(VS Code), Visual Studio, Visual Studio Codespaces 또는 편집기/IDE를 사용하여 Q# 애플리케이션을 개발하고 .NET 콘솔에서 애플리케이션을 실행할 수 있습니다. 
 
-Q# 프로그램은 C#, F# 또는 Python과 같은 호스트 언어로 된 드라이버 없이 단독 실행이 가능합니다.
-
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites-for-all-environments"></a>모든 환경을 위한 사전 요구 사항
 
 - [.NET Core SDK 3.1 이상](https://www.microsoft.com/net/download)
 
 ## <a name="installation"></a>설치
 
-모든 IDE에서 Q# 애플리케이션을 빌드할 수 있지만 로컬에서 Q# 애플리케이션을 개발하기 위해 VS Code(Visual Studio Code) 또는 Visual Studio IDE를 사용하는 것이 좋습니다. 웹 브라우저를 통해 클라우드에서 개발하려면 Visual Studio Codespaces를 사용하는 것이 좋습니다. 이러한 환경에서 개발하면 경고, 구문 강조 표시, 프로젝트 템플릿 등의 다양한 QDK 확장 기능을 사용할 수 있습니다. 
+모든 IDE에서 Q# 애플리케이션을 빌드할 수 있지만 로컬에서 Q# 애플리케이션을 개발하기 위해 VS Code(Visual Studio Code) 또는 Visual Studio IDE를 사용하는 것이 좋습니다. 웹 브라우저를 통해 클라우드에서 개발하려면 Visual Studio Codespaces를 사용하는 것이 좋습니다. 이러한 환경에서 개발하면 경고, 구문 강조 표시, 프로젝트 템플릿 등의 다양한 QDK 확장 기능을 활용할 수 있습니다. 
 
-VS 코드를 구성하려면 다음을 수행합니다.
+### <a name="to-configure-for-vs-code"></a>VS 코드에 맞게 구성하려면 다음을 수행합니다.
 
 1. [VS Code](https://code.visualstudio.com/download)(Windows, Linux 및 Mac)를 다운로드하여 설치합니다.
 2. [Microsoft QDK for VS Code](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode)를 설치합니다.
 
-Visual Studio를 구성하려면 다음을 수행합니다.
+### <a name="to-configure-for-visual-studio"></a>Visual Studio에 맞게 구성하려면 다음을 수행합니다.
 
 1. .NET Core 플랫폼 간 개발 워크로드를 사용하도록 설정한 상태에서 [Visual Studio](https://visualstudio.microsoft.com/downloads/) 16.3 이상을 다운로드하여 설치합니다.
 2. [Microsoft QDK](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit)를 다운로드하여 설치합니다.
 
-Visual Studio Codespaces를 구성하려면 다음을 수행합니다.
+### <a name="to-configure-for-another-environment"></a>다른 환경에 맞게 구성하려면 다음을 수행합니다. 
 
-1. [Azure 계정](https://azure.microsoft.com/free/)을 만듭니다.
-2. Codespaces 환경을 만듭니다. [빠른 시작 가이드](https://docs.microsoft.com/visualstudio/codespaces/quickstarts/browser)를 따르세요. Codespace를 만들 때 "Git 리포지토리" 필드에 `microsoft/Quantum`을 입력하여 QDK 특정 설정을 로드하는 것이 좋습니다.
-3. 이제 [VS Codespaces Cloud IDE](https://online.visualstudio.com/environments)를 통해 새 환경을 시작하고 브라우저에서 개발을 시작할 수 있습니다. 또는 VS Code를 로컬에 설치할 수 있고 Codespace를 [원격 환경](https://docs.microsoft.com/visualstudio/online/how-to/vscode)으로 사용할 수 있습니다.
-
-
-다른 환경에 사용하도록 QDK를 설치하려면 명령 프롬프트에서 다음을 입력합니다.
+1. 명령 프롬프트에서 다음을 입력
 
 ```dotnetcli
 dotnet new -i Microsoft.Quantum.ProjectTemplates
 ```
 
+### <a name="to-configure-for-visual-studio-codespaces"></a>Visual Studio Codespaces에 맞게 구성하려면 다음을 수행합니다.
+
+1. [Azure 계정](https://azure.microsoft.com/free/)을 만듭니다.
+2. Codespaces 환경을 만듭니다. [빠른 시작 가이드](https://docs.microsoft.com/visualstudio/codespaces/quickstarts/browser)를 따르세요. Codespace를 만들 때 "Git 리포지토리" 필드에 `microsoft/Quantum`을 입력하여 QDK 특정 설정을 로드하는 것이 좋습니다.
+3. 이제 [VS Codespaces Cloud IDE](https://online.visualstudio.com/environments)를 통해 새 환경을 시작하고 브라우저에서 개발을 시작할 수 있습니다. 또는 VS Code를 로컬에 설치할 수 있고 Codespace를 [원격 환경](https://docs.microsoft.com/visualstudio/online/how-to/vscode)으로 사용할 수 있습니다.
+
 ## <a name="develop-with-no-locq"></a>Q#으로 개발
 
-사용하는 환경에 해당하는 탭의 지침을 따릅니다.
+사용하는 개발 환경에 해당하는 탭의 지침을 따릅니다.
 
 ### <a name="vs-code"></a>[VS 코드](#tab/tabid-vscode)
 
 새 프로젝트를 만들려면 다음을 수행합니다.
 
-1. **보기** -> **명령 팔레트**를 클릭하고 **Q#: 새 프로젝트 만들기**를 선택합니다.
-2. **Standalone console application**(독립 실행형 콘솔 애플리케이션)을 클릭합니다.
-3. 프로젝트를 저장할 위치로 이동하여 **프로젝트 만들기**를 클릭합니다.
+1. **보기** -> **명령 팔레트** 를 클릭하고 **Q#: 새 프로젝트 만들기** 를 선택합니다.
+2. **Standalone console application** (독립 실행형 콘솔 애플리케이션)을 클릭합니다.
+3. 프로젝트를 저장할 위치로 이동하여 **프로젝트 만들기** 를 클릭합니다.
 4. 프로젝트가 만들어지면 오른쪽 아래에서 **Open new project...** (새 프로젝트 열기)를 클릭합니다.
 
 프로젝트를 검사합니다. `Program.qs`라는 소스 파일이 보입니다. 이것은 콘솔에 메시지를 인쇄하는 간단한 작업을 정의하는 Q# 프로그램입니다.
 
 애플리케이션을 실행하려면
 
-1. **터미널** -> **새 터미널**을 클릭합니다.
+1. **터미널** -> **새 터미널** 을 클릭합니다.
 2. 터미널 프롬프트에 `dotnet run`을 입력합니다.
 3. 출력 창에 다음 텍스트가 표시되어야 합니다. `Hello quantum world!`
 
@@ -84,16 +83,16 @@ Q# `Hello World` 애플리케이션을 만들어서 Visual Studio 설치를 확�
 
 새 Q# 애플리케이션을 만들려면 다음을 수행합니다.
 
-1. Visual Studio를 열고 **파일** -> **새로 만들기** -> **프로젝트**를 클릭합니다.
-2. 검색 상자에 `Q#`을 입력하고 **Q# 애플리케이션**을 선택한 후 **다음**을 클릭합니다.
-3. 애플리케이션의 이름과 위치를 입력하고 **만들기**를 클릭합니다.
+1. Visual Studio를 열고 **파일** -> **새로 만들기** -> **프로젝트** 를 클릭합니다.
+2. 검색 상자에 `Q#`을 입력하고 **Q# 애플리케이션** 을 선택한 후 **다음** 을 클릭합니다.
+3. 애플리케이션의 이름과 위치를 입력하고 **만들기** 를 클릭합니다.
 
 
 프로젝트를 검사합니다. `Program.qs`라는 소스 파일이 보입니다. 이것은 콘솔에 메시지를 인쇄하는 간단한 작업을 정의하는 Q# 프로그램입니다.
 
 애플리케이션을 실행하려면
 
-1. **디버그** -> **디버그하지 않고 시작**을 선택합니다.
+1. **디버그** -> **디버그하지 않고 시작** 을 선택합니다.
 2. 콘솔 창에 `Hello quantum world!`가 출력된 것을 볼 수 있습니다.
 
 > [!NOTE]
@@ -102,12 +101,6 @@ Q# `Hello World` 애플리케이션을 만들어서 Visual Studio 설치를 확�
 ### <a name="other-editors-with-the-command-prompt"></a>[명령 프롬프트를 사용하는 다른 편집기](#tab/tabid-cmdline)
 
 Q# `Hello World` 애플리케이션을 만들어서 현재 설치된 환경을 확인합니다.
-
-1. 프로젝트 템플릿을 설치합니다.
-
-    ```dotnetcli
-    dotnet new -i Microsoft.Quantum.ProjectTemplates
-    ```
 
 1. 다음과 같이 새 애플리케이션을 만듭니다.
 
