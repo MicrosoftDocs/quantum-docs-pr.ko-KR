@@ -9,12 +9,12 @@ uid: microsoft.quantum.relnotes
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: fae603a81f8edc23ab8dc14277c5e3c4699f2cee
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: d38482be17e67f180441440ee8ccc7f1f64ebc9d
+ms.sourcegitcommit: fb75d8f30f1d91f644b2a594f46867eb5968cfda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691680"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94448347"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit 릴리스 정보
 
@@ -23,6 +23,12 @@ ms.locfileid: "92691680"
 설치 지침은[설치 가이드](xref:microsoft.quantum.install)를 참조하세요.
 
 업데이트 지침은 [업데이트 가이드](xref:microsoft.quantum.update)를 참조하세요.
+
+## <a name="version-01320111004"></a>버전 0.13.20111004
+
+*릴리스 날짜: 11 월 10 일, 2020*
+
+이 릴리스는 Visual Studio에서 파일에 대해 IntelliSense 기능을 사용 하지 않도록 설정 Q# 하 고, 프로젝트 파일이 없을 때 Visual Studio Code 합니다. 이렇게 하면 프로젝트에 새 파일을 추가한 후 IntelliSense 기능이 작동 하지 않을 수 있는 문제가 해결 Q# 됩니다 ( [qsharp-컴파일러 # 720](https://github.com/microsoft/qsharp-compiler/issues/720)참조).
 
 ## <a name="version-01320102604"></a>버전 0.13.20102604
 
@@ -366,7 +372,7 @@ Q#퀀텀 개발 키트 버전 0.5의 기존 프로젝트가 있는 경우 해당
 > * 0\.6 릴리스의 경우, Quantum Development Kit에 포함된 언어 서버는 여러 작업 영역을 지원하지 않습니다.
 > * Visual Studio Code에서 프로젝트 작업을 하려면 해당 프로젝트 자체와 참조된 모든 프로젝트가 포함된 루트 폴더를 엽니다.   
 > * Visual Studio에서 솔루션을 사용하려면 솔루션에 포함된 모든 프로젝트가 솔루션이 있는 폴더나 그 하위 폴더 중 하나에 있어야 합니다.  
-> * 0\.6 이상에 마이그레이션된 프로젝트와 이전 패키지 버전을 사용하는 프로젝트 간의 참조는 지원되지 **않습니다** .
+> * 0\.6 이상에 마이그레이션된 프로젝트와 이전 패키지 버전을 사용하는 프로젝트 간의 참조는 지원되지 **않습니다**.
 
 ## <a name="version-051904"></a>버전 0.5.1904
 
