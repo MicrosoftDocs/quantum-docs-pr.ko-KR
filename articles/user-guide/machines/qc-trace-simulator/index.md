@@ -1,14 +1,14 @@
 ---
 title: 퀀텀 추적 시뮬레이터 - Quantum Development Kit
-description: 'Microsoft 양자 컴퓨터 추적 시뮬레이터를 사용하여 클래식 코드를 디버그하고 :::no-loc(Q#)::: 프로그램의 리소스 요구 사항을 예측하는 방법을 알아봅니다.'
+description: 'Microsoft 양자 컴퓨터 추적 시뮬레이터를 사용하여 클래식 코드를 디버그하고 Q# 프로그램의 리소스 요구 사항을 예측하는 방법을 알아봅니다.'
 author: vadym-kl
 ms.author: vadym
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.intro
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: 2e2d9f8494d8709fba34123793cecce4011b609a
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: HT
@@ -25,7 +25,7 @@ ms.locfileid: "92690830"
 
 ## <a name="invoking-the-quantum-trace-simulator"></a><span data-ttu-id="93268-110">퀀텀 추적 시뮬레이터 호출</span><span class="sxs-lookup"><span data-stu-id="93268-110">Invoking the quantum trace simulator</span></span>
 
-<span data-ttu-id="93268-111">퀀텀 추적 시뮬레이터를 사용하여 모든 :::no-loc(Q#)::: 작업을 실행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="93268-111">You can use the quantum trace simulator to run any :::no-loc(Q#)::: operation.</span></span>
+<span data-ttu-id="93268-111">퀀텀 추적 시뮬레이터를 사용하여 모든 Q# 작업을 실행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="93268-111">You can use the quantum trace simulator to run any Q# operation.</span></span>
 
 <span data-ttu-id="93268-112">다른 대상 컴퓨터와 마찬가지로 먼저 `QCTraceSimulator` 클래스의 인스턴스를 만든 다음, 이를 작업의 `Run` 메서드의 첫 번째 매개 변수로 전달합니다.</span><span class="sxs-lookup"><span data-stu-id="93268-112">As with other target machines, you first create an instance of the `QCTraceSimulator` class and then pass it as the first parameter of an operation's `Run` method.</span></span>
 
@@ -94,7 +94,7 @@ operation TeleportQubit(source : Qubit, target : Qubit) : Unit {
 
 ## <a name="qctracesimulator-methods"></a><span data-ttu-id="93268-139">QCTraceSimulator 메서드</span><span class="sxs-lookup"><span data-stu-id="93268-139">QCTraceSimulator methods</span></span>
 
-<span data-ttu-id="93268-140">`QCTraceSimulator`에는 퀀텀 작업 중 추적된 메트릭의 값을 검색하는 몇 가지 기본 제공 메서드가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="93268-140">`QCTraceSimulator` has several built-in methods to retrieve the values of the metrics tracked during a quantum operation.</span></span> <span data-ttu-id="93268-141">[QCTraceSimulator.GetMetric](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.getmetric) 및 [QCTraceSimulator.ToCSV](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.tocsv) 메서드의 예는 [기본 작업 카운터](xref:microsoft.quantum.machines.qc-trace-simulator.primitive-counter), [깊이 카운터](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter) 및 [너비 카운터](xref:microsoft.quantum.machines.qc-trace-simulator.width-counter) 문서에서 찾을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="93268-141">Examples of the [QCTraceSimulator.GetMetric](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.getmetric) and the [QCTraceSimulator.ToCSV](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.tocsv) methods can be found in the [Primitive operations counter](xref:microsoft.quantum.machines.qc-trace-simulator.primitive-counter), [Depth counter](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter), and [Width counter](xref:microsoft.quantum.machines.qc-trace-simulator.width-counter) articles.</span></span> <span data-ttu-id="93268-142">사용 가능한 모든 메서드에 대한 자세한 내용은 :::no-loc(Q#)::: API 참조의 [QCTraceSimulator](xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="93268-142">For more information on all available methods, see [QCTraceSimulator](xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator) in the :::no-loc(Q#)::: API reference.</span></span>  
+<span data-ttu-id="93268-140">`QCTraceSimulator`에는 퀀텀 작업 중 추적된 메트릭의 값을 검색하는 몇 가지 기본 제공 메서드가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="93268-140">`QCTraceSimulator` has several built-in methods to retrieve the values of the metrics tracked during a quantum operation.</span></span> <span data-ttu-id="93268-141">[QCTraceSimulator.GetMetric](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.getmetric) 및 [QCTraceSimulator.ToCSV](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.tocsv) 메서드의 예는 [기본 작업 카운터](xref:microsoft.quantum.machines.qc-trace-simulator.primitive-counter), [깊이 카운터](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter) 및 [너비 카운터](xref:microsoft.quantum.machines.qc-trace-simulator.width-counter) 문서에서 찾을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="93268-141">Examples of the [QCTraceSimulator.GetMetric](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.getmetric) and the [QCTraceSimulator.ToCSV](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.tocsv) methods can be found in the [Primitive operations counter](xref:microsoft.quantum.machines.qc-trace-simulator.primitive-counter), [Depth counter](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter), and [Width counter](xref:microsoft.quantum.machines.qc-trace-simulator.width-counter) articles.</span></span> <span data-ttu-id="93268-142">사용 가능한 모든 메서드에 대한 자세한 내용은 Q# API 참조의 [QCTraceSimulator](xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="93268-142">For more information on all available methods, see [QCTraceSimulator](xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator) in the Q# API reference.</span></span>  
 
 ## <a name="see-also"></a><span data-ttu-id="93268-143">참고 항목</span><span class="sxs-lookup"><span data-stu-id="93268-143">See also</span></span>
 

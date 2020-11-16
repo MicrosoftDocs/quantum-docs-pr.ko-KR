@@ -1,14 +1,14 @@
 ---
 title: 큐비트 사용
-description: '에서의 작업에 대해 알아보기 :::no-loc(Q#):::'
+description: '에서의 작업에 대해 알아보기 Q#'
 author: gillenhaalb
 ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.qubits
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: 9a3d7e03016332a04ac9d1610428b6fcd546d1f6
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
@@ -20,7 +20,7 @@ ms.locfileid: "92691582"
 
 <span data-ttu-id="fb5e2-104">이는 퀀텀 컴퓨팅에서 정보의 기본적인 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="fb5e2-104">Qubits are the fundamental object of information in quantum computing.</span></span> <span data-ttu-id="fb5e2-105">표준에 대 한 일반적인 소개는 [퀀텀 컴퓨팅 이해](xref:microsoft.quantum.overview.understanding)및 수학적 표현에 대 한 자세한 내용은 [이 항목을 참조 하세요.](xref:microsoft.quantum.concepts.qubit)</span><span class="sxs-lookup"><span data-stu-id="fb5e2-105">For a general introduction to qubits, see [Understanding quantum computing](xref:microsoft.quantum.overview.understanding), and to dive deeper into their mathematical representation, see [The Qubit](xref:microsoft.quantum.concepts.qubit).</span></span> 
 
-<span data-ttu-id="fb5e2-106">이 문서에서는 프로그램에서을 사용 하 고이를 사용 하는 방법을 살펴봅니다 :::no-loc(Q#)::: .</span><span class="sxs-lookup"><span data-stu-id="fb5e2-106">This article explores how to use and work with qubits in a :::no-loc(Q#)::: program.</span></span> 
+<span data-ttu-id="fb5e2-106">이 문서에서는 프로그램에서을 사용 하 고이를 사용 하는 방법을 살펴봅니다 Q# .</span><span class="sxs-lookup"><span data-stu-id="fb5e2-106">This article explores how to use and work with qubits in a Q# program.</span></span> 
 
 > [!IMPORTANT]
 ><span data-ttu-id="fb5e2-107">이 문서에서 설명 하는 문은 함수 본문 내에서 유효 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="fb5e2-107">None of the statements discussed in this article are valid within the body of a function.</span></span> <span data-ttu-id="fb5e2-108">작업 내 에서만 유효 합니다.</span><span class="sxs-lookup"><span data-stu-id="fb5e2-108">They are only valid within operations.</span></span>
@@ -28,7 +28,7 @@ ms.locfileid: "92691582"
 ## <a name="allocating-qubits"></a><span data-ttu-id="fb5e2-109">비트 할당</span><span class="sxs-lookup"><span data-stu-id="fb5e2-109">Allocating Qubits</span></span>
 
 <span data-ttu-id="fb5e2-110">실제 리소스는 퀀텀 컴퓨터의 귀중 한 리소스 이기 때문에 컴파일러의 작업 중 일부는 최대한 효율적으로 사용 되 고 있는지 확인 하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="fb5e2-110">Because physical qubits are a precious resource in a quantum computer, part of the compiler's job is to make sure they are being used as efficiently as possible.</span></span>
-<span data-ttu-id="fb5e2-111">따라서 :::no-loc(Q#)::: 특정 문 블록 내에서 사용할 수 있도록이를 *할당* 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="fb5e2-111">As such, you need to tell :::no-loc(Q#)::: to *allocate* qubits for use within a particular statement block.</span></span>
+<span data-ttu-id="fb5e2-111">따라서 Q# 특정 문 블록 내에서 사용할 수 있도록이를 *할당* 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="fb5e2-111">As such, you need to tell Q# to *allocate* qubits for use within a particular statement block.</span></span>
 <span data-ttu-id="fb5e2-112">이를 단일의 비트 또는 *레지스터* 라고 하는 원하는 비트 배열로 할당할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fb5e2-112">You can allocate qubits as a single qubit, or as an array of qubits, known as a *register* .</span></span> 
 
 ### <a name="clean-qubits"></a><span data-ttu-id="fb5e2-113">정리 비트</span><span class="sxs-lookup"><span data-stu-id="fb5e2-113">Clean qubits</span></span>
@@ -85,17 +85,17 @@ borrowing ((auxiliary, register) = (Qubit(), Qubit[5])) {
 <span data-ttu-id="fb5e2-138">이러한 것이 충분 하지 않은 경우 요청을 완료 하기 위해 새 비트를 할당 합니다.</span><span class="sxs-lookup"><span data-stu-id="fb5e2-138">If there aren't enough such qubits, then it allocates new qubits to complete the request.</span></span>
 
 <span data-ttu-id="fb5e2-139">더티 비트의 알려진 사용 사례 중에는 incrementers의 구현이 매우 거의 필요 하지 않은 다중 제어 CNOT 게이트의 구현입니다.</span><span class="sxs-lookup"><span data-stu-id="fb5e2-139">Among the known use cases of dirty qubits are implementations of multi-controlled CNOT gates that require only very few qubits and implementation of incrementers.</span></span>
-<span data-ttu-id="fb5e2-140">에서 사용 하는 예제는 :::no-loc(Q#)::: 이 문서의 [Borrowing robits 예제](#borrowing-qubits-example) 또는 Toffoli 기반 모듈식 곱하기 (Haner, Roet2n er 및 [*svore 2017)를 사용 하는 + 2를 사용 하*](https://arxiv.org/abs/1611.07995) 는 백서를 참조 하십시오.</span><span class="sxs-lookup"><span data-stu-id="fb5e2-140">For an example of their use in :::no-loc(Q#):::, see [Borrowing Qubits Example](#borrowing-qubits-example) in this article, or the paper [*Factoring using 2n+2 qubits with Toffoli based modular multiplication*](https://arxiv.org/abs/1611.07995) (Haner, Roetteler, and Svore 2017) for an algorithm which utilizes borrowed qubits.</span></span>
+<span data-ttu-id="fb5e2-140">에서 사용 하는 예제는 Q# 이 문서의 [Borrowing robits 예제](#borrowing-qubits-example) 또는 Toffoli 기반 모듈식 곱하기 (Haner, Roet2n er 및 [*svore 2017)를 사용 하는 + 2를 사용 하*](https://arxiv.org/abs/1611.07995) 는 백서를 참조 하십시오.</span><span class="sxs-lookup"><span data-stu-id="fb5e2-140">For an example of their use in Q#, see [Borrowing Qubits Example](#borrowing-qubits-example) in this article, or the paper [*Factoring using 2n+2 qubits with Toffoli based modular multiplication*](https://arxiv.org/abs/1611.07995) (Haner, Roetteler, and Svore 2017) for an algorithm which utilizes borrowed qubits.</span></span>
 
 ## <a name="intrinsic-operations"></a><span data-ttu-id="fb5e2-141">내장 작업</span><span class="sxs-lookup"><span data-stu-id="fb5e2-141">Intrinsic Operations</span></span>
 
 <span data-ttu-id="fb5e2-142">할당 된 후에는 함수 및 작업에 원하는 비트를 전달할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fb5e2-142">Once allocated, you can pass a qubit to functions and operations.</span></span>
-<span data-ttu-id="fb5e2-143">어떤 경우에는 수행할 수 있는 작업은 :::no-loc(Q#)::: 모두 작업으로 정의 되므로 프로그램은 모든 작업을 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fb5e2-143">In some sense, this is all that a :::no-loc(Q#)::: program can do with a qubit, as the actions that can be taken are all defined as operations.</span></span>
+<span data-ttu-id="fb5e2-143">어떤 경우에는 수행할 수 있는 작업은 Q# 모두 작업으로 정의 되므로 프로그램은 모든 작업을 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fb5e2-143">In some sense, this is all that a Q# program can do with a qubit, as the actions that can be taken are all defined as operations.</span></span>
 
-<span data-ttu-id="fb5e2-144">이 문서에서는 사용자가 사용할 수 있는 몇 가지 유용한 작업을 설명 :::no-loc(Q#)::: 합니다.</span><span class="sxs-lookup"><span data-stu-id="fb5e2-144">This article discusses a few useful :::no-loc(Q#)::: operations that you can use to interact with qubits.</span></span>
+<span data-ttu-id="fb5e2-144">이 문서에서는 사용자가 사용할 수 있는 몇 가지 유용한 작업을 설명 Q# 합니다.</span><span class="sxs-lookup"><span data-stu-id="fb5e2-144">This article discusses a few useful Q# operations that you can use to interact with qubits.</span></span>
 <span data-ttu-id="fb5e2-145">이러한 항목 및 기타에 대 한 자세한 내용은 [내장 작업 및 함수](xref:microsoft.quantum.libraries.standard.prelude)를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="fb5e2-145">For more detail about these and others, see [Intrinsic Operations and Functions](xref:microsoft.quantum.libraries.standard.prelude).</span></span> 
 
-<span data-ttu-id="fb5e2-146">첫째, 단일 기능 비트 Pauli 연산자 $X $, $Y $ 및 $Z $는 내장 작업, 및로 표시 되며, :::no-loc(Q#)::: [`X`](xref:Microsoft.Quantum.Intrinsic.X) [`Y`](xref:Microsoft.Quantum.Intrinsic.Y) [`Z`](xref:Microsoft.Quantum.Intrinsic.Z) 각각 형식이 `(Qubit => Unit is Adj + Ctl)` 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fb5e2-146">First, the single-qubit Pauli operators $X$, $Y$, and $Z$ are represented in :::no-loc(Q#)::: by the intrinsic operations [`X`](xref:Microsoft.Quantum.Intrinsic.X), [`Y`](xref:Microsoft.Quantum.Intrinsic.Y), and [`Z`](xref:Microsoft.Quantum.Intrinsic.Z), each of which has type `(Qubit => Unit is Adj + Ctl)`.</span></span>
+<span data-ttu-id="fb5e2-146">첫째, 단일 기능 비트 Pauli 연산자 $X $, $Y $ 및 $Z $는 내장 작업, 및로 표시 되며, Q# [`X`](xref:Microsoft.Quantum.Intrinsic.X) [`Y`](xref:Microsoft.Quantum.Intrinsic.Y) [`Z`](xref:Microsoft.Quantum.Intrinsic.Z) 각각 형식이 `(Qubit => Unit is Adj + Ctl)` 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fb5e2-146">First, the single-qubit Pauli operators $X$, $Y$, and $Z$ are represented in Q# by the intrinsic operations [`X`](xref:Microsoft.Quantum.Intrinsic.X), [`Y`](xref:Microsoft.Quantum.Intrinsic.Y), and [`Z`](xref:Microsoft.Quantum.Intrinsic.Z), each of which has type `(Qubit => Unit is Adj + Ctl)`.</span></span>
 
 <span data-ttu-id="fb5e2-147">[내장 작업 및 함수](xref:microsoft.quantum.libraries.standard.prelude)에 설명 된 것 처럼, $X $ 등의 `X` 작업을 수행 하거나 게이트를 수행 하지 않는 것으로 간주 합니다.</span><span class="sxs-lookup"><span data-stu-id="fb5e2-147">As described in [Intrinsic Operations and Functions](xref:microsoft.quantum.libraries.standard.prelude), think of $X$ and hence of `X` as a bit-flip operation or NOT gate.</span></span>
 <span data-ttu-id="fb5e2-148">작업을 사용 하 여 `X` $ \ket{s_0 s_1 \dots .. s_n} $s $ 형식의 상태를 준비할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fb5e2-148">You can use the `X` operation to prepare states of the form $\ket{s_0 s_1 \dots s_n}$ for some classical bit string $s$:</span></span>
@@ -127,7 +127,7 @@ operation RunExample() : Unit {
 > [!TIP]
 > <span data-ttu-id="fb5e2-149">나중에이 작업을 작성 하는 보다 간단한 방법으로 수동 제어 흐름이 필요 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="fb5e2-149">Later, you will see more compact ways of writing this operation that do not require manual control flow.</span></span>
 
-<span data-ttu-id="fb5e2-150">\Ket transform $H $를 사용 하 여 $ \ket{+} = \left (\ket {0} + \ket {1} \left)/\left $ {2} 및 $ \ket {-} = \left (\ket Hadamard \left)/\left $와 같은 상태를 준비할 수도 있습니다 {0} {1} {2} .이는 :::no-loc(Q#)::: 내장 작업 ( [`H`](xref:Microsoft.Quantum.Intrinsic.H) => Unit is Adj + Ctl)에 의해 표현 됩니다.</span><span class="sxs-lookup"><span data-stu-id="fb5e2-150">You can also prepare states such as $\ket{+} = \left(\ket{0} + \ket{1}\right) / \sqrt{2}$ and $\ket{-} = \left(\ket{0} - \ket{1}\right) / \sqrt{2}$ by using the Hadamard transform $H$, which is represented in :::no-loc(Q#)::: by the intrinsic operation [`H`](xref:Microsoft.Quantum.Intrinsic.H) (also of type (Qubit => Unit is Adj + Ctl)\`):</span></span>
+<span data-ttu-id="fb5e2-150">\Ket transform $H $를 사용 하 여 $ \ket{+} = \left (\ket {0} + \ket {1} \left)/\left $ {2} 및 $ \ket {-} = \left (\ket Hadamard \left)/\left $와 같은 상태를 준비할 수도 있습니다 {0} {1} {2} .이는 Q# 내장 작업 ( [`H`](xref:Microsoft.Quantum.Intrinsic.H) => Unit is Adj + Ctl)에 의해 표현 됩니다.</span><span class="sxs-lookup"><span data-stu-id="fb5e2-150">You can also prepare states such as $\ket{+} = \left(\ket{0} + \ket{1}\right) / \sqrt{2}$ and $\ket{-} = \left(\ket{0} - \ket{1}\right) / \sqrt{2}$ by using the Hadamard transform $H$, which is represented in Q# by the intrinsic operation [`H`](xref:Microsoft.Quantum.Intrinsic.H) (also of type (Qubit => Unit is Adj + Ctl)\`):</span></span>
 
 ```qsharp
 operation PreparePlusMinusState(bitstring : Bool[], register : Qubit[]) : Unit {
@@ -245,4 +245,4 @@ is Adj + Ctl {
 
 ## <a name="next-steps"></a><span data-ttu-id="fb5e2-171">다음 단계</span><span class="sxs-lookup"><span data-stu-id="fb5e2-171">Next steps</span></span>
 
-<span data-ttu-id="fb5e2-172">의 [제어 흐름](xref:microsoft.quantum.guide.controlflow) 에 대해 알아봅니다 :::no-loc(Q#)::: .</span><span class="sxs-lookup"><span data-stu-id="fb5e2-172">Learn about [Control Flow](xref:microsoft.quantum.guide.controlflow) in :::no-loc(Q#):::.</span></span>
+<span data-ttu-id="fb5e2-172">의 [제어 흐름](xref:microsoft.quantum.guide.controlflow) 에 대해 알아봅니다 Q# .</span><span class="sxs-lookup"><span data-stu-id="fb5e2-172">Learn about [Control Flow](xref:microsoft.quantum.guide.controlflow) in Q#.</span></span>

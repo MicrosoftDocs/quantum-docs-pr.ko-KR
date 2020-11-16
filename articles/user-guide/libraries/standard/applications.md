@@ -1,5 +1,5 @@
 ---
-title: '표준 라이브러리의 응용 프로그램 :::no-loc(Q#):::'
+title: '표준 라이브러리의 응용 프로그램 Q#'
 description: 퀀텀 컴퓨팅 (Hamiltonian 시뮬레이션 및 Shor의 검색 알고리즘)의 두 가지 기본 응용 프로그램에 대해 알아봅니다.
 author: QuantumWriter
 uid: microsoft.quantum.libraries.applications
@@ -7,8 +7,8 @@ ms.author: martinro
 ms.date: 12/11/2017
 ms.topic: article
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: 5a29dcc74c638cb8ecbeb1f924d0e50d40d19f66
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT

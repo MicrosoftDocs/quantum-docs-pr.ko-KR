@@ -1,14 +1,14 @@
 ---
-title: '변수 :::no-loc(Q#):::'
-description: '에서 다른 변수를 사용 하는 방법을 알아봅니다. :::no-loc(Q#):::'
+title: '변수 Q#'
+description: '에서 다른 변수를 사용 하는 방법을 알아봅니다. Q#'
 author: gillenhaalb
 ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.variables
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: 67c71c09e004d77360902360fefc7a7752e4a829
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
@@ -16,16 +16,16 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/27/2020
 ms.locfileid: "92690941"
 ---
-# <a name="variables-in-no-locq"></a><span data-ttu-id="21ba8-103">변수 :::no-loc(Q#):::</span><span class="sxs-lookup"><span data-stu-id="21ba8-103">Variables in :::no-loc(Q#):::</span></span>
+# <a name="variables-in-no-locq"></a><span data-ttu-id="21ba8-103">변수 Q#</span><span class="sxs-lookup"><span data-stu-id="21ba8-103">Variables in Q#</span></span>
 
-<span data-ttu-id="21ba8-104">:::no-loc(Q#)::: 식에 바인딩된/할당 된 변경 가능한 기호 또는 *변수* 를 구분 합니다.</span><span class="sxs-lookup"><span data-stu-id="21ba8-104">:::no-loc(Q#)::: distinguishes between mutable and immutable symbols, or *variables* , which are bound/assigned to expressions.</span></span>
+<span data-ttu-id="21ba8-104">Q# 식에 바인딩된/할당 된 변경 가능한 기호 또는 *변수* 를 구분 합니다.</span><span class="sxs-lookup"><span data-stu-id="21ba8-104">Q# distinguishes between mutable and immutable symbols, or *variables* , which are bound/assigned to expressions.</span></span>
 <span data-ttu-id="21ba8-105">일반적으로 컴파일러에서 더 많은 최적화를 수행할 수 있기 때문에 변경할 수 없는 기호를 사용 하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="21ba8-105">In general, the use of immutable symbols is encouraged because it allows the compiler to perform more optimizations.</span></span>
 
 <span data-ttu-id="21ba8-106">바인딩의 왼쪽은 기호 튜플 및 식의 오른쪽으로 구성 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="21ba8-106">The left-hand-side of a binding consists of a symbol tuple and the right-hand side of an expression.</span></span>
 
 ## <a name="immutable-variables"></a><span data-ttu-id="21ba8-107">변경할 수 없는 변수</span><span class="sxs-lookup"><span data-stu-id="21ba8-107">Immutable Variables</span></span>
 
-<span data-ttu-id="21ba8-108">:::no-loc(Q#):::키워드를 사용 하 여 연산이 나 함수 내에서 다시 사용 하기 위해 변수에 모든 형식의 값을 할당할 수 있습니다 `let` .</span><span class="sxs-lookup"><span data-stu-id="21ba8-108">You can assign a value of any type in :::no-loc(Q#)::: to a variable for reuse within an operation or function by using the `let` keyword.</span></span> 
+<span data-ttu-id="21ba8-108">Q#키워드를 사용 하 여 연산이 나 함수 내에서 다시 사용 하기 위해 변수에 모든 형식의 값을 할당할 수 있습니다 `let` .</span><span class="sxs-lookup"><span data-stu-id="21ba8-108">You can assign a value of any type in Q# to a variable for reuse within an operation or function by using the `let` keyword.</span></span> 
 
 <span data-ttu-id="21ba8-109">변경할 수 없는 바인딩은 키워드로 구성 된 `let` 다음에는 기호 또는 기호 튜플, 등호 `=` , 기호를 바인딩할 식, 종료 세미콜론으로 구성 됩니다.</span><span class="sxs-lookup"><span data-stu-id="21ba8-109">An immutable binding consists of the keyword `let`, followed by a symbol or symbol tuple, an equals sign `=`, an expression to bind the symbol(s) to, and a terminating semicolon.</span></span>
 
@@ -110,7 +110,7 @@ function ComplexSum(reals : Double[], ims : Double[]) : Complex[] {
 }
 ```
 
-<span data-ttu-id="21ba8-134">배열의 경우 [`Microsoft.Quantum.Arrays`](xref:Microsoft.Quantum.Arrays) :::no-loc(Q#)::: 표준 라이브러리는 여러 일반적인 배열 초기화 및 조작 요구에 필요한 도구를 제공 하므로 첫 번째 위치의 배열 항목을 업데이트 하지 않아도 됩니다.</span><span class="sxs-lookup"><span data-stu-id="21ba8-134">In the case of arrays, [`Microsoft.Quantum.Arrays`](xref:Microsoft.Quantum.Arrays) in the :::no-loc(Q#)::: standard library provides the necessary tools for many common array initialization and manipulation needs, and thus helps avoid having to update array items in the first place.</span></span> 
+<span data-ttu-id="21ba8-134">배열의 경우 [`Microsoft.Quantum.Arrays`](xref:Microsoft.Quantum.Arrays) Q# 표준 라이브러리는 여러 일반적인 배열 초기화 및 조작 요구에 필요한 도구를 제공 하므로 첫 번째 위치의 배열 항목을 업데이트 하지 않아도 됩니다.</span><span class="sxs-lookup"><span data-stu-id="21ba8-134">In the case of arrays, [`Microsoft.Quantum.Arrays`](xref:Microsoft.Quantum.Arrays) in the Q# standard library provides the necessary tools for many common array initialization and manipulation needs, and thus helps avoid having to update array items in the first place.</span></span> 
 
 <span data-ttu-id="21ba8-135">필요에 따라 업데이트 및 재할당 문이 대안을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="21ba8-135">Update-and-reassign statements provide an alternative if needed:</span></span>
 
@@ -239,4 +239,4 @@ if (a == b) {
 
 ## <a name="next-steps"></a><span data-ttu-id="21ba8-158">다음 단계</span><span class="sxs-lookup"><span data-stu-id="21ba8-158">Next steps</span></span>
 
-<span data-ttu-id="21ba8-159">에서의 이상 [비트 작업](xref:microsoft.quantum.guide.qubits) 에 대해 알아봅니다 :::no-loc(Q#)::: .</span><span class="sxs-lookup"><span data-stu-id="21ba8-159">Learn about [Working With Qubits](xref:microsoft.quantum.guide.qubits) in :::no-loc(Q#):::.</span></span>
+<span data-ttu-id="21ba8-159">에서의 이상 [비트 작업](xref:microsoft.quantum.guide.qubits) 에 대해 알아봅니다 Q# .</span><span class="sxs-lookup"><span data-stu-id="21ba8-159">Learn about [Working With Qubits](xref:microsoft.quantum.guide.qubits) in Q#.</span></span>

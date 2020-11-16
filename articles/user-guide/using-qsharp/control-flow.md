@@ -1,5 +1,5 @@
 ---
-title: '제어 흐름 :::no-loc(Q#):::'
+title: '제어 흐름 Q#'
 description: 루프, 조건 등
 author: gillenhaalb
 ms.author: a-gibec
@@ -7,8 +7,8 @@ ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.controlflow
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: eca37202e5fe9b48dcfdec4eeb4ba6cafaac8723
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
@@ -16,7 +16,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/27/2020
 ms.locfileid: "92691084"
 ---
-# <a name="control-flow-in-no-locq"></a><span data-ttu-id="d4fdd-103">제어 흐름 :::no-loc(Q#):::</span><span class="sxs-lookup"><span data-stu-id="d4fdd-103">Control flow in :::no-loc(Q#):::</span></span>
+# <a name="control-flow-in-no-locq"></a><span data-ttu-id="d4fdd-103">제어 흐름 Q#</span><span class="sxs-lookup"><span data-stu-id="d4fdd-103">Control flow in Q#</span></span>
 
 <span data-ttu-id="d4fdd-104">작업 또는 함수 내에서 각 문은 다른 일반적인 명령적 언어와 비슷하게 순서 대로 실행 됩니다.</span><span class="sxs-lookup"><span data-stu-id="d4fdd-104">Within an operation or function, each statement runs in order, similar to other common imperative classical languages.</span></span>
 <span data-ttu-id="d4fdd-105">그러나 다음과 같은 세 가지 방법으로 제어 흐름을 수정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d4fdd-105">However, you can modify the flow of control in three distinct ways:</span></span>
@@ -108,12 +108,12 @@ for ((index, measured) in results) { // iterates over the tuple values in result
 
 ## <a name="repeat-until-success-loop"></a><span data-ttu-id="d4fdd-140">반복-성공 루프</span><span class="sxs-lookup"><span data-stu-id="d4fdd-140">Repeat-until-success loop</span></span>
 
-<span data-ttu-id="d4fdd-141">이 :::no-loc(Q#)::: 언어를 사용 하면 기존 제어 흐름을 사용 하 여 다양 한 비트를 측정 한 결과에 따라 달라 집니다.</span><span class="sxs-lookup"><span data-stu-id="d4fdd-141">The :::no-loc(Q#)::: language allows classical control flow to depend on the results of measuring qubits.</span></span>
+<span data-ttu-id="d4fdd-141">이 Q# 언어를 사용 하면 기존 제어 흐름을 사용 하 여 다양 한 비트를 측정 한 결과에 따라 달라 집니다.</span><span class="sxs-lookup"><span data-stu-id="d4fdd-141">The Q# language allows classical control flow to depend on the results of measuring qubits.</span></span>
 <span data-ttu-id="d4fdd-142">이 기능을 사용 하면 unitaries를 구현 하기 위한 계산 비용을 줄일 수 있는 강력한 확률 가젯을 구현할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d4fdd-142">This capability, in turn, enables implementing powerful probabilistic gadgets that can reduce the computational cost for implementing unitaries.</span></span>
-<span data-ttu-id="d4fdd-143">이에 대 한 예는의 RUS ( *-성공-성공* ) 패턴입니다 :::no-loc(Q#)::: .</span><span class="sxs-lookup"><span data-stu-id="d4fdd-143">Examples of this are the *repeat-until-success* (RUS) patterns in :::no-loc(Q#):::.</span></span>
+<span data-ttu-id="d4fdd-143">이에 대 한 예는의 RUS ( *-성공-성공* ) 패턴입니다 Q# .</span><span class="sxs-lookup"><span data-stu-id="d4fdd-143">Examples of this are the *repeat-until-success* (RUS) patterns in Q#.</span></span>
 <span data-ttu-id="d4fdd-144">이러한 RUS 패턴은 기본 게이트 측면에서 저렴 한 비용으로 *예상* 되는 확률 프로그램입니다. 발생 한 비용은 실제 실행 및 가능한 여러 branchings의 인터리빙에 따라 다릅니다.</span><span class="sxs-lookup"><span data-stu-id="d4fdd-144">These RUS patterns are probabilistic programs that have an *expected* low cost in terms of elementary gates; the incurred cost depends on the actual run and the interleaving of the multiple possible branchings.</span></span>
 
-<span data-ttu-id="d4fdd-145">성공-성공 (RUS) 패턴을 용이 하 게 하기 위해에서 :::no-loc(Q#)::: 구문을 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="d4fdd-145">To facilitate repeat-until-success (RUS) patterns, :::no-loc(Q#)::: supports the constructs</span></span>
+<span data-ttu-id="d4fdd-145">성공-성공 (RUS) 패턴을 용이 하 게 하기 위해에서 Q# 구문을 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="d4fdd-145">To facilitate repeat-until-success (RUS) patterns, Q# supports the constructs</span></span>
 
 ```qsharp
 repeat {
@@ -151,9 +151,9 @@ until (expression);
 
 ## <a name="while-loop"></a><span data-ttu-id="d4fdd-157">While 루프</span><span class="sxs-lookup"><span data-stu-id="d4fdd-157">While loop</span></span>
 
-<span data-ttu-id="d4fdd-158">반복-성공 패턴에는 퀀텀 별 connotation가 있을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d4fdd-158">Repeat-until-success patterns have a very quantum-specific connotation.</span></span> <span data-ttu-id="d4fdd-159">이러한 클래스는 특정 퀀텀 알고리즘 클래스에서 널리 사용 되므로의 전용 언어 구문 :::no-loc(Q#)::: 입니다.</span><span class="sxs-lookup"><span data-stu-id="d4fdd-159">They are widely used in particular classes of quantum algorithms - hence the dedicated language construct in :::no-loc(Q#):::.</span></span> <span data-ttu-id="d4fdd-160">그러나 루프는 조건에 따라 중단 되 고 해당 실행 길이는 컴파일 시간에 알 수 없는 루프는 퀀텀 런타임에서 특히 주의 해 서 처리 됩니다.</span><span class="sxs-lookup"><span data-stu-id="d4fdd-160">However, loops that break based on a condition and whose run length is thus unknown at compile-time, are handled with particular care in a quantum runtime.</span></span> <span data-ttu-id="d4fdd-161">그러나 이러한 루프는 기존 (비 퀀텀) 하드웨어에서 실행 되는 코드만 포함 하므로 함수 내에서 사용 하는 것은 문제가 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="d4fdd-161">However, their use within functions is unproblematic since these loops only contain code that runs on conventional (non-quantum) hardware.</span></span> 
+<span data-ttu-id="d4fdd-158">반복-성공 패턴에는 퀀텀 별 connotation가 있을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d4fdd-158">Repeat-until-success patterns have a very quantum-specific connotation.</span></span> <span data-ttu-id="d4fdd-159">이러한 클래스는 특정 퀀텀 알고리즘 클래스에서 널리 사용 되므로의 전용 언어 구문 Q# 입니다.</span><span class="sxs-lookup"><span data-stu-id="d4fdd-159">They are widely used in particular classes of quantum algorithms - hence the dedicated language construct in Q#.</span></span> <span data-ttu-id="d4fdd-160">그러나 루프는 조건에 따라 중단 되 고 해당 실행 길이는 컴파일 시간에 알 수 없는 루프는 퀀텀 런타임에서 특히 주의 해 서 처리 됩니다.</span><span class="sxs-lookup"><span data-stu-id="d4fdd-160">However, loops that break based on a condition and whose run length is thus unknown at compile-time, are handled with particular care in a quantum runtime.</span></span> <span data-ttu-id="d4fdd-161">그러나 이러한 루프는 기존 (비 퀀텀) 하드웨어에서 실행 되는 코드만 포함 하므로 함수 내에서 사용 하는 것은 문제가 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="d4fdd-161">However, their use within functions is unproblematic since these loops only contain code that runs on conventional (non-quantum) hardware.</span></span> 
 
-<span data-ttu-id="d4fdd-162">:::no-loc(Q#):::따라서는 함수 내 에서만 루프를 사용할 수 있도록 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="d4fdd-162">:::no-loc(Q#):::, therefore, supports to use of while loops within functions only.</span></span>
+<span data-ttu-id="d4fdd-162">Q#따라서는 함수 내 에서만 루프를 사용할 수 있도록 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="d4fdd-162">Q#, therefore, supports to use of while loops within functions only.</span></span>
 <span data-ttu-id="d4fdd-163">`while`문은 키워드 `while` , 괄호 안의 부울 식 및 문 블록으로 구성 됩니다.</span><span class="sxs-lookup"><span data-stu-id="d4fdd-163">A `while` statement consists of the keyword `while`, a Boolean expression in parentheses, and a statement block.</span></span>
 <span data-ttu-id="d4fdd-164">문 블록 (루프의 본문)은 조건이로 확인 되 면 실행 됩니다 `true` .</span><span class="sxs-lookup"><span data-stu-id="d4fdd-164">The statement block (the body of the loop) runs as long as the condition evaluates to `true`.</span></span>
 
@@ -183,7 +183,7 @@ operation ApplyWith<'T>(
 }
 ```
 
-<span data-ttu-id="d4fdd-169">:::no-loc(Q#)::: 는 앞의 변환을 구현 하는 활용 문을 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="d4fdd-169">:::no-loc(Q#)::: supports a conjugation statement that implements the preceding transformation.</span></span> <span data-ttu-id="d4fdd-170">이 문을 사용 하 여 `ApplyWith` 다음과 같은 방법으로 작업을 구현할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d4fdd-170">Using that statement, the operation `ApplyWith` can be implemented in the following way:</span></span>
+<span data-ttu-id="d4fdd-169">Q# 는 앞의 변환을 구현 하는 활용 문을 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="d4fdd-169">Q# supports a conjugation statement that implements the preceding transformation.</span></span> <span data-ttu-id="d4fdd-170">이 문을 사용 하 여 `ApplyWith` 다음과 같은 방법으로 작업을 구현할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d4fdd-170">Using that statement, the operation `ApplyWith` can be implemented in the following way:</span></span>
 
 ```qsharp
 operation ApplyWith<'T>(
@@ -249,7 +249,7 @@ fail $"Syndrome {syn} is incorrect";
 
 ### <a name="rus-pattern-for-single-qubit-rotation-about-an-irrational-axis"></a><span data-ttu-id="d4fdd-193">무리 축에 대 한 단일 비트 회전에 대 한 RUS 패턴</span><span class="sxs-lookup"><span data-stu-id="d4fdd-193">RUS pattern for single-qubit rotation about an irrational axis</span></span> 
 
-<span data-ttu-id="d4fdd-194">일반적인 사용 사례에서 다음 :::no-loc(Q#)::: 작업은 Bloch 구의 $ (I + 2i Z)/\sqrt $의 무리 축을 중심으로 회전을 구현 {5} 합니다.</span><span class="sxs-lookup"><span data-stu-id="d4fdd-194">In a typical use case, the following :::no-loc(Q#)::: operation implements a rotation around an irrational axis of $(I + 2i Z)/\sqrt{5}$ on the Bloch sphere.</span></span> <span data-ttu-id="d4fdd-195">구현에서는 알려진 RUS 패턴을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="d4fdd-195">The implementation uses a known RUS pattern:</span></span>
+<span data-ttu-id="d4fdd-194">일반적인 사용 사례에서 다음 Q# 작업은 Bloch 구의 $ (I + 2i Z)/\sqrt $의 무리 축을 중심으로 회전을 구현 {5} 합니다.</span><span class="sxs-lookup"><span data-stu-id="d4fdd-194">In a typical use case, the following Q# operation implements a rotation around an irrational axis of $(I + 2i Z)/\sqrt{5}$ on the Bloch sphere.</span></span> <span data-ttu-id="d4fdd-195">구현에서는 알려진 RUS 패턴을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="d4fdd-195">The implementation uses a known RUS pattern:</span></span>
 
 ```qsharp
 operation ApplyVRotationUsingRUS(qubit : Qubit) : Unit {
@@ -375,4 +375,4 @@ operation PrepareStateUsingRUS(target : Qubit) : Unit {
 
 ## <a name="next-steps"></a><span data-ttu-id="d4fdd-210">다음 단계</span><span class="sxs-lookup"><span data-stu-id="d4fdd-210">Next steps</span></span>
 
-<span data-ttu-id="d4fdd-211">에서 [테스트 및 디버깅](xref:microsoft.quantum.guide.testingdebugging) 에 대해 알아봅니다 :::no-loc(Q#)::: .</span><span class="sxs-lookup"><span data-stu-id="d4fdd-211">Learn about [Testing and Debugging](xref:microsoft.quantum.guide.testingdebugging) in :::no-loc(Q#):::.</span></span>
+<span data-ttu-id="d4fdd-211">에서 [테스트 및 디버깅](xref:microsoft.quantum.guide.testingdebugging) 에 대해 알아봅니다 Q# .</span><span class="sxs-lookup"><span data-stu-id="d4fdd-211">Learn about [Testing and Debugging](xref:microsoft.quantum.guide.testingdebugging) in Q#.</span></span>

@@ -1,14 +1,14 @@
 ---
-title: '표준 라이브러리의 데이터 구조 :::no-loc(Q#):::'
-description: 'Microsoft standard 라이브러리의 데이터 구조, oracles 및 동적 생성기에 대해 알아봅니다 :::no-loc(Q#)::: .'
+title: '표준 라이브러리의 데이터 구조 Q#'
+description: 'Microsoft standard 라이브러리의 데이터 구조, oracles 및 동적 생성기에 대해 알아봅니다 Q# .'
 author: QuantumWriter
 uid: microsoft.quantum.libraries.data-structures
 ms.author: martinro
 ms.date: 12/11/2017
 ms.topic: article
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: c3ce5d531618c269d15be3e4eb58ecbb597a022c
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
@@ -37,7 +37,7 @@ ApplyToEach(H, Snd(pair)); // No need to deconstruct to access the register.
 ### <a name="arrays"></a><span data-ttu-id="f8e79-111">배열</span><span class="sxs-lookup"><span data-stu-id="f8e79-111">Arrays</span></span> ###
 
 <span data-ttu-id="f8e79-112">라고에서는 배열을 조작 하기 위한 여러 함수를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="f8e79-112">The canon provides several functions for manipulating arrays.</span></span>
-<span data-ttu-id="f8e79-113">이러한 함수는 형식 매개 변수화 되므로 모든 형식의 배열과 함께 사용할 수 있습니다 :::no-loc(Q#)::: .</span><span class="sxs-lookup"><span data-stu-id="f8e79-113">These functions are type-parameterized, and thus can be used with arrays of any :::no-loc(Q#)::: type.</span></span>
+<span data-ttu-id="f8e79-113">이러한 함수는 형식 매개 변수화 되므로 모든 형식의 배열과 함께 사용할 수 있습니다 Q# .</span><span class="sxs-lookup"><span data-stu-id="f8e79-113">These functions are type-parameterized, and thus can be used with arrays of any Q# type.</span></span>
 <span data-ttu-id="f8e79-114">예를 들어, <xref:Microsoft.Quantum.Arrays.Reversed> 함수는 요소가 입력에서 역순으로 포함 된 새 배열을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="f8e79-114">For instance, the <xref:Microsoft.Quantum.Arrays.Reversed> function returns a new array whose elements are in reverse order from its input.</span></span>
 <span data-ttu-id="f8e79-115">이를 사용 하 여 작업을 호출할 때 퀀텀 레지스터가 표시 되는 방식을 변경할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f8e79-115">This can be used to change how a quantum register is represented when calling operations:</span></span>
 
@@ -75,7 +75,7 @@ ApplyToEach(
 <span data-ttu-id="f8e79-120">여기서 oracle 이라는 용어는 다양 한 비트 집합에 적용 되는 블랙 박스 퀀텀 서브루틴을 나타내며 단계로 서 답변을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="f8e79-120">Here the term oracle refers to a blackbox quantum subroutine that acts upon a set of qubits and returns the answer as a phase.</span></span>
 <span data-ttu-id="f8e79-121">이 서브루틴은 다른 몇 가지 매개 변수와 함께 oracle을 허용 하는 퀀텀 알고리즘에 대 한 입력으로, 일련의 퀀텀 작업을 적용 하 고이 퀀텀 서브루틴에 대 한 호출을 기본 게이트 처럼 처리 하는 것으로 간주할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f8e79-121">This subroutine often can be thought of as an input to a quantum algorithm that accepts the oracle, in addition to some other parameters, and applies a series of quantum operations and treating a call to this quantum subroutine as if it were a fundamental gate.</span></span>
 <span data-ttu-id="f8e79-122">분명히 큰 알고리즘을 실제로 구현 하기 위해 oracle을 기본 게이트로 구체적으로 분해 해야 하지만 oracle을 호출 하는 알고리즘을 이해 하기 위해 이러한 분해는 필요 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="f8e79-122">Obviously, in order to actually implement the larger algorithm a concrete decomposition of the oracle into fundamental gates must be provided but such a decomposition is not needed in order to understand the algorithm that calls the oracle.</span></span>
-<span data-ttu-id="f8e79-123">에서 :::no-loc(Q#)::: 이 추상화는 작업을 첫 번째 클래스 값으로 사용 하 여 표현 됩니다. 이러한 작업은 블랙 박스 방식으로 퀀텀 알고리즘의 구현에 전달 될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f8e79-123">In :::no-loc(Q#):::, this abstraction is represented by using that operations are first-class values, such that operations can be passed to implementations of quantum algorithms in a black-box manner.</span></span>
+<span data-ttu-id="f8e79-123">에서 Q# 이 추상화는 작업을 첫 번째 클래스 값으로 사용 하 여 표현 됩니다. 이러한 작업은 블랙 박스 방식으로 퀀텀 알고리즘의 구현에 전달 될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f8e79-123">In Q#, this abstraction is represented by using that operations are first-class values, such that operations can be passed to implementations of quantum algorithms in a black-box manner.</span></span>
 <span data-ttu-id="f8e79-124">또한 사용자 정의 형식은 형식이 안전한 방식으로 다양 한 oracle 표현의 레이블을 지정 하는 데 사용 되므로 실수로 다른 종류의 블랙 박스 작업을 conflate 어렵습니다.</span><span class="sxs-lookup"><span data-stu-id="f8e79-124">Moreover, user-defined types are used to label the different oracle representations in a type-safe way, making it difficult to accidentally conflate different kinds of black box operations.</span></span>
 
 <span data-ttu-id="f8e79-125">이러한 oracles는 [Grover의 검색](https://en.wikipedia.org/wiki/Grover%27s_algorithm) 및 퀀텀 시뮬레이션 알고리즘과 같은 유명한 예를 포함 하 여 다양 한 컨텍스트에서 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="f8e79-125">Such oracles appear in a number of different contexts, including famous examples such as [Grover's search](https://en.wikipedia.org/wiki/Grover%27s_algorithm) and quantum simulation algorithms.</span></span>
@@ -192,7 +192,7 @@ is Adj + Ctl {
 <span data-ttu-id="f8e79-197">이 컨텍스트에서는 단일 $R _z $ gate를 사용 하 여 모든 $t $에 대 한 $U (t) $를 시뮬레이션할 수 있으며,이 경우에는 불연속 쿼리로만 제한 하지 않아도 됩니다.</span><span class="sxs-lookup"><span data-stu-id="f8e79-197">In this context, we can simulate $U(t)$ for any $t$ using a single $R_z$ gate and as such do not need to restrict ourselves to only discrete queries to the unitary.</span></span>
 <span data-ttu-id="f8e79-198">이러한 연속 모델에는 또한 로그 함수의 분기 컷에 의해 마스킹 될 수 있는 단계 정보는 $t $의 비 비례하여 값에서 수행 되는 실험 결과에서 표시 될 수 있기 때문에 연속 쿼리를 사용 하는 단계 예측 프로세스에서 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f8e79-198">Such a continuous model also has the property that frequencies greater than $2\pi$ can be learned from phase estimation processes that use continuous queries because phase information that would otherwise be masked by the branch-cuts of the logarithm function can be revealed from the results of experiments performed on non-commensurate values of $t$.</span></span>
 <span data-ttu-id="f8e79-199">따라서 단계 예측 oracle의 이러한 연속 쿼리 모델과 같은 문제의 경우에는 적합 하지 않지만 불연속 쿼리 모델에도 적합 합니다.</span><span class="sxs-lookup"><span data-stu-id="f8e79-199">Thus for problems such as this continuous query models for the phase estimation oracle are not only appropriate but are also preferable to the discrete query model.</span></span>
-<span data-ttu-id="f8e79-200">이러한 이유로 :::no-loc(Q#)::: 두 쿼리 형태 모두에 대 한 기능을 제공 하 고 사용자에 게 제공 하 여 요구 사항 및 사용 가능한 oracle 유형에 맞는 단계 추정 알고리즘을 결정 합니다.</span><span class="sxs-lookup"><span data-stu-id="f8e79-200">For this reason :::no-loc(Q#)::: has functionality for both forms of queries and leave it to the user to decide upon a phase estimation algorithm to fit their needs and the type of oracle that is available.</span></span>
+<span data-ttu-id="f8e79-200">이러한 이유로 Q# 두 쿼리 형태 모두에 대 한 기능을 제공 하 고 사용자에 게 제공 하 여 요구 사항 및 사용 가능한 oracle 유형에 맞는 단계 추정 알고리즘을 결정 합니다.</span><span class="sxs-lookup"><span data-stu-id="f8e79-200">For this reason Q# has functionality for both forms of queries and leave it to the user to decide upon a phase estimation algorithm to fit their needs and the type of oracle that is available.</span></span>
 
 ## <a name="dynamical-generator-modeling"></a><span data-ttu-id="f8e79-201">동적 생성기 모델링</span><span class="sxs-lookup"><span data-stu-id="f8e79-201">Dynamical Generator Modeling</span></span> ##
 

@@ -1,14 +1,14 @@
 ---
-title: '표준 libararies 흐름 제어 :::no-loc(Q#):::'
-description: 'Microsoft 표준 라이브러리의 흐름 제어 작업 및 함수에 대해 알아봅니다 :::no-loc(Q#)::: .'
+title: '표준 libararies 흐름 제어 Q#'
+description: 'Microsoft 표준 라이브러리의 흐름 제어 작업 및 함수에 대해 알아봅니다 Q# .'
 author: QuantumWriter
 uid: microsoft.quantum.concepts.control-flow
 ms.author: martinro
 ms.date: 12/11/2017
 ms.topic: article
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: ad107f5c65a4bf368d12d30e4a72786f2076205c
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
@@ -19,7 +19,7 @@ ms.locfileid: "92690876"
 # <a name="higher-order-control-flow"></a><span data-ttu-id="d4b0f-103">Higher-Order 제어 흐름</span><span class="sxs-lookup"><span data-stu-id="d4b0f-103">Higher-Order Control Flow</span></span> #
 
 <span data-ttu-id="d4b0f-104">표준 라이브러리의 기본 역할 중 하나는 고급 알고리즘 아이디어를 [퀀텀 프로그램](https://en.wikipedia.org/wiki/Quantum_programming)으로 보다 쉽게 표현할 수 있도록 하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="d4b0f-104">One of the primary roles of the standard library is to make it easier to express high-level algorithmic ideas as [quantum programs](https://en.wikipedia.org/wiki/Quantum_programming).</span></span>
-<span data-ttu-id="d4b0f-105">따라서 :::no-loc(Q#)::: 라고은 함수 및 작업의 부분 응용 프로그램을 사용 하 여 구현 되는 다양 한 흐름 제어 구문을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="d4b0f-105">Thus, the :::no-loc(Q#)::: canon provides a variety of different flow control constructs, each implemented using partial application of functions and operations.</span></span>
+<span data-ttu-id="d4b0f-105">따라서 Q# 라고은 함수 및 작업의 부분 응용 프로그램을 사용 하 여 구현 되는 다양 한 흐름 제어 구문을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="d4b0f-105">Thus, the Q# canon provides a variety of different flow control constructs, each implemented using partial application of functions and operations.</span></span>
 <span data-ttu-id="d4b0f-106">한 예로 바로 이동 하 고, 등록에서 "CNOT 사다리"를 구성 하려는 경우를 고려해 보세요.</span><span class="sxs-lookup"><span data-stu-id="d4b0f-106">Jumping immediately into an example, consider the case in which one wants to construct a "CNOT ladder" on a register:</span></span>
 
 ```qsharp
@@ -50,7 +50,7 @@ ApplyToEachCA(CNOT, Zip(register[0..nQubits - 2], register[1..nQubits - 1]));
 
 <span data-ttu-id="d4b0f-111">라고에서 제공 하는 기본 추상화 중 하나가 반복입니다.</span><span class="sxs-lookup"><span data-stu-id="d4b0f-111">One of the primary abstractions provided by the canon is that of iteration.</span></span>
 <span data-ttu-id="d4b0f-112">예를 들어 단일의 단일 기능 $U $에 대해 \otimes U \otimes \cst\otimes U $ $U 형태의 단일 형식을 고려 합니다.</span><span class="sxs-lookup"><span data-stu-id="d4b0f-112">For instance, consider a unitary of the form $U \otimes U \otimes \cdots \otimes U$ for a single-qubit unitary $U$.</span></span>
-<span data-ttu-id="d4b0f-113">에서는를 :::no-loc(Q#)::: 사용 하 여 <xref:Microsoft.Quantum.Arrays.IndexRange> 이를 레지스터에 대 한 루프로 나타낼 수 있습니다 `for` .</span><span class="sxs-lookup"><span data-stu-id="d4b0f-113">In :::no-loc(Q#):::, we might use <xref:Microsoft.Quantum.Arrays.IndexRange> to represent this as as a `for` loop over a register:</span></span>
+<span data-ttu-id="d4b0f-113">에서는를 Q# 사용 하 여 <xref:Microsoft.Quantum.Arrays.IndexRange> 이를 레지스터에 대 한 루프로 나타낼 수 있습니다 `for` .</span><span class="sxs-lookup"><span data-stu-id="d4b0f-113">In Q#, we might use <xref:Microsoft.Quantum.Arrays.IndexRange> to represent this as as a `for` loop over a register:</span></span>
 
 ```qsharp
 /// # Summary
@@ -91,7 +91,7 @@ ApplyToEachCA(Adjoint U, register);
 > <span data-ttu-id="d4b0f-124">그런 다음 `ApplyToEach(Recover(code, recoveryFn, _), codeBlocks)` 는 `code` `recoveryFn` 각 블록에 독립적으로 오류 수정 코드 및 복구 기능을 적용 합니다.</span><span class="sxs-lookup"><span data-stu-id="d4b0f-124">Then `ApplyToEach(Recover(code, recoveryFn, _), codeBlocks)` will apply the error-correcting code `code` and recovery function `recoveryFn` to each block independently.</span></span>
 > <span data-ttu-id="d4b0f-125">이는 기존 입력에 대해서도 유지 `ApplyToEach(R(_, _, qubit), [(PauliX, PI() / 2.0); (PauliY(), PI() / 3.0]))` 됩니다 .는 $ \pi/$2에 $Y $3 $pi $X 대 한 회전을 적용 합니다.</span><span class="sxs-lookup"><span data-stu-id="d4b0f-125">This holds even for classical inputs: `ApplyToEach(R(_, _, qubit), [(PauliX, PI() / 2.0); (PauliY(), PI() / 3.0]))` will apply a rotation of $\pi / 2$ about $X$ followed by a rotation of $pi / 3$ about $Y$.</span></span>
 
-<span data-ttu-id="d4b0f-126">:::no-loc(Q#):::또한 라고은 함수형 프로그래밍에 익숙한 클래식 열거형 패턴에 대 한 지원을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="d4b0f-126">The :::no-loc(Q#)::: canon also provides support for classical enumeration patterns familiar to functional programming.</span></span>
+<span data-ttu-id="d4b0f-126">Q#또한 라고은 함수형 프로그래밍에 익숙한 클래식 열거형 패턴에 대 한 지원을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="d4b0f-126">The Q# canon also provides support for classical enumeration patterns familiar to functional programming.</span></span>
 <span data-ttu-id="d4b0f-127">예를 들어은 <xref:Microsoft.Quantum.Arrays.Fold> 목록에 대 한 함수를 줄이기 위해 (f (f (s \_ {\text{initial}}, x \_ 0), x \_ 1), \도트) $ 패턴 $f을 구현 합니다.</span><span class="sxs-lookup"><span data-stu-id="d4b0f-127">For instance, <xref:Microsoft.Quantum.Arrays.Fold> implements the pattern $f(f(f(s\_{\text{initial}}, x\_0), x\_1), \dots)$ for reducing a function over a list.</span></span>
 <span data-ttu-id="d4b0f-128">이 패턴은 합계, 제품, 최소, 최대 및 기타 해당 함수를 구현 하는 데 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d4b0f-128">This pattern can be used to implement sums, products, minima, maxima and other such functions:</span></span>
 
@@ -103,7 +103,7 @@ function Sum(xs : Int[]) {
 }
 ```
 
-<span data-ttu-id="d4b0f-129">마찬가지로 및와 같은 함수를 <xref:Microsoft.Quantum.Arrays.Mapped> <xref:Microsoft.Quantum.Arrays.MappedByIndex> 사용 하 여의 함수형 프로그래밍 개념을 표현할 수 있습니다 :::no-loc(Q#)::: .</span><span class="sxs-lookup"><span data-stu-id="d4b0f-129">Similarly, functions like <xref:Microsoft.Quantum.Arrays.Mapped> and <xref:Microsoft.Quantum.Arrays.MappedByIndex> can be used to express functional programming concepts in :::no-loc(Q#):::.</span></span>
+<span data-ttu-id="d4b0f-129">마찬가지로 및와 같은 함수를 <xref:Microsoft.Quantum.Arrays.Mapped> <xref:Microsoft.Quantum.Arrays.MappedByIndex> 사용 하 여의 함수형 프로그래밍 개념을 표현할 수 있습니다 Q# .</span><span class="sxs-lookup"><span data-stu-id="d4b0f-129">Similarly, functions like <xref:Microsoft.Quantum.Arrays.Mapped> and <xref:Microsoft.Quantum.Arrays.MappedByIndex> can be used to express functional programming concepts in Q#.</span></span>
 
 ## <a name="composing-operations-and-functions"></a><span data-ttu-id="d4b0f-130">작업 및 함수 작성</span><span class="sxs-lookup"><span data-stu-id="d4b0f-130">Composing Operations and Functions</span></span> ##
 
@@ -173,7 +173,7 @@ U(1, time / Float(nSteps), target);
 DecomposeIntoTimeStepsCA((2, U), 1);
 ```
 
-<span data-ttu-id="d4b0f-159">의 시그니처는 `DecomposeIntoTimeStepsCA` 의 일반적인 패턴을 따릅니다 :::no-loc(Q#)::: .이 패턴은 배열 또는 즉석에서 요소를 계산 하는 요소에 의해 지원 될 수 있는 컬렉션이 첫 번째 요소가 `Int` 해당 길이를 나타내는 값인 튜플로 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="d4b0f-159">The signature of `DecomposeIntoTimeStepsCA` follows a common pattern in :::no-loc(Q#):::, where collections that may be backed either by arrays or by something which compute elements on the fly are represented by tuples whose first elements are `Int` values indicating their lengths.</span></span>
+<span data-ttu-id="d4b0f-159">의 시그니처는 `DecomposeIntoTimeStepsCA` 의 일반적인 패턴을 따릅니다 Q# .이 패턴은 배열 또는 즉석에서 요소를 계산 하는 요소에 의해 지원 될 수 있는 컬렉션이 첫 번째 요소가 `Int` 해당 길이를 나타내는 값인 튜플로 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="d4b0f-159">The signature of `DecomposeIntoTimeStepsCA` follows a common pattern in Q#, where collections that may be backed either by arrays or by something which compute elements on the fly are represented by tuples whose first elements are `Int` values indicating their lengths.</span></span>
 
 ## <a name="putting-it-together-controlling-operations"></a><span data-ttu-id="d4b0f-160">함께 배치: 작업 제어</span><span class="sxs-lookup"><span data-stu-id="d4b0f-160">Putting it Together: Controlling Operations</span></span> ##
 
@@ -218,7 +218,7 @@ operation _ControlledOnBitString(
 
 <span data-ttu-id="d4b0f-177">이 시점에서이 작업을 수행할 수는 있지만 새 작업에서 함수를 적용 하는 것 처럼 "느낌" 하지 않습니다 `Controlled` .</span><span class="sxs-lookup"><span data-stu-id="d4b0f-177">At this point, we could be done, but it is somehow unsatisfying that our new operation does not "feel" like applying the `Controlled` functor.</span></span>
 <span data-ttu-id="d4b0f-178">따라서 oracle을 제어 하 고 새 작업을 반환 하는 함수를 작성 하 여 새로운 제어 흐름 개념의 정의를 완료 합니다.</span><span class="sxs-lookup"><span data-stu-id="d4b0f-178">Thus, we finish defining our new control flow concept by writing a function that takes the oracle to be controlled and that returns a new operation.</span></span>
-<span data-ttu-id="d4b0f-179">이러한 방식으로 새 함수는와 매우 유사 `Controlled` 합니다 .를 사용 하 여 강력한 새 제어 흐름 구문을 쉽게 정의 하 고 라고을 함께 사용할 수 있다는 것을 보여 주는 것입니다 :::no-loc(Q#)::: .</span><span class="sxs-lookup"><span data-stu-id="d4b0f-179">In this way, our new function looks and feels very much like `Controlled`, illustrating that we can easily define powerful new control flow constructs using :::no-loc(Q#)::: and the canon together:</span></span>
+<span data-ttu-id="d4b0f-179">이러한 방식으로 새 함수는와 매우 유사 `Controlled` 합니다 .를 사용 하 여 강력한 새 제어 흐름 구문을 쉽게 정의 하 고 라고을 함께 사용할 수 있다는 것을 보여 주는 것입니다 Q# .</span><span class="sxs-lookup"><span data-stu-id="d4b0f-179">In this way, our new function looks and feels very much like `Controlled`, illustrating that we can easily define powerful new control flow constructs using Q# and the canon together:</span></span>
 
 ```qsharp
 function ControlledOnBitString(

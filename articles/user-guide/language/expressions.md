@@ -1,14 +1,14 @@
 ---
-title: '식의 :::no-loc(Q#):::'
-description: '에서 상수, 변수, 연산자, 작업 및 함수를 식으로 지정, 참조 및 결합 하는 방법을 이해 :::no-loc(Q#)::: 합니다.'
+title: '식의 Q#'
+description: '에서 상수, 변수, 연산자, 작업 및 함수를 식으로 지정, 참조 및 결합 하는 방법을 이해 Q# 합니다.'
 author: gillenhaalb
 ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.expressions
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: e95a7cb9b74136ef9a6f51b4bbc32d1d93c43a0d
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
@@ -16,17 +16,17 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/27/2020
 ms.locfileid: "92691592"
 ---
-# <a name="expressions-in-no-locq"></a><span data-ttu-id="5526f-103">식의 :::no-loc(Q#):::</span><span class="sxs-lookup"><span data-stu-id="5526f-103">Expressions in :::no-loc(Q#):::</span></span>
+# <a name="expressions-in-no-locq"></a><span data-ttu-id="5526f-103">식의 Q#</span><span class="sxs-lookup"><span data-stu-id="5526f-103">Expressions in Q#</span></span>
 
 ## <a name="numeric-expressions"></a><span data-ttu-id="5526f-104">숫자 식</span><span class="sxs-lookup"><span data-stu-id="5526f-104">Numeric Expressions</span></span>
 
 <span data-ttu-id="5526f-105">숫자 식은, 또는 형식의 식 `Int` 입니다 `BigInt` `Double` .</span><span class="sxs-lookup"><span data-stu-id="5526f-105">Numeric expressions are expressions of type `Int`, `BigInt`, or `Double`.</span></span>
 <span data-ttu-id="5526f-106">즉, 정수 또는 부동 소수점 숫자 중 하나입니다.</span><span class="sxs-lookup"><span data-stu-id="5526f-106">That is, they are either integer or floating-point numbers.</span></span>
 
-<span data-ttu-id="5526f-107">`Int` 의 리터럴은 :::no-loc(Q#)::: 숫자 시퀀스로 작성 됩니다.</span><span class="sxs-lookup"><span data-stu-id="5526f-107">`Int` literals in :::no-loc(Q#)::: are written as a sequence of digits.</span></span>
+<span data-ttu-id="5526f-107">`Int` 의 리터럴은 Q# 숫자 시퀀스로 작성 됩니다.</span><span class="sxs-lookup"><span data-stu-id="5526f-107">`Int` literals in Q# are written as a sequence of digits.</span></span>
 <span data-ttu-id="5526f-108">16 진수 및 이진 정수는 `0x` 각각 및 접두사를 사용 하 여 지원 되 고 작성 됩니다 `0b` .</span><span class="sxs-lookup"><span data-stu-id="5526f-108">Hexadecimal and binary integers are supported and written with a `0x` and `0b` prefix, respectively.</span></span>
 
-<span data-ttu-id="5526f-109">`BigInt` 의 리터럴에 :::no-loc(Q#)::: 는 후행 `l` 또는 `L` 접미사가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5526f-109">`BigInt` literals in :::no-loc(Q#)::: have a trailing `l` or `L` suffix.</span></span>
+<span data-ttu-id="5526f-109">`BigInt` 의 리터럴에 Q# 는 후행 `l` 또는 `L` 접미사가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5526f-109">`BigInt` literals in Q# have a trailing `l` or `L` suffix.</span></span>
 <span data-ttu-id="5526f-110">16 진수 큰 정수는 "0x" 접두사를 사용 하 여 지원 되 고 작성 됩니다.</span><span class="sxs-lookup"><span data-stu-id="5526f-110">Hexadecimal big integers are supported and written with a "0x" prefix.</span></span>
 <span data-ttu-id="5526f-111">따라서 다음은 리터럴의 모든 유효한 사용입니다 `BigInt` .</span><span class="sxs-lookup"><span data-stu-id="5526f-111">Thus, the following are all valid uses of `BigInt` literals:</span></span>
 
@@ -36,7 +36,7 @@ let bigHex = 0x123456789abcdef123456789abcdefL;
 let bigOne = bigZero + 1L;
 ```
 
-<span data-ttu-id="5526f-112">`Double` 의 리터럴은 :::no-loc(Q#)::: 10 진수를 사용 하 여 작성 된 부동 소수점 숫자입니다.</span><span class="sxs-lookup"><span data-stu-id="5526f-112">`Double` literals in :::no-loc(Q#)::: are floating-point numbers written using decimal digits.</span></span>
+<span data-ttu-id="5526f-112">`Double` 의 리터럴은 Q# 10 진수를 사용 하 여 작성 된 부동 소수점 숫자입니다.</span><span class="sxs-lookup"><span data-stu-id="5526f-112">`Double` literals in Q# are floating-point numbers written using decimal digits.</span></span>
 <span data-ttu-id="5526f-113">소수점 또는 ' `.` e ' 또는 ' e '로 표시 된 지 수 부분 (음수 부호와 소수 자릿수가 유효 함)을 사용 하거나 사용 하지 않고 쓸 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5526f-113">They can be written with or without a decimal point, `.`, or an exponential part indicated with 'e' or 'E' (after which only a possible negative sign and decimal digits are valid).</span></span>
 <span data-ttu-id="5526f-114">유효한 `Double` 리터럴은 `0.0` , `1.2e5` , `1e-5` 입니다.</span><span class="sxs-lookup"><span data-stu-id="5526f-114">The following are valid `Double` literals: `0.0`, `1.2e5`, `1e-5`.</span></span>
 
@@ -87,7 +87,7 @@ let bigOne = bigZero + 1L;
 <span data-ttu-id="5526f-157">동일한 기본 형식의 두 식이 지정 된 경우 `==` 및 `!=` 이항 연산자를 사용 하 여 식을 생성할 수 있습니다 `Bool` .</span><span class="sxs-lookup"><span data-stu-id="5526f-157">Given any two expressions of the same primitive type, the `==` and `!=` binary operators may be used to construct a `Bool` expression.</span></span>
 <span data-ttu-id="5526f-158">식은 두 식이 같으면 true이 고, 그렇지 않으면 false입니다.</span><span class="sxs-lookup"><span data-stu-id="5526f-158">The expression is true if the two expressions are equal and false if not.</span></span>
 
-<span data-ttu-id="5526f-159">사용자 정의 형식의 값을 비교할 수 없습니다. 래핑 해제 된 값만 비교할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5526f-159">Values of user-defined types may not be compared, only their unwrapped values can be compared.</span></span> <span data-ttu-id="5526f-160">예를 들어 "래핑 해제" 연산자 `!` ( [의 :::no-loc(Q#)::: 형식 ](xref:microsoft.quantum.guide.types#access-anonymous-items-with-the-unwrap-operator)에 자세히 설명 되어 있음)를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="5526f-160">For example, using the "unwrap" operator `!` (explained in detail at [Types in :::no-loc(Q#):::](xref:microsoft.quantum.guide.types#access-anonymous-items-with-the-unwrap-operator)),</span></span>
+<span data-ttu-id="5526f-159">사용자 정의 형식의 값을 비교할 수 없습니다. 래핑 해제 된 값만 비교할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5526f-159">Values of user-defined types may not be compared, only their unwrapped values can be compared.</span></span> <span data-ttu-id="5526f-160">예를 들어 "래핑 해제" 연산자 `!` ( [의 Q# 형식 ](xref:microsoft.quantum.guide.types#access-anonymous-items-with-the-unwrap-operator)에 자세히 설명 되어 있음)를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="5526f-160">For example, using the "unwrap" operator `!` (explained in detail at [Types in Q#](xref:microsoft.quantum.guide.types#access-anonymous-items-with-the-unwrap-operator)),</span></span>
 
 ```qsharp
 newtype WrappedInt = Int;     // Yes, this is a contrived example
@@ -111,9 +111,9 @@ let t = x == y;               // This will cause a compiler error.
 
 ## <a name="string-expressions"></a><span data-ttu-id="5526f-169">문자열 식</span><span class="sxs-lookup"><span data-stu-id="5526f-169">String expressions</span></span>
 
-<span data-ttu-id="5526f-170">:::no-loc(Q#):::`fail`문 ( [제어 흐름](xref:microsoft.quantum.guide.controlflow#fail-statement)에 설명) 및 표준 함수에 문자열을 사용할 수 있습니다 [`Message`](xref:Microsoft.Quantum.Intrinsic.Message) .</span><span class="sxs-lookup"><span data-stu-id="5526f-170">:::no-loc(Q#)::: allows strings to be used in the `fail` statement (explained in [Control Flow](xref:microsoft.quantum.guide.controlflow#fail-statement)) and in the [`Message`](xref:Microsoft.Quantum.Intrinsic.Message) standard function.</span></span> <span data-ttu-id="5526f-171">후자의 특정 동작은 사용 된 시뮬레이터에 따라 다르며 일반적으로 프로그램 중 호출 될 때 호스트 콘솔에 메시지를 기록 합니다 :::no-loc(Q#)::: .</span><span class="sxs-lookup"><span data-stu-id="5526f-171">The specific behavior of the latter depends on the simulator used but typically writes a message to the host console when called during a :::no-loc(Q#)::: program.</span></span>
+<span data-ttu-id="5526f-170">Q#`fail`문 ( [제어 흐름](xref:microsoft.quantum.guide.controlflow#fail-statement)에 설명) 및 표준 함수에 문자열을 사용할 수 있습니다 [`Message`](xref:Microsoft.Quantum.Intrinsic.Message) .</span><span class="sxs-lookup"><span data-stu-id="5526f-170">Q# allows strings to be used in the `fail` statement (explained in [Control Flow](xref:microsoft.quantum.guide.controlflow#fail-statement)) and in the [`Message`](xref:Microsoft.Quantum.Intrinsic.Message) standard function.</span></span> <span data-ttu-id="5526f-171">후자의 특정 동작은 사용 된 시뮬레이터에 따라 다르며 일반적으로 프로그램 중 호출 될 때 호스트 콘솔에 메시지를 기록 합니다 Q# .</span><span class="sxs-lookup"><span data-stu-id="5526f-171">The specific behavior of the latter depends on the simulator used but typically writes a message to the host console when called during a Q# program.</span></span>
 
-<span data-ttu-id="5526f-172">의 문자열 :::no-loc(Q#)::: 은 리터럴 또는 보간된 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="5526f-172">Strings in :::no-loc(Q#)::: are either literals or interpolated strings.</span></span>
+<span data-ttu-id="5526f-172">의 문자열 Q# 은 리터럴 또는 보간된 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="5526f-172">Strings in Q# are either literals or interpolated strings.</span></span>
 
 <span data-ttu-id="5526f-173">문자열 리터럴은 대부분의 언어에서 간단한 문자열 리터럴과 유사 합니다. 큰따옴표 안의 유니코드 문자 시퀀스 `" "` 입니다.</span><span class="sxs-lookup"><span data-stu-id="5526f-173">String literals are similar to simple string literals in most languages: a sequence of Unicode characters enclosed in double-quotes `" "`.</span></span>
 <span data-ttu-id="5526f-174">문자열 내에서 백슬래시 문자를 사용 하 여 `\` 큰따옴표 문자 ()를 이스케이프 하거나, 줄 바꿈 문자 () `\"` `\n` , 캐리지 리턴 ( `\r` ) 또는 탭 ()을 삽입 `\t` 합니다.</span><span class="sxs-lookup"><span data-stu-id="5526f-174">Inside of a string, use the backslash character `\` to escape a double-quote character (`\"`), or to insert a new-line ( `\n` ), a carriage return (`\r`), or a tab (`\t`).</span></span>
@@ -124,21 +124,21 @@ let t = x == y;               // This will cause a compiler error.
 ```
 ### <a name="interpolated-strings"></a><span data-ttu-id="5526f-176">보간된 문자열</span><span class="sxs-lookup"><span data-stu-id="5526f-176">Interpolated strings</span></span>
 
-<span data-ttu-id="5526f-177">:::no-loc(Q#):::문자열 보간 구문은 c # 구문의 하위 집합입니다.</span><span class="sxs-lookup"><span data-stu-id="5526f-177">The :::no-loc(Q#)::: syntax for string interpolations is a subset of the C# syntax.</span></span> <span data-ttu-id="5526f-178">다음은 관련 된 주요 사항입니다 :::no-loc(Q#)::: .</span><span class="sxs-lookup"><span data-stu-id="5526f-178">Following are the key points as they pertain to :::no-loc(Q#)::::</span></span>
+<span data-ttu-id="5526f-177">Q#문자열 보간 구문은 c # 구문의 하위 집합입니다.</span><span class="sxs-lookup"><span data-stu-id="5526f-177">The Q# syntax for string interpolations is a subset of the C# syntax.</span></span> <span data-ttu-id="5526f-178">다음은 관련 된 주요 사항입니다 Q# .</span><span class="sxs-lookup"><span data-stu-id="5526f-178">Following are the key points as they pertain to Q#:</span></span>
 
 * <span data-ttu-id="5526f-179">문자열 리터럴을 보간된 문자열로 식별하려면 `$` 기호를 사용하여 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="5526f-179">To identify a string literal as an interpolated string, prepend it with the `$` symbol.</span></span> <span data-ttu-id="5526f-180">`$` `"` 문자열 리터럴을 시작 하는와 사이에 공백이 없을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5526f-180">There can be no white space between the `$` and the `"` that starts a string literal.</span></span>
 
-* <span data-ttu-id="5526f-181">다음은 함수를 사용 하 여 [`Message`](xref:Microsoft.Quantum.Intrinsic.Message) 다른 식과 함께 측정 결과를 콘솔에 쓰는 기본적인 예입니다 :::no-loc(Q#)::: .</span><span class="sxs-lookup"><span data-stu-id="5526f-181">The following is a basic example using the [`Message`](xref:Microsoft.Quantum.Intrinsic.Message) function to write the result of a measurement to the console, alongside other :::no-loc(Q#)::: expressions.</span></span>
+* <span data-ttu-id="5526f-181">다음은 함수를 사용 하 여 [`Message`](xref:Microsoft.Quantum.Intrinsic.Message) 다른 식과 함께 측정 결과를 콘솔에 쓰는 기본적인 예입니다 Q# .</span><span class="sxs-lookup"><span data-stu-id="5526f-181">The following is a basic example using the [`Message`](xref:Microsoft.Quantum.Intrinsic.Message) function to write the result of a measurement to the console, alongside other Q# expressions.</span></span>
 
 ```qsharp
-    let num = 8;       // some :::no-loc(Q#)::: expression
+    let num = 8;       // some Q# expression
     let res = M(q);
     Message($"Number: {num}, Result: {res}");
 ```
 
-* <span data-ttu-id="5526f-182">모든 유효한 :::no-loc(Q#)::: 식은 보간된 문자열에 나타날 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5526f-182">Any valid :::no-loc(Q#)::: expression may appear in an interpolated string.</span></span>
+* <span data-ttu-id="5526f-182">모든 유효한 Q# 식은 보간된 문자열에 나타날 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5526f-182">Any valid Q# expression may appear in an interpolated string.</span></span>
 
-* <span data-ttu-id="5526f-183">보간된 문자열 내부의 식은 :::no-loc(Q#)::: c # 구문이 아니라 구문을 따릅니다.</span><span class="sxs-lookup"><span data-stu-id="5526f-183">Expressions inside of an interpolated string follow :::no-loc(Q#)::: syntax, not C# syntax.</span></span> <span data-ttu-id="5526f-184">가장 주목할 만한 차이점은 :::no-loc(Q#)::: 가 축 자 (여러 줄) 보간된 문자열을 지원 하지 않는다는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="5526f-184">The most notable distinction is that :::no-loc(Q#)::: does not support verbatim (multi-line) interpolated strings.</span></span>
+* <span data-ttu-id="5526f-183">보간된 문자열 내부의 식은 Q# c # 구문이 아니라 구문을 따릅니다.</span><span class="sxs-lookup"><span data-stu-id="5526f-183">Expressions inside of an interpolated string follow Q# syntax, not C# syntax.</span></span> <span data-ttu-id="5526f-184">가장 주목할 만한 차이점은 Q# 가 축 자 (여러 줄) 보간된 문자열을 지원 하지 않는다는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="5526f-184">The most notable distinction is that Q# does not support verbatim (multi-line) interpolated strings.</span></span>
 
 <span data-ttu-id="5526f-185">C # 구문에 대 한 자세한 내용은 [*보간된 문자열*](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/interpolated-strings)을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="5526f-185">For more details about the C# syntax, see [*Interpolated Strings*](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/interpolated-strings).</span></span>
 
@@ -198,7 +198,7 @@ let t = x == y;               // This will cause a compiler error.
 
 ## <a name="unwrap-expressions"></a><span data-ttu-id="5526f-221">래핑 해제 식</span><span class="sxs-lookup"><span data-stu-id="5526f-221">Unwrap Expressions</span></span>
 
-<span data-ttu-id="5526f-222">에서 :::no-loc(Q#)::: 래핑 해제 연산자는 후행 느낌표 `!` 입니다.</span><span class="sxs-lookup"><span data-stu-id="5526f-222">In :::no-loc(Q#):::, the unwrap operator is a trailing exclamation mark `!`.</span></span>
+<span data-ttu-id="5526f-222">에서 Q# 래핑 해제 연산자는 후행 느낌표 `!` 입니다.</span><span class="sxs-lookup"><span data-stu-id="5526f-222">In Q#, the unwrap operator is a trailing exclamation mark `!`.</span></span>
 <span data-ttu-id="5526f-223">예를 들어 `IntPair` 이 기본 형식의 사용자 정의 형식이 `(Int, Int)` 고 `s` 값이 인 변수인 경우는 `IntPair(2, 3)` `s!` `(2, 3)` 입니다.</span><span class="sxs-lookup"><span data-stu-id="5526f-223">For example, if `IntPair` is a user-defined type with the underlying type `(Int, Int)` and `s` is a variable with value `IntPair(2, 3)`, then `s!` is `(2, 3)`.</span></span>
 
 <span data-ttu-id="5526f-224">다른 사용자 정의 형식과 관련 하 여 정의 된 사용자 정의 형식의 경우 래핑 해제 연산자를 반복할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5526f-224">For user-defined types defined in terms of other user-defined types, you can repeat the unwrap operator.</span></span> <span data-ttu-id="5526f-225">예를 들어는 `s!!` 이중 래핑 해제 된 값을 `s` 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="5526f-225">For example, `s!!` indicates the doubly-unwrapped value of `s`.</span></span>
@@ -271,7 +271,7 @@ let g = Foo(arg)!;      // Syntax error
 (a + b)[13]
 ```
 
-<span data-ttu-id="5526f-261">의 모든 배열은 :::no-loc(Q#)::: 0부터 시작 합니다.</span><span class="sxs-lookup"><span data-stu-id="5526f-261">All arrays in :::no-loc(Q#)::: are zero-based.</span></span>
+<span data-ttu-id="5526f-261">의 모든 배열은 Q# 0부터 시작 합니다.</span><span class="sxs-lookup"><span data-stu-id="5526f-261">All arrays in Q# are zero-based.</span></span>
 <span data-ttu-id="5526f-262">즉, 배열의 첫 번째 요소는 `a` 항상 `a[0]` 입니다.</span><span class="sxs-lookup"><span data-stu-id="5526f-262">That is, the first element of an array `a` is always `a[0]`.</span></span>
 
 
@@ -319,7 +319,7 @@ let slice10 = arr[...];       // slice10 is [1,2,3,4,5,6];
 
 ### <a name="copy-and-update-expressions"></a><span data-ttu-id="5526f-281">복사 및 업데이트 식</span><span class="sxs-lookup"><span data-stu-id="5526f-281">Copy-and-Update Expressions</span></span>
 
-<span data-ttu-id="5526f-282">모든 형식이 값 형식이 기 때문에 (예를 :::no-loc(Q#)::: 들어, 모든 형식이 특별 한 역할을 수행 하는 경우) 값이 기호에 바인딩되거나 기호가 바인딩 되었을 때 공식적으로 "copy"가 생성 됩니다.</span><span class="sxs-lookup"><span data-stu-id="5526f-282">Since all :::no-loc(Q#)::: types are value types (with the qubits taking a somewhat special role), formally a "copy" is created when a value is bound to a symbol or when a symbol is rebound.</span></span> <span data-ttu-id="5526f-283">즉,의 동작은 :::no-loc(Q#)::: 할당 연산자를 사용 하 여 복사본을 만든 경우와 동일 합니다.</span><span class="sxs-lookup"><span data-stu-id="5526f-283">That is to say, the behavior of :::no-loc(Q#)::: is the same as if a copy were created using an assignment operator.</span></span> 
+<span data-ttu-id="5526f-282">모든 형식이 값 형식이 기 때문에 (예를 Q# 들어, 모든 형식이 특별 한 역할을 수행 하는 경우) 값이 기호에 바인딩되거나 기호가 바인딩 되었을 때 공식적으로 "copy"가 생성 됩니다.</span><span class="sxs-lookup"><span data-stu-id="5526f-282">Since all Q# types are value types (with the qubits taking a somewhat special role), formally a "copy" is created when a value is bound to a symbol or when a symbol is rebound.</span></span> <span data-ttu-id="5526f-283">즉,의 동작은 Q# 할당 연산자를 사용 하 여 복사본을 만든 경우와 동일 합니다.</span><span class="sxs-lookup"><span data-stu-id="5526f-283">That is to say, the behavior of Q# is the same as if a copy were created using an assignment operator.</span></span> 
 
 <span data-ttu-id="5526f-284">물론 실제로는 관련 된 부분만 필요에 따라 다시 생성 됩니다.</span><span class="sxs-lookup"><span data-stu-id="5526f-284">Of course, in practice, only the relevant pieces are recreated as needed.</span></span> <span data-ttu-id="5526f-285">이는 배열 항목을 업데이트할 수 없기 때문에 배열을 복사 하는 방법에 영향을 줍니다.</span><span class="sxs-lookup"><span data-stu-id="5526f-285">This affects how you copy arrays because it is not possible to update array items.</span></span> <span data-ttu-id="5526f-286">기존 배열을 수정 하려면 *복사 및 업데이트* 메커니즘을 활용 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="5526f-286">To modify an existing array requires leveraging a *copy-and-update* mechanism.</span></span>
 
@@ -382,7 +382,7 @@ for (i in 1..N) {
 
 <span data-ttu-id="5526f-317">예를 들어는 `[[Op1], [Op2]]` 호환 되지 않는 두 배열 형식 및의 배열을 만들려고 하기 때문에 현재 오류를 발생 `(Qubit[] => Unit is Adj)[]` 시킵니다 `(Qubit[] => Unit is Ctl)[]` .</span><span class="sxs-lookup"><span data-stu-id="5526f-317">For example, `[[Op1], [Op2]]` would currently raise an error because it attempts to create an array of the two incompatible array types `(Qubit[] => Unit is Adj)[]` and `(Qubit[] => Unit is Ctl)[]`.</span></span>
 
-<span data-ttu-id="5526f-318">Callables에 대 한 자세한 내용은이 페이지의 [호출 가능 식](#callable-expressions) 또는 [의 :::no-loc(Q#)::: 작업 및 함수 ](xref:microsoft.quantum.guide.operationsfunctions)를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="5526f-318">For more information on callables, see [Callable expressions](#callable-expressions)  on this page or [Operations and Functions in :::no-loc(Q#):::](xref:microsoft.quantum.guide.operationsfunctions).</span></span>
+<span data-ttu-id="5526f-318">Callables에 대 한 자세한 내용은이 페이지의 [호출 가능 식](#callable-expressions) 또는 [의 Q# 작업 및 함수 ](xref:microsoft.quantum.guide.operationsfunctions)를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="5526f-318">For more information on callables, see [Callable expressions](#callable-expressions)  on this page or [Operations and Functions in Q#](xref:microsoft.quantum.guide.operationsfunctions).</span></span>
 
 ## <a name="conditional-expressions"></a><span data-ttu-id="5526f-319">조건 식</span><span class="sxs-lookup"><span data-stu-id="5526f-319">Conditional Expressions</span></span>
 
@@ -447,7 +447,7 @@ SomeOtherFun(Fun);           // This also causes a compilation error.
 ```
 
 <span data-ttu-id="5526f-353">[형식 매개 변수가 있는](xref:microsoft.quantum.guide.operationsfunctions#generic-type-parameterized-callables) 호출 가능 식을 호출 하는 경우 `< >` 호출 가능 식 뒤에 꺾쇠 괄호 내에서 실제 형식 매개 변수를 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5526f-353">When invoking a [type-parameterized](xref:microsoft.quantum.guide.operationsfunctions#generic-type-parameterized-callables) callable, you can specify the actual type parameters within angle brackets `< >` after the callable expression.</span></span>
-<span data-ttu-id="5526f-354">컴파일러가 실제 형식을 유추 하므로 일반적으로이 작업은 필요 하지 않습니다 :::no-loc(Q#)::: .</span><span class="sxs-lookup"><span data-stu-id="5526f-354">This action is usually unnecessary as the :::no-loc(Q#)::: compiler infers the actual types.</span></span>
+<span data-ttu-id="5526f-354">컴파일러가 실제 형식을 유추 하므로 일반적으로이 작업은 필요 하지 않습니다 Q# .</span><span class="sxs-lookup"><span data-stu-id="5526f-354">This action is usually unnecessary as the Q# compiler infers the actual types.</span></span>
 <span data-ttu-id="5526f-355">그러나 형식 매개 변수가 있는 인수를 지정 하지 *않은 상태로 두면* [부분 응용 프로그램](xref:microsoft.quantum.guide.operationsfunctions#partial-application) 에 필요 합니다.</span><span class="sxs-lookup"><span data-stu-id="5526f-355">However, it *is* required for [partial application](xref:microsoft.quantum.guide.operationsfunctions#partial-application) if a type-parameterized argument is left unspecified.</span></span>
 <span data-ttu-id="5526f-356">또한 다른 함수를 사용 하는 작업을 호출할 수 있도록 지 원하는 경우에도 유용 합니다.</span><span class="sxs-lookup"><span data-stu-id="5526f-356">It is also useful when passing operations with different functor supports to a callable.</span></span>
 
@@ -470,7 +470,7 @@ let combinedOp = Func<(Qubit[] => Unit), (Qubit[] => Unit is Adj)>(Op1, Op2, Op3
 
 * <span data-ttu-id="5526f-363">연산 및 함수 호출에 대 한 괄호는 모든 연산자 앞에, 배열 인덱싱 및 함수 후에도 바인딩됩니다.</span><span class="sxs-lookup"><span data-stu-id="5526f-363">Parentheses for operation and function invocation also bind before any operator but after array indexing and functors.</span></span>
 
-<span data-ttu-id="5526f-364">:::no-loc(Q#)::: 우선 순위 순으로 최고에서 최저 순으로 연산자.</span><span class="sxs-lookup"><span data-stu-id="5526f-364">:::no-loc(Q#)::: operators in order of precedence, from highest to lowest:</span></span>
+<span data-ttu-id="5526f-364">Q# 우선 순위 순으로 최고에서 최저 순으로 연산자.</span><span class="sxs-lookup"><span data-stu-id="5526f-364">Q# operators in order of precedence, from highest to lowest:</span></span>
 
 <span data-ttu-id="5526f-365">연산자</span><span class="sxs-lookup"><span data-stu-id="5526f-365">Operator</span></span> | <span data-ttu-id="5526f-366">숫자</span><span class="sxs-lookup"><span data-stu-id="5526f-366">Arity</span></span> | <span data-ttu-id="5526f-367">Description</span><span class="sxs-lookup"><span data-stu-id="5526f-367">Description</span></span> | <span data-ttu-id="5526f-368">피연산자 형식</span><span class="sxs-lookup"><span data-stu-id="5526f-368">Operand Types</span></span>
 ---------|----------|---------|---------------
@@ -493,4 +493,4 @@ let combinedOp = Func<(Qubit[] => Unit), (Qubit[] => Unit is Adj)>(Op1, Op2, Op3
 
 ## <a name="next-steps"></a><span data-ttu-id="5526f-423">다음 단계</span><span class="sxs-lookup"><span data-stu-id="5526f-423">Next steps</span></span>
 
-<span data-ttu-id="5526f-424">이제에서 식 작업을 수행할 수 있으므로의 :::no-loc(Q#)::: [작업 및 :::no-loc(Q#)::: 함수로](xref:microsoft.quantum.guide.operationsfunctions) 이동 하 여 작업 및 함수를 정의 하 고 호출 하는 방법을 알아보세요.</span><span class="sxs-lookup"><span data-stu-id="5526f-424">Now that you can work with expressions in :::no-loc(Q#):::, move on to [Operations and Functions in :::no-loc(Q#):::](xref:microsoft.quantum.guide.operationsfunctions) to learn how to define and call operations and functions.</span></span>
+<span data-ttu-id="5526f-424">이제에서 식 작업을 수행할 수 있으므로의 Q# [작업 및 Q# 함수로](xref:microsoft.quantum.guide.operationsfunctions) 이동 하 여 작업 및 함수를 정의 하 고 호출 하는 방법을 알아보세요.</span><span class="sxs-lookup"><span data-stu-id="5526f-424">Now that you can work with expressions in Q#, move on to [Operations and Functions in Q#](xref:microsoft.quantum.guide.operationsfunctions) to learn how to define and call operations and functions.</span></span>

@@ -1,14 +1,14 @@
 ---
-title: '의 형식 :::no-loc(Q#):::'
-description: '프로그래밍 언어에 사용 되는 다양 한 형식에 대해 알아봅니다 :::no-loc(Q#)::: .'
+title: '의 형식 Q#'
+description: '프로그래밍 언어에 사용 되는 다양 한 형식에 대해 알아봅니다 Q# .'
 author: gillenhaalb
 ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.types
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: 349138984387cc564cca18ea09c7bf161524b0b6
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
@@ -16,21 +16,21 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/27/2020
 ms.locfileid: "92691615"
 ---
-# <a name="types-in-no-locq"></a><span data-ttu-id="c29cc-103">의 형식 :::no-loc(Q#):::</span><span class="sxs-lookup"><span data-stu-id="c29cc-103">Types in :::no-loc(Q#):::</span></span>
+# <a name="types-in-no-locq"></a><span data-ttu-id="c29cc-103">의 형식 Q#</span><span class="sxs-lookup"><span data-stu-id="c29cc-103">Types in Q#</span></span>
 
-<span data-ttu-id="c29cc-104">이 문서에서는 :::no-loc(Q#)::: 유형 모델과 유형을 지정 하 고 작업 하는 구문에 대해 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="c29cc-104">This article describes the :::no-loc(Q#)::: type model and the syntax for specifying and working with types.</span></span> <span data-ttu-id="c29cc-105">이러한 형식의 식을 만들고 작동 하는 방법에 대 한 자세한 내용은 [형식 식](xref:microsoft.quantum.guide.expressions)을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="c29cc-105">For details on how to create and operate on expressions of these types, see [Type Expressions](xref:microsoft.quantum.guide.expressions).</span></span>
+<span data-ttu-id="c29cc-104">이 문서에서는 Q# 유형 모델과 유형을 지정 하 고 작업 하는 구문에 대해 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="c29cc-104">This article describes the Q# type model and the syntax for specifying and working with types.</span></span> <span data-ttu-id="c29cc-105">이러한 형식의 식을 만들고 작동 하는 방법에 대 한 자세한 내용은 [형식 식](xref:microsoft.quantum.guide.expressions)을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="c29cc-105">For details on how to create and operate on expressions of these types, see [Type Expressions](xref:microsoft.quantum.guide.expressions).</span></span>
 
-<span data-ttu-id="c29cc-106">는 강력한 형식의 :::no-loc(Q#)::: 언어로, *strongly-typed* 이러한 형식을 신중히 사용 하면 컴파일러가 :::no-loc(Q#)::: 컴파일 시간에 프로그램에 대 한 강력한 보증을 제공 하는 데 도움이 될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c29cc-106">We note that :::no-loc(Q#)::: is a *strongly-typed* language, such that careful use of these types can help the compiler to provide strong guarantees about :::no-loc(Q#)::: programs at compile time.</span></span>
-<span data-ttu-id="c29cc-107">가장 강력한 보증을 제공 하기 위해의 형식 간 변환은 :::no-loc(Q#)::: 해당 변환을 표현 하는 함수에 대 한 호출을 명시적으로 사용 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="c29cc-107">To provide the strongest guarantees possible, conversions between types in :::no-loc(Q#)::: must be explicit using calls to functions which express that conversion.</span></span> 
-<span data-ttu-id="c29cc-108">:::no-loc(Q#)::: 는 네임 스페이스의 일부분으로 다양 한 함수를 제공 합니다 <xref:Microsoft.Quantum.Convert> .</span><span class="sxs-lookup"><span data-stu-id="c29cc-108">:::no-loc(Q#)::: provides a variety of such functions as a part of the <xref:Microsoft.Quantum.Convert> namespace.</span></span>
+<span data-ttu-id="c29cc-106">는 강력한 형식의 Q# 언어로, *strongly-typed* 이러한 형식을 신중히 사용 하면 컴파일러가 Q# 컴파일 시간에 프로그램에 대 한 강력한 보증을 제공 하는 데 도움이 될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c29cc-106">We note that Q# is a *strongly-typed* language, such that careful use of these types can help the compiler to provide strong guarantees about Q# programs at compile time.</span></span>
+<span data-ttu-id="c29cc-107">가장 강력한 보증을 제공 하기 위해의 형식 간 변환은 Q# 해당 변환을 표현 하는 함수에 대 한 호출을 명시적으로 사용 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="c29cc-107">To provide the strongest guarantees possible, conversions between types in Q# must be explicit using calls to functions which express that conversion.</span></span> 
+<span data-ttu-id="c29cc-108">Q# 는 네임 스페이스의 일부분으로 다양 한 함수를 제공 합니다 <xref:Microsoft.Quantum.Convert> .</span><span class="sxs-lookup"><span data-stu-id="c29cc-108">Q# provides a variety of such functions as a part of the <xref:Microsoft.Quantum.Convert> namespace.</span></span>
 <span data-ttu-id="c29cc-109">반면에 호환 되는 형식에 대 한 upcasts은 암시적으로 수행 됩니다.</span><span class="sxs-lookup"><span data-stu-id="c29cc-109">Upcasts to compatible types, on the other hand, happen implicitly.</span></span> 
 
-<span data-ttu-id="c29cc-110">:::no-loc(Q#)::: 는 직접 사용 되는 기본 형식과 다른 형식에서 새 형식을 생성 하는 다양 한 방법을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="c29cc-110">:::no-loc(Q#)::: provides both primitive types, which are used directly, and a variety of ways to produce new types from other types.</span></span>
+<span data-ttu-id="c29cc-110">Q# 는 직접 사용 되는 기본 형식과 다른 형식에서 새 형식을 생성 하는 다양 한 방법을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="c29cc-110">Q# provides both primitive types, which are used directly, and a variety of ways to produce new types from other types.</span></span>
 <span data-ttu-id="c29cc-111">이 문서의 나머지 부분에서 각각에 대해 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="c29cc-111">We describe each in the rest of this article.</span></span>
 
 ## <a name="primitive-types"></a><span data-ttu-id="c29cc-112">기본 유형</span><span class="sxs-lookup"><span data-stu-id="c29cc-112">Primitive Types</span></span>
 
-<span data-ttu-id="c29cc-113">이 :::no-loc(Q#)::: 언어는 프로그램에서 직접 사용할 수 있는 다음과 같은 *기본 형식을* 제공 합니다 :::no-loc(Q#)::: .</span><span class="sxs-lookup"><span data-stu-id="c29cc-113">The :::no-loc(Q#)::: language provides the following *primitive types* , all of which you can use directly in :::no-loc(Q#)::: programs.</span></span> <span data-ttu-id="c29cc-114">이러한 기본 형식을 사용 하 여 새 형식을 생성할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c29cc-114">You can also use these primitive types to construct new types.</span></span>
+<span data-ttu-id="c29cc-113">이 Q# 언어는 프로그램에서 직접 사용할 수 있는 다음과 같은 *기본 형식을* 제공 합니다 Q# .</span><span class="sxs-lookup"><span data-stu-id="c29cc-113">The Q# language provides the following *primitive types* , all of which you can use directly in Q# programs.</span></span> <span data-ttu-id="c29cc-114">이러한 기본 형식을 사용 하 여 새 형식을 생성할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c29cc-114">You can also use these primitive types to construct new types.</span></span>
 
 - <span data-ttu-id="c29cc-115">`Int`형식은 64 비트 부호 있는 정수를 나타냅니다 (예:,, `2` ) `107` `-5` .</span><span class="sxs-lookup"><span data-stu-id="c29cc-115">The `Int` type represents a 64-bit signed integer, for example, `2`, `107`, `-5`.</span></span>
 - <span data-ttu-id="c29cc-116">`BigInt`형식은 임의 크기의 부호 있는 정수를 나타냅니다 (예:,,) `2L` `107L` `-5L` .</span><span class="sxs-lookup"><span data-stu-id="c29cc-116">The `BigInt` type represents a signed integer of arbitrary size, for example, `2L`, `107L`, `-5L`.</span></span>
@@ -44,7 +44,7 @@ ms.locfileid: "92691615"
 - <span data-ttu-id="c29cc-123">`String`형식은 사용자가 만든 후 불투명 한 유니코드 문자 시퀀스입니다.</span><span class="sxs-lookup"><span data-stu-id="c29cc-123">The `String` type is a sequence of Unicode characters that is opaque to the user once created.</span></span>
   <span data-ttu-id="c29cc-124">`string`오류 또는 진단 이벤트의 경우 유형을 사용 하 여 메시지를 클래식 호스트에 보고 합니다.</span><span class="sxs-lookup"><span data-stu-id="c29cc-124">Use the `string` type to report messages to a classical host in the case of an error or diagnostic event.</span></span>
 - <span data-ttu-id="c29cc-125">형식에는 `Unit` 하나의 값만 사용할 수 있습니다 `()` .</span><span class="sxs-lookup"><span data-stu-id="c29cc-125">The `Unit` type can have only one value, `()`.</span></span> 
-  <span data-ttu-id="c29cc-126">이 형식을 사용 하 여 :::no-loc(Q#)::: 함수 또는 연산이 정보를 반환 하지 않음을 나타낼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c29cc-126">Use this type to indicate that a :::no-loc(Q#)::: function or operation returns no information.</span></span> 
+  <span data-ttu-id="c29cc-126">이 형식을 사용 하 여 Q# 함수 또는 연산이 정보를 반환 하지 않음을 나타낼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c29cc-126">Use this type to indicate that a Q# function or operation returns no information.</span></span> 
 - <span data-ttu-id="c29cc-127">`Qubit`형식은 퀀텀 비트 또는 비트를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="c29cc-127">The `Qubit` type represents a quantum bit or qubit.</span></span>
    <span data-ttu-id="c29cc-128">`Qubit`는 사용자에 게 불투명 합니다.</span><span class="sxs-lookup"><span data-stu-id="c29cc-128">`Qubit`s are opaque to the user.</span></span> <span data-ttu-id="c29cc-129">다른 작업에 전달 하는 것 외에도 가능한 유일한 작업은 id (같음)를 테스트 하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="c29cc-129">The only operation possible with them, other than passing them to another operation, is to test for identity (equality).</span></span>
    <span data-ttu-id="c29cc-130">궁극적으로 `Qubit` 는 퀀텀 프로세서 (또는 퀀텀 시뮬레이터)에서 내장 명령을 호출 하 여에 대 한 작업을 구현 합니다.</span><span class="sxs-lookup"><span data-stu-id="c29cc-130">Ultimately, you implement actions on `Qubit`s by calling intrinsic instructions on a quantum processor (or a quantum simulator).</span></span>
@@ -55,19 +55,19 @@ ms.locfileid: "92691615"
    <span data-ttu-id="c29cc-135">이는 두 가지 가능한 값인 및 (형식의 상수인)를 사용 하는 열거형 형식입니다 `One` `Zero` `Result` .</span><span class="sxs-lookup"><span data-stu-id="c29cc-135">It is an enumerated type with two possible values: `One` and `Zero`, which are constants of type `Result`.</span></span>
    <span data-ttu-id="c29cc-136">`Zero` + 1 eigenvalue를 측정 했음을 나타냅니다. `One` -1 eigenvalue를 측정 했음을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="c29cc-136">`Zero` indicates that the +1 eigenvalue was measured; `One` indicates the -1 eigenvalue was measured.</span></span>
 
-<span data-ttu-id="c29cc-137">,,,,,, 및 상수는 `true` `false` `PauliI` `PauliX` `PauliY` `PauliZ` `One` `Zero` 모두에서 예약 된 기호 :::no-loc(Q#)::: 입니다.</span><span class="sxs-lookup"><span data-stu-id="c29cc-137">The constants `true`, `false`, `PauliI`, `PauliX`, `PauliY`, `PauliZ`, `One`, and `Zero` are all reserved symbols in :::no-loc(Q#):::.</span></span>
+<span data-ttu-id="c29cc-137">,,,,,, 및 상수는 `true` `false` `PauliI` `PauliX` `PauliY` `PauliZ` `One` `Zero` 모두에서 예약 된 기호 Q# 입니다.</span><span class="sxs-lookup"><span data-stu-id="c29cc-137">The constants `true`, `false`, `PauliI`, `PauliX`, `PauliY`, `PauliZ`, `One`, and `Zero` are all reserved symbols in Q#.</span></span>
 
 ## <a name="array-types"></a><span data-ttu-id="c29cc-138">배열 유형</span><span class="sxs-lookup"><span data-stu-id="c29cc-138">Array Types</span></span>
 
-* <span data-ttu-id="c29cc-139">유효한 형식의 경우 :::no-loc(Q#)::: 해당 형식의 값 배열을 나타내는 형식이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c29cc-139">For any valid :::no-loc(Q#)::: type, there is a type that represents an array of values of that type.</span></span>
+* <span data-ttu-id="c29cc-139">유효한 형식의 경우 Q# 해당 형식의 값 배열을 나타내는 형식이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c29cc-139">For any valid Q# type, there is a type that represents an array of values of that type.</span></span>
     <span data-ttu-id="c29cc-140">예를 들어 `Qubit[]` 및는 `(Bool, Pauli)[]` `Qubit` 값과 튜플 값의 배열을 나타냅니다 `(Bool, Pauli)` .</span><span class="sxs-lookup"><span data-stu-id="c29cc-140">For example, `Qubit[]` and `(Bool, Pauli)[]` represent arrays of `Qubit` values and `(Bool, Pauli)` tuple values.</span></span>
 
 * <span data-ttu-id="c29cc-141">배열의 배열도 유효 합니다.</span><span class="sxs-lookup"><span data-stu-id="c29cc-141">An array of arrays is also valid.</span></span> <span data-ttu-id="c29cc-142">앞의 예제에서 확장 하면 배열의 배열이 표시 `(Bool, Pauli)` 됩니다 `(Bool, Pauli)[][]` .</span><span class="sxs-lookup"><span data-stu-id="c29cc-142">Expanding on the previous example, an array of `(Bool, Pauli)` arrays is denoted `(Bool, Pauli)[][]`.</span></span>
 
 > [!NOTE] 
-> <span data-ttu-id="c29cc-143">이 예제는 `(Bool, Pauli)[][]` 사각형 2 차원 배열이 아니라 잠재적으로 가변 배열 배열을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="c29cc-143">This example, `(Bool, Pauli)[][]`, represents a potentially jagged array of arrays and not a rectangular two-dimensional array.</span></span> <span data-ttu-id="c29cc-144">:::no-loc(Q#)::: 는 사각형 다차원 배열을 지원 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="c29cc-144">:::no-loc(Q#)::: does not support rectangular multi-dimensional arrays.</span></span>
+> <span data-ttu-id="c29cc-143">이 예제는 `(Bool, Pauli)[][]` 사각형 2 차원 배열이 아니라 잠재적으로 가변 배열 배열을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="c29cc-143">This example, `(Bool, Pauli)[][]`, represents a potentially jagged array of arrays and not a rectangular two-dimensional array.</span></span> <span data-ttu-id="c29cc-144">Q# 는 사각형 다차원 배열을 지원 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="c29cc-144">Q# does not support rectangular multi-dimensional arrays.</span></span>
 
-* <span data-ttu-id="c29cc-145">:::no-loc(Q#):::에서와 같이 배열의 요소 주위에 대괄호를 사용 하 여 소스 코드에서 배열 값을 쓸 수 있습니다 `[PauliI, PauliX, PauliY, PauliZ]` .</span><span class="sxs-lookup"><span data-stu-id="c29cc-145">An array value can be written in :::no-loc(Q#)::: source code by using square brackets around the elements of an array, as in `[PauliI, PauliX, PauliY, PauliZ]`.</span></span>
+* <span data-ttu-id="c29cc-145">Q#에서와 같이 배열의 요소 주위에 대괄호를 사용 하 여 소스 코드에서 배열 값을 쓸 수 있습니다 `[PauliI, PauliX, PauliY, PauliZ]` .</span><span class="sxs-lookup"><span data-stu-id="c29cc-145">An array value can be written in Q# source code by using square brackets around the elements of an array, as in `[PauliI, PauliX, PauliY, PauliZ]`.</span></span>
 <span data-ttu-id="c29cc-146">배열의 모든 항목에 대 한 공통 기본 형식은 배열 리터럴의 형식을 결정 합니다.</span><span class="sxs-lookup"><span data-stu-id="c29cc-146">The common base type of all items in the array determines the type of an array literal.</span></span> <span data-ttu-id="c29cc-147">따라서 공통 된 기본 형식이 없는 요소를 사용 하 여 배열을 생성 하면 오류가 발생 합니다.</span><span class="sxs-lookup"><span data-stu-id="c29cc-147">Hence, constructing an array with elements that have no common base type raises an error.</span></span>  
 <span data-ttu-id="c29cc-148">예제는 [callables 배열](xref:microsoft.quantum.guide.expressions#arrays-of-callables)을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="c29cc-148">For an example, see [arrays of callables](xref:microsoft.quantum.guide.expressions#arrays-of-callables).</span></span>
 
@@ -95,7 +95,7 @@ ms.locfileid: "92691615"
 
 ## <a name="tuple-types"></a><span data-ttu-id="c29cc-155">튜플 형식</span><span class="sxs-lookup"><span data-stu-id="c29cc-155">Tuple Types</span></span>
 
-<span data-ttu-id="c29cc-156">튜플은 :::no-loc(Q#)::: 단일 값으로 함께 값을 수집 하 여 보다 쉽게 전달할 수 있도록 하는 데 사용 되는 강력한 개념입니다.</span><span class="sxs-lookup"><span data-stu-id="c29cc-156">Tuples are a powerful concept used throughout :::no-loc(Q#)::: to collect values together into a single value, making it easier to pass them around.</span></span>
+<span data-ttu-id="c29cc-156">튜플은 Q# 단일 값으로 함께 값을 수집 하 여 보다 쉽게 전달할 수 있도록 하는 데 사용 되는 강력한 개념입니다.</span><span class="sxs-lookup"><span data-stu-id="c29cc-156">Tuples are a powerful concept used throughout Q# to collect values together into a single value, making it easier to pass them around.</span></span>
 <span data-ttu-id="c29cc-157">특히 튜플 표기법을 사용 하면 모든 작업 및 호출 가능에서 정확히 하나의 입력을 사용 하 고 정확히 하나의 출력을 반환 하도록 표현할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c29cc-157">In particular, using tuple notation, you can express that every operation and callable takes exactly one input and returns exactly one output.</span></span>
 
 * <span data-ttu-id="c29cc-158">0 개 이상의 다른 형식 `T0` ,, ...,이 지정 된 경우 `T1` `Tn` 새  *튜플 형식을* 로 나타낼 수 `(T0, T1, ..., Tn)` 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c29cc-158">Given zero or more different types `T0`, `T1`, ..., `Tn`, you can denote a new  *tuple type* as `(T0, T1, ..., Tn)`.</span></span>
@@ -106,17 +106,17 @@ ms.locfileid: "92691615"
 <span data-ttu-id="c29cc-162">예를 들어 `(3, false)` 는 튜플 유형인 형식의 튜플입니다 `(Int, Bool)` .</span><span class="sxs-lookup"><span data-stu-id="c29cc-162">For example, `(3, false)` is a tuple whose type is the tuple type `(Int, Bool)`.</span></span>
 <span data-ttu-id="c29cc-163">튜플, 배열의 튜플, 하위 튜플 튜플 등의 배열을 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c29cc-163">It is possible to create arrays of tuples, tuples of arrays, tuples of sub-tuples, and so on.</span></span>
 
-* <span data-ttu-id="c29cc-164">:::no-loc(Q#):::0.3을 사용 하 여 `Unit` 은 빈 튜플의 *형식* 이름입니다 .는 `()` 빈 튜플의 *값* 에 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="c29cc-164">As of :::no-loc(Q#)::: 0.3, `Unit` is the name of the *type* of the empty tuple; `()` is used for the *value* of the empty tuple.</span></span>
+* <span data-ttu-id="c29cc-164">Q#0.3을 사용 하 여 `Unit` 은 빈 튜플의 *형식* 이름입니다 .는 `()` 빈 튜플의 *값* 에 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="c29cc-164">As of Q# 0.3, `Unit` is the name of the *type* of the empty tuple; `()` is used for the *value* of the empty tuple.</span></span>
 
 * <span data-ttu-id="c29cc-165">튜플 인스턴스는 변경할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="c29cc-165">Tuple instances are immutable.</span></span>
-<span data-ttu-id="c29cc-166">:::no-loc(Q#)::: 는 생성 된 튜플의 콘텐츠를 변경 하는 메커니즘을 제공 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="c29cc-166">:::no-loc(Q#)::: does not provide a mechanism to change the contents of a tuple once created.</span></span>
+<span data-ttu-id="c29cc-166">Q# 는 생성 된 튜플의 콘텐츠를 변경 하는 메커니즘을 제공 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="c29cc-166">Q# does not provide a mechanism to change the contents of a tuple once created.</span></span>
 
 
 
 ### <a name="singleton-tuple-equivalence"></a><span data-ttu-id="c29cc-167">단일 튜플 동등성</span><span class="sxs-lookup"><span data-stu-id="c29cc-167">Singleton Tuple Equivalence</span></span>
 
 <span data-ttu-id="c29cc-168">또는와 같은 singleton (단일 요소) 튜플을 만들 수 있습니다 `('T1)` `(5)` `([1,2,3])` .</span><span class="sxs-lookup"><span data-stu-id="c29cc-168">It is possible to create a singleton (single-element) tuple `('T1)`, such as `(5)` or `([1,2,3])`.</span></span>
-<span data-ttu-id="c29cc-169">그러나는 :::no-loc(Q#)::: singleton 튜플을 포함 된 형식의 값과 동일 하 게 처리 합니다.</span><span class="sxs-lookup"><span data-stu-id="c29cc-169">However, :::no-loc(Q#)::: treats a singleton tuple as equivalent to a value of the enclosed type.</span></span>
+<span data-ttu-id="c29cc-169">그러나는 Q# singleton 튜플을 포함 된 형식의 값과 동일 하 게 처리 합니다.</span><span class="sxs-lookup"><span data-stu-id="c29cc-169">However, Q# treats a singleton tuple as equivalent to a value of the enclosed type.</span></span>
 <span data-ttu-id="c29cc-170">즉,과 사이에 차이가 없으며,과 사이에 차이가 없습니다 `5` `(5)` `5` `(((5)))` `(5, (6))` `(5, 6)` .</span><span class="sxs-lookup"><span data-stu-id="c29cc-170">That is, there is no difference between `5` and `(5)`, or between `5` and `(((5)))`, or between `(5, (6))` and `(5, 6)`.</span></span>
 <span data-ttu-id="c29cc-171">작성 하는 것 처럼 작성 하는 것은 올바르지만 `(5)+3` `5+3` 두 식이 모두로 계산 됩니다 `8` .</span><span class="sxs-lookup"><span data-stu-id="c29cc-171">It is just as valid to write `(5)+3` as it is to write `5+3`; both expressions evaluate to `8`.</span></span>
 
@@ -139,14 +139,14 @@ ms.locfileid: "92691615"
 newtype PairOfInts = (Int, Int);
 ```
     
-* <span data-ttu-id="c29cc-180">각 :::no-loc(Q#)::: 소스 파일은 원하는 수의 사용자 정의 형식을 선언할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c29cc-180">Each :::no-loc(Q#)::: source file may declare any number of user-defined types.</span></span>
+* <span data-ttu-id="c29cc-180">각 Q# 소스 파일은 원하는 수의 사용자 정의 형식을 선언할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c29cc-180">Each Q# source file may declare any number of user-defined types.</span></span>
 * <span data-ttu-id="c29cc-181">형식 이름은 네임 스페이스 내에서 고유 해야 하며 작업 및 함수 이름과 충돌 하지 않을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c29cc-181">Type names must be unique within a namespace and may not conflict with operation and function names.</span></span>
 * <span data-ttu-id="c29cc-182">사용자 정의 형식은 기본 형식이 동일한 경우에도 고유 합니다.</span><span class="sxs-lookup"><span data-stu-id="c29cc-182">User-defined types are distinct, even if the base types are identical.</span></span>
 <span data-ttu-id="c29cc-183">특히 기본 형식이 동일한 경우에도 두 사용자 정의 형식의 값 사이에 자동 변환이 없습니다.</span><span class="sxs-lookup"><span data-stu-id="c29cc-183">In particular, there is no automatic conversion between the values of two user-defined types, even if the underlying types are identical.</span></span>
 
 ### <a name="named-vs-anonymous-items"></a><span data-ttu-id="c29cc-184">명명 된 항목과 익명 항목 비교</span><span class="sxs-lookup"><span data-stu-id="c29cc-184">Named vs. anonymous items</span></span>
 
-<span data-ttu-id="c29cc-185">:::no-loc(Q#):::파일은 모든 법적 형식의 단일 값을 포함 하는 새 명명 된 형식을 정의할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c29cc-185">A :::no-loc(Q#)::: file may define a new named type containing a single value of any legal type.</span></span>
+<span data-ttu-id="c29cc-185">Q#파일은 모든 법적 형식의 단일 값을 포함 하는 새 명명 된 형식을 정의할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c29cc-185">A Q# file may define a new named type containing a single value of any legal type.</span></span>
 <span data-ttu-id="c29cc-186">모든 튜플 형식의 경우 `T` 문을 사용 하 여의 하위 형식인 새 사용자 정의 형식을 선언할 수 있습니다 `T` `newtype` .</span><span class="sxs-lookup"><span data-stu-id="c29cc-186">For any tuple type `T`, you can declare a new user-defined type that is a subtype of `T` with the `newtype` statement.</span></span>
 <span data-ttu-id="c29cc-187">예를 들어 @"microsoft.quantum.math" 네임 스페이스에서 복소수는 사용자 정의 형식으로 정의 됩니다.</span><span class="sxs-lookup"><span data-stu-id="c29cc-187">In the @"microsoft.quantum.math" namespace, for example, complex numbers are defined as a user-defined type:</span></span>
 
@@ -155,7 +155,7 @@ newtype Complex = (Double, Double);
 ```
 <span data-ttu-id="c29cc-188">이 문은 형식의 익명 항목 두 개를 사용 하 여 새 형식을 만듭니다 `Double` .</span><span class="sxs-lookup"><span data-stu-id="c29cc-188">This statement creates a new type with two anonymous items of type `Double`.</span></span>   
 
-<span data-ttu-id="c29cc-189">익명 항목 외에도 사용자 정의 형식은 버전 0.7 이상으로 *명명 된 항목* 을 지원 :::no-loc(Q#)::: 합니다.</span><span class="sxs-lookup"><span data-stu-id="c29cc-189">Aside from anonymous items, user-defined types also support *named items* as of :::no-loc(Q#)::: version 0.7 or higher.</span></span> <span data-ttu-id="c29cc-190">예를 들어 `Real` 복소수의 실수 부분을 나타내는 double에 대해 항목의 이름을로, 허수 부분에 대해로 이름을로 설정할 수 있습니다 `Imag` .</span><span class="sxs-lookup"><span data-stu-id="c29cc-190">For example, you could name the items to `Real` for the double representing the real part of a complex number and `Imag` for the imaginary part:</span></span> 
+<span data-ttu-id="c29cc-189">익명 항목 외에도 사용자 정의 형식은 버전 0.7 이상으로 *명명 된 항목* 을 지원 Q# 합니다.</span><span class="sxs-lookup"><span data-stu-id="c29cc-189">Aside from anonymous items, user-defined types also support *named items* as of Q# version 0.7 or higher.</span></span> <span data-ttu-id="c29cc-190">예를 들어 `Real` 복소수의 실수 부분을 나타내는 double에 대해 항목의 이름을로, 허수 부분에 대해로 이름을로 설정할 수 있습니다 `Imag` .</span><span class="sxs-lookup"><span data-stu-id="c29cc-190">For example, you could name the items to `Real` for the double representing the real part of a complex number and `Imag` for the imaginary part:</span></span> 
 
 ```qsharp
 newtype Complex = (Real : Double, Imag : Double);
@@ -182,7 +182,7 @@ function ComplexAddition(c1 : Complex, c2 : Complex) : Complex {
 newtype ComplexPolar = (Magnitude : Double, Argument : Double);
 ```
 
-<span data-ttu-id="c29cc-197">`Complex`및 `ComplexPolar` 둘 다에 기본 형식이 있는 경우에도 두 형식은 모두와 `(Double, Double)` 완전히 호환 되지 않으므로 :::no-loc(Q#)::: 극좌표를 사용 하 여 복잡 한 수학 함수를 실수로 호출 하는 위험을 최소화 하 고 그 반대의 경우도 마찬가지입니다.</span><span class="sxs-lookup"><span data-stu-id="c29cc-197">Even though both `Complex` and `ComplexPolar` both have an underlying type `(Double, Double)`, the two types are wholly incompatible in :::no-loc(Q#):::, minimizing the risk of accidentally calling a complex math function with polar coordinates and vice versa.</span></span>
+<span data-ttu-id="c29cc-197">`Complex`및 `ComplexPolar` 둘 다에 기본 형식이 있는 경우에도 두 형식은 모두와 `(Double, Double)` 완전히 호환 되지 않으므로 Q# 극좌표를 사용 하 여 복잡 한 수학 함수를 실수로 호출 하는 위험을 최소화 하 고 그 반대의 경우도 마찬가지입니다.</span><span class="sxs-lookup"><span data-stu-id="c29cc-197">Even though both `Complex` and `ComplexPolar` both have an underlying type `(Double, Double)`, the two types are wholly incompatible in Q#, minimizing the risk of accidentally calling a complex math function with polar coordinates and vice versa.</span></span>
 
 #### <a name="access-anonymous-items-with-the-unwrap-operator"></a><span data-ttu-id="c29cc-198">래핑 해제 연산자를 사용 하 여 익명 항목 액세스</span><span class="sxs-lookup"><span data-stu-id="c29cc-198">Access anonymous items with the unwrap operator</span></span>
 
@@ -215,7 +215,7 @@ newtype DoublyWrappedInt = WrappedInt;
 ...
 ```
 
-<span data-ttu-id="c29cc-205">래핑 해제 연산자에 대 한 자세한 내용은 [ :::no-loc(Q#)::: 의 형식 식 ](xref:microsoft.quantum.guide.expressions)을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="c29cc-205">For more details on the unwrap operator, see [Type Expressions in :::no-loc(Q#):::](xref:microsoft.quantum.guide.expressions).</span></span>
+<span data-ttu-id="c29cc-205">래핑 해제 연산자에 대 한 자세한 내용은 [ Q# 의 형식 식 ](xref:microsoft.quantum.guide.expressions)을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="c29cc-205">For more details on the unwrap operator, see [Type Expressions in Q#](xref:microsoft.quantum.guide.expressions).</span></span>
 
 ### <a name="creating-values-of-user-defined-types"></a><span data-ttu-id="c29cc-206">사용자 정의 형식 값 만들기</span><span class="sxs-lookup"><span data-stu-id="c29cc-206">Creating values of user-defined types</span></span>
 
@@ -264,7 +264,7 @@ function AsComplexArray (data : Double[]) : ComplexArray {
 
 <span data-ttu-id="c29cc-221">이를 호출 가능의 *서명* 이라고 합니다.</span><span class="sxs-lookup"><span data-stu-id="c29cc-221">These are called the *signature* of the callable.</span></span>
 
-* <span data-ttu-id="c29cc-222">모든 :::no-loc(Q#)::: callables은 단일 값을 입력으로 사용 하 고 단일 값을 출력으로 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="c29cc-222">All :::no-loc(Q#)::: callables take a single value as input and return a single value as output.</span></span>
+* <span data-ttu-id="c29cc-222">모든 Q# callables은 단일 값을 입력으로 사용 하 고 단일 값을 출력으로 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="c29cc-222">All Q# callables take a single value as input and return a single value as output.</span></span>
 * <span data-ttu-id="c29cc-223">입력 및 출력 값 모두에 튜플을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c29cc-223">You can use tuples for both the input and output values.</span></span>
 * <span data-ttu-id="c29cc-224">결과가 없는 callables은을 반환 `Unit` 합니다.</span><span class="sxs-lookup"><span data-stu-id="c29cc-224">Callables that have no result, return `Unit`.</span></span>
 * <span data-ttu-id="c29cc-225">입력이 없는 callables은 빈 튜플을 입력으로 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="c29cc-225">Callables that have no input take the empty tuple as input.</span></span>
@@ -277,7 +277,7 @@ function AsComplexArray (data : Double[]) : ComplexArray {
 <span data-ttu-id="c29cc-231">예를 들어 작업을 실행 하는 동안 다른 값을 사용 하는 경우 함수를 지원 해야 합니다 `Controlled` . 작업에 역이 있으면 함수를 지원 해야 합니다 `Adjoint` .</span><span class="sxs-lookup"><span data-stu-id="c29cc-231">For example, if the running of the operation relies on the state of other qubits, then it should support the `Controlled` functor; if the operation has an inverse, then it should support the `Adjoint` functor.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="c29cc-232">이 문서에서는 함수에서 작업 서명을 변경 하는 방법에 대해서만 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="c29cc-232">This article only discuss how functors alter the operation signature.</span></span> <span data-ttu-id="c29cc-233">함수 및 작업에 대 한 자세한 내용은 [의 :::no-loc(Q#)::: 작업 및 함수 ](xref:microsoft.quantum.guide.operationsfunctions)를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="c29cc-233">For more details about functors and operations, see [Operations and Functions in :::no-loc(Q#):::](xref:microsoft.quantum.guide.operationsfunctions).</span></span> 
+> <span data-ttu-id="c29cc-232">이 문서에서는 함수에서 작업 서명을 변경 하는 방법에 대해서만 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="c29cc-232">This article only discuss how functors alter the operation signature.</span></span> <span data-ttu-id="c29cc-233">함수 및 작업에 대 한 자세한 내용은 [의 Q# 작업 및 함수 ](xref:microsoft.quantum.guide.operationsfunctions)를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="c29cc-233">For more details about functors and operations, see [Operations and Functions in Q#](xref:microsoft.quantum.guide.operationsfunctions).</span></span> 
 
 <span data-ttu-id="c29cc-234">`Controlled`작업 형식에서 and/or 함수를 지원 하려면 `Adjoint` 해당 특성을 나타내는 주석을 추가 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="c29cc-234">To require support for the `Controlled` and/or `Adjoint` functor in an operation type, you need to add an annotation indicating the corresponding characteristics.</span></span>
 <span data-ttu-id="c29cc-235">주석 `is Ctl` (예:)은 `(Qubit => Unit is Ctl)` 작업을 제어할 수 있음을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="c29cc-235">The annotation `is Ctl` (for example, `(Qubit => Unit is Ctl)`) indicates that the operation is controllable.</span></span> <span data-ttu-id="c29cc-236">즉, 해당 실행은 다른 비트율 비트 또는 기타 비트의 상태에 의존 합니다.</span><span class="sxs-lookup"><span data-stu-id="c29cc-236">That is, its run relies on the state of another qubit or qubits.</span></span> <span data-ttu-id="c29cc-237">마찬가지로 주석은 `is Adj` 작업에 adjoint가 있음을 나타냅니다. 즉, 작업을 연속적으로 적용 한 다음 해당 adjoint 상태를 변경 되지 않은 상태로 유지 하는 "반전" 될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c29cc-237">Similarly, the annotation `is Adj` indicates that the operation has an adjoint, that is, it can be "inverted" such that successively applying an operation and then its adjoint to a state leaves the state unchanged.</span></span> 
@@ -290,7 +290,7 @@ function AsComplexArray (data : Double[]) : ComplexArray {
 
 <span data-ttu-id="c29cc-242">호출 가능 형식에는 *형식 매개 변수가* 포함 될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c29cc-242">Callable types may contain *type parameters* .</span></span>
 <span data-ttu-id="c29cc-243">작은따옴표를 접두사로 사용 하는 기호를 사용 하 여 형식 매개 변수를 나타냅니다. 예를 들어 `'A` 은 올바른 형식 매개 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="c29cc-243">Use a symbol prefixed by a single quote to indicated a type parameter; for example, `'A` is a legal type parameter.</span></span>
-<span data-ttu-id="c29cc-244">형식 매개 변수가 있는 callables을 정의 하는 방법에 대 한 자세한 내용 및 세부 정보는 [의 :::no-loc(Q#)::: 작업 및 함수 ](xref:microsoft.quantum.guide.operationsfunctions#generic-type-parameterized-callables)를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="c29cc-244">For more information and details on how to define type-parameterized callables, see [Operations and Functions in :::no-loc(Q#):::](xref:microsoft.quantum.guide.operationsfunctions#generic-type-parameterized-callables).</span></span>
+<span data-ttu-id="c29cc-244">형식 매개 변수가 있는 callables을 정의 하는 방법에 대 한 자세한 내용 및 세부 정보는 [의 Q# 작업 및 함수 ](xref:microsoft.quantum.guide.operationsfunctions#generic-type-parameterized-callables)를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="c29cc-244">For more information and details on how to define type-parameterized callables, see [Operations and Functions in Q#](xref:microsoft.quantum.guide.operationsfunctions#generic-type-parameterized-callables).</span></span>
 
 <span data-ttu-id="c29cc-245">단일 서명에서 형식 매개 변수가 두 번 이상 나타날 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c29cc-245">A type parameter may appear more than once in a single signature.</span></span>
 <span data-ttu-id="c29cc-246">예를 들어, 배열의 각 요소에 다른 함수를 적용 하 고 수집 된 결과에 시그니처가 있음을 반환 하는 함수입니다 `(('A[], 'A->'A) -> 'A[])` .</span><span class="sxs-lookup"><span data-stu-id="c29cc-246">For example, a function that applies another function to each element of an array and returns the collected results has the signature `(('A[], 'A->'A) -> 'A[])`.</span></span>
@@ -298,8 +298,8 @@ function AsComplexArray (data : Double[]) : ComplexArray {
 
 <span data-ttu-id="c29cc-248">형식이 매개 변수가 있는 호출 가능 매개 변수를 호출 하는 경우 동일한 형식 매개 변수를 갖는 모든 인수는 동일한 형식 이어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="c29cc-248">When you invoke a type-parameterized callable, all arguments that have the same type parameter must be of the same type.</span></span>
 
-<span data-ttu-id="c29cc-249">:::no-loc(Q#)::: 는 사용자가 형식 매개 변수를 대체할 수 있는 가능한 형식을 제한 하는 메커니즘을 제공 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="c29cc-249">:::no-loc(Q#)::: does not provide a mechanism for constraining the possible types that a user might substitute for a type parameter.</span></span>
+<span data-ttu-id="c29cc-249">Q# 는 사용자가 형식 매개 변수를 대체할 수 있는 가능한 형식을 제한 하는 메커니즘을 제공 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="c29cc-249">Q# does not provide a mechanism for constraining the possible types that a user might substitute for a type parameter.</span></span>
 
 ## <a name="next-steps"></a><span data-ttu-id="c29cc-250">다음 단계</span><span class="sxs-lookup"><span data-stu-id="c29cc-250">Next steps</span></span>
 
-<span data-ttu-id="c29cc-251">언어를 구성 하는 모든 형식을 살펴보았으므로 이제 :::no-loc(Q#)::: 다양 한 형식의 식을 만들고 조작 하는 방법을 알아보려면 [의 :::no-loc(Q#)::: 형식 식](xref:microsoft.quantum.guide.expressions) 을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="c29cc-251">Now that you've seen all the types which comprise the :::no-loc(Q#)::: language, see [Type Expressions in :::no-loc(Q#):::](xref:microsoft.quantum.guide.expressions) to learn how to create and manipulate expressions of these various types.</span></span>
+<span data-ttu-id="c29cc-251">언어를 구성 하는 모든 형식을 살펴보았으므로 이제 Q# 다양 한 형식의 식을 만들고 조작 하는 방법을 알아보려면 [의 Q# 형식 식](xref:microsoft.quantum.guide.expressions) 을 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="c29cc-251">Now that you've seen all the types which comprise the Q# language, see [Type Expressions in Q#](xref:microsoft.quantum.guide.expressions) to learn how to create and manipulate expressions of these various types.</span></span>

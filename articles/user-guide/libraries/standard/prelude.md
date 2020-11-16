@@ -7,8 +7,8 @@ ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.libraries.standard.prelude
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: 4d15226fe46be79b7d3e6f414f33f1debd691f40
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
@@ -18,7 +18,7 @@ ms.locfileid: "92692114"
 ---
 # <a name="the-prelude"></a><span data-ttu-id="0e1b2-103">Prelude</span><span class="sxs-lookup"><span data-stu-id="0e1b2-103">The Prelude</span></span> #
 
-<span data-ttu-id="0e1b2-104">:::no-loc(Q#):::퀀텀 개발 키트에 포함 된 컴파일러 및 대상 컴퓨터는에서 퀀텀 프로그램을 작성할 때 사용할 수 있는 내장 함수 및 작업 집합을 제공 합니다 :::no-loc(Q#)::: .</span><span class="sxs-lookup"><span data-stu-id="0e1b2-104">The :::no-loc(Q#)::: compiler and the target machines included with the Quantum Development Kit provide a set of intrinsic functions and operations that can be used when writing quantum programs in :::no-loc(Q#):::.</span></span>
+<span data-ttu-id="0e1b2-104">Q#퀀텀 개발 키트에 포함 된 컴파일러 및 대상 컴퓨터는에서 퀀텀 프로그램을 작성할 때 사용할 수 있는 내장 함수 및 작업 집합을 제공 합니다 Q# .</span><span class="sxs-lookup"><span data-stu-id="0e1b2-104">The Q# compiler and the target machines included with the Quantum Development Kit provide a set of intrinsic functions and operations that can be used when writing quantum programs in Q#.</span></span>
 
 ## <a name="intrinsic-operations-and-functions"></a><span data-ttu-id="0e1b2-105">내장 작업 및 함수</span><span class="sxs-lookup"><span data-stu-id="0e1b2-105">Intrinsic Operations and Functions</span></span> ##
 
@@ -30,11 +30,11 @@ ms.locfileid: "92692114"
 - <span data-ttu-id="0e1b2-110">측정을 구현 하는 작업입니다.</span><span class="sxs-lookup"><span data-stu-id="0e1b2-110">Operations implementing measurements.</span></span>
 
 <span data-ttu-id="0e1b2-111">Clifford + $T $ gate 집합은 퀀텀 컴퓨팅을 위한 [유니버설](xref:microsoft.quantum.concepts.multiple-qubits) 이므로 negligibly 작은 오류 내에서 임의 퀀텀 알고리즘을 구현 하는 데에는 충분 합니다.</span><span class="sxs-lookup"><span data-stu-id="0e1b2-111">Since the Clifford + $T$ gate set is [universal](xref:microsoft.quantum.concepts.multiple-qubits) for quantum computing, these operations suffice to approximately implement any quantum algorithm within negligibly small error.</span></span>
-<span data-ttu-id="0e1b2-112">또한 회전을 제공 하 여 :::no-loc(Q#)::: 프로그래머는 단일의 단일 기능 및 CNOT gate 라이브러리 내에서 작업할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0e1b2-112">By providing rotations as well, :::no-loc(Q#)::: allows the programmer to work within the single qubit unitary and CNOT gate library.</span></span> <span data-ttu-id="0e1b2-113">이 라이브러리는 프로그래머가 Clifford + $T $ 분해를 직접 표현할 필요가 없으며, 단일 highbit unitaries를 Clifford 및 $T $ 게이트로 컴파일하기 위한 매우 효율적인 메서드가 필요 하지 않기 때문에 훨씬 더 쉽습니다. 자세한 내용은 [여기](xref:microsoft.quantum.more-information) 를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="0e1b2-113">This library is much easier to think about because it does not  require the programmer to directly express the Clifford + $T$ decomposition and because highly efficient methods exist for compiling single qubit unitaries into Clifford and $T$ gates (see [here](xref:microsoft.quantum.more-information) for more information).</span></span>
+<span data-ttu-id="0e1b2-112">또한 회전을 제공 하 여 Q# 프로그래머는 단일의 단일 기능 및 CNOT gate 라이브러리 내에서 작업할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0e1b2-112">By providing rotations as well, Q# allows the programmer to work within the single qubit unitary and CNOT gate library.</span></span> <span data-ttu-id="0e1b2-113">이 라이브러리는 프로그래머가 Clifford + $T $ 분해를 직접 표현할 필요가 없으며, 단일 highbit unitaries를 Clifford 및 $T $ 게이트로 컴파일하기 위한 매우 효율적인 메서드가 필요 하지 않기 때문에 훨씬 더 쉽습니다. 자세한 내용은 [여기](xref:microsoft.quantum.more-information) 를 참조 하세요.</span><span class="sxs-lookup"><span data-stu-id="0e1b2-113">This library is much easier to think about because it does not  require the programmer to directly express the Clifford + $T$ decomposition and because highly efficient methods exist for compiling single qubit unitaries into Clifford and $T$ gates (see [here](xref:microsoft.quantum.more-information) for more information).</span></span>
 
 <span data-ttu-id="0e1b2-114">가능 하면, prelude에서 정의 된 작업은 `Controlled` 대상 컴퓨터에서 적절 한 분해를 수행 하는 등의 작업을 수행 하 여 variant를 적용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0e1b2-114">Where possible, the operations defined in the prelude which act on qubits allow for applying the `Controlled` variant, such that the target machine will perform the appropriate decomposition.</span></span>
 
-<span data-ttu-id="0e1b2-115">Prelude의이 부분에 정의 된 대부분의 함수 및 작업은 @"microsoft.quantum.intrinsic" 네임 스페이스에 있습니다. 즉, 대부분의 :::no-loc(Q#)::: 소스 파일에는 `open Microsoft.Quantum.Intrinsic;` 초기 네임 스페이스 선언 바로 뒤에 지시문이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0e1b2-115">Many of the functions and operations defined in this portion of the prelude are in the @"microsoft.quantum.intrinsic" namespace, such that most :::no-loc(Q#)::: source files will have an `open Microsoft.Quantum.Intrinsic;` directive immediately following the initial namespace declaration.</span></span>
+<span data-ttu-id="0e1b2-115">Prelude의이 부분에 정의 된 대부분의 함수 및 작업은 @"microsoft.quantum.intrinsic" 네임 스페이스에 있습니다. 즉, 대부분의 Q# 소스 파일에는 `open Microsoft.Quantum.Intrinsic;` 초기 네임 스페이스 선언 바로 뒤에 지시문이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0e1b2-115">Many of the functions and operations defined in this portion of the prelude are in the @"microsoft.quantum.intrinsic" namespace, such that most Q# source files will have an `open Microsoft.Quantum.Intrinsic;` directive immediately following the initial namespace declaration.</span></span>
 <span data-ttu-id="0e1b2-116"><xref:Microsoft.Quantum.Core>네임 스페이스는 자동으로 열리므로와 같은 함수를 <xref:Microsoft.Quantum.Core.Length> 문 없이 사용할 수 있습니다 `open` .</span><span class="sxs-lookup"><span data-stu-id="0e1b2-116">The <xref:Microsoft.Quantum.Core> namespace is automatically opened, so that functions such as <xref:Microsoft.Quantum.Core.Length> can be used without an `open` statement at all.</span></span>
 
 ### <a name="common-single-qubit-unitary-operations"></a><span data-ttu-id="0e1b2-117">공통 Single-Qubit 단일 작업</span><span class="sxs-lookup"><span data-stu-id="0e1b2-117">Common Single-Qubit Unitary Operations</span></span> ###
@@ -101,7 +101,7 @@ ms.locfileid: "92692114"
 
 #### <a name="rotations"></a><span data-ttu-id="0e1b2-159">교대</span><span class="sxs-lookup"><span data-stu-id="0e1b2-159">Rotations</span></span> ####
 
-<span data-ttu-id="0e1b2-160">위의 Pauli 및 Clifford 작업 외에도 prelude는 회전을 표현 하는 :::no-loc(Q#)::: 다양 한 방법을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="0e1b2-160">In addition to the Pauli and Clifford operations above, the :::no-loc(Q#)::: prelude provides a variety of ways of expressing rotations.</span></span>
+<span data-ttu-id="0e1b2-160">위의 Pauli 및 Clifford 작업 외에도 prelude는 회전을 표현 하는 Q# 다양 한 방법을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="0e1b2-160">In addition to the Pauli and Clifford operations above, the Q# prelude provides a variety of ways of expressing rotations.</span></span>
 <span data-ttu-id="0e1b2-161">[단일 기능 비트 작업](xref:microsoft.quantum.concepts.qubit#single-qubit-operations)에 설명 된 대로,이를 회전 하는 기능은 퀀텀 알고리즘에 매우 중요 합니다.</span><span class="sxs-lookup"><span data-stu-id="0e1b2-161">As described in [single-qubit operations](xref:microsoft.quantum.concepts.qubit#single-qubit-operations), the ability to rotate is critical to quantum algorithms.</span></span>
 
 <span data-ttu-id="0e1b2-162">먼저 $H $ 및 $T $ 게이트를 사용 하 여 단일 기능 비트 작업을 표현할 수 있습니다. 여기서 $H $은 Hadamard 연산이 고, 여기서 \begin{equation} T \mathrel{: =} \begin{bmatrix} 1 & 0 \\ \\ % fixme: 현재는 쿼드 백 whack hack를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="0e1b2-162">We start by recalling that we can express any single-qubit operation using the $H$ and $T$ gates, where $H$ is the Hadamard operation, and where \begin{equation} T \mathrel{:=} \begin{bmatrix} 1 & 0 \\\\ % FIXME: this currently uses the quad back whack hack.</span></span>
@@ -232,7 +232,7 @@ return rs;
 
 ## <a name="extension-functions-and-operations"></a><span data-ttu-id="0e1b2-247">확장 함수 및 작업</span><span class="sxs-lookup"><span data-stu-id="0e1b2-247">Extension Functions and Operations</span></span> ##
 
-<span data-ttu-id="0e1b2-248">또한 prelude는 코드 내에서 사용 하기 위해 .NET 수준에서 다양 한 수학적 및 형식 변환 함수 집합을 정의 합니다 :::no-loc(Q#)::: .</span><span class="sxs-lookup"><span data-stu-id="0e1b2-248">In addition, the prelude defines a rich set of mathematical and type conversion functions at the .NET level for use within :::no-loc(Q#)::: code.</span></span>
+<span data-ttu-id="0e1b2-248">또한 prelude는 코드 내에서 사용 하기 위해 .NET 수준에서 다양 한 수학적 및 형식 변환 함수 집합을 정의 합니다 Q# .</span><span class="sxs-lookup"><span data-stu-id="0e1b2-248">In addition, the prelude defines a rich set of mathematical and type conversion functions at the .NET level for use within Q# code.</span></span>
 <span data-ttu-id="0e1b2-249">예를 들어, <xref:Microsoft.Quantum.Math> 네임 스페이스는 및와 같은 유용한 작업을 정의 합니다 <xref:Microsoft.Quantum.Math.Sin> <xref:Microsoft.Quantum.Math.Log> .</span><span class="sxs-lookup"><span data-stu-id="0e1b2-249">For instance, the <xref:Microsoft.Quantum.Math> namespace defines useful operations such as <xref:Microsoft.Quantum.Math.Sin> and <xref:Microsoft.Quantum.Math.Log>.</span></span>
 <span data-ttu-id="0e1b2-250">퀀텀 개발 키트에서 제공 하는 구현에서는 기존 .NET 기본 클래스 라이브러리를 사용 하므로 퀀텀 프로그램 및 해당 클래식 드라이버 사이에 추가 통신 왕복이 포함 될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0e1b2-250">The implementation provided by the Quantum Development Kit uses the classical .NET base class library, and thus may involve an additional communications round trip between quantum programs and their classical drivers.</span></span>
 <span data-ttu-id="0e1b2-251">이는 로컬 시뮬레이터에 대 한 문제를 제공 하지 않지만 원격 시뮬레이터 또는 실제 하드웨어를 대상 컴퓨터로 사용 하는 경우 성능 문제가 발생할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0e1b2-251">While this does not present a problem for a local simulator, this can be a performance issue when using a remote simulator or actual hardware as a target machine.</span></span>
@@ -241,7 +241,7 @@ return rs;
 ### <a name="math"></a><span data-ttu-id="0e1b2-253">수식</span><span class="sxs-lookup"><span data-stu-id="0e1b2-253">Math</span></span> ###
 
 <span data-ttu-id="0e1b2-254"><xref:Microsoft.Quantum.Math>네임 스페이스는 .net 기본 클래스 라이브러리의 [ `System.Math` 클래스](https://docs.microsoft.com/dotnet/api/system.math?view=netframework-4.7.1&preserve-view=true)에서 많은 유용한 함수를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="0e1b2-254">The <xref:Microsoft.Quantum.Math> namespace provides many useful functions from the .NET base class library's [`System.Math` class](https://docs.microsoft.com/dotnet/api/system.math?view=netframework-4.7.1&preserve-view=true).</span></span>
-<span data-ttu-id="0e1b2-255">이러한 함수는 다른 함수와 동일한 방식으로 사용할 수 있습니다 :::no-loc(Q#)::: .</span><span class="sxs-lookup"><span data-stu-id="0e1b2-255">These functions can be used in the same manner as any other :::no-loc(Q#)::: functions:</span></span>
+<span data-ttu-id="0e1b2-255">이러한 함수는 다른 함수와 동일한 방식으로 사용할 수 있습니다 Q# .</span><span class="sxs-lookup"><span data-stu-id="0e1b2-255">These functions can be used in the same manner as any other Q# functions:</span></span>
 
 ```qsharp
 open Microsoft.Quantum.Math;
@@ -249,7 +249,7 @@ open Microsoft.Quantum.Math;
 let y = Sin(theta);
 ```
 
-<span data-ttu-id="0e1b2-256">해당 인수의 형식에 따라 .NET 정적 메서드가 오버 로드 된 경우 해당 함수에는 해당 :::no-loc(Q#)::: 입력의 형식을 나타내는 접미사로 주석이 추가 됩니다.</span><span class="sxs-lookup"><span data-stu-id="0e1b2-256">Where a .NET static method has been overloaded based on the type of its arguments, the corresponding :::no-loc(Q#)::: function is annotated with a suffix indicating the type of its input:</span></span>
+<span data-ttu-id="0e1b2-256">해당 인수의 형식에 따라 .NET 정적 메서드가 오버 로드 된 경우 해당 함수에는 해당 Q# 입력의 형식을 나타내는 접미사로 주석이 추가 됩니다.</span><span class="sxs-lookup"><span data-stu-id="0e1b2-256">Where a .NET static method has been overloaded based on the type of its arguments, the corresponding Q# function is annotated with a suffix indicating the type of its input:</span></span>
 
 ```qsharp
 let x = AbsI(-3); // x : Int = 3

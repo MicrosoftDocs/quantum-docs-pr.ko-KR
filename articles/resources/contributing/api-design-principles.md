@@ -1,14 +1,14 @@
 ---
-title: ':::no-loc(Q#)::: API 디자인 원칙'
-description: ':::no-loc(Q#)::: API 디자인 원칙'
+title: 'Q# API 디자인 원칙'
+description: 'Q# API 디자인 원칙'
 author: cgranade
 ms.author: chgranad
 ms.date: 3/9/2020
 ms.topic: article
 uid: microsoft.quantum.contributing.api-design
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: 6b196cf1be584a3157c7a9eb8cf497fe1121dd7a
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
@@ -16,20 +16,20 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/27/2020
 ms.locfileid: "92691822"
 ---
-# <a name="no-locq-api-design-principles"></a><span data-ttu-id="38900-103">:::no-loc(Q#)::: API 디자인 원칙</span><span class="sxs-lookup"><span data-stu-id="38900-103">:::no-loc(Q#)::: API Design Principles</span></span>
+# <a name="no-locq-api-design-principles"></a><span data-ttu-id="38900-103">Q# API 디자인 원칙</span><span class="sxs-lookup"><span data-stu-id="38900-103">Q# API Design Principles</span></span>
 
 ## <a name="introduction"></a><span data-ttu-id="38900-104">소개</span><span class="sxs-lookup"><span data-stu-id="38900-104">Introduction</span></span>
 
-<span data-ttu-id="38900-105">언어 및 플랫폼으로 서 :::no-loc(Q#)::: 사용자는 퀀텀 응용 프로그램을 작성, 실행, 이해 및 탐색할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="38900-105">As a language and as a platform, :::no-loc(Q#)::: empowers users to write, run, understand, and explore quantum applications.</span></span>
-<span data-ttu-id="38900-106">사용자에 게 권한을 부여 하기 위해 :::no-loc(Q#)::: 라이브러리를 설계할 때 API 디자인 원칙 집합을 따라 디자인을 안내 하 고 퀀텀 개발 커뮤니티에 사용할 수 있는 라이브러리를 만드는 데 도움을 줍니다.</span><span class="sxs-lookup"><span data-stu-id="38900-106">In order to empower users, when we design :::no-loc(Q#)::: libraries, we follow a set of API design principles to guide our designs and to help us make usable libraries for the the quantum development community.</span></span>
-<span data-ttu-id="38900-107">이 문서에서는 이러한 원칙을 나열 하 고 api를 디자인할 때 적용 하는 방법을 안내 하는 예제를 제공 :::no-loc(Q#)::: 합니다.</span><span class="sxs-lookup"><span data-stu-id="38900-107">This article lists these principles, and gives examples to help guide how to apply them when designing :::no-loc(Q#)::: APIs.</span></span>
+<span data-ttu-id="38900-105">언어 및 플랫폼으로 서 Q# 사용자는 퀀텀 응용 프로그램을 작성, 실행, 이해 및 탐색할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="38900-105">As a language and as a platform, Q# empowers users to write, run, understand, and explore quantum applications.</span></span>
+<span data-ttu-id="38900-106">사용자에 게 권한을 부여 하기 위해 Q# 라이브러리를 설계할 때 API 디자인 원칙 집합을 따라 디자인을 안내 하 고 퀀텀 개발 커뮤니티에 사용할 수 있는 라이브러리를 만드는 데 도움을 줍니다.</span><span class="sxs-lookup"><span data-stu-id="38900-106">In order to empower users, when we design Q# libraries, we follow a set of API design principles to guide our designs and to help us make usable libraries for the the quantum development community.</span></span>
+<span data-ttu-id="38900-107">이 문서에서는 이러한 원칙을 나열 하 고 api를 디자인할 때 적용 하는 방법을 안내 하는 예제를 제공 Q# 합니다.</span><span class="sxs-lookup"><span data-stu-id="38900-107">This article lists these principles, and gives examples to help guide how to apply them when designing Q# APIs.</span></span>
 
 > [!TIP]
 > <span data-ttu-id="38900-108">이 문서는 라이브러리 개발 및 심층 라이브러리 기여를 돕기 위한 매우 자세한 문서입니다.</span><span class="sxs-lookup"><span data-stu-id="38900-108">This is a fairly detailed document that's intended to help guide library development and in-depth library contributions.</span></span>
-> <span data-ttu-id="38900-109">에서 사용자 고유의 라이브러리를 작성 하 :::no-loc(Q#)::: 는 경우 나 [ :::no-loc(Q#)::: 라이브러리 리포지토리에](https://github.com/microsoft/QuantumLibraries)더 큰 기능을 제공 하는 경우에는 가장 유용 하다는 것을 알게 될 것입니다.</span><span class="sxs-lookup"><span data-stu-id="38900-109">You'll probably find it most useful if you're writing your own libraries in :::no-loc(Q#):::, or if you're contributing larger features to the [:::no-loc(Q#)::: libraries repository](https://github.com/microsoft/QuantumLibraries).</span></span>
+> <span data-ttu-id="38900-109">에서 사용자 고유의 라이브러리를 작성 하 Q# 는 경우 나 [ Q# 라이브러리 리포지토리에](https://github.com/microsoft/QuantumLibraries)더 큰 기능을 제공 하는 경우에는 가장 유용 하다는 것을 알게 될 것입니다.</span><span class="sxs-lookup"><span data-stu-id="38900-109">You'll probably find it most useful if you're writing your own libraries in Q#, or if you're contributing larger features to the [Q# libraries repository](https://github.com/microsoft/QuantumLibraries).</span></span>
 >
 > <span data-ttu-id="38900-110">반면에, 일반적으로 퀀텀 개발 키트에 참여 하는 방법을 알아보려면 [기여 가이드](xref:microsoft.quantum.contributing)로 시작 하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="38900-110">On the other hand, if you're looking to learn how to contribute to the Quantum Development Kit more generally, we suggest starting with the [contribution guide](xref:microsoft.quantum.contributing).</span></span>
-> <span data-ttu-id="38900-111">코드 서식을 지정 하는 방법에 대 한 일반적인 정보를 원하는 경우 :::no-loc(Q#)::: [스타일 가이드](xref:microsoft.quantum.contributing.style)를 확인 하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="38900-111">If you're looking for more general information about how we recommend formatting your :::no-loc(Q#)::: code, you may be interested in checking out the [style guide](xref:microsoft.quantum.contributing.style).</span></span>
+> <span data-ttu-id="38900-111">코드 서식을 지정 하는 방법에 대 한 일반적인 정보를 원하는 경우 Q# [스타일 가이드](xref:microsoft.quantum.contributing.style)를 확인 하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="38900-111">If you're looking for more general information about how we recommend formatting your Q# code, you may be interested in checking out the [style guide](xref:microsoft.quantum.contributing.style).</span></span>
 
 ## <a name="general-principles"></a><span data-ttu-id="38900-112">일반 원칙</span><span class="sxs-lookup"><span data-stu-id="38900-112">General Principles</span></span>
 
@@ -84,7 +84,7 @@ ms.locfileid: "92691822"
 - <span data-ttu-id="38900-142">✅동일한 API와 이전에 존재 하는 라이브러리에서 다른 함수 및 작업과 함께 잘 구성 되도록 함수 및 작업 **을 디자인 합니다** .</span><span class="sxs-lookup"><span data-stu-id="38900-142">✅ **DO** design functions and operations to compose well with other   functions and operations, both in the same API and in previously   existing libraries.</span></span>
 
   <span data-ttu-id="38900-143">*예:*</span><span class="sxs-lookup"><span data-stu-id="38900-143">*Examples:*</span></span>
-  - <span data-ttu-id="38900-144">@"microsoft.quantum.canon.delay"작업은 해당 입력에 대 한 가정을 최소화 하므로 :::no-loc(Q#)::: 표준 라이브러리 전체에서 또는 사용자가 정의한 대로 두 작업의 응용 프로그램을 지연 하는 데 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="38900-144">The @"microsoft.quantum.canon.delay" operation makes minimal assumptions about its input, and thus can be used to delay applications of either operations across the :::no-loc(Q#)::: standard library or as defined by users.</span></span>
+  - <span data-ttu-id="38900-144">@"microsoft.quantum.canon.delay"작업은 해당 입력에 대 한 가정을 최소화 하므로 Q# 표준 라이브러리 전체에서 또는 사용자가 정의한 대로 두 작업의 응용 프로그램을 지연 하는 데 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="38900-144">The @"microsoft.quantum.canon.delay" operation makes minimal assumptions about its input, and thus can be used to delay applications of either operations across the Q# standard library or as defined by users.</span></span>
     <!-- TODO: define bad example. -->
 
 - <span data-ttu-id="38900-145">✅순수 하 게 결정적으로 **수행** 되는 모든 논리를 작업 대신 함수로 노출 합니다.</span><span class="sxs-lookup"><span data-stu-id="38900-145">✅ **DO** expose purely deterministic classical logic as   as functions rather than operations.</span></span>

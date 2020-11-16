@@ -1,13 +1,13 @@
 ---
-title: :::no-loc(Q#):::표준 라이브러리의 수학
-description: :::no-loc(Q#):::기본 제공 데이터 형식과 함께 사용 되는 표준 라이브러리의 기존 수학 함수에 대해 알아봅니다.
+title: Q#표준 라이브러리의 수학
+description: Q#기본 제공 데이터 형식과 함께 사용 되는 표준 라이브러리의 기존 수학 함수에 대해 알아봅니다.
 author: cgranade
 uid: microsoft.quantum.libraries.math
 ms.author: chgranad
 ms.topic: article
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: 6de1574341d67c569cd2f040ec533e263fdd386e
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
@@ -17,7 +17,7 @@ ms.locfileid: "92692056"
 ---
 # <a name="classical-mathematical-functions"></a><span data-ttu-id="b4c29-103">기존 수학 함수</span><span class="sxs-lookup"><span data-stu-id="b4c29-103">Classical Mathematical Functions</span></span> #
 
-<span data-ttu-id="b4c29-104">이러한 함수는 :::no-loc(Q#)::: 기본 제공 데이터 형식, 및 작업에 주로 사용 됩니다 `Int` `Double` `Range` .</span><span class="sxs-lookup"><span data-stu-id="b4c29-104">These functions are primarily used to work with the :::no-loc(Q#)::: built-in data types `Int`, `Double`, and `Range`.</span></span>
+<span data-ttu-id="b4c29-104">이러한 함수는 Q# 기본 제공 데이터 형식, 및 작업에 주로 사용 됩니다 `Int` `Double` `Range` .</span><span class="sxs-lookup"><span data-stu-id="b4c29-104">These functions are primarily used to work with the Q# built-in data types `Int`, `Double`, and `Range`.</span></span>
 
 <span data-ttu-id="b4c29-105"><xref:Microsoft.Quantum.Intrinsic.Random>작업에 시그니처가 `(Double[] => Int)` 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b4c29-105">The <xref:Microsoft.Quantum.Intrinsic.Random> operation has signature `(Double[] => Int)`.</span></span>
 <span data-ttu-id="b4c29-106">입력으로 double의 배열을 사용 하 고 임의로 선택 된 인덱스를로 배열에 반환 합니다 `Int` .</span><span class="sxs-lookup"><span data-stu-id="b4c29-106">It takes an array of doubles as input, and returns a randomly-selected index into the array as an `Int`.</span></span>
