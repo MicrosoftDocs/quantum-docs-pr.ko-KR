@@ -10,12 +10,12 @@ uid: microsoft.quantum.install
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 74b9b3d8f694072f5b5f4d0eb520263387de8919
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: f0c3df1998f9b64ff6544867b83a7afe52b6f46d
+ms.sourcegitcommit: fd57a845d013ae4578715d04b1ed1edc1c8ff6b4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834485"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870824"
 ---
 # <a name="setting-up-the-microsoft-quantum-development-kit-qdk"></a>Microsoft QDK(Quantum Development Kit) 설정
 
@@ -40,12 +40,48 @@ QDK는 세 가지 방법으로 사용할 수 있습니다.
 
 대부분의 즐겨찾기 IDE에서 Q# 코드를 개발할 수 있을 뿐만 아니라 Q#를 Python 및 .NET(C#, F#)과 같은 다른 언어와 통합할 수 있습니다.
 
-|&nbsp; | **VS Code<br>(2019 이상)**| **Visual Studio<br>(2019 이상)** | **Jupyter Notebook** | **명령줄**|
-|:-----|:-----:|:-----:|:-----:|:-----:|
-|**OS** |Windows, macOS, Linux |Windows만 |Windows, macOS, Linux |Windows, macOS, Linux |
-|<br>**Q# 독립 실행형** |<br>[설치](xref:microsoft.quantum.install.standalone) |<br> [설치](xref:microsoft.quantum.install.standalone)  |<br> [설치](xref:microsoft.quantum.install.jupyter) |<br>[설치](xref:microsoft.quantum.install.standalone)|
-|**Q# 및 Python** |[설치](xref:microsoft.quantum.install.python) |[설치](xref:microsoft.quantum.install.python) |[설치](xref:microsoft.quantum.install.jupyter) |[설치](xref:microsoft.quantum.install.python) |
-|**Q# 및 .NET(C#, F#)**|[설치](xref:microsoft.quantum.install.cs) |[설치](xref:microsoft.quantum.install.cs)|&#10006; |[설치](xref:microsoft.quantum.install.cs) |
+<table>
+    <tr>
+        <th width=10%>&nbsp;</th>
+        <th>&nbsp;</th>
+        <th align="center" width=18%><img src="~/media/vs_code.png" alt="VS Code" width="50"/><br><b>VS 코드<br>(2019 이상)</b></th>
+        <th align="center" width=18%><img src="~/media/vs_studio.png" alt="VS Studio" width="50"/><br><b>VS Studio<br>(2019 이상)</b></th>
+        <th align="center" width=18%><img src="~/media/jupyter-wht.png" alt="jupyter install" width="65"/><br><b>Jupyter Notebook</b></th>
+        <th align="center" width=18%><img src="~/media/blank.png" alt="blank spacer" width="65"/><br><b>명령줄</b></th>
+    </tr>
+    <tr>
+        <th>&nbsp;</th>
+        <td align="left"><b>OS 지원:</b></td>
+        <td align="center">Windows, macOS, Linux</td>
+        <td align="center">Windows만</td>
+        <td align="center">Windows, macOS, Linux</td>
+        <td align="center">Windows, macOS, Linux</td>
+    </tr>
+    <tr>
+        <td align="right"><img src="~/media/quantum-wht.png" alt="QDK" width="60"/></td>
+        <td align="left"><b>Q# 독립 실행형</b></td>
+        <td align="center"><a href="xref:microsoft.quantum.install.standalone">설치</a></td>
+        <td align="center"><a href="xref:microsoft.quantum.install.standalone">설치</a></td>
+        <td align="center"><a href="xref:microsoft.quantum.install.jupyter">설치</a></td>
+        <td align="center"><a href="xref:microsoft.quantum.install.standalone">설치</a></td>
+    </tr>
+    <tr>
+        <td align="right"><img src="~/media/python.png" alt="python install" width="50"/></td>
+        <td align="left"><b>Q# 및 Python</b></td>
+        <td align="center"><a href="xref:microsoft.quantum.install.python">설치</a></td>
+        <td align="center"><a href="xref:microsoft.quantum.install.python">설치</a></td>
+        <td align="center"><a href="xref:microsoft.quantum.install.jupyter">설치</a></td>
+        <td align="center"><a href="xref:microsoft.quantum.install.python">설치</a></td>
+    </tr>
+    <tr>
+        <td align="right"><img src="~/media/dot_net.png" alt="dotnet install" width="50"/></td>
+        <td align="left"><b>Q# 및 .NET(C#, F#)</b></td> 
+        <td align="center"><a href="xref:microsoft.quantum.install.cs">설치</a></td>
+        <td align="center"><a href="xref:microsoft.quantum.install.cs">설치</a></td>
+        <td align="center">&#10006;</td>
+        <td align="center"><a href="xref:microsoft.quantum.install.cs">설치</a></td>
+   </tr>
+</table>
 
 ## <a name="use-the-qdk-online"></a>QDK 온라인 사용
 
