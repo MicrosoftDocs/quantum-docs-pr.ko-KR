@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Arrays.ColumnAtUnchecked
 title: ColumnAtUnchecked 함수
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: ColumnAtUnchecked
 qsharp.summary: This function does not check for matrix shape
-ms.openlocfilehash: 17211c1ae1fe12fcadf34a9411f9b0cf0cdcab50
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 06fce23bbf7142ee0e0b0ed3f2c0578676f2097b
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92719449"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96221592"
 ---
 # <a name="columnatunchecked-function"></a>ColumnAtUnchecked 함수
 
 네임 스페이스: [Microsoft 양자](xref:Microsoft.Quantum.Arrays)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 이 함수는 행렬 셰이프를 확인 하지 않습니다.

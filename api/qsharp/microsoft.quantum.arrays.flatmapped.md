@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Arrays.FlatMapped
 title: FlatMapped 함수
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: FlatMapped
 qsharp.summary: Given an array and a function that maps an array element to some output array, returns the concatenated output arrays for each array element.
-ms.openlocfilehash: 3e75c7703471a2986812df660c2f9328f1536d22
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: e851e8503b3afcb4572f09fe39079247518c22c4
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92719252"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96221252"
 ---
 # <a name="flatmapped-function"></a>FlatMapped 함수
 
 네임 스페이스: [Microsoft 양자](xref:Microsoft.Quantum.Arrays)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 배열 요소를 일부 출력 배열에 매핑하는 배열과 함수가 지정 된 경우 각 배열 요소에 대해 연결 된 출력 배열을 반환 합니다.

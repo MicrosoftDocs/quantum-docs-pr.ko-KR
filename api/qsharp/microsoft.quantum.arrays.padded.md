@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Arrays.Padded
 title: 채워진 함수
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: Padded
 qsharp.summary: Returns an array padded at with specified values up to a specified length.
-ms.openlocfilehash: 8742d4726e7ee32349bf3d0bd5077352ffca350b
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 2b7a80d1cf5c82a1ff52bc4aa207cfe335b40061
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92718981"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96220538"
 ---
 # <a name="padded-function"></a>채워진 함수
 
 네임 스페이스: [Microsoft 양자](xref:Microsoft.Quantum.Arrays)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 지정 된 값을 사용 하 여 지정 된 길이까지 채워진 배열을 반환 합니다.

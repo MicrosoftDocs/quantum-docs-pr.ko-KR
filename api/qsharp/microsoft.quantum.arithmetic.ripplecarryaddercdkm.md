@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.RippleCarryAdderCDKM
 title: RippleCarryAdderCDKM 작업
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: RippleCarryAdderCDKM
 qsharp.summary: Reversible, in-place ripple-carry addition of two integers.
-ms.openlocfilehash: 6dcb5193c5d1d059682a79e63e6562aabff7539d
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: b08d8823fd539263205aca1ee15ee69adcb163b7
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92719612"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96222102"
 ---
 # <a name="ripplecarryaddercdkm-operation"></a>RippleCarryAdderCDKM 작업
 
 네임 스페이스: [Microsoft 양자](xref:Microsoft.Quantum.Arithmetic)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 해독 가능한 내부 ripple-두 개의 정수를 추가 합니다.
 
 ```qsharp
-operation RippleCarryAdderCDKM (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, carry : Qubit) : Unit
+operation RippleCarryAdderCDKM (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, carry : Qubit) : Unit is Adj + Ctl
 ```
 
 
@@ -58,7 +58,7 @@ Xored은 합계의 가장 중요 한 비트를 사용 하 여 수행 됩니다.
 
 이 작업은 RippleCarryAdderD와 동일한 기능을 포함 하지만 $n $ 대신 하나의 보조 비트만 사용 합니다.
 
-## <a name="references"></a>참조
+## <a name="references"></a>참조 항목
 
 - Thomas G. Draper, Samuel A. Kutin, David Petrie Moulton: "A new 퀀텀 ripple and A new, 2004.
   https://arxiv.org/abs/quant-ph/0410184v1

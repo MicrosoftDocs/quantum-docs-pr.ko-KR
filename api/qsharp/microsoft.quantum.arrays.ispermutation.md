@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Arrays.IsPermutation
 title: IsPermutation 함수
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: IsPermutation
 qsharp.summary: Outputs true if and only if a given array represents a permutation.
-ms.openlocfilehash: 361bb21bedc725c25a1f3dfc811e9cfda4cb45ff
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 144f683818b5d75de5b075328365d3e994de29d1
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92719108"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96220929"
 ---
 # <a name="ispermutation-function"></a>IsPermutation 함수
 
 네임 스페이스: [Microsoft 양자](xref:Microsoft.Quantum.Arrays)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 지정 된 배열이 순열을 나타내는 경우에만 true를 출력 합니다.
