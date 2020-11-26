@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.ErrorCorrection.SteaneCode
 title: SteaneCode 함수
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.ErrorCorrection
 qsharp.name: SteaneCode
 qsharp.summary: Returns a CSS value representing the ⟦7, 1, 3⟧ Steane code encoder and decoder with in-place syndrome measurement.
-ms.openlocfilehash: ea36320fff1f0c24426e2fcead976ef051d6699f
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: b981c82acfa82cd58d82666703d4bb95ac5df280
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92712181"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96200478"
 ---
 # <a name="steanecode-function"></a>SteaneCode 함수
 
 네임 스페이스: [Microsoft 양자 수정](xref:Microsoft.Quantum.ErrorCorrection)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 내부 증후군 측정을 포함 하는 ⟦ 7, 1, 3 ⟧ Steane 코드 인코더 및 디코더를 나타내는 CSS 값을 반환 합니다.

@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Intrinsic.Rz
 title: Rz 작업
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Intrinsic
@@ -10,18 +10,18 @@ qsharp.summary: >-
   Applies a rotation about the $z$-axis by a given angle.
 
   \begin{align} R_z(\theta) \mathrel{:=} e^{-i \theta \sigma_z / 2} = \begin{bmatrix} e^{-i \theta / 2} & 0 \\\\ 0 & e^{i \theta / 2} \end{bmatrix}. \end{align}
-ms.openlocfilehash: 954b0b097d4bffcb8047a9f0c8a4c28445653c5d
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: d637abf3562eb60705da517467939dc588229c39
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92720865"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96198625"
 ---
 # <a name="rz-operation"></a>Rz 작업
 
 네임 스페이스: [Microsoft. 양자](xref:Microsoft.Quantum.Intrinsic)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft. 양자](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 지정 된 각도 만큼 $z $ 축에 대 한 회전을 적용 합니다.
@@ -30,7 +30,7 @@ ms.locfileid: "92720865"
 \end{align}
 
 ```qsharp
-operation Rz (theta : Double, qubit : Qubit) : Unit
+operation Rz (theta : Double, qubit : Qubit) : Unit is Adj + Ctl
 ```
 
 

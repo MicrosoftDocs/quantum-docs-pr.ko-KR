@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Logical.And
 title: And 함수
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Logical
 qsharp.name: And
 qsharp.summary: Returns the Boolean conjunction of two values.
-ms.openlocfilehash: cc81f650216c4db219a79c4fe89a42447a4e95b8
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 279221ed785dd76e28146e4c22e70290936bf529
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92720800"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96198574"
 ---
 # <a name="and-function"></a>And 함수
 
 네임 스페이스: [Microsoft. 양자](xref:Microsoft.Quantum.Logical)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 두 값의 부울 값을 반환 합니다.
