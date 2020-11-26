@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.MachineLearning.PartialRotationsLayer
 title: PartialRotationsLayer 함수
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.MachineLearning
 qsharp.name: PartialRotationsLayer
 qsharp.summary: Returns an array of single-qubit rotations along a given axis, parameterized by distinct model parameters.
-ms.openlocfilehash: ab964d2c43a13a5daf64aefdeccd1c26cd371ff4
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: ade0640b07f633982e98d5d02239fa205909bcce
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92722433"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96196245"
 ---
 # <a name="partialrotationslayer-function"></a>PartialRotationsLayer 함수
 
 네임 스페이스: [MachineLearning](xref:Microsoft.Quantum.MachineLearning)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [MachineLearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)
 
 
 고유 모델 매개 변수에 의해 매개 변수화 된 지정 된 축을 따라 단일가 비트 회전의 배열을 반환 합니다.

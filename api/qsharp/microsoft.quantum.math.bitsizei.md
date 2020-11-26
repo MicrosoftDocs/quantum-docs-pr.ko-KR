@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Math.BitSizeI
 title: BitSizeI 함수
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
@@ -10,18 +10,18 @@ qsharp.summary: >-
   For a non-negative integer `a`, returns the number of bits required to represent `a`.
 
   That is, returns the smallest $n$ such that $a < 2^n$.
-ms.openlocfilehash: e7cfe03908a8a394fc8ceb1c9facbf02f3db2d48
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 561450ef43144aa4d7820e1f15d9300018104acd
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92723196"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96195854"
 ---
 # <a name="bitsizei-function"></a>BitSizeI 함수
 
 네임 스페이스: [Microsoft 양자](xref:Microsoft.Quantum.Math)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 음수가 아닌 정수의 경우 `a` 를 나타내는 데 필요한 비트 수를 반환 `a` 합니다.

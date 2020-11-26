@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Math.InverseModI
 title: InverseModI 함수
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: InverseModI
 qsharp.summary: Returns $b$ such that $a \cdot b = 1 (\operatorname{mod} \texttt{modulus})$.
-ms.openlocfilehash: 6efc9da5f5ebb64065a90e749daa629dc2dce9cf
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 217ce4cd113ecbc6a06ed83c6c1dcb7baa46387d
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92723637"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96195378"
 ---
 # <a name="inversemodi-function"></a>InverseModI 함수
 
 네임 스페이스: [Microsoft 양자](xref:Microsoft.Quantum.Math)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 $A \cdot b = 1 (\operatorname{mod} \texttt{modulus}) $과 같은 $b $를 반환 합니다.

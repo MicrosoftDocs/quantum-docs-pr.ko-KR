@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Math.IsCoprimeI
 title: IsCoprimeI 함수
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: IsCoprimeI
 qsharp.summary: Returns true if $a$ and $b$ are co-prime and false otherwise.
-ms.openlocfilehash: bdfaecb61f56967e21bf85ba190638b43685214d
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 53131a755571ad1ac0a8a984bf229b16f67dbe51
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92723357"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96195361"
 ---
 # <a name="iscoprimei-function"></a>IsCoprimeI 함수
 
 네임 스페이스: [Microsoft 양자](xref:Microsoft.Quantum.Math)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 $A $ 및 $b $가 같은 경우 true를 반환 하 고 그렇지 않으면 false를 반환 합니다.

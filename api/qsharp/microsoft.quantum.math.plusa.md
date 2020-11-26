@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Math.PlusA
 title: PlusA 함수
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: PlusA
 qsharp.summary: Returns the sum (concatenation) of two inputs.
-ms.openlocfilehash: 0c6fdcf7c59dc5d89bf83e285339046b5ad5a57e
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: fe19c5d2e075624516376a5d5fa49014acb295ec
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92709605"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96194834"
 ---
 # <a name="plusa-function"></a>PlusA 함수
 
 네임 스페이스: [Microsoft 양자](xref:Microsoft.Quantum.Math)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 두 입력의 합 (연결)을 반환 합니다.
