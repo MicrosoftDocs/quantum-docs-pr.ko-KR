@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Math.ExpModL
 title: ExpModL 함수
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: ExpModL
 qsharp.summary: Returns an integer raised to a given power, with respect to a given modulus.
-ms.openlocfilehash: 73d434bd364847b4e5e06d1a9f460424e0c50850
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 07da113caeb9f6f3f3f3f92f13478f33021bfa14
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92723728"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96210752"
 ---
 # <a name="expmodl-function"></a>ExpModL 함수
 
 네임 스페이스: [Microsoft 양자](xref:Microsoft.Quantum.Math)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 지정 된 모듈러스와 관련 하 여 지정 된 지 수 만큼 거듭제곱 한 정수를 반환 합니다.

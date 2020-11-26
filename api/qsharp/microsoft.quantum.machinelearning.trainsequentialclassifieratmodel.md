@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.MachineLearning.TrainSequentialClassifierAtModel
 title: TrainSequentialClassifierAtModel 작업
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.MachineLearning
 qsharp.name: TrainSequentialClassifierAtModel
 qsharp.summary: Given the structure of a sequential classifier, trains the classifier on a given labeled training set, starting from a particular model.
-ms.openlocfilehash: b9e30e4e5bc23f56d9119083045967caff28f13a
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 02a300a2e1029d0e09aba19d090e15128fede717
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92720457"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96211470"
 ---
 # <a name="trainsequentialclassifieratmodel-operation"></a>TrainSequentialClassifierAtModel 작업
 
 네임 스페이스: [MachineLearning](xref:Microsoft.Quantum.MachineLearning)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [MachineLearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)
 
 
 순차 분류자의 구조가 지정 된 경우 특정 모델에서 시작 하 여 지정 된 레이블이 지정 된 학습 집합에 분류자를 학습 합니다.
