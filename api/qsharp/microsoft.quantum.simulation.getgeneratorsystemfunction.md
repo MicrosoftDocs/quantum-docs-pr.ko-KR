@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Simulation.GetGeneratorSystemFunction
 title: GetGeneratorSystemFunction 함수
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Simulation
 qsharp.name: GetGeneratorSystemFunction
 qsharp.summary: Retrieves the `GeneratorIndex` function in a `GeneratorSystem`.
-ms.openlocfilehash: 60ebbdbd1020d41a54426377043fc0c84ceec504
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 28e3c12d0ae0b08fc368c25eeb6f38d2834ca912
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92724554"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96229310"
 ---
 # <a name="getgeneratorsystemfunction-function"></a>GetGeneratorSystemFunction 함수
 
 네임 스페이스: [Microsoft 양자 시뮬레이션](xref:Microsoft.Quantum.Simulation)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 `GeneratorIndex`에서 함수를 검색 `GeneratorSystem` 합니다.

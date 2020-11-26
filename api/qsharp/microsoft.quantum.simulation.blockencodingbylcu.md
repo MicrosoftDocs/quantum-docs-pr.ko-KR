@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Simulation.BlockEncodingByLCU
 title: BlockEncodingByLCU 함수
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Simulation
@@ -10,18 +10,18 @@ qsharp.summary: >-
   Encodes an operator of interest into a `BlockEncoding`.
 
   This constructs a `BlockEncoding` unitary $U=P\cdot V\cdot P^\dagger$ that encodes some operator $H=\sum_{j}|\alpha_j|U_j$ of interest that is a linear combination of unitaries. Typically, $P$ is a state preparation unitary such that $P\ket{0}\_a=\sum_j\sqrt{\alpha_j/\|\vec\alpha\|\_2}\ket{j}\_a$, and $V=\sum_{j}\ket{j}\bra{j}\_a\otimes U_j$.
-ms.openlocfilehash: 04738aa54ce8b719b05954824e3553388a995df0
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 254ace01750f94e6c871de9b62f1342000bc84ea
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92724862"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96229548"
 ---
 # <a name="blockencodingbylcu-function"></a>BlockEncodingByLCU 함수
 
 네임 스페이스: [Microsoft 양자 시뮬레이션](xref:Microsoft.Quantum.Simulation)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 원하는 연산자를로 인코딩합니다 `BlockEncoding` .
@@ -35,18 +35,18 @@ function BlockEncodingByLCU<'T, 'S> (statePreparation : ('T => Unit is Adj + Ctl
 
 ## <a name="input"></a>입력
 
-### <a name="statepreparation--t--unit-adj--ctl"></a>statePreparation: ' t => [Unit](xref:microsoft.quantum.lang-ref.unit) Adj + Ctl
+### <a name="statepreparation--t--unit--is-adj--ctl"></a>statePreparation: ' t => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj + Ctl
 
 일부 대상 상태를 준비 하는 단일 $P $입니다.
 
 
-### <a name="selector--ts--unit-adj--ctl"></a>selector: (' ' ') => [Unit](xref:microsoft.quantum.lang-ref.unit) Adj + Ctl
+### <a name="selector--ts--unit--is-adj--ctl"></a>selector: (' ' ') => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj + Ctl
 
 $H $의 unitaries 구성 요소를 인코딩하는 단일 $V $입니다.
 
 
 
-## <a name="output--ts--unit-adj--ctl"></a>출력: (' ' ') => [Unit](xref:microsoft.quantum.lang-ref.unit) Adj + Ctl
+## <a name="output--ts--unit--is-adj--ctl"></a>출력: (' ' ') => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj + Ctl
 
 단일 $U $는 레지스터에 대해 공동으로 작동 `a` 하며 `s` $H $를 차단 하 고 $U ^ \A턴 = U $를 충족 합니다.
 
