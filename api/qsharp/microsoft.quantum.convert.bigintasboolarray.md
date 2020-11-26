@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Convert.BigIntAsBoolArray
 title: BigIntAsBoolArray 함수
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Convert
 qsharp.name: BigIntAsBoolArray
 qsharp.summary: Converts a given big integer to an array of Booleans. The 0 element of the array is the least significant bit of the big integer.
-ms.openlocfilehash: 13ba5b6dbf477dd1a02f24da5b7aca9bdb30ad2b
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 593fad99ef22d3c906b9f10adc07638bed227509
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92713623"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96224550"
 ---
 # <a name="bigintasboolarray-function"></a>BigIntAsBoolArray 함수
 
 네임 스페이스: [Microsoft 양자 변환](xref:Microsoft.Quantum.Convert)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft. 양자](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 지정 된 큰 정수를 부울 배열로 변환 합니다.
