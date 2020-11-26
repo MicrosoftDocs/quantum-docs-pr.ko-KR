@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Measurement.MeasureWithScratch
 title: MeasureWithScratch 작업
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Measurement
 qsharp.name: MeasureWithScratch
 qsharp.summary: Measures the given Pauli operator using an explicit scratch qubit to perform the measurement.
-ms.openlocfilehash: 1ee25dbccd5bddde406cf8ed84dff77d96d7804e
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: c42316a811e0e4a81c7f244c093a2be88fe5c733
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92720325"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96227066"
 ---
 # <a name="measurewithscratch-operation"></a>MeasureWithScratch 작업
 
 네임 스페이스: [Microsoft 양자 측정](xref:Microsoft.Quantum.Measurement)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 측정을 수행 하기 위해 명시적인 스크래치 비트를 사용 하 여 지정 된 Pauli 연산자를 측정 합니다.

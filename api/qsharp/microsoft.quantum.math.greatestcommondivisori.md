@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Math.GreatestCommonDivisorI
 title: GreatestCommonDivisorI 함수
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: GreatestCommonDivisorI
 qsharp.summary: Computes the greatest common divisor of $a$ and $b$. The GCD is always positive.
-ms.openlocfilehash: 7fd891aa2e4753020ec9ac4e702f8af9edc9df0a
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 2b6ba8a6d5ac78b69e6ee20160f3a3b1df61a879
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92723651"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96228477"
 ---
 # <a name="greatestcommondivisori-function"></a>GreatestCommonDivisorI 함수
 
 네임 스페이스: [Microsoft 양자](xref:Microsoft.Quantum.Math)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 $A $ 및 $b $의 최대 공약수를 계산 합니다. GCD는 항상 양수입니다.
