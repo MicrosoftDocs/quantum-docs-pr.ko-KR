@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Arrays.Windows
 title: Windows 함수
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: Windows
 qsharp.summary: Returns all consecutive subarrays of length `size`.
-ms.openlocfilehash: 6071d1c3e5981855c57abd0e741b1de0201c30a3
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 8f32a23aa4379744b84c3b8d9c8f565e61c3c64e
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92718748"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96219892"
 ---
 # <a name="windows-function"></a>Windows 함수
 
 네임 스페이스: [Microsoft 양자](xref:Microsoft.Quantum.Arrays)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 길이의 연속 subarrays 모두 반환 합니다 `size` .
@@ -28,7 +28,7 @@ function Windows<'T> (size : Int, array : 'T[]) : 'T[][]
 ```
 
 
-## <a name="description"></a>Description
+## <a name="description"></a>설명
 
 이 함수는의 길이에 대 한 모든 `n - size + 1` subarrays을 순서 대로 반환 합니다 `size` `n` . 여기서은의 길이입니다 `arr` .
 첫 번째 subarrays는 `arr[0..size - 1], arr[1..size], arr[2..size + 1]` 마지막 하위 배열까지 `arr[n - size..n - 1]` 입니다.

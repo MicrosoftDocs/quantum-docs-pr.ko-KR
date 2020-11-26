@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Arrays.Where
 title: Where 함수
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: Where
 qsharp.summary: Given a predicate and an array, returns the indices of that array where the predicate is true.
-ms.openlocfilehash: 1c9fa0463ed49788d12502257d735b965565d1ab
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 97598aa25d2d085aaab94f3d60ee64db9e2b89d6
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92718753"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96219926"
 ---
 # <a name="where-function"></a>Where 함수
 
 네임 스페이스: [Microsoft 양자](xref:Microsoft.Quantum.Arrays)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 조건자와 배열이 지정 된 경우 조건자가 true 인 배열의 인덱스를 반환 합니다.

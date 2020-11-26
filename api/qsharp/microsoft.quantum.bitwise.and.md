@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Bitwise.And
 title: And 함수
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Bitwise
 qsharp.name: And
 qsharp.summary: Returns the bitwise AND of two integers. This performs the same computation as the built-in `&&&` operator.
-ms.openlocfilehash: 62dae288b5e81c7ed844f0d0e2a196c2b462a876
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 8a0167345e61926566a1ca32c5f7f9ddfb3a210f
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92718669"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96219654"
 ---
 # <a name="and-function"></a>And 함수
 
 네임 스페이스: [Microsoft. 양자 비트](xref:Microsoft.Quantum.Bitwise)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft. 양자](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 두 정수의 비트 AND를 반환 합니다.

@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyAnd
 title: ApplyAnd 작업
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyAnd
 qsharp.summary: Inverts a given target qubit if and only if both control qubits are in the 1 state, using measurement to perform the adjoint operation.
-ms.openlocfilehash: 5a4e18cb0361708e1fc00e8d62c0a6c2415d6bed
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: b749013584c89273375da002ac36b3575085b7f2
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92718460"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96219297"
 ---
 # <a name="applyand-operation"></a>ApplyAnd 작업
 
 네임 스페이스: [Microsoft. 양자](xref:Microsoft.Quantum.Canon)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Adjoint 작업을 수행 하는 측정을 사용 하 여 두 컨트롤의가 모두 1 상태인 경우에만 지정 된 대상 값을 반전 합니다.
 
 ```qsharp
-operation ApplyAnd (control1 : Qubit, control2 : Qubit, target : Qubit) : Unit
+operation ApplyAnd (control1 : Qubit, control2 : Qubit, target : Qubit) : Unit is Adj + Ctl
 ```
 
 
@@ -56,7 +56,7 @@ operation ApplyAnd (control1 : Qubit, control2 : Qubit, target : Qubit) : Unit
 
 
 
-## <a name="references"></a>참조
+## <a name="references"></a>참조 항목
 
 - Cody Jones: "내결함성 Toffoli 게이트 Novel 생성", Phys 87, 022328, 2013 [Arxiv: 1212.5069](https://arxiv.org/abs/1212.5069) doi: 10.1103/PhysRevA. 87.022328
 - Craig Gidney: "나누어 the 퀀텀 추가 비용", 퀀텀 2, 페이지 74, 2018 [Arxiv: 1709.06648](https://arxiv.org/abs/1709.06648) doi: 10.1103/PhysRevA. 85.044302

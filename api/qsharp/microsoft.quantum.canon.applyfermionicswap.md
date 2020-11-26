@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyFermionicSWAP
 title: ApplyFermionicSWAP 작업
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyFermionicSWAP
 qsharp.summary: Applies the Fermionic SWAP.
-ms.openlocfilehash: 25dd91b200700d1474cf27bf1d0fa71d57f2e09b
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 0c470705843a6360df0a72374570d86571397e41
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92718273"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96218804"
 ---
 # <a name="applyfermionicswap-operation"></a>ApplyFermionicSWAP 작업
 
 네임 스페이스: [Microsoft. 양자](xref:Microsoft.Quantum.Canon)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Fermionic SWAP을 적용 합니다.
 
 ```qsharp
-operation ApplyFermionicSWAP (qubit1 : Qubit, qubit2 : Qubit) : Unit
+operation ApplyFermionicSWAP (qubit1 : Qubit, qubit2 : Qubit) : Unit is Adj + Ctl
 ```
 
 
@@ -53,9 +53,9 @@ operation ApplyFermionicSWAP (qubit1 : Qubit, qubit2 : Qubit) : Unit
 
 
 
-## <a name="references"></a>참조
+## <a name="references"></a>참조 항목
 
-- [*Ryan Babbush, 네, Wiebe, Jarrod McClean, James McClain, Hartmut Neven, Garnet Kin-Lic 변경 (* , arxiv: 1706.00023](https://arxiv.org/pdf/1706.00023.pdf)
+- [*Ryan Babbush, 네, Wiebe, Jarrod McClean, James McClain, Hartmut Neven, Garnet Kin-Lic 변경 (*, arxiv: 1706.00023](https://arxiv.org/pdf/1706.00023.pdf)
 
 ## <a name="see-also"></a>참고 항목
 

@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Arrays.Transposed
 title: 전치 함수
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: Transposed
 qsharp.summary: Returns the transpose of a matrix represented as an array of arrays.
-ms.openlocfilehash: 54071c461cf9f9411c332763b81e3bc448fb6c6e
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: f293399d8e3a2cb32b2929e8d1591ac5eaefd277
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92718813"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96219994"
 ---
 # <a name="transposed-function"></a>전치 함수
 
 네임 스페이스: [Microsoft 양자](xref:Microsoft.Quantum.Arrays)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 배열의 배열로 표시 되는 매트릭스의 바꾸기를 반환 합니다.

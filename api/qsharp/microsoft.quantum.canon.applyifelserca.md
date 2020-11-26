@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyIfElseRCA
 title: ApplyIfElseRCA 작업
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyIfElseRCA
 qsharp.summary: Applies one of two unitary operations, depending on the value of a classical result.
-ms.openlocfilehash: c48d75323f036ebce1a316382a05cd2578db47a3
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: dfd1c16a25a2da507024813a380386c8f4e49d30
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92718110"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96218753"
 ---
 # <a name="applyifelserca-operation"></a>ApplyIfElseRCA 작업
 
 네임 스페이스: [Microsoft. 양자](xref:Microsoft.Quantum.Canon)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 기존 결과의 값에 따라 두 개의 단일 작업 중 하나를 적용 합니다.
 
 ```qsharp
-operation ApplyIfElseRCA<'T, 'U> (result : Result, (zeroOp : ('T => Unit is Adj + Ctl), zeroInput : 'T), (oneOp : ('U => Unit is Adj + Ctl), oneInput : 'U)) : Unit
+operation ApplyIfElseRCA<'T, 'U> (result : Result, (zeroOp : ('T => Unit is Adj + Ctl), zeroInput : 'T), (oneOp : ('U => Unit is Adj + Ctl), oneInput : 'U)) : Unit is Adj + Ctl
 ```
 
 
@@ -39,7 +39,7 @@ operation ApplyIfElseRCA<'T, 'U> (result : Result, (zeroOp : ('T => Unit is Adj 
 또는이 적용 되었는지 확인 하는 데 사용 되는 측정 결과 `zeroOp` `oneOp` 입니다.
 
 
-### <a name="zeroop--t--unit-adj--ctl"></a>zeroOp: ' t => [Unit](xref:microsoft.quantum.lang-ref.unit) Adj + Ctl
+### <a name="zeroop--t--unit--is-adj--ctl"></a>zeroOp: ' t => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj + Ctl
 
 일 때 적용할 단일 작업 `result == Zero` 입니다.
 
@@ -49,7 +49,7 @@ operation ApplyIfElseRCA<'T, 'U> (result : Result, (zeroOp : ('T => Unit is Adj 
 때 제공 되는 입력입니다 `zeroOp` `result == Zero` .
 
 
-### <a name="oneop--u--unit-adj--ctl"></a>oneOp: ' U => [Unit](xref:microsoft.quantum.lang-ref.unit) Adj + Ctl
+### <a name="oneop--u--unit--is-adj--ctl"></a>oneOp: ' U => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj + Ctl
 
 일 때 적용할 단일 작업 `result == One` 입니다.
 

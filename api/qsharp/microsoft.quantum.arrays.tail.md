@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Arrays.Tail
 title: Tail 함수
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: Tail
 qsharp.summary: Returns the last element of the array.
-ms.openlocfilehash: 7a1eb2afefd662f90e58798b56bc83b34ac2abfd
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 7084cd8bc75f295024dce361153b58490074cdc5
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92718820"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96220096"
 ---
 # <a name="tail-function"></a>Tail 함수
 
 네임 스페이스: [Microsoft 양자](xref:Microsoft.Quantum.Arrays)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 배열의 마지막 요소를 반환합니다.

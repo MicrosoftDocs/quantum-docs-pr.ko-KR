@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyIfOneCA
 title: ApplyIfOneCA 작업
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyIfOneCA
 qsharp.summary: Applies a unitary operation conditioned on a classical result value being one.
-ms.openlocfilehash: 973dd3c5f9f3e9ad03c0626a38779f499b7ce657
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 29801ed0bec08d0ab818f237feb17c2a2a7af1e4
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92718068"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96218583"
 ---
 # <a name="applyifoneca-operation"></a>ApplyIfOneCA 작업
 
 네임 스페이스: [Microsoft. 양자](xref:Microsoft.Quantum.Canon)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 기존 결과 값에 조건 화 된 단일 작업을 적용 합니다.
 
 ```qsharp
-operation ApplyIfOneCA<'T> (result : Result, (op : ('T => Unit is Adj + Ctl), target : 'T)) : Unit
+operation ApplyIfOneCA<'T> (result : Result, (op : ('T => Unit is Adj + Ctl), target : 'T)) : Unit is Adj + Ctl
 ```
 
 
@@ -40,7 +40,7 @@ operation ApplyIfOneCA<'T> (result : Result, (op : ('T => Unit is Adj + Ctl), ta
 Op가 적용 되는지 여부를 제어 하는 측정 결과입니다.
 
 
-### <a name="op--t--unit-adj--ctl"></a>op: ' t => [Unit](xref:microsoft.quantum.lang-ref.unit) Adj + Ctl
+### <a name="op--t--unit--is-adj--ctl"></a>op: ' t => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj + Ctl
 
 조건부로 적용 될 작업입니다.
 

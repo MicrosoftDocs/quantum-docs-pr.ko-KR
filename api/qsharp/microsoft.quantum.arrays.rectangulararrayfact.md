@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Arrays.RectangularArrayFact
 title: RectangularArrayFact 함수
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: RectangularArrayFact
 qsharp.summary: Represents a condition that a 2-dimensional array has a rectangular shape
-ms.openlocfilehash: f0d3f4d6bfa9e86f1c7a91792c09e16fe86433a0
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: b8ef7d52f7f815ca3e21ded1236e775a381646cb
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92718921"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96220419"
 ---
 # <a name="rectangulararrayfact-function"></a>RectangularArrayFact 함수
 
 네임 스페이스: [Microsoft 양자](xref:Microsoft.Quantum.Arrays)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 2 차원 배열에 사각형 모양이 있는 상태를 나타냅니다.

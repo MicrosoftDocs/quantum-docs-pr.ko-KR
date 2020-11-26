@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyIfA
 title: ApplyIfA 작업
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyIfA
 qsharp.summary: Applies a adjointable operation conditioned on a classical bit.
-ms.openlocfilehash: 279a069176ee24ed83406f72170462bf58c790d9
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: d2880bbb95ebaf621ef9e5885051b94f32a3f1cc
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92718249"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96218770"
 ---
 # <a name="applyifa-operation"></a>ApplyIfA 작업
 
 네임 스페이스: [Microsoft. 양자](xref:Microsoft.Quantum.Canon)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 클래식 비트에 adjointable 작업 조건 화 된을 적용 합니다.
 
 ```qsharp
-operation ApplyIfA<'T> (op : ('T => Unit is Adj), bit : Bool, target : 'T) : Unit
+operation ApplyIfA<'T> (op : ('T => Unit is Adj), bit : Bool, target : 'T) : Unit is Adj
 ```
 
 
@@ -35,7 +35,7 @@ operation ApplyIfA<'T> (op : ('T => Unit is Adj), bit : Bool, target : 'T) : Uni
 
 ## <a name="input"></a>입력
 
-### <a name="op--t--unit-adj"></a>op: ' t => [Unit](xref:microsoft.quantum.lang-ref.unit) Adj
+### <a name="op--t--unit--is-adj"></a>op: ' t => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj
 
 조건부로 적용 될 작업입니다.
 

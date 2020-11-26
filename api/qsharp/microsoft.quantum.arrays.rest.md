@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Arrays.Rest
 title: Rest 함수
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: Rest
 qsharp.summary: Creates an array that is equal to an input array except that the first array element is dropped.
-ms.openlocfilehash: c14e4b2902741d7ea70c895aa715cbcaa849af3e
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 4dd10b6e8839fd906ca9c2e36c89c626d5772149
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92718916"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96220397"
 ---
 # <a name="rest-function"></a>Rest 함수
 
 네임 스페이스: [Microsoft 양자](xref:Microsoft.Quantum.Arrays)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 첫 번째 배열 요소가 삭제 된 경우를 제외 하 고 입력 배열과 같은 배열을 만듭니다.

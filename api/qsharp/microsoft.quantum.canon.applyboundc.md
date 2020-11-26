@@ -1,36 +1,36 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyBoundC
 title: ApplyBoundC 작업
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyBoundC
 qsharp.summary: ''
-ms.openlocfilehash: 21a7cfb222ee43631807a83d09724bcd22d83126
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: e53a42ad4c1b3187ae51f78fbf555a273286c03d
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92718436"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96219236"
 ---
 # <a name="applyboundc-operation"></a>ApplyBoundC 작업
 
 네임 스페이스: [Microsoft. 양자](xref:Microsoft.Quantum.Canon)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 
 
 ```qsharp
-operation ApplyBoundC<'T> (operations : ('T => Unit is Ctl)[], target : 'T) : Unit
+operation ApplyBoundC<'T> (operations : ('T => Unit is Ctl)[], target : 'T) : Unit is Ctl
 ```
 
 
 ## <a name="input"></a>입력
 
-### <a name="operations--t--unit-ctl"></a>작업: ' t => [단위](xref:microsoft.quantum.lang-ref.unit) Ctl []
+### <a name="operations--t--unit--is-ctl"></a>작업: ' t => [Unit](xref:microsoft.quantum.lang-ref.unit)  이 Ctl []입니다.
 
 
 

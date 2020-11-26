@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyControlledOnBitString
 title: ApplyControlledOnBitString 작업
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyControlledOnBitString
 qsharp.summary: Applies a unitary operation on the target register, controlled on a a state specified by a given bit mask.
-ms.openlocfilehash: 7a054511bacff574e6f7e889ace048c78886cf91
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 6947d2dbdec4cfbb592143024a7c8ccd53a32029
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92718357"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96219076"
 ---
 # <a name="applycontrolledonbitstring-operation"></a>ApplyControlledOnBitString 작업
 
 네임 스페이스: [Microsoft. 양자](xref:Microsoft.Quantum.Canon)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 지정 된 비트 마스크로 지정 된 상태에 의해 제어 되는 단일 작업을 대상 레지스터에 적용 합니다.
 
 ```qsharp
-operation ApplyControlledOnBitString<'T> (bits : Bool[], oracle : ('T => Unit is Adj + Ctl), controlRegister : Qubit[], targetRegister : 'T) : Unit
+operation ApplyControlledOnBitString<'T> (bits : Bool[], oracle : ('T => Unit is Adj + Ctl), controlRegister : Qubit[], targetRegister : 'T) : Unit is Adj + Ctl
 ```
 
 
@@ -35,7 +35,7 @@ operation ApplyControlledOnBitString<'T> (bits : Bool[], oracle : ('T => Unit is
 지정 된 단일 작업을 제어 하는 비트 문자열입니다.
 
 
-### <a name="oracle--t--unit-adj--ctl"></a>oracle: ' t => [Unit](xref:microsoft.quantum.lang-ref.unit) Adj + Ctl
+### <a name="oracle--t--unit--is-adj--ctl"></a>oracle: ' t => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj + Ctl
 
 대상 레지스터에 적용 될 단일 작업입니다.
 
