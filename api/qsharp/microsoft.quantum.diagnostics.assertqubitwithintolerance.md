@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Diagnostics.AssertQubitWithinTolerance
 title: AssertQubitWithinTolerance 작업
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Diagnostics
 qsharp.name: AssertQubitWithinTolerance
 qsharp.summary: Asserts that the qubit `q` is in the expected eigenstate of the Pauli Z operator up to a given tolerance.
-ms.openlocfilehash: 3fe4aa739c5e15199401aecb76ef551e52f6dcff
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 56b7f93f33ae18146c1fb13d404fc1d119eee72e
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92712881"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96202195"
 ---
 # <a name="assertqubitwithintolerance-operation"></a>AssertQubitWithinTolerance 작업
 
 네임 스페이스: [Microsoft. 양자 진단](xref:Microsoft.Quantum.Diagnostics)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft. 양자](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 `q`지정 된 허용 오차까지 해당 하는 Pauli Z 연산자의 예상 된 eigenstate를 어설션 합니다.

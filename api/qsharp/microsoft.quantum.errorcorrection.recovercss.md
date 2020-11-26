@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.ErrorCorrection.RecoverCSS
 title: RecoverCSS 작업
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.ErrorCorrection
 qsharp.name: RecoverCSS
 qsharp.summary: Performs a single round of error correction by a quantum code described by a `CSS` type.
-ms.openlocfilehash: 48d3cd3d5f6aea265fac2f50b913ab855a31accf
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: eb01b1b9fccc19f0e3f1fd5ee596b95d0d61563f
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92712202"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96200546"
 ---
 # <a name="recovercss-operation"></a>RecoverCSS 작업
 
 네임 스페이스: [Microsoft 양자 수정](xref:Microsoft.Quantum.ErrorCorrection)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 형식으로 설명 되는 퀀텀 코드에의 한 오류 수정 사항을 한 번 수행 합니다 `CSS` .

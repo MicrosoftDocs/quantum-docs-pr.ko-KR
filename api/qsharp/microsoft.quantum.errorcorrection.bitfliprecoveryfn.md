@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.ErrorCorrection.BitFlipRecoveryFn
 title: BitFlipRecoveryFn 함수
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.ErrorCorrection
 qsharp.name: BitFlipRecoveryFn
 qsharp.summary: Function for recovery Pauli operations for given syndrome measurement by table lookup for the ⟦3, 1, 1⟧ bit flip code.
-ms.openlocfilehash: dad90475b2506187282825e143b11adc5120f453
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: f8d102cd54222f61058c655e72c63e86d2f5af03
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92712496"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96201209"
 ---
 # <a name="bitfliprecoveryfn-function"></a>BitFlipRecoveryFn 함수
 
 네임 스페이스: [Microsoft 양자 수정](xref:Microsoft.Quantum.ErrorCorrection)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 ⟦ 3, 1, 1 ⟧ 비트 대칭 코드에 대 한 테이블 조회에 지정 된 증후군 측정에 대 한 복구 Pauli 작업에 대 한 함수입니다.

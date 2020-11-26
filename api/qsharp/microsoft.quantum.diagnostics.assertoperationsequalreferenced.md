@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Diagnostics.AssertOperationsEqualReferenced
 title: AssertOperationsEqualReferenced 작업
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Diagnostics
@@ -10,18 +10,18 @@ qsharp.summary: >-
   Given two operations, asserts that they act identically for all input states.
 
   This assertion is implemented by using the Choi–Jamiołkowski isomorphism to reduce the assertion to one of a qubit state assertion on two entangled registers. Thus, this operation needs only a single call to each operation being tested, but requires twice as many qubits to be allocated. This assertion can be used to ensure, for instance, that an optimized version of an operation acts identically to its naïve implementation, or that an operation which acts on a range of non-quantum inputs agrees with known cases.
-ms.openlocfilehash: a3e8791321b4f2ca1885dffeb92c7b13e5491a32
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 59c0fa72c9ca8f3bc512b6ed674fd73babc57f84
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92712958"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96202314"
 ---
 # <a name="assertoperationsequalreferenced-operation"></a>AssertOperationsEqualReferenced 작업
 
 네임 스페이스: [Microsoft. 양자 진단](xref:Microsoft.Quantum.Diagnostics)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft. 양자](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 두 작업이 지정 된 경우는 모든 입력 상태에 대해 동일 하 게 작동 한다는 것을 어설션 합니다.
@@ -47,7 +47,7 @@ operation AssertOperationsEqualReferenced (nQubits : Int, actual : (Qubit[] => U
 테스트할 작업입니다.
 
 
-### <a name="expected--qubit--unit-adj"></a>예상: 이상 [비트](xref:microsoft.quantum.lang-ref.qubit)[] => [Unit](xref:microsoft.quantum.lang-ref.unit) Adj
+### <a name="expected--qubit--unit--is-adj"></a>예상: 고 [비트](xref:microsoft.quantum.lang-ref.qubit)[] => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj
 
 테스트 중인 작업의 예상 동작을 정의 하는 작업입니다.
 

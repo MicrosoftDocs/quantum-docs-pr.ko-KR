@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Diagnostics.FormattedFailure
 title: FormattedFailure 함수
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Diagnostics
 qsharp.name: FormattedFailure
 qsharp.summary: Internal function used to fail with meaningful error messages.
-ms.openlocfilehash: 0d7fb01ddf23cd6d79f722c8f6b691afa74a8885
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: da809c04059d4fd0f0ec92412a3094f5b582fd91
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92712678"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96201702"
 ---
 # <a name="formattedfailure-function"></a>FormattedFailure 함수
 
 네임 스페이스: [Microsoft. 양자 진단](xref:Microsoft.Quantum.Diagnostics)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 의미 있는 오류 메시지와 함께 실패 하는 데 사용 되는 내부 함수입니다.

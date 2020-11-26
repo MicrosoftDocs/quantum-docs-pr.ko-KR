@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Diagnostics.EqualityFactI
 title: EqualityFactI 함수
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Diagnostics
 qsharp.name: EqualityFactI
 qsharp.summary: Asserts that a classical Int variable has the expected value.
-ms.openlocfilehash: 34bb38a9447f71372ec0b234731f31a5818d3af1
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 27c0642f6d89aaa715526092813240e11b9ab530
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92712762"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96201838"
 ---
 # <a name="equalityfacti-function"></a>EqualityFactI 함수
 
 네임 스페이스: [Microsoft. 양자 진단](xref:Microsoft.Quantum.Diagnostics)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 기존 Int 변수에 예상 값이 있음을 어설션 합니다.

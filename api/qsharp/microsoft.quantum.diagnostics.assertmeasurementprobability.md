@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Diagnostics.AssertMeasurementProbability
 title: AssertMeasurementProbability 작업
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Diagnostics
 qsharp.name: AssertMeasurementProbability
 qsharp.summary: Asserts that measuring the given qubits in the given Pauli basis will have the given result with the given probability, within some tolerance.
-ms.openlocfilehash: ff0419706d825442492f82e564f1cce86f1b112f
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 032b9224ad728f0637596668c2928a889deeba55
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92712979"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96202365"
 ---
 # <a name="assertmeasurementprobability-operation"></a>AssertMeasurementProbability 작업
 
 네임 스페이스: [Microsoft. 양자 진단](xref:Microsoft.Quantum.Diagnostics)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft. 양자](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 지정 된 Pauli의 지정 된 비트를 측정 하는 어설션은 특정 허용 범위 내에서 지정 된 확률을 포함 하는 지정 된 결과를 갖게 됩니다.
 
 ```qsharp
-operation AssertMeasurementProbability (bases : Pauli[], qubits : Qubit[], result : Result, prob : Double, msg : String, tol : Double) : Unit
+operation AssertMeasurementProbability (bases : Pauli[], qubits : Qubit[], result : Result, prob : Double, msg : String, tol : Double) : Unit is Adj + Ctl
 ```
 
 

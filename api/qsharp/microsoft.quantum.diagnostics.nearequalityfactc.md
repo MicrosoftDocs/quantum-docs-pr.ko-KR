@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Diagnostics.NearEqualityFactC
 title: NearEqualityFactC 함수
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Diagnostics
 qsharp.name: NearEqualityFactC
 qsharp.summary: Asserts that a classical complex number has the expected value up to a small tolerance of 1e-10.
-ms.openlocfilehash: aef4925452fe2de444b1995f92b8fe1a2894834a
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: b08d5edcc1ead2cd125864a157efac76b72ba0d9
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92712664"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96201617"
 ---
 # <a name="nearequalityfactc-function"></a>NearEqualityFactC 함수
 
 네임 스페이스: [Microsoft. 양자 진단](xref:Microsoft.Quantum.Diagnostics)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 기존 복소수에 필요한 값이 1e-10의 작은 허용 오차 보다 많은 것을 어설션 합니다.

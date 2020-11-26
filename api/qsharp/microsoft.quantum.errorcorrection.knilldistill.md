@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.ErrorCorrection.KnillDistill
 title: KnillDistill 작업
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.ErrorCorrection
 qsharp.name: KnillDistill
 qsharp.summary: Implements the Knill magic state distillation algorithm.
-ms.openlocfilehash: 1135db83cf750918347df10c6f1301b636aaee0c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: df00c7572d909a67ec658bc8dccaf0e338afe5c5
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92712279"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96200750"
 ---
 # <a name="knilldistill-operation"></a>KnillDistill 작업
 
 네임 스페이스: [Microsoft 양자 수정](xref:Microsoft.Quantum.ErrorCorrection)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Knill magic state 추출을 알고리즘을 구현 합니다.
@@ -50,6 +50,6 @@ Knill 알고리즘을 따릅니다.
 그러나 현재 구현은 너무 많은 비트를 사용 하기 때문에 최적 상태가 아닙니다.
 매직 상태는이 루틴에 삽입 되며,이 경우 더 나은 프로토콜이 있습니다.
 
-## <a name="references"></a>참조
+## <a name="references"></a>참조 항목
 
 - [Knill](https://arxiv.org/abs/quant-ph/0402171)

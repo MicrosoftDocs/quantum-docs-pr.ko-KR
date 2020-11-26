@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Diagnostics.EqualityWithinToleranceFact
 title: EqualityWithinToleranceFact 함수
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Diagnostics
 qsharp.name: EqualityWithinToleranceFact
 qsharp.summary: Represents the claim that a classical floating point value has the expected value up to a given absolute tolerance.
-ms.openlocfilehash: de15a32d5b38c5ab8c681d2c052669a48cf676cc
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 6ada2632974fddd6dd0fd8e4e6ab0866e4f29524
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92712748"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96201719"
 ---
 # <a name="equalitywithintolerancefact-function"></a>EqualityWithinToleranceFact 함수
 
 네임 스페이스: [Microsoft. 양자 진단](xref:Microsoft.Quantum.Diagnostics)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 고전 부동 소수점 값에 지정 된 절대 허용 오차 값이 필요한 값을 포함 하는 클레임을 나타냅니다.
