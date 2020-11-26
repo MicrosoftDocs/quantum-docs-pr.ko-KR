@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Simulation.PauliLCUUnitary
 title: Paulililula 함수
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Simulation
 qsharp.name: PauliLCUUnitary
 qsharp.summary: Used in implementation of `PauliBlockEncoding`
-ms.openlocfilehash: d88bb01e7b3d75113f66719b292ddd99f642d1c7
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 39ace64019ed6b46688f24709352750e5c45ab3a
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92710550"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96229106"
 ---
 # <a name="paulilcuunitary-function"></a>Paulililula 함수
 
 네임 스페이스: [Microsoft 양자 시뮬레이션](xref:Microsoft.Quantum.Simulation)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 구현에 사용 됨 `PauliBlockEncoding`
@@ -36,7 +36,7 @@ function PauliLCUUnitary (generatorIndex : Microsoft.Quantum.Simulation.Generato
 
 
 
-## <a name="output--qubit--unit-adj--ctl"></a>출력: [Adj](xref:microsoft.quantum.lang-ref.qubit)[] => [Unit](xref:microsoft.quantum.lang-ref.unit) + Ctl
+## <a name="output--qubit--unit--is-adj--ctl"></a>출력:가 중 [비트](xref:microsoft.quantum.lang-ref.qubit)[] => [Unit](xref:microsoft.quantum.lang-ref.unit)  이 Adj + Ctl입니다.
 
 
 
