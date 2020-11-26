@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Intrinsic.CCNOT
 title: CCNOT 작업
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Intrinsic
 qsharp.name: CCNOT
 qsharp.summary: Applies the doubly controlled–NOT (CCNOT) gate to three qubits.
-ms.openlocfilehash: bf20ff1e9d25d72e7e8e0207ab947a57dc394cf4
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 715796ddd915d80036933e3f1ceefa97aa62cecf
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92711537"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96212480"
 ---
 # <a name="ccnot-operation"></a>CCNOT 작업
 
 네임 스페이스: [Microsoft. 양자](xref:Microsoft.Quantum.Intrinsic)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft. 양자](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 3 가지 비트에 이중 제어 – (CCNOT) 게이트를 적용 합니다.
 
 ```qsharp
-operation CCNOT (control1 : Qubit, control2 : Qubit, target : Qubit) : Unit
+operation CCNOT (control1 : Qubit, control2 : Qubit, target : Qubit) : Unit is Adj + Ctl
 ```
 
 
