@@ -9,12 +9,12 @@ uid: microsoft.quantum.relnotes
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 93ece8cbaa2ac8e6e0c9bb417e8f40130cb8a3fa
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 1c3c502b6487482f06820e07425b8516f259fb0d
+ms.sourcegitcommit: b930bb59a1ba8f41d2edc9ed98197109aa8c7f1b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/26/2020
-ms.locfileid: "96192097"
+ms.locfileid: "96231794"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit 릴리스 정보
 
@@ -173,7 +173,7 @@ ms.locfileid: "96192097"
 
 이 릴리스에는 다음이 포함됩니다.
 
-- 의 액세스 한정자에 대 한 새로운 지원 Q# , 자세한 내용은 [파일 구조](xref:microsoft.quantum.guide.filestructure) 를 참조 하세요.
+- 의 액세스 한정자에 대 한 새로운 지원 Q# , 자세한 내용은 [액세스 한정자](xref:microsoft.quantum.qsharp.accessmodifiers) 를 참조 하세요.
 - .NET Core SDK 3.1로 업데이트됨
 
 [라이브러리](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [컴파일러](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [런타임](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [샘플](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) 및 [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed)에 대한 비공개 PR의 전체 목록을 참조하세요.  
@@ -258,7 +258,7 @@ ms.locfileid: "96192097"
 
 이 릴리스에는 다음이 포함됩니다.
 
-- 에서 [활용 문에](xref:microsoft.quantum.guide.operationsfunctions#conjugations) 대 한 새로운 지원 Q#
+- 에서 [활용 문에](xref:microsoft.quantum.qsharp.conjugations#conjugations) 대 한 새로운 지원 Q#
 - 컴파일러의 새 코드 작업(예: "바꿀 내용", "설명서 추가" 및 단순 배열 항목 업데이트)
 - 설치 템플릿 및 새 프로젝트 명령이 Visual Studio Code 확장에 추가됨
 - ApplyIf 조합기의 새 변형(예: [Microsoft.Quantum.Canon.ApplyIfOne](xref:Microsoft.Quantum.Canon.ApplyIfOne))이 추가됨
@@ -275,7 +275,7 @@ ms.locfileid: "96192097"
 
 이 릴리스에는 다음이 포함됩니다.
 
-- 배열 조각화에 대한 새 인덱싱 위치 - 자세한 내용은 [언어 참조](xref:microsoft.quantum.guide.expressions#array-slices)를 참조하세요.
+- 조각화 배열의 새 인덱싱 자세한 내용은 [언어 참조를 참조](xref:microsoft.quantum.qsharp.contextualexpressions#contextual-and-omitted-expressions) 하세요.
 - [Microsoft Container Registry](https://github.com/microsoft/ContainerRegistry)에서 호스트 되는 Dockerfile을 추가 했습니다 [. Q# 자세한 내용은 I 리포지토리](https://github.com/microsoft/iqsharp/blob/main/README.md) 를 참조 하세요.
 - [추적 시뮬레이터](xref:microsoft.quantum.machines.qc-trace-simulator.intro)에 대한 호환성이 손상되는 변경, 구성 설정 업데이트, 이름 변경 - [업데이트된 이름에 대한 .NET API 브라우저](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulatorconfiguration)를 참조하세요.
 
@@ -296,10 +296,10 @@ ms.locfileid: "96192097"
 
 ### <a name="no-locq-language-syntax"></a>Q# 언어 구문
 이 릴리스는 새 Q# 언어 구문을 추가 합니다.
-* [사용자 정의 형식](xref:microsoft.quantum.guide.types#user-defined-types)에 대해 명명된 항목이 추가되었습니다.  
+* [사용자 정의 형식] typedeclarations # 형식 선언에 대해 명명 된 항목을 추가 합니다.  
 * 이제 사용자 정의 형식 생성자를 함수로 사용할 수 있습니다.
-* [복사 및 업데이트](xref:microsoft.quantum.guide.expressions#copy-and-update-expressions)(copy-and-update) 및 [적용 및 재할당](xref:microsoft.quantum.guide.variables#rebinding-of-mutable-symbols)(apply-and-reassign) 지원이 사용자 정의 형식에 추가되었습니다.
-* [성공할 때까지 반복](xref:microsoft.quantum.guide.controlflow#repeat-until-success-loop)(repeat-until-success) 루프에 대한 픽스업 블록은 이제 선택 사항입니다.
+* [복사 및 업데이트](xref:microsoft.quantum.qsharp.copyandupdateexpressions#copy-and-update-expressions)(copy-and-update) 및 [적용 및 재할당](xref:microsoft.quantum.qsharp.variabledeclarationsandreassignments#evaluate-and-reassign-statements)(apply-and-reassign) 지원이 사용자 정의 형식에 추가되었습니다.
+* [성공할 때까지 반복](xref:microsoft.quantum.qsharp.conditionalloops#repeat-statement)(repeat-until-success) 루프에 대한 픽스업 블록은 이제 선택 사항입니다.
 * 이제 작동 중이 아닌 함수에서 while 루프를 지원합니다.
 
 ### <a name="library"></a>라이브러리 
@@ -327,10 +327,10 @@ ms.locfileid: "96192097"
 
 ### <a name="no-locq-language-syntax"></a>Q# 언어 구문
 이 릴리스는 새 Q# 언어 구문을 추가 합니다.
-* `+` 연산자를 사용하여 [양자 연산 특수화(제어 및 수반(adjoint))를 표현하는 간단한 방법](xref:microsoft.quantum.guide.operationsfunctions#controlled-and-adjoint-operations)이 추가되었습니다.  이전 구문은 더 이상 사용되지 않습니다.  이전 구문(예: `: adjoint`)을 사용하는 프로그램은 계속 작동하지만 컴파일 시간 경고가 생성됩니다.  
-* 새로운 [복사 및 업데이트](xref:microsoft.quantum.guide.expressions#copy-and-update-expressions) 연산자인 `w/`가 추가되었습니다. 이는 배열 만들기를 기존 배열의 수정으로 표현하는 데 사용할 수 있습니다.
-* 일반적인 [적용 및 업데이트(apply-and-update) 문](xref:microsoft.quantum.guide.variables#rebinding-of-mutable-symbols)(예: `+=`, `w/=`)이 추가되었습니다.
-* 짧은 네임스페이스 이름을 지정하는 방법이 [open 지시문](xref:microsoft.quantum.guide.filestructure#open-directives)에 추가되었습니다.
+* `+` 연산자를 사용하여 [양자 연산 특수화(제어 및 수반(adjoint))를 표현하는 간단한 방법](xref:microsoft.quantum.qsharp.specializationdeclarations)이 추가되었습니다.  이전 구문은 더 이상 사용되지 않습니다.  이전 구문(예: `: adjoint`)을 사용하는 프로그램은 계속 작동하지만 컴파일 시간 경고가 생성됩니다.  
+* [복사 및 업데이트](xref:microsoft.quantum.qsharp.copyandupdateexpressions#copy-and-update-expressions)에 대 한 새 삼항 연산자를 추가 `w/` `<-` 합니다 .를 사용 하 여 기존 배열의 수정으로 배열 생성을 표현할 수 있습니다.
+* 공통 [적용 및 재할당 문](xref:microsoft.quantum.qsharp.variabledeclarationsandreassignments#evaluate-and-reassign-statements)(예:,,)을 추가 `+=` 합니다 `w/=` .
+* 짧은 네임스페이스 이름을 지정하는 방법이 [open 지시문](xref:microsoft.quantum.qsharp.namespaces#open-directives)에 추가되었습니다.
 
 이 릴리즈에서는 더 이상 배열 요소를 set 문의 왼쪽에 지정할 수 없습니다.  이는 실제로 연산 결과에서 항상 수정을 통해 새 배열을 만드는 경우 구문에서 이 배열을 변경할 수 있음을 의미하기 때문입니다.  대신, 동일한 결과를 얻기 위해 새 복사 및 업데이트 연산자인 `w/`를 사용하라는 제안과 함께 컴파일러 오류가 생성됩니다.  
 
@@ -405,7 +405,7 @@ Q#퀀텀 개발 키트 버전 0.5의 기존 프로젝트가 있는 경우 해당
 
 - 커뮤니티가 보고한 DumpRegister 문제의 버그를 수정했습니다([#148](https://github.com/Microsoft/Quantum/issues/148)).
 
-- [문 사용](xref:microsoft.quantum.guide.qubits#allocating-qubits) 내에서 반환하는 기능을 추가했습니다.
+- [Using 및 borrowing 문](xref:microsoft.quantum.qsharp.quantummemorymanagement#quantum-memory-management)내에서 반환 하는 기능이 추가 되었습니다.
 
 - [시작 가이드](xref:microsoft.quantum.install)를 개선했습니다.
 
@@ -428,7 +428,7 @@ Q#퀀텀 개발 키트 버전 0.5의 기존 프로젝트가 있는 경우 해당
 
 이 릴리스에는 다음이 포함됩니다.
 
-- 임의적 크기의 부호 있는 정수를 나타내는 새 기본 형식인 BigInt에 대한 지원을 추가합니다.  [BigInt 형식](xref:microsoft.quantum.guide.types)에 대해 자세히 알아보세요.
+- 임의적 크기의 부호 있는 정수를 나타내는 새 기본 형식인 BigInt에 대한 지원을 추가합니다.  [BigInt](xref:microsoft.quantum.qsharp.valueliterals#bigint-literals)에 대해 자세히 알아보세요.
 - 매우 많은 수의 큐비트로 X, CNOT, 다중 제어 X 퀀텀 작업을 시뮬레이션할 수 있는 특별한 용도의 고속 시뮬레이터인 새 Toffoli 시뮬레이터를 추가합니다.  [Toffoli 시뮬레이터](xref:microsoft.quantum.machines.toffoli-simulator)에 대해 자세히 알아보세요.
 - 퀀텀 컴퓨터에서 작업의 지정 된 instanceee를 실행 하는 데 필요한 리소스를 추정 하는 간단한 리소스 평가기를 추가 Q# 합니다.  [리소스 추정기](xref:microsoft.quantum.machines.resources-estimator)에 대해 자세히 알아보세요.
 

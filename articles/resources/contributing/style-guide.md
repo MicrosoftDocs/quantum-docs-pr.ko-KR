@@ -9,12 +9,12 @@ uid: microsoft.quantum.contributing.style
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 7666974e255d537c8d611d0077b7f9b37a61f918
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: cfc201a16b1b42c82314220f77ae120076291759
+ms.sourcegitcommit: b930bb59a1ba8f41d2edc9ed98197109aa8c7f1b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691742"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96231658"
 ---
 # <a name="no-locq-style-guide"></a>Q# 스타일 안내선 #
 ## <a name="general-conventions"></a>일반 규칙 ##
@@ -52,7 +52,7 @@ ms.locfileid: "92691742"
 > 이러한 관점에서 사용자 정의 형식은 형식 자체와 생성자 함수에 일관 된 이름을 갖도록 명사로 이름을 지정 해야 합니다.
 
 적절 한 경우 작업 이름이 작업에서 수행한 효과를 명확 하 게 나타내는 동사로 시작 되는지 확인 합니다.
-예를 들면 다음과 같습니다.
+예를 들어:
 
 - `MeasureInteger`
 - `EstimateEnergy`
@@ -96,7 +96,7 @@ ms.locfileid: "92691742"
 
 # <a name="examples"></a>[예](#tab/examples)
 
-| &nbsp;  | Name | Description |
+| &nbsp;  | 이름 | Description |
 |---|------|-------------|
 | ☑ | `operation ReflectAboutStart` | 작업의 효과를 나타내려면 동사 ("반사")를 사용 하지 않습니다. |
 | ☒ | <s>`operation XRotation`</s> | 명사구를 사용 하는 것은 연산이 아니라 함수를 제안 합니다. |
@@ -129,7 +129,7 @@ ms.locfileid: "92691742"
 
 # <a name="examples"></a>[예](#tab/examples)
 
-| &nbsp;  | Name | Description |
+| &nbsp;  | 이름 | Description |
 |---|------|-------------|
 | ☑ | `@EntryPoint() operation RunSimulation` | 작업 이름을 통해 진입점의 용도를 명확 하 게 전달 합니다. |
 | ☒ | <s>`@EntryPoint() operation Main`</s> | 를 사용 `Main` 하면 진입점의 목적이 명확 하 게 전달 되지 않으며 특성으로 중복 됩니다 `@EntryPoint()` . |
@@ -171,7 +171,7 @@ is Adj + Ctl {
 
 # <a name="examples"></a>[예](#tab/examples)
 
-| &nbsp;   | Name | Description |
+| &nbsp;   | 이름 | Description |
 |---|------|-------------|
 | ☑ | `X` | "$X $ 변환 적용"의 이해 하기 쉬운 약어 |
 | ☑ | `CNOT` | "제어-없음"에 대 한 이해 하기 쉬운 약어 |
@@ -228,7 +228,7 @@ Q#는 강력 하 고 staticly 지정 된 언어 이므로 한 형식의 값은 �
 
 # <a name="examples"></a>[예](#tab/examples)
 
-| &nbsp;   | Name | Description |
+| &nbsp;   | 이름 | Description |
 |---|------|-------------|
 | ☒ | <s>`ToDouble`</s> | 전치사 "to"는 동사가 아닌 연산을 나타내는 동사 구를 생성 합니다. |
 | ☒ | <s>`AsDouble`</s> | 입력 형식이 함수 이름에서 명확 하지 않습니다. |
@@ -251,7 +251,7 @@ _*_
 
 # <a name="examples"></a>[예](#tab/examples)
 
-| &nbsp;  | Name | Description |
+| &nbsp;  | 이름 | Description |
 |---|------|-------------|
 | ☒ | <s>`operation _ApplyDecomposedOperation`</s> | `_`이 작업이 내부용 으로만 사용 됨을 나타내기 위해 밑줄을 사용 하지 않습니다. |
 | ☑ | `internal operation ApplyDecomposedOperation` | `internal`시작 부분에 있는 키워드는이 작업이 내부용 으로만 사용 됨을 나타냅니다. |
@@ -390,7 +390,7 @@ Q#이 언어를 사용 하면 특수 형식의 문서 주석을 사용 하 여 �
 따라서 문서 주석을 사용 하면이 문서의 다른 규칙을 사용 하 여 쉽게 표현 되지 않는 세부 정보에 대 한 유용한 참조를 제공 하 여 사용자가 코드를 이해 하는 데 도움이 될 수 있습니다.
 
 > [!div class="nextstepaction"]
-> [문서 주석 구문 참조](xref:microsoft.quantum.guide.filestructure#documentation-comments)입니다.
+> [문서 주석 구문 참조](xref:microsoft.quantum.qsharp.comments#documentation-comments)입니다.
 
 이 기능을 효과적으로 사용 하 여 사용자를 돕기 위해 문서 주석을 작성할 때 몇 가지 사항을 염두에 두어야 합니다.
 

@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.host-programs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: f1a4ef0616a8a3f1548b7a7207cf8cbb9dcc7260
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 2c5bdebc826bb85f6d7e0ade6232e15e29e8fb19
+ms.sourcegitcommit: b930bb59a1ba8f41d2edc9ed98197109aa8c7f1b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691706"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96231692"
 ---
 # <a name="ways-to-run-a-no-locq-program"></a>프로그램을 실행 하는 방법 Q#
 
@@ -45,7 +45,7 @@ ms.locfileid: "92691706"
 ```
 
 그러나이 코드는에서 실행할 수 없습니다 Q# .
-이렇게 하려면 작업 본문을 구성 해야 합니다 .이 [작업](xref:microsoft.quantum.guide.basics#q-operations-and-functions)은 직접 또는 다른 작업을 통해---호출 될 때 실행 됩니다. 따라서 다음 형식의 작업을 작성할 수 있습니다.
+이렇게 하려면 작업 본문을 구성 해야 합니다 .이 [작업](xref:microsoft.quantum.qsharp.operationsandfunctions)은 직접 또는 다른 작업을 통해---호출 될 때 실행 됩니다. 따라서 다음 형식의 작업을 작성할 수 있습니다.
 ```qsharp
     operation MeasureSuperposition() : Result {
         using (q = Qubit()) {
@@ -54,9 +54,9 @@ ms.locfileid: "92691706"
         }
     }
 ```
-입력을 `MeasureSuperposition` 사용 하지 않고 [Result](xref:microsoft.quantum.guide.types)형식의 값을 반환 하는 작업을 정의 했습니다.
+입력을 `MeasureSuperposition` 사용 하지 않고 [Result](xref:microsoft.quantum.qsharp.typesystem-index#available-types)형식의 값을 반환 하는 작업을 정의 했습니다.
 
-이 페이지의 예제는 작업 으로만 구성 되지만 Q# *operations* 설명 하는 모든 개념은 함수에 동일 하 게 관련 Q# *functions* 되어 있으므로 *callables* 으로 통칭 됩니다. 이러한 차이점은 [ Q# 작업 및 함수](xref:microsoft.quantum.guide.basics#q-operations-and-functions)에 대 한 기본 사항 및 [작업 및 함수](xref:microsoft.quantum.guide.operationsfunctions)에 설명 되어 있습니다.
+는 작업 외에 Q# 도 결정적 계산을 함수로 캡슐화 할 수 있습니다. 이를 의미 하는 것 외에,이는 중간 비트에 대해 수행 되는 계산을 함수 대신 작업으로 캡슐화 해야 한다는 의미입니다. 작업 및 함수 사이에는 약간의 차이가 있습니다. 이를 *callables* 이라고 통칭 합니다.
 
 ### <a name="callable-defined-in-a-no-locq-file"></a>파일에 정의 된 호출 가능 Q#
 
@@ -65,7 +65,7 @@ ms.locfileid: "92691706"
 
 모든 Q# 형식 및 callables (정의 하는 모든 형식 및 해당 언어의 내장 함수)은 네임 스페이스 내에서 정의 됩니다 .이 *네임 스페이스* 는 각 이름에 대해 참조할 수 있는 전체 이름을 제공 합니다.
 
-예를 들어 [`H`](xref:Microsoft.Quantum.Intrinsic.H) 및 [`MResetZ`](xref:Microsoft.Quantum.Measurement.MResetZ) 작업은 [`Microsoft.Quantum.Instrinsic`](xref:Microsoft.Quantum.Intrinsic) 및 [`Microsoft.Quantum.Measurement`](xref:Microsoft.Quantum.Measurement) 네임 스페이스 ( [ Q# 표준 라이브러리](xref:microsoft.quantum.qsharplibintro)의 일부)에 있습니다.
+예를 들어 [`H`](xref:Microsoft.Quantum.Intrinsic.H) 및 [`MResetZ`](xref:Microsoft.Quantum.Measurement.MResetZ) 작업은 [`Microsoft.Quantum.Instrinsic`](xref:Microsoft.Quantum.Intrinsic) 및 [`Microsoft.Quantum.Measurement`](xref:Microsoft.Quantum.Measurement) 네임 스페이스 ( [ Q# 표준 라이브러리](xref:microsoft.quantum.libraries.standard.intro)의 일부)에 있습니다.
 따라서 항상 *전체* 이름 및를 통해 호출할 수 `Microsoft.Quantum.Intrinsic.H(<qubit>)` `Microsoft.Quantum.Measurement.MResetZ(<qubit>)` 있지만 항상이 작업을 수행 하면 매우 복잡 한 코드를 사용할 수 있습니다.
 
 대신 `open` 위의 작업 본문에서 수행한 것 처럼 문이 보다 간결한 줄임으로 참조 될 수 있도록 합니다.
@@ -164,7 +164,7 @@ namespace NamespaceName {
 따라서 또는이 인쇄 된 것을 볼 수 있습니다 `One` `Zero` . 
 
 아래에 더 많은 callables을 정의 하는 경우에는 문제가 되지 않습니다 `MeasureSuperposition` .
-또한 선언 전에 호출 가능한 [문서 주석을](xref:microsoft.quantum.guide.filestructure#documentation-comments) 포함 하는 경우에는이 `@EntryPoint()` 특성을 위에 배치 하면 됩니다.
+또한 선언 전에 호출 가능한 [문서 주석을](xref:microsoft.quantum.qsharp.comments#documentation-comments) 포함 하는 경우에는이 `@EntryPoint()` 특성을 위에 배치 하면 됩니다.
 
 ### <a name="callable-arguments"></a>호출 가능 인수
 
@@ -589,7 +589,7 @@ Q# Jupyter 노트북은 Q# Q# 모든 지침, 메모 및 기타 콘텐츠와 함�
 
 Jupyter Notebook에서 Q# Q# 파일의 네임 스페이스 내에서와 같은 방식으로 코드를 입력 Q# 합니다.
 
-따라서 해당 네임 스페이스에 대 한 문을 사용 하 여 [ Q# 표준 라이브러리](xref:microsoft.quantum.qsharplibintro) 에서 callables에 액세스 하도록 설정할 수 있습니다 `open` .
+따라서 해당 네임 스페이스에 대 한 문을 사용 하 여 [ Q# 표준 라이브러리](xref:microsoft.quantum.libraries.standard.intro) 에서 callables에 액세스 하도록 설정할 수 있습니다 `open` .
 이러한 문을 사용 하 여 셀을 실행할 때 해당 네임 스페이스의 정의는 작업 영역 전체에서 사용할 수 있습니다.
 
 > [!NOTE]

@@ -87,7 +87,7 @@
 
 ## <a name="adjoint"></a>Adjoint
 
-[작업](xref:microsoft.quantum.glossary#operation)의 복소수 복소수입니다. [단일](xref:microsoft.quantum.glossary#unitary-operator) 연산자를 구현 하는 작업의 경우 adjoint는 작업의 역함수 이며 칼 기호로 표시 됩니다. 예를 들어 연산이 `U` 단일 연산자 u를 나타내면 $ $ 는 `Adjoint U` u ^를 나타냅니다 $ \dagger $ . 자세한 내용은 [Adjoint](xref:microsoft.quantum.guide.operationsfunctions#controlled-and-adjoint-operations)를 참조 하세요.
+[작업](xref:microsoft.quantum.glossary#operation)의 복소수 복소수입니다. [단일](xref:microsoft.quantum.glossary#unitary-operator) 연산자를 구현 하는 작업의 경우 adjoint는 작업의 역함수 이며 칼 기호로 표시 됩니다. 예를 들어 연산이 `U` 단일 연산자 u를 나타내면 $ $ 는 `Adjoint U` u ^를 나타냅니다 $ \dagger $ . 자세한 내용은 [함수 응용 프로그램](xref:microsoft.quantum.qsharp.functorapplication#functor-application)을 참조 하세요.
 
 ## <a name="ancilla"></a>Ancilla
 
@@ -103,7 +103,8 @@
 
 ## <a name="callable"></a>호출
 
-언어의 [작업](xref:microsoft.quantum.glossary#operation) 또는 [함수](xref:microsoft.quantum.glossary#function) Q# 입니다. 자세한 내용은 [작업 및 함수](xref:microsoft.quantum.guide.operationsfunctions)를 참조 하세요.
+[ Q# 언어](https://github.com/microsoft/qsharp-language/tree/main/Specifications/Language#q-language)의 [작업](xref:microsoft.quantum.glossary#operation) 또는 [함수](xref:microsoft.quantum.glossary#function) 입니다.
+자세한 내용은 [ Q# 프로그램](xref:microsoft.quantum.guide.programs) 을 참조 하세요.
 
 ## <a name="clifford-group"></a>Clifford 그룹
 
@@ -111,7 +112,7 @@
 
 ## <a name="controlled"></a>제어
 
-대상 작업에 대 한 조력자로 하나 이상의 이상 [비트](xref:microsoft.quantum.glossary#qubit) 를 사용 하는 퀀텀 [작업](xref:microsoft.quantum.glossary#operation) 입니다. 자세한 내용은 [제어 및 adjoint 작업](xref:microsoft.quantum.guide.operationsfunctions#controlled-and-adjoint-operations)을 참조 하세요.
+대상 작업에 대 한 조력자로 하나 이상의 이상 [비트](xref:microsoft.quantum.glossary#qubit) 를 사용 하는 퀀텀 [작업](xref:microsoft.quantum.glossary#operation) 입니다. 자세한 내용은 [함수 응용 프로그램](xref:microsoft.quantum.qsharp.functorapplication#functor-application)을 참조 하세요.
 
 ## <a name="dirac-notation"></a>기타 ac 표기법
 
@@ -137,12 +138,12 @@
 
 시간이 지남에 따라 [퀀텀 상태](xref:microsoft.quantum.glossary#quantum-state) 를 변경 하는 방법입니다. 자세한 내용은 [Matrix 지 수](xref:microsoft.quantum.concepts.matrix-advanced#matrix-exponentials)을 (를) 참조 하세요.
 
-## <a name="function"></a>함수
-Q#순수 하 게 일반 (비 퀀텀) 인 언어의 서브루틴 유형입니다. 퀀텀 알고리즘 내에서 함수를 사용 하는 [동안에는](xref:microsoft.quantum.glossary#qubit) 이 함수를 사용 하 여 [작업](xref:microsoft.quantum.glossary#operation)을 호출할 수 없습니다. 자세한 내용은 [작업 및 함수](xref:microsoft.quantum.guide.operationsfunctions)를 참조 하세요.
+## <a name="function"></a>기능
+Q#순수 하 게 결정적 인 언어의 서브루틴 유형입니다. 퀀텀 알고리즘 내에서 함수를 사용 하는 [동안에는](xref:microsoft.quantum.glossary#qubit) 이 함수를 사용 하 여 [작업](xref:microsoft.quantum.glossary#operation)을 호출할 수 없습니다. 자세한 내용은 [ Q# 프로그램](xref:microsoft.quantum.guide.programs) 을 참조 하세요.
 
 ## <a name="gate"></a>라는
 
-기존 논리 게이트의 개념에 따라 퀀텀 [작업](xref:microsoft.quantum.glossary#operation)에 대 한 레거시 용어입니다. [퀀텀 회로](xref:microsoft.quantum.glossary#quantum-circuit-diagram) 는 기존 논리 회로의 유사한 개념에 따라 게이트 (또는 작업)의 네트워크입니다.
+클래식 논리 게이트의 개념에 따라 특정 한 내장 퀀텀 [작업](xref:microsoft.quantum.glossary#operation)에 대 한 레거시 용어입니다. [퀀텀 회로](xref:microsoft.quantum.glossary#quantum-circuit-diagram) 는 기존 논리 회로의 유사한 개념에 따라 게이트의 네트워크입니다.
 
 ## <a name="global-phase"></a>글로벌 단계
 
@@ -166,15 +167,11 @@ Hadamard 연산 (Hadamard gate 또는 transform이 라고도 함)은 단일의 [
 
 ## <a name="namespace"></a>네임스페이스
 
-관련 이름 (예: [작업](xref:microsoft.quantum.glossary#operation), [함수](xref:microsoft.quantum.glossary#function)및 [사용자 정의 형식](xref:microsoft.quantum.glossary#user-defined-type))의 컬렉션에 대 한 레이블입니다. 예를 들어, [네임 스페이스](xref:microsoft.quantum.preparation) 는 초기 상태를 준비 하는 데 도움이 되는 표준 라이브러리에 정의 된 모든 기호에 레이블을 지정 합니다.
+관련 이름 (예: [작업](xref:microsoft.quantum.glossary#operation), [함수](xref:microsoft.quantum.glossary#function)및 [사용자 정의 형식](xref:microsoft.quantum.glossary#user-defined-type))의 컬렉션에 대 한 레이블입니다. 예를 들어, [네임 스페이스](xref:Microsoft.Quantum.Preparation) 는 초기 상태를 준비 하는 데 도움이 되는 표준 라이브러리에 정의 된 모든 기호에 레이블을 지정 합니다.
 
-## <a name="operation"></a>작업(Operation)
+## <a name="operation"></a>연산
 
-에서 퀀텀 계산의 기본 단위 Q# 입니다. C, c + + 또는 Python의 함수 또는 c # 또는 Java의 정적 메서드와 거의 동일 합니다. 자세한 내용은 [작업 및 함수](xref:microsoft.quantum.guide.operationsfunctions)를 참조 하세요.
-
-## <a name="operator-application"></a>운영자 응용 프로그램
-
-퀀텀 작업을 수행 하는 중입니다. 이는 일반적으로 단일 행렬을 현재 퀀텀 상태 벡터에 적용 합니다.
+에서 퀀텀 계산의 기본 단위 Q# 입니다. C, c + + 또는 Python의 함수 또는 c # 또는 Java의 정적 메서드와 거의 동일 합니다. 자세한 내용은 [ Q# 프로그램](xref:microsoft.quantum.guide.programs)을 참조 하세요.
 
 ## <a name="oracle"></a>Oracle
 
@@ -182,7 +179,7 @@ Hadamard 연산 (Hadamard gate 또는 transform이 라고도 함)은 단일의 [
 
 ## <a name="partial-application"></a>부분 응용 프로그램
 
-모든 필수 입력 없이 [함수](xref:microsoft.quantum.glossary#function) 또는 [작업](xref:microsoft.quantum.glossary#operation) 을 호출 합니다. 그러면 나중에 응용 프로그램에서 제공 하는 누락 된 매개 변수 (밑줄로 표시 됨)만 필요한 새 [호출 가능](xref:microsoft.quantum.glossary#callable) 이 반환 됩니다. 예를 들어 함수를 지정 `MyFunc(x : int, y : int) : int {return x + y;}` 하면 해당 함수를 새 함수에 부분적으로 적용할 수 있습니다 `let NewFunc = MyFunc(_, 3)` . 그런 다음 `NewFunc(2)` 값 *5* 를 반환 하는 누락 된 매개 변수를 사용 하 여 나중에 새 함수를 호출할 수 있습니다.  자세한 내용은 [부분 응용 프로그램](xref:microsoft.quantum.guide.operationsfunctions#partial-application)을 참조 하세요.
+모든 필수 입력 없이 [함수](xref:microsoft.quantum.glossary#function) 또는 [작업](xref:microsoft.quantum.glossary#operation) 을 호출 합니다. 그러면 나중에 응용 프로그램에서 제공 하는 누락 된 매개 변수 (밑줄로 표시 됨)만 필요한 새 [호출 가능](xref:microsoft.quantum.glossary#callable) 이 반환 됩니다. 자세한 내용은 [부분 응용 프로그램](xref:microsoft.quantum.qsharp.partialapplication)을 참조 하세요.
 
 ## <a name="pauli-operators"></a>Pauli 연산자
 
@@ -190,7 +187,7 @@ Hadamard 연산 (Hadamard gate 또는 transform이 라고도 함)은 단일의 [
 
 ## <a name="quantum-circuit-diagram"></a>퀀텀 회로 다이어그램
 
-간단한 퀀텀 프로그램의 [작업](xref:microsoft.quantum.glossary#operation) 순서 (또는 [게이트](xref:microsoft.quantum.glossary#gate))를 그래픽으로 나타내는 메서드 (예:) 
+간단한 퀀텀 프로그램의 [게이트](xref:microsoft.quantum.glossary#gate) 시퀀스를 그래픽으로 나타내는 메서드 (예:) 
 
 ![샘플 회로 다이어그램](~/media/qpe.png). 
 
@@ -210,7 +207,7 @@ Hadamard 연산 (Hadamard gate 또는 transform이 라고도 함)은 단일의 [
 
 ## <a name="repeat-until-success"></a>반복-성공-성공
 
-확률적가 성공 하는 퀀텀 알고리즘입니다. 오류가 발생 하면 루틴이 성공 하거나 제한에 도달할 때까지 다시 시도 됩니다. 자세한 내용은 [성공까지 반복 (RUS)](xref:microsoft.quantum.guide.controlflow#repeat-until-success-loop) 을 참조 하세요.
+특정 조건이 충족 될 때까지 계산을 반복적으로 적용 하는 것으로 구성 된 퀀텀 알고리즘에서 자주 사용 되는 개념입니다. 조건이 충족 되지 않으면 다음 반복을 시작 하 여 다시 시도 하기 전에 수정이 필요한 경우가 많습니다. 자세한 내용은 [ Q# 사용자 가이드](xref:microsoft.quantum.guide) 를 참조 하세요.
 
 ## <a name="standard-libraries"></a>표준 라이브러리
 
@@ -230,7 +227,7 @@ Hadamard 연산 (Hadamard gate 또는 transform이 라고도 함)은 단일의 [
 
 ## <a name="tuple"></a>Tuple
 
-단일 값으로 작동 하는 쉼표로 구분 된 값의 컬렉션입니다. 튜플의 *형식은* 포함 하는 값 형식에 의해 정의 됩니다. 에서 Q# 튜플은 [변경할](xref:microsoft.quantum.glossary#immutable) 수 없으며 중첩 되거나, 배열을 포함 하거나, 배열에 사용 될 수 있습니다. 자세한 내용은 [튜플 형식](xref:microsoft.quantum.guide.types#tuple-types)을 참조하세요.
+단일 값으로 작동 하는 쉼표로 구분 된 값의 컬렉션입니다. 튜플의 *형식은* 포함 하는 값 형식에 의해 정의 됩니다. 에서 Q# 튜플은 [변경할](xref:microsoft.quantum.glossary#immutable) 수 없으며 중첩 되거나, 배열을 포함 하거나, 배열에 사용 될 수 있습니다. 자세한 내용은 [튜플](xref:microsoft.quantum.qsharp.valueliterals#tuple-literals)을 참조하세요.
 
 ## <a name="unitary-operator"></a>단일 연산자
 
@@ -238,4 +235,4 @@ Hadamard 연산 (Hadamard gate 또는 transform이 라고도 함)은 단일의 [
 
 ## <a name="user-defined-type"></a>사용자 정의 형식
 
-단일 단위로 참조 될 수 있는 기본 제공 또는 이전에 정의 된 형식의 컬렉션입니다. 자세한 내용은 [사용자 정의 형식](xref:microsoft.quantum.guide.types#user-defined-types)을 참조 하세요.
+하나 이상의 명명 된 항목 또는 익명 항목을 포함할 수 있는 사용자 지정 형식입니다. 자세한 내용은 [형식 선언] typedeclarations # 형식 선언을 참조 하세요.
