@@ -1,55 +1,55 @@
 ---
 uid: Microsoft.Quantum.Arrays.FlatMapped
 title: FlatMapped 함수
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: FlatMapped
 qsharp.summary: Given an array and a function that maps an array element to some output array, returns the concatenated output arrays for each array element.
-ms.openlocfilehash: 3e75c7703471a2986812df660c2f9328f1536d22
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: e851e8503b3afcb4572f09fe39079247518c22c4
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92719252"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96221252"
 ---
-# <a name="flatmapped-function"></a><span data-ttu-id="2f079-102">FlatMapped 함수</span><span class="sxs-lookup"><span data-stu-id="2f079-102">FlatMapped function</span></span>
+# <a name="flatmapped-function"></a><span data-ttu-id="66a10-102">FlatMapped 함수</span><span class="sxs-lookup"><span data-stu-id="66a10-102">FlatMapped function</span></span>
 
-<span data-ttu-id="2f079-103">네임 스페이스: [Microsoft 양자](xref:Microsoft.Quantum.Arrays)</span><span class="sxs-lookup"><span data-stu-id="2f079-103">Namespace: [Microsoft.Quantum.Arrays](xref:Microsoft.Quantum.Arrays)</span></span>
+<span data-ttu-id="66a10-103">네임 스페이스: [Microsoft 양자](xref:Microsoft.Quantum.Arrays)</span><span class="sxs-lookup"><span data-stu-id="66a10-103">Namespace: [Microsoft.Quantum.Arrays](xref:Microsoft.Quantum.Arrays)</span></span>
 
-<span data-ttu-id="2f079-104">패키지 [](https://nuget.org/packages/)</span><span class="sxs-lookup"><span data-stu-id="2f079-104">Package: [](https://nuget.org/packages/)</span></span>
+<span data-ttu-id="66a10-104">패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="66a10-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
 
 
-<span data-ttu-id="2f079-105">배열 요소를 일부 출력 배열에 매핑하는 배열과 함수가 지정 된 경우 각 배열 요소에 대해 연결 된 출력 배열을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="2f079-105">Given an array and a function that maps an array element to some output array, returns the concatenated output arrays for each array element.</span></span>
+<span data-ttu-id="66a10-105">배열 요소를 일부 출력 배열에 매핑하는 배열과 함수가 지정 된 경우 각 배열 요소에 대해 연결 된 출력 배열을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="66a10-105">Given an array and a function that maps an array element to some output array, returns the concatenated output arrays for each array element.</span></span>
 
 ```qsharp
 function FlatMapped<'TInput, 'TOutput> (mapper : ('TInput -> 'TOutput[]), array : 'TInput[]) : 'TOutput[]
 ```
 
 
-## <a name="input"></a><span data-ttu-id="2f079-106">입력</span><span class="sxs-lookup"><span data-stu-id="2f079-106">Input</span></span>
+## <a name="input"></a><span data-ttu-id="66a10-106">입력</span><span class="sxs-lookup"><span data-stu-id="66a10-106">Input</span></span>
 
-### <a name="mapper--tinput---toutput"></a><span data-ttu-id="2f079-107">매퍼: ' TInput-> ' TOutput []</span><span class="sxs-lookup"><span data-stu-id="2f079-107">mapper : 'TInput -> 'TOutput[]</span></span>
+### <a name="mapper--tinput---toutput"></a><span data-ttu-id="66a10-107">매퍼: ' TInput-> ' TOutput []</span><span class="sxs-lookup"><span data-stu-id="66a10-107">mapper : 'TInput -> 'TOutput[]</span></span>
 
-<span data-ttu-id="2f079-108">배열 요소를 매핑하는 데 사용 되는에서로의 함수입니다 `'TInput` `'TOutput[]` .</span><span class="sxs-lookup"><span data-stu-id="2f079-108">A function from `'TInput` to `'TOutput[]` that is used to map array elements.</span></span>
-
-
-### <a name="array--tinput"></a><span data-ttu-id="2f079-109">배열: ' TInput []</span><span class="sxs-lookup"><span data-stu-id="2f079-109">array : 'TInput[]</span></span>
-
-<span data-ttu-id="2f079-110">요소의 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="2f079-110">An array of elements.</span></span>
+<span data-ttu-id="66a10-108">배열 요소를 매핑하는 데 사용 되는에서로의 함수입니다 `'TInput` `'TOutput[]` .</span><span class="sxs-lookup"><span data-stu-id="66a10-108">A function from `'TInput` to `'TOutput[]` that is used to map array elements.</span></span>
 
 
+### <a name="array--tinput"></a><span data-ttu-id="66a10-109">배열: ' TInput []</span><span class="sxs-lookup"><span data-stu-id="66a10-109">array : 'TInput[]</span></span>
 
-## <a name="output--toutput"></a><span data-ttu-id="2f079-111">출력: ' TOutput []</span><span class="sxs-lookup"><span data-stu-id="2f079-111">Output : 'TOutput[]</span></span>
+<span data-ttu-id="66a10-110">요소의 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="66a10-110">An array of elements.</span></span>
 
-<span data-ttu-id="2f079-112">`'TOutput[]`매핑 함수에 의해 생성 된 모든 배열을 연결 하는 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="2f079-112">An array of `'TOutput[]` which is the concatenation of all arrays generated by the mapping function.</span></span>
 
-## <a name="type-parameters"></a><span data-ttu-id="2f079-113">형식 매개 변수</span><span class="sxs-lookup"><span data-stu-id="2f079-113">Type Parameters</span></span>
 
-### <a name="tinput"></a><span data-ttu-id="2f079-114">'TInput</span><span class="sxs-lookup"><span data-stu-id="2f079-114">'TInput</span></span>
+## <a name="output--toutput"></a><span data-ttu-id="66a10-111">출력: ' TOutput []</span><span class="sxs-lookup"><span data-stu-id="66a10-111">Output : 'TOutput[]</span></span>
 
-<span data-ttu-id="2f079-115">`array`요소의 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="2f079-115">The type of `array` elements.</span></span>
-### <a name="toutput"></a><span data-ttu-id="2f079-116">' TOutput</span><span class="sxs-lookup"><span data-stu-id="2f079-116">'TOutput</span></span>
+<span data-ttu-id="66a10-112">`'TOutput[]`매핑 함수에 의해 생성 된 모든 배열을 연결 하는 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="66a10-112">An array of `'TOutput[]` which is the concatenation of all arrays generated by the mapping function.</span></span>
 
-<span data-ttu-id="2f079-117">`mapper`함수는이 형식의 배열을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="2f079-117">The `mapper` function returns arrays of this type.</span></span>
+## <a name="type-parameters"></a><span data-ttu-id="66a10-113">형식 매개 변수</span><span class="sxs-lookup"><span data-stu-id="66a10-113">Type Parameters</span></span>
+
+### <a name="tinput"></a><span data-ttu-id="66a10-114">'TInput</span><span class="sxs-lookup"><span data-stu-id="66a10-114">'TInput</span></span>
+
+<span data-ttu-id="66a10-115">`array`요소의 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="66a10-115">The type of `array` elements.</span></span>
+### <a name="toutput"></a><span data-ttu-id="66a10-116">' TOutput</span><span class="sxs-lookup"><span data-stu-id="66a10-116">'TOutput</span></span>
+
+<span data-ttu-id="66a10-117">`mapper`함수는이 형식의 배열을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="66a10-117">The `mapper` function returns arrays of this type.</span></span>
