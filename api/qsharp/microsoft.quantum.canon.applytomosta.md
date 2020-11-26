@@ -1,40 +1,40 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToMostA
 title: ApplyToMostA 작업
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyToMostA
 qsharp.summary: Applies an operation to all but the last element of an array.
-ms.openlocfilehash: 994cada2952809dc84a70b76dc4ede8286c89855
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 7c226de9b2c99d124c467175dfe65a60a89d4332
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92717207"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96208502"
 ---
 # <a name="applytomosta-operation"></a>ApplyToMostA 작업
 
 네임 스페이스: [Microsoft. 양자](xref:Microsoft.Quantum.Canon)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 배열의 마지막 요소를 제외한 모든 요소에 작업을 적용 합니다.
 
 ```qsharp
-operation ApplyToMostA<'T> (op : ('T[] => Unit is Adj), targets : 'T[]) : Unit
+operation ApplyToMostA<'T> (op : ('T[] => Unit is Adj), targets : 'T[]) : Unit is Adj
 ```
 
 
-## <a name="description"></a>Description
+## <a name="description"></a>설명
 
 작업 `op` 및 대상 배열이 지정 된 `targets` 경우가 적용 됩니다 `op(Most(targets))` .
 
 ## <a name="input"></a>입력
 
-### <a name="op--t--unit-adj"></a>op: ' t [] => [Unit](xref:microsoft.quantum.lang-ref.unit) Adj
+### <a name="op--t--unit--is-adj"></a>op: ' t [] => [Unit](xref:microsoft.quantum.lang-ref.unit)  이 Adj
 
 적용 될 작업입니다.
 

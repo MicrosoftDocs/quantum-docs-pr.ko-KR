@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Canon.DelayedCA
 title: DelayedCA 함수
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: DelayedCA
 qsharp.summary: Returns an operation that applies given operation with given argument.
-ms.openlocfilehash: 8ee55e2ca7ec2cff9618b5dc66e19d88779d39ce
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: fe2babb87d716185286b0864745f7ff6e637f8a1
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92716220"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96207016"
 ---
 # <a name="delayedca-function"></a>DelayedCA 함수
 
 네임 스페이스: [Microsoft. 양자](xref:Microsoft.Quantum.Canon)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 지정 된 인수를 사용 하 여 지정 된 작업을 적용 하는 작업을 반환 합니다.
@@ -30,7 +30,7 @@ function DelayedCA<'T> (op : ('T => Unit is Ctl + Adj), arg : 'T) : (Unit => Uni
 
 ## <a name="input"></a>입력
 
-### <a name="op--t--unit-ctl--adj"></a>op: ' t => [Unit](xref:microsoft.quantum.lang-ref.unit) Ctl + Adj
+### <a name="op--t--unit--is-adj--ctl"></a>op: ' t => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj + Ctl
 
 반환 값을 적용 한 결과로 적용 되는 작업입니다.
 
@@ -41,7 +41,7 @@ function DelayedCA<'T> (op : ('T => Unit is Ctl + Adj), arg : 'T) : (Unit => Uni
 
 
 
-## <a name="output--unit--unit-ctl--adj"></a>출력: [단위](xref:microsoft.quantum.lang-ref.unit) => [단위](xref:microsoft.quantum.lang-ref.unit) Ctl + Adj
+## <a name="output--unit--unit--is-adj--ctl"></a>출력: [unit](xref:microsoft.quantum.lang-ref.unit) => [unit](xref:microsoft.quantum.lang-ref.unit)  is Adj + Ctl
 
 입력에 적용 되는 새 작업입니다. `op``arg`
 

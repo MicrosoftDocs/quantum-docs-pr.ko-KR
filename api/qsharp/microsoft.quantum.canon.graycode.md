@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Canon.GrayCode
 title: GrayCode 함수
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: GrayCode
 qsharp.summary: Creates Gray code sequences
-ms.openlocfilehash: fc673ae21a952788b5beb74c1bad94ee9fe54480
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: b15586c57180b00064721afc990436320824cba2
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92716164"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96206887"
 ---
 # <a name="graycode-function"></a>GrayCode 함수
 
 네임 스페이스: [Microsoft. 양자](xref:Microsoft.Quantum.Canon)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 회색 코드 시퀀스를 만듭니다.

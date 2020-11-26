@@ -1,37 +1,37 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToPartitionCA
 title: ApplyToPartitionCA 작업
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyToPartitionCA
 qsharp.summary: Applies a pair of operations to a given partition of a register into two parts. The modifier `CA` indicates that the operation is controllable and adjointable.
-ms.openlocfilehash: 8ea437a0e25ed43eb745a7740ecd8861ced1350a
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: b33670a91af5cbf280fdda0e57ddbbf8c9013e91
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92717123"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96208309"
 ---
 # <a name="applytopartitionca-operation"></a>ApplyToPartitionCA 작업
 
 네임 스페이스: [Microsoft. 양자](xref:Microsoft.Quantum.Canon)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 지정 된 레지스터 파티션에 작업 쌍을 두 부분으로 적용 합니다.
 한정자는 `CA` 작업을 제어 하 고 adjointable 나타냅니다.
 
 ```qsharp
-operation ApplyToPartitionCA (op : ((Qubit[], Qubit[]) => Unit is Ctl + Adj), numberOfQubitsToFirstArgument : Int, target : Qubit[]) : Unit
+operation ApplyToPartitionCA (op : ((Qubit[], Qubit[]) => Unit is Ctl + Adj), numberOfQubitsToFirstArgument : Int, target : Qubit[]) : Unit is Adj + Ctl
 ```
 
 
 ## <a name="input"></a>입력
 
-### <a name="op--qubitqubit--unit-ctl--adj"></a>op: (추가[비트](xref:microsoft.quantum.lang-ref.qubit)[[], [](xref:microsoft.quantum.lang-ref.qubit)]) => [Unit](xref:microsoft.quantum.lang-ref.unit) Ctl + Adj
+### <a name="op--qubitqubit--unit--is-adj--ctl"></a>op: (추가[비트](xref:microsoft.quantum.lang-ref.qubit)[[], [](xref:microsoft.quantum.lang-ref.qubit)]) => [Unit](xref:microsoft.quantum.lang-ref.unit) is Adj + Ctl
 
 지정 된 파티션에 적용할 작업 쌍입니다.
 

@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Canon.IsResultOne
 title: IsResultOne 함수
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: IsResultOne
 qsharp.summary: Tests if a given Result value is equal to `One`.
-ms.openlocfilehash: fa8845fd92e5c16b4ff15436caf42df4f1e151cf
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: eb4116b60bb415465375e374ad84e990135c231c
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92716052"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96206547"
 ---
 # <a name="isresultone-function"></a>IsResultOne 함수
 
 네임 스페이스: [Microsoft. 양자](xref:Microsoft.Quantum.Canon)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 지정 된 결과 값이와 같은지 테스트 `One` 합니다.

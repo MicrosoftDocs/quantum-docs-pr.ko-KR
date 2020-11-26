@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApproximateQFT
 title: ApproximateQFT 작업
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApproximateQFT
 qsharp.summary: Apply the Approximate Quantum Fourier Transform (AQFT) to a quantum register.
-ms.openlocfilehash: ffa3a3737a43fbe6acc57700ae122a13586482e7
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 97a410133e80cc5bffc810e9d6455baaee32364b
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92716773"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96207703"
 ---
 # <a name="approximateqft-operation"></a>ApproximateQFT 작업
 
 네임 스페이스: [Microsoft. 양자](xref:Microsoft.Quantum.Canon)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 퀀텀 레지스터에 AQFT (대략적인 퀀텀 푸리에 변환)을 적용 합니다.
 
 ```qsharp
-operation ApproximateQFT (a : Int, qs : Microsoft.Quantum.Arithmetic.BigEndian) : Unit
+operation ApproximateQFT (a : Int, qs : Microsoft.Quantum.Arithmetic.BigEndian) : Unit is Adj + Ctl
 ```
 
 
@@ -53,7 +53,7 @@ AQFT에는 2π/2k 및 Hadamard 게이트 형식의 Z-회전 게이트가 필요 
 
 입력 및 출력은 big endian 인코딩으로 인코딩된 것으로 간주 됩니다.
 
-## <a name="references"></a>참조
+## <a name="references"></a>참조 항목
 
 - [대 수 Eng. Commun에 대 한 자세한 *내용은* 입니다. 컴퓨터. 19 (3): 177-193 (2008)](http://doi.org/10.1007/s00200-008-0072-2)
 - [*D. Coppersmith* arxiv:/0201067v1](https://arxiv.org/abs/quant-ph/0201067)

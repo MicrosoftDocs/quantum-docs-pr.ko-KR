@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.InPlaceMajority
 title: InPlaceMajority 작업
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -14,18 +14,18 @@ qsharp.summary: >-
   >
 
   > Please use @"microsoft.quantum.arithmetic.applymajorityinplace".
-ms.openlocfilehash: cc66c196db4fdf34d571fe7d7a6fe9b323498187
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 9c10d3b7f368d67ebb5571ef6f11545d0fb1732c
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92716122"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96206768"
 ---
 # <a name="inplacemajority-operation"></a>InPlaceMajority 작업
 
 네임 스페이스: [Microsoft. 양자](xref:Microsoft.Quantum.Canon)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 > [!WARNING]
@@ -36,7 +36,7 @@ ms.locfileid: "92716122"
 
 
 ```qsharp
-operation InPlaceMajority (output : Qubit, input : Qubit[]) : Unit
+operation InPlaceMajority (output : Qubit, input : Qubit[]) : Unit is Adj + Ctl
 ```
 
 
