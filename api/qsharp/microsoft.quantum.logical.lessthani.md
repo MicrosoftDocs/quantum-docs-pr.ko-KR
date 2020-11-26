@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Logical.LessThanI
 title: LessThanI 함수
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Logical
 qsharp.name: LessThanI
 qsharp.summary: Returns true if and only if a number is less than another number.
-ms.openlocfilehash: 204e62a87d2b3d0070946985030d038ead686457
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 5d5b17c8481ccf58b8e4fc4bb958e0adbf6d8f00
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92723483"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96197775"
 ---
 # <a name="lessthani-function"></a>LessThanI 함수
 
 네임 스페이스: [Microsoft. 양자](xref:Microsoft.Quantum.Logical)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 숫자가 다른 숫자 보다 작은 경우에만 true를 반환 합니다.

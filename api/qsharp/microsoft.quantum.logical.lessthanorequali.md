@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Logical.LessThanOrEqualI
 title: LessThanOrEqualI 함수
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Logical
 qsharp.name: LessThanOrEqualI
 qsharp.summary: Returns true if and only if a number is less than or equal to another number.
-ms.openlocfilehash: dd934fde3fae9c1a43032b4b08ac03afa72798d1
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: b2974c9bc84d0b4366767f47682ab542f85063e2
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92709934"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96197569"
 ---
 # <a name="lessthanorequali-function"></a>LessThanOrEqualI 함수
 
 네임 스페이스: [Microsoft. 양자](xref:Microsoft.Quantum.Logical)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 숫자가 다른 숫자 보다 작거나 같은 경우에만 true를 반환 합니다.

@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.MachineLearning.ControlledRotation
 title: ControlledRotation 사용자 정의 형식
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.MachineLearning
 qsharp.name: ControlledRotation
 qsharp.summary: Describes a controlled rotation in terms of its target and control indices, rotation axis, and index into a model parameter vector.
-ms.openlocfilehash: afc425c16ab550fd414e656484c9ff6f0f8f3ef4
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 1e664b470caeba656ea4a73f70bbc0ef5fe76f7e
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92711362"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96196568"
 ---
 # <a name="controlledrotation-user-defined-type"></a>ControlledRotation 사용자 정의 형식
 
 네임 스페이스: [MachineLearning](xref:Microsoft.Quantum.MachineLearning)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [MachineLearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)
 
 
 대상 및 컨트롤 인덱스, 회전 축 및 모델 매개 변수 벡터로의 인덱스를 기준으로 제어 되는 회전을 설명 합니다.

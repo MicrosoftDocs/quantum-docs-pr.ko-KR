@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Logical.NearlyEqualD
 title: NearlyEqualD 함수
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Logical
 qsharp.name: NearlyEqualD
 qsharp.summary: Returns true if and only if two inputs are nearly equal (that is, within a tolerance of 1e-12).
-ms.openlocfilehash: 332f9ea1753b539eba7b931d5b948b2a238d1abf
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 246fad15c691a53fcc5be10f2c713672e0b54e6b
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92709871"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96197469"
 ---
 # <a name="nearlyequald-function"></a>NearlyEqualD 함수
 
 네임 스페이스: [Microsoft. 양자](xref:Microsoft.Quantum.Logical)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 두 입력이 거의 동일한 경우에만 true를 반환 합니다. 즉, 허용 오차의 허용 오차 범위 내에 있습니다.

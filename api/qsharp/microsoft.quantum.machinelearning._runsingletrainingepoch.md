@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.MachineLearning._RunSingleTrainingEpoch
 title: _RunSingleTrainingEpoch 작업
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.MachineLearning
 qsharp.name: _RunSingleTrainingEpoch
 qsharp.summary: Perform one epoch of sequential classifier training on a subset of data samples.
-ms.openlocfilehash: 2b4f629eac0bd8e60bd4d86077521c60085d4809
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 71780645a025972f11f32f8ba8fd94d098604f9e
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92720632"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96196755"
 ---
 # <a name="_runsingletrainingepoch-operation"></a>_RunSingleTrainingEpoch 작업
 
 네임 스페이스: [MachineLearning](xref:Microsoft.Quantum.MachineLearning)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [MachineLearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)
 
 
 데이터 샘플의 하위 집합에 대 한 순차 분류자 교육의 한 epoch를 수행 합니다.
