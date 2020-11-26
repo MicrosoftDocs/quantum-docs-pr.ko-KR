@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Synthesis.DecomposedOn
 title: DecomposedOn 함수
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Synthesis
 qsharp.name: DecomposedOn
 qsharp.summary: Decomposes a permutation on a variable
-ms.openlocfilehash: b033723a50fb85e77c9d4baec1f94231327e9b25
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 79f952e7bc7ba9f5337cf5e7a625e0d270a2e17a
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92725219"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96203232"
 ---
 # <a name="decomposedon-function"></a>DecomposedOn 함수
 
 네임 스페이스: [Microsoft 양자](xref:Microsoft.Quantum.Synthesis)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 변수에서 순열 분해

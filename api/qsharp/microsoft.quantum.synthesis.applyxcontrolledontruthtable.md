@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Synthesis.ApplyXControlledOnTruthTable
 title: ApplyXControlledOnTruthTable 작업
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Synthesis
 qsharp.name: ApplyXControlledOnTruthTable
 qsharp.summary: Applies the @"microsoft.quantum.intrinsic.x" operation on `target`, if the Boolean function `func` evaluates to true for the classical assignment in `controlRegister`.
-ms.openlocfilehash: 73d63936f02a52dfbbad7b8575110177a9e4463d
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: aa4e1bc0d5058228721728a894b896331ec626d1
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92725247"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96203300"
 ---
 # <a name="applyxcontrolledontruthtable-operation"></a>ApplyXControlledOnTruthTable 작업
 
 네임 스페이스: [Microsoft 양자](xref:Microsoft.Quantum.Synthesis)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 @"microsoft.quantum.intrinsic.x" `target` `func` 의 기존 할당에 대해 부울 함수가 true로 평가 되는 경우에 작업을 적용 합니다 `controlRegister` .
 
 ```qsharp
-operation ApplyXControlledOnTruthTable (func : BigInt, controlRegister : Qubit[], target : Qubit) : Unit
+operation ApplyXControlledOnTruthTable (func : BigInt, controlRegister : Qubit[], target : Qubit) : Unit is Adj + Ctl
 ```
 
 
@@ -61,10 +61,10 @@ operation ApplyXControlledOnTruthTable (func : BigInt, controlRegister : Qubit[]
 
 
 
-## <a name="references"></a>참조
+## <a name="references"></a>참조 항목
 
-- [*Schuch* , *Siewert* , prl 91, 027902, 2003, arxiv:/0303063](https://arxiv.org/abs/quant-ph/0303063)
-- [*Mathias Soeken* , *Martin Roetteler* , arxiv: 2005.12310](https://arxiv.org/abs/2005.12310)
+- [*Schuch*, *Siewert*, prl 91, 027902, 2003, arxiv:/0303063](https://arxiv.org/abs/quant-ph/0303063)
+- [*Mathias Soeken*, *Martin Roetteler*, arxiv: 2005.12310](https://arxiv.org/abs/2005.12310)
 
 ## <a name="see-also"></a>참고 항목
 

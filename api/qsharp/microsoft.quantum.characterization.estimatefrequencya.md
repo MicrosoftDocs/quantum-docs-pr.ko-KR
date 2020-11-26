@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Characterization.EstimateFrequencyA
 title: EstimateFrequencyA 작업
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Characterization
 qsharp.name: EstimateFrequencyA
 qsharp.summary: Given a preparation that is adjointable and measurement, estimates the frequency with which that measurement succeeds (returns `Zero`) by performing a given number of trials.
-ms.openlocfilehash: 88f0a237975c158bffcc015f79d2134b210ce83b
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: f12fc150de5bcea3d53ce88003c71976d8f2467f
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92715065"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96204354"
 ---
 # <a name="estimatefrequencya-operation"></a>EstimateFrequencyA 작업
 
 네임 스페이스: [Microsoft 양자](xref:Microsoft.Quantum.Characterization)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Adjointable 및 측정 준비를 고려 하 여 지정 된 수의 평가판을 수행 하 여 측정값이 성공 (반환) 하는 빈도를 추정 `Zero` 합니다.
@@ -30,12 +30,12 @@ operation EstimateFrequencyA (preparation : (Qubit[] => Unit is Adj), measuremen
 
 ## <a name="input"></a>입력
 
-### <a name="preparation--qubit--unit-adj"></a>준비:가 중 [비트](xref:microsoft.quantum.lang-ref.qubit)[] => [Unit](xref:microsoft.quantum.lang-ref.unit) Adj
+### <a name="preparation--qubit--unit--is-adj"></a>준비: 고 [비트](xref:microsoft.quantum.lang-ref.qubit)[] => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj
 
 Adjointable 작업은 지정 된 상태 $ \rho $를 입력 레지스터에서 준비 하는 $ $P 합니다.
 
 
-### <a name="measurement--qubit--__invalidresult__"></a>측정: [값](xref:microsoft.quantum.lang-ref.qubit)이 __잘못 <Result> 된__ > 
+### <a name="measurement--qubit--__invalidresult__"></a>측정: [값](xref:microsoft.quantum.lang-ref.qubit)이 __잘못 <Result> 된__> 
 
 작업 $M $는 관심 측정을 나타냅니다.
 

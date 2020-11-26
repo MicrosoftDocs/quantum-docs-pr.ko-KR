@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Synthesis.RMEncoding
 title: R 코딩 함수
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Synthesis
 qsharp.name: RMEncoding
 qsharp.summary: '{-1,1} coding of a Boolean truth value'
-ms.openlocfilehash: ef9be0f0628c8ba8c5f131cc558bdcda6bb6ea55
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: a506ccb637b331a392ea75383c8bd605114af059
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92725478"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96202943"
 ---
 # <a name="rmencoding-function"></a>R 코딩 함수
 
 네임 스페이스: [Microsoft 양자](xref:Microsoft.Quantum.Synthesis)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 {-1,1} 부울 값 코딩
