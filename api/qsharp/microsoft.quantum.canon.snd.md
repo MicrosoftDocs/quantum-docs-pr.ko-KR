@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Canon.Snd
 title: Snd 함수
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: Snd
 qsharp.summary: Given a pair, returns its second element.
-ms.openlocfilehash: c05053b45d24c3398526d1269b90bb40d1e0ef27
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: c935a2bc9e3f5ab32669feae2bfc0f2ebf57e744
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92715450"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96205323"
 ---
 # <a name="snd-function"></a>Snd 함수
 
 네임 스페이스: [Microsoft. 양자](xref:Microsoft.Quantum.Canon)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 쌍이 지정 된 경우 두 번째 요소를 반환 합니다.
