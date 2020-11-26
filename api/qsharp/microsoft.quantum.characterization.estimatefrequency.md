@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Characterization.EstimateFrequency
 title: EstimateFrequency 작업
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Characterization
 qsharp.name: EstimateFrequency
 qsharp.summary: Given a preparation and measurement, estimates the frequency with which that measurement succeeds (returns `Zero`) by performing a given number of trials.
-ms.openlocfilehash: 83589637a7bfa328812207271844411f57d42097
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 30b21a8e86eb5a4dd8dd8207dbdc6a0970308319
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92715086"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96216254"
 ---
 # <a name="estimatefrequency-operation"></a>EstimateFrequency 작업
 
 네임 스페이스: [Microsoft 양자](xref:Microsoft.Quantum.Characterization)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 준비 및 측정을 고려 하 여 `Zero` 지정 된 수의 평가판을 수행 하 여 측정값이 성공 (반환) 하는 빈도를 추정 합니다.
@@ -35,7 +35,7 @@ operation EstimateFrequency (preparation : (Qubit[] => Unit), measurement : (Qub
 지정 된 상태 $ \rho $를 해당 입력 레지스터에 준비 하는 작업을 $ $P 합니다.
 
 
-### <a name="measurement--qubit--__invalidresult__"></a>측정: [값](xref:microsoft.quantum.lang-ref.qubit)이 __잘못 <Result> 된__ > 
+### <a name="measurement--qubit--__invalidresult__"></a>측정: [값](xref:microsoft.quantum.lang-ref.qubit)이 __잘못 <Result> 된__> 
 
 작업 $M $는 관심 측정을 나타냅니다.
 

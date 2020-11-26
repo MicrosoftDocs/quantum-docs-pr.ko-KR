@@ -1,37 +1,37 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToFirstThreeQubitsC
 title: ApplyToFirstThreeQubitsC 작업
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyToFirstThreeQubitsC
 qsharp.summary: Applies an operation to the first three qubits in the register. The modifier `C` indicates that the operation is controllable.
-ms.openlocfilehash: 9450b084cd77f75511fe631cda9a4f9fc426142d
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: cb6945f5aa398d0bf6417c5cfd21142008a54b13
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92717375"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96217444"
 ---
 # <a name="applytofirstthreequbitsc-operation"></a>ApplyToFirstThreeQubitsC 작업
 
 네임 스페이스: [Microsoft. 양자](xref:Microsoft.Quantum.Canon)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 레지스터의 처음 3 개 비트에 작업을 적용 합니다.
 한정자는 `C` 작업을 제어할 수 있음을 나타냅니다.
 
 ```qsharp
-operation ApplyToFirstThreeQubitsC (op : ((Qubit, Qubit, Qubit) => Unit is Ctl), register : Qubit[]) : Unit
+operation ApplyToFirstThreeQubitsC (op : ((Qubit, Qubit, Qubit) => Unit is Ctl), register : Qubit[]) : Unit is Ctl
 ```
 
 
 ## <a name="input"></a>입력
 
-### <a name="op--qubitqubitqubit--unit-ctl"></a>op[: (이상 비트](xref:microsoft.quantum.lang-ref.qubit),[고 비트, 고](xref:microsoft.quantum.lang-ref.qubit)[비트](xref:microsoft.quantum.lang-ref.qubit)) => [단위](xref:microsoft.quantum.lang-ref.unit) Ctl
+### <a name="op--qubitqubitqubit--unit--is-ctl"></a>op[: (이상 비트](xref:microsoft.quantum.lang-ref.qubit),[고 비트, 고](xref:microsoft.quantum.lang-ref.qubit)[비트](xref:microsoft.quantum.lang-ref.qubit)) => [Unit](xref:microsoft.quantum.lang-ref.unit) 이 Ctl
 
 처음 세 개의에 적용 되는 작업입니다.
 

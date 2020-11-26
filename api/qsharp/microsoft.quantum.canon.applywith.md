@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyWith
 title: ApplyWith 작업
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyWith
 qsharp.summary: Given two operations, applies one as conjugated with the other.
-ms.openlocfilehash: 61047ea2ea249e5a4d39b5747c542462c9632138
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: fd46f84e30e72672967b90d92f507d2a5c438dba
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92716948"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96217308"
 ---
 # <a name="applywith-operation"></a>ApplyWith 작업
 
 네임 스페이스: [Microsoft. 양자](xref:Microsoft.Quantum.Canon)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 두 작업을 수행 하는 경우 conjugated로 다른 작업을 적용 합니다.
@@ -34,7 +34,7 @@ $U $ 및 $V $와 같은 단일 연산자에 의해 각각 설명 된 두 개의 
 
 ## <a name="input"></a>입력
 
-### <a name="outeroperation--t--unit-adj"></a>outerOperation: ' t => [Unit](xref:microsoft.quantum.lang-ref.unit) Adj
+### <a name="outeroperation--t--unit--is-adj"></a>outerOperation: ' t => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj
 
 $U $는 켤레 $V $로 사용 해야 합니다. 외부 작업 $U $은 (는) adjointable 해야 하지만 제어할 필요가 없습니다.
 

@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Canon.Delayed
 title: 지연 함수
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: Delayed
 qsharp.summary: Returns an operation that applies given operation with given argument.
-ms.openlocfilehash: 820a38c2b4de2e0151d55bd88fb4f69567182f6b
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 863c63d0c1a50339e9d5b9fbe4729932b2706f32
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92716255"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96216458"
 ---
 # <a name="delayed-function"></a>지연 함수
 
 네임 스페이스: [Microsoft. 양자](xref:Microsoft.Quantum.Canon)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 지정 된 인수를 사용 하 여 지정 된 작업을 적용 하는 작업을 반환 합니다.

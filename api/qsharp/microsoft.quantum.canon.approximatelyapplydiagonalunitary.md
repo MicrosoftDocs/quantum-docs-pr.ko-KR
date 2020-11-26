@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApproximatelyApplyDiagonalUnitary
 title: ApproximatelyApplyDiagonalUnitary 작업
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApproximatelyApplyDiagonalUnitary
 qsharp.summary: Applies an array of complex phases to numeric basis states of a register of qubits, truncating small rotation angles according to a given tolerance.
-ms.openlocfilehash: 9d9b1ced320b142aef2a2cd8f3335f855d37048f
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 0a05b8a5891977a08ee2ae6a996657c6a8f3d792
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92716822"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96217121"
 ---
 # <a name="approximatelyapplydiagonalunitary-operation"></a>ApproximatelyApplyDiagonalUnitary 작업
 
 네임 스페이스: [Microsoft. 양자](xref:Microsoft.Quantum.Canon)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 지정 된 허용 오차에 따라 작은 회전 각도를 잘라내는 상위 비트 레지스터의 숫자 기반 상태에 복잡 한 단계의 배열을 적용 합니다.
 
 ```qsharp
-operation ApproximatelyApplyDiagonalUnitary (tolerance : Double, coefficients : Double[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit
+operation ApproximatelyApplyDiagonalUnitary (tolerance : Double, coefficients : Double[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit is Adj + Ctl
 ```
 
 
@@ -62,7 +62,7 @@ $ $ \begin{align} U = \sum ^ {2 ^ n-1} _ {j = 0} e ^ {i \ theta_j} \ket{j}\bra{j
 
 `coefficients` $2 ^ n $ 미만으로 지정 된 경우는 $ \ theta_j = $0.0 요소로 채워집니다.
 
-## <a name="references"></a>참조
+## <a name="references"></a>참조 항목
 
 - 퀀텀 논리 회로 Vivek Shende, Stephen S. Markov, Igor, Igor L. https://arxiv.org/abs/quant-ph/0406176
 

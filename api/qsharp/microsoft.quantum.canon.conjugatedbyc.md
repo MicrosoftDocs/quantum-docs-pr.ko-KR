@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Canon.ConjugatedByC
 title: ConjugatedByC 함수
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ConjugatedByC
 qsharp.summary: Given outer and inner operations, returns a new operation that conjugates the inner operation by the outer operation.
-ms.openlocfilehash: c4c381e40c5a941487bcf78ebe5339574aedb45d
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 1aa471a0f9039151d130bd52a026f4c1a0765e32
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92716458"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96216679"
 ---
 # <a name="conjugatedbyc-function"></a>ConjugatedByC 함수
 
 네임 스페이스: [Microsoft. 양자](xref:Microsoft.Quantum.Canon)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 외부 및 내부 연산을 지정 하면는 외부 작업에 의해 내부 작업을 변화 시키고 하는 새 작업을 반환 합니다.
@@ -30,18 +30,18 @@ function ConjugatedByC<'T> (outerOperation : ('T => Unit is Adj), innerOperation
 
 ## <a name="input"></a>입력
 
-### <a name="outeroperation--t--unit-adj"></a>outerOperation: ' t => [Unit](xref:microsoft.quantum.lang-ref.unit) Adj
+### <a name="outeroperation--t--unit--is-adj"></a>outerOperation: ' t => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj
 
 $U $는 켤레 $V $로 사용 해야 합니다. 외부 작업 $U $은 (는) adjointable 해야 하지만 제어할 필요가 없습니다.
 
 
-### <a name="inneroperation--t--unit-ctl"></a>innerOperation: ' t => [단위](xref:microsoft.quantum.lang-ref.unit) Ctl
+### <a name="inneroperation--t--unit--is-ctl"></a>innerOperation: ' t => [Unit](xref:microsoft.quantum.lang-ref.unit)  이 Ctl입니다.
 
 작업 $V $가 conjugated입니다.
 
 
 
-## <a name="output--t--unit-ctl"></a>출력: ' t => [단위](xref:microsoft.quantum.lang-ref.unit) Ctl
+## <a name="output--t--unit--is-ctl"></a>출력: ' t => [Unit](xref:microsoft.quantum.lang-ref.unit)  이 Ctl입니다.
 
 해당 작업이 단일 $U ^ {\dagger} V U $로 표시 되는 새 작업입니다.
 

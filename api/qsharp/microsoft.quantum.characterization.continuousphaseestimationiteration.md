@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Characterization.ContinuousPhaseEstimationIteration
 title: ContinuousPhaseEstimationIteration 작업
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Characterization
 qsharp.name: ContinuousPhaseEstimationIteration
 qsharp.summary: Performs a single iteration of an iterative (classically-controlled) phase estimation algorithm using arbitrary real powers of a unitary oracle.
-ms.openlocfilehash: a3914a4b19e3b898b6de8808699da09d386f487a
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 3c0f6cf084311598346b25dd7028e290946cd87f
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92715079"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96216288"
 ---
 # <a name="continuousphaseestimationiteration-operation"></a>ContinuousPhaseEstimationIteration 작업
 
 네임 스페이스: [Microsoft 양자](xref:Microsoft.Quantum.Characterization)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 단일 oracle의 임의의 실제 성능을 사용 하 여 반복적인 (일반적으로 제어) 단계 추정 알고리즘의 단일 반복을 수행 합니다.
 
 ```qsharp
-operation ContinuousPhaseEstimationIteration (oracle : Microsoft.Quantum.Oracles.ContinuousOracle, time : Double, theta : Double, targetState : Qubit[], controlQubit : Qubit) : Unit
+operation ContinuousPhaseEstimationIteration (oracle : Microsoft.Quantum.Oracles.ContinuousOracle, time : Double, theta : Double, targetState : Qubit[], controlQubit : Qubit) : Unit is Adj + Ctl
 ```
 
 

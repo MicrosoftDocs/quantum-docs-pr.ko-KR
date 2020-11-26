@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToTailC
 title: ApplyToTailC 작업
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyToTailC
 qsharp.summary: Applies an operation to the last element of an array.
-ms.openlocfilehash: 631e08666002d8077c6f8b78525b06b104dd4c7c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 5a68cae3fd122416cfd064e0078e03f5c00ab492
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92716969"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96217291"
 ---
 # <a name="applytotailc-operation"></a>ApplyToTailC 작업
 
 네임 스페이스: [Microsoft. 양자](xref:Microsoft.Quantum.Canon)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 배열의 마지막 요소에 작업을 적용 합니다.
 
 ```qsharp
-operation ApplyToTailC<'T> (op : ('T => Unit is Ctl), targets : 'T[]) : Unit
+operation ApplyToTailC<'T> (op : ('T => Unit is Ctl), targets : 'T[]) : Unit is Ctl
 ```
 
 
@@ -34,7 +34,7 @@ operation ApplyToTailC<'T> (op : ('T => Unit is Ctl), targets : 'T[]) : Unit
 
 ## <a name="input"></a>입력
 
-### <a name="op--t--unit-ctl"></a>op: ' t => [단위](xref:microsoft.quantum.lang-ref.unit) Ctl
+### <a name="op--t--unit--is-ctl"></a>op: ' t => [Unit](xref:microsoft.quantum.lang-ref.unit)  이 Ctl입니다.
 
 적용 될 작업입니다.
 

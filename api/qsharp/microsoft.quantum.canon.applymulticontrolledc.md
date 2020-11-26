@@ -1,31 +1,31 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyMultiControlledC
 title: ApplyMultiControlledC 작업
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyMultiControlledC
 qsharp.summary: Applies a multiply controlled version of a singly controlled operation. The modifier `C` indicates that the single-qubit operation is controllable.
-ms.openlocfilehash: 36010ba667190c237b64f60b7246010199a8ba1c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 2d5703eed3a3b6e611ae7c993febf018fcb148b3
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92717970"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96218413"
 ---
 # <a name="applymulticontrolledc-operation"></a>ApplyMultiControlledC 작업
 
 네임 스페이스: [Microsoft. 양자](xref:Microsoft.Quantum.Canon)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 단일 제어 작업의 곱셈 제어 버전을 적용 합니다.
 한정자는 `C` 단일 비트 작업을 제어할 수 있음을 나타냅니다.
 
 ```qsharp
-operation ApplyMultiControlledC (singlyControlledOp : (Qubit[] => Unit), ccnot : Microsoft.Quantum.Canon.CCNOTop, controls : Qubit[], targets : Qubit[]) : Unit
+operation ApplyMultiControlledC (singlyControlledOp : (Qubit[] => Unit), ccnot : Microsoft.Quantum.Canon.CCNOTop, controls : Qubit[], targets : Qubit[]) : Unit is Ctl
 ```
 
 
@@ -65,9 +65,9 @@ operation ApplyMultiControlledC (singlyControlledOp : (Qubit[] => Unit), ccnot :
 
 설명 및 회로 다이어그램의 경우 그림 4.10, Nielsen & Chuang의 섹션 4.3을 참조 하세요.
 
-## <a name="references"></a>참조
+## <a name="references"></a>참조 항목
 
-- [*Michael Nielsen, Isaac Chuang* , 퀀텀 계산 및 퀀텀 정보](http://doi.org/10.1017/CBO9780511976667)
+- [*Michael Nielsen, Isaac Chuang*, 퀀텀 계산 및 퀀텀 정보](http://doi.org/10.1017/CBO9780511976667)
 
 ## <a name="see-also"></a>참고 항목
 

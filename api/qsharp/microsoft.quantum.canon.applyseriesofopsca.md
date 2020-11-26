@@ -1,36 +1,36 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplySeriesOfOpsCA
 title: ApplySeriesOfOpsCA 작업
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplySeriesOfOpsCA
 qsharp.summary: Applies a list of ops and their targets sequentially on an array. (Adjoint + Controlled)
-ms.openlocfilehash: 2327a693e528cf46f95eae5ee052e9dd9b6ee187
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 9dd1343b3ebcc75592441f150eee822cfe83f9a1
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92717634"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96217886"
 ---
 # <a name="applyseriesofopsca-operation"></a>ApplySeriesOfOpsCA 작업
 
 네임 스페이스: [Microsoft. 양자](xref:Microsoft.Quantum.Canon)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Ops 및 해당 대상의 목록을 배열에 순차적으로 적용 합니다. (Adjoint + 제어 됨)
 
 ```qsharp
-operation ApplySeriesOfOpsCA<'T> (listOfOps : ('T[] => Unit is Adj + Ctl)[], targets : Int[][], register : 'T[]) : Unit
+operation ApplySeriesOfOpsCA<'T> (listOfOps : ('T[] => Unit is Adj + Ctl)[], targets : Int[][], register : 'T[]) : Unit is Adj + Ctl
 ```
 
 
 ## <a name="input"></a>입력
 
-### <a name="listofops--t--unit-adj--ctl"></a>listOfOps: ' t [] => [Unit](xref:microsoft.quantum.lang-ref.unit) Adj + Ctl []
+### <a name="listofops--t--unit--is-adj--ctl"></a>listOfOps: ' t [] => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj + Ctl []
 
 각각의 배열을 적용 하는 작업의 목록입니다. 가장 낮은 인덱스 순으로 순차적으로 적용 됩니다.
 각에는 Adjoint 및 제어 된 함수를 모두 포함 해야 합니다.

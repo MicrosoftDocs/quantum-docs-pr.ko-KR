@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyWithC
 title: ApplyWithC 작업
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyWithC
 qsharp.summary: Given two operations, applies one as conjugated with the other.
-ms.openlocfilehash: 8de1ddf0bf176853b33926be7647bc5d1d35095d
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 172f9098a53c97e71f160b4a48479c3184be4385
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92716899"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96217240"
 ---
 # <a name="applywithc-operation"></a>ApplyWithC 작업
 
 네임 스페이스: [Microsoft. 양자](xref:Microsoft.Quantum.Canon)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 두 작업을 수행 하는 경우 conjugated로 다른 작업을 적용 합니다.
 
 ```qsharp
-operation ApplyWithC<'T> (outerOperation : ('T => Unit is Adj), innerOperation : ('T => Unit is Ctl), target : 'T) : Unit
+operation ApplyWithC<'T> (outerOperation : ('T => Unit is Adj), innerOperation : ('T => Unit is Ctl), target : 'T) : Unit is Ctl
 ```
 
 
@@ -34,12 +34,12 @@ $U $ 및 $V $와 같은 단일 연산자에 의해 각각 설명 된 두 개의 
 
 ## <a name="input"></a>입력
 
-### <a name="outeroperation--t--unit-adj"></a>outerOperation: ' t => [Unit](xref:microsoft.quantum.lang-ref.unit) Adj
+### <a name="outeroperation--t--unit--is-adj"></a>outerOperation: ' t => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj
 
 $U $는 켤레 $V $로 사용 해야 합니다. 외부 작업 $U $은 (는) adjointable 해야 하지만 제어할 필요가 없습니다.
 
 
-### <a name="inneroperation--t--unit-ctl"></a>innerOperation: ' t => [단위](xref:microsoft.quantum.lang-ref.unit) Ctl
+### <a name="inneroperation--t--unit--is-ctl"></a>innerOperation: ' t => [Unit](xref:microsoft.quantum.lang-ref.unit)  이 Ctl입니다.
 
 작업 $V $가 conjugated입니다.
 
