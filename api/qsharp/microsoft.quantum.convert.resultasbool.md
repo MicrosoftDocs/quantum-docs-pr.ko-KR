@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Convert.ResultAsBool
 title: ResultAsBool 함수
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Convert
 qsharp.name: ResultAsBool
 qsharp.summary: Converts a `Result` type to a `Bool` type, where `One` is mapped to `true` and `Zero` is mapped to `false`.
-ms.openlocfilehash: 34fca15faf79f706b398e3fdfc537ea91b28da86
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: a170acf635e4e2b2150ffc208fabc9782ff837b0
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92713343"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96224176"
 ---
 # <a name="resultasbool-function"></a>ResultAsBool 함수
 
 네임 스페이스: [Microsoft 양자 변환](xref:Microsoft.Quantum.Convert)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 `Result`형식을 형식으로 변환 `Bool` `One` 합니다. 여기서은로 매핑되고는 `true` `Zero` 에 매핑됩니다 `false` .

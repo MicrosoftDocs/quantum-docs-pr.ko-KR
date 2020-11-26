@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.AssertMostSignificantBit
 title: AssertMostSignificantBit 작업
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: AssertMostSignificantBit
 qsharp.summary: Asserts that the most significant qubit of a qubit register representing an unsigned integer is in a particular state.
-ms.openlocfilehash: 408e50ed9f2e6c8ba35db20855608d2bd1f24eea
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 41381455d1a96970647f887e038f7dff3a4eb204
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92721381"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96223785"
 ---
 # <a name="assertmostsignificantbit-operation"></a>AssertMostSignificantBit 작업
 
 네임 스페이스: [Microsoft 양자](xref:Microsoft.Quantum.Arithmetic)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 부호 없는 정수를 나타내는 고 비트 레지스터의 가장 중요 한 것이 특정 상태에 있음을 어설션 합니다.
 
 ```qsharp
-operation AssertMostSignificantBit (value : Result, number : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit
+operation AssertMostSignificantBit (value : Result, number : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit is Adj + Ctl
 ```
 
 

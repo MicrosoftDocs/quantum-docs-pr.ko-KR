@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Core.RangeStart
 title: 범위 시작 함수
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Core
 qsharp.name: RangeStart
 qsharp.summary: Returns the defined start value of the given range.
-ms.openlocfilehash: 3e4b0cebe34b4c98cb1d582a9cd11b46ff778517
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 44683b204ecd469f5f5412a7ec06e98ec8a4f37e
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92713168"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96224006"
 ---
 # <a name="rangestart-function"></a>범위 시작 함수
 
 네임 스페이스: [Microsoft. 양자](xref:Microsoft.Quantum.Core)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft. 양자](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 지정 된 범위의 정의 된 시작 값을 반환 합니다.

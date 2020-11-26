@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.CompareGTSI
 title: CompareGTSI 작업
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: CompareGTSI
 qsharp.summary: 'Wrapper for signed integer comparison: `result = xs > ys`.'
-ms.openlocfilehash: 735ae21168d8efb3e626a8f1ea36e97f5cdf8760
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: a0e8ef66f1e1a62d4f6a78364135376810507534
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92721280"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96223496"
 ---
 # <a name="comparegtsi-operation"></a>CompareGTSI 작업
 
 네임 스페이스: [Microsoft 양자](xref:Microsoft.Quantum.Arithmetic)
 
-패키지 [](https://nuget.org/packages/)
+Package: [Microsoft 양자](https://nuget.org/packages/Microsoft.Quantum.Numerics)
 
 
 부호 있는 정수 비교를 위한 `result = xs > ys` 래퍼입니다.
 
 ```qsharp
-operation CompareGTSI (xs : Microsoft.Quantum.Arithmetic.SignedLittleEndian, ys : Microsoft.Quantum.Arithmetic.SignedLittleEndian, result : Qubit) : Unit
+operation CompareGTSI (xs : Microsoft.Quantum.Arithmetic.SignedLittleEndian, ys : Microsoft.Quantum.Arithmetic.SignedLittleEndian, result : Qubit) : Unit is Adj + Ctl
 ```
 
 

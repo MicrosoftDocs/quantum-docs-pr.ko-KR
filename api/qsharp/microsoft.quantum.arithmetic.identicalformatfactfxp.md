@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.IdenticalFormatFactFxP
 title: IdenticalFormatFactFxP 함수
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: IdenticalFormatFactFxP
 qsharp.summary: Assert that all fixed-point numbers in the provided array have identical point positions and qubit numbers.
-ms.openlocfilehash: 8fdaf52455dd9ac061a4c084dcff89685efbd5f3
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: d19e29d4786a728c2105dc55673c49b2885176f8
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92721129"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96223037"
 ---
 # <a name="identicalformatfactfxp-function"></a>IdenticalFormatFactFxP 함수
 
 네임 스페이스: [Microsoft 양자](xref:Microsoft.Quantum.Arithmetic)
 
-패키지 [](https://nuget.org/packages/)
+Package: [Microsoft 양자](https://nuget.org/packages/Microsoft.Quantum.Numerics)
 
 
 제공 된 배열의 모든 고정 소수점 숫자가 동일한 점 위치와 고 비트 숫자를 갖도록 어설션 합니다.

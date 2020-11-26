@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.DivideI
 title: DivideI 작업
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: DivideI
 qsharp.summary: Divides two quantum integers.
-ms.openlocfilehash: 0cc16dddc27a000dbc30de6ae27976a01fd9f4ed
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 4cff191e1f9d42659768b4059e477f1a07948ba1
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92721220"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96223309"
 ---
 # <a name="dividei-operation"></a>DivideI 작업
 
 네임 스페이스: [Microsoft 양자](xref:Microsoft.Quantum.Arithmetic)
 
-패키지 [](https://nuget.org/packages/)
+Package: [Microsoft 양자](https://nuget.org/packages/Microsoft.Quantum.Numerics)
 
 
 두 퀀텀 정수를 나눕니다.
 
 ```qsharp
-operation DivideI (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, result : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit
+operation DivideI (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, result : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit is Adj + Ctl
 ```
 
 
