@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Convert.IntAsBigInt
 title: IntAsBigInt 함수
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Convert
 qsharp.name: IntAsBigInt
 qsharp.summary: Converts a given integer to an equivalent big integer.
-ms.openlocfilehash: 7e1f97253d30bfd62c9c8b9f0727b57f5c763b78
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 80fe4f0def684b7e2f8c364f2ef76801998a35d1
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92713504"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96214129"
 ---
 # <a name="intasbigint-function"></a>IntAsBigInt 함수
 
 네임 스페이스: [Microsoft 양자 변환](xref:Microsoft.Quantum.Convert)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft. 양자](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 지정 된 정수를 해당 하는 큰 정수로 변환 합니다.

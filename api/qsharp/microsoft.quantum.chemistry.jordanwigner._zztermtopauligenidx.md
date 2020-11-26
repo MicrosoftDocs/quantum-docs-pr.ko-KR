@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Chemistry.JordanWigner._ZZTermToPauliGenIdx
 title: _ZZTermToPauliGenIdx 함수
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Chemistry.JordanWigner
 qsharp.name: _ZZTermToPauliGenIdx
 qsharp.summary: Converts a GeneratorIndex describing a ZZ term to an expression 'GeneratorIndex[]' in terms of Paulis.
-ms.openlocfilehash: f8a173e2adb4494a08b48158a010f264562bbaa6
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 01f4ebf4f2acc0fd76ae101e0c511cd70b03fada
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92714141"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96214962"
 ---
 # <a name="_zztermtopauligenidx-function"></a>_ZZTermToPauliGenIdx 함수
 
 네임 스페이스: [JordanWigner](xref:Microsoft.Quantum.Chemistry.JordanWigner)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자](https://nuget.org/packages/Microsoft.Quantum.Chemistry)
 
 
 ZZ 용어를 설명 하는 GeneratorIndex을 Paulis 라는 식의 ' GeneratorIndex [] ' 식으로 변환 합니다.

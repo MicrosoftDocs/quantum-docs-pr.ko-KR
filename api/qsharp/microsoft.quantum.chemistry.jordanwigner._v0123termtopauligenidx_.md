@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Chemistry.JordanWigner._V0123TermToPauliGenIdx_
 title: _V0123TermToPauliGenIdx_ 함수
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Chemistry.JordanWigner
 qsharp.name: _V0123TermToPauliGenIdx_
 qsharp.summary: Converts a GeneratorIndex describing a PQRS term to an expression 'GeneratorIndex[]' in terms of Paulis
-ms.openlocfilehash: b522691d6826933122e2ebac051b15e35b9902e2
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: fc5ad0e97374c52a90012b0ce633af8488f3ad88
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92714204"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96215098"
 ---
 # <a name="_v0123termtopauligenidx_-function"></a>_V0123TermToPauliGenIdx_ 함수
 
 네임 스페이스: [JordanWigner](xref:Microsoft.Quantum.Chemistry.JordanWigner)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자](https://nuget.org/packages/Microsoft.Quantum.Chemistry)
 
 
 PQRS 용어를 설명 하는 GeneratorIndex을 Paulis의 식 ' GeneratorIndex [] '로 변환 합니다.
