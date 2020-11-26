@@ -1,31 +1,31 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.ApplyOuterCDKMAdder
 title: ApplyOuterCDKMAdder 작업
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: ApplyOuterCDKMAdder
 qsharp.summary: Reversible, in-place ripple-carry operation that is used in the integer addition operation RippleCarryAdderCDKM below. Given two qubit registers `xs` and `ys` of the same length, the operation applies a ripple carry sequence of CNOT and CCNOT gates with qubits in `xs` and `ys` as the controls and qubits in `xs` as the targets.
-ms.openlocfilehash: 5ec9d31252254e40efb22e06656294325b4cffcd
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 81311a75beedb62331184faf4e1523f3ccc74f43
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92721568"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96190669"
 ---
 # <a name="applyoutercdkmadder-operation"></a>ApplyOuterCDKMAdder 작업
 
 네임 스페이스: [Microsoft 양자](xref:Microsoft.Quantum.Arithmetic)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 해독 가능한 내부 ripple 작업은 아래 RippleCarryAdderCDKM 정수 더하기 연산에 사용 됩니다.
 두 개의 두 가지 비트 레지스터 `xs` 와 `ys` 길이가 동일한 경우 작업은 CNOT 및 ccnot 게이트의 ripple 작업 시퀀스를의 `xs` 및의 `ys` 컨트롤 및 컨트롤 및의에 있는 컨트롤 및의 컨트롤 및의에 대 한으로 적용 합니다 `xs` .
 
 ```qsharp
-operation ApplyOuterCDKMAdder (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, ancilla : Qubit) : Unit
+operation ApplyOuterCDKMAdder (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, ancilla : Qubit) : Unit is Adj + Ctl
 ```
 
 
@@ -51,7 +51,7 @@ operation ApplyOuterCDKMAdder (xs : Microsoft.Quantum.Arithmetic.LittleEndian, y
 
 
 
-## <a name="references"></a>참조
+## <a name="references"></a>참조 항목
 
 - Thomas G. Draper, Samuel A. Kutin, David Petrie Moulton: "A new 퀀텀 ripple and A new, 2004.
   https://arxiv.org/abs/quant-ph/0410184v1

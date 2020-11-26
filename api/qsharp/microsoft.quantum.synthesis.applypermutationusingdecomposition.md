@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Synthesis.ApplyPermutationUsingDecomposition
 title: ApplyPermutationUsingDecomposition 작업
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Synthesis
 qsharp.name: ApplyPermutationUsingDecomposition
 qsharp.summary: Permutes the amplitudes in a quantum state given a permutation using decomposition-based synthesis.
-ms.openlocfilehash: 40b51807da155c57c3fa8d740eff28ceef0a0ffc
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 5b25ef3327bbca2dfdbe8fa876f3f797dddf77e8
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92725317"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96192131"
 ---
 # <a name="applypermutationusingdecomposition-operation"></a>ApplyPermutationUsingDecomposition 작업
 
 네임 스페이스: [Microsoft 양자](xref:Microsoft.Quantum.Synthesis)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 분해 기반 합성을 사용 하 여 순열 Permutes 퀀텀 상태에서 amplitudes를 지정 합니다.
 
 ```qsharp
-operation ApplyPermutationUsingDecomposition (perm : Int[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit
+operation ApplyPermutationUsingDecomposition (perm : Int[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit is Adj + Ctl
 ```
 
 
@@ -57,10 +57,10 @@ operation ApplyPermutationUsingDecomposition (perm : Int[], qubits : Microsoft.Q
 
 
 
-## <a name="references"></a>참조
+## <a name="references"></a>참조 항목
 
-- [*Alexis De Vos* , *Yvan Van rentergem* , 고급 (2), 2008, pp. 183--200](http://www.aimsciences.org/article/doi/10.3934/amc.2008.2.183)
-- [*Mathias Soeken* , *김 Tague* , *Gerhard* Dueck, *Rolf Drechsler* , 기호화 된 계산 73 (2016), pp. 1--26의 저널](https://www.sciencedirect.com/science/article/pii/S0747717115000188?via%3Dihub)
+- [*Alexis De Vos*, *Yvan Van rentergem*, 고급 (2), 2008, pp. 183--200](http://www.aimsciences.org/article/doi/10.3934/amc.2008.2.183)
+- [*Mathias Soeken*, *김 Tague*, *Gerhard* Dueck, *Rolf Drechsler*, 기호화 된 계산 73 (2016), pp. 1--26의 저널](https://www.sciencedirect.com/science/article/pii/S0747717115000188?via%3Dihub)
 
 ## <a name="see-also"></a>참고 항목
 

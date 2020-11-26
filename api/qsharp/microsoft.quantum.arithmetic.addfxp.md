@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.AddFxP
 title: AddFxP 작업
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: AddFxP
 qsharp.summary: Adds two fixed-point numbers stored in quantum registers.
-ms.openlocfilehash: cf1f1379b7e1c32aefb0fccb55f4d13c95c78d8f
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 36a5d585a493f0e6f33f74b1686aaa01cca7ac0b
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92721700"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96191043"
 ---
 # <a name="addfxp-operation"></a>AddFxP 작업
 
 네임 스페이스: [Microsoft 양자](xref:Microsoft.Quantum.Arithmetic)
 
-패키지 [](https://nuget.org/packages/)
+Package: [Microsoft 양자](https://nuget.org/packages/Microsoft.Quantum.Numerics)
 
 
 퀀텀 레지스터에 저장 된 두 개의 고정 소수점 숫자를 추가 합니다.
 
 ```qsharp
-operation AddFxP (fp1 : Microsoft.Quantum.Arithmetic.FixedPoint, fp2 : Microsoft.Quantum.Arithmetic.FixedPoint) : Unit
+operation AddFxP (fp1 : Microsoft.Quantum.Arithmetic.FixedPoint, fp2 : Microsoft.Quantum.Arithmetic.FixedPoint) : Unit is Adj + Ctl
 ```
 
 

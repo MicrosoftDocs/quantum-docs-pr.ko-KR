@@ -9,25 +9,25 @@ uid: microsoft.quantum.write-program
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 7a1a49e18ac9330ca6e3cc89b3e58c96eccb91db
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 4c73a070fea2ce69a0bce9bf293a4679727e27bc
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691661"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96192030"
 ---
 # <a name="tutorial-explore-entanglement-with-q"></a>자습서: Q\#을 사용한 얽힘 살펴보기
 
-이 자습서에서는 Q# 다양 한 비트를 조작 하 고 측정 하는 프로그램을 작성 하 고 superposition 및 되거나 얽 히의 효과를 보여 줍니다.
+이 자습서에서는 Q# 다양 한 비트를 조작 하 고 측정 하는 프로그램을 작성 하 고 superposition 및 되거나 얽 히의 효과를 보여 줍니다. 
 
 양자 얽힘을 보여주는 벨이라는 애플리케이션을 작성합니다.
 벨이라는 이름은 가장 간단한 중첩과 양자 얽힘의 예를 표현하는 데 사용되는 두 큐비트의 특정 양자 상태를 의미하는 벨 상태에서 따온 것입니다.
 
 ## <a name="pre-requisites"></a>필수 구성 요소
 
-코딩을 시작할 준비가 되면 계속하기 전에 다음 단계를 수행합니다. 
+코딩을 시작할 준비가 되면 계속하기 전에 다음 단계를 수행합니다.
 
-* 원하는 언어 및 개발 환경을 사용 하 여 퀀텀 개발 키트를 [설치](xref:microsoft.quantum.install) 합니다.
+* 원하는 언어 및 개발 환경을 사용 하 여 퀀텀 개발 키트를 [설치](xref:microsoft.quantum.install) 합니다. 
 * QDK가 이미 설치되어 있는 경우 최신 버전으로 [업데이트](xref:microsoft.quantum.update)해야 합니다.
 
 QDK를 설치 하지 않고도 설명을 따라 수행 하 고, Q# 프로그래밍 언어의 개요와 퀀텀 컴퓨팅의 첫 번째 개념을 검토할 수도 있습니다.
@@ -57,7 +57,7 @@ QDK를 설치 하지 않고도 설명을 따라 수행 하 고, Q# 프로그래�
 새 프로젝트를 만들려면 VS Code에서 다음을 수행 합니다. 
 
 1. **보기** -> **명령 팔레트** 를 클릭하고 **Q#: 새 프로젝트 만들기** 를 선택합니다.
-2. **Standalone console application** (독립 실행형 콘솔 애플리케이션)을 클릭합니다.
+2. **Standalone console application**(독립 실행형 콘솔 애플리케이션)을 클릭합니다.
 3. 프로젝트를 저장할 위치로 이동하여 **프로젝트 만들기** 를 클릭합니다.
 4. 프로젝트가 만들어지면 오른쪽 아래에서 **Open new project...** (새 프로젝트 열기)를 클릭합니다.
 
@@ -83,7 +83,7 @@ Microsoft의 목표는 특정 퀀텀 상태에서 두 개의 작업을 준비 �
 
 ### <a name="initialize-qubit-using-measurement"></a>측정을 사용 하 여 비트를 초기화 합니다.
 
-아래의 첫 번째 코드 조각에서는에서 원하는 비트를 사용 하는 방법을 보여 줍니다 Q# .  여기서는 두 가지 작업을 소개 하 고,이를 통해 [`M`](xref:Microsoft.Quantum.Intrinsic.m) [`X`](xref:Microsoft.Quantum.Intrinsic.X) 원하는 비트의 상태를 변환 합니다. 이 코드 조각에서 `SetQubitState` 연산은 큐비트를 매개 변수로 사용하고 또 다른 매개 변수 `desired`를 사용하여 우리가 원하는 큐비트 상태를 나타내는 것으로 정의됩니다.  `SetQubitState` 연산은 `M` 연산을 사용하여 큐비트를 측정합니다.  에서 Q# ,의 비트 측정은 항상 또는를 반환 합니다 `Zero` `One` .  측정값이 원하는 값과 일치 하지 않는 값을 반환 하는 경우에는 해당 값을 `SetQubitState` "대칭 이동" 합니다. 즉, `X` 작업을 실행 합니다 .이 작업은이를 반환 하는 측정값의 확률을 반환 하는 새 상태로의 값을 변경 하는 작업을 실행 `Zero` `One` 합니다. 이러한 방식으로 `SetQubitState` 는 항상 대상의를 원하는 상태로 설정 합니다.
+아래의 첫 번째 코드 조각에서는에서 원하는 비트를 사용 하는 방법을 보여 줍니다 Q# .  여기서는 두 가지 작업을 소개 하 고,이를 통해 [`M`](xref:Microsoft.Quantum.Intrinsic.M) [`X`](xref:Microsoft.Quantum.Intrinsic.X) 원하는 비트의 상태를 변환 합니다. 이 코드 조각에서 `SetQubitState` 연산은 큐비트를 매개 변수로 사용하고 또 다른 매개 변수 `desired`를 사용하여 우리가 원하는 큐비트 상태를 나타내는 것으로 정의됩니다.  `SetQubitState` 연산은 `M` 연산을 사용하여 큐비트를 측정합니다.  에서 Q# ,의 비트 측정은 항상 또는를 반환 합니다 `Zero` `One` .  측정값이 원하는 값과 일치 하지 않는 값을 반환 하는 경우에는 해당 값을 `SetQubitState` "대칭 이동" 합니다. 즉, `X` 작업을 실행 합니다 .이 작업은이를 반환 하는 측정값의 확률을 반환 하는 새 상태로의 값을 변경 하는 작업을 실행 `Zero` `One` 합니다. 이러한 방식으로 `SetQubitState` 는 항상 대상의를 원하는 상태로 설정 합니다.
 
 의 내용을 `Program.qs` 다음 코드로 바꿉니다.
 
@@ -116,7 +116,7 @@ Q#작업은 퀀텀 서브루틴입니다. 즉, 다른 퀀텀 작업에 대 한 �
 
 첫 번째 작업에서 두 개의 퀀텀 작업을 사용 했습니다 Q# .
 
-* [`M`](xref:Microsoft.Quantum.Intrinsic.m)작업으로,이 작업은의 상태를 측정 합니다.
+* [`M`](xref:Microsoft.Quantum.Intrinsic.M)작업으로,이 작업은의 상태를 측정 합니다.
 * [`X`](xref:Microsoft.Quantum.Intrinsic.X)작업은이 작업을 수행 합니다.
 
 양자 연산은 큐비트의 상태를 변환합니다. 가끔 사람들은 클래식 논리 게이트와 비슷하게, 연산 대신 양자 게이트에 대해 이야기합니다. 그 기원은 알고리즘이 이론적 아이디어에 불과했고 클래식 컴퓨팅의 회로 다이어그램과 유사한 다이어그램으로 시각화되던 양자 컴퓨팅 초기 시대입니다.

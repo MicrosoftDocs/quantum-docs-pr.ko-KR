@@ -9,12 +9,12 @@ uid: microsoft.quantum.relnotes
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: d38482be17e67f180441440ee8ccc7f1f64ebc9d
-ms.sourcegitcommit: fb75d8f30f1d91f644b2a594f46867eb5968cfda
+ms.openlocfilehash: 93ece8cbaa2ac8e6e0c9bb417e8f40130cb8a3fa
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94448347"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96192097"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit 릴리스 정보
 
@@ -23,6 +23,18 @@ ms.locfileid: "94448347"
 설치 지침은[설치 가이드](xref:microsoft.quantum.install)를 참조하세요.
 
 업데이트 지침은 [업데이트 가이드](xref:microsoft.quantum.update)를 참조하세요.
+
+## <a name="version-0142011120240"></a>버전 0.14.2011120240
+
+*릴리스 날짜: 11 월 25 일, 2020*
+
+- 참조 로드 속도가 빠르기 때문에 컴파일러 성능이 향상 되었습니다.
+- 언어 사양에 [에 대 한 Q# ](https://github.com/microsoft/qsharp-language/tree/main/Specifications/Language/5_Grammar) Q# .
+- [ `Microsoft.Quantum.Preparation` 네임 스페이스](xref:Microsoft.Quantum.Preparation) 를 스타일 가이드 및 API 디자인 원칙과 보다 일관 되도록 업데이트 하 고 추가 데이터와 purified 혼합 상태를 지원 합니다 ( [제안](https://github.com/microsoft/QuantumLibraries/issues/344), [검토 참고](https://github.com/microsoft/QuantumLibraries/blob/main/Design/meetings/2020/api-design-2020-11-05.md) 및 pr [#212](https://github.com/microsoft/QuantumLibraries/pull/212), [#322](https://github.com/microsoft/QuantumLibraries/pull/322), [#375](https://github.com/microsoft/QuantumLibraries/pull/375), [#376](https://github.com/microsoft/QuantumLibraries/pull/376)).
+- 반복 되는 호출 식 주위의 괄호는 이제 선택 사항 `(Foo(x))(y)` 입니다 .로 작성할 수 있습니다 `Foo(x)(y)` .
+- .NET 5 또는 Visual Studio 16.8을 설치한 Visual Studio 또는 Visual Studio Code 확장의 사용자에 게는 확장을 계속 사용 하기 위해 .NET Core 3.1을 설치 하 라는 메시지가 표시 될 수 있습니다.
+
+[라이브러리](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+closed%3A2020-10-23..2020-11-18), [컴파일러](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+closed%3A2020-10-23..2020-11-18), [런타임](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+closed%3A2020-10-23..2020-11-18), [샘플](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+closed%3A2020-10-23..2020-11-18), [I Q# ](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+closed%3A2020-10-23..2020-11-18) 및 [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+closed%3A2020-10-23..2020-11-18)에 대 한 폐쇄형 pr의 전체 목록을 참조 하세요.
 
 ## <a name="version-01320111004"></a>버전 0.13.20111004
 
@@ -240,7 +252,7 @@ ms.locfileid: "94448347"
 
 [라이브러리](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [컴파일러](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [런타임](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [샘플](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) 및 [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed)에 대한 비공개 PR의 전체 목록을 참조하세요.  
 
-## <a name="version-09-packagereference-0919082902"></a>버전 0.9( *PackageReference 0.9.1908.2902* )
+## <a name="version-09-packagereference-0919082902"></a>버전 0.9(*PackageReference 0.9.1908.2902*)
 
 *릴리스 날짜: 2019년 8월 29일*
 
@@ -257,7 +269,7 @@ ms.locfileid: "94448347"
 
 여기에는 변경 내용이 요약되어 있으며, 기존 프로그램을 업그레이드하는 방법에 대한 지침도 있습니다.  이러한 변경 내용에 대 한 자세한 내용은 [ Q# 개발자 블로그](https://devblogs.microsoft.com/qsharp)를 참조 하세요.
 
-## <a name="version-08-packagereference-0819071701"></a>버전 0.8( *PackageReference 0.8.1907.1701* )
+## <a name="version-08-packagereference-0819071701"></a>버전 0.8(*PackageReference 0.8.1907.1701*)
 
 *릴리스 날짜: 2019년 7월 12일*
 
@@ -269,7 +281,7 @@ ms.locfileid: "94448347"
 
 [라이브러리](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed) 및 [샘플](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed)에 대한 비공개 PR의 전체 목록을 참조하세요.  
 
-## <a name="version-07-packagereference-0719053109"></a>버전 0.7( *PackageReference 0.7.1905.3109* )
+## <a name="version-07-packagereference-0719053109"></a>버전 0.7(*PackageReference 0.7.1905.3109*)
 
 *릴리스 날짜: 2019년 5월 31일*
 

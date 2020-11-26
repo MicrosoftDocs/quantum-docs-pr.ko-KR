@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.AmplitudeAmplification.ApplyObliviousAmplitudeAmplification
 title: ApplyObliviousAmplitudeAmplification 작업
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.AmplitudeAmplification
 qsharp.name: ApplyObliviousAmplitudeAmplification
 qsharp.summary: Oblivious amplitude amplification by specifying partial reflections.
-ms.openlocfilehash: a1bda344b1097c7ab3240bc6d9cd0d8df80b9662
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 9b0060201bcdae02a207362a753a0a403cdbb896
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92721880"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96191519"
 ---
 # <a name="applyobliviousamplitudeamplification-operation"></a>ApplyObliviousAmplitudeAmplification 작업
 
 네임 스페이스: [AmplitudeAmplification](xref:Microsoft.Quantum.AmplitudeAmplification)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 부분 반사를 지정 하 여 명확한 진폭 증폭
 
 ```qsharp
-operation ApplyObliviousAmplitudeAmplification (phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, targetStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle, auxiliaryRegister : Qubit[], systemRegister : Qubit[]) : Unit
+operation ApplyObliviousAmplitudeAmplification (phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, targetStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle, auxiliaryRegister : Qubit[], systemRegister : Qubit[]) : Unit is Adj + Ctl
 ```
 
 
@@ -72,10 +72,10 @@ operation ApplyObliviousAmplitudeAmplification (phases : Microsoft.Quantum.Ampli
 
 대부분의 경우 `auxiliaryRegister` 는 $ \ket{\text{start}} a $ 상태에서 초기화 됩니다 \_ .
 
-## <a name="references"></a>참조
+## <a name="references"></a>참조 항목
 
-참조
+참조 항목
 
 - 표준 버전에 대 한 [ *D.W. Berry, A.M. Childs, Cleve, Kothari, R.D. Somma*](https://arxiv.org/abs/1312.1414) 입니다.
-  참조
+  참조 항목
 - [ *G.H. Low, I.L. Chuang*](https://arxiv.org/abs/1610.06546) 를 통해 부분 반사를 일반화 합니다.

@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.AddI
 title: AddI 작업
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: AddI
 qsharp.summary: Automatically chooses between addition with carry and without, depending on the register size of `ys`.
-ms.openlocfilehash: 7ee2b9099ea65b95647422dadc1efe4bf043d147
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 9a90d15defd57cf2836a6fda5b52ddaa816fd55e
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92721688"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96191026"
 ---
 # <a name="addi-operation"></a>AddI 작업
 
 네임 스페이스: [Microsoft 양자](xref:Microsoft.Quantum.Arithmetic)
 
-패키지 [](https://nuget.org/packages/)
+Package: [Microsoft 양자](https://nuget.org/packages/Microsoft.Quantum.Numerics)
 
 
 는의 레지스터 크기에 따라의 추가 및 포함 없이 추가를 자동으로 선택 `ys` 합니다.
 
 ```qsharp
-operation AddI (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit
+operation AddI (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit is Adj + Ctl
 ```
 
 

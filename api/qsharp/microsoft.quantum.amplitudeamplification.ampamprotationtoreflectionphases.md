@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.AmplitudeAmplification.AmpAmpRotationToReflectionPhases
 title: AmpAmpRotationToReflectionPhases 함수
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.AmplitudeAmplification
@@ -16,18 +16,18 @@ qsharp.summary: >-
   > Please use
 
   > @"microsoft.quantum.amplitudeamplification.rotationphasesasreflectionphases".
-ms.openlocfilehash: fe40da8b03e3b3a6ea6908639f866f280b5f413d
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: d43d3aa978bb4efee510ddc9f0ee862ac2daacdb
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92721971"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96191655"
 ---
 # <a name="ampamprotationtoreflectionphases-function"></a>AmpAmpRotationToReflectionPhases 함수
 
 네임 스페이스: [AmplitudeAmplification](xref:Microsoft.Quantum.AmplitudeAmplification)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 > [!WARNING]
