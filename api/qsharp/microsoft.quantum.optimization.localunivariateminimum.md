@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Optimization.LocalUnivariateMinimum
 title: LocalUnivariateMinimum 함수
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Optimization
 qsharp.name: LocalUnivariateMinimum
 qsharp.summary: Returns the local minimum for a univariate function over a bounded interval, using a golden interval search.
-ms.openlocfilehash: 3b09af88bbed20a392768d005e5e9567b3bb7022
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: e804e6a6ed82f14dcc9b8f721ad503d77922dc0f
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92711019"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96194086"
 ---
 # <a name="localunivariateminimum-function"></a>LocalUnivariateMinimum 함수
 
 네임 스페이스: [Microsoft 양자 최적화](xref:Microsoft.Quantum.Optimization)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 골든 간격 검색을 사용 하 여 제한 된 간격에 걸쳐 단일 함수에 대 한 지역 최소값을 반환 합니다.

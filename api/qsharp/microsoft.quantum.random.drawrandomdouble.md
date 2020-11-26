@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Random.DrawRandomDouble
 title: DrawRandomDouble 작업
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Random
 qsharp.name: DrawRandomDouble
 qsharp.summary: Draws a random real number in a given inclusive interval.
-ms.openlocfilehash: 6c0558ded2bd018afad84c42c2d15fc029ac0d44
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: d62416f4a222716edb9393fe4f43731d0e8aa9d3
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92723987"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96192947"
 ---
 # <a name="drawrandomdouble-operation"></a>DrawRandomDouble 작업
 
 네임 스페이스: [Microsoft 양자. 무작위](xref:Microsoft.Quantum.Random)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft. 양자](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 지정 된 포함 간격으로 임의의 실수를 그립니다.

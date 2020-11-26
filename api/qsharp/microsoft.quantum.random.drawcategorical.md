@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Random.DrawCategorical
 title: DrawCategorical 작업
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Random
 qsharp.name: DrawCategorical
 qsharp.summary: Draws a random sample from a categorical distribution specified by a list of probablities.
-ms.openlocfilehash: fdc5ae3a9341cb11e8fda129bdd030289b6c99c2
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: a5826aa5f658fea766db0ca5ccbb9c0d7d056d4c
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92720284"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96192998"
 ---
 # <a name="drawcategorical-operation"></a>DrawCategorical 작업
 
 네임 스페이스: [Microsoft 양자. 무작위](xref:Microsoft.Quantum.Random)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft. 양자](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Probablities 목록에 지정 된 범주 분포의 무작위 샘플을 그립니다.
