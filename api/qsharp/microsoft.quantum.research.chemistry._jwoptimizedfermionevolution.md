@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Research.Chemistry._JWOptimizedFermionEvolution
 title: _JWOptimizedFermionEvolution 작업
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Research.Chemistry
@@ -10,18 +10,18 @@ qsharp.summary: >-
   Represents a dynamical generator as a set of simulatable gates and an expansion in the JWOptimized basis.
 
   See [Dynamical Generator Modeling](../libraries/data-structures#dynamical-generator-modeling) for more details.
-ms.openlocfilehash: 5976b65d44c0e8597088dbaa6b85ffde634edcdb
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 670accb6288d26cc7deb89c8d580fe082e795d57
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92722797"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96226012"
 ---
 # <a name="_jwoptimizedfermionevolution-operation"></a>_JWOptimizedFermionEvolution 작업
 
 네임 스페이스: [Microsoft](xref:Microsoft.Quantum.Research.Chemistry) .
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft](https://nuget.org/packages/Microsoft.Quantum.Research.Chemistry) .
 
 
 동적 생성기를 simulatable 게이트 집합으로 나타내고 JWOptimized 된 단위로 확장 합니다.
@@ -29,7 +29,7 @@ ms.locfileid: "92722797"
 자세한 내용은 [동적 생성기 모델링](../libraries/data-structures#dynamical-generator-modeling) 을 참조 하세요.
 
 ```qsharp
-operation _JWOptimizedFermionEvolution (generatorIndex : Microsoft.Quantum.Simulation.GeneratorIndex, stepSize : Double, parityQubit : Qubit, qubits : Qubit[]) : Unit
+operation _JWOptimizedFermionEvolution (generatorIndex : Microsoft.Quantum.Simulation.GeneratorIndex, stepSize : Double, parityQubit : Qubit, qubits : Qubit[]) : Unit is Adj + Ctl
 ```
 
 

@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Simulation.GeneratorSystem
 title: GeneratorSystem 사용자 정의 형식
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.Simulation
@@ -10,18 +10,18 @@ qsharp.summary: >-
   Represents a collection of `GeneratorIndex`es.
 
   We iterate over this collection using a single-index integer, and the size of the collection is assumed to be known.
-ms.openlocfilehash: c03caf99b197410c7fa15021c8acaaf55a728781
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 20092a8deca50c90f46f4d79c6b40b805f135754
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92724561"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96225230"
 ---
 # <a name="generatorsystem-user-defined-type"></a>GeneratorSystem 사용자 정의 형식
 
 네임 스페이스: [Microsoft 양자 시뮬레이션](xref:Microsoft.Quantum.Simulation)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Es의 컬렉션을 나타냅니다 `GeneratorIndex` .

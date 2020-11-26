@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Research.Characterization.RandomWalkPhaseEstimation
 title: RandomWalkPhaseEstimation 작업
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Research.Characterization
 qsharp.name: RandomWalkPhaseEstimation
 qsharp.summary: Performs iterative phase estimation using a random walk to approximate Bayesian inference on the classical measurement results from a given oracle and eigenstate.
-ms.openlocfilehash: 5e0c0871b916ff51b85dec8703111788b5204bc6
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 2c3afdd41da24a1f32f59f36f0f5c5ed29df1f0b
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92710879"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96226165"
 ---
 # <a name="randomwalkphaseestimation-operation"></a>RandomWalkPhaseEstimation 작업
 
 네임 스페이스: [Microsoft](xref:Microsoft.Quantum.Research.Characterization) .
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft](https://nuget.org/packages/Microsoft.Quantum.Research.Characterization) .
 
 
 임의 워크를 사용 하 여 반복 단계 예측을 수행 하 여 지정 된 oracle 및 eigenstate에서 얻은 기존 측정 결과에 대 한 Bayesian 유추를 대략적으로 수행 합니다.
@@ -80,7 +80,7 @@ $U $가 작동 하는 레지스터입니다.
 
 ### <a name="experiment-design"></a>실험 디자인
 
-에 전달 되는 $t $ 및 역 각도 $ \theta $의 측정 시간은 `oracle` *파티클 추측 추론* , \begin{align} \stc\\\ac\\\\variance{\phi}}., \aa\ca\a\a\ca\ca\ {1}
+에 전달 되는 $t $ 및 역 각도 $ \theta $의 측정 시간은 `oracle` *파티클 추측 추론*, \begin{align} \stc\\\ac\\\\variance{\phi}}., \aa\ca\a\a\ca\ca\ {1}
 \end{align}이 추론은 이전의 표준에 대 한 가정 하에 반복 단계 추정에서 예상 되는 사후 분산을 줄이는 데 가장 적합 합니다.
 
 ### <a name="optimality"></a>Optimality
@@ -89,8 +89,8 @@ $U $가 작동 하는 레지스터입니다.
 
 반복 단계 예측의 통계에 대 한 자세한 내용은 [Bayesian 단계 예측](xref:microsoft.quantum.libraries.characterization#bayesian-phase-estimation) 을 참조 하세요.
 
-## <a name="references"></a>참조
+## <a name="references"></a>참조 항목
 
 - Ferrie *et al.* 2011 [doi: 10/tfx](https://doi.org/10.1007/s11128-012-0407-6), [arxiv: 1110.3067](https://arxiv.org/abs/1110.3067).
 - Wiebe *et al.* 2013 [doi: 10/tf3](https://doi.org/10.1103/PhysRevLett.112.190501), [arxiv: 1309.0876](https://arxiv.org/abs/1309.0876)
-- Wiebe 및 Granade 2018 *(준비)* .
+- Wiebe 및 Granade 2018 *(준비)*.

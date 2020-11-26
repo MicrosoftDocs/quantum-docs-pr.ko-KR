@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Oracles.DeterministicStateOracleFromStateOracle
 title: DeterministicStateOracleFromStateOracle 함수
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Oracles
 qsharp.name: DeterministicStateOracleFromStateOracle
 qsharp.summary: Converts an oracle of type `StateOracle` to `DeterministicStateOracle`.
-ms.openlocfilehash: 539cc56e7ae4ead6654aaaae5353a771e06d2bfb
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 183b1108ead6239e26bb0b38144cb9374e7bf285
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92724253"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96226760"
 ---
 # <a name="deterministicstateoraclefromstateoracle-function"></a>DeterministicStateOracleFromStateOracle 함수
 
 네임 스페이스: [Oracles](xref:Microsoft.Quantum.Oracles)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 형식의 oracle `StateOracle` 을로 변환 `DeterministicStateOracle` 합니다.

@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Research.Chemistry.ApplyDeltaParity
 title: ApplyDeltaParity 작업
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Research.Chemistry
 qsharp.name: ApplyDeltaParity
 qsharp.summary: Computes difference in parity between a previous PQRS... terms and the next PQRS... term. This difference is computed on a auxiliary qubit.
-ms.openlocfilehash: bb01eb684ff1820be08a573c0ca6cfc12efeb889
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 40157b6a166b09c6fee63d86e203f92069d008f1
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92723980"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96225757"
 ---
 # <a name="applydeltaparity-operation"></a>ApplyDeltaParity 작업
 
 네임 스페이스: [Microsoft](xref:Microsoft.Quantum.Research.Chemistry) .
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft](https://nuget.org/packages/Microsoft.Quantum.Research.Chemistry) .
 
 
 이전 PQRS 간 패리티 차이를 계산 합니다. 용어 및 다음 PQRS 부채. 이 차이는 보조 비트에서 계산 됩니다.
 
 ```qsharp
-operation ApplyDeltaParity (prevFermionicTerm : Int[], nextFermionicTerm : Int[], aux : Qubit, qubits : Qubit[]) : Unit
+operation ApplyDeltaParity (prevFermionicTerm : Int[], nextFermionicTerm : Int[], aux : Qubit, qubits : Qubit[]) : Unit is Adj + Ctl
 ```
 
 

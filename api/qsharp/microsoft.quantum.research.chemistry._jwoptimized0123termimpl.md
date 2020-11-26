@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Research.Chemistry._JWOptimized0123TermImpl
 title: _JWOptimized0123TermImpl 작업
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Research.Chemistry
 qsharp.name: _JWOptimized0123TermImpl
 qsharp.summary: Implementation step of `JWOptimized0123Term_`;
-ms.openlocfilehash: f7ccce774cf247d4b35f37ba5be4929f18a8357d
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: dcf6578eeaac6630bd9fdb970a47828ad33e63e4
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92710823"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96226046"
 ---
 # <a name="_jwoptimized0123termimpl-operation"></a>_JWOptimized0123TermImpl 작업
 
 네임 스페이스: [Microsoft](xref:Microsoft.Quantum.Research.Chemistry) .
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft](https://nuget.org/packages/Microsoft.Quantum.Research.Chemistry) .
 
 
 의 구현 단계 `JWOptimized0123Term_`
 
 ```qsharp
-operation _JWOptimized0123TermImpl (term : Microsoft.Quantum.Simulation.GeneratorIndex, stepSize : Double, parityQubit : Qubit, qubits : Qubit[]) : Unit
+operation _JWOptimized0123TermImpl (term : Microsoft.Quantum.Simulation.GeneratorIndex, stepSize : Double, parityQubit : Qubit, qubits : Qubit[]) : Unit is Adj + Ctl
 ```
 
 

@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Research.Chemistry._JWOptimizedZ
 title: _JWOptimizedZ 작업
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Research.Chemistry
 qsharp.name: _JWOptimizedZ
 qsharp.summary: Applies a Rz rotation, with a C-NOT trick to double phase in phase estimation.
-ms.openlocfilehash: 8bbd4af0389a7b748be11dc50bacd2c178521adc
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: e0b442a7ac237525acdc80e8e79044ebb523f8a2
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92724631"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96225910"
 ---
 # <a name="_jwoptimizedz-operation"></a>_JWOptimizedZ 작업
 
 네임 스페이스: [Microsoft](xref:Microsoft.Quantum.Research.Chemistry) .
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft](https://nuget.org/packages/Microsoft.Quantum.Research.Chemistry) .
 
 
 단계 추정에서 2 단계에 대 한 C NOT 트릭을 사용 하 여 Rz 회전을 적용 합니다.
 
 ```qsharp
-operation _JWOptimizedZ (angle : Double, parityQubit : Qubit, qubit : Qubit) : Unit
+operation _JWOptimizedZ (angle : Double, parityQubit : Qubit, qubit : Qubit) : Unit is Adj + Ctl
 ```
 
 

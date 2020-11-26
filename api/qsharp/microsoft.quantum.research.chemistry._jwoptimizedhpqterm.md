@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Research.Chemistry._JWOptimizedHpqTerm
 title: _JWOptimizedHpqTerm 작업
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Research.Chemistry
 qsharp.name: _JWOptimizedHpqTerm
 qsharp.summary: Applies time-evolution by a PQ term described by a `GeneratorIndex`.
-ms.openlocfilehash: 503de03a379ac0ede3754aa7a31ac2ce84e5c675
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 06680bac0f0a2854c3ee3036c67c635ed0caf206
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92724876"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96225978"
 ---
 # <a name="_jwoptimizedhpqterm-operation"></a>_JWOptimizedHpqTerm 작업
 
 네임 스페이스: [Microsoft](xref:Microsoft.Quantum.Research.Chemistry) .
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft](https://nuget.org/packages/Microsoft.Quantum.Research.Chemistry) .
 
 
 에 설명 된 PQ 용어의 시간 진화를 적용 `GeneratorIndex` 합니다.
 
 ```qsharp
-operation _JWOptimizedHpqTerm (term : Microsoft.Quantum.Simulation.GeneratorIndex, stepSize : Double, parityQubit : Qubit, qubits : Qubit[]) : Unit
+operation _JWOptimizedHpqTerm (term : Microsoft.Quantum.Simulation.GeneratorIndex, stepSize : Double, parityQubit : Qubit, qubits : Qubit[]) : Unit is Adj + Ctl
 ```
 
 
