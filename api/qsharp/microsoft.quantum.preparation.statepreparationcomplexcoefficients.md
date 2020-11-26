@@ -1,30 +1,38 @@
 ---
 uid: Microsoft.Quantum.Preparation.StatePreparationComplexCoefficients
 title: StatePreparationComplexCoefficients 함수
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Preparation
 qsharp.name: StatePreparationComplexCoefficients
 qsharp.summary: >-
+  > [!WARNING]
+
+  > StatePreparationComplexCoefficients has been deprecated. Please use <xref:Microsoft.Quantum.Preparation.PrepareArbitraryStateCP> instead.
+
+
   Returns an operation that prepares a specific quantum state.
 
   The returned operation $U$ prepares an arbitrary quantum state $\ket{\psi}$ with complex coefficients $r_j e^{i t_j}$ from the $n$-qubit computational basis state $\ket{0...0}$.
 
   The action of U on a newly-allocated register is given by $$ \begin{align} U\ket{0...0}=\ket{\psi}=\frac{\sum_{j=0}^{2^n-1}r_j e^{i t_j}\ket{j}}{\sqrt{\sum_{j=0}^{2^n-1}|r_j|^2}}. \end{align} $$
-ms.openlocfilehash: 02e3d2fcf21b5bb4ed1bf7aa931597f918a1d369
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 1d0efa7b83d2e8e75c4b293866f3929f357ec44b
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92722909"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96210372"
 ---
 # <a name="statepreparationcomplexcoefficients-function"></a>StatePreparationComplexCoefficients 함수
 
 네임 스페이스: [Microsoft 양자 준비](xref:Microsoft.Quantum.Preparation)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
+
+> [!WARNING]
+> StatePreparationComplexCoefficients는 더 이상 사용 되지 않습니다. 대신 <xref:Microsoft.Quantum.Preparation.PrepareArbitraryStateCP>를 사용하십시오.
 
 특정 퀀텀 상태를 준비 하는 작업을 반환 합니다.
 
@@ -46,7 +54,7 @@ function StatePreparationComplexCoefficients (coefficients : Microsoft.Quantum.M
 
 
 
-## <a name="output--littleendian--unit-adj--ctl"></a>출력: [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian) => [Unit](xref:microsoft.quantum.lang-ref.unit) Adj + Ctl
+## <a name="output--littleendian--unit--is-adj--ctl"></a>출력: [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian) => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj + Ctl
 
 상태 준비 단일 작업 $U $.
 

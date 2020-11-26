@@ -1,24 +1,60 @@
 ### YamlMime:QSharpNamespace
 functions:
+- summary: 임의 상태 준비 절차의 구현 단계입니다.
+  uid: Microsoft.Quantum.Preparation.ApproximatelyUnprepareArbitraryStatePlan
 - summary: >-
     단일가 나 비트 상태에 대 한 Bloch 구 좌표를 계산 합니다.
 
     지정 된 두 복소수 $a 0, a1 $는 Bloch 구의 좌표를 계산 하는 구의 좌표를 계산 하는 구의 좌표를 계산 합니다. 예를 들어, $a 0 \ket {0} + a1 \ket {1} = r e ^ {it} (e ^ {-i \emlb = r e ^ {(\ 테타/2)} \ket {0} + e ^ {i \emlc\sin{(\ 테타 {1}
   uid: Microsoft.Quantum.Preparation.BlochSphereCoordinates
 - summary: >-
+    지정 된 혼합 상태의 purification을 준비 하는 작업을 반환 합니다.
+
+    "Purified mixed state"는 계수 {pi}의 벡터로 지정 된 | ψ ⟩ = Σi √ pi | i ⟩ | garbagei ⟩ 형식의 상태를 나타냅니다. 이 양식의 상태를 혼합 된 상태 ρ ≔ pi | i ⟩ ⟨ i로 줄일 수 있습니다. "가비지" 레지스터를 추적 하는 방법 (즉, 계산 기반의 대각선 인 혼합 된 상태).
+
+
+    자세한 내용은 https://arxiv.org/pdf/1805.03662.pdf?page=15 을 참조 하세요.
+  uid: Microsoft.Quantum.Preparation.PurifiedMixedState
+- summary: 에서 반환 하는 작업을 적용 하기 위해 할당 해야 하는 총 비트 수를 반환 합니다 @"microsoft.quantum.preparation.purifiedmixedstate" .
+  uid: Microsoft.Quantum.Preparation.PurifiedMixedStateRequirements
+- summary: >-
+    지정 된 데이터 컬렉션을 나타내는 레지스터와 함께 지정 된 혼합 된 상태의 purification을 준비 하는 작업을 반환 합니다.
+
+    "Purified mixed state with data"는 Σi √ pi | i ⟩ | 크 ⟩ | garbagei ⟩ 형식의 상태를 나타냅니다. 여기서 각 크 크는 register | i ⟩에 연결 된 추가 데이터를 인코딩하는 bitstring입니다.
+
+
+    자세한 내용은 https://arxiv.org/pdf/1805.03662.pdf?page=15 을 참조 하세요.
+  uid: Microsoft.Quantum.Preparation.PurifiedMixedStateWithData
+- summary: >-
+    > [!WARNING]
+
+    > QuantumROM는 더 이상 사용 되지 않습니다. 대신 <xref:Microsoft.Quantum.Preparation.PurifiedMixedState>를 사용하십시오.
+
+
     는 퀀텀 ROM 기술을 사용 하 여 지정 된 밀도 행렬을 나타냅니다.
 
     $ 계수의 $ \ alpha_j $ $N 목록이 지정 된 경우,이는 \ket{j}\bra{j} 기술을 사용 하 여 밀도 행렬 $ \rho = \ p_j {j = 0} ^ {N-1} \frac{| sum_ |}의 purification에 대 한 근사치 $ \tilde\rho\ sum_ {j = 0} ^ {N-1} alpha_j $를 준비 하는 단일 $U $를 반환 합니다. {\ sum_k | \ alpha_k |} \ket{j}\bra{j} $. 이러한 근사값에서 $ \epsilon $ 오류는 $ | p_j-\frac{| alpha_j |}입니다. {\ sum_k | \ alpha_k |} | \le \le/N $ 및 $ \| \tilde\rho-\rho \| \le \te\e $를 입력 합니다. 즉, $ $ \begin{align} U\ket {0} ^ {\lceil\ log_2 N\rceil} \ k {0} ^ {m} = \ sum_ {j = 0} ^ {N-1} \sqrt{p_j} \ket{j}\ket{\text{garbage} _j}입니다. \end{align} $ $
   uid: Microsoft.Quantum.Preparation.QuantumROM
 - summary: ''
   uid: Microsoft.Quantum.Preparation.QuantumROMBitStringWriterByIndex
-- summary: 에서 반환 하는 작업에 할당 해야 하는 총 작업 수를 반환 합니다 `QuantumROM` .
+- summary: >-
+    > [!WARNING]
+
+    > QuantumROMQubitCount는 더 이상 사용 되지 않습니다. 대신 <xref:Microsoft.Quantum.Preparation.PurifiedMixedStateRequirements>를 사용하십시오.
+
+
+    에서 반환 하는 작업에 할당 해야 하는 총 작업 수를 반환 합니다 `QuantumROM` .
   uid: Microsoft.Quantum.Preparation.QuantumROMQubitCount
 - summary: ''
-  uid: Microsoft.Quantum.Preparation.RangeLength
-- summary: ''
   uid: Microsoft.Quantum.Preparation.RoundedDiscretizationCoefficients
+- summary: ''
+  uid: Microsoft.Quantum.Preparation.SplitSign
 - summary: >-
+    > [!WARNING]
+
+    > StatePreparationComplexCoefficients는 더 이상 사용 되지 않습니다. 대신 <xref:Microsoft.Quantum.Preparation.PrepareArbitraryStateCP>를 사용하십시오.
+
+
     특정 퀀텀 상태를 준비 하는 작업을 반환 합니다.
 
     반환 된 작업 $U $은 $n $-\ket{0...0} $에서 t_j e ^ {i} $ 복합 _j $r 계수를 사용 하 여 임의의 퀀텀 상태 $ \ket{\psi} $을 준비 합니다.
@@ -26,6 +62,11 @@ functions:
     새로 할당 된 레지스터의 U 동작은 $ $ \begin{align} U\ket {0 ... 0} = \ket{\psi} = \frac{\ sum_ {j = 0} ^ {2 ^ n-1} r_j e ^ {i t_j} \ket{j}}{\sqrt{\ sum_ {j = 0} ^ {2 ^ n-1} | r_j | ^ 2}}에 의해 제공 됩니다. \end{align} $ $
   uid: Microsoft.Quantum.Preparation.StatePreparationComplexCoefficients
 - summary: >-
+    > [!WARNING]
+
+    > StatePreparationPositiveCoefficients는 더 이상 사용 되지 않습니다. 대신 <xref:Microsoft.Quantum.Preparation.PrepareArbitraryStateD>를 사용하십시오.
+
+
     지정 된 퀀텀 상태를 준비 하는 작업을 반환 합니다.
 
     $ $U 반환 되는 작업은 $ \ket{0...0} $ $n $ \ alpha_j \ge $0 인 긍정 계수 $ \ket{\psi} $를 준비 합니다.
@@ -33,17 +74,17 @@ functions:
     새로 할당 된 레지스터의 U 동작은 $ $ \begin{align} U \ket{0\cdots 0} = \ket{\psi} = \frac{\ sum_ {j = 0} ^ {2 ^ n-1} \ alpha_j \ket{j}}{\sqrt{\ sum_ {j = 0} ^ {2 ^ n-1} | \ alpha_j | ^ 2}}에 의해 제공 됩니다. \end{align} $ $
   uid: Microsoft.Quantum.Preparation.StatePreparationPositiveCoefficients
 - summary: 임의 상태 준비 절차의 구현 단계입니다.
-  uid: Microsoft.Quantum.Preparation._ApproximatelyUnprepareArbitraryStatePlan
+  uid: Microsoft.Quantum.Preparation.StatePreparationSBMComputeCoefficients
 - summary: ''
   uid: Microsoft.Quantum.Preparation._CompileApproximateArbitraryStatePreparation
 - summary: ''
   uid: Microsoft.Quantum.Preparation._QuantumROMDiscretization
-- summary: ''
-  uid: Microsoft.Quantum.Preparation._QuantumROMQubitManager
-- summary: 임의 상태 준비 절차의 구현 단계입니다.
-  uid: Microsoft.Quantum.Preparation._StatePreparationSBMComputeCoefficients
 name: Microsoft.Quantum.Preparation
-newtypes: []
+newtypes:
+- summary: 인덱스 및 가비지 레지스터에 대해 준비할 수 있는 특정 혼합 상태를 나타냅니다.
+  uid: Microsoft.Quantum.Preparation.MixedStatePreparation
+- summary: 지정 된 혼합 상태를 준비 하는 데 필요한 필요한 비트 수를 나타냅니다.
+  uid: Microsoft.Quantum.Preparation.MixedStatePreparationRequirements
 operations:
 - summary: ''
   uid: Microsoft.Quantum.Preparation.ApplyGlobalRotationStep
@@ -51,17 +92,39 @@ operations:
   uid: Microsoft.Quantum.Preparation.ApplyMultiplexStep
 - summary: 작은 endian 레지스터를 구성 하는 기본 기능에 작업을 적용 합니다. 이 작업은 구현 세부 정보를 제공 하는 "불투명" 이므로,이 작업은 내부용으로 표시 되어 있습니다.
   uid: Microsoft.Quantum.Preparation.ApplyToLittleEndian
-- summary: 계수 집합 및 작은 endian로 인코딩된 퀀텀 레지스터가 지정 된 경우 지정 된 계수에 의해 설명 된 레지스터의 상태를 지정 된 근사값까지 준비 합니다.
+- summary: >-
+    > [!WARNING]
+
+    > ApproximatelyPrepareArbitraryState는 더 이상 사용 되지 않습니다. 대신 <xref:Microsoft.Quantum.Preparation.ApproximatelyPrepareArbitraryStateCP>를 사용하십시오.
+
+
+    계수 집합 및 작은 endian로 인코딩된 퀀텀 레지스터가 지정 된 경우 지정 된 계수에 의해 설명 된 레지스터의 상태를 지정 된 근사값까지 준비 합니다.
   uid: Microsoft.Quantum.Preparation.ApproximatelyPrepareArbitraryState
-- summary: 계수 집합과 작은 endian 인코딩된 퀀텀 레지스터가 지정 된 경우는 지정 된 계수에 설명 된 레지스터에 상태를 준비 합니다.
+- summary: 계수 집합 및 작은 endian로 인코딩된 퀀텀 레지스터가 지정 된 경우 지정 된 계수에 의해 설명 된 레지스터의 상태를 지정 된 근사값까지 준비 합니다.
+  uid: Microsoft.Quantum.Preparation.ApproximatelyPrepareArbitraryStateCP
+- summary: 계수 집합 및 작은 endian로 인코딩된 퀀텀 레지스터가 지정 된 경우 지정 된 계수에 의해 설명 된 레지스터의 상태를 지정 된 근사값까지 준비 합니다.
+  uid: Microsoft.Quantum.Preparation.ApproximatelyPrepareArbitraryStateD
+- summary: ''
+  uid: Microsoft.Quantum.Preparation.IgnoreDataRegister
+- summary: >-
+    > [!WARNING]
+
+    > PrepareArbitraryState는 더 이상 사용 되지 않습니다. 대신 <xref:Microsoft.Quantum.Preparation.PrepareArbitraryStateCP>를 사용하십시오.
+
+
+    계수 집합과 작은 endian 인코딩된 퀀텀 레지스터가 지정 된 경우는 지정 된 계수에 설명 된 레지스터에 상태를 준비 합니다.
   uid: Microsoft.Quantum.Preparation.PrepareArbitraryState
-- summary: 지정 된 작업에 대 한 Choi – Jamiłkowski 상태를 지정 된 참조 및 대상 레지스터로 준비 합니다.
+- summary: 계수 집합과 작은 endian 인코딩된 퀀텀 레지스터가 지정 된 경우는 지정 된 계수에 설명 된 레지스터에 상태를 준비 합니다.
+  uid: Microsoft.Quantum.Preparation.PrepareArbitraryStateCP
+- summary: 계수 집합과 작은 endian 인코딩된 퀀텀 레지스터가 지정 된 경우는 지정 된 계수에 설명 된 레지스터에 상태를 준비 합니다.
+  uid: Microsoft.Quantum.Preparation.PrepareArbitraryStateD
+- summary: 지정 된 작업에 대 한 Choi – Jamiołkowski 상태를 지정 된 참조 및 대상 레지스터로 준비 합니다.
   uid: Microsoft.Quantum.Preparation.PrepareChoiState
-- summary: 지정 된 참조 및 대상 레지스터에 대해 adjoint variant를 사용 하 여 지정 된 작업에 대 한 Choi – Jamiłkowski 상태를 준비 합니다.
+- summary: 지정 된 참조 및 대상 레지스터에 대해 adjoint variant를 사용 하 여 지정 된 작업에 대 한 Choi – Jamiołkowski 상태를 준비 합니다.
   uid: Microsoft.Quantum.Preparation.PrepareChoiStateA
-- summary: 지정 된 참조 및 대상 레지스터에 대해 제어 된 variant를 사용 하 여 지정 된 작업에 대 한 Choi – Jamiłkowski 상태를 준비 합니다.
+- summary: 지정 된 참조 및 대상 레지스터에 대해 제어 된 variant를 사용 하 여 지정 된 작업에 대 한 Choi – Jamiołkowski 상태를 준비 합니다.
   uid: Microsoft.Quantum.Preparation.PrepareChoiStateC
-- summary: 지정 된 작업에 대 한 Choi – Jamiłkowski 상태를 제어 된 및 adjoint 변형 둘 다 지정 된 참조 및 대상 레지스터에 준비 합니다.
+- summary: 지정 된 작업에 대 한 Choi – Jamiołkowski 상태를 제어 된 및 adjoint 변형 둘 다 지정 된 참조 및 대상 레지스터에 준비 합니다.
   uid: Microsoft.Quantum.Preparation.PrepareChoiStateCA
 - summary: >-
     쌍 2 비트 레지스터입니다.
@@ -73,9 +136,16 @@ operations:
 
     레지스터는 각 \boldone에 전체 depolarizing 채널을 적용 하 여 $/2 ^ N $ 상태에서 준비 됩니다. 여기서 $N $은 레지스터의 길이입니다.
   uid: Microsoft.Quantum.Preparation.PrepareIdentity
+- summary: 지정 된 Pauli 연산자의 긍정 eigenstate에서 원하는 비트를 준비 합니다. Id 연산자가 지정 된 경우에는 최대 혼합 된 상태에서 해당 비트를 준비 합니다.
+  uid: Microsoft.Quantum.Preparation.PreparePauliEigenstate
 - summary: ''
   uid: Microsoft.Quantum.Preparation.PrepareQuantumROMState
 - summary: >-
+    > [!WARNING]
+
+    > PrepareQubit는 더 이상 사용 되지 않습니다. 대신 <xref:Microsoft.Quantum.Preparation.PreparePauliEigenstate>를 사용하십시오.
+
+
     `Zero`지정 된 Pauli 연산자의 + 1 () eigenstate에서 eibit를 준비 합니다. Id 연산자가 지정 된 경우에는 최대 혼합 된 상태에서 해당 비트를 준비 합니다.
 
     이 작업은 처음에 $ \ket $ 상태에 있는 경우 {0} 이 작업을 통해 지정 된 Pauli 연산자의 $ + $1 eigenstate 또는의 최대 mixed 상태 ()에 대 한 추가 비트를 준비 `PauliI` 합니다 (참조 <xref:microsoft.quantum.preparation.preparesinglequbitidentity> ).
@@ -93,15 +163,17 @@ operations:
     즉,이 단일 $U $는 입력 상태가 $ \ket{0\cdots 0} $ 인 경우 $0 $에서 $1 $M까지 모든 숫자 상태에 대 한 균일 한 superposition를 만듭니다. 즉, $ $ \begin{align} U\ket {0} = \frac {1} {\sqrt{m}}\ sum_ {j = 0} ^ {M-1} \ket{j}. \end{align} $ $.
   uid: Microsoft.Quantum.Preparation.PrepareUniformSuperposition
 - summary: 구현 단계 <xref:microsoft.quantum.canon.prepareuniformsuperposition>
-  uid: Microsoft.Quantum.Preparation.PrepareUniformSuperposition_
+  uid: Microsoft.Quantum.Preparation.PrepareUniformSuperpositionOracle
 - summary: ''
   uid: Microsoft.Quantum.Preparation.WriteQuantumROMBitString
+- summary: 계수 집합 및 작은-endian 인코딩된 퀀텀 레지스터의 모든 값이 0 상태에 있는 경우 지정 된 계수에 설명 된 레지스터의 상태를 준비 합니다. 대상에서 지 원하는 경우 상태 에뮬레이션을 사용 합니다.
+  uid: Microsoft.Quantum.Preparation._PrepareAmplitudesFromZeroState
 summary: 이 네임 스페이스에는 임의 비트를 임의 초기 상태로 준비 하기 위한 함수 및 작업이 포함 되어 있습니다.
 uid: Microsoft.Quantum.Preparation
 metadata:
-  ms.openlocfilehash: f8dc07d5fe1073f626eea41e6291d8cc919d93b6
-  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.openlocfilehash: f08467fae166b83cbb71d86739b4cd1300259b8b
+  ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 10/27/2020
-  ms.locfileid: "92723350"
+  ms.lasthandoff: 11/26/2020
+  ms.locfileid: "96210304"

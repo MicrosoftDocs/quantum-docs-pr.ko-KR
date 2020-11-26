@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Random.Delay
 title: 지연 작업
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Random
 qsharp.name: Delay
 qsharp.summary: ''
-ms.openlocfilehash: f5b61252705eb8f6112f1cd253607ed8be5b8828
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 98be442282d03f47d446dbb08635d79de00a2aad
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92710956"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96210202"
 ---
 # <a name="delay-operation"></a>지연 작업
 
 네임 스페이스: [Microsoft 양자. 무작위](xref:Microsoft.Quantum.Random)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft. 양자](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 

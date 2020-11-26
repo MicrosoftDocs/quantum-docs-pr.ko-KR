@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyIfElseRC
 title: ApplyIfElseRC 작업
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyIfElseRC
 qsharp.summary: Applies one of two controllable operations, depending on the value of a classical result.
-ms.openlocfilehash: 45bd0f46fb2e28c5c9aaa21cb7ec065baf279d2a
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: b2e4ade84b25b0100fe4b69814c760a672833f06
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92718117"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96209488"
 ---
 # <a name="applyifelserc-operation"></a>ApplyIfElseRC 작업
 
 네임 스페이스: [Microsoft. 양자](xref:Microsoft.Quantum.Canon)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 클래식 결과의 값에 따라 제어 가능한 두 작업 중 하나를 적용 합니다.
 
 ```qsharp
-operation ApplyIfElseRC<'T, 'U> (result : Result, (zeroOp : ('T => Unit is Ctl), zeroInput : 'T), (oneOp : ('U => Unit is Ctl), oneInput : 'U)) : Unit
+operation ApplyIfElseRC<'T, 'U> (result : Result, (zeroOp : ('T => Unit is Ctl), zeroInput : 'T), (oneOp : ('U => Unit is Ctl), oneInput : 'U)) : Unit is Ctl
 ```
 
 
@@ -39,7 +39,7 @@ operation ApplyIfElseRC<'T, 'U> (result : Result, (zeroOp : ('T => Unit is Ctl),
 또는이 적용 되었는지 확인 하는 데 사용 되는 측정 결과 `zeroOp` `oneOp` 입니다.
 
 
-### <a name="zeroop--t--unit-ctl"></a>zeroOp: ' t => [Unit](xref:microsoft.quantum.lang-ref.unit) Ctl
+### <a name="zeroop--t--unit--is-ctl"></a>zeroOp: ' t => [Unit](xref:microsoft.quantum.lang-ref.unit)  이 Ctl입니다.
 
 일 때 적용 되는 제어 가능한 작업 `result == Zero` 입니다.
 
@@ -49,7 +49,7 @@ operation ApplyIfElseRC<'T, 'U> (result : Result, (zeroOp : ('T => Unit is Ctl),
 때 제공 되는 입력입니다 `zeroOp` `result == Zero` .
 
 
-### <a name="oneop--u--unit-ctl"></a>oneOp: ' U => [단위](xref:microsoft.quantum.lang-ref.unit) Ctl
+### <a name="oneop--u--unit--is-ctl"></a>oneOp: ' U => [Unit](xref:microsoft.quantum.lang-ref.unit)  이 Ctl입니다.
 
 일 때 적용 되는 제어 가능한 작업 `result == One` 입니다.
 

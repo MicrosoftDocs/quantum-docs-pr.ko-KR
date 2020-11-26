@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.AndLadder
 title: AndLadder 작업
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: AndLadder
 qsharp.summary: Performs a controlled "AND ladder" on a register of target qubits.
-ms.openlocfilehash: 05a0e8110539742501883fea75ac368d9946164d
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 2c6114ec8a5caabdeea8ab7e26a4877e1633671c
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92718484"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96209726"
 ---
 # <a name="andladder-operation"></a>AndLadder 작업
 
 네임 스페이스: [Microsoft. 양자](xref:Microsoft.Quantum.Canon)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 대상의 레지스터에서 제어 되는 "및 사다리"를 수행 합니다.
 
 ```qsharp
-operation AndLadder (ccnot : Microsoft.Quantum.Canon.CCNOTop, controls : Qubit[], targets : Qubit[]) : Unit
+operation AndLadder (ccnot : Microsoft.Quantum.Canon.CCNOTop, controls : Qubit[], targets : Qubit[]) : Unit is Adj
 ```
 
 
@@ -61,6 +61,6 @@ operation AndLadder (ccnot : Microsoft.Quantum.Canon.CCNOTop, controls : Qubit[]
 - 및의 일부로 사용 <xref:microsoft.quantum.canon.applymulticontrolledc> <xref:microsoft.quantum.canon.applymulticontrolledca> 됩니다.
 - 설명 및 회로 다이어그램의 경우 그림 4.10, Nielsen & Chuang의 섹션 4.3을 참조 하세요.
 
-## <a name="references"></a>참조
+## <a name="references"></a>참조 항목
 
-- [*Michael Nielsen, Isaac Chuang* , 퀀텀 계산 및 퀀텀 정보](http://doi.org/10.1017/CBO9780511976667)
+- [*Michael Nielsen, Isaac Chuang*, 퀀텀 계산 및 퀀텀 정보](http://doi.org/10.1017/CBO9780511976667)

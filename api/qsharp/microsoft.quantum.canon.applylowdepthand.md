@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyLowDepthAnd
 title: ApplyLowDepthAnd 작업
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyLowDepthAnd
 qsharp.summary: Inverts a given target qubit if and only if both control qubits are in the 1 state, with T-depth 1, using measurement to perform the adjoint operation.
-ms.openlocfilehash: 092a350e42d8d90942de13530fefd761b5187e1d
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 4c5e381227bf82415121add38d0c0d2959fb529d
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92717984"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96209318"
 ---
 # <a name="applylowdepthand-operation"></a>ApplyLowDepthAnd 작업
 
 네임 스페이스: [Microsoft. 양자](xref:Microsoft.Quantum.Canon)
 
-패키지 [](https://nuget.org/packages/)
+패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 지정 된 대상 값을 반전 합니다. 두 컨트롤이 모두 1 상태에 있는 경우에만 T-수준 1을 사용 하 여 adjoint 작업을 수행 합니다.
 
 ```qsharp
-operation ApplyLowDepthAnd (control1 : Qubit, control2 : Qubit, target : Qubit) : Unit
+operation ApplyLowDepthAnd (control1 : Qubit, control2 : Qubit, target : Qubit) : Unit is Adj + Ctl
 ```
 
 
@@ -54,7 +54,7 @@ operation ApplyLowDepthAnd (control1 : Qubit, control2 : Qubit, target : Qubit) 
 
 
 
-## <a name="references"></a>참조
+## <a name="references"></a>참조 항목
 
 - Cody Jones: "내결함성 Toffoli 게이트 Novel 생성", Phys 87, 022328, 2013 [Arxiv: 1212.5069](https://arxiv.org/abs/1212.5069) doi: 10.1103/PhysRevA. 87.022328
 - Peter Selinger: "T-depth one의 퀀텀 회로", Phys 87, 042302, 2013 [Arxiv: 1210.0974](https://arxiv.org/abs/1210.0974) doi: 10.1103/PhysRevA. 87.042302
