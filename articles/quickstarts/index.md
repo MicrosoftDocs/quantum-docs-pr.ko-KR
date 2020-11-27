@@ -10,12 +10,12 @@ uid: microsoft.quantum.install
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: f0c3df1998f9b64ff6544867b83a7afe52b6f46d
-ms.sourcegitcommit: fd57a845d013ae4578715d04b1ed1edc1c8ff6b4
+ms.openlocfilehash: c6e128ea8b3845336fb692d2bceefda998b935d9
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870824"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96228851"
 ---
 # <a name="setting-up-the-microsoft-quantum-development-kit-qdk"></a>Microsoft QDK(Quantum Development Kit) 설정
 
@@ -45,7 +45,7 @@ QDK는 세 가지 방법으로 사용할 수 있습니다.
         <th width=10%>&nbsp;</th>
         <th>&nbsp;</th>
         <th align="center" width=18%><img src="~/media/vs_code.png" alt="VS Code" width="50"/><br><b>VS 코드<br>(2019 이상)</b></th>
-        <th align="center" width=18%><img src="~/media/vs_studio.png" alt="VS Studio" width="50"/><br><b>VS Studio<br>(2019 이상)</b></th>
+        <th align="center" width=18%><img src="~/media/vs_studio.png" alt="Visual Studio" width="50"/><br><b>Visual Studio<br>(2019 이상)</b></th>
         <th align="center" width=18%><img src="~/media/jupyter-wht.png" alt="jupyter install" width="65"/><br><b>Jupyter Notebook</b></th>
         <th align="center" width=18%><img src="~/media/blank.png" alt="blank spacer" width="65"/><br><b>명령줄</b></th>
     </tr>
@@ -70,7 +70,7 @@ QDK는 세 가지 방법으로 사용할 수 있습니다.
         <td align="left"><b>Q# 및 Python</b></td>
         <td align="center"><a href="xref:microsoft.quantum.install.python">설치</a></td>
         <td align="center"><a href="xref:microsoft.quantum.install.python">설치</a></td>
-        <td align="center"><a href="xref:microsoft.quantum.install.jupyter">설치</a></td>
+        <td align="center"><a href="xref:microsoft.quantum.install.python">설치</a></td>
         <td align="center"><a href="xref:microsoft.quantum.install.python">설치</a></td>
     </tr>
     <tr>
