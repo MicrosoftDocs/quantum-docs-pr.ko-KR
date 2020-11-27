@@ -1,4 +1,12 @@
-- name: Q#의 형식
-  href: types.md
-- name: 식
-  href: expressions.md
+- name: 개요
+  href: index.md
+- name: 프로그램 구조
+  href: programstructure/toc.yml
+- name: 문
+  href: statements/toc.yml
+- name: 표현식
+  href: expressions/toc.yml
+- name: 형식 시스템
+  href: typesystem/toc.yml
+- name: 문법
+  href: grammar.md
