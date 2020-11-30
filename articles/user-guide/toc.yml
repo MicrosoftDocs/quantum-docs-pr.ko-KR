@@ -1,13 +1,13 @@
 - name: 개요/콘텐츠
   href: index.md
-- name: Q# 기본 사항
-  href: basics.md
+- name: Q# 프로그램
+  href: programs.md
 - name: Q# 프로그램을 실행하는 방법
   href: host-programs.md
-- name: Q# 언어
+- name: 테스트 및 디버깅
+  href: testing-debugging.md
+- name: Q# 언어 가이드
   href: language/toc.yml
-- name: Q# 사용
-  href: using-qsharp/toc.yml
 - name: 시뮬레이터 및 리소스 예측 도구
   href: machines/toc.yml
 - name: Q# 라이브러리

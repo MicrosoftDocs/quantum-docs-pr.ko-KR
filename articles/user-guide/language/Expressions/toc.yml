@@ -1,0 +1,32 @@
+- name: Q#의 식
+  href: index.md
+- name: 우선 순위 및 연관성
+  href: precedenceandassociativity.md
+- name: 연산자
+  items:
+    - name: 복사 및 업데이트 식
+      href: copyandupdateexpressions.md
+    - name: 조건부 식
+      href: conditionalexpressions.md
+    - name: 비교 표현
+      href: comparativeexpressions.md
+    - name: 논리 식
+      href: logicalexpressions.md
+    - name: 비트 식
+      href: bitwiseexpressions.md
+    - name: 산술 식
+      href: arithmeticexpressions.md
+    - name: 연결
+      href: concatenation.md
+- name: 한정자 및 조합기
+  items:
+    - name: 부분 애플리케이션
+      href: partialapplication.md
+    - name: 함수 애플리케이션
+      href: functorapplication.md
+    - name: 항목 액세스 식
+      href: itemaccessexpressions.md
+- name: 상황별 식
+  href: contextualexpressions.md
+- name: 값 리터럴 및 기본값
+  href: valueliterals.md
