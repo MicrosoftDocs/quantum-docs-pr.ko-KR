@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines.resources-estimator
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: e1ec01d85a141b9c8a7a5ba5589663a0773520e7
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 57f6602effd25fff353a8fee7f27acc529ce82af
+ms.sourcegitcommit: c3c892ef35eae6926d0c4339d9d26bfd8be77e9a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691868"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96318493"
 ---
 # <a name="quantum-development-kit-qdk-resources-estimator"></a>QDK (퀀텀 Development Kit) 리소스 평가기
 
@@ -123,7 +123,7 @@ namespace Quantum.MyProgram
 
 평가기 리소스는 다음 메트릭을 추적 합니다.
 
-|메트릭|Description|
+|메트릭|설명|
 |----|----|
 |__CNOT__    |작업의 실행 수 `CNOT` (제어 된 Pauli X 작업이 라고도 함).|
 |__QubitClifford__ |단일 Clifford 및 Pauli 작업의 실행 수입니다.|
@@ -131,7 +131,7 @@ namespace Quantum.MyProgram
 |__R__    |Clifford 및 Pauli 작업을 제외한 모든 단일 비트 회전의 실행 횟수입니다 `T` .  |
 |__T__    |작업의 실행 수 `T` 및 `T` 작업, T_x = .h 및 T_y = Hy. Hy를 포함 하는 변화 시키고입니다.  |
 |__깊이__|작업에 의해 실행 되는 퀀텀 회로의 깊이 Q# 입니다 ( [아래](#depth-width-and-qubitcount)참조). 기본적으로 깊이 메트릭은 게이트 수만 계산 `T` 합니다. 자세한 내용은 [깊이 카운터](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter)를 참조 하세요.   |
-|__Width__|작업에 의해 실행 되는 퀀텀 회로의 너비 Q# 입니다 ( [아래](#depth-width-and-qubitcount)참조). 기본적으로 깊이 메트릭은 게이트 수만 계산 `T` 합니다. 자세한 내용은 [깊이 카운터](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter)를 참조 하세요.   |
+|__Width__|작업에 의해 실행 되는 퀀텀 회로의 너비 Q# 입니다 ( [아래](#depth-width-and-qubitcount)참조). 기본적으로 깊이 메트릭은 게이트 수만 계산 `T` 합니다. 자세한 내용은 [Width 카운터](xref:microsoft.quantum.machines.qc-trace-simulator.width-counter)를 참조 하세요.   |
 |__고 비트 수__    |작업을 실행 하는 동안 할당 된 최대 값 수의 하한값입니다 Q# . 이 메트릭은 __깊이__ 와 호환 되지 않을 수 있습니다 (아래 참조).  |
 |__BorrowedWidth__    |작업 내에서 빌려 온 최대 수입니다 Q# .  |
 
@@ -165,7 +165,7 @@ __OptimizeDepth = false:__ 새 항목을 할당 하기 전에 원하는 비트�
 
 <xref:Microsoft.Quantum.Diagnostics.AssertMeasurementProbability> <xref:Microsoft.Quantum.Diagnostics> 네임 스페이스에서를 사용 하 여 측정 작업의 예상 확률에 대 한 정보를 제공할 수 있습니다. 자세한 내용은 [퀀텀 추적 시뮬레이터](xref:microsoft.quantum.machines.qc-trace-simulator.intro) 를 참조 하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 - [퀀텀 추적 시뮬레이터](xref:microsoft.quantum.machines.qc-trace-simulator.intro)
 - [퀀텀 Toffoli 시뮬레이터](xref:microsoft.quantum.machines.toffoli-simulator)
