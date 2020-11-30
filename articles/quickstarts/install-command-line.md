@@ -10,12 +10,12 @@ uid: microsoft.quantum.install.standalone
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: a6823888dcbe8cf79f0045d2615fe8b889dcc7c3
-ms.sourcegitcommit: a13c7c86fd52a05cbf129b8dd713d6586ca1cc2c
+ms.openlocfilehash: eeb567dedc1b8123b32faf7ed3a42bb51f16a7d2
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93376425"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96228732"
 ---
 # <a name="develop-with-no-locq-applications-in-an-ide"></a>IDE에서 Q# 애플리케이션을 사용하여 개발
 
@@ -62,8 +62,8 @@ dotnet new -i Microsoft.Quantum.ProjectTemplates
 새 프로젝트를 만들려면 다음을 수행합니다.
 
 1. **보기** -> **명령 팔레트** 를 클릭하고 **Q#: 새 프로젝트 만들기** 를 선택합니다.
-2. **Standalone console application** (독립 실행형 콘솔 애플리케이션)을 클릭합니다.
-3. 프로젝트를 저장할 위치로 이동하여 **프로젝트 만들기** 를 클릭합니다.
+2. **Standalone console application**(독립 실행형 콘솔 애플리케이션)을 클릭합니다.
+3. 문서를 저장할 위치로 이동합니다. 프로젝트 이름을 입력하고 **프로젝트 만들기** 를 클릭합니다.
 4. 프로젝트가 만들어지면 오른쪽 아래에서 **Open new project...** (새 프로젝트 열기)를 클릭합니다.
 
 프로젝트를 검사합니다. `Program.qs`라는 소스 파일이 보입니다. 이것은 콘솔에 메시지를 인쇄하는 간단한 작업을 정의하는 Q# 프로그램입니다.
