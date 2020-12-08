@@ -1,3 +1,5 @@
+- href: index.md
+  name: IQ# 매직 명령
 - href: azure.connect.md
   name: '%azure.connect 매직 명령'
 - href: azure.execute.md
