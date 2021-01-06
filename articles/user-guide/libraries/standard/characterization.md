@@ -9,12 +9,12 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 51e7b3bcf4402a4d0ba5647643f284e9f10c3bb3
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 72af3f5517b272d6d8159b158103b5af91d266b5
+ms.sourcegitcommit: c48cdafccb3487bf93d67fa80cdc64768445b691
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92692153"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97940889"
 ---
 # <a name="quantum-characterization-and-statistics"></a>퀀텀 특성화 및 통계 #
 
@@ -56,7 +56,7 @@ Kickback 단계를 사용 하 여 블랙 박스 작업의 응용 프로그램을
 
 Eigenstate가 아닌 입력 상태를 제공 하는 경우 ($U (m) \ket{\phi \_ j} = e ^ {im\emj} $ 인 경우) \_ 단계 추정 프로세스는 단일 에너지 eigenstate에 대 한 퀀텀 상태를 명확 하 게 표시 하지 않습니다.  궁극적으로 수렴 된 eigenstate는 관찰 된을 생성할 가능성이 가장 높은 eigenstate입니다 `Result` .
 
-특히, PE의 단일 단계는 상태 \begin{align} \ sum_j \sqrt{\Pr ( \_ \aj)} \ket{\phi \_ j} \maps\\ki\\frac \_ {\ Sqrt {\ Pr (\aj)에 대해 다음과 같은 비 단일 변환을 수행 합니다. \_ } \sqrt{\Pr (\text{Result} | \aaj \_ )} \Ket{\phi \_ j}} {\sqrt{\pr (\aj \_ ) \Sum \_ j \pr (\text{result} | \\aj \_ )}}.
+특히, PE의 단일 단계는 상태 \begin{align} \ sum_j \sqrt{\Pr ( \_ \aj)} \ket{\phi \_ j} \maps\\ki\\frac \_ {\ Sqrt {\ Pr (\aj)에 대해 다음과 같은 비 단일 변환을 수행 합니다. \_ } \sqrt{\Pr (\text{result} | \aaj \_ )} \Ket{\phi \_ j}} {\sqrt{\pr (\aj \_ ) \Sum \_ k \pr (\text{result} | \\ak \_ )}}.
 이 프로세스가 여러 값에 대해 반복 되는 \end{align} `Result` , 최대 값이 $ \ prod_k \Pr (\text{Result} \_ k | \\aj) $ 인 eigenstates는 계속 해 서 표시 되지 않습니다 \_ .
 따라서 실험을 제대로 선택 하면 유추 프로세스는 단일 eigenvalue를 사용 하 여 상태로 수렴 하는 경향이 있습니다.
 
