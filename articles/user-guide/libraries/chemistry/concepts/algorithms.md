@@ -4,17 +4,17 @@ description: Hamiltonian 시뮬레이션을 사용 하는 Trotter-Suzuki 수식 
 author: bradben
 ms.author: v-benbra
 ms.date: 10/09/2017
-ms.topic: article-type-from-white-list
+ms.topic: conceptual
 uid: microsoft.quantum.chemistry.concepts.simulationalgorithms
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: a303d54476e42b98a14c6b452227b0e1346567c8
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: eeaa13b99ab07ce22f8a3306a756bf7ac7cde65b
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691887"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98857605"
 ---
 # <a name="simulating-hamiltonian-dynamics"></a>Hamiltonian Dynamics 시뮬레이션
 
@@ -28,7 +28,7 @@ Trotter – Suzuki 수식의 개념은 간단 합니다. 즉, Hamiltonian를 시
 특히 $H = \ sum_ {j = 1} ^ m H_j $를 사용 하 여 Hamiltonian 수 있습니다.
 그런 다음 $ $ e ^ {-i \ sum_ {j = 1} ^ m H_j t} = \ prod_ {j = 1} ^ m e ^ {-iH_j t} + O (m ^ 2 t ^ 2), $ $이는 $t \ll $1 인 경우이 근사값의 오류는 무시 됩니다.
 $E ^ {-i H t} $가 일반 지 수 인 경우이 근사값의 오류는 $O 되지 않습니다 (m ^ 2 t ^ 2) $: 0입니다.
-이 오류는 $e ^ {-iHt} $이 (가) 연산자 지 수이 고 $H _j $ 용어가 commute (예 *:* $H _j H_k \ne H_k H_j $) 때문에이 수식을 사용할 때 오류가 발생 하는 경우에 발생 합니다.
+이 오류는 $e ^ {-iHt} $이 (가) 연산자 지 수이 고 $H _j $ 용어가 commute (예 *:*$H _j H_k \ne H_k H_j $) 때문에이 수식을 사용할 때 오류가 발생 하는 경우에 발생 합니다.
 
 $T $가 큰 경우에는 Trotter – Suzuki 수식을 사용 하 여 간단한 시간 단계 시퀀스로 분리 하 여 dynamics를 정확 하 게 시뮬레이션할 수 있습니다.
 $R $를 사용 하 여 진행 시간에서 수행 되는 단계 수를 지정 합니다. 따라서 각 시간 단계는 시간 $t/r $로 실행 됩니다. 그런 다음 $ $ e ^ {-i \ sum_ {j = 1} ^ m H_j t} = \left (\ prod_ {j = 1} ^ m e ^ {-iH_j t/r} \ right) ^ r + O (m ^ 2 t ^ 2/r)를 사용할 수 있습니다. $ $-$가 $m ^ 2 t ^ 2/\ 엡실론 $로 확장 하는 경우 $ \left>$0에 대 한 최대 $ \left $로 오류를 만들 수 있음을 의미 합니다. $r
