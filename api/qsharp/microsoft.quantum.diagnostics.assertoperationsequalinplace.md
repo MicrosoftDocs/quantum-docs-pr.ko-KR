@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Diagnostics.AssertOperationsEqualInPlace
 title: AssertOperationsEqualInPlace 작업
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Diagnostics
@@ -12,12 +12,12 @@ qsharp.summary: >-
   This assertion is implemented by checking the action of the operations on all states of the form $V_0 \otimes ... \otimes V_{n-1}$, where $V_k$ is one of the states $\ket{0}$, $\ket{1}$, $\ket{+}$ and $\ket{i}$ (+1 eigenstate of Pauli Y operator).
 
   This assertion uses $n$ qubits and requires multiple calls of the operations being compared.
-ms.openlocfilehash: 9b17bac9d95baf5a542604892c64130bf35d7f69
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 7c330ebdc156e60713a734d39a3600ee1326563c
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96202433"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98853478"
 ---
 # <a name="assertoperationsequalinplace-operation"></a>AssertOperationsEqualInPlace 작업
 
@@ -44,7 +44,7 @@ operation AssertOperationsEqualInPlace (nQubits : Int, givenU : (Qubit[] => Unit
 작업이 수행 하 고 작동 하는 $n $의 수입니다 `givenU` `expectedU` .
 
 
-### <a name="givenu--qubit--unit"></a>givenU: [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [Unit](xref:microsoft.quantum.lang-ref.unit) 
+### <a name="givenu--qubit--unit"></a>givenU: [](xref:microsoft.quantum.lang-ref.qubit)[] => [Unit](xref:microsoft.quantum.lang-ref.unit) 
 
 검사 될 $ 이상 비트 $n에 대 한 작업입니다.
 
@@ -59,7 +59,7 @@ operation AssertOperationsEqualInPlace (nQubits : Int, givenU : (Qubit[] => Unit
 
 
 
-## <a name="references"></a>참조 항목
+## <a name="references"></a>참조
 
 $ \Ket {0} $, $ \ket {1} $, $ \ket{+} $ 및 $ \ket{i} $ 상태의 기준은 [ *Chuang,*](https://arxiv.org/abs/quant-ph/9610001)Nielsen에 설명 된 Chuang-Nielsen 기준입니다.
 

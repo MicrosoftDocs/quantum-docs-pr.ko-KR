@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Oracles.DeterministicStateOracleFromStateOracle
 title: DeterministicStateOracleFromStateOracle 함수
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Oracles
 qsharp.name: DeterministicStateOracleFromStateOracle
 qsharp.summary: Converts an oracle of type `StateOracle` to `DeterministicStateOracle`.
-ms.openlocfilehash: 183b1108ead6239e26bb0b38144cb9374e7bf285
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: af545a7d6e82e654ee36ab3ba77c8f8be3384b96
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96226760"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98854550"
 ---
 # <a name="deterministicstateoraclefromstateoracle-function"></a>DeterministicStateOracleFromStateOracle 함수
 
@@ -30,7 +30,7 @@ function DeterministicStateOracleFromStateOracle (idxFlagQubit : Int, stateOracl
 
 ## <a name="input"></a>입력
 
-### <a name="idxflagqubit--int"></a>Idx플래그 [Int](xref:microsoft.quantum.lang-ref.int)
+### <a name="idxflagqubit--int"></a>Idx플래그 [](xref:microsoft.quantum.lang-ref.int)
 
 `stateOracle`두 레지스터에 대해 명시적으로 동작 하는 $A $의 플래그의 인덱스입니다. 플래그 $f $와 system $s $ (예: $A \ket {0} \_ f\ket {\ psi} \_ s $)입니다.
 

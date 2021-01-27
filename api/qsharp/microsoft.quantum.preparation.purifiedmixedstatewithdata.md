@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Preparation.PurifiedMixedStateWithData
 title: PurifiedMixedStateWithData 함수
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Preparation
 qsharp.name: PurifiedMixedStateWithData
 qsharp.summary: "Returns an operation that prepares a a purification of a given mixed\rstate, entangled with a register representing a given collection of data.\rA \"purified mixed state with data\" refers to a state of the form Σᵢ √\U0001D45Dᵢ |\U0001D456⟩ |\U0001D465ᵢ⟩ |garbageᵢ⟩,\rwhere each \U0001D465ᵢ is a bitstring encoding additional data associated with the register |\U0001D456⟩.\r\rSee https://arxiv.org/pdf/1805.03662.pdf?page=15 for further discussion."
-ms.openlocfilehash: c89ee8f5df58e5d6b154b67d2b39db208bc8a215
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: fc7bf8e6157af079ae4233ef45e67ce8ddfb8fe3
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96229956"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98854290"
 ---
 # <a name="purifiedmixedstatewithdata-function"></a>PurifiedMixedStateWithData 함수
 
@@ -61,7 +61,7 @@ $ \Tilde \rho $를 조인트 인덱스 및 가비지 레지스터에 purificatio
 
 이 작업에 제공 되는 계수는 1을 기준으로 정규화 됩니다 .이에 따라 계수는 항상 유효한 범주 확률 분포를 설명 하는 것으로 간주 됩니다.
 
-## <a name="references"></a>참조 항목
+## <a name="references"></a>참조
 
 - 선형 T 복잡성 Ryan Babbush, Craig Gidney, Dominic Berry, 네, Spectra Wiebe, Jarrod McClean, Alexandru 고, 연한, 오스틴 Fowler, Hartmut Neven를 사용 하 여 퀀텀 회로에서 전자 인코딩 https://arxiv.org/abs/1805.03662
 

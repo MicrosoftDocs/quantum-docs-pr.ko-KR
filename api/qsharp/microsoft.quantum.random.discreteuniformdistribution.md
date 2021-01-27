@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Random.DiscreteUniformDistribution
 title: DiscreteUniformDistribution 함수
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Random
 qsharp.name: DiscreteUniformDistribution
 qsharp.summary: Returns a uniform distribution over a given inclusive range.
-ms.openlocfilehash: 08a62805f59df339ef6b91dff802c40c407808f4
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: f909e7def5439ec0feef4ca4dc0cf8ed12374dfe
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96193015"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98853729"
 ---
 # <a name="discreteuniformdistribution-function"></a>DiscreteUniformDistribution 함수
 
@@ -44,6 +44,15 @@ function DiscreteUniformDistribution (min : Int, max : Int) : Microsoft.Quantum.
 ## <a name="output--discretedistribution"></a>출력: [DiscreteDistribution](xref:Microsoft.Quantum.Random.DiscreteDistribution)
 
 난수를 생성 하는 분포는의 포괄 범위에서 `min` `max` 단일 확률을 가진 정수입니다.
+
+## <a name="example"></a>예
+
+다음 Q # 코드 조각은 임의로 6 면 주사위를 롤업 합니다.
+
+```qsharp
+let dieDistribution = DiscreteUniformDistribution(1, 6);
+let dieRoll = dieDistribution::Sample();
+```
 
 ## <a name="remarks"></a>설명
 

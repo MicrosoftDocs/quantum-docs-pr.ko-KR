@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Measurement.MeasurePaulis
 title: MeasurePaulis 작업
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Measurement
 qsharp.name: MeasurePaulis
 qsharp.summary: Given an array of multi-qubit Pauli operators, measures each using a specified measurement gadget, then returns the array of results.
-ms.openlocfilehash: 4faaf78f24fa28ae5e4f701b80d9297c910b975e
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 1bc14ec8e7c608d1195a03a354c71e870594f86d
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96194222"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98853781"
 ---
 # <a name="measurepaulis-operation"></a>MeasurePaulis 작업
 
@@ -35,7 +35,7 @@ operation MeasurePaulis (paulis : Pauli[][], target : Qubit[], gadget : ((Pauli[
 측정할 다중값 비트 Pauli 연산자의 배열입니다.
 
 
-### <a name="target--qubit"></a>target: [Qubit](xref:microsoft.quantum.lang-ref.qubit)
+### <a name="target--qubit"></a>target: [](xref:microsoft.quantum.lang-ref.qubit)
 
 지정 된 연산자를 측정할 레지스터입니다.
 

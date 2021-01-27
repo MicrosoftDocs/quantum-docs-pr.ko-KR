@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Preparation.PrepareChoiState
 title: PrepareChoiState 작업
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Preparation
 qsharp.name: PrepareChoiState
 qsharp.summary: Prepares the Choi–Jamiołkowski state for a given operation onto given reference and target registers.
-ms.openlocfilehash: ced71c4278f42f577760acd54ae53e7f5e6dae4a
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: cb34078c09f8c28b5b9bbda1bae6936d13ffcc78
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96210576"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98854396"
 ---
 # <a name="preparechoistate-operation"></a>PrepareChoiState 작업
 
@@ -40,7 +40,7 @@ operation PrepareChoiState (op : (Qubit[] => Unit), reference : Qubit[], target 
 의 동작에 대 한 참조로 사용 되는 $ \ket{00\cdots 0} $ 상태에서 시작 하는 비트의 레지스터입니다 `op` .
 
 
-### <a name="target--qubit"></a>target: [Qubit](xref:microsoft.quantum.lang-ref.qubit)
+### <a name="target--qubit"></a>target: [](xref:microsoft.quantum.lang-ref.qubit)
 
 처음에이 적용 될 $ \ket{00\cdots 0} $ 상태에 있는 나머지 비트의 레지스터입니다 `op` .
 

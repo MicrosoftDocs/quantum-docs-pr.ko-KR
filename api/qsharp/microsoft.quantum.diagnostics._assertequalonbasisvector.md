@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Diagnostics._assertEqualOnBasisVector
 title: _assertEqualOnBasisVector 작업
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Diagnostics
 qsharp.name: _assertEqualOnBasisVector
 qsharp.summary: Checks if the result of applying two operations `givenU` and `expectedU` to a basis state is the same. The basis state is described by `basis` parameter. See <xref:microsoft.quantum.extensions.fliptobasis> function for more details on this description.
-ms.openlocfilehash: d8f2195f75de49918032053dc8d1fa4fb4eba840
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 041fecfa27ae5bd17fa8fdc89ce964f985f6124b
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96213772"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98853593"
 ---
 # <a name="_assertequalonbasisvector-operation"></a>_assertEqualOnBasisVector 작업
 
@@ -36,7 +36,7 @@ operation _assertEqualOnBasisVector (basis : Int[], givenU : (Qubit[] => Unit), 
 각 $n $ 이상 비트에 대해 단일가 지정 하는 기준 상태 (0 <= id <= 3)입니다.
 
 
-### <a name="givenu--qubit--unit"></a>givenU: [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [Unit](xref:microsoft.quantum.lang-ref.unit) 
+### <a name="givenu--qubit--unit"></a>givenU: [](xref:microsoft.quantum.lang-ref.qubit)[] => [Unit](xref:microsoft.quantum.lang-ref.unit) 
 
 검사 될 $ 이상 비트 $n에 대 한 작업입니다.
 
