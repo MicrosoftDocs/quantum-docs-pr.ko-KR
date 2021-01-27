@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.MultiplyByModularInteger
 title: MultiplyByModularInteger 작업
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: MultiplyByModularInteger
 qsharp.summary: Performs modular multiplication by an integer constant on a qubit register.
-ms.openlocfilehash: 080414d208a2a0c114857db8e93efb4cd74a4d8d
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: bd4e0ad6c5bad779d9a31139690021fd9fcda210
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96222578"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98846500"
 ---
 # <a name="multiplybymodularinteger-operation"></a>MultiplyByModularInteger 작업
 
@@ -28,7 +28,7 @@ operation MultiplyByModularInteger (constMultiplier : Int, modulus : Int, multip
 ```
 
 
-## <a name="description"></a>Description
+## <a name="description"></a>설명
 
 `modulus`$N $ 및 $a $를 사용 하 여 나타냅니다 `constMultiplier` .
 그런 다음이 작업은 계산 단위로 정의 된 단일 작업을 구현 합니다. $ $ \begin{align} \ket{y} \maps\ket{(a \mapsto y) \operatorname{mod} N} \end{align} $ $ (모든 $y $ between $0 $N $-$1)

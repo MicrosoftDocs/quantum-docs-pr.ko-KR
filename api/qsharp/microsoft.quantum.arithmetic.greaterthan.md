@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.GreaterThan
 title: GreaterThan 작업
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: GreaterThan
 qsharp.summary: Applies a greater-than comparison between two integers encoded into qubit registers, flipping a target qubit based on the result of the comparison.
-ms.openlocfilehash: 644d68affbdb508938f76de5025a1a463e7284e2
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 553efb0fc83f24235cb4a77933bd1d547bbd1fed
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96223088"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98846626"
 ---
 # <a name="greaterthan-operation"></a>GreaterThan 작업
 
@@ -28,7 +28,7 @@ operation GreaterThan (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Micr
 ```
 
 
-## <a name="description"></a>Description
+## <a name="description"></a>설명
 
 $ 및 $y $ $x 두 정수의 비교를 엄격 하 게 비교 합니다. Y $를 > $x 경우에는 결과의 비트가 대칭 이동 됩니다. 그렇지 않으면 결과의 비트가 상태를 유지 합니다.
 
@@ -58,7 +58,7 @@ $X > y $ 인 경우 대칭 이동 될 단일 비트입니다.
 
 는 $x-y = (x ' + y) ' $를 사용 합니다. 여기서은 1의 보수를 나타냅니다.
 
-## <a name="references"></a>참조 항목
+## <a name="references"></a>참조
 
 - Thomas G. Draper, Samuel A. Kutin, David Petrie Moulton: "A new 퀀텀 ripple and A new, 2004.
   https://arxiv.org/abs/quant-ph/0410184v1

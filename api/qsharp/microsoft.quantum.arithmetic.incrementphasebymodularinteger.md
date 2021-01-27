@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.IncrementPhaseByModularInteger
 title: IncrementPhaseByModularInteger 작업
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: IncrementPhaseByModularInteger
 qsharp.summary: Performs a modular increment of a qubit register by an integer constant.
-ms.openlocfilehash: 6a39ce49dfa28c1f1cbe6b29e526144c3ac19e53
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 4ba35010d56ad01c73cb563646dc8150842da12e
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96222884"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98846590"
 ---
 # <a name="incrementphasebymodularinteger-operation"></a>IncrementPhaseByModularInteger 작업
 
@@ -28,7 +28,7 @@ operation IncrementPhaseByModularInteger (increment : Int, modulus : Int, target
 ```
 
 
-## <a name="description"></a>Description
+## <a name="description"></a>설명
 
 `increment`$A $, `modulus` $N $ 및 $y $로 인코딩된 정수를 사용 하 여 나타냅니다 `target` .
 그런 다음이 작업은 다음 변환을 수행 합니다. \begin{align} \ket{y} \maps\ket{(y + a) \operatorname{mod} N} \end{align} 정수는 QFT로 거의 endian 형식으로 인코딩됩니다.
