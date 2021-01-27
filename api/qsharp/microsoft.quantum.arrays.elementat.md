@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Arrays.ElementAt
 title: ElementAt 함수
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: ElementAt
 qsharp.summary: Returns the at the given index of an array.
-ms.openlocfilehash: 23f336da77135820c46d1d76a196c6d453f1322f
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 2d31c62a4a5ba3b273e7440b5dfe4482b47e3a8b
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96221507"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98842812"
 ---
 # <a name="elementat-function"></a>ElementAt 함수
 
@@ -50,6 +50,19 @@ function ElementAt<'T> (index : Int, array : 'T[]) : 'T
 ### <a name="t"></a>없습니다
 
 에 있는 각 요소의 형식입니다 `array` .
+
+## <a name="example"></a>예
+
+네 가지 유명한 정수 시퀀스에서 세 번째 숫자를 가져옵니다. 0 인덱스는 시퀀스의 _첫 번째_ 값에 해당 합니다.
+
+```qsharp
+let lucas = [2, 1, 3, 4, 7, 11, 18, 29, 47, 76];
+let prime = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29];
+let fibonacci = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34];
+let catalan = [1, 1, 2, 5, 14, 42, 132, 429, 1430, 4862];
+let famous2 = Mapped(ElementAt<Int>(2, _), [lucas, prime, fibonacci, catalan]);
+// same as: famous2 = [3, 5, 1, 2]
+```
 
 ## <a name="see-also"></a>참고 항목
 

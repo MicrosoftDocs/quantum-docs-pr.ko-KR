@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.RippleCarryAdderD
 title: RippleCarryAdderD 작업
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: RippleCarryAdderD
 qsharp.summary: Reversible, in-place ripple-carry addition of two integers. Given two $n$-bit integers encoded in LittleEndian registers `xs` and `ys`, and a qubit carry, the operation computes the sum of the two integers where the $n$ least significant bits of the result are held in `ys` and the carry out bit is xored to the qubit `carry`.
-ms.openlocfilehash: b87c8f25acc8854d5e8d28f58cfc99dffb92a973
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: f0f6f39fbff9f682f8f74a982c0a41847df1397a
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96222119"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98842958"
 ---
 # <a name="ripplecarryadderd-operation"></a>RippleCarryAdderD 작업
 
@@ -55,7 +55,7 @@ Xored은 합계의 가장 중요 한 비트를 사용 하 여 수행 됩니다.
 
 지정 된 제어 작업을 통해 작업의 대칭 및 상호 취소를 사용 하 여 모든 작업에 컨트롤을 추가 하는 기본 구현을 개선 합니다.
 
-## <a name="references"></a>참조 항목
+## <a name="references"></a>참조
 
 - Thomas G. Draper: "퀀텀 컴퓨터에 추가", 2000.
   https://arxiv.org/abs/quant-ph/0008033

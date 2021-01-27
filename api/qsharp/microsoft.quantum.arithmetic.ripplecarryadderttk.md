@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.RippleCarryAdderTTK
 title: RippleCarryAdderTTK 작업
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: RippleCarryAdderTTK
 qsharp.summary: Reversible, in-place ripple-carry addition of two integers. Given two $n$-bit integers encoded in LittleEndian registers `xs` and `ys`, and a qubit carry, the operation computes the sum of the two integers where the $n$ least significant bits of the result are held in `ys` and the carry out bit is xored to the qubit `carry`.
-ms.openlocfilehash: 45ba1b644166029ee548307cc1a7290c48e48a4b
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: cf7f8ed10de2243627a001b770a4d29ff7345f30
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96221943"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98842938"
 ---
 # <a name="ripplecarryadderttk-operation"></a>RippleCarryAdderTTK 작업
 
@@ -55,7 +55,7 @@ Xored은 합계의 가장 중요 한 비트를 사용 하 여 수행 됩니다.
 
 이 작업에는 RippleCarryAdderD 및, RippleCarryAdderCDKM와 동일한 기능이 있지만 ancilla any 비트는 사용 하지 않습니다.
 
-## <a name="references"></a>참조 항목
+## <a name="references"></a>참조
 
 - Yasuhiro Takahashi, Seiichiro Tani, Noboru Kunihiro: "퀀텀 추가 회로 및 무제한 팬 아웃", 퀀텀 정보 및 계산, Vol. 10, 2010.
   https://arxiv.org/abs/0910.2530

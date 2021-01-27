@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Arrays.All
 title: All 함수
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: All
 qsharp.summary: Given an array and a predicate that is defined for the elements of the array, and checks if all elements of the array satisfy the predicate.
-ms.openlocfilehash: a7c83e38c3c101b712215eb664486fe29863a52b
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 17e61ea161b90fe089b7df7c10188d604d72dcfa
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96221694"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98842892"
 ---
 # <a name="all-function"></a>All 함수
 
@@ -50,6 +50,21 @@ function All<'T> (predicate : ('T -> Bool), array : 'T[]) : Bool
 ### <a name="t"></a>없습니다
 
 `array`요소의 형식입니다.
+
+## <a name="example"></a>예
+
+다음 코드는 배열의 모든 요소가 0이 아닌지 여부를 확인 합니다.
+
+```qsharp
+open Microsoft.Quantum.Arrays;
+open Microsoft.Quantum.Logical;
+
+function AllDemo() : Unit {
+    let predicate = NotEqualI(_, 0);
+    let isNonZero = All(predicate, [2, 3, 4, 5, 6, 0]);
+    Message($"{isNonZero}");
+}
+```
 
 ## <a name="remarks"></a>설명
 

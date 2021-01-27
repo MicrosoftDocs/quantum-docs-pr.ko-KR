@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.ReflectAboutInteger
 title: ReflectAboutInteger 작업
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: ReflectAboutInteger
 qsharp.summary: Reflects a quantum register about a given classical integer.
-ms.openlocfilehash: d4bae0cba5ee45e8d48070e36efab0159ade9137
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 4d451c4e8e002f86c892b394f58ea2d7e9dd6a48
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96222374"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98842986"
 ---
 # <a name="reflectaboutinteger-operation"></a>ReflectAboutInteger 작업
 
@@ -28,7 +28,7 @@ operation ReflectAboutInteger (index : Int, reg : Microsoft.Quantum.Arithmetic.L
 ```
 
 
-## <a name="description"></a>Description
+## <a name="description"></a>설명
 
 처음에는 $ \ sum_i \ alpha_i \ket{i} $ 상태에 있는 퀀텀 레지스터가 제공 됩니다. 여기서 각 $ \ket{i} $은 정수 $i $를 나타내는 기본 상태 이며 지정 된 정수 $ \ket{j} $, $ $ \ sum_i (-1) ^ {\ delta_ {ij}} \ alpha_i \ket{i} $ $에 대 한 기본 상태에 대 한 레지스터의 상태를 반영 합니다.
 

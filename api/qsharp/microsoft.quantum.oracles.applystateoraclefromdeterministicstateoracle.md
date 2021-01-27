@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Oracles.ApplyStateOracleFromDeterministicStateOracle
 title: ApplyStateOracleFromDeterministicStateOracle 작업
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Oracles
 qsharp.name: ApplyStateOracleFromDeterministicStateOracle
 qsharp.summary: Implementation of <xref:microsoft.quantum.canon.stateoraclefromdeterministicstateoracle>.
-ms.openlocfilehash: ba87428936d8e57c1462f54ac7a86e13dfba7b62
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 16bdc016bb8398773a48bbab74f5a041ffe2d510
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96193967"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98842611"
 ---
 # <a name="applystateoraclefromdeterministicstateoracle-operation"></a>ApplyStateOracleFromDeterministicStateOracle 작업
 
@@ -30,7 +30,7 @@ operation ApplyStateOracleFromDeterministicStateOracle (idxFlagQubit : Int, orac
 
 ## <a name="input"></a>입력
 
-### <a name="idxflagqubit--int"></a>Idx플래그 [Int](xref:microsoft.quantum.lang-ref.int)
+### <a name="idxflagqubit--int"></a>Idx플래그 [](xref:microsoft.quantum.lang-ref.int)
 
 
 

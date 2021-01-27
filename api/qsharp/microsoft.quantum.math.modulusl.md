@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Math.ModulusL
 title: ModulusL 함수
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: ModulusL
 qsharp.summary: Computes the canonical residue of `value` modulo `modulus`.
-ms.openlocfilehash: 5c9a8ceceac5d2cdac6b82f7f74a85e9443382a2
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 6be2edb052cf55f8e8465c76b5dcadeb61ff11ea
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96194936"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98842739"
 ---
 # <a name="modulusl-function"></a>ModulusL 함수
 
@@ -47,4 +47,4 @@ Residues를 사용 하는 모듈러스는 양수 여야 합니다.
 
 ## <a name="remarks"></a>설명
 
-이 함수는 c #에서 연산자가 작동 하는 방식과 다른 방식으로 동작 `%` 하며 `modulus - 1` , 값이 음수인 경우에도 항상 0과 사이의 양의 정수입니다.
+이 함수는 c #에서 연산자가 작동 하는 방식과 다른 방식으로 동작 `%` 하며 `modulus - 1` , 값이 음수인 경우에도 결과에는 항상 0과 사이의 음수가 아닌 정수가 있습니다.
