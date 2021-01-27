@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.AmplitudeAmplification.AmplitudeAmplificationFromStatePreparation
 title: AmplitudeAmplificationFromStatePreparation 함수
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.AmplitudeAmplification
 qsharp.name: AmplitudeAmplificationFromStatePreparation
 qsharp.summary: Amplitude amplification by oracles for partial reflections.
-ms.openlocfilehash: 30e1cf6e353b8a4491e13a9e2f588ec9cc103cb4
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: e64ad5ad4e975483f20f92c0b070dd6788ef296b
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96191604"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98847449"
 ---
 # <a name="amplitudeamplificationfromstatepreparation-function"></a>AmplitudeAmplificationFromStatePreparation 함수
 
@@ -40,7 +40,7 @@ function AmplitudeAmplificationFromStatePreparation (phases : Microsoft.Quantum.
 시작 상태를 준비 하는 단일 oracle $A $
 
 
-### <a name="idxflagqubit--int"></a>Idx플래그 [Int](xref:microsoft.quantum.lang-ref.int)
+### <a name="idxflagqubit--int"></a>Idx플래그 [](xref:microsoft.quantum.lang-ref.int)
 
 플래그에 대 한 인덱스입니다.
 

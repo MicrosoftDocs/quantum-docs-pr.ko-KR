@@ -4,17 +4,17 @@ description: Microsoft Quantum Development Kit (QDK)에 샘플 코드를 제공 
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
-ms.topic: article
+ms.topic: contributor-guide
 uid: microsoft.quantum.contributing.samples
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: ae29614cc9c8bf965ea3cb373dc17470aec21252
-ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
+ms.openlocfilehash: 0c940a4cf228c694a899988f469158b1bb6e2425
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90759189"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98847591"
 ---
 # <a name="contributing-samples-to-the-quantum-development-kit"></a>퀀텀 개발 키트에 대 한 샘플 기여
 
@@ -67,7 +67,7 @@ microsoft/Quantum
 > [!div class="nextstepaction"]
 > [Chsh-game 샘플이 렌더링 되는 방식 확인](https://docs.microsoft.com/samples/microsoft/quantum/validating-quantum-mechanics/)
 
-이 메타 데이터는 샘플에서 [YAML header](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html#yaml-header) 다루는 언어 (일반적으로, `qsharp` `csharp` 및 `python` )와 샘플에서 다루는 제품 (일반적으로)을 나타내는 yaml 헤더로 제공 됩니다 `qdk` .
+이 메타 데이터는 샘플에서 [](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html#yaml-header) 다루는 언어 (일반적으로, `qsharp` `csharp` 및 `python` )와 샘플에서 다루는 제품 (일반적으로)을 나타내는 yaml 헤더로 제공 됩니다 `qdk` .
 
 :::code language="markdown" source="~/quantum/samples/algorithms/chsh-game/README.md" range="1-11":::
 

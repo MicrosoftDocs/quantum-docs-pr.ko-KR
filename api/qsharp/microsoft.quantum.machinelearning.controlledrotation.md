@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.MachineLearning.ControlledRotation
 title: ControlledRotation 사용자 정의 형식
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.MachineLearning
 qsharp.name: ControlledRotation
 qsharp.summary: Describes a controlled rotation in terms of its target and control indices, rotation axis, and index into a model parameter vector.
-ms.openlocfilehash: 1e664b470caeba656ea4a73f70bbc0ef5fe76f7e
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 231afe65da3640218cbc97b9d49eae21bf6e1786
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96196568"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98847405"
 ---
 # <a name="controlledrotation-user-defined-type"></a>ControlledRotation 사용자 정의 형식
 
@@ -44,6 +44,18 @@ newtype ControlledRotation = ((TargetIndex : Int, ControlIndices : Int[]), Axis 
 ### <a name="parameterindex--int"></a>ParameterIndex: [Int](xref:microsoft.quantum.lang-ref.int)
 
 이 회전의 각도를 설명 하는 모델 매개 변수 벡터의 인덱스입니다.
+
+## <a name="example"></a>예
+
+다음은 두 번째 비트율 비트에 의해 제어 되 고 순차 모델에서 네 번째 매개 변수로 지정 된 각도를 사용 하 여 레지스터에서 첫 번째 고 비트의 $X $ 축에 대 한 회전을 나타냅니다.
+
+```qsharp
+let controlledRotation = ControlledRotation(
+    (0, [1]),
+    PauliX,
+    3
+)
+```
 
 ## <a name="remarks"></a>설명
 

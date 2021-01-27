@@ -1,20 +1,20 @@
 ---
 title: 퀀텀 리소스 평가기-퀀텀 개발 키트
 description: 퀀텀 컴퓨터에서 지정 된 작업 인스턴스를 실행 하는 데 필요한 리소스를 추정 하는 Microsoft QDK resources 평가기에 대해 알아봅니다 Q# .
-author: anpaz-msft
+author: anpaz
 ms.author: anpaz
 ms.date: 06/26/2020
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.machines.resources-estimator
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: de425c2d91c6528b13c3bedd81acb4b4273ed711
-ms.sourcegitcommit: 7c687495a79d75ae9e029e5a41baec84d9e07bb0
+ms.openlocfilehash: c3aa94c8b34ad7247fbdeab4bf4dcb96ce746014
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96604646"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98847474"
 ---
 # <a name="quantum-development-kit-qdk-resources-estimator"></a>QDK (퀀텀 Development Kit) 리소스 평가기
 
@@ -143,8 +143,8 @@ namespace Quantum.MyProgram
 
 보고 되는 메트릭은 다음과 같습니다.
 
-__깊이:__ 루트 작업의 경우 특정 게이트 시간을 가정 하 여 실행 하는 데 걸리는 시간입니다.
-작업의 시작과 끝에서 최신 비트율 비트 가용성 시간 사이의 후속 작업 시간 차이를 제공 합니다.
+__깊이:__ 루트 작업의 경우, 구성 된 게이트 시간을 가정 하 여 실행 하는 데 걸리는 시간입니다.
+작업의 시작 및 끝에서 최신 버전의 시간 차이가 나 후속 작업 시간 차이를 계산 합니다.
 
 __너비:__ 루트 작업의 경우-이를 실행 하는 데 실제로 사용 되는 작업 (및 호출 하는 작업)의 수입니다.
 작업을 시작할 때 이미 사용 된 것과 같은 작업의 경우 또는 후속 작업에 사용 된 것 보다 더 많은 이상 비트 수입니다.
@@ -157,9 +157,9 @@ __너비:__ 루트 작업의 경우-이를 실행 하는 데 실제로 사용 �
 
 두 가지 작업 모드가 지원 됩니다. QCTraceSimulatorConfiguration. OptimizeDepth를 설정 하 여 모드를 선택 합니다.
 
-__OptimizeDepth = true:__ 이 경우는 더 이상 사용 하지 않는 것이 좋으며 비트를 사용 하는 것이 좋습니다. 루트 작업 __깊이__ 는 최소 깊이 (하한값)가 됩니다. 이 깊이에 대해 호환 되는 __너비가__ 보고 됩니다. 둘 다 동시에 달성할 수 있습니다. 이 너비는이 깊이에서 최적이 아닐 수 있습니다. 작업을 다시 사용 하는 것으로 가정 하기 때문에 루트 작업의 경우에는 너비 보다 낮을 __수 있습니다.__
+__OptimizeDepth = false:__ 이것은 기본 모드입니다. 새 항목을 할당 하기 전에 원하는 비트를 다시 사용 하는 것이 좋습니다. 루트 __작업의 경우 너비가 최소__ 너비 (하한값)가 됩니다. 호환 가능한 __깊이가__ 보고 될 수 있습니다. Borrowing가 없는 것으로 가정 하는 루트 작업의 __너비__ 와 동일한 __것이 있습니다__ .
 
-__OptimizeDepth = false:__ 새 항목을 할당 하기 전에 원하는 비트를 다시 사용 하는 것이 좋습니다. 루트 __작업의 경우 너비가 최소__ 너비 (하한값)가 됩니다. 호환 가능한 __깊이가__ 보고 될 수 있습니다. Borrowing가 없는 것으로 가정 하는 루트 작업의 __너비__ 와 동일한 __것이 있습니다__ .
+__OptimizeDepth = true:__ 이 기능을 사용 하는 경우에는이 기능을 사용 하지 않는 것이 좋습니다. 루트 작업 __깊이__ 는 최소 깊이 (하한값)가 됩니다. 이 깊이에 대해 호환 되는 __너비가__ 보고 됩니다. 둘 다 동시에 달성할 수 있습니다. 너비를 최적화 하기 위해 프로그램에서 나중에 발생 한 게이트는 프로그램에서 이전에 발생 한 게이트 이전에 예약 될 수 있지만, 깊이는 최소 수준으로 유지 되는 방식으로 다시 사용 하도록 예약 됩니다. 시간 값을 기반으로 하는 이상 값을 다시 사용 하는 경우에는 게이트 시간을 정수 값으로 구성 하는 것이 좋습니다. __너비가__ 최적이 아닐 수도 있습니다. 추가 정보는 [추적 프로그램의 백서 너비와 깊이](https://github.com/microsoft/qsharp-runtime/tree/main/src/Simulation/Simulators/QCTraceSimulator/Docs)에서 찾을 수 있습니다.
 
 ## <a name="providing-the-probability-of-measurement-outcomes"></a>측정 결과의 확률 제공
 

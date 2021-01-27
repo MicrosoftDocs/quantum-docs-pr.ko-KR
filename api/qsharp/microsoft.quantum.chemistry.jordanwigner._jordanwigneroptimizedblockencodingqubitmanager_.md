@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Chemistry.JordanWigner._JordanWignerOptimizedBlockEncodingQubitManager_
 title: _JordanWignerOptimizedBlockEncodingQubitManager_ 함수
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Chemistry.JordanWigner
 qsharp.name: _JordanWignerOptimizedBlockEncodingQubitManager_
 qsharp.summary: ''
-ms.openlocfilehash: 6e047cea67fb599ba8d82a3290a5d03f6d5b5b91
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: ac7785142879a19d67caaf3fcbde5dc95e566c1b
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96215676"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98851593"
 ---
 # <a name="_jordanwigneroptimizedblockencodingqubitmanager_-function"></a>_JordanWignerOptimizedBlockEncodingQubitManager_ 함수
 
@@ -55,11 +55,11 @@ function _JordanWignerOptimizedBlockEncodingQubitManager_ (targetError : Double,
 
 
 
-### <a name="ctrlregister--qubit"></a>ctrlRegister: [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]
+### <a name="ctrlregister--qubit"></a>ctrlRegister: [](xref:microsoft.quantum.lang-ref.qubit)[]
 
 
 
 
 
-## <a name="output--littleendianqubitqubitqubitqubitqubitlittleendianlittleendianqubitqubitqubitqubitlittleendianqubit"></a>Output: (([LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian),[LittleEndian](xref:microsoft.quantum.lang-ref.qubit)[[],,?](xref:microsoft.quantum.lang-ref.qubit))[Qubit](xref:microsoft.quantum.lang-ref.qubit),, LittleEndian [[Qubit](xref:microsoft.quantum.lang-ref.qubit)]), ([,](xref:microsoft.quantum.lang-ref.qubit)[][), (](xref:microsoft.quantum.lang-ref.qubit)[,](xref:microsoft.quantum.lang-ref.qubit)[LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian)[]),[(고 비트](xref:microsoft.quantum.lang-ref.qubit),[,](xref:microsoft.quantum.lang-ref.qubit)[LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian)[]),[LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian)[[]](xref:microsoft.quantum.lang-ref.qubit))
+## <a name="output--littleendianqubitqubitqubitqubitqubitlittleendianlittleendianqubitqubitqubitqubitlittleendianqubit"></a>Output: (([LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian),[LittleEndian](xref:microsoft.quantum.lang-ref.qubit)[[],,?](xref:microsoft.quantum.lang-ref.qubit))[](xref:microsoft.quantum.lang-ref.qubit),, LittleEndian [[](xref:microsoft.quantum.lang-ref.qubit)]), ([,](xref:microsoft.quantum.lang-ref.qubit)[][), (](xref:microsoft.quantum.lang-ref.qubit)[,](xref:microsoft.quantum.lang-ref.qubit)[](xref:Microsoft.Quantum.Arithmetic.LittleEndian)[]),[(고 비트](xref:microsoft.quantum.lang-ref.qubit),[,](xref:microsoft.quantum.lang-ref.qubit)[LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian)[]),[](xref:Microsoft.Quantum.Arithmetic.LittleEndian)[[]](xref:microsoft.quantum.lang-ref.qubit))
 

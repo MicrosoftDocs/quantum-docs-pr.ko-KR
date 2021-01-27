@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Synthesis.ApplyPermutationUsingDecomposition
 title: ApplyPermutationUsingDecomposition 작업
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Synthesis
 qsharp.name: ApplyPermutationUsingDecomposition
 qsharp.summary: Permutes the amplitudes in a quantum state given a permutation using decomposition-based synthesis.
-ms.openlocfilehash: 5b25ef3327bbca2dfdbe8fa876f3f797dddf77e8
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 765b6d301363021f5b57a22f90e2ada38c9c09ec
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96192131"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98857386"
 ---
 # <a name="applypermutationusingdecomposition-operation"></a>ApplyPermutationUsingDecomposition 작업
 
@@ -28,7 +28,7 @@ operation ApplyPermutationUsingDecomposition (perm : Int[], qubits : Microsoft.Q
 ```
 
 
-## <a name="description"></a>Description
+## <a name="description"></a>설명
 
 이 절차에서는 분해 기반 합성 방식을 구현 합니다.  입력은 $2 ^ n $ elements $ \{ 0, \pi, 2 ^ n-1 \} $이 고 $n $-변수가 해독 가능한 부울 함수를 나타내는 순열 $ \pi $입니다.
 알고리즘은 각 변수 인덱스에 대해 다음 단계를 반복적으로 수행 합니다 $i $:
@@ -57,7 +57,17 @@ operation ApplyPermutationUsingDecomposition (perm : Int[], qubits : Microsoft.Q
 
 
 
-## <a name="references"></a>참조 항목
+## <a name="example"></a>예
+
+작업을 합성 하려면 `SWAP` :
+
+```qsharp
+using (qubits = Qubit[2]) {
+  ApplyPermutationUsingDecomposition([0, 2, 1, 3], LittleEndian(qubits));
+}
+```
+
+## <a name="references"></a>참조
 
 - [*Alexis De Vos*, *Yvan Van rentergem*, 고급 (2), 2008, pp. 183--200](http://www.aimsciences.org/article/doi/10.3934/amc.2008.2.183)
 - [*Mathias Soeken*, *김 Tague*, *Gerhard* Dueck, *Rolf Drechsler*, 기호화 된 계산 73 (2016), pp. 1--26의 저널](https://www.sciencedirect.com/science/article/pii/S0747717115000188?via%3Dihub)
