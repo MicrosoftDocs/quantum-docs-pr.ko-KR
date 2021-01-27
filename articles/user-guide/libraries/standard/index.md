@@ -4,21 +4,21 @@ description: 퀀텀 프로그램에서 사용되는 작업, 함수 및 데이터
 author: QuantumWriter
 ms.author: martinro
 ms.date: 12/11/2017
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.libraries.standard.intro
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 63709015a12a7f972a676018970143ca163e92d0
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 58e271fefba84e45c5558eeee066bc37c22bf63b
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90836015"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858307"
 ---
 # <a name="introduction-to-the-no-locq-standard-libraries"></a>Q# 표준 라이브러리 소개
 
-Q#은 Q# *표준 라이브러리*를 구성하는 다양한 유용한 연산, 함수 및 사용자 정의 형식에 의해 지원됩니다.
+Q#은 Q# *표준 라이브러리* 를 구성하는 다양한 유용한 연산, 함수 및 사용자 정의 형식에 의해 지원됩니다.
 [설치 및 유효성 검사](xref:microsoft.quantum.install) 중에 설치되는 [`Microsoft.Quantum.Development.Kit` NuGet 패키지](https://www.nuget.org/packages/microsoft.quantum.development.kit)는 Q# 컴파일러 및 대상 컴퓨터에서 구현되는 표준 라이브러리의 일부를 제공합니다.
 [`Microsoft.Quantum.Standard` 패키지](https://www.nuget.org/packages/microsoft.quantum.standard)는 대상 컴퓨터에서 이식 가능한 Q# 표준 라이브러리의 일부를 제공합니다.
 
