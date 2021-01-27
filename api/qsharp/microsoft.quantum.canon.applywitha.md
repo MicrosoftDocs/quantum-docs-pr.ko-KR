@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyWithA
 title: 작업 (ApplyWithA 작업)
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyWithA
 qsharp.summary: Given two operations, applies one as conjugated with the other.
-ms.openlocfilehash: b8847d4b3ddb88031ef360f183b86f6483706cc6
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: f717347a81e4efa5ad1736485ad9e1c518d736a7
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96207873"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98841163"
 ---
 # <a name="applywitha-operation"></a>작업 (ApplyWithA 작업)
 
@@ -28,7 +28,7 @@ operation ApplyWithA<'T> (outerOperation : ('T => Unit is Adj), innerOperation :
 ```
 
 
-## <a name="description"></a>Description
+## <a name="description"></a>설명
 
 $U $ 및 $V $와 같은 단일 연산자에 의해 각각 설명 된 두 개의 작업은 ^ {\dagger} V U $ $U 시퀀스에 적용 됩니다. 즉,이 작업은 $U $와 $V $ conjugated에서 제공 하는 단일 연산자를 구현 합니다.
 

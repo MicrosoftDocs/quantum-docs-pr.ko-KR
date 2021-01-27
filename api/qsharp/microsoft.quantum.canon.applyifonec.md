@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyIfOneC
 title: ApplyIfOneC 작업
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyIfOneC
 qsharp.summary: Applies a controllable operation conditioned on a classical result value being one.
-ms.openlocfilehash: 24a00d83c1bbe6b07adb27c58fc70bc76af0a910
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: ebeec5b46567892ad30f194ababb42876ba08bcb
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96209420"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98841750"
 ---
 # <a name="applyifonec-operation"></a>ApplyIfOneC 작업
 
@@ -28,7 +28,7 @@ operation ApplyIfOneC<'T> (result : Result, (op : ('T => Unit is Ctl), target : 
 ```
 
 
-## <a name="description"></a>Description
+## <a name="description"></a>설명
 
 작업 `op` 및 결과 값이 지정 된 `result` `op` `target` 경우이 인 경우에 적용 됩니다 `result` `One` . 이면이 `Zero` 발생 하지 않습니다 `target` .
 접미사는 적용 되는 작업을 제어할 수 있음을 `C` 나타냅니다.

@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyIfElseRC
 title: ApplyIfElseRC 작업
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyIfElseRC
 qsharp.summary: Applies one of two controllable operations, depending on the value of a classical result.
-ms.openlocfilehash: b2e4ade84b25b0100fe4b69814c760a672833f06
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: bac763168dbc7379691f850a79cbb6e61639ba89
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96209488"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98841797"
 ---
 # <a name="applyifelserc-operation"></a>ApplyIfElseRC 작업
 
@@ -28,7 +28,7 @@ operation ApplyIfElseRC<'T, 'U> (result : Result, (zeroOp : ('T => Unit is Ctl),
 ```
 
 
-## <a name="description"></a>Description
+## <a name="description"></a>설명
 
 결과를 제공 하면 `result` 가와 같은 경우에는를 사용 하 여 작업을 적용 하 `zeroOp` `zeroInput` `result` `Zero` 고가 적용 됩니다 `oneOp(oneInput)` `result == One` .
 

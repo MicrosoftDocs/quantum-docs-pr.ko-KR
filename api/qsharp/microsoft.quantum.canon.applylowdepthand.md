@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyLowDepthAnd
 title: ApplyLowDepthAnd 작업
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyLowDepthAnd
 qsharp.summary: Inverts a given target qubit if and only if both control qubits are in the 1 state, with T-depth 1, using measurement to perform the adjoint operation.
-ms.openlocfilehash: 4c5e381227bf82415121add38d0c0d2959fb529d
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 7fa9d9bf2f1905bf1b59e783d7bceb8cb2e09fa4
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96209318"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98841700"
 ---
 # <a name="applylowdepthand-operation"></a>ApplyLowDepthAnd 작업
 
@@ -28,7 +28,7 @@ operation ApplyLowDepthAnd (control1 : Qubit, control2 : Qubit, target : Qubit) 
 ```
 
 
-## <a name="description"></a>Description
+## <a name="description"></a>설명
 
 `target`두 컨트롤이 모두 1 인 경우에만를 반전 하지만는 `target` 상태 0 이라고 가정 합니다.  작업은 T-수 4, T-깊이 1을 사용 하 고 하나의 도우미를 필요로 하며, 따라서 `target` 가 0으로 알려진 경우 CCNOT 연산에 더 적합할 수 있습니다.  이 작업의 adjoint는 측정을 기반으로 하며, T 게이트는 없으며 도우미를 사용 하지 않아도 됩니다.
 
@@ -54,7 +54,7 @@ operation ApplyLowDepthAnd (control1 : Qubit, control2 : Qubit, target : Qubit) 
 
 
 
-## <a name="references"></a>참조 항목
+## <a name="references"></a>참조
 
 - Cody Jones: "내결함성 Toffoli 게이트 Novel 생성", Phys 87, 022328, 2013 [Arxiv: 1212.5069](https://arxiv.org/abs/1212.5069) doi: 10.1103/PhysRevA. 87.022328
 - Peter Selinger: "T-depth one의 퀀텀 회로", Phys 87, 042302, 2013 [Arxiv: 1210.0974](https://arxiv.org/abs/1210.0974) doi: 10.1103/PhysRevA. 87.042302

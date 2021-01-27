@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.DecomposedIntoTimeStepsCA
 title: DecomposedIntoTimeStepsCA 함수
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: DecomposedIntoTimeStepsCA
 qsharp.summary: Returns an operation implementing the Trotter–Suzuki integrator for a given operation.
-ms.openlocfilehash: aa5f09f2e1fde878b523b4efc20b86c26ac738ff
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: e82df36d2e4f3767a152d5c92d7b1897c744a2ca
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96216543"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98840681"
 ---
 # <a name="decomposedintotimestepsca-function"></a>DecomposedIntoTimeStepsCA 함수
 
@@ -64,8 +64,8 @@ Trotter – Suzuki 인티그레이터를 구현 하는 단일를 반환 합니�
 마찬가지로의는 `order` `2` 두 번째 순서 대칭 Trotter – Suzuki 인티그레이터 $ $ \begin{align} S_2 (\lambda) = \ prod_ {j = 1} ^ {m} e ^ {H_k \lambda} \ prod_ {j ' = m} ^ {1} e ^ {H_ {j '} \lambda/2}를 반환 합니다.
 \end{align} $ $
 
-의 짝수 값은 보다 높은 값을 `order` 사용 하 여 [quant-ph/0508139](https://arxiv.org/abs/quant-ph/0508139)구현 됩니다.
+의 짝수 값은 보다 높은 값을 `order` 사용 하 여 [](https://arxiv.org/abs/quant-ph/0508139)구현 됩니다.
 
-## <a name="references"></a>참조 항목
+## <a name="references"></a>참조
 
 - [*D. Berry, G. Ahokas, Cleve, b. Sanders*](https://arxiv.org/abs/quant-ph/0508139)

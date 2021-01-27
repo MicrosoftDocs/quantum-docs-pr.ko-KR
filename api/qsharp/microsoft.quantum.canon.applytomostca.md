@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToMostCA
 title: ApplyToMostCA 작업
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyToMostCA
 qsharp.summary: Applies an operation to all but the last element of an array.
-ms.openlocfilehash: 2ce76d2a86665fbfa5f5d91df23220c7c80981e3
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 0a80c23e0c6ff45083c192579dd8301d2277cef2
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96208417"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98841321"
 ---
 # <a name="applytomostca-operation"></a>ApplyToMostCA 작업
 
@@ -28,7 +28,7 @@ operation ApplyToMostCA<'T> (op : ('T[] => Unit is Adj + Ctl), targets : 'T[]) :
 ```
 
 
-## <a name="description"></a>Description
+## <a name="description"></a>설명
 
 작업 `op` 및 대상 배열이 지정 된 `targets` 경우가 적용 됩니다 `op(Most(targets))` .
 

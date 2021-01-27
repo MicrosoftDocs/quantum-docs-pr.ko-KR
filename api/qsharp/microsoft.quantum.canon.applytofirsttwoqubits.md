@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToFirstTwoQubits
 title: ApplyToFirstTwoQubits 작업
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyToFirstTwoQubits
 qsharp.summary: Applies an operation to the first two qubits in the register.
-ms.openlocfilehash: e4f1eb396efb390c7470ea2aaf5c3b5be60b8c1b
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: c89ea89c055a950a9aee533653d40c84d8e179da
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96217410"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98841359"
 ---
 # <a name="applytofirsttwoqubits-operation"></a>ApplyToFirstTwoQubits 작업
 
@@ -35,7 +35,7 @@ operation ApplyToFirstTwoQubits (op : ((Qubit, Qubit) => Unit), register : Qubit
 처음 두 개의 작업에 적용 되는 작업입니다.
 
 
-### <a name="register--qubit"></a>register: [Qubit](xref:microsoft.quantum.lang-ref.qubit)
+### <a name="register--qubit"></a>register: [](xref:microsoft.quantum.lang-ref.qubit)
 
 연산이 적용 되는 처음 두 개의 비트에 대 한 기본 비트 배열입니다.
 

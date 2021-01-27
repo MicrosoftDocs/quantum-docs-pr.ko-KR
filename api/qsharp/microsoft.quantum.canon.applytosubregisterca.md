@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToSubregisterCA
 title: ApplyToSubregisterCA 작업
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyToSubregisterCA
 qsharp.summary: Applies an operation to a subregister of a register, with qubits specified by an array of their indices. The modifier `CA` indicates that the operation is controllable and adjointable.
-ms.openlocfilehash: a5ebfb17b1e66bd509f3a562f852986c83d0fef0
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 9f24c3ca9b152cf9bbf81e59b86f83a0ab459031
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96208009"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98841219"
 ---
 # <a name="applytosubregisterca-operation"></a>ApplyToSubregisterCA 작업
 
@@ -41,7 +41,7 @@ Subregister에 적용할 작업입니다.
 작업을 적용 하는 데 사용할 작업을 나타내는 인덱스의 배열입니다.
 
 
-### <a name="target--qubit"></a>target: [Qubit](xref:microsoft.quantum.lang-ref.qubit)
+### <a name="target--qubit"></a>target: [](xref:microsoft.quantum.lang-ref.qubit)
 
 작업이 수행 되는 등록입니다.
 

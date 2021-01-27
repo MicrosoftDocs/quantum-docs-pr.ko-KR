@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToPartitionCA
 title: ApplyToPartitionCA 작업
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyToPartitionCA
 qsharp.summary: Applies a pair of operations to a given partition of a register into two parts. The modifier `CA` indicates that the operation is controllable and adjointable.
-ms.openlocfilehash: b33670a91af5cbf280fdda0e57ddbbf8c9013e91
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 572cf824647b3e7f7c0e17c797d519f41914f79d
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96208309"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98841280"
 ---
 # <a name="applytopartitionca-operation"></a>ApplyToPartitionCA 작업
 
@@ -42,7 +42,7 @@ operation ApplyToPartitionCA (op : ((Qubit[], Qubit[]) => Unit is Ctl + Adj), nu
 나머지는 파티션의 두 번째 부분을 구성 합니다.
 
 
-### <a name="target--qubit"></a>target: [Qubit](xref:microsoft.quantum.lang-ref.qubit)
+### <a name="target--qubit"></a>target: [](xref:microsoft.quantum.lang-ref.qubit)
 
 지정 된 두 작업을 통해 분할 되 고 작동 하는 나머지 비트의 레지스터입니다.
 

@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.DelayA
 title: DelayA 작업
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: DelayA
 qsharp.summary: Applies a given operation with a delay.
-ms.openlocfilehash: 7c3325fd98a85c7e9123f383cbdc0a68627222c8
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: c7385cfcdf782347feb8d95311205a9311f4c929
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96207142"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98840674"
 ---
 # <a name="delaya-operation"></a>DelayA 작업
 
@@ -28,7 +28,7 @@ operation DelayA<'T> (op : ('T => Unit is Adj), arg : 'T, aux : Unit) : Unit is 
 ```
 
 
-## <a name="description"></a>Description
+## <a name="description"></a>설명
 
 작업 및 해당 작업에 대 한 입력이 주어진 경우 추가 입력이 제공 되 면에서 작업을 적용 합니다.
 특히 식은 `Delay(op, arg, _)` `op` 호출 될 때에 적용 되는 연산입니다 `arg` .

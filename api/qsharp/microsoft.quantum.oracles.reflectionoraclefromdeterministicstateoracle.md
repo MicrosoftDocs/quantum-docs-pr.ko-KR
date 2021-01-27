@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Oracles.ReflectionOracleFromDeterministicStateOracle
 title: ReflectionOracleFromDeterministicStateOracle 함수
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Oracles
 qsharp.name: ReflectionOracleFromDeterministicStateOracle
 qsharp.summary: Constructs reflection about a given state from an oracle.
-ms.openlocfilehash: 09de63d615a4d80e2b59deeddc07567aefe7660e
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: c260bdbcdb2ce53ad602bf84e0d31ef4fec24a79
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96193831"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98842518"
 ---
 # <a name="reflectionoraclefromdeterministicstateoracle-function"></a>ReflectionOracleFromDeterministicStateOracle 함수
 
@@ -28,7 +28,7 @@ function ReflectionOracleFromDeterministicStateOracle (oracle : Microsoft.Quantu
 ```
 
 
-## <a name="description"></a>Description
+## <a name="description"></a>설명
 
 단일 행렬 $O $로 표시 되는 결정적 상태 준비를 고려 하 여이 함수의 결과는 oracle $O $에서 준비한 상태 $ \ket{\psi} $에 대 한 반사를 적용 하는 oracle입니다. 즉, $ \ket{\psi} $ 상태를 $O \ket {0} = \ket{\psi} $입니다.
 

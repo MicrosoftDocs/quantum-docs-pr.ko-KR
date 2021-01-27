@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyIf
 title: ApplyIf 작업
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyIf
 qsharp.summary: Applies an operation conditioned on a classical bit.
-ms.openlocfilehash: c5a1012328fa012ee02707aa59c94ac9c44b8e87
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 109a5c4748d183f199e420b4b1aef687613d220c
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96218838"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98841882"
 ---
 # <a name="applyif-operation"></a>ApplyIf 작업
 
@@ -28,7 +28,7 @@ operation ApplyIf<'T> (op : ('T => Unit), bit : Bool, target : 'T) : Unit
 ```
 
 
-## <a name="description"></a>Description
+## <a name="description"></a>설명
 
 작업 `op` 및 비트 값이 지정 된 `bit` `op` `target` 경우가 인 경우에 적용 됩니다 `bit` `true` . 이면이 `false` 발생 하지 않습니다 `target` .
 
@@ -59,6 +59,19 @@ op가 적용 되는지 여부를 제어 하는 부울입니다.
 ### <a name="t"></a>없습니다
 
 조건부로 적용할 작업의 입력 형식입니다.
+
+## <a name="example"></a>예
+
+다음은 값의 배열로 지정 된 기존 비트 문자열로 표현 되는 계산 기준 상태로 값의 레지스터를 준비 합니다 `Bool` .
+
+```qsharp
+let bitstring = [true, false, true];
+using (register = Qubit(3)) {
+    ApplyToEach(ApplyIf(X, _, _), Zipped(bitstring, register));
+    // register should now be in the state |101⟩.
+    ...
+}
+```
 
 ## <a name="see-also"></a>참고 항목
 

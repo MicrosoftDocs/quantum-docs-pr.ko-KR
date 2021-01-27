@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToFirstTwoQubitsC
 title: ApplyToFirstTwoQubitsC 작업
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyToFirstTwoQubitsC
 qsharp.summary: Applies an operation to the first two qubits in the register. The modifier `C` indicates that the operation is controllable.
-ms.openlocfilehash: 6b6ee5f05ace92c15ce2038e2fedbaa2fee3dcc9
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: f71209a806b0d1d712a3c776eb45e62d1cd5d5f7
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96217359"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98841345"
 ---
 # <a name="applytofirsttwoqubitsc-operation"></a>ApplyToFirstTwoQubitsC 작업
 
@@ -36,7 +36,7 @@ operation ApplyToFirstTwoQubitsC (op : ((Qubit, Qubit) => Unit is Ctl), register
 처음 두 개의 작업에 적용 되는 작업입니다.
 
 
-### <a name="register--qubit"></a>register: [Qubit](xref:microsoft.quantum.lang-ref.qubit)
+### <a name="register--qubit"></a>register: [](xref:microsoft.quantum.lang-ref.qubit)
 
 연산이 적용 되는 처음 두 개의 비트에 대 한 기본 비트 배열입니다.
 

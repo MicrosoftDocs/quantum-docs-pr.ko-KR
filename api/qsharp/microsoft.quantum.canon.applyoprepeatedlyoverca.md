@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyOpRepeatedlyOverCA
 title: Applyoprepeatedly과잉 Ca 작업
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyOpRepeatedlyOverCA
 qsharp.summary: Applies the same op over a qubit register multiple times.
-ms.openlocfilehash: b7d401f323d7affc27697744bb659c687e252682
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 9b7f0897009d9913fc886f99b2e29f3fc1040666
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96209112"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98841597"
 ---
 # <a name="applyoprepeatedlyoverca-operation"></a>Applyoprepeatedly과잉 Ca 작업
 
@@ -40,7 +40,7 @@ operation ApplyOpRepeatedlyOverCA (op : (Qubit[] => Unit is Adj + Ctl), targets 
 Op의 대상을 설명 하는 중첩 된 배열입니다. 각 배열에는 사용할 비트를 설명 하는 정수 목록이 포함 되어야 합니다.
 
 
-### <a name="register--qubit"></a>register: [Qubit](xref:microsoft.quantum.lang-ref.qubit)
+### <a name="register--qubit"></a>register: [](xref:microsoft.quantum.lang-ref.qubit)
 
 작업할의 비트 레지스터입니다.
 

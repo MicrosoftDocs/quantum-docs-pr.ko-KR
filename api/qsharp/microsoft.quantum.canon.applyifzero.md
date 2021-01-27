@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyIfZero
 title: ApplyIfZero 작업
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyIfZero
 qsharp.summary: Applies an operation conditioned on a classical result value being zero.
-ms.openlocfilehash: 3b14ef8a1aa736fe096a21fe51be5a7c5bb1d09d
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 215b71a8d2e4f8a22df05b210824bc40a969b6f6
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96209437"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98841739"
 ---
 # <a name="applyifzero-operation"></a>ApplyIfZero 작업
 
@@ -28,7 +28,7 @@ operation ApplyIfZero<'T> (result : Result, (op : ('T => Unit), target : 'T)) : 
 ```
 
 
-## <a name="description"></a>Description
+## <a name="description"></a>설명
 
 작업 `op` 및 결과 값이 지정 된 `result` `op` `target` 경우이 인 경우에 적용 됩니다 `result` `Zero` . 이면이 `One` 발생 하지 않습니다 `target` .
 

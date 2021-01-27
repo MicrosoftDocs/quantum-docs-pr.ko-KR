@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.ControlledOnBitString
 title: ControlledOnBitString 함수
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ControlledOnBitString
 qsharp.summary: Returns a unitary operation that applies an oracle on the target register if the control register state corresponds to a specified bit mask.
-ms.openlocfilehash: 9435406506fc99fe211f5dce628b21c18ee4f9fe
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 176170cc972ca67b812b84f79cf97ba5418be9b6
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96216662"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98840812"
 ---
 # <a name="controlledonbitstring-function"></a>ControlledOnBitString 함수
 
@@ -28,7 +28,7 @@ function ControlledOnBitString<'T> (bits : Bool[], oracle : ('T => Unit is Adj +
 ```
 
 
-## <a name="description"></a>Description
+## <a name="description"></a>설명
 
 이 함수의 출력은 \begin{align} U \ket{b_0 b_1 \cdots b_ {n-1}} \ket{\psi} = \ket{b_0 b_1 \cdots b_ {n-1}}와 같이 단일 변환 $U $로 나타낼 수 있는 작업입니다. \cdots \begin{cases} V \ket{\psi} & \t extrm{if} (b_0 b_1 \cdots b_ {n-1}) = \texttt{bits} \\ \\ \ket{\psi} & \textrm{otherwise} \end{cases}, \end{align} where $V $은 작업 동작을 나타내는 단일 변환입니다 `oracle` .
 
@@ -54,6 +54,33 @@ function ControlledOnBitString<'T> (bits : Bool[], oracle : ('T => Unit is Adj +
 ### <a name="t"></a>없습니다
 
 
+
+## <a name="example"></a>예
+
+다음 코드 조각은 동일 합니다.
+
+```qsharp
+(ControlledOnBitString(bits, oracle))(controlRegister, targetRegister);
+```
+
+및
+
+```qsharp
+within {
+    ApplyPauliFromBitString(PauliX, false, bits, controlRegister);
+} apply {
+    Controlled oracle(controlRegister, targetRegister);
+}
+```
+
+다음 코드는 $ \frac {1} {2} (\ket {00} -\ket {01} + \ket {10} + \ket {11} ) $ 상태를 준비 합니다.
+
+```qsharp
+using (register = Qubit[2]) {
+    ApplyToEach(H, register);
+    (ControlledOnBitString([false], Z))(register[0..0], register[1]);
+}
+```
 
 ## <a name="remarks"></a>설명
 

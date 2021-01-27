@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.ApproximatelyMultiplexZ
 title: ApproximatelyMultiplexZ 작업
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApproximatelyMultiplexZ
 qsharp.summary: Applies a Pauli Z rotation conditioned on an array of qubits, truncating small rotation angles according to a given tolerance.
-ms.openlocfilehash: 5e254c2b2d6cbf29b428f4d55aef0e61356e3480
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: b69b4de62241a7d16c2f07449115f864defda45d
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96217104"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98841100"
 ---
 # <a name="approximatelymultiplexz-operation"></a>ApproximatelyMultiplexZ 작업
 
@@ -28,7 +28,7 @@ operation ApproximatelyMultiplexZ (tolerance : Double, coefficients : Double[], 
 ```
 
 
-## <a name="description"></a>Description
+## <a name="description"></a>설명
 
 이렇게 하면 $ \ theta_j $ 각도에 따라 회전을 수행 하는 곱하기 제어 된 단일 연산이 적용 됩니다 ($n $-stbit number state $ \ket{j} $로 제어 되는 경우 $Z).
 특히이 작업은 단일 개체로 나타낼 수 있습니다.
@@ -67,7 +67,7 @@ $E ^ {i P \ theta_j} $로 회전 한 단일 비트 레지스터입니다.
 
 `coefficients` $2 ^ n $ 미만으로 지정 된 경우는 $ \ theta_j = $0.0 요소로 채워집니다.
 
-## <a name="references"></a>참조 항목
+## <a name="references"></a>참조
 
 - 퀀텀 논리 회로 Vivek Shende, Stephen S. Markov, Igor, Igor L. https://arxiv.org/abs/quant-ph/0406176
 
