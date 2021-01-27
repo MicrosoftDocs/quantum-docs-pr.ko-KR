@@ -4,77 +4,77 @@ description: Q#정식 퀀텀 알고리즘 중 하나인 Grover의 알고리즘�
 author: cgranade
 ms.author: chgranad
 ms.date: 10/19/2019
-ms.topic: article
+ms.topic: tutorial
 uid: microsoft.quantum.quickstarts.search
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 86c6a651a117b788eb4c8fdd805ead7ab8f54dd7
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 5e0398338ff710decc0f3038c07c9b7d39514195
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834808"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98856624"
 ---
-# <a name="tutorial-implement-grovers-search-algorithm-in-q"></a><span data-ttu-id="32de2-103">자습서: Q\#에서 Grover의 검색 알고리즘 구현</span><span class="sxs-lookup"><span data-stu-id="32de2-103">Tutorial: Implement Grover's search algorithm in Q\#</span></span>
+# <a name="tutorial-implement-grovers-search-algorithm-in-q"></a><span data-ttu-id="4c1c3-103">자습서: Q\#에서 Grover의 검색 알고리즘 구현</span><span class="sxs-lookup"><span data-stu-id="4c1c3-103">Tutorial: Implement Grover's search algorithm in Q\#</span></span>
 
-<span data-ttu-id="32de2-104">이 자습서에서는 Grover 검색을 빌드하고 실행하여 비정형 데이터의 검색 속도를 높이는 방법을 알아볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="32de2-104">In this tutorial, you can learn how to build and run Grover search to speed up the search of unstructured data.</span></span>  <span data-ttu-id="32de2-105">Grover의 검색은 가장 인기 있는 퀀텀 컴퓨팅 알고리즘 중 하나 이며, 비교적 작은 Q# 구현은 퀀텀 Q# 알고리즘을 표현할 수 있는 고급 퀀텀 프로그래밍 언어를 사용 하 여 퀀텀 솔루션을 프로그래밍 하는 경우의 장점 중 일부를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="32de2-105">Grover's search is one of the most popular quantum computing algorithms, and this relatively small Q# implementation gives you a sense of some of the advantages of programming quantum solutions with a high-level Q# quantum programming language to express quantum algorithms.</span></span>  <span data-ttu-id="32de2-106">가이드의 끝에서는 시뮬레이션 출력이 정렬되지 않은 항목 목록 중 특정 문자열을 찾는 데 걸리는 시간이 클래식 컴퓨터에서 전체 목록을 검색하는 데 걸리는 시간보다 짧다는 것을 볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="32de2-106">At the end of the guide, you will see the simulation output demonstrates successfully finding a specific string among a list of unordered entries in a fraction of the time it would take to search the whole list on a classical computer.</span></span>
+<span data-ttu-id="4c1c3-104">이 자습서에서는 Grover 검색을 빌드하고 실행하여 비정형 데이터의 검색 속도를 높이는 방법을 알아볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4c1c3-104">In this tutorial, you can learn how to build and run Grover search to speed up the search of unstructured data.</span></span>  <span data-ttu-id="4c1c3-105">Grover의 검색은 가장 인기 있는 퀀텀 컴퓨팅 알고리즘 중 하나 이며, 비교적 작은 Q# 구현은 퀀텀 Q# 알고리즘을 표현할 수 있는 고급 퀀텀 프로그래밍 언어를 사용 하 여 퀀텀 솔루션을 프로그래밍 하는 경우의 장점 중 일부를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="4c1c3-105">Grover's search is one of the most popular quantum computing algorithms, and this relatively small Q# implementation gives you a sense of some of the advantages of programming quantum solutions with a high-level Q# quantum programming language to express quantum algorithms.</span></span>  <span data-ttu-id="4c1c3-106">가이드의 끝에서는 시뮬레이션 출력이 정렬되지 않은 항목 목록 중 특정 문자열을 찾는 데 걸리는 시간이 클래식 컴퓨터에서 전체 목록을 검색하는 데 걸리는 시간보다 짧다는 것을 볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4c1c3-106">At the end of the guide, you will see the simulation output demonstrates successfully finding a specific string among a list of unordered entries in a fraction of the time it would take to search the whole list on a classical computer.</span></span>
 
-<span data-ttu-id="32de2-107">Grover의 알고리즘은 특정 항목에 대한 비정형 데이터의 목록을 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="32de2-107">Grover's algorithm searches a list of unstructured data for specific items.</span></span> <span data-ttu-id="32de2-108">예를 들어 다음과 같은 질문에 답할 수 있습니다. 한 벌의 카드에서 뽑은 이 카드는 하트 에이스인가요?</span><span class="sxs-lookup"><span data-stu-id="32de2-108">For example, it can answer the question: Is this card drawn from a pack of cards an ace of hearts?</span></span> <span data-ttu-id="32de2-109">특정 항목의 레이블 지정은 _표시된 입력_이라고 합니다.</span><span class="sxs-lookup"><span data-stu-id="32de2-109">The labeling of the specific item is called _marked input_.</span></span>
+<span data-ttu-id="4c1c3-107">Grover의 알고리즘은 특정 항목에 대한 비정형 데이터의 목록을 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="4c1c3-107">Grover's algorithm searches a list of unstructured data for specific items.</span></span> <span data-ttu-id="4c1c3-108">예를 들어 다음과 같은 질문에 답할 수 있습니다. 한 벌의 카드에서 뽑은 이 카드는 하트 에이스인가요?</span><span class="sxs-lookup"><span data-stu-id="4c1c3-108">For example, it can answer the question: Is this card drawn from a pack of cards an ace of hearts?</span></span> <span data-ttu-id="4c1c3-109">특정 항목의 레이블 지정은 _표시된 입력_ 이라고 합니다.</span><span class="sxs-lookup"><span data-stu-id="4c1c3-109">The labeling of the specific item is called _marked input_.</span></span>
 
-<span data-ttu-id="32de2-110">Grover의 검색 알고리즘을 사용하면 양자 컴퓨터에서 검색 중인 목록의 항목 수보다 더 적은 단계에서 이 검색을 실행할 수 있습니다. 즉 클래식 알고리즘에서 수행할 수 있는 작업이 없습니다.</span><span class="sxs-lookup"><span data-stu-id="32de2-110">Using Grover's search algorithm, a quantum computer is guaranteed to run this search in fewer steps than the number of items in the list that you're searching — something no classical algorithm can do.</span></span> <span data-ttu-id="32de2-111">카드 한 벌의 경우 증가된 속도는 무시할 수 있지만, 수백만 또는 수십억 개의 항목이 포함된 목록에서는 상당한 시간이 걸립니다.</span><span class="sxs-lookup"><span data-stu-id="32de2-111">The increased speed in the case of a pack of cards is negligible; however, in lists containing millions or billions of items, it becomes significant.</span></span>
+<span data-ttu-id="4c1c3-110">Grover의 검색 알고리즘을 사용하면 양자 컴퓨터에서 검색 중인 목록의 항목 수보다 더 적은 단계에서 이 검색을 실행할 수 있습니다. 즉 클래식 알고리즘에서 수행할 수 있는 작업이 없습니다.</span><span class="sxs-lookup"><span data-stu-id="4c1c3-110">Using Grover's search algorithm, a quantum computer is guaranteed to run this search in fewer steps than the number of items in the list that you're searching — something no classical algorithm can do.</span></span> <span data-ttu-id="4c1c3-111">카드 한 벌의 경우 증가된 속도는 무시할 수 있지만, 수백만 또는 수십억 개의 항목이 포함된 목록에서는 상당한 시간이 걸립니다.</span><span class="sxs-lookup"><span data-stu-id="4c1c3-111">The increased speed in the case of a pack of cards is negligible; however, in lists containing millions or billions of items, it becomes significant.</span></span>
 
-<span data-ttu-id="32de2-112">Grover의 검색 알고리즘은 몇 줄의 코드만으로 빌드할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="32de2-112">You can build Grover's search algorithm with just a few lines of code.</span></span>
+<span data-ttu-id="4c1c3-112">Grover의 검색 알고리즘은 몇 줄의 코드만으로 빌드할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4c1c3-112">You can build Grover's search algorithm with just a few lines of code.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="32de2-113">필수 구성 요소</span><span class="sxs-lookup"><span data-stu-id="32de2-113">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="4c1c3-113">사전 요구 사항</span><span class="sxs-lookup"><span data-stu-id="4c1c3-113">Prerequisites</span></span>
 
-- <span data-ttu-id="32de2-114">Microsoft [Quantum Development Kit][install]</span><span class="sxs-lookup"><span data-stu-id="32de2-114">The Microsoft [Quantum Development Kit][install].</span></span>
+- <span data-ttu-id="4c1c3-114">Microsoft [Quantum Development Kit][install]</span><span class="sxs-lookup"><span data-stu-id="4c1c3-114">The Microsoft [Quantum Development Kit][install].</span></span>
 
-## <a name="what-does-grovers-search-algorithm-do"></a><span data-ttu-id="32de2-115">Grover의 검색 알고리즘에서 수행하는 작업은 무엇인가요?</span><span class="sxs-lookup"><span data-stu-id="32de2-115">What does Grover's search algorithm do?</span></span>
+## <a name="what-does-grovers-search-algorithm-do"></a><span data-ttu-id="4c1c3-115">Grover의 검색 알고리즘에서 수행하는 작업은 무엇인가요?</span><span class="sxs-lookup"><span data-stu-id="4c1c3-115">What does Grover's search algorithm do?</span></span>
 
-<span data-ttu-id="32de2-116">Grover의 알고리즘은 목록의 항목이 검색 중인 항목인지 여부를 묻습니다.</span><span class="sxs-lookup"><span data-stu-id="32de2-116">Grover's algorithm asks whether an item in a list is the one we are searching for.</span></span> <span data-ttu-id="32de2-117">이를 위해 각 계수 또는 확률 진폭을 사용하여 목록의 인덱스에 대한 양자 중첩을 생성하여 특정 인덱스가 찾고 있는 인덱스일 확률을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="32de2-117">It does this by constructing a quantum superposition of the indexes of the list with each coefficient, or probability amplitude, representing the probability of that specific index being the one you are looking for.</span></span>
+<span data-ttu-id="4c1c3-116">Grover의 알고리즘은 목록의 항목이 검색 중인 항목인지 여부를 묻습니다.</span><span class="sxs-lookup"><span data-stu-id="4c1c3-116">Grover's algorithm asks whether an item in a list is the one we are searching for.</span></span> <span data-ttu-id="4c1c3-117">이를 위해 각 계수 또는 확률 진폭을 사용하여 목록의 인덱스에 대한 양자 중첩을 생성하여 특정 인덱스가 찾고 있는 인덱스일 확률을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="4c1c3-117">It does this by constructing a quantum superposition of the indexes of the list with each coefficient, or probability amplitude, representing the probability of that specific index being the one you are looking for.</span></span>
 
-<span data-ttu-id="32de2-118">알고리즘의 핵심에는 해당 계수의 확률 진폭이 1에 도달할 때까지 찾고 있는 인덱스의 계수를 점진적으로 증가시키는 두 단계가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="32de2-118">At the heart of the algorithm are two steps that incrementally boost the coefficient of the index that we are looking for, until the probability amplitude of that coefficient approaches one.</span></span>
+<span data-ttu-id="4c1c3-118">알고리즘의 핵심에는 해당 계수의 확률 진폭이 1에 도달할 때까지 찾고 있는 인덱스의 계수를 점진적으로 증가시키는 두 단계가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4c1c3-118">At the heart of the algorithm are two steps that incrementally boost the coefficient of the index that we are looking for, until the probability amplitude of that coefficient approaches one.</span></span>
 
-<span data-ttu-id="32de2-119">증분 증폭의 수는 목록의 항목 수보다 작습니다.</span><span class="sxs-lookup"><span data-stu-id="32de2-119">The number of incremental boosts is fewer than the number of items in the list.</span></span> <span data-ttu-id="32de2-120">이러한 이유로 Grover의 검색 알고리즘에서 클래식 알고리즘보다 적은 단계로 검색을 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="32de2-120">This is why Grover's search algorithm performs the search in fewer steps than any classical algorithm.</span></span>
+<span data-ttu-id="4c1c3-119">증분 증폭의 수는 목록의 항목 수보다 작습니다.</span><span class="sxs-lookup"><span data-stu-id="4c1c3-119">The number of incremental boosts is fewer than the number of items in the list.</span></span> <span data-ttu-id="4c1c3-120">이러한 이유로 Grover의 검색 알고리즘에서 클래식 알고리즘보다 적은 단계로 검색을 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="4c1c3-120">This is why Grover's search algorithm performs the search in fewer steps than any classical algorithm.</span></span>
 
 ![Grover의 검색 알고리즘에 대한 기능 다이어그램](~/media/grover.png)
 
-## <a name="write-the-code"></a><span data-ttu-id="32de2-122">코드 작성</span><span class="sxs-lookup"><span data-stu-id="32de2-122">Write the code</span></span>
+## <a name="write-the-code"></a><span data-ttu-id="4c1c3-122">코드 작성</span><span class="sxs-lookup"><span data-stu-id="4c1c3-122">Write the code</span></span>
 
-1. <span data-ttu-id="32de2-123">퀀텀 개발 키트를 사용 하 여 [ Q# 응용 프로그램에 대 한 새 프로젝트를 만듭니다](xref:microsoft.quantum.install.standalone).</span><span class="sxs-lookup"><span data-stu-id="32de2-123">Using the Quantum Development Kit, [create a new Q# project for the application](xref:microsoft.quantum.install.standalone).</span></span> <span data-ttu-id="32de2-124">프로젝트 `Grover`의 제목을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="32de2-124">Title the project `Grover`.</span></span>
+1. <span data-ttu-id="4c1c3-123">퀀텀 개발 키트를 사용 하 여 [ Q# 응용 프로그램에 대 한 새 프로젝트를 만듭니다](xref:microsoft.quantum.install.standalone).</span><span class="sxs-lookup"><span data-stu-id="4c1c3-123">Using the Quantum Development Kit, [create a new Q# project for the application](xref:microsoft.quantum.install.standalone).</span></span> <span data-ttu-id="4c1c3-124">프로젝트 `Grover`의 제목을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="4c1c3-124">Title the project `Grover`.</span></span>
 
-1. <span data-ttu-id="32de2-125">다음 코드를 새 프로젝트의 `Program.qs` 파일에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="32de2-125">Add the following code to the `Program.qs` file in your new project:</span></span>
+1. <span data-ttu-id="4c1c3-125">다음 코드를 새 프로젝트의 `Program.qs` 파일에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="4c1c3-125">Add the following code to the `Program.qs` file in your new project:</span></span>
 
     :::code language="qsharp" source="~/quantum/samples/algorithms/simple-grover/SimpleGrover.qs" range="4-41":::
 
-1. <span data-ttu-id="32de2-126">검색하는 목록을 정의하려면 새 `Reflections.qs` 파일을 만들고, 다음 코드를 붙여넣습니다.</span><span class="sxs-lookup"><span data-stu-id="32de2-126">To define the list that we're searching, create a new file `Reflections.qs`, and paste in the following code:</span></span>
+1. <span data-ttu-id="4c1c3-126">검색하는 목록을 정의하려면 새 `Reflections.qs` 파일을 만들고, 다음 코드를 붙여넣습니다.</span><span class="sxs-lookup"><span data-stu-id="4c1c3-126">To define the list that we're searching, create a new file `Reflections.qs`, and paste in the following code:</span></span>
 
     :::code language="qsharp" source="~/quantum/samples/algorithms/simple-grover/Reflections.qs" range="4-70":::
 
-    <span data-ttu-id="32de2-127">`ReflectAboutMarked` 연산은 검색 중인 표시된 입력, 즉 0과 1이 교대로 반복되는 문자열을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="32de2-127">The `ReflectAboutMarked` operation defines the marked input that you are searching for: the string of alternating zeros and ones.</span></span> <span data-ttu-id="32de2-128">이 샘플은 표시된 입력을 하드 코딩하며, 다른 입력을 검색하도록 확장하거나 모든 입력에 대해 일반화할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="32de2-128">This sample hard-codes the marked input, and can be extended to search for different inputs or generalized for any input.</span></span>
+    <span data-ttu-id="4c1c3-127">`ReflectAboutMarked` 연산은 검색 중인 표시된 입력, 즉 0과 1이 교대로 반복되는 문자열을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="4c1c3-127">The `ReflectAboutMarked` operation defines the marked input that you are searching for: the string of alternating zeros and ones.</span></span> <span data-ttu-id="4c1c3-128">이 샘플은 표시된 입력을 하드 코딩하며, 다른 입력을 검색하도록 확장하거나 모든 입력에 대해 일반화할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4c1c3-128">This sample hard-codes the marked input, and can be extended to search for different inputs or generalized for any input.</span></span>
 
-1. <span data-ttu-id="32de2-129">다음으로 새 프로그램을 실행 Q# 하 여로 표시 된 항목을 찾습니다 `ReflectAboutMarked` .</span><span class="sxs-lookup"><span data-stu-id="32de2-129">Next, run your new Q# program to find the item marked by `ReflectAboutMarked`.</span></span>
+1. <span data-ttu-id="4c1c3-129">다음으로 새 프로그램을 실행 Q# 하 여로 표시 된 항목을 찾습니다 `ReflectAboutMarked` .</span><span class="sxs-lookup"><span data-stu-id="4c1c3-129">Next, run your new Q# program to find the item marked by `ReflectAboutMarked`.</span></span>
 
-### <a name="no-locq-applications-with-visual-studio-or-visual-studio-code"></a><span data-ttu-id="32de2-130">Q# Visual Studio 또는 Visual Studio Code를 사용 하는 응용 프로그램</span><span class="sxs-lookup"><span data-stu-id="32de2-130">Q# applications with Visual Studio or Visual Studio Code</span></span>
+### <a name="no-locq-applications-with-visual-studio-or-visual-studio-code"></a><span data-ttu-id="4c1c3-130">Q# Visual Studio 또는 Visual Studio Code를 사용 하는 응용 프로그램</span><span class="sxs-lookup"><span data-stu-id="4c1c3-130">Q# applications with Visual Studio or Visual Studio Code</span></span>
 
-<span data-ttu-id="32de2-131">이 프로그램은 `@EntryPoint()` 프로젝트 구성 및 명령줄 옵션에 따라 시뮬레이터 또는 리소스 평가기의 특성으로 표시 된 작업 또는 함수를 실행 합니다.</span><span class="sxs-lookup"><span data-stu-id="32de2-131">The program will run the operation or function marked with the `@EntryPoint()` attribute on a simulator or resource estimator, depending on the project configuration and command-line options.</span></span>
+<span data-ttu-id="4c1c3-131">이 프로그램은 `@EntryPoint()` 프로젝트 구성 및 명령줄 옵션에 따라 시뮬레이터 또는 리소스 평가기의 특성으로 표시 된 작업 또는 함수를 실행 합니다.</span><span class="sxs-lookup"><span data-stu-id="4c1c3-131">The program will run the operation or function marked with the `@EntryPoint()` attribute on a simulator or resource estimator, depending on the project configuration and command-line options.</span></span>
 
-<span data-ttu-id="32de2-132">Visual Studio에서 Ctrl + F5 키를 눌러 스크립트를 실행 하기만 하면 됩니다.</span><span class="sxs-lookup"><span data-stu-id="32de2-132">In Visual Studio, simply press Ctrl + F5 to run the script.</span></span>
+<span data-ttu-id="4c1c3-132">Visual Studio에서 Ctrl + F5 키를 눌러 스크립트를 실행 하기만 하면 됩니다.</span><span class="sxs-lookup"><span data-stu-id="4c1c3-132">In Visual Studio, simply press Ctrl + F5 to run the script.</span></span>
 
-<span data-ttu-id="32de2-133">VS Code에서 터미널에 아래를 입력하여 `Program.qs`를 처음으로 빌드합니다.</span><span class="sxs-lookup"><span data-stu-id="32de2-133">In VS Code, build the `Program.qs` the first time by typing the below in the terminal:</span></span>
+<span data-ttu-id="4c1c3-133">VS Code에서 터미널에 아래를 입력하여 `Program.qs`를 처음으로 빌드합니다.</span><span class="sxs-lookup"><span data-stu-id="4c1c3-133">In VS Code, build the `Program.qs` the first time by typing the below in the terminal:</span></span>
 
 ```Command line
 dotnet build
 ```
 
-<span data-ttu-id="32de2-134">후속 실행 시, 다시 빌드할 필요가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="32de2-134">For subsequent runs, there is no need to build it again.</span></span> <span data-ttu-id="32de2-135">실행하려면 다음 명령을 입력하고 Enter 키를 누릅니다.</span><span class="sxs-lookup"><span data-stu-id="32de2-135">To run it, type the following command and press enter:</span></span>
+<span data-ttu-id="4c1c3-134">후속 실행 시, 다시 빌드할 필요가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="4c1c3-134">For subsequent runs, there is no need to build it again.</span></span> <span data-ttu-id="4c1c3-135">실행하려면 다음 명령을 입력하고 Enter 키를 누릅니다.</span><span class="sxs-lookup"><span data-stu-id="4c1c3-135">To run it, type the following command and press enter:</span></span>
 
 ```Command line
 dotnet run --no-build
 ```
 
-<span data-ttu-id="32de2-136">터미널에 다음 메시지가 표시되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="32de2-136">You should see the following message displayed in the terminal:</span></span>
+<span data-ttu-id="4c1c3-136">터미널에 다음 메시지가 표시되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="4c1c3-136">You should see the following message displayed in the terminal:</span></span>
 
 ```
 operations.qs:
@@ -89,13 +89,13 @@ operations.qs [options] [command]
 Commands:
 ```
 
-<span data-ttu-id="32de2-137">이는 사용 하려는 원하는 수의 수를 지정 하지 않았기 때문입니다. 터미널에서 실행 프로그램에 사용할 수 있는 명령을 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="32de2-137">This is because you didn't specify the number of qubits you wanted to use, so the terminal shows you the commands available for the executable program.</span></span> <span data-ttu-id="32de2-138">5 비트를 사용 하려면 다음을 입력 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="32de2-138">If we want to use 5 qubits, we should type:</span></span>
+<span data-ttu-id="4c1c3-137">이는 사용 하려는 원하는 수의 수를 지정 하지 않았기 때문입니다. 터미널에서 실행 프로그램에 사용할 수 있는 명령을 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="4c1c3-137">This is because you didn't specify the number of qubits you wanted to use, so the terminal shows you the commands available for the executable program.</span></span> <span data-ttu-id="4c1c3-138">5 비트를 사용 하려면 다음을 입력 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="4c1c3-138">If we want to use 5 qubits, we should type:</span></span>
 
 ```Command line
 dotnet run --n-qubits 5
 ```
 
-<span data-ttu-id="32de2-139">Enter를 누르면 다음 출력이 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="32de2-139">Pressing enter you should see the following output:</span></span>
+<span data-ttu-id="4c1c3-139">Enter를 누르면 다음 출력이 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="4c1c3-139">Pressing enter you should see the following output:</span></span>
 
 ```
 Reflecting about marked state...
@@ -105,16 +105,16 @@ Reflecting about marked state...
 [Zero,One,Zero,One,Zero]
 ```
 
-## <a name="next-steps"></a><span data-ttu-id="32de2-140">다음 단계</span><span class="sxs-lookup"><span data-stu-id="32de2-140">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="4c1c3-140">다음 단계</span><span class="sxs-lookup"><span data-stu-id="4c1c3-140">Next steps</span></span>
 
-<span data-ttu-id="32de2-141">이 자습서를 만든 경우를 사용 하 여 Q# 사용자 고유의 퀀텀 응용 프로그램을 작성 하는 방법에 대 한 자세한 내용을 보려면 아래 리소스 중 일부를 확인 하세요.</span><span class="sxs-lookup"><span data-stu-id="32de2-141">If you enjoyed this tutorial, check out some of the resources below to learn more about how you can use Q# to write your own quantum applications:</span></span>
+<span data-ttu-id="4c1c3-141">이 자습서를 만든 경우를 사용 하 여 Q# 사용자 고유의 퀀텀 응용 프로그램을 작성 하는 방법에 대 한 자세한 내용을 보려면 아래 리소스 중 일부를 확인 하세요.</span><span class="sxs-lookup"><span data-stu-id="4c1c3-141">If you enjoyed this tutorial, check out some of the resources below to learn more about how you can use Q# to write your own quantum applications:</span></span>
 
-- [<span data-ttu-id="32de2-142">QDK 시작 가이드로 돌아가기</span><span class="sxs-lookup"><span data-stu-id="32de2-142">Back to the Getting Started with QDK guide</span></span>](xref:microsoft.quantum.welcome)
-- <span data-ttu-id="32de2-143">더 일반적인 Grover의 검색 알고리즘 [샘플](https://github.com/microsoft/Quantum/tree/main/samples/algorithms/database-search)을 사용해 보기</span><span class="sxs-lookup"><span data-stu-id="32de2-143">Try a more general Grover's search algorithm [sample](https://github.com/microsoft/Quantum/tree/main/samples/algorithms/database-search)</span></span>
-- [<span data-ttu-id="32de2-144">Quantum Katas에서 Grover 검색에 대해 자세히 알아보기</span><span class="sxs-lookup"><span data-stu-id="32de2-144">Learn more about Grover's search with the Quantum Katas</span></span>](xref:microsoft.quantum.overview.katas)
-- <span data-ttu-id="32de2-145">Grover 검색 알고리즘의 기반이 되는 양자 컴퓨팅 기술인 [진폭 증폭][amplitude-amplification]에 대해 자세히 알아봅니다.</span><span class="sxs-lookup"><span data-stu-id="32de2-145">Read more about [Amplitude amplification][amplitude-amplification], the quantum computing technique behind Grover's search algorithm</span></span>
-- [<span data-ttu-id="32de2-146">양자 컴퓨팅 개념</span><span class="sxs-lookup"><span data-stu-id="32de2-146">Quantum computing concepts</span></span>](xref:microsoft.quantum.concepts.intro)
-- [<span data-ttu-id="32de2-147">Quantum Development Kit 샘플</span><span class="sxs-lookup"><span data-stu-id="32de2-147">Quantum Development Kit Samples</span></span>](https://docs.microsoft.com/samples/browse/?products=qdk)
+- [<span data-ttu-id="4c1c3-142">QDK 시작 가이드로 돌아가기</span><span class="sxs-lookup"><span data-stu-id="4c1c3-142">Back to the Getting Started with QDK guide</span></span>](xref:microsoft.quantum.welcome)
+- <span data-ttu-id="4c1c3-143">더 일반적인 Grover의 검색 알고리즘 [샘플](https://github.com/microsoft/Quantum/tree/main/samples/algorithms/database-search)을 사용해 보기</span><span class="sxs-lookup"><span data-stu-id="4c1c3-143">Try a more general Grover's search algorithm [sample](https://github.com/microsoft/Quantum/tree/main/samples/algorithms/database-search)</span></span>
+- [<span data-ttu-id="4c1c3-144">Quantum Katas에서 Grover 검색에 대해 자세히 알아보기</span><span class="sxs-lookup"><span data-stu-id="4c1c3-144">Learn more about Grover's search with the Quantum Katas</span></span>](xref:microsoft.quantum.overview.katas)
+- <span data-ttu-id="4c1c3-145">Grover 검색 알고리즘의 기반이 되는 양자 컴퓨팅 기술인 [진폭 증폭][amplitude-amplification]에 대해 자세히 알아봅니다.</span><span class="sxs-lookup"><span data-stu-id="4c1c3-145">Read more about [Amplitude amplification][amplitude-amplification], the quantum computing technique behind Grover's search algorithm</span></span>
+- [<span data-ttu-id="4c1c3-146">양자 컴퓨팅 개념</span><span class="sxs-lookup"><span data-stu-id="4c1c3-146">Quantum computing concepts</span></span>](xref:microsoft.quantum.concepts.intro)
+- [<span data-ttu-id="4c1c3-147">Quantum Development Kit 샘플</span><span class="sxs-lookup"><span data-stu-id="4c1c3-147">Quantum Development Kit Samples</span></span>](https://docs.microsoft.com/samples/browse/?products=qdk)
 
 <!-- LINKS -->
 

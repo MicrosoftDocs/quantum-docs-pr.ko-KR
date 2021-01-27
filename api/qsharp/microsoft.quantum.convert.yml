@@ -4,7 +4,7 @@ functions:
   uid: Microsoft.Quantum.Convert.BigIntAsBoolArray
 - summary: 지정 된 부울 배열을 해당 하는 큰 정수로 변환 합니다. 배열의 0 요소는 큰 정수의 최하위 비트입니다.
   uid: Microsoft.Quantum.Convert.BoolArrayAsBigInt
-- summary: Little endian 형식의 비트 문자열에서 양의 정수를 생성 합니다.
+- summary: Little endian 형식의 비트 문자열에서 음수가 아닌 정수를 생성 합니다.
   uid: Microsoft.Quantum.Convert.BoolArrayAsInt
 - summary: 비트 문자열이 지정 된 경우 단일 수준 비트 Pauli 연산자의 배열로 표시 되는 다중 값 비트 Pauli 연산자를 반환 합니다.
   uid: Microsoft.Quantum.Convert.BoolArrayAsPauli
@@ -22,7 +22,7 @@ functions:
   uid: Microsoft.Quantum.Convert.FunctionAsOperation
 - summary: 지정 된 정수를 해당 하는 큰 정수로 변환 합니다.
   uid: Microsoft.Quantum.Convert.IntAsBigInt
-- summary: 반환 된 배열에 대 한 작은 endian 표현을 사용 하 여 양의 정수의 이진 표현을 생성 합니다.
+- summary: 반환 된 배열에 대 한 작은 endian 표현을 사용 하 여 음수가 아닌 정수의 이진 표현을 생성 합니다.
   uid: Microsoft.Quantum.Convert.IntAsBoolArray
 - summary: 지정 된 정수를 해당 하는 배정밀도 부동 소수점 숫자로 변환 합니다.
   uid: Microsoft.Quantum.Convert.IntAsDouble
@@ -38,7 +38,7 @@ functions:
   uid: Microsoft.Quantum.Convert.RangeAsIntArray
 - summary: '`Result[]`형식을 형식으로 변환 `Bool[]` `One` 합니다. 여기서은로 매핑되고는 `true` `Zero` 에 매핑됩니다 `false` .'
   uid: Microsoft.Quantum.Convert.ResultArrayAsBoolArray
-- summary: Little endian 형식의 결과 문자열에서 양의 정수를 생성 합니다.
+- summary: Little endian 형식의 결과 문자열에서 음수가 아닌 정수를 생성 합니다.
   uid: Microsoft.Quantum.Convert.ResultArrayAsInt
 - summary: '`Result`형식을 형식으로 변환 `Bool` `One` 합니다. 여기서은로 매핑되고는 `true` `Zero` 에 매핑됩니다 `false` .'
   uid: Microsoft.Quantum.Convert.ResultAsBool
@@ -50,9 +50,9 @@ operations:
 summary: '이 네임 스페이스는 다양 한 Q # 데이터 형식 간의 변환을 위한 함수를 포함 합니다.'
 uid: Microsoft.Quantum.Convert
 metadata:
-  ms.openlocfilehash: d22f0735b800d2e9a34f8c7ce58353850a4cdded
-  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.openlocfilehash: 18cef8a797a4657f1b846a5b2d2ba2a673378f9a
+  ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 10/27/2020
-  ms.locfileid: "92713819"
+  ms.lasthandoff: 01/26/2021
+  ms.locfileid: "98850075"
