@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.NoOp
 title: NoOp 작업
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: NoOp
 qsharp.summary: Performs the identity operation (no-op) on an argument.
-ms.openlocfilehash: 35b6b62cab35f941f04b150dcca763457ddaa084
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 45f3c8c9d4bae8ac8f7f60c4e4f8ead5d92e7c00
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96205969"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98852404"
 ---
 # <a name="noop-operation"></a>NoOp 작업
 
@@ -28,7 +28,7 @@ operation NoOp<'T> (input : 'T) : Unit is Adj + Ctl
 ```
 
 
-## <a name="description"></a>Description
+## <a name="description"></a>설명
 
 이 작업은 모든 형식의 값을 사용 하 고 아무 것도 수행 하지 않습니다.
 이는 작업 형식의 입력이 예상 될 때마다 유용할 수 있지만 아무 동작도 수행 하지 않아야 합니다.

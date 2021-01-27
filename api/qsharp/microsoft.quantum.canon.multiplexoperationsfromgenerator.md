@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.MultiplexOperationsFromGenerator
 title: MultiplexOperationsFromGenerator 작업
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -10,12 +10,12 @@ qsharp.summary: >-
   Applies a multiply-controlled unitary operation $U$ that applies a unitary $V_j$ when controlled by n-qubit number state $\ket{j}$.
 
   $U = \sum^{N-1}_{j=0}\ket{j}\bra{j}\otimes V_j$.
-ms.openlocfilehash: 9fbbd9268d4a6b9f3d5fd203969f4bbeebe81b68
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 59afa9d9a34fe74206118680940d243ed8b2496e
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96205952"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98852504"
 ---
 # <a name="multiplexoperationsfromgenerator-operation"></a>MultiplexOperationsFromGenerator 작업
 
@@ -65,6 +65,6 @@ $V _j $가 작동 하는 일반 고 비트 레지스터입니다.
 
 `coefficients` $2 ^ n $ 미만으로 지정 된 경우는 id 요소로 채워집니다. 이 구현에서는 $n-$1 보조 비트를 사용 합니다.
 
-## <a name="references"></a>참조 항목
+## <a name="references"></a>참조
 
 - [*Andrew Childs, Dmitri Maslov, Yunseong 베트남, Neil Ross, 위안 Su*, arxiv: 1711.10980](https://arxiv.org/abs/1711.10980)

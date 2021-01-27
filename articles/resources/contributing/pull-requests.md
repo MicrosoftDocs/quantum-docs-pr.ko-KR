@@ -4,17 +4,17 @@ description: Microsoft Quantum Development Kit에 코드 또는 설명서를 제
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
-ms.topic: article
+ms.topic: contributor-guide
 uid: microsoft.quantum.contributing.pulls
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8e04e6502e0a6005dfdf0f93450bf3ffd5aaa672
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: a936283f3e51da9b97b8145bad3ab765b6423458
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866930"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858462"
 ---
 # <a name="opening-pull-requests"></a>끌어오기 요청 열기 #
 
@@ -38,7 +38,7 @@ Git 및 GitHub를 함께 사용 하면 퀀텀 개발 키트를 통해 광범위 
 
 ## <a name="what-is-a-pull-request"></a>끌어오기 요청 이란? ##
 
-위에서 설명한 것 처럼 **끌어오기 요청이 무엇 인지를**확인 하는 데 몇 분 정도 걸릴 수 있습니다.
+위에서 설명한 것 처럼 **끌어오기 요청이 무엇 인지를** 확인 하는 데 몇 분 정도 걸릴 수 있습니다.
 Git에서 작업 하는 경우 변경 내용은 해당 변경 내용이 리포지토리의 상태와 어떻게 관련 되어 있는지를 설명 하는 _커밋_ 으로 표시 됩니다.
 이전 커밋에서 화살표가 있는 원으로 커밋을 그리는 다이어그램을 그리는 경우가 종종 있습니다.
 

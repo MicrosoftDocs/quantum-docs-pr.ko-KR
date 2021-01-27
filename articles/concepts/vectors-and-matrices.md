@@ -1,6 +1,6 @@
 ---
 제목: 퀀텀 계산의 벡터 및 행렬 설명: 벡터 및 매트릭스를 사용 하는 방법에 대 한 기본 사항을 알아봅니다.
-작성자: QuantumWriter uid: benbra: 12/11/2017. 날짜: 밀리초. 토픽: 문서 번호-loc:
+작성자: QuantumWriter uid: benbra: 12/11/2017. 날짜: 밀리초. 토픽: 개념 비-loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -85,7 +85,7 @@
 
 # <a name="vectors-and-matrices"></a>벡터 및 행렬
 
-몇 가지 벡터와 행렬에 대해 잘 알고 있는 것은 퀀텀 컴퓨팅을 이해 하는 데 필수적입니다. 아래에서 간략하게 소개 하 고 관심 있는 독자는 *Strang, G. (1993)와 같은 선형 대 수 표준 참조를 읽는 것이 좋습니다. 선형 대 수 (Vol. 3)에 대해 소개 합니다. Wellesley, MA: Wellesley-캠브리지* 또는 [Linear 대 수](http://joshua.smcvt.edu/linearalgebra/)같은 온라인 참조를 누릅니다.
+몇 가지 벡터와 행렬에 대해 잘 알고 있는 것은 퀀텀 컴퓨팅을 이해 하는 데 필수적입니다. 아래에서 간략하게 소개 하 고 관심 있는 독자는 *Strang, G. (1993)와 같은 선형 대 수 표준 참조를 읽는 것이 좋습니다. 선형 대 수 (Vol. 3)에 대해 소개 합니다. Wellesley, MA: Wellesley-Cambridge* 또는 [선형 대 수](http://joshua.smcvt.edu/linearalgebra/)같은 온라인 참조를 누릅니다.
 
 차원 (또는 크기)의 열 벡터 (또는 단순한 [*벡터*](https://en.wikipedia.org/wiki/Vector_(mathematics_and_physics))) $ v는 $ $ $ $ $ $ $ 열로 정렬 된 n 복소수 (v_1, v_2, \ldots, v_n)의 컬렉션입니다.
 
@@ -126,7 +126,7 @@ au_2 + bv_2\\\\
 au_n + bv_n \end{bmatrix} .
 $$
 
-크기 [*matrix*](https://en.wikipedia.org/wiki/Matrix_(mathematics)) $ m n의 행렬 \times $ 은 아래와 $ $ $ $ 같이 m 행과 $ n 개의 $ 열로 정렬 된 mn 복소수의 컬렉션입니다.
+크기 [](https://en.wikipedia.org/wiki/Matrix_(mathematics)) $ m n의 행렬 \times $ 은 아래와 $ $ $ $ 같이 m 행과 $ n 개의 $ 열로 정렬 된 mn 복소수의 컬렉션입니다.
 
 $$매 = 
 \begin{bmatrix}
@@ -164,7 +164,7 @@ P_ { m1 } ~~ P_ { m2 } ~~ \cdots ~~ P_ { mp}
 
 여기서 P의 항목 $ 은 $ $ { ik } = \sum _j M_ { ij } N_ jk P_ { } $ . 예를 들어 $ P_ 11 항목 { 은 } $ $ $ N의 첫 번째 열을 가진 M의 첫 번째 행의 내부 곱 $ 입니다 $ . 벡터는 단순히 행렬의 특별 한 사례 이므로이 정의는 행렬-벡터 곱셈으로 확장 됩니다. 
 
-이를 고려 하는 모든 행렬은 행과 열 수가 같거나 벡터 (1 개 열에만 해당) 인 정사각형 행렬입니다 $ $ . 하나의 특수 사각형 행렬은 [*identity matrix*](https://en.wikipedia.org/wiki/Identity_matrix) $ \boldone $ 모든 대각선 요소를 1로, $ $ 나머지 요소를 0으로 $ $ 유지 하는 id 매트릭스입니다.
+이를 고려 하는 모든 행렬은 행과 열 수가 같거나 벡터 (1 개 열에만 해당) 인 정사각형 행렬입니다 $ $ . 하나의 특수 사각형 행렬은 [](https://en.wikipedia.org/wiki/Identity_matrix) $ \boldone $ 모든 대각선 요소를 1로, $ $ 나머지 요소를 0으로 $ $ 유지 하는 id 매트릭스입니다.
 
 $$\boldone=\begin{bmatrix}
 1 ~~ 0 ~~ \cdots ~~ 0\\\\
@@ -174,7 +174,7 @@ $$\boldone=\begin{bmatrix}
 
 사각형 행렬 a의 $ $ $ 경우 B 행렬은 $ AB BA 인 경우 [*역*](https://en.wikipedia.org/wiki/Invertible_matrix) 이라고 $ = = \boldone $ 합니다. 행렬의 역은 존재 하지 않아도 되지만, 존재 하는 경우에는 고유 하 고 $ ^ { -1을 나타냅니다 } $ . 
 
-모든 matrix $ m $ 에서 m의 adjoint 또는 복소수는 $ $ $ $ $ N_ { ij } = M_ { ji } ^ \* $ 하는 행렬 N입니다. M의 adjoint $ 는 $ 보통 m ^로 표시 됩니다 $ \dagger $ . $ $ [*unitary*](https://en.wikipedia.org/wiki/Unitary_matrix) $ UU ^ u \dagger = ^ \dagger u = \boldone $ 또는 동등 ( $ u ^ { -1 } = u ^ \dagger $ ) 인 경우에는 행렬 u가 단일 것으로 가정 합니다.  단일 매트릭스의 가장 중요 한 속성은 벡터의 표준을 유지 한다는 것입니다.  이는 다음과 같은 경우에 발생 합니다. 
+모든 matrix $ m $ 에서 m의 adjoint 또는 복소수는 $ $ $ $ $ N_ { ij } = M_ { ji } ^ \* $ 하는 행렬 N입니다. M의 adjoint $ 는 $ 보통 m ^로 표시 됩니다 $ \dagger $ . $ $ [](https://en.wikipedia.org/wiki/Unitary_matrix) $ UU ^ u \dagger = ^ \dagger u = \boldone $ 또는 동등 ( $ u ^ { -1 } = u ^ \dagger $ ) 인 경우에는 행렬 u가 단일 것으로 가정 합니다.  단일 매트릭스의 가장 중요 한 속성은 벡터의 표준을 유지 한다는 것입니다.  이는 다음과 같은 경우에 발생 합니다. 
 
 $$\langlev, v v \rangle = ^ \dagger v = v ^ \dagger u ^ { -1 } u v = v ^ u ^ u v \dagger \dagger = \langle , u v \rangle .$$  
 

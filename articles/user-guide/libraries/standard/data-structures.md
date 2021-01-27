@@ -5,16 +5,16 @@ author: QuantumWriter
 uid: microsoft.quantum.libraries.data-structures
 ms.author: martinro
 ms.date: 12/11/2017
-ms.topic: article
+ms.topic: conceptual
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: c3ce5d531618c269d15be3e4eb58ecbb597a022c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: e9b593ba69ed41a9fb3c1298b5b945a4cbe43d5d
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92692238"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858321"
 ---
 # <a name="data-structures-and-modeling"></a>데이터 구조 및 모델링 #
 
@@ -72,7 +72,7 @@ ApplyToEach(
 ## <a name="oracles"></a>Oracles ##
 
 [단계 예측](https://en.wikipedia.org/wiki/Quantum_phase_estimation_algorithm) 및 [진폭 증폭](https://en.wikipedia.org/wiki/Amplitude_amplification) 홍보 자료에서 oracle의 개념은 자주 나타납니다.
-여기서 oracle 이라는 용어는 다양 한 비트 집합에 적용 되는 블랙 박스 퀀텀 서브루틴을 나타내며 단계로 서 답변을 반환 합니다.
+여기서 oracle 이라는 용어는 다양 한 비트 집합에 적용 되는 퀀텀 서브루틴을 나타내며, 해당 답변을 단계로 반환 합니다.
 이 서브루틴은 다른 몇 가지 매개 변수와 함께 oracle을 허용 하는 퀀텀 알고리즘에 대 한 입력으로, 일련의 퀀텀 작업을 적용 하 고이 퀀텀 서브루틴에 대 한 호출을 기본 게이트 처럼 처리 하는 것으로 간주할 수 있습니다.
 분명히 큰 알고리즘을 실제로 구현 하기 위해 oracle을 기본 게이트로 구체적으로 분해 해야 하지만 oracle을 호출 하는 알고리즘을 이해 하기 위해 이러한 분해는 필요 하지 않습니다.
 에서 Q# 이 추상화는 작업을 첫 번째 클래스 값으로 사용 하 여 표현 됩니다. 이러한 작업은 블랙 박스 방식으로 퀀텀 알고리즘의 구현에 전달 될 수 있습니다.
