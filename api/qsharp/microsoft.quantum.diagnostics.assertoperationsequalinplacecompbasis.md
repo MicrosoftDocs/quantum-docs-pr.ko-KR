@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Diagnostics.AssertOperationsEqualInPlaceCompBasis
 title: AssertOperationsEqualInPlaceCompBasis 작업
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Diagnostics
 qsharp.name: AssertOperationsEqualInPlaceCompBasis
 qsharp.summary: Checks if the operation `givenU` is equal to the operation `expectedU` on the given input size  by checking the action of the operations only on the vectors from the computational basis. This is a necessary, but not sufficient, condition for the equality of two unitaries.
-ms.openlocfilehash: 826369bdf3544fb257c2bb202466426c1ca1e113
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: f9d3aaf7e774cf2495ca69382db2470d1d0fa7b5
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96202348"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98830489"
 ---
 # <a name="assertoperationsequalinplacecompbasis-operation"></a>AssertOperationsEqualInPlaceCompBasis 작업
 
@@ -36,7 +36,7 @@ operation AssertOperationsEqualInPlaceCompBasis (nQubits : Int, givenU : (Qubit[
 작업이 수행 하 고 작동 하는 $n $의 수입니다 `givenU` `expectedU` .
 
 
-### <a name="givenu--qubit--unit"></a>givenU: [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [Unit](xref:microsoft.quantum.lang-ref.unit) 
+### <a name="givenu--qubit--unit"></a>givenU: [](xref:microsoft.quantum.lang-ref.qubit)[] => [Unit](xref:microsoft.quantum.lang-ref.unit) 
 
 검사 될 $ 이상 비트 $n에 대 한 작업입니다.
 

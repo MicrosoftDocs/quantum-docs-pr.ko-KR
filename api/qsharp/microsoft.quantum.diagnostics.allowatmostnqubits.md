@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Diagnostics.AllowAtMostNQubits
 title: AllowAtMostNQubits 작업
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Diagnostics
 qsharp.name: AllowAtMostNQubits
 qsharp.summary: Between a call to this operation and its adjoint, asserts that at most a given number of additional qubits are allocated with using statements.
-ms.openlocfilehash: 5376b6f39d12d664342fbf71e67442c6ef8a0827
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 3aa80767ac0f752e7be0efa2966c580ca3cb8f19
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96202552"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98830907"
 ---
 # <a name="allowatmostnqubits-operation"></a>AllowAtMostNQubits 작업
 
@@ -44,6 +44,20 @@ operation AllowAtMostNQubits (nQubits : Int, message : String) : Unit is Adj
 ## <a name="output--unit"></a>출력: [단위](xref:microsoft.quantum.lang-ref.unit)
 
 
+
+## <a name="example"></a>예
+
+다음 코드 조각은이 진단을 지 원하는 컴퓨터에서 실행 되는 경우 실패 합니다.
+
+```qsharp
+within {
+    AllowAtMostNQubits(3, "Too many qubits allocated.");
+} apply {
+    // Fails since this allocates four qubits.
+    using (register = Qubit[4]) {
+    }
+}
+```
 
 ## <a name="remarks"></a>설명
 
