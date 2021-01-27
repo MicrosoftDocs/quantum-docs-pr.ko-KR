@@ -1,6 +1,6 @@
 ---
 제목: 퀀텀 컴퓨팅 용어집 설명: 퀀텀 컴퓨팅에 사용 되는 일반적인 용어, 작업 및 개체의 용어집입니다.
-작성자: bradben: benbra m. 날짜: 9/1/2020 밀리초. 토픽: 문서 uid: microsoft 양자:
+작성자: bradben: benbra m. 날짜: 9/1/2020 밀리초. 토픽: 참조 uid: microsoft 양자:
 - "Q#"
 - "$$v"
 - "$$"
@@ -151,7 +151,7 @@ Q#순수 하 게 결정적 인 언어의 서브루틴 유형입니다. 퀀텀 �
 
 ## <a name="hadamard"></a>Hadamard
 
-Hadamard 연산 (Hadamard gate 또는 transform이 라고도 함)은 단일의 [비트](xref:microsoft.quantum.glossary#qubit) 에서 작동 하 고, [superposition](xref:microsoft.quantum.glossary#superposition) $ \ket { } $ $ \ket { } $ 가 처음에 $ \ket { 0 } $ 상태에 있는 경우에는 0 또는 1의 짝수 superposition에 배치 합니다. 에서 Q# 이 작업은 미리 정의 된 작업에 의해 적용 됩니다 [`H`](xref:Microsoft.Quantum.Intrinsic.H) .
+Hadamard 연산 (Hadamard gate 또는 transform이 라고도 함)은 단일의 [비트](xref:microsoft.quantum.glossary#qubit) 에서 작동 하 고, [](xref:microsoft.quantum.glossary#superposition) $ \ket { } $ $ \ket { } $ 가 처음에 $ \ket { 0 } $ 상태에 있는 경우에는 0 또는 1의 짝수 superposition에 배치 합니다. 에서 Q# 이 작업은 미리 정의 된 작업에 의해 적용 됩니다 [`H`](xref:Microsoft.Quantum.Intrinsic.H) .
 
 ## <a name="immutable"></a>변경할 수 없음
 
@@ -169,7 +169,7 @@ Hadamard 연산 (Hadamard gate 또는 transform이 라고도 함)은 단일의 [
 
 관련 이름 (예: [작업](xref:microsoft.quantum.glossary#operation), [함수](xref:microsoft.quantum.glossary#function)및 [사용자 정의 형식](xref:microsoft.quantum.glossary#user-defined-type))의 컬렉션에 대 한 레이블입니다. 예를 들어, [네임 스페이스](xref:Microsoft.Quantum.Preparation) 는 초기 상태를 준비 하는 데 도움이 되는 표준 라이브러리에 정의 된 모든 기호에 레이블을 지정 합니다.
 
-## <a name="operation"></a>연산
+## <a name="operation"></a>작업
 
 에서 퀀텀 계산의 기본 단위 Q# 입니다. C, c + + 또는 Python의 함수 또는 c # 또는 Java의 정적 메서드와 거의 동일 합니다. 자세한 내용은 [ Q# 프로그램](xref:microsoft.quantum.guide.programs)을 참조 하세요.
 
@@ -177,7 +177,7 @@ Hadamard 연산 (Hadamard gate 또는 transform이 라고도 함)은 단일의 [
 
 런타임에 퀀텀 알고리즘에 데이터 종속 정보를 제공 하는 서브루틴입니다. 일반적으로 superposition에 있는 입력에 해당 하는 출력의 [superposition](xref:microsoft.quantum.glossary#superposition) 을 제공 하는 것이 목표입니다. 자세한 내용은 [Oracles](xref:microsoft.quantum.libraries.data-structures#oracles)를 참조 하세요.
 
-## <a name="partial-application"></a>부분 응용 프로그램
+## <a name="partial-application"></a>부분 애플리케이션
 
 모든 필수 입력 없이 [함수](xref:microsoft.quantum.glossary#function) 또는 [작업](xref:microsoft.quantum.glossary#operation) 을 호출 합니다. 그러면 나중에 응용 프로그램에서 제공 하는 누락 된 매개 변수 (밑줄로 표시 됨)만 필요한 새 [호출 가능](xref:microsoft.quantum.glossary#callable) 이 반환 됩니다. 자세한 내용은 [부분 응용 프로그램](xref:microsoft.quantum.qsharp.partialapplication)을 참조 하세요.
 
@@ -215,7 +215,7 @@ Hadamard 연산 (Hadamard gate 또는 transform이 라고도 함)은 단일의 [
 
 ## <a name="superposition"></a>Superposition
 
-양자 계산의 [개념은 계산](xref:microsoft.quantum.glossary#qubit) $ \ket { } $ $ \ket { } $ 될 때 [measured](xref:microsoft.quantum.glossary#measurement)까지 두 상태 (0과 1)의 선형 조합입니다.  자세한 내용은 [퀀텀 컴퓨팅 이해](xref:microsoft.quantum.overview.understanding)를 참조 하세요.
+양자 계산의 [개념은 계산](xref:microsoft.quantum.glossary#qubit) $ \ket { } $ $ \ket { } $ 될 때 [](xref:microsoft.quantum.glossary#measurement)까지 두 상태 (0과 1)의 선형 조합입니다.  자세한 내용은 [퀀텀 컴퓨팅 이해](xref:microsoft.quantum.overview.understanding)를 참조 하세요.
 
 ## <a name="target-machine"></a>대상 컴퓨터
 

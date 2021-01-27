@@ -4,24 +4,24 @@ description: 퀀텀 모델링을 사용 하 여 분자 전자적 시스템을 �
 author: bradben
 ms.author: v-benbra
 ms.date: 10/09/2017
-ms.topic: article-type-from-white-list
+ms.topic: conceptual
 uid: microsoft.quantum.chemistry.concepts.quantummodels
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 4ff3d11bfd4dae5489fc4b7efe4da4ccda00882f
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: c12ab277f06bed61991a26af96953ccdbf72b642
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833924"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98856215"
 ---
 # <a name="quantum-models-for-electronic-systems"></a>전자 시스템용 퀀텀 모델
 
 전자 시스템을 시뮬레이션 하려면 먼저 위에서 설명한 정식 양자화 절차에서 찾을 수 있는 Hamiltonian를 지정 하 여 시작 해야 합니다.
 특히 $N _e $ 파괴 with momenta $p _i $ (3 차원)와 mass $m _e $ 및 position 벡터 $x _i $Z를 사용 하 여 _k $y e $ at position _k $, Hamiltonian 연산자는 \begin{equation} \hat{H} = \sum \_ {i = 1} ^ {N \_ e} \frac{\hat{p} \_ i ^ 2} {2m \_ e} + \frac {1} {2} \sum \_ {i\ne을 읽습니다. e j} \frac{e ^ 2} {| \hat{x} \_ i-\hat{x} \_ j |}-\sum \_ {i, k} \frac{Z \_ ke ^ 2} {| \hat{x} \_ i-{y} \_ k |} + \frac {1} {2} \ sum_ {k\ne k '} \Frac{Z \_ kz \_ {k '} e ^ 2} {| y \_ k-y \_ k ' |}. \label{eq: Ham} \end{cation} momenta operators $ \hat{p} \_ i ^ 2 $는 실제 공간에서 라플라스 operators로 볼 수 있습니다. 즉, $ \hat{p} \_ i ^ 2 =-\partial \_ {x \_ i} ^ 2-\partial { \_ y \_ i} ^ 2-\partial \_ {z \_ i} ^ 2 $입니다.
 여기서는 nuclei가 분자에 대 한 미사용 가정을 단순화 했습니다.
-이를 Steiglitz 근사값 이라고 하며, 전자 \hat{H}는 proton의 질량에 약 $1/1836 $가 있기 때문에 $ $의 저 에너지 에너지 스펙트럼에 유효한 경향이 있습니다.
+이를 Born-Oppenheimer 근사값 이라고 하며, 전자 \hat{H}는 proton의 질량에 약 $1/1836 $가 있기 때문에 $ $의 저 에너지 에너지 스펙트럼에 유효한 경향이 있습니다.
 이 Hamiltonian 연산자는 $N e $ 파괴 시스템의 에너지를 기록 \_ 하 고 [퀀텀 Dynamics](xref:microsoft.quantum.chemistry.concepts.quantumdynamics)에 설명 된 정식 양자화 프로세스를 적용 하 여 쉽게 찾을 수 있습니다.
 
 $E ^ {-i\hat {H} t} $에 대 한 단일 매트릭스 표현을 생성 하려면 $ \hat{H} $ 연산자를 행렬로 나타내야 합니다.
@@ -36,7 +36,7 @@ $E ^ {-i\hat {H} t} $에 대 한 단일 매트릭스 표현을 생성 하려면 
 
 사용할 수 있는 적절 한 기본이 많이 있으며 문제에 적합 하 게 선택 하는 것은 퀀텀 연금술의 대부분입니다.
 가장 간단한 이러한 기본 집합은 hydrogen 같은 atom의 Schrödinger 수식 ($ \hat{H} $의 eigenfunctions)에 대 한 (orthogonalized) 솔루션 인 Slater 형식 ()
-평면-물결 또는 실제 공간 orbitals와 같은 기타 기준 집합을 사용할 수 있으며, 자세한 내용은 Helgaker에의 한 표준 텍스트 [' 분자 e-구조 이론 '](https://onlinelibrary.wiley.com/doi/book/10.1002/9781119019572) 에 대 한 자세한 정보를 참조 하세요.
+평면-물결 또는 실제 공간 orbitals와 같은 기타 기준 집합을 사용할 수 있으며, 자세한 내용은 [분자 Electronic-Structure 이론 '](https://onlinelibrary.wiley.com/doi/book/10.1002/9781119019572) 표준 텍스트에 대 한 자세한 내용은 Helgaker를 참조 하세요.
 
 위의 모델에 사용 되는 상태는 임의의 것으로 보일 수 있지만, 퀀텀 메커니즘은 특성에 따라 달라질 수 있는 상태에 제한을 둡니다.
 특히 모든 유효한 전자 퀀텀 상태는 전자 레이블이 교환 되는 상태에서 대칭이 되어야 합니다.

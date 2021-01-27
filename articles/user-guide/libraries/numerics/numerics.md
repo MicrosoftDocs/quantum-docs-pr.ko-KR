@@ -4,17 +4,17 @@ description: Microsoft 퀀텀 숫자 라이브러리에서 사용할 수 있는 
 author: thomashaener
 ms.author: thhaner
 ms.date: 5/14/2019
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.numerics.usage
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: dfcb8e9e5a15d0881750d67cf58d7ad47cbecd3a
-ms.sourcegitcommit: 897ace8b506adb2331e911ee5633dceced566174
+ms.openlocfilehash: 92efd3b8677d2f27bc59f986ce6c9e915cd23652
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91764125"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98856438"
 ---
 # <a name="using-the-numerics-library"></a>숫자 라이브러리 사용
 
@@ -31,7 +31,7 @@ ms.locfileid: "91764125"
 open Microsoft.Quantum.Arithmetic;
 ```
 
-## <a name="types"></a>형식
+## <a name="types"></a>유형
 
 숫자 라이브러리는 다음 형식을 지원 합니다.
 
@@ -95,7 +95,7 @@ operation TestMyAddition(xValue : Int, yValue : Int, n : Int) : Unit {
 
 퀀텀 컴퓨터에서 $ \sin (x) $와 같은 부드러운 함수를 평가 하기 위해 $x $은 퀀텀 번호이 `FixedPoint` 고, 퀀텀 개발 키트 숫자 라이브러리는 작업 및를 제공 합니다 `EvaluatePolynomialFxP` `Evaluate[Even/Odd]PolynomialFxP` .
 
-첫 번째에서는 `EvaluatePolynomialFxP` $ $ P (x) = a_0 + a_1x + a_2x ^ 2 + \cdots ^ d, $ $ 형식의 다항식을 평가할 수 있습니다. 여기서 $d $는 *정도*를 나타냅니다. 이렇게 하려면 다항식 계수 `[a_0,..., a_d]` (형식 `Double[]` ), 입력 `x : FixedPoint` 및 출력 `y : FixedPoint` (처음에는 0)이 필요 합니다.
+첫 번째에서는 `EvaluatePolynomialFxP` $ $ P (x) = a_0 + a_1x + a_2x ^ 2 + \cdots ^ d, $ $ 형식의 다항식을 평가할 수 있습니다. 여기서 $d $는 *정도* 를 나타냅니다. 이렇게 하려면 다항식 계수 `[a_0,..., a_d]` (형식 `Double[]` ), 입력 `x : FixedPoint` 및 출력 `y : FixedPoint` (처음에는 0)이 필요 합니다.
 ```qsharp
 EvaluatePolynomialFxP([1.0, 2.0], x, y);
 ```

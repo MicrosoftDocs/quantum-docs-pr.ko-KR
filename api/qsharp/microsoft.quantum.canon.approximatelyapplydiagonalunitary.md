@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.ApproximatelyApplyDiagonalUnitary
 title: ApproximatelyApplyDiagonalUnitary 작업
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApproximatelyApplyDiagonalUnitary
 qsharp.summary: Applies an array of complex phases to numeric basis states of a register of qubits, truncating small rotation angles according to a given tolerance.
-ms.openlocfilehash: 0a05b8a5891977a08ee2ae6a996657c6a8f3d792
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 5d8f6646c124f4296b9cd2abd71e73de5a530e55
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96217121"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98850345"
 ---
 # <a name="approximatelyapplydiagonalunitary-operation"></a>ApproximatelyApplyDiagonalUnitary 작업
 
@@ -28,7 +28,7 @@ operation ApproximatelyApplyDiagonalUnitary (tolerance : Double, coefficients : 
 ```
 
 
-## <a name="description"></a>Description
+## <a name="description"></a>설명
 
 이 작업에서는 $n $-stbit number state $ \ket{j} $에 $e ^ {i \ theta_j} $ 복합 단계를 적용 하는 대각선을 구현 합니다.
 특히이 작업은 단일 개체로 나타낼 수 있습니다.
@@ -62,7 +62,7 @@ $ $ \begin{align} U = \sum ^ {2 ^ n-1} _ {j = 0} e ^ {i \ theta_j} \ket{j}\bra{j
 
 `coefficients` $2 ^ n $ 미만으로 지정 된 경우는 $ \ theta_j = $0.0 요소로 채워집니다.
 
-## <a name="references"></a>참조 항목
+## <a name="references"></a>참조
 
 - 퀀텀 논리 회로 Vivek Shende, Stephen S. Markov, Igor, Igor L. https://arxiv.org/abs/quant-ph/0406176
 

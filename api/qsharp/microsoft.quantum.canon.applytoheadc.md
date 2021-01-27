@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToHeadC
 title: Applyto헤드 c 작업
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyToHeadC
 qsharp.summary: Applies an operation to the first element of an array.
-ms.openlocfilehash: 2b7321a6c385e2d98a0e91a8f58091ea8dc43ff4
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 3a65ad52e0b2f8b3a921fc549c35311f24d0e189
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96208604"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98850623"
 ---
 # <a name="applytoheadc-operation"></a>Applyto헤드 c 작업
 
@@ -28,7 +28,7 @@ operation ApplyToHeadC<'T> (op : ('T => Unit is Ctl), targets : 'T[]) : Unit is 
 ```
 
 
-## <a name="description"></a>Description
+## <a name="description"></a>설명
 
 작업 `op` 및 대상 배열이 지정 된 `targets` 경우가 적용 됩니다 `op(Head(targets))` .
 

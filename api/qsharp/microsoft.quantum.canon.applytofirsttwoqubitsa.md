@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToFirstTwoQubitsA
 title: ApplyToFirstTwoQubitsA 작업
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyToFirstTwoQubitsA
 qsharp.summary: Applies an operation to the first two qubits in the register. The modifier `A` indicates that the operation is adjointable.
-ms.openlocfilehash: 1a286c167a87372dc89d62ab3733b186298c43a1
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 197f1da6682b100a0b71f3548727188c0ef6f7c3
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96208706"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98850673"
 ---
 # <a name="applytofirsttwoqubitsa-operation"></a>ApplyToFirstTwoQubitsA 작업
 
@@ -36,7 +36,7 @@ operation ApplyToFirstTwoQubitsA (op : ((Qubit, Qubit) => Unit is Adj), register
 처음 두 개의 작업에 적용 되는 작업입니다.
 
 
-### <a name="register--qubit"></a>register: [Qubit](xref:microsoft.quantum.lang-ref.qubit)
+### <a name="register--qubit"></a>register: [](xref:microsoft.quantum.lang-ref.qubit)
 
 연산이 적용 되는 처음 두 개의 비트에 대 한 기본 비트 배열입니다.
 

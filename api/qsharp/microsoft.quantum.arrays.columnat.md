@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Arrays.ColumnAt
 title: ColumnAt 함수
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: ColumnAt
 qsharp.summary: Extracts a column from a matrix.
-ms.openlocfilehash: 097b3fdd6fc1843ada27052fcf08ee80d894d25a
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 32dc814de9b04563c2798a768f121723a1a8252c
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96210102"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98846266"
 ---
 # <a name="columnat-function"></a>ColumnAt 함수
 
@@ -28,7 +28,7 @@ function ColumnAt<'T> (column : Int, matrix : 'T[][]) : 'T[]
 ```
 
 
-## <a name="description"></a>Description
+## <a name="description"></a>설명
 
 이 함수는 행 단위 순서로 행렬의 열을 추출 합니다.
 Corrsponds 행을 추출 하면 첫 번째 인덱스의 요소에 액세스할 수 있으므로 추가 처리가 필요 하지 않습니다.
@@ -55,6 +55,14 @@ Corrsponds 행을 추출 하면 첫 번째 인덱스의 요소에 액세스할 �
 ### <a name="t"></a>없습니다
 
 에 있는 각 요소의 형식입니다 `matrix` .
+
+## <a name="example"></a>예제
+
+```qsharp
+let matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+let column = ColumnAt(0, matrix);
+// same as: column = [1, 4, 7]
+```
 
 ## <a name="see-also"></a>참고 항목
 

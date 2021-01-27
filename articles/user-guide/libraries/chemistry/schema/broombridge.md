@@ -4,21 +4,21 @@ description: Microsoft Quantum Development Kit에 대 한 실제 화학 문제�
 author: martinro
 ms.author: martinro
 ms.date: 10/17/2018
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.libraries.chemistry.schema.broombridge
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: e580fd8267cc7ba30533d557eceb486f8c205be6
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: e83d2d52fcdb2a30179ca6994d2c90f41cef7dbb
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835777"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98856208"
 ---
 # <a name="broombridge-quantum-chemistry-schema"></a>Broombridge 퀀텀 화학 스키마 # 
 
-[Nwchem](http://www.nwchem-sw.org/) 과 같은 강력한 컴퓨팅 화학 소프트웨어를 사용 하면 다양 한 실제 화학 문제를 모델링할 수 있습니다. Microsoft 퀀텀 화학 라이브러리를 사용 하 여 NWChem 분자 모델에 액세스 하려면 **Broombridge**라는 [yaml](https://en.wikipedia.org/wiki/YAML)기반 스키마를 사용 합니다. 이 이름은 일부 원에서 Hamiltonians의 여행지로 탄생는 [이정표](https://en.wikipedia.org/wiki/Broom_Bridge) 에 대 한 참조에서 선택 되었습니다. 
+[Nwchem](http://www.nwchem-sw.org/) 과 같은 강력한 컴퓨팅 화학 소프트웨어를 사용 하면 다양 한 실제 화학 문제를 모델링할 수 있습니다. Microsoft 퀀텀 화학 라이브러리를 사용 하 여 NWChem 분자 모델에 액세스 하려면 **Broombridge** 라는 [yaml](https://en.wikipedia.org/wiki/YAML)기반 스키마를 사용 합니다. 이 이름은 일부 원에서 Hamiltonians의 여행지로 탄생는 [이정표](https://en.wikipedia.org/wiki/Broom_Bridge) 에 대 한 참조에서 선택 되었습니다. 
 
 [Nwchem](https://github.com/nwchemgit/nwchem) 은 허용 된 Ecl (교육용 커뮤니티 라이선스) 2.0 라이선스에 따라 사용이 허가 된 오픈 소스 프로젝트입니다. [Broombridge 퀀텀 화학 스키마](https://docs.microsoft.com/quantum/libraries/chemistry/schema/spec_v_0_2)는 [RFC 2119](https://tools.ietf.org/html/rfc2119) 다음에 [정의](https://raw.githubusercontent.com/Microsoft/Quantum/master/Chemistry/Schema/broombridge-0.1.schema.json) 및 MIT 라이선스에 따라 사용이 허가 된 [유효성 검사기 스크립트](https://raw.githubusercontent.com/Microsoft/Quantum/master/Chemistry/Schema/validator.py) 를 포함 하는 오픈 소스 스키마입니다. 
 

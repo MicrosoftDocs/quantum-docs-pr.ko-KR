@@ -4,23 +4,23 @@ description: Q#퀀텀 난수 생성기를 만들어 superposition와 같은 기�
 author: bromeg
 ms.author: megbrow
 ms.date: 10/25/2019
-ms.topic: article
+ms.topic: tutorial
 uid: microsoft.quantum.quickstarts.qrng
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: cefe35a10dd89c14d2f1abc3080d52ab125236d1
-ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
+ms.openlocfilehash: f36db426a8f0479580117cce44a67ad3a053d5de
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91771276"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98856360"
 ---
 # <a name="tutorial-implement-a-quantum-random-number-generator-in-q"></a>자습서: Q\#에서 퀀텀 난수 생성기 구현
 
 에서 작성 된 퀀텀 알고리즘의 간단한 예는 Q# 퀀텀 난수 생성기입니다. 이 알고리즘은 퀀텀 메커니즘의 특성을 활용하여 난수를 생성합니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 - Microsoft [Quantum Development Kit](xref:microsoft.quantum.install)
 - Q# [Python 호스트 프로그램](xref:microsoft.quantum.install.python)또는 [c # 호스트 프로그램](xref:microsoft.quantum.install.cs)을 사용 하 여 [ Q# 응용 프로그램](xref:microsoft.quantum.install.standalone)에 대 한 프로젝트를 만듭니다.
@@ -51,7 +51,7 @@ Bloch 구의 북극은 클래식 **0** 값을 나타내고, 남극은 클래식 
 
 이 표현을 사용하여 코드가 하는 일을 시각화할 수 있습니다.
 
-* 먼저 **0** 상태에서 시작된 큐비트로 시작하고, `H`를 적용하여 **0**과 **1**의 확률이 동일한 중첩을 만듭니다.
+* 먼저 **0** 상태에서 시작된 큐비트로 시작하고, `H`를 적용하여 **0** 과 **1** 의 확률이 동일한 중첩을 만듭니다.
 
 <img src="~/media/qrng-H.png" width="450" alt="Preparing a qubit in superposition">
 

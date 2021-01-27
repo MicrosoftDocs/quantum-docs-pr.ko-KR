@@ -4,17 +4,17 @@ description: 클래식 함수 및 단일 함수, 회전 및 측정 작업을 포
 author: QuantumWriter
 ms.author: martinro
 ms.date: 12/11/2017
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.libraries.standard.prelude
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 4d15226fe46be79b7d3e6f414f33f1debd691f40
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 6ed5b1677a204b9425f229a3ea0855bb789f3f75
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92692114"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98857197"
 ---
 # <a name="the-prelude"></a>Prelude #
 
@@ -109,13 +109,13 @@ Hadamard gate는 $ \ket {0} $ 및 $ \ket $ 상태의 superposition을 만드는 
 $T $ gate는 작업에 의해 구현 되 <xref:Microsoft.Quantum.Intrinsic.T> 고, 시그니처가 있으므로 `(Qubit => Unit is Adj + Ctl)` 단일 기능 비트에서 단일 작업 임을 나타냅니다.
 
 이 원칙은 임의의 단일 기능 비트 작업을 설명 하는 데 충분 하지만, 서로 다른 대상 컴퓨터는 prelude에 대 한 회전을 보다 효율적으로 표현할 수 있습니다 .이에 따라 이러한 회전을 convienently 하는 다양 한 방법이 포함 되어 있습니다.
-이러한 작업의 가장 기본적인 기능은 <xref:Microsoft.Quantum.Intrinsic.r> 지정 된 Pauli 축을 중심으로 회전을 구현 하는 작업입니다. \begin{equation} R (\시그마, \>) \mathrel{: =} \exp (-i \begin{equation}/2), \begin{equation} 여기서 $ \\bn\a\a는 Pauli, $ \\a$는 각도 이며 여기서 $ \exp $는 행렬 지 수를 나타냅니다.
+이러한 작업의 가장 기본적인 기능은 <xref:Microsoft.Quantum.Intrinsic.R> 지정 된 Pauli 축을 중심으로 회전을 구현 하는 작업입니다. \begin{equation} R (\시그마, \>) \mathrel{: =} \exp (-i \begin{equation}/2), \begin{equation} 여기서 $ \\bn\a\a는 Pauli, $ \\a$는 각도 이며 여기서 $ \exp $는 행렬 지 수를 나타냅니다.
 이 파일에는 시그니처가 있습니다 `((Pauli, Double, Qubit) => Unit is Adj + Ctl)` . 여기서 입력의 처음 두 부분은 기존 인수인 $ \sigma $ 및 $ \\? $를 나타내며 단일 연산자 $R (\sigma, \\as) $를 지정 하는 데 필요 합니다.
 $ \Sigma $ 및 $ \\s$를 부분적으로 적용 하 여 해당 형식이 단일의 단일 비트를 포함 하는 작업을 가져올 수 있습니다.
 예를 들어,에 `R(PauliZ, PI() / 4, _)` 는 형식이 `(Qubit => Unit is Adj + Ctl)` 있습니다.
 
 > [!NOTE]
-> <xref:Microsoft.Quantum.Intrinsic.r>작업은 입력 각도를 2로 나누고-1을 곱합니다.
+> <xref:Microsoft.Quantum.Intrinsic.R>작업은 입력 각도를 2로 나누고-1을 곱합니다.
 > $Z $ 회전의 경우 $ \ket {0} $ eigenstate가 $-\\a/$2에 의해 회전 되 고 $ \ket $ eigenstate가 $ \\a/$2에 의해 회전 되며 $ \ket $ eigenstate가 $ {1} {1} \aa$에서 $ \ket $ eigenstate를 기준으로 회전 합니다 {0} .
 >
 > 특히, 및은 관련이 없는 `T` `R(PauliZ, PI() / 8, _)` [전역 단계](xref:microsoft.quantum.glossary#global-phase)에 의해서만 차이가 있습니다.
@@ -217,7 +217,7 @@ $Z _0 Z_1 $를 측정 하는 중입니다. _ {\textrm{joint}} = $0의 단일 $r 
 <xref:Microsoft.Quantum.Intrinsic.M>작업은 단일의 비트에 대해 Pauli $Z $ 연산자를 측정 하 고 서명을 갖습니다 `(Qubit => Result)` .
 `M(q)`은 `Measure([PauliZ], [q])`와 동등합니다.
 
-는 <xref:microsoft.quantum.measurement.MultiM> 각 고 비트에 대해 얻은 값의 *배열을* 반환 하 여 각 값의 배열에 대해 *별도로* pauli $Z $ 연산자를 측정 합니다 `Result` .
+는 <xref:Microsoft.Quantum.Measurement.MultiM> 각 고 비트에 대해 얻은 값의 *배열을* 반환 하 여 각 값의 배열에 대해 *별도로* pauli $Z $ 연산자를 측정 합니다 `Result` .
 일부 경우에는이를 최적화할 수 있습니다. 서명 ()이 있습니다 `Qubit[] => Result[])` .
 `MultiM(qs)` 는 다음과 같습니다.
 

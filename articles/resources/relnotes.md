@@ -4,17 +4,17 @@ description: Microsoft Quantum Development Kit 미리보기의 최신 업데이�
 author: bradben
 ms.author: v-benbra
 ms.date: 8/30/2020
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.relnotes
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 1c3c502b6487482f06820e07425b8516f259fb0d
-ms.sourcegitcommit: b930bb59a1ba8f41d2edc9ed98197109aa8c7f1b
+ms.openlocfilehash: 8aa6072e9b495db6e127cac350d5bfaec1b090ce
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96231794"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98856656"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit 릴리스 정보
 
@@ -24,6 +24,16 @@ ms.locfileid: "96231794"
 
 업데이트 지침은 [업데이트 가이드](xref:microsoft.quantum.update)를 참조하세요.
 
+## <a name="version-0152101125897"></a>버전 0.15.2101125897
+
+*릴리스 날짜: 1 월 26 일 2021*
+
+- 더 편리한 방법을 제공 하는 간단한 고 비트 할당은 [ Q# 언어 리포지토리의 세부 정보를 참조 하세요](https://github.com/microsoft/qsharp-language/blob/main/Approved/1-implicitly-scoped-qubit-allocation.md).
+- 퀀텀을 포함 하는 QDK-Python 리포지토리를 포함 하는 `azure-quantum` python 클라이언트는 `qdk` `qdk.chemistry` Q# Psi4 및 OpenMolcas와 같은 여러 화학 패키지에 대 한 입력 파일을 생성 하는 분자 시각화 및 기능을 포함 하는 화학 라이브러리에 대 한 python 기반 편리한 계층을 포함 하 여 만들었습니다.
+- 괄호는 이제 작업 및 함수 형식과, 및 문에 대 한 선택적 요소 `if` `elif` `while` `until` 입니다. `for`, `use` 및 문의 괄호 `borrow` 는 더 이상 사용 되지 않습니다.
+- 최적 깊이에 대해 향상 된 너비 예상. [세부 정보를 참조](https://github.com/MicrosoftDocs/quantum-docs-pr/pull/1159)하세요.
+- `ApplyUnitary`([QuantumLibraries # 391Mb](https://github.com/microsoft/QuantumLibraries/pull/391), Fedoriaka의 외부 기여)를 사용 하 여 명시적 행렬로 제공 된 단일 작업 적용
+- https://github.com/microsoft/iqsharp/issues/387커널 시작 시 성능 영향을 완화 하 여 수정 Q# 되었습니다.
 ## <a name="version-0142011120240"></a>버전 0.14.2011120240
 
 *릴리스 날짜: 11 월 25 일, 2020*
@@ -211,7 +221,7 @@ ms.locfileid: "96231794"
 
 이 릴리스에는 다음이 포함됩니다.
 
-- 단위 테스트에 대 한 새 테스트 특성 여기 Q# 에서 업데이트 [here](xref:Microsoft.Quantum.Diagnostics.Test) 된 API 설명서 및 업데이트 된 테스트 [here](xref:microsoft.quantum.guide.testingdebugging) & 디버깅 가이드를 참조 하세요.
+- 단위 테스트에 대 한 새 테스트 특성 여기 Q# 에서 업데이트 [](xref:Microsoft.Quantum.Diagnostics.Test) 된 API 설명서 및 업데이트 된 테스트 [](xref:microsoft.quantum.guide.testingdebugging) & 디버깅 가이드를 참조 하세요.
 - 프로그램 실행 오류 발생 시 스택 추적이 추가 됨 Q#
 - [OmniSharp C# Visual Studio Code 확장](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)의 업데이트로 인한 Visual Studio Code 중단점 지원
 
@@ -486,14 +496,7 @@ Q#퀀텀 개발 키트 버전 0.5의 기존 프로젝트가 있는 경우 해당
 
 새 화학 라이브러리를 기점으로 라이브러리를 [Microsoft/QuantumLibraries](https://github.com/Microsoft/QuantumLibraries)의 새 GitHub 리포지토리로 분리합니다.  샘플은 [Microsoft/Quantum](https://github.com/Microsoft/Quantum) 리포지토리에 남아 있습니다.  두 리포지토리에 모두 기여해 주셔서 감사합니다.
 
-이 릴리스에는 커뮤니티에서 보고한 이슈에 대한 버그 수정 및 기능이 포함됩니다.
-
-* Intellisense Q# ([UserVoice](https://quantum.uservoice.com/forums/906943/suggestions/32656918))
-* .qs 파일([UserVoice](https://quantum.uservoice.com/forums/906097/suggestions/32593049))
-* If 문에서 중괄호가 간단히 표시될 때 오류 메시지 개선([UserVoice](https://quantum.uservoice.com/forums/906208/suggestions/34718518))
-* 변경 가능한 (재)바인딩 시 튜플 분해 지원([UserVoice](https://quantum.uservoice.com/forums/906208/suggestions/35020444))
-* 제공된 BitFlipCode를 실행하는 동안 오류 발생([UserVoice](https://quantum.uservoice.com/forums/906940/suggestions/35008546))
-* H2SimulationGUI가 경우에 따라 큰 증가를 표시함([UserVoice](https://quantum.uservoice.com/forums/906946/suggestions/34668370))
+이 릴리스에는 커뮤니티에서 보고 한 문제에 대 한 버그 수정 및 기능이 포함 되어 있습니다.
 
 ### <a name="community-contributions"></a>커뮤니티 기여
 
@@ -509,15 +512,7 @@ Q#퀀텀 개발 키트 버전 0.5의 기존 프로젝트가 있는 경우 해당
 
 *릴리스 날짜:* 2018년 9월 10일
 
-이 릴리스에는 커뮤니티에서 보고한 다음 이슈 등에 대한 버그 수정이 포함됩니다.
-
-* 시프트 연산자를 사용할 수 없음([GitHub](https://github.com/Microsoft/Quantum/issues/75))
-* `DumpMachine` / `DumpRegister`가 콘솔에 인쇄될 때 `QCTraceSimulator`에서 실패함([UserVoice](https://quantum.uservoice.com/forums/906946/suggestions/34709680))
-* 0큐비트 할당 허용([UserVoice](https://quantum.uservoice.com/forums/906208-q-language/suggestions/34768069-allow-allocating-0-qubits))
-* `AssertQubitState`에 명시적 Complex() 호출이 필요함([UserVoice](https://quantum.uservoice.com/forums/906208-q-language/suggestions/34713733-assertqubitstate-requires-explicit-complex-call))
-* `Measure` 작업이 macOS에서 항상 `One`을 반환함([UserVoice](https://quantum.uservoice.com/forums/906940/suggestions/35008546))
-
-감사합니다. 
+이 릴리스에는 커뮤니티에서 보고한
 
 ## <a name="version-0218063001"></a>버전 0.2.1806.3001
 

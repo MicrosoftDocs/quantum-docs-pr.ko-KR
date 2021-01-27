@@ -4,17 +4,17 @@ description: Q# API 디자인 원칙
 author: cgranade
 ms.author: chgranad
 ms.date: 3/9/2020
-ms.topic: article
+ms.topic: contributor-guide
 uid: microsoft.quantum.contributing.api-design
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: b8623ba7e876c4ccda42d0ddaa07c0012a763292
-ms.sourcegitcommit: b930bb59a1ba8f41d2edc9ed98197109aa8c7f1b
+ms.openlocfilehash: 452b32141dc660acbe8ef28530f1430e5acff9aa
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96231777"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98856698"
 ---
 # <a name="no-locq-api-design-principles"></a>Q# API 디자인 원칙
 
@@ -67,7 +67,7 @@ ms.locfileid: "96231777"
   *예:*
   - 로 호출 되는 작업의 이름을 바꾸면 `EstimateExpectation`   `EstimateAverage`   `EstimateExpectation` 기존 코드가 계속 제대로 작동할 수 있도록 새 이름으로 원래 작업을 호출 하는 라는 새 작업을 소개 합니다.
 
-- ✅**DO** 특성을 사용 @"microsoft.quantum.core.deprecated" 하 여 사용자에 게 결함를 전달 합니다.
+- ✅ 특성을 사용 @"microsoft.quantum.core.deprecated" 하 여 사용자에 게 결함를 전달 합니다.
 
 - ✅ 작업 또는 함수의 이름을 바꿀 때에는에 **대 한 문자열** 입력으로 새 이름을 제공 `@Deprecated` 합니다.
 
@@ -249,12 +249,12 @@ ms.locfileid: "96231777"
 
   - **명사**:
 
-    - **팩트**: 대상 컴퓨터의 상태, 해당 환경 또는 컴퓨터의 기능에 대 한 상태가 아닌 입력에만 의존 하는 부울 조건입니다. 어설션과 달리 팩트는 해당 팩트에 제공 되는 *값* 만을 인식 합니다. 예를 들어:
+    - **팩트**: 대상 컴퓨터의 상태, 해당 환경 또는 컴퓨터의 기능에 대 한 상태가 아닌 입력에만 의존 하는 부울 조건입니다. 어설션과 달리 팩트는 해당 팩트에 제공 되는 *값* 만을 인식 합니다. 예를 들면 다음과 같습니다.
 
       *예:*
       - @"microsoft.quantum.diagnostics.equalityfacti": 두 정수 입력에 대 한 같음 팩트를 나타냅니다. 입력으로 제공 된 정수는 서로 같거나 다른 프로그램 상태와는 독립적입니다.
 
-    - **옵션:** 함수 또는 작업에 대해 "선택적 인수"로 작동할 수 있는 여러 개의 명명 된 항목이 포함 된 UDT입니다. 예를 들어:
+    - **옵션:** 함수 또는 작업에 대해 "선택적 인수"로 작동할 수 있는 여러 개의 명명 된 항목이 포함 된 UDT입니다. 예를 들면 다음과 같습니다.
 
       *예:*
       - UDT에는 @"microsoft.quantum.machinelearning.trainingoptions" 학습 률, 미니 배치 크기 및 ML 학습을 위한 구성 가능한 기타 매개 변수에 대 한 명명 된 항목이 포함 되어 있습니다.

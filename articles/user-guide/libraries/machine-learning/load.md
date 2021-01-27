@@ -4,17 +4,17 @@ description: 사용자 고유의 데이터 집합을 로드 하 여 Microsoft Qu
 author: geduardo
 ms.author: v-edsanc
 ms.date: 02/16/2020
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.libraries.machine-learning.load
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: cd6fdb6bb33a65ee02ac8c43f40df9abeff9c841
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 7ebfe085e50d4647fdb1027250cf3134f8d8f8c2
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833696"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98856465"
 ---
 # <a name="load-and-classify-your-own-datasets"></a>사용자 고유의 데이터 집합 로드 및 분류
 
@@ -75,14 +75,14 @@ ms.locfileid: "90833696"
 
 다른 고양이와 강아지의 높이와 가중치가 있는 작은 데이터 집합이 있다고 가정 합니다. 이 데이터 집합은 모델을 학습 하는 데 매우 작지만 데이터 집합 로드 프로세스를 표시 하는 데에는 충분 합니다.
 
-| 높이 (m) | 무게 (kg) | 동물 |
+| 높이 (m) | 중량(kg) | 동물 |
 |-----------|------------|--------|
 | 0.54      | 30         | Dog    |
-| 0.30      | 8          | Cat    |
+| 0.30      | 8          | 고양이    |
 | 0.91      | 44         | Dog    |
 | 0.86      | 31          | Dog    |
-| 0.32      | 5         | Cat    |
-| 0.25      | 4          | Cat    |
+| 0.32      | 5         | 고양이    |
+| 0.25      | 4          | 고양이    |
 
 프로세스는.
 

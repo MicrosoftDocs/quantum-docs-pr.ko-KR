@@ -4,29 +4,29 @@ description: Q#정식 퀀텀 알고리즘 중 하나인 Grover의 알고리즘�
 author: cgranade
 ms.author: chgranad
 ms.date: 10/19/2019
-ms.topic: article
+ms.topic: tutorial
 uid: microsoft.quantum.quickstarts.search
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 86c6a651a117b788eb4c8fdd805ead7ab8f54dd7
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 5e0398338ff710decc0f3038c07c9b7d39514195
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834808"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98856624"
 ---
 # <a name="tutorial-implement-grovers-search-algorithm-in-q"></a>자습서: Q\#에서 Grover의 검색 알고리즘 구현
 
 이 자습서에서는 Grover 검색을 빌드하고 실행하여 비정형 데이터의 검색 속도를 높이는 방법을 알아볼 수 있습니다.  Grover의 검색은 가장 인기 있는 퀀텀 컴퓨팅 알고리즘 중 하나 이며, 비교적 작은 Q# 구현은 퀀텀 Q# 알고리즘을 표현할 수 있는 고급 퀀텀 프로그래밍 언어를 사용 하 여 퀀텀 솔루션을 프로그래밍 하는 경우의 장점 중 일부를 제공 합니다.  가이드의 끝에서는 시뮬레이션 출력이 정렬되지 않은 항목 목록 중 특정 문자열을 찾는 데 걸리는 시간이 클래식 컴퓨터에서 전체 목록을 검색하는 데 걸리는 시간보다 짧다는 것을 볼 수 있습니다.
 
-Grover의 알고리즘은 특정 항목에 대한 비정형 데이터의 목록을 검색합니다. 예를 들어 다음과 같은 질문에 답할 수 있습니다. 한 벌의 카드에서 뽑은 이 카드는 하트 에이스인가요? 특정 항목의 레이블 지정은 _표시된 입력_이라고 합니다.
+Grover의 알고리즘은 특정 항목에 대한 비정형 데이터의 목록을 검색합니다. 예를 들어 다음과 같은 질문에 답할 수 있습니다. 한 벌의 카드에서 뽑은 이 카드는 하트 에이스인가요? 특정 항목의 레이블 지정은 _표시된 입력_ 이라고 합니다.
 
 Grover의 검색 알고리즘을 사용하면 양자 컴퓨터에서 검색 중인 목록의 항목 수보다 더 적은 단계에서 이 검색을 실행할 수 있습니다. 즉 클래식 알고리즘에서 수행할 수 있는 작업이 없습니다. 카드 한 벌의 경우 증가된 속도는 무시할 수 있지만, 수백만 또는 수십억 개의 항목이 포함된 목록에서는 상당한 시간이 걸립니다.
 
 Grover의 검색 알고리즘은 몇 줄의 코드만으로 빌드할 수 있습니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 - Microsoft [Quantum Development Kit][install]
 

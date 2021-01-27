@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToTailC
 title: ApplyToTailC 작업
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyToTailC
 qsharp.summary: Applies an operation to the last element of an array.
-ms.openlocfilehash: 5a68cae3fd122416cfd064e0078e03f5c00ab492
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 8408dff24c5c57efbedb649ac182fac49e836a3e
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96217291"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98850426"
 ---
 # <a name="applytotailc-operation"></a>ApplyToTailC 작업
 
@@ -28,7 +28,7 @@ operation ApplyToTailC<'T> (op : ('T => Unit is Ctl), targets : 'T[]) : Unit is 
 ```
 
 
-## <a name="description"></a>Description
+## <a name="description"></a>설명
 
 작업 `op` 및 대상 배열이 지정 된 `targets` 경우가 적용 됩니다 `op(Tail(targets))` .
 

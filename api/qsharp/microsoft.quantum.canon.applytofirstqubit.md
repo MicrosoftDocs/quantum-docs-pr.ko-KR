@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToFirstQubit
 title: Applytofirst의 비트 작업
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyToFirstQubit
 qsharp.summary: Applies an operation to the first qubit in the register.
-ms.openlocfilehash: 851f2b58a914c8b09188f442e442b91a8ede5416
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 381f8d689fba1984ba7fa287d658578bd5b6c48c
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96217495"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98850722"
 ---
 # <a name="applytofirstqubit-operation"></a>Applytofirst의 비트 작업
 
@@ -35,7 +35,7 @@ operation ApplyToFirstQubit (op : (Qubit => Unit), register : Qubit[]) : Unit
 첫 번째 비트에 적용 되는 연산입니다.
 
 
-### <a name="register--qubit"></a>register: [Qubit](xref:microsoft.quantum.lang-ref.qubit)
+### <a name="register--qubit"></a>register: [](xref:microsoft.quantum.lang-ref.qubit)
 
 연산이 적용 되는 첫 번째 작업에 대 한 기본 비트 배열
 

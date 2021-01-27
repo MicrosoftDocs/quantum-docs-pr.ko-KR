@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.ApproximateQFT
 title: ApproximateQFT 작업
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApproximateQFT
 qsharp.summary: Apply the Approximate Quantum Fourier Transform (AQFT) to a quantum register.
-ms.openlocfilehash: 97a410133e80cc5bffc810e9d6455baaee32364b
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 31fd87c0f61292142c7493cc29cad1082a9a2d67
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96207703"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98850316"
 ---
 # <a name="approximateqft-operation"></a>ApproximateQFT 작업
 
@@ -53,7 +53,7 @@ AQFT에는 2π/2k 및 Hadamard 게이트 형식의 Z-회전 게이트가 필요 
 
 입력 및 출력은 big endian 인코딩으로 인코딩된 것으로 간주 됩니다.
 
-## <a name="references"></a>참조 항목
+## <a name="references"></a>참조
 
 - [대 수 Eng. Commun에 대 한 자세한 *내용은* 입니다. 컴퓨터. 19 (3): 177-193 (2008)](http://doi.org/10.1007/s00200-008-0072-2)
 - [*D. Coppersmith* arxiv:/0201067v1](https://arxiv.org/abs/quant-ph/0201067)

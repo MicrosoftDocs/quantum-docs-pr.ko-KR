@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Arrays.CumulativeFolded
 title: CumulativeFolded 함수
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: CumulativeFolded
 qsharp.summary: Combines Mapped and Fold into a single function
-ms.openlocfilehash: ffb934d06f6be06cbc35a523c90d2c54e0a51353
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 95cd5233a09a1234bba4de9fe870b9d93c0f86a4
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96210032"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98846232"
 ---
 # <a name="cumulativefolded-function"></a>CumulativeFolded 함수
 
@@ -28,7 +28,7 @@ function CumulativeFolded<'State, 'T> (fn : (('State, 'T) -> 'State), state : 'S
 ```
 
 
-## <a name="description"></a>Description
+## <a name="description"></a>설명
 
 이 함수는 초기 상태 `fn` 에서 시작 하 여 배열을 통해 함수를 반복 하 `state` 고 초기 상태를 포함 하지 않고 모든 중간 값을 반환 합니다.
 
@@ -63,3 +63,10 @@ function CumulativeFolded<'State, 'T> (fn : (('State, 'T) -> 'State), state : 'S
 ### <a name="t"></a>없습니다
 
 `array`요소의 형식입니다.
+
+## <a name="example"></a>예제
+
+```qsharp
+// same as sums = [1, 3, 6, 10, 15]
+let sums = CumulativeFolded(PlusI, 0, SequenceI(1, 5));
+```

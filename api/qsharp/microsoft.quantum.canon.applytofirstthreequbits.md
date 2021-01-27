@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToFirstThreeQubits
 title: ApplyToFirstThreeQubits 작업
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyToFirstThreeQubits
 qsharp.summary: Applies an operation to the first three qubits in the register.
-ms.openlocfilehash: 5572bd2a096a4f9bdb1153ae80950ae854965b82
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: b01c1072306cfdebcb90827a14683a32312481fc
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96217461"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98850695"
 ---
 # <a name="applytofirstthreequbits-operation"></a>ApplyToFirstThreeQubits 작업
 
@@ -35,7 +35,7 @@ operation ApplyToFirstThreeQubits (op : ((Qubit, Qubit, Qubit) => Unit), registe
 처음 세 개의에 적용 되는 작업입니다.
 
 
-### <a name="register--qubit"></a>register: [Qubit](xref:microsoft.quantum.lang-ref.qubit)
+### <a name="register--qubit"></a>register: [](xref:microsoft.quantum.lang-ref.qubit)
 
 연산이 적용 되는 처음 세 개의 비트에 대 한 기본 비트 배열입니다.
 

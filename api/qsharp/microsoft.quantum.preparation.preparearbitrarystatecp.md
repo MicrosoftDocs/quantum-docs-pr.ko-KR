@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Preparation.PrepareArbitraryStateCP
 title: PrepareArbitraryStateCP 작업
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Preparation
 qsharp.name: PrepareArbitraryStateCP
 qsharp.summary: Given a set of coefficients and a little-endian encoded quantum register, prepares an state on that register described by the given coefficients.
-ms.openlocfilehash: 21a632c003da16fb5cb20ab97fc0d251a897892b
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 1e293057f8b549dc57817cdce350e50e2b91682a
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96210644"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98856918"
 ---
 # <a name="preparearbitrarystatecp-operation"></a>PrepareArbitraryStateCP 작업
 
@@ -28,7 +28,7 @@ operation PrepareArbitraryStateCP (coefficients : Microsoft.Quantum.Math.Complex
 ```
 
 
-## <a name="description"></a>Description
+## <a name="description"></a>설명
 
 이 작업을 수행 하면 $n $-stbit compute 기준 상태 $ \ket{0 \cdots} $에서 _j e ^ {i t_j} $ $r 복합 계수를 사용 하 여 임의의 퀀텀 상태 $ $가 준비 됩니다.
 특히이 작업의 작업은 모든 0에서 다음과 같이 작동 하는 단일 변환 $U $에서 시뮬레이션할 수 있습니다.
@@ -57,7 +57,7 @@ $ $ \begin{align} U\ket {0 ... 0} & = \ket{\psi} \\ \\ & = \frac{\ sum_ {j = 0} 
 
 음수 입력 계수 $r _j < $0는 값 $ | r_j | $로 긍정으로 처리 됩니다. `coefficients` $2 ^ n $ 보다 작은 경우는 $ (r_j, t_j) = (0.0, 0.0) $ 요소로 채워집니다.
 
-## <a name="references"></a>참조 항목
+## <a name="references"></a>참조
 
 - 퀀텀 논리 회로 Vivek Shende, Stephen S. Markov, Igor, Igor L. https://arxiv.org/abs/quant-ph/0406176
 

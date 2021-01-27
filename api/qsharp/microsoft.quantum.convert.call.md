@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Convert.Call
 title: 작업 호출
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Convert
 qsharp.name: Call
 qsharp.summary: Calls a function with a given input.
-ms.openlocfilehash: 92c159cef878fb587b0ed514fd6660dd19527cab
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 93458d08aa83ffa8b7b33de8bf51c970af291db9
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96214214"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98850203"
 ---
 # <a name="call-operation"></a>작업 호출
 
@@ -28,7 +28,7 @@ operation Call<'Input, 'Output> (fn : ('Input -> 'Output), input : 'Input) : 'Ou
 ```
 
 
-## <a name="description"></a>Description
+## <a name="description"></a>설명
 
 함수 및이 함수에 대 한 입력이 지정 되 면는 함수를 호출 하 고 해당 출력을 반환 합니다.
 
