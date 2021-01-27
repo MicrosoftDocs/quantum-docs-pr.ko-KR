@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Chemistry.JordanWigner._OptimizedBEXY_
 title: _OptimizedBEXY_ 함수
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Chemistry.JordanWigner
 qsharp.name: _OptimizedBEXY_
 qsharp.summary: ''
-ms.openlocfilehash: 824df52e0c813bbafbe8f5357051901c5abeda3b
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: cc9ca6a0aa3cbf698b89c420d999221576efa42d
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96203572"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98839350"
 ---
 # <a name="_optimizedbexy_-function"></a>_OptimizedBEXY_ 함수
 
@@ -36,5 +36,5 @@ function _OptimizedBEXY_ (targetIndex : Int) : ((Qubit, Qubit, Qubit[]) => Unit 
 
 
 
-## <a name="output--qubitqubitqubit--unit--is-adj--ctl"></a>출력[: (Adj +, 이상](xref:microsoft.quantum.lang-ref.qubit)[비트 [](xref:microsoft.quantum.lang-ref.qubit)]) => [Unit](xref:microsoft.quantum.lang-ref.unit) is Ctl + Ctl[Qubit](xref:microsoft.quantum.lang-ref.qubit)
+## <a name="output--qubitqubitqubit--unit--is-adj--ctl"></a>출력[: (Adj +, 이상](xref:microsoft.quantum.lang-ref.qubit)[비트 [](xref:microsoft.quantum.lang-ref.qubit)]) => [Unit](xref:microsoft.quantum.lang-ref.unit) is Ctl + Ctl[](xref:microsoft.quantum.lang-ref.qubit)
 

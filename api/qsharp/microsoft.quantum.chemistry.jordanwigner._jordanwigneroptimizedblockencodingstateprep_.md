@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Chemistry.JordanWigner._JordanWignerOptimizedBlockEncodingStatePrep_
 title: _JordanWignerOptimizedBlockEncodingStatePrep_ 작업
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Chemistry.JordanWigner
 qsharp.name: _JordanWignerOptimizedBlockEncodingStatePrep_
 qsharp.summary: ''
-ms.openlocfilehash: 8ad4e25bb25640f68ead0c12ee54d3c01d2144f1
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 115dad670465bc479ffca10cec3a5068177030a1
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96203708"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98839409"
 ---
 # <a name="_jordanwigneroptimizedblockencodingstateprep_-operation"></a>_JordanWignerOptimizedBlockEncodingStatePrep_ 작업
 
@@ -60,7 +60,7 @@ operation _JordanWignerOptimizedBlockEncodingStatePrep_ (targetError : Double, n
 
 
 
-### <a name="ctrlregister--qubit"></a>ctrlRegister: [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]
+### <a name="ctrlregister--qubit"></a>ctrlRegister: [](xref:microsoft.quantum.lang-ref.qubit)[]
 
 
 

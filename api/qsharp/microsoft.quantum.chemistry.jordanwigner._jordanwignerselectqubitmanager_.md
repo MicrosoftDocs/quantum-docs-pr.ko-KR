@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Chemistry.JordanWigner._JordanWignerSelectQubitManager_
 title: _JordanWignerSelectQubitManager_ 함수
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Chemistry.JordanWigner
 qsharp.name: _JordanWignerSelectQubitManager_
 qsharp.summary: ''
-ms.openlocfilehash: cfae8e687d4e3f29c25afb2f9a2af0b103184596
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 604c93556ba75fc46201c39f8566881539d6d23f
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96203640"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98839368"
 ---
 # <a name="_jordanwignerselectqubitmanager_-function"></a>_JordanWignerSelectQubitManager_ 함수
 
@@ -45,7 +45,7 @@ function _JordanWignerSelectQubitManager_ (nZ : Int, nMaj : Int, nIdxRegQubits :
 
 
 
-### <a name="ctrlregister--qubit"></a>ctrlRegister: [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]
+### <a name="ctrlregister--qubit"></a>ctrlRegister: [](xref:microsoft.quantum.lang-ref.qubit)[]
 
 
 
@@ -56,5 +56,5 @@ function _JordanWignerSelectQubitManager_ (nZ : Int, nMaj : Int, nIdxRegQubits :
 
 
 
-## <a name="output--qubitqubitqubitqubitlittleendianqubitqubit"></a>Output: (("?" (), [], [], [], [], [][Qubit](xref:microsoft.quantum.lang-ref.qubit)[LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian)[[], [](xref:microsoft.quantum.lang-ref.qubit)]),[Qubit](xref:microsoft.quantum.lang-ref.qubit)[])[Qubit](xref:microsoft.quantum.lang-ref.qubit)[Qubit](xref:microsoft.quantum.lang-ref.qubit)[Qubit](xref:microsoft.quantum.lang-ref.qubit)
+## <a name="output--qubitqubitqubitqubitlittleendianqubitqubit"></a>Output: (("?" (), [], [], [], [], [][](xref:microsoft.quantum.lang-ref.qubit)[LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian)[[], [](xref:microsoft.quantum.lang-ref.qubit)]),[](xref:microsoft.quantum.lang-ref.qubit)[])[](xref:microsoft.quantum.lang-ref.qubit)[](xref:microsoft.quantum.lang-ref.qubit)[](xref:microsoft.quantum.lang-ref.qubit)
 
