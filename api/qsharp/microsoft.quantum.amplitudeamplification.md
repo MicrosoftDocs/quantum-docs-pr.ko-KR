@@ -1,17 +1,17 @@
 ---
 uid: Microsoft.Quantum.AmplitudeAmplification
 title: AmplitudeAmplification 네임 스페이스
-ms.date: 11/25/2020 12:00:00 AM
-ms.topic: article
+ms.date: 1/23/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: namespace
 qsharp.name: Microsoft.Quantum.AmplitudeAmplification
 qsharp.summary: This namespace contains functions and operations for performing amplitude amplification.
-ms.openlocfilehash: f265f1f8b41513f9201a758f85451e768b7564e2
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: a014f923de62c5e660c1c0fc839fbe60e80f8ba9
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96191417"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98845842"
 ---
 # <a name="microsoftquantumamplitudeamplification-namespace"></a>AmplitudeAmplification 네임 스페이스
 
@@ -19,7 +19,7 @@ ms.locfileid: "96191417"
 
 
 
-## <a name="description"></a>Description
+## <a name="description"></a>설명
 
 부분 반사를 포함 하는 명확한 진폭 증폭은 여기에서 구현 되는 가장 일반적인 형식의 진폭 증폭입니다.
 

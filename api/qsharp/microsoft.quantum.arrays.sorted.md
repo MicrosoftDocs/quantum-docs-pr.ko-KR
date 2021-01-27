@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Arrays.Sorted
 title: 정렬 된 함수
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: Sorted
 qsharp.summary: Given an array, returns the elements of that array sorted by a given comparison function.
-ms.openlocfilehash: bd8b869e03c7f4687c456a944e07a811ae0d2ce2
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: cb8a1ef438d798c8201ed9f52677e253770df1d3
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96220232"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98845436"
 ---
 # <a name="sorted-function"></a>정렬 된 함수
 
@@ -51,6 +51,14 @@ function Sorted<'T> (comparison : (('T, 'T) -> Bool), array : 'T[]) : 'T[]
 
 에 있는 각 요소의 형식입니다 `array` .
 
+## <a name="example"></a>예
+
+다음 코드 조각은 오름차순으로 발생 하는 정수 배열을 정렬 합니다.
+
+```qsharp
+let sortedArray = Sorted(LessThanOrEqualI, [3, 17, 11, -201, -11]);
+```
+
 ## <a name="remarks"></a>설명
 
 함수는 `comparison` 전이적으로 간주 됩니다. 예를 들어 및 인 경우에는를로 `comparison(a, b)` `comparison(b, c)` `comparison(a, c)` 가정 합니다. 이 속성이 없으면이 함수의 출력이 올바르지 않을 수 있습니다.
@@ -60,7 +68,7 @@ function Sorted<'T> (comparison : (('T, 'T) -> Bool), array : 'T[]) : 'T[]
 
 예를 들어:
 
-```Q#
+```qsharp
 function LastDigitLessThanOrEqual(left : Int, right : Int) : Bool {
     return LessThanOrEqualI(
         left % 10, right % 10

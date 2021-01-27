@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Arrays.TupleArrayAsNestedArray
 title: TupleArrayAsNestedArray 함수
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: TupleArrayAsNestedArray
 qsharp.summary: Turns a list of 2-tuples into a nested array.
-ms.openlocfilehash: c898178b6385b27f753509f0748a8b666b5066bd
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 51a35555080d1d2475fc1aa9e48e84c7c6f92c51
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96220079"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98845384"
 ---
 # <a name="tuplearrayasnestedarray-function"></a>TupleArrayAsNestedArray 함수
 
@@ -40,7 +40,7 @@ function TupleArrayAsNestedArray<'T> (tupleList : ('T, 'T)[]) : 'T[][]
 
 길이가 tupleList와 일치 하는 중첩 된 배열입니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 ```qsharp
 // The following returns [[2, 3], [4, 5]]

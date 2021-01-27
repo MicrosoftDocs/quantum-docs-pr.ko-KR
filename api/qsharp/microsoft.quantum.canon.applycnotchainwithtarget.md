@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyCNOTChainWithTarget
 title: ApplyCNOTChainWithTarget 작업
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyCNOTChainWithTarget
 qsharp.summary: Computes the parity of an array of qubits into a target qubit.
-ms.openlocfilehash: 8ec85ce5805b3bbd1e1f7c739f27de3a861bc79e
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: ba1a4e99c411a4718b5a09fdcd57a7239eb4dbd6
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96219110"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98845128"
 ---
 # <a name="applycnotchainwithtarget-operation"></a>ApplyCNOTChainWithTarget 작업
 
@@ -28,7 +28,7 @@ operation ApplyCNOTChainWithTarget (qubits : Qubit[], targetQubit : Qubit) : Uni
 ```
 
 
-## <a name="description"></a>Description
+## <a name="description"></a>설명
 
 배열이 처음에 $ \ket{q_0} \ket{q_1} \cdots q_ {\text{target}}} $ 상태에 있는 경우, 최종 상태는 $ \ket{q_0} \ket{q_1 \cdots q_0} \cdots \text{target}}} q_ {n-1} \cdots \co\o q_0 \cdots {$로 지정 됩니다.
 

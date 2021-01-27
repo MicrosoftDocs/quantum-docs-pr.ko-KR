@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.AmplitudeAmplification.ObliviousAmplitudeAmplificationFromStatePreparation
 title: ObliviousAmplitudeAmplificationFromStatePreparation 함수
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.AmplitudeAmplification
 qsharp.name: ObliviousAmplitudeAmplificationFromStatePreparation
 qsharp.summary: Oblivious amplitude amplification by oracles for partial reflections.
-ms.openlocfilehash: 44bb394b0eb4ec98fd47fd1b156410b7a33903f1
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 873c436d4b8d8efc9dc61c2baba9b0e0f7f09fc2
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96191298"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98845817"
 ---
 # <a name="obliviousamplitudeamplificationfromstatepreparation-function"></a>ObliviousAmplitudeAmplificationFromStatePreparation 함수
 
@@ -45,7 +45,7 @@ function ObliviousAmplitudeAmplificationFromStatePreparation (phases : Microsoft
 `ObliviousOracle`보조 및 시스템 레지스터에 공동으로 작동 하는 형식의 단일 oracle $O $
 
 
-### <a name="idxflagqubit--int"></a>Idx플래그 [Int](xref:microsoft.quantum.lang-ref.int)
+### <a name="idxflagqubit--int"></a>Idx플래그 [](xref:microsoft.quantum.lang-ref.int)
 
 단일 수준 비트 플래그 레지스터의 인덱스입니다.
 

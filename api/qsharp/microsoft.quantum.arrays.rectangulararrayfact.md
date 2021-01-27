@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Arrays.RectangularArrayFact
 title: RectangularArrayFact 함수
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: RectangularArrayFact
 qsharp.summary: Represents a condition that a 2-dimensional array has a rectangular shape
-ms.openlocfilehash: b8ef7d52f7f815ca3e21ded1236e775a381646cb
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 8cf6b85da6e8fee7fc255a173753a6468d8134b9
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96220419"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98845497"
 ---
 # <a name="rectangulararrayfact-function"></a>RectangularArrayFact 함수
 
@@ -28,7 +28,7 @@ function RectangularArrayFact<'T> (array : 'T[][], message : String) : Unit
 ```
 
 
-## <a name="description"></a>Description
+## <a name="description"></a>설명
 
 이 함수는 배열의 각 행 길이가 동일 함을 어설션 합니다.
 
@@ -54,6 +54,14 @@ function RectangularArrayFact<'T> (array : 'T[][], message : String) : Unit
 ### <a name="t"></a>없습니다
 
 에 있는 각 요소의 형식입니다 `array` .
+
+## <a name="example"></a>예제
+
+```qsharp
+RectangularArrayFact([[1, 2], [3, 4]], "Array is not rectangular");       // okay
+RectangularArrayFact([[1, 2, 3], [4, 5, 6]], "Array is not rectangular"); // okay
+RectangularArrayFact([[1, 2], [3, 4, 5]], "Array is not rectangular");    // will fail
+```
 
 ## <a name="see-also"></a>참고 항목
 

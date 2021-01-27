@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.AmplitudeAmplification.ApplyAmplitudeAmplification
 title: ApplyAmplitudeAmplification 작업
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.AmplitudeAmplification
 qsharp.name: ApplyAmplitudeAmplification
 qsharp.summary: Applies amplitude amplification on a given register, using a given set of phases and oracles to reflect about the initial and final states.
-ms.openlocfilehash: 0b40f94633bb43df5e64cd16d5ac8e12bcd1cc4a
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 8fd5c3f20c5a5aaae140feaf3af02395bff77b9c
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96191570"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98845890"
 ---
 # <a name="applyamplitudeamplification-operation"></a>ApplyAmplitudeAmplification 작업
 
@@ -45,7 +45,7 @@ operation ApplyAmplitudeAmplification (phases : Microsoft.Quantum.AmplitudeAmpli
 원하는 최종 상태를 반영 하는 oracle입니다.
 
 
-### <a name="target--qubit"></a>target: [Qubit](xref:microsoft.quantum.lang-ref.qubit)
+### <a name="target--qubit"></a>target: [](xref:microsoft.quantum.lang-ref.qubit)
 
 진폭 증폭을 수행할 레지스터입니다.
 
