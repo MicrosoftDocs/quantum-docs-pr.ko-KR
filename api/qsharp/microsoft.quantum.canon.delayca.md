@@ -1,68 +1,68 @@
 ---
 uid: Microsoft.Quantum.Canon.DelayCA
 title: DelayCA 작업
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: DelayCA
 qsharp.summary: Applies a given operation with a delay.
-ms.openlocfilehash: a32a4f4a3f5d0f253a4c4eaf28c67db8da978b0b
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: a8606cde976882bba0eb23467932b9ee0ed36696
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96207091"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98840612"
 ---
-# <a name="delayca-operation"></a><span data-ttu-id="88fcd-102">DelayCA 작업</span><span class="sxs-lookup"><span data-stu-id="88fcd-102">DelayCA operation</span></span>
+# <a name="delayca-operation"></a><span data-ttu-id="980d2-102">DelayCA 작업</span><span class="sxs-lookup"><span data-stu-id="980d2-102">DelayCA operation</span></span>
 
-<span data-ttu-id="88fcd-103">네임 스페이스: [Microsoft. 양자](xref:Microsoft.Quantum.Canon)</span><span class="sxs-lookup"><span data-stu-id="88fcd-103">Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)</span></span>
+<span data-ttu-id="980d2-103">네임 스페이스: [Microsoft. 양자](xref:Microsoft.Quantum.Canon)</span><span class="sxs-lookup"><span data-stu-id="980d2-103">Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)</span></span>
 
-<span data-ttu-id="88fcd-104">패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="88fcd-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
+<span data-ttu-id="980d2-104">패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="980d2-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
 
 
-<span data-ttu-id="88fcd-105">지정 된 작업을 지연 시간에 적용 합니다.</span><span class="sxs-lookup"><span data-stu-id="88fcd-105">Applies a given operation with a delay.</span></span>
+<span data-ttu-id="980d2-105">지정 된 작업을 지연 시간에 적용 합니다.</span><span class="sxs-lookup"><span data-stu-id="980d2-105">Applies a given operation with a delay.</span></span>
 
 ```qsharp
 operation DelayCA<'T> (op : ('T => Unit is Ctl + Adj), arg : 'T, aux : Unit) : Unit is Adj + Ctl
 ```
 
 
-## <a name="description"></a><span data-ttu-id="88fcd-106">설명</span><span class="sxs-lookup"><span data-stu-id="88fcd-106">Description</span></span>
+## <a name="description"></a><span data-ttu-id="980d2-106">설명</span><span class="sxs-lookup"><span data-stu-id="980d2-106">Description</span></span>
 
-<span data-ttu-id="88fcd-107">작업 및 해당 작업에 대 한 입력이 주어진 경우 추가 입력이 제공 되 면에서 작업을 적용 합니다.</span><span class="sxs-lookup"><span data-stu-id="88fcd-107">Given an operation and an input to that operation, applies the operation once an additional input is provided.</span></span>
-<span data-ttu-id="88fcd-108">특히 식은 `Delay(op, arg, _)` `op` 호출 될 때에 적용 되는 연산입니다 `arg` .</span><span class="sxs-lookup"><span data-stu-id="88fcd-108">In particular, the expression `Delay(op, arg, _)` is an operation that applies `op` to `arg` when called.</span></span>
-<span data-ttu-id="88fcd-109">식을 `Delay(op,arg,_)` 사용 하면의 응용 프로그램을 연기할 수 있습니다 `op` .</span><span class="sxs-lookup"><span data-stu-id="88fcd-109">Expression `Delay(op,arg,_)` allows to delay the application of `op`.</span></span>
+<span data-ttu-id="980d2-107">작업 및 해당 작업에 대 한 입력이 주어진 경우 추가 입력이 제공 되 면에서 작업을 적용 합니다.</span><span class="sxs-lookup"><span data-stu-id="980d2-107">Given an operation and an input to that operation, applies the operation once an additional input is provided.</span></span>
+<span data-ttu-id="980d2-108">특히 식은 `Delay(op, arg, _)` `op` 호출 될 때에 적용 되는 연산입니다 `arg` .</span><span class="sxs-lookup"><span data-stu-id="980d2-108">In particular, the expression `Delay(op, arg, _)` is an operation that applies `op` to `arg` when called.</span></span>
+<span data-ttu-id="980d2-109">식을 `Delay(op,arg,_)` 사용 하면의 응용 프로그램을 연기할 수 있습니다 `op` .</span><span class="sxs-lookup"><span data-stu-id="980d2-109">Expression `Delay(op,arg,_)` allows to delay the application of `op`.</span></span>
 
-## <a name="input"></a><span data-ttu-id="88fcd-110">입력</span><span class="sxs-lookup"><span data-stu-id="88fcd-110">Input</span></span>
+## <a name="input"></a><span data-ttu-id="980d2-110">입력</span><span class="sxs-lookup"><span data-stu-id="980d2-110">Input</span></span>
 
-### <a name="op--t--unit--is-adj--ctl"></a><span data-ttu-id="88fcd-111">op: ' t => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj + Ctl</span><span class="sxs-lookup"><span data-stu-id="88fcd-111">op : 'T => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj + Ctl</span></span>
+### <a name="op--t--unit--is-adj--ctl"></a><span data-ttu-id="980d2-111">op: ' t => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj + Ctl</span><span class="sxs-lookup"><span data-stu-id="980d2-111">op : 'T => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj + Ctl</span></span>
 
-<span data-ttu-id="88fcd-112">적용 될 작업입니다.</span><span class="sxs-lookup"><span data-stu-id="88fcd-112">An operation to be applied.</span></span>
-
-
-### <a name="arg--t"></a><span data-ttu-id="88fcd-113">인수: ' '</span><span class="sxs-lookup"><span data-stu-id="88fcd-113">arg : 'T</span></span>
-
-<span data-ttu-id="88fcd-114">작업이 적용 되는 입력입니다.</span><span class="sxs-lookup"><span data-stu-id="88fcd-114">The input to which the operation is applied.</span></span>
+<span data-ttu-id="980d2-112">적용 될 작업입니다.</span><span class="sxs-lookup"><span data-stu-id="980d2-112">An operation to be applied.</span></span>
 
 
-### <a name="aux--unit"></a><span data-ttu-id="88fcd-115">aux: [단위](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="88fcd-115">aux : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
+### <a name="arg--t"></a><span data-ttu-id="980d2-113">인수: ' '</span><span class="sxs-lookup"><span data-stu-id="980d2-113">arg : 'T</span></span>
 
-<span data-ttu-id="88fcd-116">부분 응용 프로그램을 사용 하 여 작업의 응용 프로그램을 지연 하는 데 사용 되는 인수입니다.</span><span class="sxs-lookup"><span data-stu-id="88fcd-116">Argument used to delay the application of operation by using partial application.</span></span>
+<span data-ttu-id="980d2-114">작업이 적용 되는 입력입니다.</span><span class="sxs-lookup"><span data-stu-id="980d2-114">The input to which the operation is applied.</span></span>
 
 
+### <a name="aux--unit"></a><span data-ttu-id="980d2-115">aux: [단위](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="980d2-115">aux : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
 
-## <a name="output--unit"></a><span data-ttu-id="88fcd-117">출력: [단위](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="88fcd-117">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
+<span data-ttu-id="980d2-116">부분 응용 프로그램을 사용 하 여 작업의 응용 프로그램을 지연 하는 데 사용 되는 인수입니다.</span><span class="sxs-lookup"><span data-stu-id="980d2-116">Argument used to delay the application of operation by using partial application.</span></span>
 
 
 
-## <a name="type-parameters"></a><span data-ttu-id="88fcd-118">형식 매개 변수</span><span class="sxs-lookup"><span data-stu-id="88fcd-118">Type Parameters</span></span>
+## <a name="output--unit"></a><span data-ttu-id="980d2-117">출력: [단위](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="980d2-117">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
 
-### <a name="t"></a><span data-ttu-id="88fcd-119">없습니다</span><span class="sxs-lookup"><span data-stu-id="88fcd-119">'T</span></span>
 
-<span data-ttu-id="88fcd-120">연기할 작업의 입력 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="88fcd-120">The input type of the operation to be delayed.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="88fcd-121">참고 항목</span><span class="sxs-lookup"><span data-stu-id="88fcd-121">See Also</span></span>
+## <a name="type-parameters"></a><span data-ttu-id="980d2-118">형식 매개 변수</span><span class="sxs-lookup"><span data-stu-id="980d2-118">Type Parameters</span></span>
 
-- [<span data-ttu-id="88fcd-122">Microsoft. 양자 지연</span><span class="sxs-lookup"><span data-stu-id="88fcd-122">Microsoft.Quantum.Canon.Delay</span></span>](xref:Microsoft.Quantum.Canon.Delay)
-- [<span data-ttu-id="88fcd-123">Microsoft. 양자. 지연</span><span class="sxs-lookup"><span data-stu-id="88fcd-123">Microsoft.Quantum.Canon.Delayed</span></span>](xref:Microsoft.Quantum.Canon.Delayed)
+### <a name="t"></a><span data-ttu-id="980d2-119">없습니다</span><span class="sxs-lookup"><span data-stu-id="980d2-119">'T</span></span>
+
+<span data-ttu-id="980d2-120">연기할 작업의 입력 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="980d2-120">The input type of the operation to be delayed.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="980d2-121">참고 항목</span><span class="sxs-lookup"><span data-stu-id="980d2-121">See Also</span></span>
+
+- [<span data-ttu-id="980d2-122">Microsoft. 양자 지연</span><span class="sxs-lookup"><span data-stu-id="980d2-122">Microsoft.Quantum.Canon.Delay</span></span>](xref:Microsoft.Quantum.Canon.Delay)
+- [<span data-ttu-id="980d2-123">Microsoft. 양자. 지연</span><span class="sxs-lookup"><span data-stu-id="980d2-123">Microsoft.Quantum.Canon.Delayed</span></span>](xref:Microsoft.Quantum.Canon.Delayed)
