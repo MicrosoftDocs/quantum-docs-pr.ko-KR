@@ -1,27 +1,27 @@
 ---
 uid: Microsoft.Quantum.Chemistry.JordanWigner.OptimizedBEGeneratorSystem
 title: OptimizedBEGeneratorSystem 사용자 정의 형식
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.Chemistry.JordanWigner
 qsharp.name: OptimizedBEGeneratorSystem
 qsharp.summary: Function that returns `OptimizedBETermIndex` data for term `n` given an integer `n`, together with the number of terms in the first `Int` and the sum of absolute-values of all term coefficients in the `Double`.
-ms.openlocfilehash: 438857b9e0d1bf43bbd4fdbc06ba7bf18c7871de
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: eb274420a2fb813b1e34cea42bf1336e592feaae
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96224890"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98837399"
 ---
-# <a name="optimizedbegeneratorsystem-user-defined-type"></a><span data-ttu-id="ed2c7-102">OptimizedBEGeneratorSystem 사용자 정의 형식</span><span class="sxs-lookup"><span data-stu-id="ed2c7-102">OptimizedBEGeneratorSystem user defined type</span></span>
+# <a name="optimizedbegeneratorsystem-user-defined-type"></a><span data-ttu-id="93117-102">OptimizedBEGeneratorSystem 사용자 정의 형식</span><span class="sxs-lookup"><span data-stu-id="93117-102">OptimizedBEGeneratorSystem user defined type</span></span>
 
-<span data-ttu-id="ed2c7-103">네임 스페이스: [JordanWigner](xref:Microsoft.Quantum.Chemistry.JordanWigner)</span><span class="sxs-lookup"><span data-stu-id="ed2c7-103">Namespace: [Microsoft.Quantum.Chemistry.JordanWigner](xref:Microsoft.Quantum.Chemistry.JordanWigner)</span></span>
+<span data-ttu-id="93117-103">네임 스페이스: [JordanWigner](xref:Microsoft.Quantum.Chemistry.JordanWigner)</span><span class="sxs-lookup"><span data-stu-id="93117-103">Namespace: [Microsoft.Quantum.Chemistry.JordanWigner](xref:Microsoft.Quantum.Chemistry.JordanWigner)</span></span>
 
-<span data-ttu-id="ed2c7-104">패키지: [Microsoft 양자](https://nuget.org/packages/Microsoft.Quantum.Chemistry)</span><span class="sxs-lookup"><span data-stu-id="ed2c7-104">Package: [Microsoft.Quantum.Chemistry](https://nuget.org/packages/Microsoft.Quantum.Chemistry)</span></span>
+<span data-ttu-id="93117-104">패키지: [Microsoft 양자](https://nuget.org/packages/Microsoft.Quantum.Chemistry)</span><span class="sxs-lookup"><span data-stu-id="93117-104">Package: [Microsoft.Quantum.Chemistry](https://nuget.org/packages/Microsoft.Quantum.Chemistry)</span></span>
 
 
-<span data-ttu-id="ed2c7-105">정수에 지정 된 정수에 대 한 데이터를 반환 하는 함수입니다 .이 함수는 `OptimizedBETermIndex` 첫 번째에 있는 `n` `n` 용어 수와 `Int` 에 있는 모든 용어 계수의 절대값 합계와 함께 사용 `Double` 됩니다.</span><span class="sxs-lookup"><span data-stu-id="ed2c7-105">Function that returns `OptimizedBETermIndex` data for term `n` given an integer `n`, together with the number of terms in the first `Int` and the sum of absolute-values of all term coefficients in the `Double`.</span></span>
+<span data-ttu-id="93117-105">정수에 지정 된 정수에 대 한 데이터를 반환 하는 함수입니다 .이 함수는 `OptimizedBETermIndex` 첫 번째에 있는 `n` `n` 용어 수와 `Int` 에 있는 모든 용어 계수의 절대값 합계와 함께 사용 `Double` 됩니다.</span><span class="sxs-lookup"><span data-stu-id="93117-105">Function that returns `OptimizedBETermIndex` data for term `n` given an integer `n`, together with the number of terms in the first `Int` and the sum of absolute-values of all term coefficients in the `Double`.</span></span>
 
 ```qsharp
 
