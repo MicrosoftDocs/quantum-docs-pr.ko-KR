@@ -1,27 +1,27 @@
 ---
 uid: Microsoft.Quantum.MachineLearning.TrainingOptions
 title: TrainingOptions 사용자 정의 형식
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.MachineLearning
 qsharp.name: TrainingOptions
 qsharp.summary: A collection of options to be used in training quantum classifiers.
-ms.openlocfilehash: 280a3857aa7bc42f636a33f893d4f450e79b6a6a
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 762d6853910832c6d4cda522c0c5df706d1ed195
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96196126"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98842775"
 ---
-# <a name="trainingoptions-user-defined-type"></a><span data-ttu-id="a36ae-102">TrainingOptions 사용자 정의 형식</span><span class="sxs-lookup"><span data-stu-id="a36ae-102">TrainingOptions user defined type</span></span>
+# <a name="trainingoptions-user-defined-type"></a><span data-ttu-id="da2da-102">TrainingOptions 사용자 정의 형식</span><span class="sxs-lookup"><span data-stu-id="da2da-102">TrainingOptions user defined type</span></span>
 
-<span data-ttu-id="a36ae-103">네임 스페이스: [MachineLearning](xref:Microsoft.Quantum.MachineLearning)</span><span class="sxs-lookup"><span data-stu-id="a36ae-103">Namespace: [Microsoft.Quantum.MachineLearning](xref:Microsoft.Quantum.MachineLearning)</span></span>
+<span data-ttu-id="da2da-103">네임 스페이스: [MachineLearning](xref:Microsoft.Quantum.MachineLearning)</span><span class="sxs-lookup"><span data-stu-id="da2da-103">Namespace: [Microsoft.Quantum.MachineLearning](xref:Microsoft.Quantum.MachineLearning)</span></span>
 
-<span data-ttu-id="a36ae-104">패키지: [MachineLearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)</span><span class="sxs-lookup"><span data-stu-id="a36ae-104">Package: [Microsoft.Quantum.MachineLearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)</span></span>
+<span data-ttu-id="da2da-104">패키지: [MachineLearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)</span><span class="sxs-lookup"><span data-stu-id="da2da-104">Package: [Microsoft.Quantum.MachineLearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)</span></span>
 
 
-<span data-ttu-id="a36ae-105">퀀텀 분류자 학습에 사용할 옵션의 컬렉션입니다.</span><span class="sxs-lookup"><span data-stu-id="a36ae-105">A collection of options to be used in training quantum classifiers.</span></span>
+<span data-ttu-id="da2da-105">퀀텀 분류자 학습에 사용할 옵션의 컬렉션입니다.</span><span class="sxs-lookup"><span data-stu-id="da2da-105">A collection of options to be used in training quantum classifiers.</span></span>
 
 ```qsharp
 
@@ -30,49 +30,49 @@ newtype TrainingOptions = (LearningRate : Double, Tolerance : Double, MinibatchS
 
 
 
-## <a name="named-items"></a><span data-ttu-id="a36ae-106">명명 된 항목</span><span class="sxs-lookup"><span data-stu-id="a36ae-106">Named Items</span></span>
+## <a name="named-items"></a><span data-ttu-id="da2da-106">명명 된 항목</span><span class="sxs-lookup"><span data-stu-id="da2da-106">Named Items</span></span>
 
-### <a name="learningrate--double"></a><span data-ttu-id="a36ae-107">LearningRate: [Double](xref:microsoft.quantum.lang-ref.double)</span><span class="sxs-lookup"><span data-stu-id="a36ae-107">LearningRate : [Double](xref:microsoft.quantum.lang-ref.double)</span></span>
+### <a name="learningrate--double"></a><span data-ttu-id="da2da-107">LearningRate: [Double](xref:microsoft.quantum.lang-ref.double)</span><span class="sxs-lookup"><span data-stu-id="da2da-107">LearningRate : [Double](xref:microsoft.quantum.lang-ref.double)</span></span>
 
-<span data-ttu-id="a36ae-108">학습 단계에서 모델 매개 변수를 업데이트할 때 그라데이션을 재조정 하는 학습 률입니다.</span><span class="sxs-lookup"><span data-stu-id="a36ae-108">The learning rate by which gradients should be rescaled when updating model parameters during training steps.</span></span>
-### <a name="tolerance--double"></a><span data-ttu-id="a36ae-109">허용 오차: [Double](xref:microsoft.quantum.lang-ref.double)</span><span class="sxs-lookup"><span data-stu-id="a36ae-109">Tolerance : [Double](xref:microsoft.quantum.lang-ref.double)</span></span>
+<span data-ttu-id="da2da-108">학습 단계에서 모델 매개 변수를 업데이트할 때 그라데이션을 재조정 하는 학습 률입니다.</span><span class="sxs-lookup"><span data-stu-id="da2da-108">The learning rate by which gradients should be rescaled when updating model parameters during training steps.</span></span>
+### <a name="tolerance--double"></a><span data-ttu-id="da2da-109">허용 오차: [Double](xref:microsoft.quantum.lang-ref.double)</span><span class="sxs-lookup"><span data-stu-id="da2da-109">Tolerance : [Double](xref:microsoft.quantum.lang-ref.double)</span></span>
 
-<span data-ttu-id="a36ae-110">샘플을 퀀텀 상태로 준비할 때 사용할 근사 허용 오차입니다.</span><span class="sxs-lookup"><span data-stu-id="a36ae-110">The approximation tolerance to use when preparing samples as quantum states.</span></span>
-### <a name="minibatchsize--int"></a><span data-ttu-id="a36ae-111">미니 Batchsize: [Int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="a36ae-111">MinibatchSize : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
+<span data-ttu-id="da2da-110">샘플을 퀀텀 상태로 준비할 때 사용할 근사 허용 오차입니다.</span><span class="sxs-lookup"><span data-stu-id="da2da-110">The approximation tolerance to use when preparing samples as quantum states.</span></span>
+### <a name="minibatchsize--int"></a><span data-ttu-id="da2da-111">미니 Batchsize: [Int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="da2da-111">MinibatchSize : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
 
-<span data-ttu-id="a36ae-112">각 학습 미니 배치에서 사용할 샘플의 수입니다.</span><span class="sxs-lookup"><span data-stu-id="a36ae-112">The number of samples to use in each training minibatch.</span></span>
-### <a name="nmeasurements--int"></a><span data-ttu-id="a36ae-113">N 측정값: [Int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="a36ae-113">NMeasurements : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
+<span data-ttu-id="da2da-112">각 학습 미니 배치에서 사용할 샘플의 수입니다.</span><span class="sxs-lookup"><span data-stu-id="da2da-112">The number of samples to use in each training minibatch.</span></span>
+### <a name="nmeasurements--int"></a><span data-ttu-id="da2da-113">N 측정값: [Int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="da2da-113">NMeasurements : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
 
-<span data-ttu-id="a36ae-114">분류 확률을 예측 하기 위해 각 분류 결과를 측정 하는 횟수입니다.</span><span class="sxs-lookup"><span data-stu-id="a36ae-114">The number of times to measure each classification result in order to estimate the classification probability.</span></span>
-### <a name="maxepochs--int"></a><span data-ttu-id="a36ae-115">MaxEpochs: [Int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="a36ae-115">MaxEpochs : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
+<span data-ttu-id="da2da-114">분류 확률을 예측 하기 위해 각 분류 결과를 측정 하는 횟수입니다.</span><span class="sxs-lookup"><span data-stu-id="da2da-114">The number of times to measure each classification result in order to estimate the classification probability.</span></span>
+### <a name="maxepochs--int"></a><span data-ttu-id="da2da-115">MaxEpochs: [Int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="da2da-115">MaxEpochs : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
 
-<span data-ttu-id="a36ae-116">각 모델을 학습 하는 최대 epoch 수입니다.</span><span class="sxs-lookup"><span data-stu-id="a36ae-116">The maximum number of epochs to train each model for.</span></span>
-### <a name="maxstalls--int"></a><span data-ttu-id="a36ae-117">MaxStalls: [Int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="a36ae-117">MaxStalls : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
+<span data-ttu-id="da2da-116">각 모델을 학습 하는 최대 epoch 수입니다.</span><span class="sxs-lookup"><span data-stu-id="da2da-116">The maximum number of epochs to train each model for.</span></span>
+### <a name="maxstalls--int"></a><span data-ttu-id="da2da-117">MaxStalls: [Int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="da2da-117">MaxStalls : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
 
-<span data-ttu-id="a36ae-118">학습 epoch가 실패 하기 전까지 정지 (약 0 그라데이션) 할 수 있는 최대 횟수입니다.</span><span class="sxs-lookup"><span data-stu-id="a36ae-118">The maximum number of times a training epoch is allowed to stall (approximately zero gradient) before failing.</span></span>
-### <a name="stochasticrescalefactor--double"></a><span data-ttu-id="a36ae-119">StochasticRescaleFactor: [Double](xref:microsoft.quantum.lang-ref.double)</span><span class="sxs-lookup"><span data-stu-id="a36ae-119">StochasticRescaleFactor : [Double](xref:microsoft.quantum.lang-ref.double)</span></span>
+<span data-ttu-id="da2da-118">학습 epoch가 실패 하기 전까지 정지 (약 0 그라데이션) 할 수 있는 최대 횟수입니다.</span><span class="sxs-lookup"><span data-stu-id="da2da-118">The maximum number of times a training epoch is allowed to stall (approximately zero gradient) before failing.</span></span>
+### <a name="stochasticrescalefactor--double"></a><span data-ttu-id="da2da-119">StochasticRescaleFactor: [Double](xref:microsoft.quantum.lang-ref.double)</span><span class="sxs-lookup"><span data-stu-id="da2da-119">StochasticRescaleFactor : [Double](xref:microsoft.quantum.lang-ref.double)</span></span>
 
-<span data-ttu-id="a36ae-120">업데이트를 다시 시도 하기 전에 지연 된 모델의 크기를 조정 하는 크기입니다.</span><span class="sxs-lookup"><span data-stu-id="a36ae-120">The amount to rescale stalled models by before retrying an update.</span></span>
-### <a name="scoringperiod--int"></a><span data-ttu-id="a36ae-121">ScoringPeriod: [Int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="a36ae-121">ScoringPeriod : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
+<span data-ttu-id="da2da-120">업데이트를 다시 시도 하기 전에 지연 된 모델의 크기를 조정 하는 크기입니다.</span><span class="sxs-lookup"><span data-stu-id="da2da-120">The amount to rescale stalled models by before retrying an update.</span></span>
+### <a name="scoringperiod--int"></a><span data-ttu-id="da2da-121">ScoringPeriod: [Int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="da2da-121">ScoringPeriod : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
 
-<span data-ttu-id="a36ae-122">점수 매기기 점수 사이에 수행할 그라데이션 단계 수입니다.</span><span class="sxs-lookup"><span data-stu-id="a36ae-122">The number of gradient steps to be taken between scoring points.</span></span>
-<span data-ttu-id="a36ae-123">최상의 정확도를 위해를 1로 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="a36ae-123">For best accuracy, set to 1.</span></span>
-### <a name="verbosemessage--string---unit"></a><span data-ttu-id="a36ae-124">VerboseMessage: [문자열](xref:microsoft.quantum.lang-ref.string) -> [단위](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="a36ae-124">VerboseMessage : [String](xref:microsoft.quantum.lang-ref.string) -> [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
+<span data-ttu-id="da2da-122">점수 매기기 점수 사이에 수행할 그라데이션 단계 수입니다.</span><span class="sxs-lookup"><span data-stu-id="da2da-122">The number of gradient steps to be taken between scoring points.</span></span>
+<span data-ttu-id="da2da-123">최상의 정확도를 위해를 1로 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="da2da-123">For best accuracy, set to 1.</span></span>
+### <a name="verbosemessage--string---unit"></a><span data-ttu-id="da2da-124">VerboseMessage: [문자열](xref:microsoft.quantum.lang-ref.string) -> [단위](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="da2da-124">VerboseMessage : [String](xref:microsoft.quantum.lang-ref.string) -> [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
 
-<span data-ttu-id="a36ae-125">자세한 피드백을 제공 하는 데 사용할 수 있는 함수입니다.</span><span class="sxs-lookup"><span data-stu-id="a36ae-125">A function that can be used to provide verbose feedback.</span></span>
+<span data-ttu-id="da2da-125">자세한 피드백을 제공 하는 데 사용할 수 있는 함수입니다.</span><span class="sxs-lookup"><span data-stu-id="da2da-125">A function that can be used to provide verbose feedback.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="a36ae-126">설명</span><span class="sxs-lookup"><span data-stu-id="a36ae-126">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="da2da-126">설명</span><span class="sxs-lookup"><span data-stu-id="da2da-126">Remarks</span></span>
 
-<span data-ttu-id="a36ae-127">이 UDT는 직접 만들 수 없습니다. 대신를 호출 하 @"microsoft.quantum.machinelearning.defaulttrainingoptions" 고 연산자를 사용 하 여 다른 기본값을 재정의 하 여 지정 해야 합니다 `w/` .</span><span class="sxs-lookup"><span data-stu-id="a36ae-127">This UDT should not be created directly, but rather should be specified by calling @"microsoft.quantum.machinelearning.defaulttrainingoptions" and then using the `w/` operator to override different defaults.</span></span>
+<span data-ttu-id="da2da-127">이 UDT는 직접 만들 수 없습니다. 대신를 호출 하 @"microsoft.quantum.machinelearning.defaulttrainingoptions" 고 연산자를 사용 하 여 다른 기본값을 재정의 하 여 지정 해야 합니다 `w/` .</span><span class="sxs-lookup"><span data-stu-id="da2da-127">This UDT should not be created directly, but rather should be specified by calling @"microsoft.quantum.machinelearning.defaulttrainingoptions" and then using the `w/` operator to override different defaults.</span></span>
 
-<span data-ttu-id="a36ae-128">예를 들어 10만 측정치와 최대 8 교육 epoch를 사용 하려면 다음을 수행 합니다.</span><span class="sxs-lookup"><span data-stu-id="a36ae-128">For example, to use 100,000 measurements and at most 8 training epochs:</span></span>
+<span data-ttu-id="da2da-128">예를 들어 10만 측정치와 최대 8 교육 epoch를 사용 하려면 다음을 수행 합니다.</span><span class="sxs-lookup"><span data-stu-id="da2da-128">For example, to use 100,000 measurements and at most 8 training epochs:</span></span>
 
-```Q#
+```qsharp
 let options = DefaultTrainingOptions()
               w/ NMeasurements <- 100000
               w/ MaxEpochs <- 8;
 ```
 
-## <a name="references"></a><span data-ttu-id="a36ae-129">참조 항목</span><span class="sxs-lookup"><span data-stu-id="a36ae-129">References</span></span>
+## <a name="references"></a><span data-ttu-id="da2da-129">참조</span><span class="sxs-lookup"><span data-stu-id="da2da-129">References</span></span>
 
-- [<span data-ttu-id="a36ae-130">arXiv: 1804.00633</span><span class="sxs-lookup"><span data-stu-id="a36ae-130">arXiv:1804.00633</span></span>](https://arxiv.org/abs/1804.00633)
+- [<span data-ttu-id="da2da-130">arXiv: 1804.00633</span><span class="sxs-lookup"><span data-stu-id="da2da-130">arXiv:1804.00633</span></span>](https://arxiv.org/abs/1804.00633)
