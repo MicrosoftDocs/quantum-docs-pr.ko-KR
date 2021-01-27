@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyIfOneA
 title: ApplyIfOneA 작업
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyIfOneA
 qsharp.summary: Applies an adjointable operation conditioned on a classical result value being one.
-ms.openlocfilehash: 200908f2958b74e4823c891ef901474d75d18336
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 1593f565e950a9410df0ae9de59e6d0e6a7b99b0
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96218549"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98844940"
 ---
 # <a name="applyifonea-operation"></a>ApplyIfOneA 작업
 
@@ -28,7 +28,7 @@ operation ApplyIfOneA<'T> (result : Result, (op : ('T => Unit is Adj), target : 
 ```
 
 
-## <a name="description"></a>Description
+## <a name="description"></a>설명
 
 작업 `op` 및 결과 값이 지정 된 `result` `op` `target` 경우이 인 경우에 적용 됩니다 `result` `One` . 이면이 `Zero` 발생 하지 않습니다 `target` .
 접미사는 `A` 적용 될 작업이 adjointable을 나타냅니다.

@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.AddFxP
 title: AddFxP 작업
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: AddFxP
 qsharp.summary: Adds two fixed-point numbers stored in quantum registers.
-ms.openlocfilehash: 36a5d585a493f0e6f33f74b1686aaa01cca7ac0b
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 60b7cad3d0bd8800e67830ca921f8e2d705b8f39
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96191043"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98843866"
 ---
 # <a name="addfxp-operation"></a>AddFxP 작업
 
@@ -28,7 +28,7 @@ operation AddFxP (fp1 : Microsoft.Quantum.Arithmetic.FixedPoint, fp2 : Microsoft
 ```
 
 
-## <a name="description"></a>Description
+## <a name="description"></a>설명
 
 각각 $ \ket{f_1} $ 및 $ \ket{f_2} $ 상태에서 두 개의 고정 소수점 레지스터가 지정 된 경우, 작업 $ \ket{f_1} \ket{f_2} \maps\ket{f_1} \ket{f_1 + f_2} $를 수행 합니다.
 

@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.AssertProbInt
 title: AssertProbInt 작업
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: AssertProbInt
 qsharp.summary: Asserts that the probability of a specific state of a quantum register has the expected value.
-ms.openlocfilehash: b95c2c6294dd5a95b7215c22bd6c50a41635f432
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 85ff04bbad9dc2ed0f803db65508fdfbb0d22c56
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96223700"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98843397"
 ---
 # <a name="assertprobint-operation"></a>AssertProbInt 작업
 
@@ -28,7 +28,7 @@ operation AssertProbInt (stateIndex : Int, expected : Double, qubits : Microsoft
 ```
 
 
-## <a name="description"></a>Description
+## <a name="description"></a>설명
 
 $N $-stbit 퀀텀 상태 $ \ket{\psi} = \sum ^ {2 ^ n-1} _ {j = 0} \ alpha_j \ket{j} $로 지정 된 상태 $ \ket{j} $ $j 인덱싱된 상태 $ $의 확률 $ | \ alpha_j | ^ 2 $에 필요한 값이 있음을 어설션 합니다.
 
@@ -57,3 +57,14 @@ $ \Ket{\psi} $를 거의 endian 형식으로 저장 하는?
 
 ## <a name="output--unit"></a>출력: [단위](xref:microsoft.quantum.lang-ref.unit)
 
+
+
+## <a name="example"></a>예
+
+`qubits`레지스터가 3abit 퀀텀 상태 $ \ket{\psi} = \ sqrt {1/8} \ k {0} + \ sqrt {7/8} \ k $를 거의 endian 형식으로 인코드 한다고 가정 합니다 {6} .
+즉, 숫자는 $ \ket {0} \equiv\ket {0} \ket {0} \ket {0} $ 및 $ \ket \equiv\ket \ket {6} {0} \ket $로 표시 {1} {1} 됩니다. 그러면 다음 어설션이 성공 합니다.
+
+```qsharp
+AssertProbInt(0, 0.125, qubits, 10e-10);
+AssertProbInt(6, 0.875, qubits, 10e-10);
+```

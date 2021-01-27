@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.ApplyOuterTTKAdder
 title: ApplyOuterTTKAdder 작업
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: ApplyOuterTTKAdder
 qsharp.summary: Implements the outer operation for RippleCarryAdderTTK to conjugate the inner operation to construct the full adder.
-ms.openlocfilehash: aed15a4d1f3ca7121d6da665f5c08442fd495619
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: afcc3085965907b7478b513028e25d1813cf7b76
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96190618"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98843695"
 ---
 # <a name="applyouterttkadder-operation"></a>ApplyOuterTTKAdder 작업
 
@@ -45,7 +45,7 @@ LittleEndian cobit는 두 번째 정수 summand 입력을 RippleCarryAdderTTK에
 
 
 
-## <a name="references"></a>참조 항목
+## <a name="references"></a>참조
 
 - Yasuhiro Takahashi, Seiichiro Tani, Noboru Kunihiro: "퀀텀 추가 회로 및 무제한 팬 아웃", 퀀텀 정보 및 계산, Vol. 10, 2010.
   https://arxiv.org/abs/0910.2530

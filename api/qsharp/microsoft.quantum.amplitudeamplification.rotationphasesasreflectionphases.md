@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.AmplitudeAmplification.RotationPhasesAsReflectionPhases
 title: RotationPhasesAsReflectionPhases 함수
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.AmplitudeAmplification
 qsharp.name: RotationPhasesAsReflectionPhases
 qsharp.summary: Converts phases specified as single-qubit rotations to phases specified as partial reflections.
-ms.openlocfilehash: 6e601cfd867b449d628da7cd60dfacd465e48860
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 5d50b3fdc2b0f948e93cb11b5c69403d97574ccd
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96191196"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98843947"
 ---
 # <a name="rotationphasesasreflectionphases-function"></a>RotationPhasesAsReflectionPhases 함수
 
@@ -40,7 +40,7 @@ function RotationPhasesAsReflectionPhases (rotPhases : Microsoft.Quantum.Amplitu
 
 부분 반사로 지정 된 단계를 구현 하는 작업입니다.
 
-## <a name="references"></a>참조 항목
+## <a name="references"></a>참조
 
 에서 규칙을 사용 합니다.
 

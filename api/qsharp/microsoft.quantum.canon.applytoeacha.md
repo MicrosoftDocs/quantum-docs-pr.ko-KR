@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToEachA
 title: ApplyToEachA 작업
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyToEachA
 qsharp.summary: Applies a single-qubit operation to each element in a register. The modifier `A` indicates that the single-qubit operation is adjointable.
-ms.openlocfilehash: 9819e78760caf6180edc5c2ca5e402060e3029a5
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: da901db2bb3c70186bfe0c8812b5710198d1dff3
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96217801"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98844612"
 ---
 # <a name="applytoeacha-operation"></a>ApplyToEachA 작업
 
@@ -51,6 +51,16 @@ operation ApplyToEachA<'T> (singleElementOperation : ('T => Unit is Adj), regist
 ### <a name="t"></a>없습니다
 
 작업이 수행 되는 대상입니다.
+
+## <a name="example"></a>예
+
+3-이상 비트 $ \ket{+} $ 상태 준비:
+
+```qsharp
+using (register = Qubit[3]) {
+    ApplyToEach(H, register);
+}
+```
 
 ## <a name="see-also"></a>참고 항목
 

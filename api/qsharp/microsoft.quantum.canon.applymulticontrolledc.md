@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyMultiControlledC
 title: ApplyMultiControlledC 작업
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyMultiControlledC
 qsharp.summary: Applies a multiply controlled version of a singly controlled operation. The modifier `C` indicates that the single-qubit operation is controllable.
-ms.openlocfilehash: 2d5703eed3a3b6e611ae7c993febf018fcb148b3
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: bf6b78cd18a827a9a4fd9d61dfd4d240de3503e9
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96218413"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98844860"
 ---
 # <a name="applymulticontrolledc-operation"></a>ApplyMultiControlledC 작업
 
@@ -31,7 +31,7 @@ operation ApplyMultiControlledC (singlyControlledOp : (Qubit[] => Unit), ccnot :
 
 ## <a name="input"></a>입력
 
-### <a name="singlycontrolledop--qubit--unit"></a>singlyControlledOp: [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [Unit](xref:microsoft.quantum.lang-ref.unit) 
+### <a name="singlycontrolledop--qubit--unit"></a>singlyControlledOp: [](xref:microsoft.quantum.lang-ref.qubit)[] => [Unit](xref:microsoft.quantum.lang-ref.unit) 
 
 단일 비트에 대해 제어 되는 연산입니다.
 작업의 인수에서 첫 번째 인수는 컨트롤로 간주 되 고 나머지는 대상 비트 비트로 간주 됩니다.
@@ -65,7 +65,7 @@ operation ApplyMultiControlledC (singlyControlledOp : (Qubit[] => Unit), ccnot :
 
 설명 및 회로 다이어그램의 경우 그림 4.10, Nielsen & Chuang의 섹션 4.3을 참조 하세요.
 
-## <a name="references"></a>참조 항목
+## <a name="references"></a>참조
 
 - [*Michael Nielsen, Isaac Chuang*, 퀀텀 계산 및 퀀텀 정보](http://doi.org/10.1017/CBO9780511976667)
 

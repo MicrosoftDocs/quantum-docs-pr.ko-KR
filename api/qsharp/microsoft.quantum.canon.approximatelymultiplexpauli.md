@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.ApproximatelyMultiplexPauli
 title: ApproximatelyMultiplexPauli 작업
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApproximatelyMultiplexPauli
 qsharp.summary: Applies a Pauli rotation conditioned on an array of qubits, truncating small rotation angles according to a given tolerance.
-ms.openlocfilehash: 8024df4608f14408bfcd46139e72454ff44b116f
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 1fc8a8857b6b37d4c3e812a3c4cb2941b9238800
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96207754"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98844583"
 ---
 # <a name="approximatelymultiplexpauli-operation"></a>ApproximatelyMultiplexPauli 작업
 
@@ -28,7 +28,7 @@ operation ApproximatelyMultiplexPauli (tolerance : Double, coefficients : Double
 ```
 
 
-## <a name="description"></a>Description
+## <a name="description"></a>설명
 
 이렇게 하면 $ \ theta_j $ 각도에 따라 회전을 수행 하는 곱하기 제어 된 단일 연산이 적용 됩니다 .이는 $n $-stbit number state $ \ket{j} $로 제어 되는 경우 $P $입니다.
 특히이 작업은 단일 작업으로 표시 됩니다.

@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.ApplyInnerTTKAdder
 title: ApplyInnerTTKAdder 작업
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: ApplyInnerTTKAdder
 qsharp.summary: Implements the inner addition function for the operation RippleCarryAdderTTK. This is the inner operation that is conjugated with the outer operation to construct the full adder.
-ms.openlocfilehash: 1de0248066aec531d78130703414067603ffd34d
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: c822933340d592061eb039af7c6e438212abc265
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96191009"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98843825"
 ---
 # <a name="applyinnerttkadder-operation"></a>ApplyInnerTTKAdder 작업
 
@@ -54,7 +54,7 @@ Xored은 합계의 가장 중요 한 비트를 사용 하 여 수행 됩니다.
 
 지정 된 제어 작업을 통해 작업의 대칭 및 상호 취소를 사용 하 여 모든 작업에 컨트롤을 추가 하는 기본 구현을 개선 합니다.
 
-## <a name="references"></a>참조 항목
+## <a name="references"></a>참조
 
 - Yasuhiro Takahashi, Seiichiro Tani, Noboru Kunihiro: "퀀텀 추가 회로 및 무제한 팬 아웃", 퀀텀 정보 및 계산, Vol. 10, 2010.
   https://arxiv.org/abs/0910.2530

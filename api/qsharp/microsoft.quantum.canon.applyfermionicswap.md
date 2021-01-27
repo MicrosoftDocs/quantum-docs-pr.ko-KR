@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyFermionicSWAP
 title: ApplyFermionicSWAP 작업
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyFermionicSWAP
 qsharp.summary: Applies the Fermionic SWAP.
-ms.openlocfilehash: 0c470705843a6360df0a72374570d86571397e41
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 334f407a32dabc8f4e0a1a29c8f06a1b9f40dc59
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96218804"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98845045"
 ---
 # <a name="applyfermionicswap-operation"></a>ApplyFermionicSWAP 작업
 
@@ -28,7 +28,7 @@ operation ApplyFermionicSWAP (qubit1 : Qubit, qubit2 : Qubit) : Unit is Adj + Ct
 ```
 
 
-## <a name="description"></a>Description
+## <a name="description"></a>설명
 
 이렇게 하면 기본적으로-1의 글로벌 단계를 적용 하는 동안 두 번째 비트는 모두 1이 됩니다. Orbitals의 symmetrization을 유지 합니다.
 자세한 내용은  항목을 참조하세요.
@@ -53,7 +53,7 @@ operation ApplyFermionicSWAP (qubit1 : Qubit, qubit2 : Qubit) : Unit is Adj + Ct
 
 
 
-## <a name="references"></a>참조 항목
+## <a name="references"></a>참조
 
 - [*Ryan Babbush, 네, Wiebe, Jarrod McClean, James McClain, Hartmut Neven, Garnet Kin-Lic 변경 (*, arxiv: 1706.00023](https://arxiv.org/pdf/1706.00023.pdf)
 

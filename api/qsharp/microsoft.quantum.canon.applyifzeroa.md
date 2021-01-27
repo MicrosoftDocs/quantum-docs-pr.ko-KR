@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyIfZeroA
 title: ApplyIfZeroA 작업
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyIfZeroA
 qsharp.summary: Applies an adjointable operation conditioned on a classical result value being zero.
-ms.openlocfilehash: ab5b05791213da7c8bee5915764c342cb0bed851
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 23c494d144ef61d40c3ca7a5de452472ffa70335
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96218498"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98844901"
 ---
 # <a name="applyifzeroa-operation"></a>ApplyIfZeroA 작업
 
@@ -28,7 +28,7 @@ operation ApplyIfZeroA<'T> (result : Result, (op : ('T => Unit is Adj), target :
 ```
 
 
-## <a name="description"></a>Description
+## <a name="description"></a>설명
 
 작업 `op` 및 결과 값이 지정 된 `result` `op` `target` 경우이 인 경우에 적용 됩니다 `result` `Zero` . 이면이 `One` 발생 하지 않습니다 `target` .
 접미사는 `A` 적용 될 작업이 adjointable을 나타냅니다.

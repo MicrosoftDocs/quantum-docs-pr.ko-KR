@@ -1,30 +1,30 @@
 ---
-title: 요르단-Wigner 표현
-description: Hamiltonian 연산자를 퀀텀 컴퓨터에서 보다 쉽게 구현할 수 있는 단일 행렬에 매핑하는 Wigner 표현에 대해 알아봅니다.
+title: Jordan-Wigner 표시
+description: Hamiltonian 연산자를 퀀텀 컴퓨터에서 보다 쉽게 구현할 수 있는 단일 행렬에 매핑하는 Jordan-Wigner 표현에 대해 알아봅니다.
 author: bradben
 ms.author: v-benbra
 ms.date: 10/09/2017
-ms.topic: article-type-from-white-list
+ms.topic: conceptual
 uid: microsoft.quantum.chemistry.concepts.jordanwigner
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 29abb4d2ef11239a58af45bc4eee3bd60d20a6c7
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 738c8262ea66b8a02ea7541e402953237dc2ea48
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833848"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98844132"
 ---
-# <a name="jordan-wigner-representation"></a>요르단-Wigner 표현
+# <a name="jordan-wigner-representation"></a>Jordan-Wigner 표시
 
 두 번째 양자화 Hamiltonians는 $a ^ \aa$ (만들기)와 $a $ (annihilation) 측면에서 편리 하 게 표현 되지만, 이러한 작업은 퀀텀 컴퓨터에서 기본적인 작업이 아닙니다.
 따라서 퀀텀 컴퓨터에서 구현 하려는 경우에는 퀀텀 컴퓨터에서 구현 될 수 있는 단일 행렬에 연산자를 매핑해야 합니다.
 요르단 – Wigner 표현은 이러한 맵 하나를 제공 합니다.
 그러나 Bravyi – Kitaev 표현과 같은 다른 사용자에 게는 고유한 장점과 단점이 있습니다.
-Wigner 표현의 주요 이점은 간단 합니다.
+Jordan-Wigner 표현의 주요 이점은 간단 합니다.
 
-Wigner 표현은 파생 시킬 직선입니다.
+Jordan-Wigner 표현은 파생 시킬 직선입니다.
 $ \Ket _j $ 상태는 {0} spin 궤도 $j $가 비어 있고 $ \ket {1} _j $가 이미 있음을 의미 합니다.
 즉,이는 기본적으로 지정 된 spin 궤도의 직업을 저장할 수 있습니다.
 그런 다음 $a ^ \ dagger_j \ket {0} _j = \ket {1} _j $ 및 $a ^ \ dagger_j \ket {1} _j = $0입니다.
@@ -51,14 +51,14 @@ $ $ 즉, 두 개의 생성 연산자는 필요에 따라 commute 되지 않습�
 \begin{align} a ^ \ dagger_1 &= \left (\frac{X-iY} \left) \otime 1 \otimes 1 \otime 1 \otimes {2} \cst\otimes 1 \\ \\ ^ \ dagger_2 &= Z\otimes\left (\frac{X-iY} {2} \left) \otime 1 \ otime 1 \otimes \cst\otime 1, ^ \ dagger_3 &= z\otimes \stststststststststststststst\right \\ \\ {2} \\ \\ & \V도트가 \\ \\ a ^ \ dagger_N &= z\otimes {2} z\otimes Z\otimes b\otimes \statimes \left \otime \label{eq: JW} \end{align}
 
 또한 Pauli 연산자를 기준으로 숫자 연산자 ($n _j $)를 표현 하는 것이 편리 합니다.
-다행히 $ operators (Wigner 문자열 이라고 함) $Z 문자열이 취소 된 후이를 대체 합니다.
+다행히 $Z $ operators (Jordan-Wigner 문자열 이라고 함)의 문자열은이 대체가 수행 된 후 취소 됩니다.
 이를 수행 하 고 $X _jY_j = iZ_j $)을 (를) 수행한 후에는 \begin{c} n_j = a ^ \ dagger_j a_j = \frac{(1-Z_j)}이 있습니다 {2} .
 \end{equation}
 
 
-## <a name="constructing-hamiltonians-in-jordan-wigner-representation"></a>Wigner 표현의 Hamiltonians 생성
+## <a name="constructing-hamiltonians-in-jordan-wigner-representation"></a>Jordan-Wigner 표현으로 Hamiltonians 생성
 
-Wigner 표현을 호출 하 고 나면 Hamiltonian를 Pauli 연산자의 합계로 변환 합니다.
+Jordan-Wigner 표현을 호출 하 고 나면 Hamiltonian를 Pauli 연산자의 합계로 변환 합니다.
 Fermionic Hamiltonian의 각 $a ^ \dagger $ 및 $a $ 연산자를 위에서 지정 된 Pauli 연산자 문자열로 바꾸어야 합니다.
 이 대체를 수행 하는 경우 Hamiltonian 내에는 5 개의 용어만 있습니다.
 이러한 다섯 가지 클래스는 Hamiltonian의 한 본문에서 $p q $ 및 $p, q, r, s $를 선택할 수 있는 다양 한 방법에 해당 합니다.

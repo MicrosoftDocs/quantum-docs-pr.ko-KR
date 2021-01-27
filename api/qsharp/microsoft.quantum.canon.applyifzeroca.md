@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyIfZeroCA
 title: ApplyIfZeroCA 작업
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyIfZeroCA
 qsharp.summary: Applies a unitary operation conditioned on a classical result value being zero.
-ms.openlocfilehash: 4baae1fe7d615cbbf01935b4eca05fe947ff296e
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 4ed0660e2fe3623d0a8e4e4f3bd0bddb536b7b5c
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96218464"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98844889"
 ---
 # <a name="applyifzeroca-operation"></a>ApplyIfZeroCA 작업
 
@@ -28,7 +28,7 @@ operation ApplyIfZeroCA<'T> (result : Result, (op : ('T => Unit is Adj + Ctl), t
 ```
 
 
-## <a name="description"></a>Description
+## <a name="description"></a>설명
 
 작업 `op` 및 결과 값이 지정 된 `result` `op` `target` 경우이 인 경우에 적용 됩니다 `result` `Zero` . 이면이 `One` 발생 하지 않습니다 `target` .
 접미사는 `CA` 적용 될 작업이 단일 (제어 가능 및 adjointable) 임을 나타냅니다.
