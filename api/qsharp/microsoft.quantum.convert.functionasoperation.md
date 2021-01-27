@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Convert.FunctionAsOperation
 title: FunctionAsOperation 함수
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Convert
 qsharp.name: FunctionAsOperation
 qsharp.summary: Converts functions to operations.
-ms.openlocfilehash: 10703818242cf6b3853f08a45bfb9094f397f6c2
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: cf4f8c97bf38b3a64eb952d0a502bc21c29c579c
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96224380"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98833832"
 ---
 # <a name="functionasoperation-function"></a>FunctionAsOperation 함수
 
@@ -28,7 +28,7 @@ function FunctionAsOperation<'Input, 'Output> (fn : ('Input -> 'Output)) : ('Inp
 ```
 
 
-## <a name="description"></a>Description
+## <a name="description"></a>설명
 
 함수가 지정 된 경우 해당 함수를 호출 하 고 다른 작업은 수행 하지 않는 작업을 반환 합니다.
 
