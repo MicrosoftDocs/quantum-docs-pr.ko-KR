@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Preparation.StatePreparationPositiveCoefficients
 title: StatePreparationPositiveCoefficients 함수
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Preparation
@@ -17,12 +17,12 @@ qsharp.summary: >-
   The returned operation $U$ prepares an arbitrary quantum state $\ket{\psi}$ with positive coefficients $\alpha_j\ge 0$ from the $n$-qubit computational basis state $\ket{0...0}$.
 
   The action of U on a newly-allocated register is given by $$ \begin{align} U \ket{0\cdots 0} = \ket{\psi} = \frac{\sum_{j=0}^{2^n-1}\alpha_j \ket{j}}{\sqrt{\sum_{j=0}^{2^n-1}|\alpha_j|^2}}. \end{align} $$
-ms.openlocfilehash: 8f1fd7d77531996faf566adb78f452929d6cbd50
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 081541d93bf853fa0de1573038dc00c296432281
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96193253"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98855854"
 ---
 # <a name="statepreparationpositivecoefficients-function"></a>StatePreparationPositiveCoefficients 함수
 
@@ -57,6 +57,19 @@ function StatePreparationPositiveCoefficients (coefficients : Double[]) : (Micro
 ## <a name="output--littleendian--unit--is-adj--ctl"></a>출력: [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian) => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj + Ctl
 
 상태 준비 단일 작업 $U $.
+
+## <a name="example"></a>예
+
+다음 코드 조각은 stbit 레지스터에서 퀀텀 상태 $ \ket{\psi} = \ sqrt {1/8} \ k {0} + \ sqrt {7/8} \ k $를 준비 합니다 {2} `qubitsLE` .
+
+```qsharp
+let amplitudes = [Sqrt(0.125), 0.0, Sqrt(0.875), 0.0];
+let op = StatePreparationPositiveCoefficients(amplitudes);
+using (qubits = Qubit[2]) {
+    let qubitsLE = LittleEndian(qubits);
+    op(qubitsLE);
+}
+```
 
 ## <a name="remarks"></a>설명
 

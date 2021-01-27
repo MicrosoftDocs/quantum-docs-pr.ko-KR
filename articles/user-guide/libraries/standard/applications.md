@@ -5,16 +5,16 @@ author: QuantumWriter
 uid: microsoft.quantum.libraries.applications
 ms.author: martinro
 ms.date: 12/11/2017
-ms.topic: article
+ms.topic: conceptual
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 5a29dcc74c638cb8ecbeb1f924d0e50d40d19f66
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 214d584840f235868c66a1fb3ee24d0acab49630
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92692177"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98857236"
 ---
 # <a name="applications"></a>애플리케이션 #
 
@@ -27,7 +27,7 @@ ms.locfileid: "92692177"
 그러나이 상황은 퀀텀 하드웨어에서 매우 다를 수 있습니다. 퀀텀 시뮬레이션의 가장 일반적인 변형은 시간 독립적 Hamiltonian 시뮬레이션 문제 라고 합니다. 여기에는 시스템 Hamiltonian $H $ (Hermitian 행렬) 및 일부 초기 퀀텀 상태 $ \ket{\psi (0)} $에 대 한 설명이 제공 됩니다 .이에 대해서는 퀀텀 컴퓨터에서 $를 사용 하 여 일부 $n 기준으로 인코딩됩니다. 폐쇄형 시스템의 퀀텀 상태는 Schrödinger 수식 $ $ \begin{align} i\frac {d \ket{\psi (t)}} {d t} & = H \ket{\psi (t)}에서 발전 하 게 됩니다. \end{align} $ $ 목표는 특정 시간-진화 연산자 $U (t) = e ^ {-iHt} $를 몇 번의 고정 된 시간에 구현 하는 것입니다. 여기서 $ \ket{\psi (t)} = U (t) \ket{\psi (0)} $는 Schrödinger 수식을 해결 합니다. $t
 와 유사 시간 종속 Hamiltonian 시뮬레이션 문제는 동일한 수식을 해결 하지만 이제는 $H (t) $를 사용 하 여 시간을 계산 합니다.
 
-Hamiltonian 시뮬레이션은 다른 여러 퀀텀 시뮬레이션 문제의 주요 구성 요소 이며, Hamiltonian 시뮬레이션 문제에 대 한 해결 방법은 \tilde{U}의 synthesizing에 대 한 기본 퀀텀 게이트 시퀀스를 설명 하는 알고리즘입니다. 오류 $ \\ | spectral-U (t) \\ | \le \le $ ( [spectral norm](xref:microsoft.quantum.concepts.matrix-advanced)) 이러한 알고리즘의 복잡성은 퀀텀 컴퓨터에서 관심 있는 Hamiltonian에 대 한 설명을 액세스 하는 방법에 매우 강력한 영향을 줍니다. 예를 들어 최악의 경우, $n $ ombits에 대해 작동 하는 $H $은 각 matrix 요소에 대해 하나씩 $2 ^ n \times 2 ^ n $ 숫자의 목록으로 제공 되어야 합니다. 즉, 데이터를 읽기만 하면 지 수 시간이 이미 필요 합니다. 최상의 경우에는 $O \ket{t}\ket{\psi (0)} = \ket{t}U (t) \ket{\psi (0)} $ 일반적으로에서 문제를 해결 하는 검정 상자에 대 한 액세스를 가정할 수 있습니다. 이러한 입력 모델은 특히 유용 하지 않습니다. 즉, 기존의 접근 방식 보다는 더 이상 유용 하지 않으며, 검은색 상자는 구현에 대 한 기본 게이트 복잡성을 숨깁니다 .이는 다양 한 기능을 지 원하는 것입니다.
+Hamiltonian 시뮬레이션은 다른 여러 퀀텀 시뮬레이션 문제의 주요 구성 요소 이며, Hamiltonian 시뮬레이션 문제에 대 한 해결 방법은 \tilde{U}의 synthesizing에 대 한 기본 퀀텀 게이트 시퀀스를 설명 하는 알고리즘입니다. 오류 $ \\ | spectral-U (t) \\ | \le \le $ ( [](xref:microsoft.quantum.concepts.matrix-advanced)) 이러한 알고리즘의 복잡성은 퀀텀 컴퓨터에서 관심 있는 Hamiltonian에 대 한 설명을 액세스 하는 방법에 매우 강력한 영향을 줍니다. 예를 들어 최악의 경우, $n $ ombits에 대해 작동 하는 $H $은 각 matrix 요소에 대해 하나씩 $2 ^ n \times 2 ^ n $ 숫자의 목록으로 제공 되어야 합니다. 즉, 데이터를 읽기만 하면 지 수 시간이 이미 필요 합니다. 최상의 경우에는 $O \ket{t}\ket{\psi (0)} = \ket{t}U (t) \ket{\psi (0)} $ 일반적으로에서 문제를 해결 하는 검정 상자에 대 한 액세스를 가정할 수 있습니다. 이러한 입력 모델은 특히 유용 하지 않습니다. 즉, 기존의 접근 방식 보다는 더 이상 유용 하지 않으며, 검은색 상자는 구현에 대 한 기본 게이트 복잡성을 숨깁니다 .이는 다양 한 기능을 지 원하는 것입니다.
 
 ### <a name="descriptions-of-hamiltonians"></a>Hamiltonians에 대 한 설명 ###
 
@@ -178,7 +178,7 @@ QFT 게이트가 [이전](xref:microsoft.quantum.libraries.standard.algorithms)�
 $ (A ^ nx) \text{mod} N $을 얻기 위해 일반적으로 _ {a ^ n} $를 $U 적용 하기만 하면 됩니다. 여기서는 $a ^ n \text{mod} N $를 계산 하 여 퀀텀 회로에 연결 합니다.  
 이러한 모듈식 산술 연산을 수행 하기 위한 회로는 [퀀텀 산술 설명서](./algorithms.md#arithmetic)에 설명 되어 있습니다. 특히 제어 된 $U \_ {a ^ i} $ 작업을 구현 하려면 모듈식 지 수 회로가 필요 합니다.
 
-위의 회로는 [퀀텀 단계 예측](xref:Microsoft.Quantum.Characterization.QuantumPhaseEstimation) 에 해당 하 고 주문 찾기를 명시적으로 사용 하도록 설정 하는 반면 필요한 것은 필요한 비트 수를 줄일 수 있습니다. [ArXiv: Beauregard/0205095v3의 8 페이지에](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8)설명 된 대로 주문 찾기에 대해의 방법을 따르거나, Microsoft 양자에서 사용할 수 있는 단계 예측 루틴 중 하나를 사용할 수 있습니다. 예를 들어 [강력한 단계 예측](xref:microsoft.quantum.characterization.robustphaseestimation) 은 또 하나의 추가 비트를 사용 합니다.
+위의 회로는 [퀀텀 단계 예측](xref:Microsoft.Quantum.Characterization.QuantumPhaseEstimation) 에 해당 하 고 주문 찾기를 명시적으로 사용 하도록 설정 하는 반면 필요한 것은 필요한 비트 수를 줄일 수 있습니다. [ArXiv: Beauregard/0205095v3의 8 페이지에](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8)설명 된 대로 주문 찾기에 대해의 방법을 따르거나, Microsoft 양자에서 사용할 수 있는 단계 예측 루틴 중 하나를 사용할 수 있습니다. 예를 들어 [강력한 단계 예측](xref:Microsoft.Quantum.Characterization.RobustPhaseEstimation) 은 또 하나의 추가 비트를 사용 합니다.
 
 ### <a name="factoring"></a>프로필과 ###
 팩터링의 목표는 정수 $N $의 두 소수 요소를 확인 하는 것입니다. 여기서 $N $는 $n $ 비트 숫자입니다.  
