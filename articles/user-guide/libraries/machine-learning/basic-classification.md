@@ -4,17 +4,17 @@ description: Q#Microsoft QDK의 퀀텀 Machine Learning 라이브러리를 사�
 author: geduardo
 ms.author: v-edsanc
 ms.date: 02/16/2020
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.libraries.machine-learning.basics
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 5dc4614b9992e2c6b9f8ff4b839c0929ec8cab7c
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 4fe686a87fbdc610badc0bbcbc0bf7b065e0bce9
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833716"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98854040"
 ---
 # <a name="basic-classification-classify-data-with-the-qdk"></a>기본 분류: QDK 데이터 분류
 
@@ -22,7 +22,7 @@ ms.locfileid: "90833716"
 
 이 가이드에서는에 정의 된 분류자 구조를 사용 하 여 초승달 데이터 집합을 사용 합니다 Q# .
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 - Microsoft [Quantum Development Kit](xref:microsoft.quantum.install)
 - Q# [Python 호스트 프로그램](xref:microsoft.quantum.install.python) 또는 [c # 호스트 프로그램](xref:microsoft.quantum.install.cs)에 대 한 프로젝트를 만듭니다.

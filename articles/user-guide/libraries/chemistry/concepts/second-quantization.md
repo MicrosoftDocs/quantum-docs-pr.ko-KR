@@ -4,17 +4,17 @@ description: 퀀텀 프로그래밍에서 전자 구조를 모델링 하는 두 
 author: bradben
 ms.author: v-benbra
 ms.date: 10/09/2017
-ms.topic: article-type-from-white-list
+ms.topic: conceptual
 uid: microsoft.quantum.chemistry.concepts.secondquantization
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 6becd348f7b3957cb60b16bbd5a28228527e1d4c
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: a08e20d5b53aa97cb12ead0dc3a36069d0ec5df8
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835811"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858844"
 ---
 # <a name="second-quantization"></a>두 번째 양자화
 
@@ -84,7 +84,7 @@ $2N $ spin orbitals의 직업 상태는 비슷한 방법으로 $2N $에 저장 �
 예를 들어 $N = $2 인 경우 상태 $ $ \ket {0} \ket {1} \ket {1} \ket {0} , $ $
 
 는 spin orbitals $1 $ 및 $2 $가 나머지 빈를 사용 하는 것과 일치 합니다.
-마찬가지로 $ $ \ket {0} \equiv \ket {0} _ {0} \ci\ket {0} _{n-1}, $ $ 상태
+마찬가지로 $ $ \ket {0} \equiv \ket {0} _{0} \ci\ket {0}_{n-1}, $ $ 상태
 
 는 파괴 없고 ' 진공 state ' 라고 합니다.
 
@@ -211,12 +211,12 @@ $ $ 이러한 연산자는 ' commute '로, 일반적으로 모든 $i에 대해 \
     var signEqual = sign0 == sign1;
 ```
 
-## <a name="second-quantized-fermionic-hamiltonian"></a>두 번째-양자화 Fermionic Hamiltonian
+## <a name="second-quantized-fermionic-hamiltonian"></a>Second-Quantized Fermionic Hamiltonian
 
 [전자 시스템에 대 한 퀀텀 모델](xref:microsoft.quantum.chemistry.concepts.quantummodels) 의 Hamiltonian는 생성 및 annihilation 연산자를 기준으로 작성 될 수 있습니다.
 특히 $ \psi \_ j $가 기본을 형성 하는 spin orbitals 인 경우
 
-\begin{equation} \hat{H} = \pqrs \_ {pq} h \_ {pq} a ^ \ \_ p a \_ q + \frac {1} {2} \sum \_ {pqrs} h \_ {} a ^ \_ \aap a ^ \aaa ^ \ \_ q a \_ ra \_ s + H \_ {\textrm nuc}, \label{eq: totalHam} \begin{equation}. 여기서 $H \_ {\textrm nuc} $은 핵 에너지 (steiglitz 근사값에서 상수)입니다.
+\begin{equation} \hat{H} = \pqrs \_ {pq} h \_ {pq} a ^ \ \_ p a \_ q + \frac {1} {2} \sum \_ {pqrs} h \_ {} a ^ \_ \aap a ^ \aaa ^ \ \_ q a \_ ra \_ s + H \_ {\textrm nuc}, \label{eq: totalHam} \begin{equation}. 여기서 $h \_ {\textrm nuc} $는 핵 에너지 (Born-Oppenheimer 근사값에서 상수) 및
 
 \begin{align} h \_ {pq} &= \int \_ {-\infty} ^ \infty \int ^ \* \_ p (x 1) \_ \int (-\Frac{\nabla ^ 2} {2} + V (x \_ 1) \int) \int \_ q (x \_ 1) \mathrm{d} ^ 3 x \_ 1, \end{align}
 

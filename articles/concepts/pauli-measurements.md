@@ -1,6 +1,6 @@
 ---
 제목: Pauli 측정 설명: 단일 및 다중 값 비트를 사용 하는 방법에 대해 알아봅니다.
-작성자: bradben uid: benbra: 12/11/2017: 밀리초. 항목: article no-(영문).
+만든이: bradben uid: benbra: 12/11/2017: 밀리초. 항목: 개념 비-. s u m:
 - "Q#"
 - "$$v"
 - "$$"
@@ -139,7 +139,7 @@ $$
 
 다음 작업을 수행 하는 경우 $ 에도 HS ^ \dagger $ 를 퀀텀 상태 벡터에 적용 한 다음 $ Z를 측정 $ `Measure([PauliY], [q])` 하는 것과 같습니다.
 
-```Q#
+```qsharp
 operation MeasureY(qubit : Qubit) : Result {
     mutable result = Zero;
     within {

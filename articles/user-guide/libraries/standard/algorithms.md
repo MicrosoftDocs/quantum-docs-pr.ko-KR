@@ -4,17 +4,17 @@ description: 진폭 증폭, 푸리에 변환, Draper 및 Beauregard adders 및 �
 author: QuantumWriter
 ms.author: martinro
 ms.date: 12/11/2017
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.libraries.standard.algorithms
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 982103876b00718aa3b42c6bc3a07d242cde7594
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: d4d8c35b3196ffb9915c6da06116b3c7dfd0562a
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92692227"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98859016"
 ---
 # <a name="quantum-algorithms"></a>퀀텀 알고리즘 #
 
@@ -49,7 +49,7 @@ Q# 명확한 진폭 증폭의 특수화로 진폭 증폭을 소개 합니다.  �
 푸리에 변환은 기존 분석의 기본 도구로 서, 퀀텀 계산의 경우에만 중요 합니다.
 또한 qft ( *퀀텀 푸리에 변환* )의 효율성은 기존 컴퓨터에서 가능한 작업을 초과 퀀텀 알고리즘을 디자인할 때 선택한 첫 번째 도구 중 하나를 만들 수 있습니다.
 
-QFT의 대략적인 일반화로, <xref:Microsoft.Quantum.Canon.ApproximateQft> 원하는 알고리즘 정확도에 꼭 필요 하지 않은 회전을 정리 하 여 추가 최적화를 허용 하는 작업을 제공 합니다.
+QFT의 대략적인 일반화로, <xref:Microsoft.Quantum.Canon.ApproximateQFT> 원하는 알고리즘 정확도에 꼭 필요 하지 않은 회전을 정리 하 여 추가 최적화를 허용 하는 작업을 제공 합니다.
 대략적인 QFT는 dyadic $Z $-rotation 작업 뿐만 아니라 <xref:Microsoft.Quantum.Intrinsic.RFrac> 작업을 필요로 합니다 <xref:Microsoft.Quantum.Intrinsic.H> .
 입력 및 출력은 big endian 인코딩---인코딩된 것으로 간주 됩니다. 즉, 인덱스가 있는 이상 비트는 `0` 이진 정수 표현의 맨 왼쪽 (가장 높은 비트)으로 인코딩됩니다.
 이는 [k 표기법](xref:microsoft.quantum.concepts.dirac)에 맞게 정렬 됩니다. $ \ket $q $ 상태에 있는 세 가지의 레지스터는 $ {100} \ket $ 상태에 있으며, {1} $q _1 $ 및 $q _2 $은 모두 state $ \ket {0} $입니다.

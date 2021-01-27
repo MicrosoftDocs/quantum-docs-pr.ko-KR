@@ -4,17 +4,17 @@ description: 퀀텀 시스템에서 기계 학습을 사용 하는 방법 알아
 author: alexeib2
 ms.author: alexeib
 ms.date: 11/22/2019
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.libraries.machine-learning.intro
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 9f7f892fb2b76432942c86163497c22f0c73d51f
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: e2f4a4a63eef40474856426b3b29652b5d3053b2
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833804"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98854027"
 ---
 # <a name="introduction-to-quantum-machine-learning"></a>퀀텀 Machine Learning 소개
 
@@ -30,7 +30,7 @@ ms.locfileid: "90833804"
 기존 메서드와 약간 비슷하며 퀀텀 분류는 다음 세 단계로 구성 됩니다.
 - 데이터 인코딩
 - 분류자 상태 준비
-- 측정 확률 측정의 특성으로 인해 이러한 세 단계를 여러 번 반복 해야 합니다. 분류자 상태의 인코딩과 컴퓨팅은 모두 *퀀텀 회로*를 통해 수행 됩니다. 인코딩 회로는 일반적으로 데이터를 기반으로 하 고 매개 변수를 사용 하지 않는 반면 분류자 회로는 충분 한 learnable 매개 변수 집합을 포함 합니다. 
+- 측정 확률 측정의 특성으로 인해 이러한 세 단계를 여러 번 반복 해야 합니다. 분류자 상태의 인코딩과 컴퓨팅은 모두 *퀀텀 회로* 를 통해 수행 됩니다. 인코딩 회로는 일반적으로 데이터를 기반으로 하 고 매개 변수를 사용 하지 않는 반면 분류자 회로는 충분 한 learnable 매개 변수 집합을 포함 합니다. 
 
 제안 된 솔루션에서 분류자 회로는 단일의 비트 회전 및 2 중 비트 제어 회전으로 구성 됩니다. 여기서 learnable 매개 변수는 회전 각도입니다. 회전 및 제어 된 회전 게이트는 퀀텀 계산에 대해 *universal* 이라고 하며,이는 모든 단일 무게 매트릭스가 이러한 게이트로 구성 된 길고 충분 한 회로로 분해할 수 있음을 의미 합니다.
 
@@ -41,7 +41,7 @@ ms.locfileid: "90833804"
 
 간단한 퀀텀 분류자 디자인은 기존 SVM (support vector machine) 솔루션과 비교할 수 있습니다. SVM의 경우 데이터 샘플 $x $에 대 한 유추는 최적의 커널 형식 $ \sum \ alpha_j k (x_j, x) $를 사용 하 여 수행 됩니다. 여기서 $k $는 특정 커널 함수입니다.
 
-이와 대조적으로 퀀텀 분류자는 예측 $p (y │ x, U (\theta)) = 〈 U (\theta) x |를 사용 합니다. M | U (\theta) x 〉 $는 스피릿에서 유사 하지만 기술적으로는 매우 다릅니다. 따라서 간단한 진폭 인코딩을 사용 하는 경우 $p (y │ x, U (\theta)) $는 $x $의 amplitudes에서 정방형 형태 이지만이 폼의 계수는 더 이상 독립적으로 학습 되지 않습니다. 이는 회로 $U (\theta) $의 matrix 요소에서 집계 되며, 일반적으로 벡터 $x $의 차원 보다 learnable 매개 변수 $ \theta $가 훨씬 적습니다. 원본 기능의 $p (y │ x, U (\theta)) $는 $l $ $x $ 복사본에서 퀀텀 제품 인코딩을 사용 하 여 $2 ^ l $로 늘릴 수 있습니다.
+이와 대조적으로 퀀텀 분류자는 $p 예측을 사용 하는 것과 유사 하지만 기술적으로는 다른 │ (〈 U) x | M | U (\theta) x 〉 $를 사용 합니다. 따라서 간단한 진폭 인코딩을 사용 하는 경우 $p (y │ x, U (\theta)) $는 $x $의 amplitudes에서 정방형 형태 이지만이 폼의 계수는 더 이상 독립적으로 학습 되지 않습니다. 이는 회로 $U (\theta) $의 matrix 요소에서 집계 되며, 일반적으로 벡터 $x $의 차원 보다 learnable 매개 변수 $ \theta $가 훨씬 적습니다. 원본 기능의 $p (y │ x, U (\theta)) $는 $l $ $x $ 복사본에서 퀀텀 제품 인코딩을 사용 하 여 $2 ^ l $로 늘릴 수 있습니다.
 
 아키텍처는 상대적으로 얕은 회로를 탐색 하므로 모든 범위에서 데이터 기능 간의 상관 관계를 모두 캡처하기 위해 신속 하 게 *entangling* 해야 합니다. 가장 유용한 빠른 entangling 회로 구성 요소의 예는 아래 그림에 나와 있습니다. 이 geometry를 사용 하는 회로가 $3 n + 1 $ 게이트로만 구성 된 경우에도 계산 되는 단일 무게 매트릭스가 $2 ^ n $ 기능 간에 상당한 상호 통신할 수 있도록 합니다.
 

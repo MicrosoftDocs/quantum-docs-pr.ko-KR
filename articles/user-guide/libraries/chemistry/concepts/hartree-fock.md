@@ -4,17 +4,17 @@ description: 퀀텀 시스템의 초기 상태를 구성 하는 간단한 방법
 author: bradben
 ms.author: v-benbra
 ms.date: 10/09/2017
-ms.topic: article-type-from-white-list
+ms.topic: conceptual
 uid: microsoft.quantum.chemistry.concepts.hartreefock
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 53d6e4342e5b58886528e89871591e57d8e70c82
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 48d6bc4face90046271dd8705188a92daafad98a
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835352"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98854104"
 ---
 # <a name="hartreefock-theory"></a>Hartree – Fock 이론
 
@@ -54,7 +54,7 @@ var wavefunctionInt = wavefunctionSpinOrbital.ToIndexing(IndexConvention.UpDown)
 Hartree – Fock 이론에 대 한 가장 인상적인 기능은 파괴 간에 되거나 얽 히 없는 퀀텀 상태를 생성 한다는 것입니다.
 즉, 분자 시스템의 속성에 대 한 적절 한 질적 설명을 제공 하는 경우가 많습니다. 
 
-Hartree-Fock 상태는 다음과 같이에서 다시 구성할 수도 있습니다 `FermionHamiltonian`  .
+다음과 같이에서 Hartree-Fock 상태를 다시 구성할 수도 있습니다 `FermionHamiltonian`  .
 ```csharp
 // We initialize a fermion Hamiltonian.
 var fermionHamiltonian = new FermionHamiltonian();

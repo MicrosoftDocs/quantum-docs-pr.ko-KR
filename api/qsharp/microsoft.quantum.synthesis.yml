@@ -8,6 +8,8 @@ functions:
   uid: Microsoft.Quantum.Synthesis.Extended
 - summary: '{-1,1}Yates의 메서드를 사용 하 여 인코딩의 부울 함수 변환의 변환을 계산 합니다.'
   uid: Microsoft.Quantum.Synthesis.FastHadamardTransformed
+- summary: 모든 2 단계에 대해 "대칭 마스크"가 계산 됩니다 .이는 해당 하는 1-고 비트 게이트를 적용 하기 전후에 반전 되어야 하는 비트를 나타냅니다. 편의를 위해 앞에 0을 사용 합니다.
+  uid: Microsoft.Quantum.Synthesis.FlipMasks
 - summary: 대상이 0이 아닌 경우 MCMTMask 형식을 singleton 배열로 생성 하 고 그렇지 않으면 빈 배열을 반환 합니다.
   uid: Microsoft.Quantum.Synthesis.GateMask
 - summary: Y를 x로 변환 하기 위해 최대 2 개의 MCMT 마스크를 계산 합니다.
@@ -20,6 +22,8 @@ functions:
   uid: Microsoft.Quantum.Synthesis.RMEncoding
 - summary: 새 배열이 길이를 반환 하는 변수의 수에 따라 부울의 배열에서 valtable을 조정 `2^numVars` `table` 합니다. 항목을 포함 하 여 크기를 확장 `false` 하거나 요소로 자를 `2^numVars` 수 있습니다.
   uid: Microsoft.Quantum.Synthesis.SizeAdjustedTruthTable
+- summary: 지정 된 배열이 정사각형 매트릭스를 나타내는지 확인 합니다.
+  uid: Microsoft.Quantum.Synthesis.SquareMatrixFact
 - summary: 순열 마스크를 계산 하 여 순열을 합성 합니다.
   uid: Microsoft.Quantum.Synthesis.TBSMain
 - summary: '[X] perm을 x로 변환 하 고 현재 순열을 업데이트 하는 게이트 마스크를 계산 합니다.'
@@ -34,6 +38,8 @@ functions:
   uid: Microsoft.Quantum.Synthesis.UpdatedPermutation
 - summary: 0 비트를 정수에 삽입 합니다.
   uid: Microsoft.Quantum.Synthesis.WithZeroInsertedAt
+- summary: ''
+  uid: Microsoft.Quantum.Synthesis._TwoLevelDecomposition
 name: Microsoft.Quantum.Synthesis
 newtypes:
 - summary: 변수 인덱스를 기반으로 분해 하는 동안의 상태
@@ -54,8 +60,15 @@ operations:
   uid: Microsoft.Quantum.Synthesis.ApplyPermutationUsingDecompositionWithVariableOrder
 - summary: 변형 기반 합성을 사용 하 여 순열 Permutes 퀀텀 상태에서 amplitudes를 지정 합니다.
   uid: Microsoft.Quantum.Synthesis.ApplyPermutationUsingTransformation
+- summary: 2x2 단일 행렬로 정의 된 단일 하 비트 게이트를 적용 합니다.
+  uid: Microsoft.Quantum.Synthesis.ApplySingleQubitUnitary
 - summary: ''
   uid: Microsoft.Quantum.Synthesis.ApplyTransposition
+- summary: >-
+    2 ^ n x 2 ^ n 단일 행렬로 정의 된 게이트를 적용 합니다.
+
+    Matrix가 단일 요소가 아니거나 크기가 잘못 된 경우 실패 합니다.
+  uid: Microsoft.Quantum.Synthesis.ApplyUnitary
 - summary: '@"microsoft.quantum.intrinsic.x" `target` `func` 의 기존 할당에 대해 부울 함수가 true로 평가 되는 경우에 작업을 적용 합니다 `controlRegister` .'
   uid: Microsoft.Quantum.Synthesis.ApplyXControlledOnTruthTable
 - summary: '@"microsoft.quantum.intrinsic.x" `target` `func` 의 기존 할당에 대해 부울 함수가 true로 평가 되는 경우에 작업을 적용 합니다 `controlRegister` .'
@@ -63,9 +76,9 @@ operations:
 summary: 이 네임 스페이스는 순열 및 부울 함수를 기반으로 하는 synthesizing 퀀텀 작업에 대 한 함수 및 작업을 포함 합니다.
 uid: Microsoft.Quantum.Synthesis
 metadata:
-  ms.openlocfilehash: 2f92f4662252148ff0e093f5392f5f00f26b661f
-  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.openlocfilehash: e238fdedcc931bb02c35591014d20b50b695b116
+  ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 10/27/2020
-  ms.locfileid: "92725723"
+  ms.lasthandoff: 01/26/2021
+  ms.locfileid: "98855182"

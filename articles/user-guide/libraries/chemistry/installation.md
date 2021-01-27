@@ -4,17 +4,17 @@ description: Microsoft 퀀텀 화학 라이브러리를 설치 하 고 NWChem �
 author: guanghaolow
 ms.author: gulow
 ms.date: 10/12/2018
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.chemistry.concepts.installation
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: f1a7d1d041dab73980d8debc179d6c79acac6d33
-ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
+ms.openlocfilehash: 5d32544bbce527a376345023d5549308fd4e7c79
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90759802"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98854071"
 ---
 # <a name="chemistry-library-installation"></a>화학 라이브러리 설치
 
@@ -23,7 +23,7 @@ ms.locfileid: "90759802"
 확장 가능한 계산 화학 패키지에 의해 생성 된 이러한 Hamiltonians는 너무 커서 수동으로 가져올 수 없습니다.
 
 퀀텀 개발 키트에 대 한 퀀텀 화학 라이브러리는 계산 연금술 패키지에서 잘 작동 하도록 설계 되었습니다. 특히 태평양 연안 국가의 과학에 게는 EMSL (환경적 분자 연구소)에서 개발한 [**Nwchem**](http://www.nwchem-sw.org/) 계산 화학 플랫폼이 있습니다.
-특히 [Broombridge 스키마](xref:microsoft.quantum.libraries.chemistry.schema.broombridge)에 표시 되는 퀀텀 화학 시뮬레이션 문제의 인스턴스를 로드 하기 위한 도구 [ **Microsoft.Quantum.Chemistry** 를 제공 하며](https://www.nuget.org/packages/Microsoft.Quantum.Chemistry) , 최신 버전의 nwchem에서 내보내기도 지원 합니다.
+특히 [Broombridge 스키마](xref:microsoft.quantum.libraries.chemistry.schema.broombridge)에 표시 되는 퀀텀 화학 시뮬레이션 문제의 인스턴스를 로드 하기 위한 도구 [  를 제공 하며](https://www.nuget.org/packages/Microsoft.Quantum.Chemistry) , 최신 버전의 nwchem에서 내보내기도 지원 합니다.
 
 또한 퀀텀 개발 키트 화학 라이브러리는 `qdk-chem` 레거시 형식 및 [Broombridge](xref:microsoft.quantum.libraries.chemistry.schema.broombridge)를 변환 하는 데 사용할 수 있는 명령줄 도구인를 제공 합니다.
 

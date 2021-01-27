@@ -1,6 +1,6 @@
 ---
 제목: 퀀텀 oracles 설명: 다른 알고리즘에 대 한 입력으로 사용 되는 퀀텀 oracles 및 블랙 박스 작업을 사용 하 고 정의 하는 방법을 알아봅니다.
-작성자: cgranade uid: oracles. author: chgranad: 07/11/2018 밀리초. 토픽: 문서 번호:
+작성자: cgranade uid: oracles. author: chgranad: 07/11/2018 밀리초. 토픽: 개념 비 loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -134,7 +134,7 @@ where $ \alpha : \\ { 0, 1 \\ } ^ n \times \\ { 0, 1 \\ } ^ m \to \mathbb { C는
 
 $$
 \begin{align}
-O \ket { \psi } & = o \sum _ { x \in \\ { 0, 1 \\ } ^ n, y \in \\ { 0, 1 \\ } ^ m } \alpha (x, y) \ket { x } \ket { y } x \\\\ 0 & , = 1 ^ n, y 0, 1 ^ m (x, y) o \sum _ { \in \\ { \\ } \in \\ { \\ } } \alpha \ket { x } \ket { y }\\\\
+O \ket { \psi } & = o \sum _{ x \in \\ { 0, 1 \\ } ^ n, y \in \\ { 0, 1 \\ } ^ m } \alpha (x, y) \ket { x } \ket { y } x \\\\ 0 & , = 1 ^ n, y 0, 1 ^ m (x, y) o \sum_ { \in \\ { \\ } \in \\ { \\ } } \alpha \ket { x } \ket { y }\\\\
              &= \sum _ { x \in \\ { 0, 1 \\ } ^ n, y \in \\ { 0, 1 \\ } ^ m } \alpha (x, y) \ket { x } \ket { y \oplus f (x) } .
 \end{align}
 $$
@@ -157,6 +157,9 @@ Oracle 단계가 초기에 계산 기준 상태 x로 작동 하는 경우 $ \ket
         &=(-1) ^ { f (0) } z ^ { f (0)-f (1) } \ket { + } .
 \end{align}
 $$
+
+> [!NOTE]
+>Z ^ $ { -1 } = z ^ { \dagger } = z $ , 따라서 $ z ^ { f (0)-f (1) } = z ^ f ( { 1)-f (0)입니다 } .$
 
 보다 일반적으로는 oracles의 두 뷰를 넓혔습니다 하 여 단일 비트만이 아닌 실수를 반환 하는 클래식 함수를 나타낼 수 있습니다.
 

@@ -4,16 +4,16 @@ description: Q#퀀텀 프로그램의 실수 또는 오류를 catch 하는 데 �
 author: cgranade
 uid: microsoft.quantum.libraries.diagnostics
 ms.author: chgranad
-ms.topic: article
+ms.topic: conceptual
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 1ab9b77c7536a1860064110810371d3a68e95b40
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: d13122187a24893d297cfdbb3ad4db03eb22ded0
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92690859"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858693"
 ---
 # <a name="diagnostics"></a>진단 #
 
@@ -27,7 +27,7 @@ Q#표준 라이브러리는에 설명 된 대로 퀀텀 프로그램의 정확�
 기본적으로이 문자열은 콘솔에 기록 됩니다.
 보간된 문자열과 함께 사용 하 여 <xref:Microsoft.Quantum.Intrinsic.Message> 기존 값에 대 한 진단 정보를 쉽게 보고할 수 있습니다.
 
-```Q#
+```qsharp
 let angle = Microsoft.Quantum.Math.PI() * 2.0 / 3.0;
 Message($"About to rotate by an angle of {angle}...");
 ```

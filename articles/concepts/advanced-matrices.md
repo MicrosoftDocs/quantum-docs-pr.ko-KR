@@ -1,6 +1,6 @@
 ---
 제목: 고급 행렬 개념 설명: 퀀텀 알고리즘을 설명 하 고 시뮬레이트하는 데 사용 되는 기본 도구인 고유 벡터, eigenvalues 및 matrix 지 수에 대해 알아봅니다.
-작성자: QuantumWriter uid: benbra-advanced m. author: v-m. 날짜: 12/11/2017 밀리초. 토픽: 문서 번호:
+작성자: QuantumWriter uid: benbra-advanced m. author: v-m. 날짜: 12/11/2017 밀리초. 토픽: 개념 비 loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -93,11 +93,11 @@
 
 $M을 $ 사각형 행렬로 $ , v를 $ 모두 0 벡터가 아닌 벡터 (즉, 모든 항목이 0 인 벡터 $ $ )로 지정 합니다.
 
-$ $ [*eigenvector*](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors) $ M은 $ $ = $ 일부 숫자 c에 대해 Mv cv 인 $ 경우 M은 eigenvector입니다 $ . $ $ Eigenvector v에 해당 하는 [*eigenvalue*](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors) 를 c 라고 $ 합니다 $ . 일반적으로 행렬과 $ M은 $ 벡터를 다른 벡터로 변환할 수 있지만 eigenvector는 숫자를 곱하는 경우를 제외 하 고는 변경 되지 않은 상태로 유지 되기 때문에 특수 합니다. $V $ 가 eigenvalue c를 사용 하는 eigenvector $ 경우 $ $ av $ 는 $ $ 동일한 eigenvalue를 사용 하는 eigenvector (0이 아닌 경우) 이기도 합니다.
+$ $ [](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors) $ M은 $ $ = $ 일부 숫자 c에 대해 Mv cv 인 $ 경우 M은 eigenvector입니다 $ . $ $ Eigenvector v에 해당 하는 [*eigenvalue*](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors) 를 c 라고 $ 합니다 $ . 일반적으로 행렬과 $ M은 $ 벡터를 다른 벡터로 변환할 수 있지만 eigenvector는 숫자를 곱하는 경우를 제외 하 고는 변경 되지 않은 상태로 유지 되기 때문에 특수 합니다. $V $ 가 eigenvalue c를 사용 하는 eigenvector $ 경우 $ $ av $ 는 $ $ 동일한 eigenvalue를 사용 하는 eigenvector (0이 아닌 경우) 이기도 합니다.
 
 예를 들어 id 매트릭스의 경우 모든 벡터 $ v $ 는 eigenvalue 1을 사용 하는 eigenvector입니다 $ $ .
 
-또 다른 예로 [*diagonal matrix*](https://en.wikipedia.org/wiki/Diagonal_matrix) $ $ 대각선에 0이 아닌 항목을 포함 하는 대각선 행렬 D를 생각해 보겠습니다.
+또 다른 예로 [](https://en.wikipedia.org/wiki/Diagonal_matrix) $ $ 대각선에 0이 아닌 항목을 포함 하는 대각선 행렬 D를 생각해 보겠습니다.
 
 $$
 \begin{bmatrix}

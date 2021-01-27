@@ -4,17 +4,17 @@ description: Microsoft 퀀텀 화학 library에 대 한 Broombridge 퀀텀 화�
 author: guanghaolow
 ms.author: gulow
 ms.date: 05/28/2019
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.libraries.chemistry.schema.spec_v_0_2
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 851d10c0137deecf8e861aad30b5e08a9ae61754
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 8d26b56d88f365144510692466bfffc7feb71d88
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833771"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98854058"
 ---
 # <a name="broombridge-specification-v02"></a>Broombridge 사양 v 0.2 #
 
@@ -52,7 +52,7 @@ _Quantity 개체_ 는 JSON 개체 이며 `units` 값이 표 1에 나열 된 허�
 Quantity 개체는 속성 외에도 단일 속성을 포함 하는 경우 _단순 수량 개체_ 입니다 `value` `units` .
 속성의 값은 `value` 숫자 여야 합니다.
 
-Quantity 개체는 속성이 _bounded quantity object_ `lower` 있고 `upper` 속성 외에도 바인딩된 수량 개체입니다 `units` .
+Quantity 개체는 속성이  `lower` 있고 `upper` 속성 외에도 바인딩된 수량 개체입니다 `units` .
 및 속성의 값은 숫자 여야 합니다 `lower` `upper` .
 제한 된 수량 개체에는 `value` 값이 숫자 인 속성이 있을 수 있습니다.
 
@@ -72,7 +72,7 @@ Quantity 개체는 다음 중 하나 여야 합니다.
 - 스파스 배열 수량 개체입니다.
 
 
-### <a name="examples"></a>예 ###
+### <a name="examples"></a>예제 ###
 
 이 섹션은 정보를 제공 합니다.
 
@@ -111,7 +111,7 @@ sparse_example:
 Broombridge 개체에는 라는 속성을 `format` 가진 JSON 개체인 속성이 있어야 합니다 `version` .
 속성에는 `version` 값이 있어야 합니다 `"0.2"` .
 
-### <a name="example"></a>예제 ###
+### <a name="example"></a>예 ###
 
 이 섹션은 정보를 제공 합니다.
 
@@ -171,7 +171,7 @@ $$
 각 문제 설명 개체에는 `energy_offet` 값이 단순 수량 개체 인 속성이 있어야 합니다.
 > 두고 및의 값 `coulomb_repulsion` 이 `energy_offet` 함께 추가 된 Hamiltonian의 id 용어를 캡처합니다.
 
-##### <a name="one-electron-integrals-object"></a>1-전자 정수 개체 #####
+##### <a name="one-electron-integrals-object"></a>One-Electron 적분 개체 #####
 
 이 섹션은 규범입니다.
 
@@ -181,7 +181,7 @@ $$
 > 두고 이는 Hamiltonian가 Hermitian의 결과로 _ {ij} = h_ {ji} $ $h 하는 대칭을 반영 합니다.
 
 
-###### <a name="example"></a>예제 ######
+###### <a name="example"></a>예 ######
 
 이 섹션은 정보를 제공 합니다.
 
@@ -201,7 +201,7 @@ one_electron_integrals:     # required
 > Broombridge는 1부터 기반으로 하는 인덱싱을 사용 합니다.
 
 
-##### <a name="two-electron-integrals-object"></a>2-전자 정수 개체 #####
+##### <a name="two-electron-integrals-object"></a>Two-Electron 적분 개체 #####
 
 이 섹션은 규범입니다.
 
@@ -232,7 +232,7 @@ one_electron_integrals:     # required
 
 <!-- h_{ijkl} = h_{ijlk}=h_{jikl}=h_{jilk}=h_{klij}=h_{klji}=h_{lkji}. -->
 
-###### <a name="example"></a>예제 #######
+###### <a name="example"></a>예 #######
 
 이 섹션은 정보를 제공 합니다.
 

@@ -4,17 +4,17 @@ description: Q#분자 hydrogen의 에너지 수준 값을 예측 하는 샘플 �
 author: guanghaolow
 ms.author: gulow
 ms.date: 07/02/2020
-ms.topic: article-type-from-white-list
+ms.topic: sample
 uid: microsoft.quantum.chemistry.examples.energyestimate
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 81fba0c52c854d61f9143659795fb4d3c3cee8b9
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 60935e7c1e8c674fab3a546c1f110f589d2e6b77
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691523"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98855050"
 ---
 # <a name="obtaining-energy-level-estimates"></a>에너지 수준 추정치 얻기
 에너지 수준의 값을 예측 하는 것은 퀀텀 화학의 주요 응용 프로그램 중 하나입니다. 이 문서에서는 분자 hydrogen의 정식 예제에 대해이를 수행 하는 방법을 간략하게 설명 합니다. 이 섹션에서 참조 하는 샘플은 [`MolecularHydrogen`](https://github.com/microsoft/Quantum/tree/main/samples/chemistry/MolecularHydrogen) 화학 샘플 리포지토리에 있습니다. 출력을 그리는 시각적 예제는 [`MolecularHydrogenGUI`](https://github.com/microsoft/Quantum/tree/main/samples/chemistry/MolecularHydrogenGUI) 데모입니다.

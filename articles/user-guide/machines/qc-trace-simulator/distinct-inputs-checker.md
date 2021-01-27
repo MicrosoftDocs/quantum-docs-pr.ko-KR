@@ -4,17 +4,17 @@ description: 퀀텀 추적 시뮬레이터를 사용 하 여 코드에서 공유
 author: vadym-kl
 ms.author: vadym
 ms.date: 06/25/2020
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.machines.qc-trace-simulator.distinct-inputs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: bcb0bc92a546279496d27ad9b8c5f943ac133e2a
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 8076a705b1960ae8e23be4cea87e613329a24f77
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833469"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858652"
 ---
 # <a name="quantum-trace-simulator-distinct-inputs-checker"></a>퀀텀 추적 시뮬레이터: 고유 입력 검사기
 
@@ -50,11 +50,11 @@ operation ApplyWithNonDistinctInputs() : Unit {
 }
 ```
 
-및는 `op1` `op2` 모두 부분 응용 프로그램을 사용 하 여 가져오고, `ApplyBoth`이 예제에서를 호출 하는 경우 작업의 결과는 `op1` 발생 하는 것 `op2` 으로 간주 되는 및의 순서에 따라 달라 집니다 `ApplyBoth` . 고유 입력 검사기를 사용 하도록 설정 하면 이러한 상황을 감지 하 고을 throw `DistinctInputsCheckerException` 합니다. 자세한 내용은 <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.DistinctInputsCheckerException> API 라이브러리에서을 참조 하세요 Q# .
+및는 `op1` `op2` 모두 부분 응용 프로그램을 사용 하 여 가져오고, `ApplyBoth`이 예제에서를 호출 하는 경우 작업의 결과는 `op1` 발생 하는 것 `op2` 으로 간주 되는 및의 순서에 따라 달라 집니다 `ApplyBoth` . 고유 입력 검사기를 사용 하도록 설정 하면 이러한 상황을 감지 하 고을 throw `DistinctInputsCheckerException` 합니다. 자세한 내용은 <xref:Microsoft.Quantum.Simulation.QCTraceSimulatorRuntime.DistinctInputsCheckerException> API 라이브러리에서을 참조 하세요 Q# .
 
 ## <a name="invoking-the-distinct-inputs-checker"></a>고유 입력 검사기 호출
 
-고유 입력 검사기를 사용 하 여 퀀텀 추적 시뮬레이터를 실행 하려면 인스턴스를 만들고 <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> `UseDistinctInputsChecker` 속성을 **true**로 설정한 다음 <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> 를 매개 변수로 사용 하 여 새 인스턴스를 만들어야 합니다 `QCTraceSimulatorConfiguration` . 
+고유 입력 검사기를 사용 하 여 퀀텀 추적 시뮬레이터를 실행 하려면 인스턴스를 만들고 <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> `UseDistinctInputsChecker` 속성을 **true** 로 설정한 다음 <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> 를 매개 변수로 사용 하 여 새 인스턴스를 만들어야 합니다 `QCTraceSimulatorConfiguration` . 
 
 ```csharp
 var config = new QCTraceSimulatorConfiguration();
@@ -93,4 +93,4 @@ namespace Quantum.MyProgram
 - 퀀텀 개발 키트 [퀀텀 추적 시뮬레이터](xref:microsoft.quantum.machines.qc-trace-simulator.intro) 개요.
 - <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator>API 참조입니다.
 - <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration>API 참조입니다.
-- <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.DistinctInputsCheckerException>API 참조입니다.
+- <xref:Microsoft.Quantum.Simulation.QCTraceSimulatorRuntime.DistinctInputsCheckerException>API 참조입니다.

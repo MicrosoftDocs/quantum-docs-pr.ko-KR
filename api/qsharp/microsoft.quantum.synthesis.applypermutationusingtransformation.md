@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Synthesis.ApplyPermutationUsingTransformation
 title: ApplyPermutationUsingTransformation 작업
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Synthesis
 qsharp.name: ApplyPermutationUsingTransformation
 qsharp.summary: Permutes the amplitudes in a quantum state given a permutation using transformation-based synthesis.
-ms.openlocfilehash: a05b433eae2612bbf5c87522c4ef251976184aa8
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 79913bec44514d477b7ee0668b43396b297b9ab8
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96192063"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858990"
 ---
 # <a name="applypermutationusingtransformation-operation"></a>ApplyPermutationUsingTransformation 작업
 
@@ -28,7 +28,7 @@ operation ApplyPermutationUsingTransformation (perm : Int[], qubits : Microsoft.
 ```
 
 
-## <a name="description"></a>Description
+## <a name="description"></a>설명
 
 이 절차에서는 단방향 변환 기반 합성 방식을 구현 합니다.  입력은 $2 ^ n $ elements $ \{ 0, \pi, 2 ^ n-1 $을 통한 순열 $ \pi $ \} 로, $n $-변수가 해독 가능한 부울 함수를 나타냅니다.
 알고리즘은 다음 단계를 반복적으로 수행 합니다.
@@ -53,7 +53,17 @@ operation ApplyPermutationUsingTransformation (perm : Int[], qubits : Microsoft.
 
 
 
-## <a name="references"></a>참조 항목
+## <a name="example"></a>예
+
+작업을 합성 하려면 `SWAP` :
+
+```qsharp
+using (qubits = Qubit[2]) {
+  ApplyPermutationUsingTransformation([0, 2, 1, 3], LittleEndian(qubits));
+}
+```
+
+## <a name="references"></a>참조
 
 - [*D. Michael*, *Dmitri Maslov*, *Gerhard Dueck* 318-323 2003,,,, 2003](https://doi.org/10.1145/775832.775915)
 - [*Mathias Soeken*, *Gerhard, Dueck*, *dmichael*, Proc .rc 2016, Springer, pp. 307-321, 2016](https://doi.org/10.1007/978-3-319-40578-0_22)
