@@ -1,27 +1,27 @@
 ---
 uid: Microsoft.Quantum.ErrorCorrection.CSS
 title: CSS 사용자 정의 형식
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.ErrorCorrection
 qsharp.name: CSS
 qsharp.summary: Represents a Calderbank–Shor–Steane (CSS) code as defined by its encoder, decoder, and its syndrome measurement procedures for `X` and `Z` errors, respectively.
-ms.openlocfilehash: f02412f065991a6717514a87c9afea177c8d3444
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: c1fda564e49441e5e07a24b04b3deeada7bda457
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96201175"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98853170"
 ---
-# <a name="css-user-defined-type"></a><span data-ttu-id="ebc48-102">CSS 사용자 정의 형식</span><span class="sxs-lookup"><span data-stu-id="ebc48-102">CSS user defined type</span></span>
+# <a name="css-user-defined-type"></a><span data-ttu-id="f4294-102">CSS 사용자 정의 형식</span><span class="sxs-lookup"><span data-stu-id="f4294-102">CSS user defined type</span></span>
 
-<span data-ttu-id="ebc48-103">네임 스페이스: [Microsoft 양자 수정](xref:Microsoft.Quantum.ErrorCorrection)</span><span class="sxs-lookup"><span data-stu-id="ebc48-103">Namespace: [Microsoft.Quantum.ErrorCorrection](xref:Microsoft.Quantum.ErrorCorrection)</span></span>
+<span data-ttu-id="f4294-103">네임 스페이스: [Microsoft 양자 수정](xref:Microsoft.Quantum.ErrorCorrection)</span><span class="sxs-lookup"><span data-stu-id="f4294-103">Namespace: [Microsoft.Quantum.ErrorCorrection](xref:Microsoft.Quantum.ErrorCorrection)</span></span>
 
-<span data-ttu-id="ebc48-104">패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="ebc48-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
+<span data-ttu-id="f4294-104">패키지: [Microsoft 양자 표준](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="f4294-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
 
 
-<span data-ttu-id="ebc48-105">각각 및 오류에 대 한 인코더, 디코더 및 해당 증후군 측정 절차에서 정의한 대로 Calderbank – Shor – Steane (CSS) 코드를 나타냅니다 `X` `Z` .</span><span class="sxs-lookup"><span data-stu-id="ebc48-105">Represents a Calderbank–Shor–Steane (CSS) code as defined by its encoder, decoder, and its syndrome measurement procedures for `X` and `Z` errors, respectively.</span></span>
+<span data-ttu-id="f4294-105">각각 및 오류에 대 한 인코더, 디코더 및 해당 증후군 측정 절차에서 정의한 대로 Calderbank – Shor – Steane (CSS) 코드를 나타냅니다 `X` `Z` .</span><span class="sxs-lookup"><span data-stu-id="f4294-105">Represents a Calderbank–Shor–Steane (CSS) code as defined by its encoder, decoder, and its syndrome measurement procedures for `X` and `Z` errors, respectively.</span></span>
 
 ```qsharp
 
