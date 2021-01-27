@@ -1,19 +1,19 @@
 ---
 uid: Microsoft.Quantum.Intrinsic
 title: Microsoft 양자 내장 네임 스페이스
-ms.date: 11/25/2020 12:00:00 AM
-ms.topic: article
+ms.date: 1/23/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: namespace
 qsharp.name: Microsoft.Quantum.Intrinsic
 qsharp.summary: ''
-ms.openlocfilehash: c25fd45d38e68c09865ca0704b8870b98f6f63d5
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 350ee5f816064be037ef7318467845b8411b4103
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96198914"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98849381"
 ---
-# <a name="microsoftquantumintrinsic-namespace"></a><span data-ttu-id="e544b-102">Microsoft 양자 내장 네임 스페이스</span><span class="sxs-lookup"><span data-stu-id="e544b-102">Microsoft.Quantum.Intrinsic namespace</span></span>
+# <a name="microsoftquantumintrinsic-namespace"></a><span data-ttu-id="c5b22-102">Microsoft 양자 내장 네임 스페이스</span><span class="sxs-lookup"><span data-stu-id="c5b22-102">Microsoft.Quantum.Intrinsic namespace</span></span>
 
 
 
