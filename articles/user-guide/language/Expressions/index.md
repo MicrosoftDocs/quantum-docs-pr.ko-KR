@@ -4,17 +4,17 @@ description: Q# 프로그래밍 언어의 다양한 형식의 식에 대해 알�
 author: bettinaheim
 ms.author: beheim
 ms.date: 10/07/2020
-ms.topic: article
+ms.topic: reference
 uid: microsoft.quantum.qsharp.expressions-index
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: beb0c6f264609a42cfbcfeba9bf8b4dc21355c87
-ms.sourcegitcommit: b930bb59a1ba8f41d2edc9ed98197109aa8c7f1b
+ms.openlocfilehash: 6ddda83e2bfe19c720e1fe0afb6a1dbdea490d70
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96232931"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98844242"
 ---
 <!---
 # Expressions in Q#
