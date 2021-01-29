@@ -5,16 +5,16 @@ description: Microsoft Quantum Development Kit를 사용하여 Q#에서 퀀텀 �
 author: bradben
 ms.author: v-benbra
 ms.date: 9/29/2020
-ms.topic: overview
+ms.topic: quickstart
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8a60888bbf7dce1b85bce7a2aa8c994bb8570964
-ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
+ms.openlocfilehash: 62910becb5b3c7415ac575217230b6c8be55fd7e
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91771204"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858857"
 ---
 # <a name="get-started-with-the-quantum-development-kit-qdk"></a>QDK(Quantum Development Kit) 시작
 
