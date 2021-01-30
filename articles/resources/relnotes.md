@@ -9,12 +9,12 @@ uid: microsoft.quantum.relnotes
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8aa6072e9b495db6e127cac350d5bfaec1b090ce
-ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
+ms.openlocfilehash: dd37581dff2a512a29eb7729ecbf81412917b8f8
+ms.sourcegitcommit: e915baf3b84ee3a562004c5b31d157d21533d450
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98856656"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99101461"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Microsoft Quantum Development Kit 릴리스 정보
 
@@ -23,6 +23,15 @@ ms.locfileid: "98856656"
 설치 지침은[설치 가이드](xref:microsoft.quantum.install)를 참조하세요.
 
 업데이트 지침은 [업데이트 가이드](xref:microsoft.quantum.update)를 참조하세요.
+
+## <a name="version-0152101126807"></a>버전 0.15.2101.126807
+
+*릴리스 날짜: 1 월 29 일, 2021*
+
+- Q#Honeywell 공급자를 대상으로 하는 실행 파일에 대 한 프로젝트 템플릿을 컴파일러에 추가 했습니다.
+- Q# Q# [0.15.2101125897](#version-0152101125897) 버전에 도입 된 구문 변경 내용을 포함 하도록 커널 구문 강조 표시를 업데이트 합니다.
+- 를 통해 Azure 퀀텀에 제출 된 프로그램에 입력 인수로 배열을 전달 하는 것을 지 원하는 버그 수정 Q# `%azure.execute` 을 참조 하세요. 문제 [#401](https://github.com/microsoft/iqsharp/issues/401)
+- Docker 이미지 내부를 사용 하는 동안 "사용 권한이 거부 되었습니다." 오류가 해결 되었습니다. `az` `iqsharp-base` 문제를 참조 하십시오 [#404](https://github.com/microsoft/iqsharp/issues/404)
 
 ## <a name="version-0152101125897"></a>버전 0.15.2101125897
 
@@ -34,6 +43,7 @@ ms.locfileid: "98856656"
 - 최적 깊이에 대해 향상 된 너비 예상. [세부 정보를 참조](https://github.com/MicrosoftDocs/quantum-docs-pr/pull/1159)하세요.
 - `ApplyUnitary`([QuantumLibraries # 391Mb](https://github.com/microsoft/QuantumLibraries/pull/391), Fedoriaka의 외부 기여)를 사용 하 여 명시적 행렬로 제공 된 단일 작업 적용
 - https://github.com/microsoft/iqsharp/issues/387커널 시작 시 성능 영향을 완화 하 여 수정 Q# 되었습니다.
+
 ## <a name="version-0142011120240"></a>버전 0.14.2011120240
 
 *릴리스 날짜: 11 월 25 일, 2020*
