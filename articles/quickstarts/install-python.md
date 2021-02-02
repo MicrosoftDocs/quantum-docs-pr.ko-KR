@@ -4,20 +4,19 @@ description: Python을 사용하여 Q# 애플리케이션을 만드는 방법을
 author: bradben
 ms.author: v-benbra
 ms.date: 8/20/2020
-ms.topic: article
-ms.custom: how-to
+ms.topic: quickstart
 uid: microsoft.quantum.install.python
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: f6a2a7d1888cfe458fa3989a27d71fcdeed0f01f
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 1ec40b6f1b7a8d9144860e3b8cfd554eb51bae81
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834162"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98844263"
 ---
-# <a name="develop-with-no-locq-and-python"></a>Q# 및 Python을 사용하여 개발
+# <a name="develop-with-q-and-python"></a>Q# 및 Python을 사용하여 개발
 
 QDK를 설치하여 Q# 작업을 호출하는 Python 호스트 프로그램을 개발합니다.
 
@@ -72,7 +71,7 @@ QDK를 설치하여 Q# 작업을 호출하는 Python 호스트 프로그램을 �
     > 여기서 `/path/to/dotnet-iqsharp`은 파일 시스템에서 `dotnet-iqsharp` 도구의 절대 경로로 바꿔야 합니다.
     > 일반적으로 사용자 프로필 폴더의 `.dotnet/tools`에 있습니다.
     
-***
+**_
 
 이것으로 끝입니다. 이제 Python에서 Q# 작업을 컴파일 및 실행하기 위한 핵심 기능을 제공하고 Q# Jupyter Notebook을 사용할 수 있게 해주는 `qsharp` Python 패키지와 Jupyter용 IQ# 커널이 모두 있습니다.
 
@@ -87,7 +86,7 @@ VS Code를 사용하려면 다음을 수행합니다.
 
 그 외의 편집기는 위의 지침을 수행하면서 이미 설정이 완료되었습니다.
 
-## <a name="write-your-first-no-locq-program"></a>첫 번째 Q# 프로그램 작성
+## <a name="write-your-first-q-program"></a>첫 번째 Q# 프로그램 작성
 
 이제 간단한 Q# 프로그램을 작성하고 실행하여 `qsharp` Python 패키지 설치를 확인할 준비가 되었습니다.
 
@@ -113,7 +112,7 @@ VS Code를 사용하려면 다음을 수행합니다.
 1. 호출한 작업의 결과가 표시됩니다. 이 예에서는 작업에서 임의의 결과를 생성하기 때문에 화면에 `0` 또는 `1`이 출력됩니다. 프로그램을 반복해서 실행하면 각 결과가 약 절반의 시간 동안 표시됩니다.
 
 > [!NOTE]
-> * Python 코드는 일반적인 Python 프로그램입니다. Python 기반 Jupyter Notebook을 비롯한 Python 환경을 사용하여 Python 프로그램을 작성하고 Q# 작업을 호출할 수 있습니다. Python 프로그램은 Python 코드 자체와 동일한 폴더에 있는 모든 .qs 파일에서 Q# 작업을 가져올 수 있습니다.
+> _ Python 코드는 일반적인 Python 프로그램입니다. Python 기반 Jupyter Notebook을 비롯한 Python 환경을 사용하여 Python 프로그램을 작성하고 Q# 작업을 호출할 수 있습니다. Python 프로그램은 Python 코드 자체와 동일한 폴더에 있는 모든 .qs 파일에서 Q# 작업을 가져올 수 있습니다.
 
 ## <a name="next-steps"></a>다음 단계
 
