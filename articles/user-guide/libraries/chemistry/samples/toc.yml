@@ -1,8 +1,0 @@
-- name: 에너지 수준 추정치 얻기
-  href: molecular-hydrogen.md
-- name: 파일에서 해밀토니안 로드
-  href: loading-from-file.md
-- name: 리소스 개수 가져오기
-  href: resource-counts.md
-- name: NWChem을 사용하는 엔드투엔드
-  href: end-to-end.md
